@@ -1,0 +1,13 @@
+{
+  "name": "ibimirim-legal",
+  "private": true,
+  "version": "1.5.0",
+  "scripts": {
+    "test": "node tests/app.test.mjs && node tests/fees.test.mjs",
+    "test:ui": "node tests/ui.test.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

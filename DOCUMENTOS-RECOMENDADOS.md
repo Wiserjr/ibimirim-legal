@@ -1,0 +1,265 @@
+# Documentos recomendados para a próxima revisão
+
+O endereço do Portal da Transparência informado em 16/08/2026 permaneceu bloqueado pela verificação automática do Cloudflare. A lista abaixo foi derivada das referências existentes nos documentos fornecidos e não representa confirmação de que os atos existem, estão vigentes ou estão disponíveis no portal.
+
+## Prioridade alta
+
+1. Atos que regulamentem a Lei Complementar nº 004/2025, especialmente cadastro, lançamento, fiscalização, processo administrativo, NFS-e, dívida ativa e meios eletrônicos.
+2. Planta Genérica de Valores, tabelas de valores venais, fatores de correção e ato anual de atualização monetária da base tributária.
+3. Calendário fiscal anual: vencimentos de IPTU, taxas, ISS fixo e condições de parcelamento ou desconto.
+4. Código de Obras e Edificações e Código de Posturas do Município, inclusive alterações posteriores.
+5. Mapas e anexos oficiais do Plano Diretor, do Perímetro Urbano, do Parcelamento e do Uso e Ocupação do Solo.
+6. Leis ou decretos que tenham alterado, regulamentado ou revogado as LCs nº 01, 02, 03 e 04/2019.
+
+## Prioridade operacional
+
+7. Regulamentação do processo administrativo tributário: intimação, impugnação, recursos, prazos e competências.
+8. Regulamentação da Nota Fiscal de Serviços eletrônica e eventual adesão ao padrão nacional da NFS-e.
+9. Atos sobre retenção do ISS, cadastro mercantil, fiscalização de obras e arbitramento da construção civil posteriores ao novo Código Tributário.
+10. Regulamentação do PAQD instituído pelo Decreto nº 23/2026 e atos de cobrança extrajudicial, protesto, transação ou parcelamento de dívida ativa.
+11. Regulamentação dos incentivos habitacionais das Leis nº 932/2024 e nº 963/2025.
+12. Regulamentação das doações voluntárias da Lei nº 925/2024.
+
+## Cuidados de vigência
+
+Os Decretos nº 30/2022 e nº 31/2022 e as Leis nº 858/2022 e nº 863/2022 fazem referência ao Código Tributário de 2008. Antes de orientar o público com base nesses atos, deve-se verificar sua compatibilidade e eventual recepção, alteração ou revogação pelo Código Tributário instituído em 2025.
+
+
+---
+
+# Revisão de 17/08/2026 — conferência da pasta e do comparativo de taxas
+
+## Divergência que precisa de decisão antes de cobrar
+
+A seção **"Taxa pela ocupação de áreas em vias e logradouros públicos, a título precário"** do
+comparativo traz, na coluna do Novo CTM, itens e valores que **não foram localizados no texto do
+Código de 2025 indexado**. Os termos "borracharia", "banca de revista", "balcões" e "parque de
+diversões" não ocorrem em nenhuma das 217 páginas do Código. A página 214, onde a tabela
+correspondente está, lista outros itens — arquibancada, camarote, stand, circo, parque de diversão —
+com valores diferentes; o comparativo indica R$ 5,00 para balcão e tabuleiro, e a página 214 indica
+R$ 250,00 para "balcão, tabuleiro e equipamento circulante, em eventos".
+
+Enquanto isso não for esclarecido, o aplicativo exibe a seção com aviso destacado. Convém confrontar
+a planilha com a publicação oficial e apurar se a coluna foi montada a partir de uma minuta anterior
+à sanção.
+
+## O Código Tributário anterior não está na pasta
+
+O arquivo `LEI Nº 099_2007 CÓDIGO TRIBUTÁRIO MUNICIPAL.pdf` é o Código Tributário de **Manari**, não
+de Ibimirim. Não há, na pasta, o PDF do Código anterior de Ibimirim. Toda a coluna "CTM 2008" do
+comparativo é, portanto, uma referência interna sem lastro documental no acervo — e é assim que o
+aplicativo a apresenta. Localizar esse PDF permitiria citar página também no lado anterior.
+
+## Documentos de outros municípios na mesma pasta
+
+Estes arquivos estão em `Tributos-Ibimirim/Legislacao` mas **não são legislação de Ibimirim** e não
+podem ser indexados como tal:
+
+| Arquivo | Município |
+|---|---|
+| LEI Nº 099_2007 CÓDIGO TRIBUTÁRIO MUNICIPAL.pdf | Manari |
+| Codigo Obras Edificacoes Manari (e CORRIGIDO).pdf | Manari — e é projeto de lei, não lei |
+| Codigo Posturas Municipais Manari (e CORRIGIDO).pdf | Manari |
+| 2022 - GABIP - Lei Municipal - 587-2022 ... CTM.pdf | Tupanatinga |
+| CODIGO_TRIBUTARIO_34_1997[JATOBÁ].pdf | Jatobá |
+| CÓDIGO TRIBUTARIO DE VERTENTE DO LERIO.pdf | Vertente do Lério |
+| INGAZEIRA CODIGO TRIBUTARIO.pdf | Ingazeira |
+
+O item 4 da lista de prioridade alta pede o Código de Obras e o Código de Posturas **de Ibimirim**;
+os arquivos de Manari não o atendem.
+
+## Documentos de Ibimirim presentes e ainda não indexados
+
+| Arquivo | Matéria | Situação |
+|---|---|---|
+| Lei nº 988/2025 | Altera a Lei 793/2018 e fixa novos valores da Taxa de Fiscalização de Licença para Funcionamento de placas de energia solar | texto eletrônico disponível |
+| Lei 793-2018 | Taxa de torres e placas de energia solar | digitalizado, exige OCR |
+| Lei nº 877/2022 — PRODEM | Incentivo ao desenvolvimento econômico e social | o .docx tem texto; o PDF é digitalizado |
+| PLANO_DIRETOR-QGIS.REV4.pdf | Anexo gráfico do Plano Diretor | atende ao item 5 da prioridade alta; é mapa, não texto |
+
+As Leis 793/2018 e 988/2025 instituem e alteram uma taxa de licença de funcionamento e, por isso,
+interessam diretamente à consulta de taxas.
+
+## Minutas — não apresentar como norma vigente
+
+`PL Regulamentação Estações de Radiocomunicação.docx`, `PL Taxas TLF Energias Renováveis.docx`,
+`DECRETO - RECOLHIMENTO DO ISSQN.docx` (numerado como "DECRETO N° XXXX/20XX") e
+`Modelo_de_Lei_de_Tombamento_Municipal_Oficial.doc` são projetos, minutas ou modelos.
+
+## Conferência favorável
+
+A Tabela I do Anexo IV — taxa de fiscalização de localização e funcionamento — foi conferida item a
+item contra a página 209 do Código. As quinze faixas e todos os valores do comparativo coincidem com
+o texto da lei, inclusive a fórmula da última faixa. Essa conferência está automatizada em
+`tests/fees.test.mjs` e quebra se a planilha e a lei divergirem.
+
+
+---
+
+# Revisão de 17/08/2026 — inclusão das Leis nº 793/2018 e nº 988/2025
+
+Ambas foram indexadas. A biblioteca passou de 16 para 18 documentos e de 1.371 para 1.375 páginas.
+
+## O documento mais urgente agora: o ato que fixa a UFM
+
+Estas duas leis não cobram em reais. Cobram em **Unidade Fiscal do Município**, e o Código de 2025
+(p. 192) determina que continuem assim, "conforme o seu valor atualizado em Reais (R$)", até que a
+lei as converta. **Nenhum documento da biblioteca informa quanto vale a UFM.**
+
+O valor de R$ 3,75 que se obtém dividindo as colunas da Planilha2 do comparativo não tem exercício
+declarado e não pode ser tratado como a UFM de 2026. Por isso o aplicativo não embute valor algum:
+exibe os montantes em UFM e só converte depois que a equipe informa o valor vigente no novo campo
+"UFM vigente".
+
+Documento a localizar, em prioridade máxima: **o ato anual que fixa ou atualiza a UFM**, para cada
+exercício em que houver lançamento. Sem ele, torres, antenas e placas solares não têm valor em reais
+defensável.
+
+## O que a Lei nº 988/2025 mudou, e por que importa
+
+| Item | Lei 793/2018 | Lei 988/2025 |
+|---|---|---|
+| Torre eólica ou de telefonia, por unidade/ano | 5.000 UFM | 5.000 UFM |
+| Antena de telefonia ou televisão, por unidade/ano | 1.000 UFM | 1.000 UFM |
+| Placa de energia solar, por m²/ano | **50 UFM** | **0,35 UFM** |
+| Teto por alvará | não havia | R$ 100.000,00 |
+
+A placa solar caiu cerca de **143 vezes**. Os novos valores produzem efeitos a partir de
+**1º de janeiro de 2026**, de modo que lançamentos relativos a exercícios anteriores seguem a
+redação de 2018. Placas instaladas para uso domiciliar são isentas desde 2018 (art. 1º, parágrafo
+único), e o pagamento vence em 31 de janeiro de cada ano (art. 4º).
+
+## Qualidade do OCR: as 182 páginas anteriores merecem nova extração
+
+Ao processar a Lei nº 793/2018 ficou demonstrado que a resolução de OCR usada até aqui, `scale=2.3`,
+**descarta linhas inteiras**: na página 2 ela perdeu duas das seis cláusulas, incluindo a regra de
+lançamento proporcional de 1/12 por mês restante.
+
+A resolução maior, porém, não é simplesmente melhor: em `scale=3.5` o OCR leu "50" como "50o" — um
+erro sobre um valor tributário. O extrator passou a rodar as duas resoluções, ficar com a leitura
+que tiver menos algarismos grudados a letras e registrar toda divergência numérica no campo
+`ocrConflict` da página.
+
+As demais 182 páginas do acervo foram extraídas antes dessa correção, com uma única resolução.
+Recomenda-se reprocessá-las e revisar as páginas que apresentarem `ocrConflict`, com atenção
+especial às tabelas de valores do Anexo IV e do Anexo V.
+
+## Ainda não indexados, presentes na pasta
+
+| Arquivo | Matéria | Obstáculo |
+|---|---|---|
+| Lei nº 877/2022 — PRODEM | Incentivo ao desenvolvimento econômico e social | o PDF é digitalizado; há .docx com texto |
+| PLANO_DIRETOR-QGIS.REV4.pdf | Anexo gráfico do Plano Diretor | é mapa, não texto; exige tratamento próprio |
+
+
+---
+
+# Verificação de vigência das Leis nº 793/2018 e nº 988/2025 — 17/08/2026
+
+Conferência conduzida contra as 1.375 páginas indexadas, com cada afirmação submetida a
+refutação independente. As conclusões abaixo são as que sobreviveram.
+
+## A vigência não é pacífica
+
+**Não há revogação expressa.** O art. 423, §2º (p. 193) revoga nominalmente apenas a Lei
+nº 629/2008, o Código anterior, e a Lei nº 547/2003, da CIP. O número "793" não aparece em
+nenhuma das 217 páginas do Código.
+
+**O argumento mais forte pela vigência é a própria Lei nº 988/2025.** Ela é de 23/12/2025,
+posterior ao Código, de 08/10/2025, e determina que "o art. 2º da Lei Municipal nº 793/2018
+passa a vigorar com a seguinte redação". Não se dá nova redação a artigo de lei revogada.
+
+**O argumento contrário é real e não deve ser afastado.** O mesmo art. 423, §2º revoga também
+"as demais disposições em contrário **ou** que anteriormente tratavam das matérias ora
+reguladas". O conectivo é alternativo, e o Código de fato regula matéria congênere: o art. 255,
+I, "a" e "b" (p. 125) arrola a taxa de fiscalização de localização e funcionamento e a de
+máquinas e motores.
+
+**Correção a um entendimento anterior:** o art. 420 (p. 192), que manda continuar cobrando em
+UFM, trata da *unidade de expressão do valor*. Não é cláusula de salvaguarda de vigência e não
+resolve a questão sozinho.
+
+## A UFM pode ter perdido sua própria base legal
+
+"UFM" aparece em apenas três documentos do acervo — p. 192 do Código e as duas leis solares — e
+**nenhuma dessas ocorrências fixa valor, índice, exercício ou autoridade competente**.
+
+Dois pontos agravam:
+
+1. O art. 419 (p. 192) reajusta pelo IPCA, base 2024, a partir de 2026, mas refere-se
+   expressamente aos "valores expressos em moeda corrente nacional, estabelecidos nos Anexos
+   deste Código". Pelo texto literal, **não alcança a UFM**.
+2. A lei que provavelmente instituiu a UFM é a **Lei nº 629/2008 — expressamente revogada** pelo
+   art. 423, §2º e ausente do acervo.
+
+Localizar a Lei nº 629/2008 e o ato que fixa a UFM de cada exercício segue sendo a prioridade
+máxima. Sem isso, torres, antenas e placas solares não têm valor em reais defensável.
+
+Nota: o fator de R$ 3,75 por UFM foi **removido de `public/data/fees.json`**. Era derivado da
+Planilha2 do comparativo, sem exercício nem base legal declarada, e estava publicado no dado sem
+ser usado pelo aplicativo — uma conversão sem lastro à espera de uso. A Planilha2 contém ainda
+uma tabela em UFM por faixa de área (15, 30, 45, 90 e 225 UFM) que **não foi possível vincular a
+nenhuma taxa identificada**; convém apurar a que tributo pertence.
+
+## Risco de sobreposição com o Código de 2025
+
+| Frente | Situação |
+|---|---|
+| **Localização e Funcionamento** (art. 267, p. 131) | **Sobreposição material.** Anual, alcança estabelecimento "edificado ou não" (art. 265, §1º, p. 128) e área apurada "independentemente de haver ou não edificação" (art. 269, §1º, p. 131). Parque eólico, sítio de ERB e usina solar são, em tese, enquadráveis — mesmo núcleo de fato gerador da Lei 793/2018. |
+| **Máquinas e Motores** (art. 271, p. 134) | **Sobreposição direta.** Incide sobre "a instalação, utilização, localização e funcionamento" de máquinas, anual, por unidade. Aerogerador é máquina. O art. 272 (p. 134) **afirma expressamente a cumulação**, "sem prejuízo de outras taxas incidentes". |
+| **Obras e engenharia** (Anexo IV, Tabela IV, itens 1.9 e 1.10, p. 212) | **Sem sobreposição.** Incide sobre o licenciamento da obra de instalação (art. 283, p. 144) — evento pontual, não atividade anual. |
+
+**Não há no Código nenhuma regra de dedução, compensação, exclusão recíproca ou teto conjunto**
+entre suas taxas e as de leis específicas. A cumulação disciplinada nos arts. 272 e 292 é apenas
+entre taxas do próprio Código.
+
+Duas observações quantitativas úteis: a última faixa da Tabela I (p. 209) é **aberta e ilimitada**
+— R$ 1.160,00 mais R$ 0,35 por m² excedente, sem teto — e o art. 269, §10 (p. 133) **acresce 100%**
+para usos potencialmente geradores de incômodo à vizinhança. A taxa da Lei 793/2018, ao contrário,
+tem teto de R$ 100.000,00 por alvará.
+
+Este é um ponto para a Procuradoria decidir antes de qualquer lançamento, não para o balcão.
+
+
+---
+
+# Inclusão da Lei nº 877/2022 — PRODEM — 17/08/2026
+
+Indexada. A biblioteca passou para **19 documentos e 1.384 páginas**.
+
+## Qual das três cópias foi usada, e por quê
+
+A pasta traz três versões do mesmo texto. A escolhida foi `prodem_lei-municipal.pdf`, a única que
+reúne camada de texto com acentuação correta e números confiáveis:
+
+| Arquivo | Situação |
+|---|---|
+| `lei municipal n8772022 PRODEM.pdf` (10 MB) | Digitalização sem camada de texto. Nosso OCR a lê, mas **remove todos os acentos** — inaceitável para leitura de 9 páginas de lei |
+| `prodem_lei-municipal.pdf` (651 KB) | **Escolhida.** Camada de texto com acentuação correta; corrupção restrita ao cabeçalho e a palavras esparsas |
+| `prodem_lei-municipal-n-8772022.docx` | Mesmo texto, com cabeçalhos duplicados em 16 páginas |
+
+Os percentuais foram **conferidos visualmente** contra as páginas 6 e 7 da digitalização de 10 MB
+antes da escolha: multa de 50% no IPTU, ocupação mínima de 30% em 05 anos, multa de 50% no ITBI e
+redução de 80% na base de cálculo do ITBI. Todos conferem. A conferência está automatizada em
+`tests/fees.test.mjs`.
+
+## Dois pontos que a equipe precisa examinar
+
+**1. O PRODEM se apoia num Código revogado.** O art. 2º, § 4º (p. 2) ressalva expressamente os
+direitos e garantias da "Lei Municipal nº 629, de 30 de outubro de 2008 — Código Tributário do
+Município", **justamente a lei revogada pelo art. 423, § 2º do Código de 2025**. É preciso definir
+como essa remissão se lê hoje: se transposta para os dispositivos correspondentes do novo Código,
+se esvaziada, ou se exige lei de ajuste.
+
+**2. O PRODEM isenta exatamente as taxas que se sobrepõem à taxa solar.** O art. 3º concede isenção
+da taxa pela utilização de máquinas e motores por 05 anos, prorrogáveis por mais 05, e da taxa de
+localização e funcionamento por 01 ano. São as duas taxas do Código de 2025 apontadas na verificação
+anterior como sobrepostas à Lei nº 793/2018. Um empreendimento de energia habilitado no PRODEM pode,
+portanto, estar isento de parte da cobrança — o que reforça a necessidade de uma regra clara de
+articulação entre os três regimes.
+
+## Defeito de busca conhecido
+
+A camada de texto grudou "e motores" em "emotores" na página 3. Uma busca por "máquinas e motores"
+não encontra esse dispositivo; a busca por "máquinas" encontra. Convém conferir esse trecho contra a
+publicação oficial.

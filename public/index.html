@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
+  <meta name="theme-color" content="#153f38">
+  <meta name="description" content="Consulta educativa e offline à legislação tributária e urbana de Ibimirim.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="qa.css">
+  <title>Ibimirim Legal</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Ibimirim Legal — início"><span class="seal">IL</span><span><b>Ibimirim Legal</b><small>Tributos e cidade, sem juridiquês</small></span></a>
+    <button id="install" class="install" hidden>Instalar</button>
+  </header>
+  <main>
+    <section id="inicio" class="hero">
+      <p class="eyebrow">Consulta pública • funciona offline</p>
+      <h1>Entenda seus direitos, deveres e procedimentos municipais.</h1>
+      <p>Conteúdo organizado para contribuintes, servidores de Tributos e equipes de Infraestrutura. Consulte sempre a fonte oficial indicada em cada resultado.</p>
+      <label class="search"><span>⌕</span><input id="query" type="search" placeholder="Pesquise ou pergunte: quem tem direito à isenção de ITBI?" autocomplete="off"><kbd>Enter</kbd></label>
+      <p class="search-help">Digite palavras para pesquisar ou faça uma pergunta completa para receber uma resposta apoiada nos documentos.</p>
+      <div id="audiences" class="chips" aria-label="Escolha seu perfil"></div>
+    </section>
+
+    <section class="status" aria-label="Aviso importante">
+      <b>Guia educativo, não parecer jurídico.</b>
+      <span>O texto da lei prevalece. Confirme alterações, regulamentações, datas e valores com o Município antes de decidir ou autuar.</span>
+    </section>
+
+    <section id="feesSection">
+      <div class="section-title"><div><p class="eyebrow">Consulta orientada</p><h2>Taxas de licença</h2></div><p>Separe funcionamento de construção e consulte a faixa correta.</p></div>
+      <div class="ufm-panel">
+        <div class="ufm-about">
+          <p class="eyebrow">Unidade Fiscal do Município</p>
+          <h3>UFM vigente</h3>
+          <p>Algumas taxas são fixadas em UFM, não em reais. O Código de 2025 determina que elas continuem cobradas nessa unidade, <strong>conforme o valor atualizado em reais</strong>, até que a lei as converta. Como a UFM muda a cada exercício, informe aqui o valor em vigor — ele passa a valer para todas as consultas do aplicativo.</p>
+          <button class="source-button" data-fee-doc="ctm-2025" data-fee-page="192">Ver a regra — Código de 2025, p. 192</button>
+        </div>
+        <div class="ufm-form">
+          <div class="ufm-fields">
+            <div><label for="ufmValue">Valor da UFM (R$)</label><div class="fee-input"><span class="fee-prefix">R$</span><input id="ufmValue" type="number" min="0.0001" step="0.0001" inputmode="decimal" placeholder="0,0000"></div></div>
+            <div><label for="ufmYear">Exercício</label><div class="fee-input"><input id="ufmYear" type="number" min="2018" max="2099" step="1" inputmode="numeric" placeholder="2026"></div></div>
+          </div>
+          <div class="ufm-actions"><button id="ufmSave" class="ufm-save">Salvar UFM</button><button id="ufmClear" class="text-button">Limpar</button></div>
+          <p id="ufmStatus" class="ufm-status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="fee-grid">
+        <article class="fee-card">
+          <span class="fee-kind">Funcionamento • anual</span>
+          <h3>Localização e funcionamento</h3>
+          <p>No Código de 2025, o valor depende da <strong>área utilizada pelo estabelecimento</strong>, não do ramo do negócio.</p>
+          <label for="operatingArea">Área utilizada (m²)</label>
+          <div class="fee-input"><input id="operatingArea" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="Ex.: 85"><span>m²</span></div>
+          <div id="operatingResult" class="fee-result" aria-live="polite">Informe a área para consultar a faixa.</div>
+          <details class="fee-comparison"><summary>O que mudou em relação ao CTM anterior?</summary><p>Antes, a cobrança variava por atividade e, em vários casos, também por tamanho e localização no Centro ou na periferia. O novo CTM substituiu essa estrutura por faixas de área utilizada.</p></details>
+          <button class="source-button" data-fee-source="209">Ver Tabela I — página 209</button>
+        </article>
+        <article class="fee-card">
+          <span class="fee-kind">Construção • por licença</span>
+          <h3>Licença para construir</h3>
+          <p>Escolha o tipo da edificação. Esta consulta é da <strong>licença de execução da obra</strong>, distinta de análise de projeto, reforma, habite-se e regularização.</p>
+          <label for="constructionType">Tipo da edificação</label>
+          <select id="constructionType">
+            <option value="residential">Residencial — até 4 pavimentos</option>
+            <option value="business">Comercial, serviços, industrial ou residencial com 5+ pavimentos</option>
+          </select>
+          <label for="constructionArea">Área da construção (m²)</label>
+          <div class="fee-input"><input id="constructionArea" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="Ex.: 120"><span>m²</span></div>
+          <div id="constructionResult" class="fee-result" aria-live="polite">Informe a área para consultar a regra.</div>
+          <details class="fee-comparison"><summary>Comparar com o CTM anterior</summary><div id="constructionComparison"></div></details>
+          <button class="source-button" data-fee-source="211">Ver Tabela IV — página 211</button>
+        </article>
+        <article class="fee-card fee-card-ufm">
+          <span class="fee-kind">Funcionamento • anual • em UFM</span>
+          <h3>Torres, antenas e placas solares</h3>
+          <p>Taxa da <strong>Lei nº 793/2018</strong>, com os valores dados pela <strong>Lei nº 988/2025</strong>. Cobrança anual, paga até 31 de janeiro. Placas instaladas para <strong>uso domiciliar são isentas</strong>.</p>
+          <div class="solar-fields">
+            <div><label for="solarTowers">Torres</label><div class="fee-input"><input id="solarTowers" type="number" min="0" step="1" inputmode="numeric" placeholder="0"><span>un.</span></div></div>
+            <div><label for="solarAntennas">Antenas</label><div class="fee-input"><input id="solarAntennas" type="number" min="0" step="1" inputmode="numeric" placeholder="0"><span>un.</span></div></div>
+            <div><label for="solarArea">Placas solares</label><div class="fee-input"><input id="solarArea" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0"><span>m²</span></div></div>
+          </div>
+          <div id="solarResult" class="fee-result" aria-live="polite">Informe as quantidades para calcular.</div>
+          <details class="fee-comparison"><summary>O que a Lei nº 988/2025 mudou?</summary><p>A redação original de 2018 cobrava <strong>50 UFM por m²</strong> de placa solar ao ano. A Lei nº 988/2025 reduziu para <strong>0,35 UFM por m²</strong> — cerca de 143 vezes menos — e criou um teto de R$ 100.000,00 por alvará. Torre e antena não mudaram de valor.</p><p>Os novos valores produzem efeitos a partir de 1º de janeiro de 2026.</p></details>
+          <button class="source-button" data-fee-doc="lei-988-2025" data-fee-page="1">Ver Lei nº 988/2025</button>
+          <button class="source-button" data-fee-doc="lei-793-2018" data-fee-page="1">Ver Lei nº 793/2018</button>
+        </article>
+      </div>
+      <div class="fee-finder">
+        <div class="section-title"><div><p class="eyebrow">Todas as taxas</p><h3>Buscar valor por atividade, obra ou serviço</h3></div><p>381 itens do Código de 2025 e 141 do comparativo anterior.</p></div>
+        <label class="search"><span>⌕</span><input id="feeQuery" type="search" placeholder="muro, frigorífico, antena, circo, demolição, padaria…" autocomplete="off"></label>
+        <div id="feeFilters" class="chips" aria-label="Filtrar por tipo de taxa"></div>
+        <p id="feeCount" class="fee-count" aria-live="polite"></p>
+        <div id="feeResults" class="fee-results"></div>
+      </div>
+      <p class="fee-notice"><strong>Atenção:</strong> consulta orientativa baseada na Lei Complementar nº 004/2025 e no comparativo fornecido pela equipe. “Valor estimado” é a aplicação matemática do texto da tabela, não lançamento tributário. Confirme atualização monetária, enquadramento, isenção e valor final com o Município.</p>
+    </section>
+
+    <section id="trailSection">
+      <div class="section-title"><div><p class="eyebrow">Comece por aqui</p><h2>Trilhas de consulta</h2></div><p id="profileHint">Escolha um perfil ou explore todos os assuntos.</p></div>
+      <div id="trails" class="trail-grid"></div>
+    </section>
+
+    <section id="resultsSection" hidden>
+      <div class="section-title"><div><p class="eyebrow">Na legislação</p><h2 id="resultsTitle">Resultados</h2></div><button id="clear" class="text-button">Limpar busca</button></div>
+      <article id="answer" class="answer" hidden></article>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section id="librarySection">
+      <div class="section-title"><div><p class="eyebrow">Fontes</p><h2>Biblioteca legal</h2></div><p>Texto integral pesquisável por página.</p></div>
+      <div id="library" class="library"></div>
+    </section>
+
+    <section class="glossary">
+      <div class="section-title"><div><p class="eyebrow">Palavras importantes</p><h2>Glossário rápido</h2></div></div>
+      <dl id="glossary"></dl>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <a href="#inicio"><span>⌂</span>Início</a><a href="#trailSection"><span>▦</span>Trilhas</a><a href="#librarySection"><span>◫</span>Leis</a>
+  </nav>
+  <dialog id="reader">
+    <div class="reader-toolbar" aria-label="Controles de leitura">
+      <button id="readerDecrease" type="button" aria-label="Diminuir texto">A−</button>
+      <button id="readerReset" type="button" aria-label="Restaurar tamanho do texto">100%</button>
+      <button id="readerIncrease" type="button" aria-label="Aumentar texto">A+</button>
+      <button id="readerMode" type="button" hidden>Texto original</button>
+      <form method="dialog"><button class="reader-close" aria-label="Fechar">×</button></form>
+    </div>
+    <div id="readerContent"></div>
+  </dialog>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

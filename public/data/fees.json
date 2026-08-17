@@ -1,0 +1,4230 @@
+{
+ "generated": "2026-08-17",
+ "source": {
+  "file": "Comparativo - CTM Ibimirim - Taxas.xlsx",
+  "sheet": "Planilha1"
+ },
+ "ufmNote": "Valores fixados em UFM não são convertidos aqui. O corpus não traz o valor da UFM em reais, e o art. 419 do Código de 2025 reajusta pelo IPCA apenas os valores expressos em moeda corrente nos seus Anexos. A conversão depende do valor do exercício, informado pelo usuário no aplicativo.",
+ "disclaimer": "Extraído do comparativo fornecido pela equipe. Os lados anterior e atual são listas independentes: nenhuma equivalência entre eles foi inferida automaticamente.",
+ "sections": [
+  {
+   "id": "taxas-pelo-exercicio-regular-do-poder-de-policia",
+   "title": "TAXAS PELO EXERCÍCIO REGULAR DO PODER DE POLÍCIA",
+   "short": "Taxas pelo exercício regular do poder de polícia",
+   "row": 5,
+   "table": null,
+   "doc": "ctm-2025",
+   "pages": [],
+   "status": "sem ancora",
+   "note": null,
+   "previous": [],
+   "current": []
+  },
+  {
+   "id": "taxa-de-fiscalizacao-de-localizacao-e-funcionamento",
+   "title": "TAXA DE FISCALIZAÇÃO DE LOCALIZAÇÃO E FUNCIONAMENTO",
+   "short": "Localização e funcionamento",
+   "row": 6,
+   "table": "Anexo IV, Tabela I",
+   "doc": "ctm-2025",
+   "pages": [
+    209
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "AGÊNCIA DE AUTOMÓVEIS",
+     "row": 8,
+     "kind": "fixed",
+     "value": 447.34
+    },
+    {
+     "label": "ARMARINHO",
+     "row": 9,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "ATELIER FOTOGRÁFICO",
+     "row": 10,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "ACADEMIA DE GINÁSTICA",
+     "row": 11,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "ASSOCIAÇÃO",
+     "row": 12,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "AGÊNCIA DE PASSAGENS",
+     "row": 13,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "AÇOUGUE",
+     "row": 14,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "BARES E LANCHONETES",
+     "row": 15,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "BODEGA",
+     "row": 16,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "CASA DE SAÚDE E HOSPITAIS",
+     "row": 17,
+     "kind": "fixed",
+     "value": 335.51
+    },
+    {
+     "label": "CLÍNICA MÉDICA",
+     "row": 18,
+     "kind": "fixed",
+     "value": 268.41
+    },
+    {
+     "label": "CASA DE SHOW",
+     "row": 19,
+     "kind": "fixed",
+     "value": 447.34
+    },
+    {
+     "label": "CASA FUNERÁRIA",
+     "row": 20,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "CHURRASCARIA E RESTAURANTE",
+     "row": 21,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "CLUBE",
+     "row": 22,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "COMÉRCIO EM GERAL",
+     "row": 23,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "CONSULTÓRIO MÉDICO",
+     "row": 24,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "CONSULTÓRIO ODONTOLÓGICO",
+     "row": 25,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "CONSULTÓRIO OFTALMOLÓGICO",
+     "row": 26,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "COOPERATIVA",
+     "row": 27,
+     "kind": "fixed",
+     "value": 335.51
+    },
+    {
+     "label": "CURSO DE INFORMÁTICA",
+     "row": 28,
+     "kind": "fixed",
+     "value": 201.3
+    },
+    {
+     "label": "ESCOLAS",
+     "row": 29,
+     "kind": "fixed",
+     "value": 268.41
+    },
+    {
+     "label": "ESCRITÓRIOS EM GERAL",
+     "row": 30,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "FARMÁCIA",
+     "row": 31,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "FÁBRICA",
+     "row": 32,
+     "kind": "fixed",
+     "value": 671.01
+    },
+    {
+     "label": "FRIGORÍFICO",
+     "row": 33,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "HOTÉIS E SIMILARES",
+     "row": 34,
+     "kind": "fixed",
+     "value": 335.51
+    },
+    {
+     "label": "INDUSTRIA",
+     "row": 35,
+     "kind": "fixed",
+     "value": 268.41
+    },
+    {
+     "label": "INSTITUIÇÕES FINANCEIRAS E CREDINTÍCIAS",
+     "row": 36,
+     "kind": "fixed",
+     "value": 1118.36
+    },
+    {
+     "label": "LABORATÓRIO, CLÍNICA E CONSULTÓRIO",
+     "row": 37,
+     "kind": "fixed",
+     "value": 268.41
+    },
+    {
+     "label": "LOJA DE MÓVEIS",
+     "row": 38,
+     "kind": "fixed",
+     "value": 268.41
+    },
+    {
+     "label": "LOJAS OUTRAS",
+     "row": 39,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "LOTÉRICA",
+     "row": 40,
+     "kind": "fixed",
+     "value": 447.34
+    },
+    {
+     "label": "LOCADORA DE VÍDEOS, DVDS E CDS",
+     "row": 41,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "MERCADINHO",
+     "row": 42,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "MERCEARIA",
+     "row": 43,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "OFICINA MECÂNICA",
+     "row": 44,
+     "kind": "fixed",
+     "value": 134.2
+    },
+    {
+     "label": "ÓTICA",
+     "row": 45,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "PADARIA",
+     "row": 46,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "POSTO DE LAVAGEM",
+     "row": 47,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "PEÇAS E ACESSÓRIOS EM GERAL",
+     "row": 48,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "PENSÃO",
+     "row": 49,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "POUSADA",
+     "row": 50,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "PERFUMARIA E COSMÉTICOS",
+     "row": 51,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "POSTO DE VENDA COMBUSTÍVEL E DERIVADOS",
+     "row": 52,
+     "kind": "fixed",
+     "value": 671.01
+    },
+    {
+     "label": "SALÃO DE BELEZA E HIGIENE PESSOAL",
+     "row": 53,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "MOTO TÁXI",
+     "row": 54,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "RÁDIO",
+     "row": 55,
+     "kind": "fixed",
+     "value": 223.67
+    },
+    {
+     "label": "SERVIÇOS EM GERAL",
+     "row": 56,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "SORVETERIAS",
+     "row": 57,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "SUPERMERCADOS",
+     "row": 58,
+     "kind": "fixed",
+     "value": 335.51
+    },
+    {
+     "label": "OUTROS",
+     "row": 59,
+     "kind": "tiered",
+     "tiers": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 89.47
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 178.94
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 268.41
+      }
+     ],
+     "raw": "R$ 89,47 (P); R$ 178,94 (M); R$ 268,41 (G)",
+     "zone": "centro",
+     "outskirts": [
+      {
+       "tier": "P",
+       "label": "até 20 m²",
+       "value": 67.1
+      },
+      {
+       "tier": "M",
+       "label": "20,01 a 40 m²",
+       "value": 134.2
+      },
+      {
+       "tier": "G",
+       "label": "acima de 40,01 m²",
+       "value": 201.3
+      }
+     ]
+    },
+    {
+     "label": "TRANSPORTE",
+     "row": 60,
+     "kind": "fixed",
+     "value": 313.14
+    }
+   ],
+   "current": [
+    {
+     "label": "até 50,00 m².",
+     "row": 7,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "superior a 50,00 m² até 100,00 m²",
+     "row": 8,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "superior a 100,00 m² até 150,00 m²",
+     "row": 9,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "superior a 150,00 m² até 200,00 m²",
+     "row": 10,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "superior a 200,00 m² até 300,00 m².",
+     "row": 11,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "superior a 300,00 m² até 450,00 m².",
+     "row": 12,
+     "kind": "fixed",
+     "value": 400.0
+    },
+    {
+     "label": "superior a 450,00 m² até 700,00 m².",
+     "row": 13,
+     "kind": "fixed",
+     "value": 500.0
+    },
+    {
+     "label": "superior a 700,00 m² até 1.000,00 m².",
+     "row": 14,
+     "kind": "fixed",
+     "value": 600.0
+    },
+    {
+     "label": "superior a 1.000,00 m² até 1.350,00 m².",
+     "row": 15,
+     "kind": "fixed",
+     "value": 680.0
+    },
+    {
+     "label": "superior a 1.350,00 m² até 1.750,00 m².",
+     "row": 16,
+     "kind": "fixed",
+     "value": 760.0
+    },
+    {
+     "label": "superior a 1.750,00 m² até 2.200,00 m².",
+     "row": 17,
+     "kind": "fixed",
+     "value": 840.0
+    },
+    {
+     "label": "superior a 2.200,00 m² até 2.700,00 m².",
+     "row": 18,
+     "kind": "fixed",
+     "value": 920.0
+    },
+    {
+     "label": "superior a 2.700,00 m² até 3.250,00 m².",
+     "row": 19,
+     "kind": "fixed",
+     "value": 1000.0
+    },
+    {
+     "label": "superior a 3.250,00 m² até 3.850,00 m².",
+     "row": 20,
+     "kind": "fixed",
+     "value": 1080.0
+    },
+    {
+     "label": "superior a 3.850,00 m²,",
+     "row": 21,
+     "kind": "formula",
+     "base": 1160.0,
+     "rate": 0.35,
+     "unit": "m²",
+     "threshold": 3850.0,
+     "raw": "R$ 1.160,00 + R$ 0,35 por m² acrescido"
+    }
+   ]
+  },
+  {
+   "id": "taxa-de-fiscalizacao-pela-utilizacao-de-maquinas-e-motores",
+   "title": "TAXA DE FISCALIZAÇÃO PELA UTILIZAÇÃO DE MÁQUINAS E MOTORES",
+   "short": "Máquinas e motores",
+   "row": 62,
+   "table": "Anexo IV, Tabela II",
+   "doc": "ctm-2025",
+   "pages": [
+    209
+   ],
+   "status": "parcial",
+   "note": null,
+   "previous": [
+    {
+     "label": "TAXA DE LICENÇA PARA ARMAZENAMENTO DE INFLAMÁVEIS E INSTALAÇÃO DE MÁQUINAS, MOTORES E EQUIPAMENTOS DE USO COLETIVO",
+     "row": 63,
+     "kind": "fixed",
+     "value": 390.37
+    }
+   ],
+   "current": [
+    {
+     "label": "Pela potência, por unidade:",
+     "row": 63,
+     "kind": "heading"
+    },
+    {
+     "label": "De 10 HP até 20 HP.",
+     "row": 64,
+     "kind": "fixed",
+     "value": 30.0
+    },
+    {
+     "label": "Superior a 20 HP até 50 HP.",
+     "row": 65,
+     "kind": "fixed",
+     "value": 40.0
+    },
+    {
+     "label": "Superior a 50 HP até 200 HP.",
+     "row": 66,
+     "kind": "fixed",
+     "value": 60.0
+    },
+    {
+     "label": "Superior a 200 HP até 500 HP.",
+     "row": 67,
+     "kind": "fixed",
+     "value": 80.0
+    },
+    {
+     "label": "Superior a 500 HP até 2000 HP.",
+     "row": 68,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Superior a 2000 HP até 5000 HP.",
+     "row": 69,
+     "kind": "fixed",
+     "value": 120.0
+    },
+    {
+     "label": "Superior a 5000 HP e acima.",
+     "row": 70,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Guindaste e ponte volante por tonelada ou fração, por unidade.",
+     "row": 71,
+     "kind": "fixed",
+     "value": 90.0
+    },
+    {
+     "label": "Fornos, fornalhas ou caldeiras, câmaras frigoríficas, por unidade.",
+     "row": 72,
+     "kind": "fixed",
+     "value": 45.0
+    },
+    {
+     "label": "Bomba de combustível, por unidade.",
+     "row": 73,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Elevadores, escadas e esteiras rolantes, macacos hidráulicos e congêneres, por unidade.",
+     "row": 74,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Máquina de autoatendimento bancário, por unidade.",
+     "row": 75,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Outras máquinas, motores ou equipamentos não especificados, por unidade.",
+     "row": 76,
+     "kind": "fixed",
+     "value": 80.0
+    }
+   ]
+  },
+  {
+   "id": "taxa-pela-utilizacao-de-meios-de-publicidade",
+   "title": "TAXA PELA UTILIZAÇÃO DE MEIOS DE PUBLICIDADE",
+   "short": "Publicidade",
+   "row": 78,
+   "table": "Anexo IV, Tabela III",
+   "doc": "ctm-2025",
+   "pages": [
+    210,
+    211
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "Publicidade eventual em vias públicas",
+     "row": 79,
+     "kind": "fixed",
+     "value": 18.04
+    },
+    {
+     "label": "Propaganda, cartazes, placas, tabuletas, letreiros em veículos especialmente empregados para este fim por iniciativa de empresas ou estabelecimentos produtores, comerciais, industriais ou prestadores de serviços, por veículo por publicidade e em períodos eventuais.",
+     "row": 80,
+     "kind": "fixed",
+     "value": 25.55
+    },
+    {
+     "label": "Propaganda feita por meio de balões, quando permitidos, por anúncio e por evento.",
+     "row": 81,
+     "kind": "fixed",
+     "value": 52.61
+    },
+    {
+     "label": "\"Out Door'' - por exemplar, por ano",
+     "row": 82,
+     "kind": "fixed",
+     "value": 180.36
+    },
+    {
+     "label": "Luminosos",
+     "row": 83,
+     "kind": "fixed",
+     "value": 90.18
+    }
+   ],
+   "current": [
+    {
+     "label": "Painel de grande porte sem iluminação para afixação de cartazes de mensagens publicitárias, conhecidos como \"outdoor\", por m² e por ano",
+     "row": 79,
+     "kind": "fixed",
+     "value": 27.0
+    },
+    {
+     "label": "Painel luminoso de grande porte para veiculação de mensagens publicitárias, conhecidas como \"back-light\" e \"front-light\", por m² e por ano",
+     "row": 80,
+     "kind": "fixed",
+     "value": 55.0
+    },
+    {
+     "label": "Molduras de acrílico ou outro material equivalente na parte traseira de bancas de jornais e revistas ou, ainda, em um de seus lados, para afixação de cartazes contendo mensagens publicitárias, por unidade e por ano",
+     "row": 81,
+     "kind": "fixed",
+     "value": 66.0
+    },
+    {
+     "label": "Relógios, termômetros, medidores de poluição e similares, com espaço destinado à veiculação de mensagens publicitárias, por unidade e por ano",
+     "row": 82,
+     "kind": "fixed",
+     "value": 77.0
+    },
+    {
+     "label": "Pontos de ônibus, abrigos e similares, com espaço destinado à veiculação de mensagens publicitárias, por m² e por ano",
+     "row": 83,
+     "kind": "fixed",
+     "value": 22.0
+    },
+    {
+     "label": "Postes identificadores de vias públicas, contendo mensagens publicitárias afixadas por qualquer meio, por unidade e por ano",
+     "row": 84,
+     "kind": "fixed",
+     "value": 22.0
+    },
+    {
+     "label": "Mural, por m² e por ano",
+     "row": 85,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Letreiro, por m² e por ano",
+     "row": 86,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Placa instalada justaposta à fachada, por m² e por ano",
+     "row": 87,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Placa instalada não justaposta à fachada, por m² e por ano",
+     "row": 88,
+     "kind": "fixed",
+     "value": 55.0
+    },
+    {
+     "label": "Painel luminoso de pequeno porte (outside), por m² e por ano",
+     "row": 89,
+     "kind": "fixed",
+     "value": 55.0
+    },
+    {
+     "label": "Placa luminosa em abrigo de ônibus e praças, por m² e por ano",
+     "row": 90,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Placa de mídia eletrônica (painel luminoso animado), por m² e por ano",
+     "row": 91,
+     "kind": "fixed",
+     "value": 77.0
+    },
+    {
+     "label": "Estandarte ou galhardete, por m² e por ano",
+     "row": 92,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Faixa, por m² e por ano",
+     "row": 93,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Mobiliário Urbano, por m² e por ano",
+     "row": 94,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Veículo Automotor de qualquer natureza, contendo mensagens publicitárias afixadas por qualquer meio na parte exterior, por m² e por ano",
+     "row": 95,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Veiculação de anúncio sonoro através de autofalante em prédio comercial, por unidade e por mês.",
+     "row": 96,
+     "kind": "fixed",
+     "value": 530.0
+    },
+    {
+     "label": "Veiculação de anúncio sonoro através de autofalante em veículo, por unidade e por mês",
+     "row": 97,
+     "kind": "fixed",
+     "value": 530.0
+    },
+    {
+     "label": "Balão e congêneres, por unidade e por mês",
+     "row": 98,
+     "kind": "fixed",
+     "value": 530.0
+    },
+    {
+     "label": "Outdoors, placas, letreiros, mural, estandarte, galhardete, faixa, painéis e similares, instalados em estabelecimento de terceiros ou em locais de frequências pública, onde se realizam diversões públicas, inclusive competições esportivas, ou em estações, centro de convenções, casas de shows, galerias, “shopping centers”, “out-lets”, feiras e exposições, supermercados, hipermercados e congêneres, por m² e:",
+     "row": 99,
+     "kind": "heading"
+    },
+    {
+     "label": "Por mês ou fração",
+     "row": 100,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Por ano",
+     "row": 101,
+     "kind": "fixed",
+     "value": 360.0
+    },
+    {
+     "label": "Painéis, letreiros, murais, placas indicativas de profissão arte ou ofício, dísticos, emblemas e assemelhados, identificando o estabelecimento ou o ramo de atividade exercida, colocados na parte externa do estabelecimento instalados justapostos à fachada, por m² e por ano",
+     "row": 102,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Outros meios de Publicidade não especificada nos incisos anteriores, por m² e:",
+     "row": 103,
+     "kind": "heading"
+    },
+    {
+     "label": "Por mês ou fração",
+     "row": 104,
+     "kind": "fixed",
+     "value": 33.0
+    },
+    {
+     "label": "Por semestre",
+     "row": 105,
+     "kind": "fixed",
+     "value": 360.0
+    }
+   ]
+  },
+  {
+   "id": "taxas-pela-execucao-de-obras-e-servicos-de-engenharia",
+   "title": "TAXAS PELA EXECUÇÃO DE OBRAS E SERVIÇOS DE ENGENHARIA",
+   "short": "Obras e engenharia",
+   "row": 107,
+   "table": "Anexo IV, Tabela IV",
+   "doc": "ctm-2025",
+   "pages": [
+    211,
+    212,
+    213
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "Licença para execução de obras e serviços de engenharia:",
+     "row": 108,
+     "kind": "heading"
+    },
+    {
+     "label": "Residencial",
+     "row": 109,
+     "kind": "fixed",
+     "value": 78.07
+    },
+    {
+     "label": "Comercial/industrial/prestador de serviço",
+     "row": 110,
+     "kind": "fixed",
+     "value": 117.0
+    },
+    {
+     "label": "Instalações de redes aéreas, superficiais e subterrâneas de dutos, fios, cabos, em conformidade com o fato gerador descrito no art. 172",
+     "row": 111,
+     "kind": "fixed",
+     "value": 520.5
+    },
+    {
+     "label": "ALVARÁ DE CONSTRUÇÃO - COM LAJES",
+     "row": 112,
+     "kind": "fixed",
+     "value": 156.57
+    },
+    {
+     "label": "ALVARÁ DE CONSTRUÇÃO - SEM LAJES",
+     "row": 113,
+     "kind": "fixed",
+     "value": 111.84
+    },
+    {
+     "label": "ANÁLISE PRÉVIA DE PROJETOS DE PARCELAMENTO",
+     "row": 114,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 115,
+     "kind": "fixed",
+     "value": 75.15
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 116,
+     "kind": "fixed",
+     "value": 112.73
+    },
+    {
+     "label": "ANÁLISE PARA APROVAÇÃO DE PROJETOS DE ARRUAMENTO",
+     "row": 117,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 118,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 119,
+     "kind": "heading"
+    },
+    {
+     "label": "ANÁLISE PRÉVIA DE PROJETOS DE PARCELAMENTO",
+     "row": 120,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 121,
+     "kind": "fixed",
+     "value": 75.15
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 122,
+     "kind": "fixed",
+     "value": 112.73
+    },
+    {
+     "label": "ANÁLISE PARA APROVAÇÃO DE PROJETOS DE ARRUAMENTO",
+     "row": 123,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 124,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 125,
+     "kind": "heading"
+    },
+    {
+     "label": "ANÁLISE DE PROJETOS DE ARQUITETURA E ENGENHARIA",
+     "row": 126,
+     "kind": "heading"
+    },
+    {
+     "label": "Revalidação de projetos urbanísticos (por lote)",
+     "row": 127,
+     "kind": "fixed",
+     "value": 3.01
+    },
+    {
+     "label": "Análise técnica de levantamento (por projeto)",
+     "row": 128,
+     "kind": "fixed",
+     "value": 105.21
+    },
+    {
+     "label": "Licença de obras em geral:",
+     "row": 129,
+     "kind": "heading"
+    },
+    {
+     "label": "a) Muros (por metro linear)",
+     "row": 130,
+     "kind": "fixed",
+     "value": 2.25
+    },
+    {
+     "label": "b) Marquises (por m² de projeção)",
+     "row": 131,
+     "kind": "fixed",
+     "value": 4.51
+    },
+    {
+     "label": "c) Piscinas e caixas d'água (por m²)",
+     "row": 132,
+     "kind": "fixed",
+     "value": 3.76
+    },
+    {
+     "label": "d) Cobertura em estrutura metálica (por m²)",
+     "row": 133,
+     "kind": "fixed",
+     "value": 3.01
+    },
+    {
+     "label": "ANÁLISE PRÉVIA DE PROJETOS DE PARCELAMENTO",
+     "row": 134,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 135,
+     "kind": "fixed",
+     "value": 75.15
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 136,
+     "kind": "fixed",
+     "value": 112.73
+    },
+    {
+     "label": "ANÁLISE PARA APROVAÇÃO DE PROJETOS DE ARRUAMENTO",
+     "row": 137,
+     "kind": "heading"
+    },
+    {
+     "label": "Para Glebas com área até 10.000m²",
+     "row": 138,
+     "kind": "fixed",
+     "value": 75.15
+    },
+    {
+     "label": "Para Glebas com áreas acima de 10.000m²",
+     "row": 139,
+     "kind": "fixed",
+     "value": 112.73
+    },
+    {
+     "label": "VISTORIA DE EDIFICAÇÕES, DEMOLIÇÕES OU PARCELAMENTOS",
+     "row": 140,
+     "kind": "heading"
+    },
+    {
+     "label": "Vistoria",
+     "row": 141,
+     "kind": "fixed",
+     "value": 106.87
+    },
+    {
+     "label": "Demolição",
+     "row": 142,
+     "kind": "fixed",
+     "value": 89.05
+    },
+    {
+     "label": "Parcelamentos",
+     "row": 143,
+     "kind": "fixed",
+     "value": 356.22
+    },
+    {
+     "label": "LICENÇA DE PARCELAMENTO (valor por m²)",
+     "row": 144,
+     "kind": "heading"
+    },
+    {
+     "label": "Loteamento (x m²)",
+     "row": 145,
+     "kind": "fixed",
+     "value": 0.12
+    },
+    {
+     "label": "Remembramento (x m²)",
+     "row": 146,
+     "kind": "fixed",
+     "value": 0.11
+    },
+    {
+     "label": "Desmembramento (x m²)",
+     "row": 147,
+     "kind": "fixed",
+     "value": 0.09
+    },
+    {
+     "label": "HABITE-SE",
+     "row": 148,
+     "kind": "heading"
+    },
+    {
+     "label": "De 30,01 A 60,0 m²",
+     "row": 149,
+     "kind": "fixed",
+     "value": 22.55
+    },
+    {
+     "label": "De 60,01 a 100,0 m²",
+     "row": 150,
+     "kind": "fixed",
+     "value": 37.58
+    },
+    {
+     "label": "De 100,01 a 150,0 m²",
+     "row": 151,
+     "kind": "fixed",
+     "value": 52.61
+    },
+    {
+     "label": "Acima de 150,01 m²",
+     "row": 152,
+     "kind": "fixed",
+     "value": 67.64
+    },
+    {
+     "label": "TAXA DE PROTEÇÃO AO MEIO AMBIENTE",
+     "row": 153,
+     "kind": "fixed",
+     "value": 124.68
+    },
+    {
+     "label": "TORRE EÓLICA/TELEFONIA",
+     "row": 154,
+     "kind": "fixed",
+     "value": 12990.25
+    },
+    {
+     "label": "ANTENA",
+     "row": 155,
+     "kind": "fixed",
+     "value": 2598.05
+    },
+    {
+     "label": "PLACA DE ENERGIA SOLAR",
+     "row": 156,
+     "kind": "fixed",
+     "value": 129.9
+    }
+   ],
+   "current": [
+    {
+     "label": "Licença para execução de obras e serviços de engenharia:",
+     "row": 108,
+     "kind": "heading"
+    },
+    {
+     "label": "Execução de obras e serviços de construção de edificações residenciais com um máximo de 04 (quatro) pavimentos:",
+     "row": 109,
+     "kind": "heading"
+    },
+    {
+     "label": "Para edificações de até 50,00 m².",
+     "row": 110,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Para edificações superiores a 50,00 m².",
+     "row": 111,
+     "kind": "formula",
+     "base": 50.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 50,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de construção de edificações destinadas às atividades comerciais, de prestação de serviços e industriais, assim como prédios residenciais com um mínimo de 05 (cinco) pavimentos:",
+     "row": 112,
+     "kind": "heading"
+    },
+    {
+     "label": "Para edificações de até 50,00 m².",
+     "row": 113,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Para edificações superiores a 50,00 m².",
+     "row": 114,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 150,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de instalações de redes aéreas, superficiais e subterrâneas de dutos, fios, cabos, inclusive para redes de transmissão de energia elétrica, redes de telecomunicações, redes de água, rede de esgoto, rede de gás, por metro linear:",
+     "row": 115,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 12,00 metros lineares.",
+     "row": 116,
+     "kind": "fixed",
+     "value": 500.0
+    },
+    {
+     "label": "Superior a 12,00 metros lineares.",
+     "row": 117,
+     "kind": "formula",
+     "base": 500.0,
+     "rate": 0.3,
+     "unit": "metro linear",
+     "threshold": 12.0,
+     "raw": "R$ 500,00, mais R$ 0,30 por metro linear acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de construção de piscina, por m²",
+     "row": 118,
+     "kind": "fixed",
+     "value": 30.0
+    },
+    {
+     "label": "Execução de obras e serviços de construção de marquise, por metro linear:",
+     "row": 119,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 120,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 121,
+     "kind": "formula",
+     "base": 250.0,
+     "rate": 0.5,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 250,00, mais R$ 0,50 por metro linear acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de construção de muro, devidamente demarcado, até 50,00 m².",
+     "row": 122,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.15,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "150,00, mais 0,15 por m² acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de demolição:",
+     "row": 123,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 124,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 125,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 150,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de construção de barracões e galpões, por m²:",
+     "row": 126,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 127,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 128,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 150,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Execução de obras e serviços de instalação de torres, antenas e demais instalações de Estação Rádio-Base (ERB) de serviços de comunicação móvel celular e especializada, de televisão, de rádio, de telecomunicações em geral, e outras antenas transmissoras de radiação eletromagnéticas, por unidade.",
+     "row": 129,
+     "kind": "fixed",
+     "value": 900.0
+    },
+    {
+     "label": "Execução de obras e serviços de instalação de máquinas, motores, fornos, guindastes, câmaras frigoríficas, equipamentos de uso coletivo, antenas não transmissoras de radiação eletromagnética, e assemelhados que dependam de licença, por unidade.",
+     "row": 130,
+     "kind": "fixed",
+     "value": 120.0
+    },
+    {
+     "label": "Execução de obras e serviços de instalação de elevador de alçapão, elevador de uso coletivo e residencial, escada rolante, motocarga, e outros de natureza especial, tais como: elevador de degraus sobre esteira, elevador hidráulico, elevador para garagem com carga e descarga automática, empilhadeira fixa, esteira transportadora de grande porte, plano inclinado, ponte rolante, pórtico, tapete rolante e teleférico, por unidade.",
+     "row": 131,
+     "kind": "fixed",
+     "value": 160.0
+    },
+    {
+     "label": "Execução de obras e serviços de construção de obra de arte, como pontes, viadutos, túneis, barragens, diques, eclusas, muros de sustentação, por metro linear:",
+     "row": 132,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 133,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 134,
+     "kind": "formula",
+     "base": 300.0,
+     "rate": 0.5,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 300,00, mais R$ 0,50 por metro linear acrescido."
+    },
+    {
+     "label": "Execução de quaisquer outras obras e serviços de engenharia que dependam de licença, por m² ou metro linear, conforme o caso:",
+     "row": 135,
+     "kind": "heading"
+    },
+    {
+     "label": "Por metro linear:",
+     "row": 136,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 137,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 138,
+     "kind": "formula",
+     "base": 300.0,
+     "rate": 0.3,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 300,00, mais R$ 0,30 por metro linear acrescido."
+    },
+    {
+     "label": "Por m²:",
+     "row": 139,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 140,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 141,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 150,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Licença para execução de obras de reparação, conservação e reformas:",
+     "row": 142,
+     "kind": "heading"
+    },
+    {
+     "label": "Execução de abertura de vãos, alvenaria, coberta, demolição, elevação de piso, guarita, laje, marquise, sem ampliação ou com decréscimo de área construída.",
+     "row": 143,
+     "kind": "fixed",
+     "value": 140.0
+    },
+    {
+     "label": "Execução de obras e serviços de reparação, conservação e reformas com ampliação de área construída:",
+     "row": 144,
+     "kind": "heading"
+    },
+    {
+     "label": "De até 50,00 m².",
+     "row": 145,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 146,
+     "kind": "formula",
+     "base": 50.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 50,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Execução de quaisquer outras obras e serviços de reparação, conservação e reformas que dependam de licença, por m² ou metro linear, conforme o caso:",
+     "row": 147,
+     "kind": "heading"
+    },
+    {
+     "label": "Por metro linear:",
+     "row": 148,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 149,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 150,
+     "kind": "formula",
+     "base": 300.0,
+     "rate": 0.3,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 300,00, mais R$ 0,30 por metro linear acrescido."
+    },
+    {
+     "label": "Por m²:",
+     "row": 151,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 152,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 153,
+     "kind": "formula",
+     "base": 250.0,
+     "rate": 0.3,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 250,00, mais R$ 0,30 por m² acrescido."
+    },
+    {
+     "label": "Análise prévia e aprovação de plantas e projetos:",
+     "row": 154,
+     "kind": "heading"
+    },
+    {
+     "label": "Para edificações residenciais com um máximo de 04 (quatro) pavimentos:",
+     "row": 155,
+     "kind": "heading"
+    },
+    {
+     "label": "Para edificações de até 50,00 m².",
+     "row": 156,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Para edificações acima de 50,00 m².",
+     "row": 157,
+     "kind": "formula",
+     "base": 150.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 150,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Para edificações destinadas às atividades comerciais, de prestação de serviços e industriais, assim como prédios residenciais com um mínimo de 05 (cinco) pavimentos:",
+     "row": 158,
+     "kind": "heading"
+    },
+    {
+     "label": "Para edificações de até 50,00 m².",
+     "row": 159,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Para edificações acima de 50,00 m².",
+     "row": 160,
+     "kind": "formula",
+     "base": 250.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 250,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Para construção de obra de arte, como pontes, viadutos, túneis, barragens, diques, eclusas, muros de sustentação, por metro linear:",
+     "row": 161,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 162,
+     "kind": "fixed",
+     "value": 1200.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 163,
+     "kind": "formula",
+     "base": 1200.0,
+     "rate": 2.5,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 1.200,00, mais R$ 2,50 por metro linear acrescido."
+    },
+    {
+     "label": "Para instalação de torres, antenas e demais instalações de Estação Rádio-Base (ERB) de serviços de comunicação móvel celular e especializada, de televisão, de rádio, de telecomunicações em geral, e outras antenas transmissoras de radiação eletromagnéticas, por antena ou equipamento.",
+     "row": 164,
+     "kind": "fixed",
+     "value": 2000.0
+    },
+    {
+     "label": "Para instalação de máquinas, motores, fornos, guindastes, câmaras frigoríficas, equipamentos de uso coletivo, antenas não transmissoras de radiação eletromagnética, e assemelhados, que dependam de licença, por unidade.",
+     "row": 165,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Para instalação de elevador de alçapão, elevador de uso coletivo e residencial, escada rolante, moto carga, e outros de natureza especial, tais como: elevador de degraus sobre esteira, elevador hidráulico, elevador para garagem com carga e descarga automática, empilhadeira fixa, esteira transportadora de grande porte, plano inclinado, ponte rolante, pórtico, tapete rolante e teleférico, por unidade.",
+     "row": 166,
+     "kind": "fixed",
+     "value": 350.0
+    },
+    {
+     "label": "Para construção de piscina, por m².",
+     "row": 167,
+     "kind": "fixed",
+     "value": 60.0
+    },
+    {
+     "label": "Para construção de marquise, por metro linear:",
+     "row": 168,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 169,
+     "kind": "fixed",
+     "value": 600.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 170,
+     "kind": "formula",
+     "base": 600.0,
+     "rate": 1.0,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 600,00 mais R$ 1,00 por metro linear acrescido."
+    },
+    {
+     "label": "Para construção de muro, devidamente demarcado, até 50,00 m².",
+     "row": 171,
+     "kind": "formula",
+     "base": 120.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 120,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Para serviços de demolição:",
+     "row": 172,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 173,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Acima de 50,00 m².",
+     "row": 174,
+     "kind": "formula",
+     "base": 250.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 250,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Para construção de barracões e galpões, por m²:",
+     "row": 175,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 176,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 177,
+     "kind": "formula",
+     "base": 250.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 250,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Para instalação de dutos subterrâneos:",
+     "row": 178,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 12,00 metros lineares.",
+     "row": 179,
+     "kind": "fixed",
+     "value": 2000.0
+    },
+    {
+     "label": "Superior a 12,00 metros lineares.",
+     "row": 180,
+     "kind": "formula",
+     "base": 2000.0,
+     "rate": 0.5,
+     "unit": "metro linear",
+     "threshold": 12.0,
+     "raw": "R$ 2.000,00, mais R$ 0,50 por metro linear acrescido."
+    },
+    {
+     "label": "Para instalação de equipamento de prestadoras de serviços de telefonia, gás, energia elétrica, água e esgoto, instalado em logradouro e/ou área pública, por equipamento.",
+     "row": 181,
+     "kind": "fixed",
+     "value": 450.0
+    },
+    {
+     "label": "Para instalação de cabos aéreos:",
+     "row": 182,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 30,00 metros lineares.",
+     "row": 183,
+     "kind": "fixed",
+     "value": 2000.0
+    },
+    {
+     "label": "Superior a 30,00 metros lineares.",
+     "row": 184,
+     "kind": "formula",
+     "base": 2000.0,
+     "rate": 0.5,
+     "unit": "metro linear",
+     "threshold": 30.0,
+     "raw": "R$ 2.000,00, mais R$ 0,50 por metro linear acrescido."
+    },
+    {
+     "label": "Para reparação, conservação e reformas:",
+     "row": 185,
+     "kind": "heading"
+    },
+    {
+     "label": "Abertura de vãos, alvenaria, coberta, demolição, elevação de piso, guarita, laje, marquise, sem ampliação ou com decréscimo de área construída.",
+     "row": 186,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Reparação, conservação e reformas com ampliação de área construída:",
+     "row": 187,
+     "kind": "heading"
+    },
+    {
+     "label": "De até 50,00 m².",
+     "row": 188,
+     "kind": "fixed",
+     "value": 350.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 189,
+     "kind": "formula",
+     "base": 350.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 350,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Análise ou revalidação de plantas ou projetos não enquadrados nos itens acima, por m² ou metro linear, conforme o caso:",
+     "row": 190,
+     "kind": "heading"
+    },
+    {
+     "label": "Por metro linear:",
+     "row": 191,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 metros lineares.",
+     "row": 192,
+     "kind": "fixed",
+     "value": 600.0
+    },
+    {
+     "label": "Superior a 10,00 metros lineares.",
+     "row": 193,
+     "kind": "formula",
+     "base": 600.0,
+     "rate": 0.5,
+     "unit": "metro linear",
+     "threshold": 10.0,
+     "raw": "R$ 600,00, mais R$ 0,50 por metro linear acrescido."
+    },
+    {
+     "label": "Por m²:",
+     "row": 194,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 195,
+     "kind": "fixed",
+     "value": 350.0
+    },
+    {
+     "label": "Superior a 50,00 m².",
+     "row": 196,
+     "kind": "formula",
+     "base": 350.0,
+     "rate": 0.5,
+     "unit": "m²",
+     "threshold": 50.0,
+     "raw": "R$ 350,00, mais R$ 0,50 por m² acrescido."
+    },
+    {
+     "label": "Autenticação de plantas arquitetônicas e urbanísticas e de outros documentos, exceto “habite-se” e “aceite-se”:",
+     "row": 197,
+     "kind": "heading"
+    },
+    {
+     "label": "Projeto aprovado, por prancha ou folha.",
+     "row": 198,
+     "kind": "fixed",
+     "value": 125.0
+    },
+    {
+     "label": "Projeto urbanístico, por prancha ou folha.",
+     "row": 199,
+     "kind": "fixed",
+     "value": 125.0
+    },
+    {
+     "label": "Análise prévia e aprovação de plano ou projeto de arruamento, loteamento, parcelamento de terreno e serviços topográficos:",
+     "row": 200,
+     "kind": "heading"
+    },
+    {
+     "label": "Demarcação, por metro linear.",
+     "row": 201,
+     "kind": "fixed",
+     "value": 3.5
+    },
+    {
+     "label": "Levantamento topográfico, por m².",
+     "row": 202,
+     "kind": "fixed",
+     "value": 1.0
+    },
+    {
+     "label": "Remembramento, desmembramento, por lote.",
+     "row": 203,
+     "kind": "fixed",
+     "value": 125.0
+    },
+    {
+     "label": "Arruamento, por metro linear de rua.",
+     "row": 204,
+     "kind": "fixed",
+     "value": 10.0
+    },
+    {
+     "label": "Loteamento, por lote.",
+     "row": 205,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Retificação de cotas, por cota.",
+     "row": 206,
+     "kind": "fixed",
+     "value": 70.0
+    },
+    {
+     "label": "Alvará de habite-se ou alvará de regularização de obra, por unidade imobiliária:",
+     "row": 207,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 50,00 m².",
+     "row": 208,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Superior a 50,00 m² até 100,00 m².",
+     "row": 209,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Superior a 100,00 m² até 150,00 m².",
+     "row": 210,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Superior a 150,00 m² até 250,00 m².",
+     "row": 211,
+     "kind": "fixed",
+     "value": 400.0
+    },
+    {
+     "label": "Superior a 250,00 m².",
+     "row": 212,
+     "kind": "fixed",
+     "value": 550.0
+    },
+    {
+     "label": "Emissão 2ª via alvará de habite-se, alvará de regularização de obra e demais alvarás de licenças.",
+     "row": 213,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Consultas técnicas:",
+     "row": 214,
+     "kind": "heading"
+    },
+    {
+     "label": "Sobre interesse do imóvel em relação a índices urbanísticos.",
+     "row": 215,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Limites e confrontações.",
+     "row": 216,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Narrativas.",
+     "row": 217,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Viabilidade referente a loteamento.",
+     "row": 218,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Serviços diversos:",
+     "row": 219,
+     "kind": "heading"
+    },
+    {
+     "label": "Análise e inspeção ou revalidação relativas à investidura ou desapropriação.",
+     "row": 220,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Análise e inspeção ou revalidação relativas a movimento de terras.",
+     "row": 221,
+     "kind": "fixed",
+     "value": 450.0
+    },
+    {
+     "label": "Guarda de materiais e/ou equipamentos retido, por dia.",
+     "row": 222,
+     "kind": "fixed",
+     "value": 30.0
+    },
+    {
+     "label": "Análise para transferência de propriedade e/ou responsabilidade técnica.",
+     "row": 223,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Numeração de edificações, por unidade.",
+     "row": 224,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Realização de inspeção local para anotação e confrontações, interesse em plano urbanístico e outros elementos complementares.",
+     "row": 225,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Inscrição de responsável técnico, incluindo arquitetos, engenheiros e empresas, junto ao órgão responsável pela fiscalização de obras e serviços de engenharia.",
+     "row": 226,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Fornecimento por meio de documento de parâmetros urbanísticos, por documento.",
+     "row": 227,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Análise prévia e inspeção, necessárias à expedição de alvará de autorização de instalação de estruturas móveis e equipamentos em área pública ou privada, por estrutura móvel ou equipamento:",
+     "row": 228,
+     "kind": "heading"
+    },
+    {
+     "label": "Banca de jornais e revistas, barraca de artigos de época, fiteiro, quiosque e trailer, por unidade.",
+     "row": 229,
+     "kind": "fixed",
+     "value": 70.0
+    },
+    {
+     "label": "Arquibancada, camarote, mostruário ou stand de exposição, palanque e palco, palhoção, stand de vendas, tenda e toldo:",
+     "row": 230,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 9,00 m².",
+     "row": 231,
+     "kind": "fixed",
+     "value": 70.0
+    },
+    {
+     "label": "Superior a 9,00 m² até 90,00 m².",
+     "row": 232,
+     "kind": "fixed",
+     "value": 120.0
+    },
+    {
+     "label": "Superior a 90,00 m² até 180,00 m².",
+     "row": 233,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Superior a 180,00 m² até 240,00 m².",
+     "row": 234,
+     "kind": "fixed",
+     "value": 350.0
+    },
+    {
+     "label": "Superior a 240,00 m².",
+     "row": 235,
+     "kind": "fixed",
+     "value": 450.0
+    },
+    {
+     "label": "Circo até 5.000,00 m².",
+     "row": 236,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Circo superior a 5.000,00 m².",
+     "row": 237,
+     "kind": "fixed",
+     "value": 450.0
+    },
+    {
+     "label": "Comércio em veículo automotivo, em eventos.",
+     "row": 238,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Parque de diversão.",
+     "row": 239,
+     "kind": "fixed",
+     "value": 450.0
+    },
+    {
+     "label": "Balcão, tabuleiro e equipamento circulante, em eventos.",
+     "row": 240,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Outros equipamentos ou estruturas, não enquadrados nos itens acima.",
+     "row": 241,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Análise prévia referente à liberação de alvará de autorização do solo público por evento/dia:",
+     "row": 242,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 300,00 m².",
+     "row": 243,
+     "kind": "fixed",
+     "value": 35.0
+    },
+    {
+     "label": "Superior a 300,00 m² até 600,00 m².",
+     "row": 244,
+     "kind": "fixed",
+     "value": 45.0
+    },
+    {
+     "label": "Superior a 600,00 m² até 1.200,00 m².",
+     "row": 245,
+     "kind": "fixed",
+     "value": 60.0
+    },
+    {
+     "label": "Superior a 1.200,00 m² até 1.800,00 m².",
+     "row": 246,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Superior a 1.800,00 m².",
+     "row": 247,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Análise prévia referente à liberação de alvará de autorização do solo público por evento de natureza circulante, por dia de apresentação.",
+     "row": 248,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Inspeção e fixação de pontos referenciais para construção de muro de alinhamento, por metro linear.",
+     "row": 249,
+     "kind": "fixed",
+     "value": 5.0
+    },
+    {
+     "label": "Licença para exploração de pedreiras, barreiras ou saibreiras, extração de areia e outros minerais, por semestre:",
+     "row": 250,
+     "kind": "heading"
+    },
+    {
+     "label": "Exploração de Pedreiras, Barreiras e Saibreiras.",
+     "row": 251,
+     "kind": "fixed",
+     "value": 4000.0
+    },
+    {
+     "label": "Extração e Tratamento de minerais.",
+     "row": 252,
+     "kind": "fixed",
+     "value": 4000.0
+    },
+    {
+     "label": "Extração de pedras em geral.",
+     "row": 253,
+     "kind": "fixed",
+     "value": 4000.0
+    },
+    {
+     "label": "Extração de sal.",
+     "row": 254,
+     "kind": "fixed",
+     "value": 4000.0
+    },
+    {
+     "label": "Extração de petróleo e gás natural.",
+     "row": 255,
+     "kind": "fixed",
+     "value": 10000.0
+    }
+   ]
+  },
+  {
+   "id": "taxas-pelo-exercicio-de-comercio-ou-atividade-eventual-ambul",
+   "title": "TAXAS PELO EXERCÍCIO DE COMÉRCIO OU ATIVIDADE EVENTUAL, AMBULANTE OU POR EVENTO ESPECIAL, EM LOCAIS PREVIAMENTE AUTORIZADOS",
+   "short": "Comércio eventual e ambulante",
+   "row": 257,
+   "table": "Anexo IV, Tabela V",
+   "doc": "ctm-2025",
+   "pages": [
+    214
+   ],
+   "status": "parcial",
+   "note": null,
+   "previous": [
+    {
+     "label": "Atividade permanente e contínua (por mês)",
+     "row": 258,
+     "kind": "fixed",
+     "value": 52.05
+    },
+    {
+     "label": "Atividade permanente em alguns dias do mês (por mês)",
+     "row": 259,
+     "kind": "fixed",
+     "value": 39.04
+    },
+    {
+     "label": "Atividade eventual por ocasião de festejos e comemorações",
+     "row": 260,
+     "kind": "fixed",
+     "value": 5.2
+    },
+    {
+     "label": "Atividade ambulante (por dia)",
+     "row": 261,
+     "kind": "fixed",
+     "value": 0.52
+    },
+    {
+     "label": "FEIRAS LIVRES",
+     "row": 262,
+     "kind": "heading"
+    },
+    {
+     "label": "Verduras/frutas",
+     "row": 264,
+     "kind": "fixed",
+     "value": 3.2
+    },
+    {
+     "label": "Confecção",
+     "row": 265,
+     "kind": "fixed",
+     "value": 4.26
+    },
+    {
+     "label": "Sapatos",
+     "row": 266,
+     "kind": "fixed",
+     "value": 4.26
+    },
+    {
+     "label": "Peixes",
+     "row": 267,
+     "kind": "fixed",
+     "value": 3.2
+    }
+   ],
+   "current": [
+    {
+     "label": "Autorização para o exercício do comércio ambulante:",
+     "row": 258,
+     "kind": "heading"
+    },
+    {
+     "label": "Por mês",
+     "row": 259,
+     "kind": "fixed",
+     "value": 15.0
+    },
+    {
+     "label": "Por ano",
+     "row": 260,
+     "kind": "fixed",
+     "value": 165.0
+    },
+    {
+     "label": "Autorização para o comércio ou atividade eventual:",
+     "row": 261,
+     "kind": "heading"
+    },
+    {
+     "label": "Em feiras livres, por mês",
+     "row": 262,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Nos demais locais, por mês.",
+     "row": 263,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Em evento especial, inclusive carnaval, Ibimirim, réveillon e congêneres, por evento:",
+     "row": 264,
+     "kind": "heading"
+    },
+    {
+     "label": "Em tabuleiro, por unidade.",
+     "row": 265,
+     "kind": "fixed",
+     "value": 55.0
+    },
+    {
+     "label": "Em veículo automotor utilitário ou não, por veículo.",
+     "row": 266,
+     "kind": "fixed",
+     "value": 275.0
+    },
+    {
+     "label": "Em varal de artesanato, por unidade.",
+     "row": 267,
+     "kind": "fixed",
+     "value": 55.0
+    },
+    {
+     "label": "Em barracas ou instalações similares, em vias ou logradouros públicos, por m² de área coberta.",
+     "row": 268,
+     "kind": "fixed",
+     "value": 80.0
+    },
+    {
+     "label": "Em porta, janela ou demais dependências de residências:",
+     "row": 269,
+     "kind": "heading"
+    },
+    {
+     "label": "Por imóvel residencial.",
+     "row": 270,
+     "kind": "fixed",
+     "value": 275.0
+    },
+    {
+     "label": "Por m² de ocupação de passeio ou área pública.",
+     "row": 271,
+     "kind": "fixed",
+     "value": 80.0
+    },
+    {
+     "label": "Em toldos cobertos em lona, plástico ou similares, por unidade/evento.",
+     "row": 272,
+     "kind": "fixed",
+     "value": 220.0
+    }
+   ]
+  },
+  {
+   "id": "taxa-pela-ocupacao-de-areas-em-vias-e-logradouros-publicos-a",
+   "title": "TAXA PELA OCUPAÇÃO DE ÁREAS EM VIAS E LOGRADOUROS PÚBLICOS, A TÍTULO PRECÁRIO",
+   "short": "Ocupação de vias",
+   "row": 274,
+   "table": "Anexo IV, itens 10 a 14",
+   "doc": "ctm-2025",
+   "pages": [
+    214
+   ],
+   "status": "divergente",
+   "note": "Os itens e valores desta seção no comparativo não foram localizados no texto do CTM 2025 indexado. A página 214 traz outra lista (arquibancada, camarote, stand, circo, parque de diversão) com valores diferentes. Confirme na publicação oficial antes de cobrar.",
+   "previous": [
+    {
+     "label": "Atividade permanente e contínua (por mês)",
+     "row": 275,
+     "kind": "fixed",
+     "value": 52.05
+    },
+    {
+     "label": "Atividade permanente em alguns dias do mês (por mês)",
+     "row": 276,
+     "kind": "fixed",
+     "value": 39.04
+    },
+    {
+     "label": "Atividade eventual por ocasião de festejos e comemorações",
+     "row": 277,
+     "kind": "fixed",
+     "value": 5.2
+    },
+    {
+     "label": "Atividade ambulante (por dia)",
+     "row": 278,
+     "kind": "fixed",
+     "value": 0.52
+    }
+   ],
+   "current": [
+    {
+     "label": "Por balcões, barracas, mesas, tabuleiros e semelhantes, por unidade (0,80 x 1,60 m), e por semana ou fração.",
+     "row": 275,
+     "kind": "fixed",
+     "value": 5.0
+    },
+    {
+     "label": "Por circos, parques de diversões, feiras, exposições, por 100,00 m² ou fração, ao dia.",
+     "row": 276,
+     "kind": "fixed",
+     "value": 7.5
+    },
+    {
+     "label": "Para o comércio ou atividade eventual:",
+     "row": 277,
+     "kind": "heading"
+    },
+    {
+     "label": "Em veículos automotores de qualquer tipo, por veículo ao mês ou fração",
+     "row": 278,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Por bancas de revistas ou borracharias, para cada 10,00 m² ou fração, por ano:",
+     "row": 279,
+     "kind": "fixed",
+     "value": 300.0
+    },
+    {
+     "label": "Por stands ou quiosques de vendas ou serviços, para cada 10,00 m² ou fração, por ano:",
+     "row": 280,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Por fiteiros e congêneres, por unidade, por ano:",
+     "row": 281,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Por bares, restaurantes, lanchonetes ou similares, para cada 10,00 m² ou fração, por ano:",
+     "row": 282,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Por boxes de Mercado Público, por m² ao trimestre",
+     "row": 283,
+     "kind": "fixed",
+     "value": 105.0
+    },
+    {
+     "label": "Por bancas de ferro ou similares (1,60 x 0,80) instaladas nas áreas dos Mercados Públicos, por trimestre",
+     "row": 284,
+     "kind": "fixed",
+     "value": 60.0
+    },
+    {
+     "label": "Por barracas padronizadas, instaladas nas áreas dos Mercados Públicos por m², por trimestre.",
+     "row": 285,
+     "kind": "fixed",
+     "value": 82.5
+    },
+    {
+     "label": "Outras formas de ocupação que não se enquadrem nos itens anteriores, por m² ou fração, por dia.",
+     "row": 286,
+     "kind": "fixed",
+     "value": 5.0
+    }
+   ]
+  },
+  {
+   "id": "taxa-de-vigilancia-sanitaria-por-ano",
+   "title": "TAXA DE VIGILÂNCIA SANITÁRIA, POR ANO",
+   "short": "Vigilância sanitária",
+   "row": 288,
+   "table": "Anexo IV, vigilância sanitária",
+   "doc": "ctm-2025",
+   "pages": [
+    215,
+    216
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "Até 20m²",
+     "row": 289,
+     "kind": "fixed",
+     "value": 67.1
+    },
+    {
+     "label": "De 20,01 a 40m²",
+     "row": 290,
+     "kind": "fixed",
+     "value": 89.47
+    },
+    {
+     "label": "Acima de 40,01M²",
+     "row": 291,
+     "kind": "fixed",
+     "value": 123.02
+    }
+   ],
+   "current": [
+    {
+     "label": "Análise e aprovação de plantas de edificações ligadas à saúde.",
+     "row": 289,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Academia de ginástica, clubes, campings, academia de dança, academia de artes marciais e similares, entidade desportiva, entidade recreativa, escola de natação e congêneres.",
+     "row": 290,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Abrigo, creche, casa de passagem, orfanato e similares.",
+     "row": 291,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Aplicação de saneantes domissanitários (higienizadora).",
+     "row": 292,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Atividades de banco de leite humano.",
+     "row": 293,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Atividades relacionadas a esgoto, exceto a gestão de redes.",
+     "row": 294,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Clínica de reprodução humana assistida.",
+     "row": 295,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Comércio de produtos agropecuários.",
+     "row": 296,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Clínicas e residências geriátricas.",
+     "row": 297,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Coleta de resíduos não perigosos.",
+     "row": 298,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Comércio de plantas medicinais e semelhantes.",
+     "row": 299,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Casa de Frios.",
+     "row": 300,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Coleta de resíduos perigosos.",
+     "row": 301,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Comércio varejista de produtos farmacêuticos homeopáticos.",
+     "row": 302,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Comércio varejista de medicamentos veterinários.",
+     "row": 303,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Clínica de Fisioterapia.",
+     "row": 304,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Comercio varejista de combustível para veículos automotores.",
+     "row": 305,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Comercio varejista de gás liquefeito de petróleo (glp).",
+     "row": 306,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Cursos de cabeleireiros e similares.",
+     "row": 307,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Curso de enfermagem.",
+     "row": 308,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Cinema/auditório/teatro.",
+     "row": 309,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Comércio varejista de animais vivos e de artigos e alimentos para animais de estimação.",
+     "row": 310,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Casa de ração.",
+     "row": 311,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Captação, tratamento e distribuição de água.",
+     "row": 312,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Comércio atacadista de resíduos de papel e papelão, sucatas, sucatas metálicas.",
+     "row": 313,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Comércio de produtos óticos e material fotográfico.",
+     "row": 314,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Casas balneárias, termas, saunas, institutos de beleza, salão de beleza, barbearias e similares.",
+     "row": 315,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Casas funerárias.",
+     "row": 316,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Comercialização de drogas, medicamentos, alimentos e bebidas, não especificados:",
+     "row": 317,
+     "kind": "heading"
+    },
+    {
+     "label": "Comercio atacadista de drogas, medicamentos, alimentos e bebidas, não especificados.",
+     "row": 318,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Comercio varejista de drogas, medicamentos, alimentos e bebidas, não especificados.",
+     "row": 319,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Comercialização de artigos de artigos de higiene ou toucador saneamento, cosméticos, tintas e materiais para pintura, perfumaria, inseticidas, raticidas ou similares, não especificados:",
+     "row": 320,
+     "kind": "heading"
+    },
+    {
+     "label": "Comercio atacadista de artigos de artigos de higiene ou toucador saneamento, cosméticos, tintas e materiais para pintura, perfumaria, inseticidas, raticidas ou similares, não especificados.",
+     "row": 321,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Comercio varejista de artigos de artigos de higiene ou toucador saneamento, cosméticos, tintas e materiais para pintura, perfumaria, inseticidas, raticidas ou similares, não especificados.",
+     "row": 322,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Clínicas, maternidades, casas de saúde e similares, não especificados.",
+     "row": 323,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Consultórios, ambulatórios, laboratórios de análise, oficina de prótese ou de equipamento e materiais de uso médico ou odontológico e similares, não especificados.",
+     "row": 324,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Discotecas, danceterias, salões de dança e similares.",
+     "row": 325,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Estabelecimento de ensino infantil e fundamental.",
+     "row": 326,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Estabelecimento de Ensino Médio, Superior e Pós-Graduação.",
+     "row": 327,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Estabelecimento de instrução, capacitação, treinamento e avaliação de conhecimento de qualquer natureza, inclusive autoescola, cursos de idiomas, curso pré-vestibular, cursos profissionalizantes, cursos de informática e congêneres.",
+     "row": 328,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Farmácias, comércio varejista de produtos farmacêuticos:",
+     "row": 329,
+     "kind": "heading"
+    },
+    {
+     "label": "Farmácias, comércio varejista de produtos farmacêuticos sem manipulação de fórmulas.",
+     "row": 330,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Farmácias, comércio varejista de produtos farmacêuticos com manipulação de fórmulas.",
+     "row": 331,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Fabricação de gelo comum.",
+     "row": 332,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Fornecimento de alimentos preparados preponderantemente para empresa.",
+     "row": 333,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Fabricação de sorvetes e similares.",
+     "row": 334,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Fabricação de água mineral envasada.",
+     "row": 335,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Fornecimento e transporte de água para consumo humano (caminhão pipa), distribuição de água por caminhões.",
+     "row": 336,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Fabricação, produção, beneficiamento, acondicionamento de drogas, medicamentos, alimentos e bebidas, não especificados.",
+     "row": 337,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Fabricação, produção, beneficiamento, acondicionamento de artigos de higiene ou toucador saneamento, cosméticos, tintas e materiais para pintura, perfumaria, inseticidas, raticidas ou similares, não especificados.",
+     "row": 338,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Fabricação, produção, beneficiamento, acondicionamento de embalagens.",
+     "row": 339,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Gestão de redes de esgoto.",
+     "row": 340,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Hospitais e maternidades.",
+     "row": 341,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Hospital veterinário, hotel para animais, clínica veterinária, consultório veterinário.",
+     "row": 342,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Hotéis e similares:",
+     "row": 343,
+     "kind": "heading"
+    },
+    {
+     "label": "Hotéis.",
+     "row": 344,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Motéis.",
+     "row": 345,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Pousadas, pensões e similares.",
+     "row": 346,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Hipermercados, Supermercados, Minimercados e similares:",
+     "row": 347,
+     "kind": "heading"
+    },
+    {
+     "label": "Hipermercados.",
+     "row": 348,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Supermercados.",
+     "row": 349,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Mercadinhos, minimercados, mercearias, especiarias, estivas e similares.",
+     "row": 350,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Imunização e controle de pragas (desinsetizadoras, desratizadoras e similares).",
+     "row": 351,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Instituições de longa permanência para idosos.",
+     "row": 352,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Jardinagem e serviços de manutenção de parques, jardins e congêneres.",
+     "row": 353,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Jogos eletrônicos e fornecimento de som.",
+     "row": 354,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Limpeza de imóveis e logradouros.",
+     "row": 355,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Laboratórios de anatomia, patológica e citológica.",
+     "row": 356,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Laboratórios de clínicos.",
+     "row": 357,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Laboratório veterinário, ambulatórios veterinários.",
+     "row": 358,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Lavanderia e Tinturaria:",
+     "row": 359,
+     "kind": "heading"
+    },
+    {
+     "label": "Lavanderias Hospitalares.",
+     "row": 360,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Lavanderia de Auto-serviço e Lavanderia Automática.",
+     "row": 361,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Lavanderia Industrial.",
+     "row": 362,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Tinturaria.",
+     "row": 363,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Matadouros, frigorífico e abatedouros de qualquer espécie.",
+     "row": 364,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Padarias, pastelarias, confeitaria, docerias (posto de vendas).",
+     "row": 365,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Padaria e confeitaria com predominância de produção própria.",
+     "row": 366,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Padaria e confeitaria com predominância de revenda.",
+     "row": 367,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Panificação (fabricação/distribuição).",
+     "row": 368,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Peixaria (pescados e frutos do mar).",
+     "row": 369,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Posto de coleta de material de laboratório.",
+     "row": 370,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Piercing e Tatuagem.",
+     "row": 371,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Pet-shop com ou sem banho e tosa, salão de embelezamento animal com banho e tosa.",
+     "row": 372,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Parque de Diversão, Circo, Casa de Shows, Festivais, Bailes, Casa de Recepções.",
+     "row": 373,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Recuperação de sucatas de alumínio.",
+     "row": 374,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Recuperação de materiais metálicos, exceto alumínio.",
+     "row": 375,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Recuperação de materiais plásticos.",
+     "row": 376,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Recuperação e recauchutagem de pneus.",
+     "row": 377,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Restaurantes, bares, cafés, botequins, sorveterias, lanchonetes e similares com música ao vivo.",
+     "row": 378,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Restaurantes, bares, cafés, botequins, sorveterias, lanchonetes sem música ao vivo:",
+     "row": 379,
+     "kind": "heading"
+    },
+    {
+     "label": "Restaurantes.",
+     "row": 380,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Bares, botequins e outros estabelecimentos especializados em servir bebidas alcoólicas.",
+     "row": 381,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Cafeteria, sorveterias, casas de chá, lanchonetes, cantinas, casas de suco e similares.",
+     "row": 382,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Serviço de radiologia médica, ultrassonografia, densitometria, mamografia e congêneres.",
+     "row": 383,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de vacinação e imunização humana.",
+     "row": 384,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de alimentação para eventos e recepções (bufê).",
+     "row": 385,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviço de lavagem, limpeza, lubrificação e polimento de veículos automotores.",
+     "row": 386,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Serviço de limpeza/desinfecção de poço/caixa d'água.",
+     "row": 387,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviço de limpeza de fossa.",
+     "row": 388,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviços de sanitários químicos e correlatos.",
+     "row": 389,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviços de quimioterapia.",
+     "row": 390,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de radioterapia.",
+     "row": 391,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de diálise e nefrologia.",
+     "row": 392,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Serviços de ressonância magnética e tomografia.",
+     "row": 393,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de diagnóstico por imagem sem uso de radiação ionizante, exceto tomografia.",
+     "row": 394,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviços de diagnóstico por registro gráfico, eletrocardiograma - ECG, Eletroencefalograma - EEG e outros exames análogos.",
+     "row": 395,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviços de diagnóstico por métodos ópticos-endoscopia e outros exames análogos.",
+     "row": 396,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Serviços de diagnóstico por imagem com uso de radiação ionizante, exceto tomografia.",
+     "row": 397,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de hemoterapia, Agência Transfusional, Núcleo de Hemoterapia e hemocentros.",
+     "row": 398,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Serviços de litotripsia.",
+     "row": 399,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Serviço de Podólogo.",
+     "row": 400,
+     "kind": "fixed",
+     "value": 100.0
+    },
+    {
+     "label": "Serviços de banco de células e tecidos humanos.",
+     "row": 401,
+     "kind": "fixed",
+     "value": 200.0
+    },
+    {
+     "label": "Serviços de cemitério, Necrotério, Crematório e Congêneres.",
+     "row": 402,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Tratamento e disposição de resíduos não-perigosos.",
+     "row": 403,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Tratamento e disposição de resíduos perigosos.",
+     "row": 404,
+     "kind": "fixed",
+     "value": 250.0
+    },
+    {
+     "label": "Transportadora de alimentos.",
+     "row": 405,
+     "kind": "fixed",
+     "value": 150.0
+    },
+    {
+     "label": "Usina de compostagem.",
+     "row": 406,
+     "kind": "fixed",
+     "value": 150.0
+    }
+   ]
+  },
+  {
+   "id": "taxa-de-atividades-eventuais-provisorias-ou-esporadicas",
+   "title": "TAXA DE ATIVIDADES EVENTUAIS, PROVISÓRIAS OU ESPORÁDICAS",
+   "short": "Atividades eventuais",
+   "row": 408,
+   "table": "Corpo da lei",
+   "doc": "ctm-2025",
+   "pages": [
+    150
+   ],
+   "status": "parcial",
+   "note": null,
+   "previous": [
+    {
+     "label": "TAXA DE LICENÇA DE FUNCIONAMENTO EM HORÁRIO ESPECIAL",
+     "row": 409,
+     "kind": "fixed",
+     "value": 62.79
+    }
+   ],
+   "current": [
+    {
+     "label": "Promoção e organização de espetáculos artísticos, desfiles de moda, shows e congêneres, por evento.",
+     "row": 409,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Promoção e organização de eventos esportivos e congêneres, por evento.",
+     "row": 410,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Promoção e organização de bingos e congêneres, por evento.",
+     "row": 411,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Circo, parques de diversões e congêneres, por dia.",
+     "row": 412,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Parque temático e congêneres, por dia.",
+     "row": 413,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Promoção e organização de congressos e congêneres, por evento.",
+     "row": 414,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Promoção e organização de feiras, exposições e congêneres, por evento.",
+     "row": 415,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Promoção de bailes, bailões, show típico e temático, festas e congêneres, por evento.",
+     "row": 416,
+     "kind": "fixed",
+     "value": 75.0
+    },
+    {
+     "label": "Expositor em eventos, feiras, congressos, lojas, supermercados, estacionamentos ou quaisquer outros espaços públicos ou privados, abertos ou fechados, por unidade padrão de estande, compreendida como o recinto reservado a cada participante, com área de:",
+     "row": 417,
+     "kind": "heading"
+    },
+    {
+     "label": "Até 10,00 m².",
+     "row": 418,
+     "kind": "fixed",
+     "value": 22.5
+    },
+    {
+     "label": "Superior a 10,00 m² até 20,00 m².",
+     "row": 419,
+     "kind": "fixed",
+     "value": 27.5
+    },
+    {
+     "label": "Superior a 20,00 m² até 30,00 m².",
+     "row": 420,
+     "kind": "fixed",
+     "value": 32.5
+    },
+    {
+     "label": "Superior a 30.00 m² até 40,00 m².",
+     "row": 421,
+     "kind": "fixed",
+     "value": 37.5
+    },
+    {
+     "label": "Superior a 40,00 m² até 50,00 m².",
+     "row": 422,
+     "kind": "fixed",
+     "value": 42.5
+    },
+    {
+     "label": "Superior a 50,00 m² até 60,00 m².",
+     "row": 423,
+     "kind": "fixed",
+     "value": 47.5
+    },
+    {
+     "label": "Superior a 60,00 m² até 70,00 m².",
+     "row": 424,
+     "kind": "fixed",
+     "value": 52.5
+    },
+    {
+     "label": "Superior a 70,00 m² até 80,00 m².",
+     "row": 425,
+     "kind": "fixed",
+     "value": 57.5
+    },
+    {
+     "label": "Superior a 80,00 m² até 90,00 m².",
+     "row": 426,
+     "kind": "fixed",
+     "value": 62.5
+    },
+    {
+     "label": "Superior a 90,00 m² até 100,00 m².",
+     "row": 427,
+     "kind": "fixed",
+     "value": 67.5
+    },
+    {
+     "label": "Superior a 100,00 m².",
+     "row": 428,
+     "kind": "fixed",
+     "value": 72.5
+    },
+    {
+     "label": "Outras atividades eventuais, provisórias ou esporádicas, não especificadas nos incisos anteriores, enquadradas como eventos, diversões públicas, lazer, entretenimento e congêneres, por evento.",
+     "row": 429,
+     "kind": "fixed",
+     "value": 75.0
+    }
+   ]
+  },
+  {
+   "id": "taxas-pela-utilizacao-efetiva-ou-potencial-de-servicos-publi",
+   "title": "TAXAS PELA UTILIZAÇÃO, EFETIVA OU POTENCIAL, DE SERVIÇOS PÚBLICOS",
+   "short": "Taxas pela utilização, efetiva ou potencial, de serviços públicos",
+   "row": 431,
+   "table": null,
+   "doc": "ctm-2025",
+   "pages": [],
+   "status": "sem ancora",
+   "note": null,
+   "previous": [],
+   "current": []
+  },
+  {
+   "id": "taxa-de-coleta-remocao-e-destinacao-de-residuos-solidos-domi",
+   "title": "TAXA DE COLETA, REMOÇÃO E DESTINAÇÃO DE RESÍDUOS SÓLIDOS DOMICILIARES - TRSD",
+   "short": "Resíduos sólidos (TRSD)",
+   "row": 432,
+   "table": "Anexo V, Tabela I",
+   "doc": "ctm-2025",
+   "pages": [
+    217
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "Residencial",
+     "row": 433,
+     "kind": "fixed",
+     "value": 21.37
+    },
+    {
+     "label": "Comercial, industrial, prestador de serviços",
+     "row": 434,
+     "kind": "fixed",
+     "value": 71.24
+    },
+    {
+     "label": "Instalações de redes aéreas, superficiais e subterrâneas de futos, fios, cabos, em conformidade com o fato gerador do art. 172",
+     "row": 435,
+     "kind": "fixed",
+     "value": 142.49
+    }
+   ],
+   "current": [
+    {
+     "label": "Residencial",
+     "row": 433,
+     "kind": "fixed",
+     "value": 20.0
+    },
+    {
+     "label": "Comercial e de Prestação de Serviços",
+     "row": 434,
+     "kind": "fixed",
+     "value": 50.0
+    },
+    {
+     "label": "Industrial",
+     "row": 435,
+     "kind": "fixed",
+     "value": 100.0
+    }
+   ]
+  },
+  {
+   "id": "taxa-de-guarda-abate-e-remocao-de-animais",
+   "title": "TAXA DE GUARDA, ABATE E REMOÇÃO DE ANIMAIS",
+   "short": "Guarda e abate de animais",
+   "row": 437,
+   "table": "Anexo V, guarda e abate",
+   "doc": "ctm-2025",
+   "pages": [
+    217
+   ],
+   "status": "confirmado",
+   "note": null,
+   "previous": [
+    {
+     "label": "ABATE",
+     "row": 438,
+     "kind": "heading"
+    },
+    {
+     "label": "BOVINOS E MUAR",
+     "row": 439,
+     "kind": "fixed",
+     "value": 22.37
+    },
+    {
+     "label": "EQUINOS E SUÍNOS",
+     "row": 440,
+     "kind": "fixed",
+     "value": 5.59
+    },
+    {
+     "label": "CAPRINOS E OVINOS",
+     "row": 441,
+     "kind": "fixed",
+     "value": 3.36
+    },
+    {
+     "label": "GUARDA",
+     "row": 442,
+     "kind": "heading"
+    },
+    {
+     "label": "BOVINOS E MUAR",
+     "row": 443,
+     "kind": "fixed",
+     "value": 15.66
+    },
+    {
+     "label": "EQUINOS E SUÍNOS",
+     "row": 444,
+     "kind": "fixed",
+     "value": 5.59
+    },
+    {
+     "label": "CAPRINOS E OVINOS",
+     "row": 445,
+     "kind": "fixed",
+     "value": 3.36
+    },
+    {
+     "label": "APREENSÃO E DEPÓSITO DE ANIMAL SOLTO NA VIA PÚBLICA",
+     "row": 446,
+     "kind": "heading"
+    },
+    {
+     "label": "Gado vacum e cavalar",
+     "row": 447,
+     "kind": "fixed",
+     "value": 22.37
+    },
+    {
+     "label": "Por cada dia subsequente",
+     "row": 448,
+     "kind": "fixed",
+     "value": 2.24
+    },
+    {
+     "label": "Suíno, caprino, ovino, muar e outros",
+     "row": 449,
+     "kind": "fixed",
+     "value": 6.71
+    },
+    {
+     "label": "Por cada dia subsequente",
+     "row": 450,
+     "kind": "fixed",
+     "value": 1.12
+    }
+   ],
+   "current": [
+    {
+     "label": "Guarda de bovinos e muares, por unidade/dia",
+     "row": 438,
+     "kind": "fixed",
+     "value": 15.0
+    },
+    {
+     "label": "Guarda de equinos e suínos, por unidade/dia",
+     "row": 439,
+     "kind": "fixed",
+     "value": 6.0
+    },
+    {
+     "label": "Guarda de caprinos e ovinos, por unidade/dia",
+     "row": 440,
+     "kind": "fixed",
+     "value": 3.5
+    },
+    {
+     "label": "Abate de bovinos, por unidade",
+     "row": 441,
+     "kind": "fixed",
+     "value": 85.0
+    },
+    {
+     "label": "Abate de suínos, por unidade",
+     "row": 442,
+     "kind": "fixed",
+     "value": 40.0
+    },
+    {
+     "label": "Abate de caprinos e ovinos, por unidade",
+     "row": 443,
+     "kind": "fixed",
+     "value": 15.0
+    },
+    {
+     "label": "Apreensão e depósito de gado vacum e cavalar",
+     "row": 444,
+     "kind": "formula",
+     "base": 22.0,
+     "rate": 3.0,
+     "unit": "cada dia de depósito subsequente",
+     "threshold": null,
+     "raw": "R$ 22,00, mais R$ 3,00 por cada dia de depósito subsequente"
+    },
+    {
+     "label": "Apreensão e depósito de suíno, caprino, ovino, muar e outros",
+     "row": 445,
+     "kind": "fixed",
+     "value": 7.0
+    }
+   ]
+  },
+  {
+   "id": "torres-antenas-placas-solares",
+   "title": "TAXA DE FISCALIZAÇÃO DE LICENÇA PARA FUNCIONAMENTO DE TORRES, ANTENAS E PLACAS DE ENERGIA SOLAR",
+   "short": "Torres, antenas e placas solares",
+   "row": null,
+   "table": "Lei nº 793/2018, art. 2º, na redação da Lei nº 988/2025",
+   "doc": "lei-988-2025",
+   "tag": "Lei 988/2025",
+   "pages": [
+    1
+   ],
+   "status": "confirmado",
+   "unit": "UFM",
+   "cap": 100000.0,
+   "note": "Cobrança anual, com pagamento até 31 de janeiro de cada ano (art. 4º da Lei 793/2018). Placas de energia solar instaladas para uso domiciliar são isentas (art. 1º, parágrafo único). A taxa é limitada a R$ 100.000,00 por alvará. Os novos valores produzem efeitos a partir de 1º de janeiro de 2026.",
+   "warning": "Antes de lançar, verifique sobreposição com o Código de 2025. A Taxa de Localização e Funcionamento (art. 267) é anual e alcança estabelecimento \"edificado ou não\" (art. 265, §1º); a Taxa de Máquinas e Motores (art. 271) incide sobre o funcionamento de máquinas por unidade, e o art. 272 afirma a cumulação com outras taxas. O Código não traz regra de dedução ou compensação entre suas taxas e as de leis específicas. O CTM também não revoga a Lei 793/2018 pelo número — a cláusula do art. 423, §2º é genérica. Questão para a Procuradoria, não para o balcão.",
+   "current": [
+    {
+     "label": "Torre eólica, de telefonia fixa ou móvel, por unidade ao ano",
+     "kind": "ufm",
+     "ufm": 5000.0,
+     "per": "unidade"
+    },
+    {
+     "label": "Antena de telefonia fixa ou móvel e de televisão, por unidade ao ano",
+     "kind": "ufm",
+     "ufm": 1000.0,
+     "per": "unidade"
+    },
+    {
+     "label": "Placa de energia solar, por metro quadrado ao ano",
+     "kind": "ufm",
+     "ufm": 0.35,
+     "per": "m²"
+    }
+   ],
+   "prevDoc": "lei-793-2018",
+   "prevTag": "Lei 793/2018",
+   "prevLabel": "Redação original",
+   "previous": [
+    {
+     "label": "Placa de energia solar, por metro quadrado ao ano — redação original de 2018",
+     "kind": "ufm",
+     "ufm": 50.0,
+     "per": "m²",
+     "page": 1
+    }
+   ]
+  }
+ ]
+}

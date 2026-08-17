@@ -1,0 +1,19 @@
+IBIMIRIM LEGAL — VERSÃO PC E IPHONE
+
+PC
+1. Esta pasta deve ser publicada por um servidor local ou endereço HTTPS.
+2. No projeto, execute "npm run serve" e abra http://localhost:8321.
+3. No navegador, use o botão Instalar quando ele aparecer.
+
+PESQUISA E PERGUNTAS
+- Palavras pesquisadas são destacadas nos resultados e no texto aberto.
+- Uma pergunta completa recebe uma síntese automática baseada nas páginas mais relacionadas.
+- Os botões de consulta online são auxiliares e não alteram a resposta local.
+
+IPHONE
+1. Publique esta pasta em um endereço HTTPS.
+2. Abra o endereço no Safari.
+3. Toque em Compartilhar > Adicionar à Tela de Início.
+
+ATENÇÃO
+O conteúdo é educativo. O texto oficial e sua vigência devem ser confirmados antes de qualquer decisão administrativa, lançamento, licença, fiscalização ou autuação. Páginas digitalizadas foram submetidas a OCR e podem conter falhas de leitura.

@@ -1,0 +1,17 @@
+.gradle/
+node_modules/
+.tmp-*/
+.tmp-*.png
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+dist/
+__pycache__/
+*.pyc
+
+# capturas de tela de verificação, regeradas a cada execução
+preview*.png
+
+# configuração local de ferramenta, não faz parte do projeto
+.claude/
