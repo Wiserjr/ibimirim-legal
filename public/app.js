@@ -305,10 +305,10 @@ function search(value){
 
 async function init(){
   renderAudiences();renderTrails();renderGlossary();
-  try{corpus=await fetch('./data/laws.json').then(response=>{if(!response.ok)throw Error();return response.json()});buildLexicon();renderLibrary();setupFeeConsultation();}
-  catch{$('#library').innerHTML='<p class="empty">A base legal não pôde ser carregada. Reabra o aplicativo ou reinstale o pacote.</p>';}
-  try{fees=await fetch('./data/fees.json').then(response=>{if(!response.ok)throw Error();return response.json()});buildFeeIndex();setupFeeFinder();}
-  catch{$('#feeCount').textContent='A tabela de taxas não pôde ser carregada.';}
+  if(window.IBIMIRIM_LAWS){corpus=window.IBIMIRIM_LAWS;buildLexicon();renderLibrary();setupFeeConsultation();}
+  else $('#library').innerHTML='<p class="empty">A base legal não pôde ser carregada. Reabra o aplicativo ou reinstale o pacote.</p>';
+  if(window.IBIMIRIM_FEES){fees=window.IBIMIRIM_FEES;buildFeeIndex();setupFeeFinder();}
+  else $('#feeCount').textContent='A tabela de taxas não pôde ser carregada.';
   $('#query').addEventListener('keydown',event=>{if(event.key==='Enter')search(event.target.value)});
   $('#clear').onclick=()=>{$('#query').value='';$('#resultsSection').hidden=true;$('#inicio').scrollIntoView({behavior:'smooth'});};
   window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;$('#install').hidden=false});

@@ -1,9 +1,10 @@
 IBIMIRIM LEGAL — VERSÃO PC E IPHONE
 
 PC
-1. Esta pasta deve ser publicada por um servidor local ou endereço HTTPS.
-2. No projeto, execute "npm run serve" e abra http://localhost:8321.
-3. No navegador, use o botão Instalar quando ele aparecer.
+1. Abra o arquivo index.html desta pasta com dois cliques. Nao e preciso servidor.
+2. Para disponibilizar na rede da Prefeitura, publique esta pasta em um
+   servidor ou execute "npm run serve" no projeto e abra http://localhost:8321.
+3. Servida por HTTP ou HTTPS, a pagina oferece o botao Instalar.
 
 PESQUISA E PERGUNTAS
 - Palavras pesquisadas são destacadas nos resultados e no texto aberto.

@@ -2,8 +2,13 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const read = name => readFile(new URL(`../public/${name}`, import.meta.url), 'utf8');
-const fees = JSON.parse(await read('data/fees.json'));
-const corpus = JSON.parse(await read('data/laws.json'));
+const bundle = async name => {
+  // os dados são script, não JSON: window.X=JSON.parse("…")
+  const src = await readFile(new URL(`../public/data/${name}.js`, import.meta.url), 'utf8');
+  return JSON.parse(JSON.parse(src.slice(src.indexOf('(') + 1, src.lastIndexOf(')'))));
+};
+const fees = await bundle('fees');
+const corpus = await bundle('laws');
 const ctm = corpus.documents.find(d => d.id === 'ctm-2025');
 const pageText = (n, id = 'ctm-2025') =>
   corpus.documents.find(d => d.id === id)?.pages.find(p => p.page === n)?.text ?? '';
@@ -75,7 +80,11 @@ for (const fn of ['buildFeeIndex', 'renderFeeResults', 'setupFeeFinder', 'openCt
   assert.match(app, new RegExp(`function ${fn}`), `${fn} ausente no app.js`);
 }
 assert.match(app, /UNSOURCED/, 'aviso de origem sem fonte documental');
-assert.match(await read('sw.js'), /fees\.json/, 'fees.json fora do cache offline');
+assert.match(await read('sw.js'), /fees\.js/, 'fees.js fora do cache offline');
+// a página precisa carregar os dados por <script>, senão não abre em file://
+assert.match(html, /<script src="data\/laws\.js"><\/script>/, 'laws.js não é carregado como script');
+assert.match(html, /<script src="data\/fees\.js"><\/script>/, 'fees.js não é carregado como script');
+assert.doesNotMatch(app, /fetch\(/, 'fetch quebra a abertura por file://');
 
 // --- taxa em UFM: valores conferidos contra o texto das duas leis -----------
 const solar = fees.sections.find(s => s.id === 'torres-antenas-placas-solares');

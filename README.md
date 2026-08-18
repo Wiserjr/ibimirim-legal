@@ -14,7 +14,15 @@ A versão 1.2 inclui uma consulta orientada que separa a taxa anual de localiza�
 
 ## Abrir no PC
 
-Execute `npm run serve` e abra `http://localhost:8321`. A aplicação continua disponível offline depois do primeiro acesso.
+Abra `public/index.html` com dois cliques. Não é preciso servidor.
+
+Para servir na intranet da Prefeitura, execute `npm run serve` e abra
+`http://localhost:8321`; a aplicação continua disponível offline depois do primeiro acesso.
+
+A base legal é carregada por `<script>`, não por `fetch()`. O Chrome trata `file://` como origem
+opaca e bloqueia qualquer `fetch`, mesmo para um arquivo irmão na mesma pasta — foi o que impedia a
+página de abrir por duplo clique. Por isso `public/data/laws.js` e `public/data/fees.js` são scripts
+que definem `window.IBIMIRIM_LAWS` e `window.IBIMIRIM_FEES`, e não arquivos `.json`.
 
 ## iPhone
 

@@ -1,7 +1,7 @@
 {
   "name": "ibimirim-legal",
   "private": true,
-  "version": "1.5.0",
+  "version": "1.5.1",
   "scripts": {
     "test": "node tests/app.test.mjs && node tests/fees.test.mjs",
     "test:ui": "node tests/ui.test.mjs",

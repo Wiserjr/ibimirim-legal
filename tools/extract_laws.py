@@ -10,13 +10,15 @@ import re
 import sys
 from pathlib import Path
 
+from bundle import write_bundle
+
 import numpy as np
 import pypdf
 import pypdfium2 as pdfium
 from rapidocr_onnxruntime import RapidOCR
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "public" / "data" / "laws.json"
+OUTPUT = ROOT / "public" / "data" / "laws.js"
 
 DOCS = [
     ("ctm-2025", "Código Tributário Municipal", "Lei Complementar nº 004/2025", "municipal", Path(r"C:\Users\WiseJr\Desktop\Codigo Tributario 2025.pdf")),
@@ -126,7 +128,9 @@ def main() -> None:
         raise SystemExit("Missing source PDFs:\n" + "\n".join(missing))
     cached = {}
     if OUTPUT.exists():
-        cached = {doc["id"]: doc for doc in json.loads(OUTPUT.read_text(encoding="utf-8"))["documents"]}
+        raw = OUTPUT.read_text(encoding="utf-8")
+        previous = json.loads(json.loads(raw[raw.index("(") + 1 : raw.rindex(")")]))
+        cached = {doc["id"]: doc for doc in previous["documents"]}
     corpus = {"generated": "2026-08-17", "documents": []}
     ocr = None
     for doc_id, title, citation, kind, path in DOCS:
@@ -146,9 +150,8 @@ def main() -> None:
             "pageCount": len(pages),
             "pages": pages,
         })
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(json.dumps(corpus, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"Wrote {OUTPUT} ({OUTPUT.stat().st_size:,} bytes)")
+    size = write_bundle(OUTPUT, "IBIMIRIM_LAWS", corpus)
+    print(f"Wrote {OUTPUT} ({size:,} bytes)")
 
 
 if __name__ == "__main__":

@@ -15,12 +15,14 @@ from pathlib import Path
 
 import openpyxl
 
+from bundle import write_bundle
+
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = Path(
     r"C:\Users\WiseJr\Downloads\Tributos-Ibimirim\Legislacao"
     r"\Comparativo - CTM Ibimirim - Taxas.xlsx"
 )
-OUTPUT = ROOT / "public" / "data" / "fees.json"
+OUTPUT = ROOT / "public" / "data" / "fees.js"
 
 # Page anchors in the CTM 2025 PDF, established by matching each entry label
 # against the indexed page text (tools/extract_fees.py is the only place that
@@ -282,9 +284,7 @@ def main() -> None:
         ),
         "sections": sections,
     }
-    OUTPUT.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8"
-    )
+    write_bundle(OUTPUT, "IBIMIRIM_FEES", payload)
 
     print(f"{OUTPUT.relative_to(ROOT)} — {len(sections)} seções")
     for section in sections:
