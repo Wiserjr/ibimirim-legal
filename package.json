@@ -5,7 +5,8 @@
   "scripts": {
     "test": "node tests/app.test.mjs && node tests/fees.test.mjs",
     "test:ui": "node tests/ui.test.mjs",
-    "serve": "node tools/serve.mjs"
+    "serve": "node tools/serve.mjs",
+    "dist": "python tools/package.py"
   },
   "devDependencies": {
     "playwright": "^1.62.1"
