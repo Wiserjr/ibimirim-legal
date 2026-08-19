@@ -9,11 +9,11 @@ Site: https://wiserjr.github.io/ibimirim-legal/
 
 ## Como está organizado
 
-`public/` é a casca do aplicativo e não contém dado de município nenhum: nem nome, nem lei, nem
+`app/` é a casca do aplicativo e não contém dado de município nenhum: nem nome, nem lei, nem
 tabela. Tudo o que distingue uma versão da outra vive em `municipios/<slug>/`.
 
 ```
-public/                     casca: index.html (com {{marcadores}}), app.js, estilos, sw.js
+app/                     casca: index.html (com {{marcadores}}), app.js, estilos, sw.js
 municipios/
   ibimirim/
     municipio.json          marca, textos, trilhas, glossário, cartões de cálculo
@@ -49,7 +49,11 @@ que os dois coexistem no mesmo aparelho.
 
 ## Abrir no PC
 
-Abra `dist/<município>/index.html` com dois cliques. Não é preciso servidor.
+Baixe o repositório e abra o `index.html` da **raiz** com dois cliques: ele é uma capa que leva às
+versões já montadas em `docs/`. Não é preciso servidor.
+
+`app/index.html` não abre: é o template da casca, cheio de `{{marcadores}}` que só o build
+substitui. Quem quiser gerar o próprio pacote roda `npm run build` e abre `dist/<município>/index.html`.
 
 A base legal é carregada por `<script>`, não por `fetch()`. O Chrome trata `file://` como origem
 opaca e bloqueia qualquer `fetch`, mesmo para um arquivo irmão na mesma pasta — era o que impedia a
@@ -100,15 +104,16 @@ algum fator de conversão voltar à base publicada.
 
 ## Cartões de cálculo
 
-`municipio.json` declara os cartões em `cartoes`. Três formatos cobrem o que os códigos usam:
+`municipio.json` declara os cartões em `cartoes`. Quatro formatos cobrem o que os códigos usam:
 
 | tipo | quando | exemplo |
 |---|---|---|
 | `faixas` | valor por faixa de área, com fórmula opcional acima do teto | localização e funcionamento em Ibimirim |
 | `variantes` | escolha de categoria, base mais adicional por metro | licença para construir |
 | `soma` | quantidades × valor unitário, com teto opcional | torres, antenas e placas solares |
+| `grupos` | escolha de categoria, cada uma com suas faixas de área | coleta de lixo em Aliança |
 
-Aliança não declara cartões nesta versão: suas 365 entradas em UFM são consultadas pela busca.
+Numa faixa, `null` no lugar do teto significa "sem limite superior" e só vale na última.
 
 ## Limites
 

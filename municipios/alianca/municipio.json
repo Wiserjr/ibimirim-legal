@@ -191,7 +191,190 @@
   },
   "obrigatoria": true
  },
- "cartoes": [],
+ "cartoes": [
+  {
+   "id": "lixo",
+   "tipo": "grupos",
+   "etiqueta": "Coleta de lixo • anual • em UFM",
+   "unidade": "UFM",
+   "titulo": "Coleta e remoção de lixo",
+   "descricao": "A taxa varia pela <strong>destinação do imóvel</strong> e pela <strong>área</strong>. Os valores estão em UFM; informe a unidade do exercício acima para vê-los em reais.",
+   "seletor": {
+    "rotulo": "Destinação do imóvel"
+   },
+   "campo": {
+    "rotulo": "Área do imóvel (m²)",
+    "unidade": "m²",
+    "exemplo": "Ex.: 120"
+   },
+   "periodo": "por ano",
+   "grupos": [
+    {
+     "id": "residencial",
+     "rotulo": "Residencial",
+     "faixas": [
+      [
+       50,
+       8.14,
+       "até 50 m²"
+      ],
+      [
+       100,
+       13.95,
+       "acima de 50 até 100 m²"
+      ],
+      [
+       200,
+       27.24,
+       "acima de 100 até 200 m²"
+      ],
+      [
+       300,
+       45.63,
+       "acima de 200 até 300 m²"
+      ],
+      [
+       null,
+       70.6,
+       "acima de 300 m²"
+      ]
+     ]
+    },
+    {
+     "id": "comercial",
+     "rotulo": "Comercial",
+     "faixas": [
+      [
+       50,
+       9.48,
+       "até 50 m²"
+      ],
+      [
+       100,
+       18.95,
+       "acima de 50 até 100 m²"
+      ],
+      [
+       200,
+       56.51,
+       "acima de 100 até 200 m²"
+      ],
+      [
+       300,
+       75.22,
+       "acima de 200 até 300 m²"
+      ],
+      [
+       null,
+       112.08,
+       "acima de 300 m²"
+      ]
+     ]
+    },
+    {
+     "id": "industrial",
+     "rotulo": "Industrial",
+     "faixas": [
+      [
+       50,
+       26.24,
+       "até 50 m²"
+      ],
+      [
+       100,
+       62.48,
+       "acima de 50 até 100 m²"
+      ],
+      [
+       200,
+       70.85,
+       "acima de 100 até 200 m²"
+      ],
+      [
+       300,
+       100.07,
+       "acima de 200 até 300 m²"
+      ],
+      [
+       null,
+       180.19,
+       "acima de 300 m²"
+      ]
+     ]
+    },
+    {
+     "id": "servicos",
+     "rotulo": "Serviços",
+     "faixas": [
+      [
+       50,
+       7.4,
+       "até 50 m²"
+      ],
+      [
+       100,
+       15.8,
+       "acima de 50 até 100 m²"
+      ],
+      [
+       200,
+       34.69,
+       "acima de 100 até 200 m²"
+      ],
+      [
+       300,
+       56.51,
+       "acima de 200 até 300 m²"
+      ],
+      [
+       null,
+       78.01,
+       "acima de 300 m²"
+      ]
+     ]
+    },
+    {
+     "id": "outras",
+     "rotulo": "Outras atividades",
+     "faixas": [
+      [
+       50,
+       7.4,
+       "até 50 m²"
+      ],
+      [
+       100,
+       15.8,
+       "acima de 50 até 100 m²"
+      ],
+      [
+       200,
+       32.69,
+       "acima de 100 até 200 m²"
+      ],
+      [
+       300,
+       56.51,
+       "acima de 200 até 300 m²"
+      ],
+      [
+       null,
+       75.01,
+       "acima de 300 m²"
+      ]
+     ]
+    }
+   ],
+   "rodape": "Valores conferidos contra as páginas 136 e 137 do Código. Confirme o enquadramento antes de lançar.",
+   "fontes": [
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 136,
+     "rotulo": "Ver a tabela — Código, p. 136"
+    }
+   ]
+  }
+ ],
  "avisos": [
   {
    "tipo": "vigencia",

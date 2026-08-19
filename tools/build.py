@@ -3,7 +3,7 @@
     python tools/build.py alianca
     python tools/build.py --todos --destino docs
 
-public/ holds the shell and carries no municipality data: the strings come from
+app/ holds the shell and carries no municipality data: the strings come from
 municipios/<slug>/municipio.json and the corpus from the same folder's data/.
 The build writes a self-contained directory whose index.html opens by double
 click, which is also what gets served over HTTP and packed into the APK.
@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SHELL = ROOT / "public"
+SHELL = ROOT / "app"
 MUNICIPIOS = ROOT / "municipios"
 PLACEHOLDER = re.compile(r"\{\{([A-Z_]+)\}\}")
 TEXTUAL = {".html", ".webmanifest", ".txt", ".css", ".js"}

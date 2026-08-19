@@ -71,7 +71,9 @@ Adicionar à Tela de Início. No Android e no computador, o navegador oferece o 
 </html>
 """
 
-CARTAO = """<a class="card" href="./{slug}/">
+# o link nomeia o arquivo: um servidor resolve a pasta sozinho, mas
+# file:// não tem índice de diretório e a pasta abriria em branco
+CARTAO = """<a class="card" href="{prefixo}{slug}/index.html">
 <span class="seal">{sigla}</span>
 <h2>{titulo}</h2>
 <p>{descricao}</p>
@@ -97,6 +99,7 @@ def main() -> None:
         documentos, paginas = contar(slug)
         cartoes.append(
             CARTAO.format(
+                prefixo="{prefixo}",
                 slug=slug,
                 sigla=cfg["marca"]["sigla"],
                 titulo=cfg["marca"]["titulo"],
@@ -106,8 +109,15 @@ def main() -> None:
             )
         )
 
+    corpo = "\n".join(cartoes)
     (DOCS / "index.html").write_text(
-        CAPA.format(cartoes="\n".join(cartoes)), encoding="utf-8"
+        CAPA.format(cartoes=corpo.replace("{prefixo}", "./")), encoding="utf-8"
+    )
+    # A mesma capa na raiz, para quem baixa o ZIP do repositório e dá dois
+    # cliques: sem ela o primeiro index.html que se encontra é o template da
+    # casca, que abre cheio de {{marcadores}} por não ter passado pelo build.
+    (ROOT / "index.html").write_text(
+        CAPA.format(cartoes=corpo.replace("{prefixo}", "./docs/")), encoding="utf-8"
     )
     # sem isto o Pages roda Jekyll e ignora o que começa com underscore
     (DOCS / ".nojekyll").write_text("", encoding="utf-8")

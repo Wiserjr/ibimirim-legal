@@ -319,6 +319,7 @@ por amostragem contra o PDF — 11 de 11 valores testados conferem, incluindo IS
 localização e funcionamento, expediente e abate. Dois pontos merecem revisão humana:
 
 - a tabela de coleta de lixo tem cinco categorias (Residencial, Comercial, Industrial, Serviços e
-  Outras Atividades) e a última tem o cabeçalho no rodapé de uma página e os valores na seguinte;
+  Outras Atividades) e a última tem o cabeçalho no rodapé de uma página e os valores na seguinte.
+  **Conferida integralmente contra as páginas 136 e 137** e transformada no cartão de consulta;
 - rótulos de subitens do tipo "a) bovinos" preservam o valor correto, mas o item-pai que lhes dá
   contexto nem sempre acompanha.

@@ -65,10 +65,20 @@ for (const slug of slugs) {
 
   // --- cartões declarados são de um tipo que o app sabe montar ---------
   for (const card of cfg.cartoes || []) {
-    assert.ok(['faixas', 'variantes', 'soma'].includes(card.tipo), `${rotulo} tipo de cartão desconhecido: ${card.tipo}`);
+    assert.ok(['faixas', 'variantes', 'soma', 'grupos'].includes(card.tipo), `${rotulo} tipo de cartão desconhecido: ${card.tipo}`);
     if (card.tipo === 'faixas') assert.ok(card.faixas?.length, `${rotulo} cartão ${card.id} sem faixas`);
     if (card.tipo === 'variantes') assert.ok(card.variantes?.length, `${rotulo} cartão ${card.id} sem variantes`);
     if (card.tipo === 'soma') assert.ok(card.itens?.length, `${rotulo} cartão ${card.id} sem itens`);
+    if (card.tipo === 'grupos') {
+      assert.ok(card.grupos?.length, `${rotulo} cartão ${card.id} sem grupos`);
+      // só a última faixa pode ser aberta, e as demais têm de subir
+      for (const g of card.grupos) {
+        const tetos = g.faixas.map(f => f[0]);
+        assert.ok(tetos.slice(0, -1).every(t => typeof t === 'number'), `${rotulo} ${g.id}: faixa aberta no meio`);
+        assert.deepEqual(tetos.slice(0, -1), [...tetos.slice(0, -1)].sort((a, b) => a - b), `${rotulo} ${g.id}: faixas fora de ordem`);
+        assert.ok(g.faixas.every(f => f[1] > 0), `${rotulo} ${g.id}: faixa sem valor`);
+      }
+    }
   }
 
   resumo.push({
@@ -81,15 +91,15 @@ for (const slug of slugs) {
 }
 
 // --- a casca não pode conter nada de um município específico -----------
-const app = await ler('public/app.js');
-const html = await ler('public/index.html');
+const app = await ler('app/app.js');
+const html = await ler('app/index.html');
 for (const termo of [/IBIMIRIM_/, /Ibimirim/, /Aliança/, /ctm-2025/, /lei-988/]) {
-  assert.doesNotMatch(app, termo, `public/app.js não pode citar ${termo}`);
-  assert.doesNotMatch(html, termo, `public/index.html não pode citar ${termo}`);
+  assert.doesNotMatch(app, termo, `app/app.js não pode citar ${termo}`);
+  assert.doesNotMatch(html, termo, `app/index.html não pode citar ${termo}`);
 }
 assert.match(html, /<script src="municipio\.js"><\/script>/, 'a casca precisa carregar municipio.js');
 assert.doesNotMatch(app, /fetch\(/, 'fetch quebra a abertura por file://');
-assert.match(await ler('public/sw.js'), /municipio\.js/, 'municipio.js fora do cache offline');
+assert.match(await ler('app/sw.js'), /municipio\.js/, 'municipio.js fora do cache offline');
 
 console.log('OK: ' + resumo.map(r =>
   `${r.slug} (${r.documentos} docs, ${r.paginas} pág., ${r.tabelas} tabelas, ${r.cartoes} cartões)`

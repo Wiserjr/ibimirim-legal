@@ -112,7 +112,9 @@ function setupFeeConsultation(){
 }
 
 const UFM_KEY=`municipio.ufm.${cfg.slug||'x'}`;
-const ufmFormat=value=>`${value.toLocaleString('pt-BR',{maximumFractionDigits:4})} UFM`;
+// inteiro sai sem casas (5.000 UFM); fracionário sai com pelo menos duas,
+// senão 15,8 fica desalinhado de 8,14 na mesma tabela
+const ufmFormat=value=>`${value.toLocaleString('pt-BR',Number.isInteger(value)?{}:{minimumFractionDigits:2,maximumFractionDigits:4})} UFM`;
 let ufm=null;
 
 function loadUfm(){
@@ -149,9 +151,13 @@ function setupUfm(){
 const cards=cfg.cartoes||[];
 const cardEl=(card,sufixo)=>$(`#card-${card.id}-${sufixo}`);
 
-function faixaDe(card,area){
-  const faixa=(card.faixas||[]).find(([max])=>area<=max);
+function faixaDe(faixas,area){
+  const faixa=(faixas||[]).find(([max])=>max===null||area<=max);
   if(faixa)return{rotulo:faixa[2],valor:faixa[1],estimado:false};
+  return null;
+}
+
+function excedenteDe(card,area){
   const extra=card.excedente;
   if(!extra)return null;
   return{rotulo:extra.rotulo,valor:extra.base+(area-extra.limiar)*extra.taxa,estimado:true,formula:extra.formula};
@@ -160,7 +166,7 @@ function faixaDe(card,area){
 function renderFaixas(card){
   const caixa=cardEl(card,'result'),area=validArea(cardEl(card,'campo'));
   if(!area){caixa.innerHTML='Informe a área para consultar a faixa.';return}
-  const achado=faixaDe(card,area);
+  const achado=faixaDe(card.faixas,area)||excedenteDe(card,area);
   if(!achado){caixa.innerHTML='Área fora das faixas previstas na tabela.';return}
   caixa.innerHTML=`<span>Faixa: ${escape(achado.rotulo)}</span><strong>${achado.estimado?'Estimativa: ':''}${money(achado.valor)} ${escape(card.periodo||'')}</strong>`
     +(achado.formula?`<small>${escape(achado.formula)}</small>`:'');
@@ -205,7 +211,21 @@ function renderSoma(card){
     +(card.rodape?`<small>${escape(card.rodape)}</small>`:'');
 }
 
-const RENDER={faixas:renderFaixas,variantes:renderVariantes,soma:renderSoma};
+function renderGrupos(card){
+  const caixa=cardEl(card,'result'),area=validArea(cardEl(card,'campo'));
+  const grupo=card.grupos.find(g=>g.id===cardEl(card,'seletor').value)||card.grupos[0];
+  if(!area){caixa.innerHTML='Informe a área para consultar a faixa.';return}
+  const achado=faixaDe(grupo.faixas,area);
+  if(!achado){caixa.innerHTML='Área fora das faixas previstas na tabela.';return}
+  const emUfm=card.unidade==='UFM',reais=emUfm?ufmToMoney(achado.valor):null;
+  caixa.innerHTML=`<span>${escape(grupo.rotulo)} • ${escape(achado.rotulo)}</span>`
+    +`<strong>${emUfm?ufmFormat(achado.valor):money(achado.valor)} ${escape(card.periodo||'')}</strong>`
+    +(emUfm?(reais?`<span class="solar-money">Equivale a <b>${reais}</b> com UFM de ${money(ufm.value)}${ufm.year?` (${ufm.year})`:''}.</span>`
+      :'<small>Informe a UFM vigente acima para ver o valor em reais.</small>'):'')
+    +(card.rodape?`<small>${escape(card.rodape)}</small>`:'');
+}
+
+const RENDER={faixas:renderFaixas,variantes:renderVariantes,soma:renderSoma,grupos:renderGrupos};
 function renderCard(card){const fn=RENDER[card.tipo];if(fn)fn(card);}
 function renderCards(){cards.forEach(renderCard);}
 
@@ -216,9 +236,10 @@ function campoHtml(card,id,rotulo,unidade,exemplo,passo){
 
 function cardHtml(card){
   let corpo='';
-  if(card.tipo==='variantes'){
+  if(card.tipo==='variantes'||card.tipo==='grupos'){
+    const opcoes=card.variantes||card.grupos;
     corpo+=`<label for="card-${card.id}-seletor">${escape(card.seletor.rotulo)}</label>`
-      +`<select id="card-${card.id}-seletor">${card.variantes.map(v=>`<option value="${v.id}">${escape(v.rotulo)}</option>`).join('')}</select>`;
+      +`<select id="card-${card.id}-seletor">${opcoes.map(v=>`<option value="${v.id}">${escape(v.rotulo)}</option>`).join('')}</select>`;
   }
   if(card.tipo==='soma'){
     corpo+=`<div class="solar-fields">${card.itens.map(item=>`<div>${campoHtml(card,item.id,item.rotulo,item.unidade,'0',item.passo)}</div>`).join('')}</div>`;
@@ -239,7 +260,7 @@ function setupFeeCards(){
   for(const card of cards){
     const campos=card.tipo==='soma'?card.itens.map(i=>i.id):['campo'];
     campos.forEach(id=>cardEl(card,id).addEventListener('input',()=>renderCard(card)));
-    if(card.tipo==='variantes')cardEl(card,'seletor').addEventListener('change',()=>renderCard(card));
+    if(card.tipo==='variantes'||card.tipo==='grupos')cardEl(card,'seletor').addEventListener('change',()=>renderCard(card));
   }
   renderCards();
 }
