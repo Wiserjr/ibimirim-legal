@@ -263,3 +263,62 @@ articulação entre os três regimes.
 A camada de texto grudou "e motores" em "emotores" na página 3. Uma busca por "máquinas e motores"
 não encontra esse dispositivo; a busca por "máquinas" encontra. Convém conferir esse trecho contra a
 publicação oficial.
+
+
+---
+
+# Aliança — levantamento inicial, 18/08/2026
+
+Indexados 11 documentos e 1.220 páginas. O portal da transparência do Município respondeu
+normalmente, ao contrário do de Ibimirim.
+
+## Obtidos no portal nesta rodada
+
+| Ato | Matéria |
+|---|---|
+| LC nº 073/2026 | Altera os arts. 315 e 317 do Código Tributário — CIP |
+| LC nº 068/2025 | Altera o art. 56 do Plano Diretor |
+| LC nº 067/2025 | Benefícios diretos e fiscais aos mototaxistas |
+| LC nº 065/2025 | IPTU de famílias de baixa renda no CadÚnico |
+| LC nº 061/2024 | Altera o Plano Diretor |
+| LC nº 030/2013 | Altera o Plano Diretor |
+
+## A versão consolidada do Código está desatualizada
+
+O PDF fornecido é a LC nº 041/2017 consolidada até a **LC nº 049/2021**. A **LC nº 073/2026**, de
+14 de agosto de 2026, deu nova redação aos arts. 315 e 317: ampliou a finalidade da CIP para
+alcançar "estruturas de monitoramento para segurança e preservação de logradouros públicos" e
+vinculou a contribuição ao consumo efetivo de energia da unidade consumidora, com efeitos
+financeiros retroativos à Emenda Constitucional nº 132/2023.
+
+Ela está indexada em separado e o aplicativo avisa disso, mas **convém obter do Município uma nova
+consolidação**: hoje quem ler os arts. 315 e 317 no corpo do Código verá a redação revogada.
+
+O Plano Diretor tem a mesma questão em maior grau — a LC nº 022/2006 foi alterada quatro vezes
+(030/2013, 061/2024, 068/2025 e 071/2026) e não há consolidação.
+
+## A UFM é o eixo do sistema, e seu valor não está em lugar nenhum
+
+O art. 396 institui a Unidade Fiscal do Município e o art. 397 manda atualizá-la anualmente pela
+variação acumulada do IPCA/IBGE, cabendo ao Poder Executivo fixar o valor. **As 365 entradas dos
+anexos estão todas em UFM** e nenhum documento do acervo diz quanto ela vale.
+
+Documento a localizar, em prioridade máxima: **o decreto que fixa a UFM de cada exercício**. Sem
+ele, nenhuma taxa de Aliança tem valor em reais defensável.
+
+## Não indexado por decisão
+
+A categoria Tributário do portal traz 9 **Registros da Dívida Ativa**, de 2021 a 2025. São listas
+nominais de contribuintes com seus débitos. Não foram incluídos: são dados pessoais e não são
+legislação.
+
+## Confiança da extração das tabelas
+
+As 13 tabelas dos anexos (páginas 133 a 145) foram extraídas do texto da própria lei e conferidas
+por amostragem contra o PDF — 11 de 11 valores testados conferem, incluindo ISS de autônomos,
+localização e funcionamento, expediente e abate. Dois pontos merecem revisão humana:
+
+- a tabela de coleta de lixo tem cinco categorias (Residencial, Comercial, Industrial, Serviços e
+  Outras Atividades) e a última tem o cabeçalho no rodapé de uma página e os valores na seguinte;
+- rótulos de subitens do tipo "a) bovinos" preservam o valor correto, mas o item-pai que lhes dá
+  contexto nem sempre acompanha.
