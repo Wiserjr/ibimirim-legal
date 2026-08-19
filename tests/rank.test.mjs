@@ -73,12 +73,11 @@ for (const slug of slugs) {
 const jurema = await rankerDe('jurema');
 assert.equal(jurema('UFM unidade fiscal')[0].doc.id, 'ctm-255-2007',
   'jurema "UFM unidade fiscal": esperava o Código de 2007 no topo');
-// "ITBI transmissão" só exige que o revogado não venha na frente: o OCR gravou
-// "ITBl" com L no lugar do I, então o token "itbi" quase não existe no corpus e
-// quem responde pelo termo "transmissão" é o Código Civil. É defeito de
-// reconhecimento óptico, não de ordenação.
-assert.notEqual(jurema('ITBI transmissão')[0].doc.kind, 'historical',
-  'jurema "ITBI transmissão": o topo não pode ser o Código revogado de 1994');
+// A sigla ITBI vinha do OCR como "ITBl", com l no lugar do I, nas 11
+// ocorrências do documento — e por isso a consulta caía no Código Civil, que
+// cobre os dois termos. Corrigida em municipios/jurema/correcoes.json.
+assert.equal(jurema('ITBI transmissão')[0].doc.id, 'ctm-255-2007',
+  'jurema "ITBI transmissão": esperava o Código de 2007 — a correção de OCR do ITBl saiu?');
 const jatoba = await rankerDe('jatoba');
 assert.equal(jatoba('Valor de Referência')[0].doc.id, 'ctm-034-1997',
   'jatoba "Valor de Referência": o Código Tributário tem de vencer o Código Civil');

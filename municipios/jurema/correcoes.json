@@ -1,0 +1,13 @@
+{
+  "sobre": "Correções de reconhecimento óptico aplicadas ao corpus, depois da extração. Cada uma foi conferida na imagem da página citada em 'conferido'. Só entram aqui trocas de caractere do OCR — nunca alteração de redação, de valor ou de numeração da lei. O que for divergência real do texto publicado fica registrado em DOCUMENTOS-RECOMENDADOS.md, não é corrigido.",
+  "correcoes": [
+    {
+      "documento": "ctm-255-2007",
+      "de": "ITBl",
+      "para": "ITBI",
+      "motivo": "O OCR leu o I final da sigla como l minúsculo, nas 11 ocorrências do documento — não sobrou nenhuma correta. Com isso a sigla ficava inalcançável na busca, e a consulta 'ITBI transmissão' caía no Código Civil, que cobre os dois termos.",
+      "conferido": "p. 61, art. 162: 'As alíquotas do ITBI são as seguintes, tomando-se por base o valor avaliado ou declarado do imóvel'. O Código anterior, de 1994, traz a sigla correta em 4 ocorrências.",
+      "paginas": [27, 47, 56, 58, 60, 61, 62, 64]
+    }
+  ]
+}

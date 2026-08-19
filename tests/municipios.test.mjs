@@ -60,6 +60,28 @@ for (const slug of slugs) {
     }
   }
 
+  // --- correção de OCR declarada tem de estar aplicada no corpus -------
+  // O corpus é regerado por build_corpus.py, então uma correção que deixe de
+  // ser aplicada volta sem aviso. Em Jurema o OCR gravou "ITBl" com l nas 11
+  // ocorrências da sigla, e isso bastava para o ITBI sumir da busca.
+  let correcoes = [];
+  try { correcoes = JSON.parse(await ler(`municipios/${slug}/correcoes.json`)).correcoes; } catch {}
+  for (const c of correcoes) {
+    assert.ok(c.conferido, `${rotulo} correção ${c.de} sem o campo "conferido"`);
+    const doc = laws.documents.find(d => d.id === c.documento);
+    assert.ok(doc, `${rotulo} correção aponta documento inexistente: ${c.documento}`);
+    const sobrou = doc.pages.filter(p => p.text.includes(c.de));
+    assert.equal(
+      sobrou.length, 0,
+      `${rotulo} ${c.documento}: "${c.de}" ainda aparece em ${sobrou.length} página(s) — ` +
+      `rode "python tools/build_corpus.py ${slug}"`,
+    );
+    assert.ok(
+      doc.pages.some(p => p.text.includes(c.para)),
+      `${rotulo} ${c.documento}: "${c.para}" não aparece em página nenhuma`,
+    );
+  }
+
   // --- valores em UFM nunca trazem reais gravados ----------------------
   const entradas = (fees.sections || []).flatMap(s => [...s.current, ...(s.previous || [])]);
   assert.ok(

@@ -178,16 +178,19 @@ consequência:
 - **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
   responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
   no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
-- **O OCR gruda palavras, e isso torna algumas siglas inalcançáveis.** Em Jurema, o
-  reconhecimento gravou "ITB**l**" com L minúsculo no lugar do I: o Código de 2007 tem **zero**
-  páginas com a sigla ITBI, e a consulta "ITBI transmissão" vai para o Código Civil, que cobre os
-  dois termos. O conteúdo continua alcançável por "transmissão inter vivos" ou "imposto sobre
-  transmissão", que caem no art. 165, p. 62. Correção pertence ao corpus, não à busca — uma
-  passagem de correção de OCR sobre siglas conhecidas.
+- **O OCR corrompe siglas em outros dois municípios, ainda não corrigidos.** O mesmo defeito do
+  ITBI de Jurema existe em **Ibimirim** (`ITBl`×2, `ClP`, `lPTU`, `!TB!`, `1SS`) e em **Vertente do
+  Lério** (`lSS`, `lTBl`). Cada ocorrência precisa ser conferida na imagem da página antes de entrar
+  no `correcoes.json` do município — o mecanismo já existe, falta a conferência.
 
-  Da mesma família, e medido: 8 páginas de Jurema e 2 de Tacaratu deixaram de casar porque o OCR
-  grudou palavras inteiras — *taxadefiscalizacaodeocupacaoepermanencia*,
-  *segundaviadealvarasehabite*. São títulos de tabela e de item.
+- **O OCR gruda palavras, e isso torna parte do conteúdo inalcançável.** Medido: 8 páginas de Jurema
+  e 2 de Tacaratu deixam de casar porque o reconhecimento juntou palavras inteiras —
+  *taxadefiscalizacaodeocupacaoepermanencia*, *segundaviadealvarasehabite*. São títulos de tabela e
+  de item. Em Jurema isso alcança até a sigla já corrigida: na p. 64 ela ficou "doITBI", sem
+  fronteira, e aquela página não responde à busca por ITBI — as outras sete respondem.
+
+  Não há correção barata: separar palavras grudadas exige léxico, e a troca de caractere do
+  `correcoes.json` não resolve.
 
 ## Defeitos já corrigidos
 
@@ -206,6 +209,13 @@ consequência:
 - **A busca casava por substring, e isso quebrava as siglas.** `hay.includes(term)`, sem fronteira
   de palavra, fazia "iss" achar *comissão* e "ativa" achar *administrativa*. Corrigido em
   19/08/2026 exigindo início de palavra. Detalhe do efeito medido na seção abaixo.
+
+- **A sigla ITBI de Jurema não existia no corpus.** O OCR leu o I final como l minúsculo nas 11
+  ocorrências do documento, e nenhuma ficou correta — a consulta "ITBI" não devolvia nada, e "ITBI
+  transmissão" caía no Código Civil. Conferido na imagem da p. 61, art. 162: "As alíquotas do ITBI
+  são as seguintes". Corrigido em 19/08/2026 por `municipios/jurema/correcoes.json`, o primeiro uso
+  do mecanismo de correção de OCR descrito no README. "ITBI" agora devolve 12 resultados, todos
+  municipais. `npm test` falha se a correção deixar de estar aplicada.
 
 ## Como a busca ordena, e por quê
 

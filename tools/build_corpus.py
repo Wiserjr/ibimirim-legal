@@ -21,6 +21,44 @@ from extract_laws import extract_office, extract_pdf
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def load_corrections(base: Path) -> list[dict]:
+    """Trocas de caractere do OCR, declaradas em correcoes.json.
+
+    Só entram trocas conferidas na imagem da página — o arquivo exige o campo
+    "conferido" justamente para isso. Divergência real do texto publicado não se
+    corrige aqui: fica registrada em DOCUMENTOS-RECOMENDADOS.md.
+
+    A correção roda na montagem, e não na extração, para alcançar também as
+    páginas vindas do cache: quem já tem o corpus extraído não precisa repetir
+    horas de OCR para receber a correção.
+    """
+    arquivo = base / "correcoes.json"
+    if not arquivo.exists():
+        return []
+    dados = json.loads(arquivo.read_text(encoding="utf-8"))["correcoes"]
+    for c in dados:
+        faltando = {"documento", "de", "para", "motivo", "conferido"} - set(c)
+        if faltando:
+            raise SystemExit(
+                f"correcoes.json: correção sem {', '.join(sorted(faltando))} — "
+                f"{c.get('de', '?')!r}"
+            )
+    return dados
+
+
+def apply_corrections(doc_id: str, pages: list[dict], correcoes: list[dict]) -> int:
+    trocas = 0
+    for c in correcoes:
+        if c["documento"] != doc_id:
+            continue
+        for page in pages:
+            n = page["text"].count(c["de"])
+            if n:
+                page["text"] = page["text"].replace(c["de"], c["para"])
+                trocas += n
+    return trocas
+
+
 def load_cached(output: Path) -> dict:
     if not output.exists():
         return {}
@@ -44,6 +82,8 @@ def main() -> None:
 
     output = base / "data" / "laws.js"
     cached = load_cached(output)
+    correcoes = load_corrections(base)
+    corrigidas = 0
     corpus = {"municipio": slug, "documents": []}
     ocr = None
 
@@ -65,6 +105,7 @@ def main() -> None:
                 f"{time.time() - inicio:.0f}s",
                 file=sys.stderr,
             )
+        corrigidas += apply_corrections(doc["id"], pages, correcoes)
         corpus["documents"].append({
             "id": doc["id"],
             "title": doc["titulo"],
@@ -85,6 +126,11 @@ def main() -> None:
     )
     if conflitos:
         print(f"  {conflitos} páginas com divergência numérica entre passagens de OCR")
+    if correcoes:
+        print(
+            f"  {corrigidas} trocas de OCR aplicadas, de {len(correcoes)} "
+            f"correção(ões) declarada(s) em correcoes.json"
+        )
 
 
 if __name__ == "__main__":

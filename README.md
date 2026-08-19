@@ -88,6 +88,21 @@ descarta linhas inteiras, a maior corrompe algarismos — na Lei nº 793/2018 el
 "50o". O extrator fica com a leitura que tiver menos numerais grudados a letras e grava toda
 divergência numérica em `ocrConflict` na página, para conferência humana.
 
+## Correções de OCR
+
+`municipios/<slug>/correcoes.json` declara trocas de caractere que o reconhecimento errou. São
+aplicadas na **montagem**, não na extração, de modo que alcançam também as páginas vindas do cache —
+receber a correção não custa repetir horas de OCR.
+
+Cada entrada exige um campo `conferido`, com a citação da página onde a forma correta foi lida na
+imagem. É a regra que separa correção de reescrita: **só entram trocas de caractere do OCR**.
+Divergência real do texto publicado não se corrige — vai para
+[DOCUMENTOS-RECOMENDADOS.md](DOCUMENTOS-RECOMENDADOS.md) e é decidida com o Município.
+
+O primeiro caso foi o ITBI de Jurema: o OCR leu o I final como l minúsculo nas onze ocorrências da
+sigla, e nenhuma ficou correta. A sigla sumia da busca, e "ITBI transmissão" caía no Código Civil,
+que cobre os dois termos. `npm test` falha se uma correção declarada deixar de estar aplicada.
+
 ## Tabelas de taxas
 
 Cada município tem sua origem, porque os códigos não se parecem:
