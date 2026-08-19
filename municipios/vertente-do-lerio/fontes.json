@@ -1,0 +1,25 @@
+{
+  "documentos": [
+    {
+      "id": "ctm-001-2009",
+      "titulo": "Código Tributário Municipal",
+      "citacao": "Lei Complementar nº 001/2009",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/CÓDIGO TRIBUTARIO DE VERTENTE DO LERIO.pdf"
+    },
+    {
+      "id": "cc-14",
+      "titulo": "Código Civil — 14ª edição",
+      "citacao": "Lei Federal nº 10.406/2002; atualizada até agosto de 2023",
+      "tipo": "federal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
+    },
+    {
+      "id": "cc-2",
+      "titulo": "Código Civil — 2ª edição (histórica)",
+      "citacao": "Lei Federal nº 10.406/2002; edição de referência histórica",
+      "tipo": "historical",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+    }
+  ]
+}
