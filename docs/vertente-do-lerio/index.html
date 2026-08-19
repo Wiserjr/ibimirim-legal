@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
+  <meta name="theme-color" content="#153f38">
+  <meta name="description" content="Consulta educativa e offline à legislação tributária e urbana de Vertente do Lério.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="qa.css">
+  <title>Vertente do Lério Legal</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Vertente do Lério Legal — início"><span class="seal">VL</span><span><b>Vertente do Lério Legal</b><small>Tributos e cidade, sem juridiquês</small></span></a>
+    <button id="install" class="install" hidden>Instalar</button>
+  </header>
+  <main>
+    <section id="inicio" class="hero">
+      <p class="eyebrow">Consulta pública • funciona offline</p>
+      <h1>Entenda seus direitos, deveres e procedimentos municipais.</h1>
+      <p>Conteúdo organizado para contribuintes e servidores de Tributos de Vertente do Lério. Consulte sempre a fonte oficial indicada em cada resultado.</p>
+      <label class="search"><span>⌕</span><input id="query" type="search" placeholder="Pesquise ou pergunte: quanto custa o alvará de funcionamento?" autocomplete="off"><kbd>Enter</kbd></label>
+      <p class="search-help">Digite palavras para pesquisar ou faça uma pergunta completa para receber uma resposta apoiada nos documentos.</p>
+      <div id="audiences" class="chips" aria-label="Escolha seu perfil"></div>
+    </section>
+
+    <div id="avisos"></div>
+    <section class="status" aria-label="Aviso importante">
+      <b>Guia educativo, não parecer jurídico.</b>
+      <span>O texto da lei prevalece. Confirme alterações, regulamentações, datas e valores com o Município antes de decidir ou autuar.</span>
+    </section>
+
+    <section id="feesSection">
+      <div class="section-title"><div><p class="eyebrow">Consulta orientada</p><h2>Taxas e tabelas</h2></div><p>Os anexos deste Código são fixados em UFM. Informe a unidade do exercício para converter.</p></div>
+      <div class="ufm-panel">
+        <div class="ufm-about">
+          <p class="eyebrow">Unidade Fiscal do Município</p>
+          <h3>UFM vigente</h3>
+          <p id="ufmRegra"></p>
+          <div id="ufmFonte"></div>
+        </div>
+        <div class="ufm-form">
+          <div class="ufm-fields">
+            <div><label for="ufmValue">Valor da UFM (R$)</label><div class="fee-input"><span class="fee-prefix">R$</span><input id="ufmValue" type="number" min="0.0001" step="0.0001" inputmode="decimal" placeholder="0,0000"></div></div>
+            <div><label for="ufmYear">Exercício</label><div class="fee-input"><input id="ufmYear" type="number" min="2018" max="2099" step="1" inputmode="numeric" placeholder="2026"></div></div>
+          </div>
+          <div class="ufm-actions"><button id="ufmSave" class="ufm-save">Salvar UFM</button><button id="ufmClear" class="text-button">Limpar</button></div>
+          <p id="ufmStatus" class="ufm-status" aria-live="polite"></p>
+        </div>
+      </div>
+      <div id="feeCards" class="fee-grid"></div>
+      <div class="fee-finder">
+        <div class="section-title"><div><p class="eyebrow">Todas as taxas</p><h3>Buscar valor por atividade, obra ou serviço</h3></div><p id="feeResumo"></p></div>
+        <label class="search"><span>⌕</span><input id="feeQuery" type="search" placeholder="muro, frigorífico, antena, circo, demolição, padaria…" autocomplete="off"></label>
+        <div id="feeFilters" class="chips" aria-label="Filtrar por tipo de taxa"></div>
+        <p id="feeCount" class="fee-count" aria-live="polite"></p>
+        <div id="feeResults" class="fee-results"></div>
+      </div>
+      <p class="fee-notice"><strong>Atenção:</strong> os oito anexos da Lei Complementar nº 001/2009 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em UFM e dependem do ato que fixa a unidade do exercício.</p>
+    </section>
+
+    <section id="trailSection">
+      <div class="section-title"><div><p class="eyebrow">Comece por aqui</p><h2>Trilhas de consulta</h2></div><p id="profileHint">Escolha um perfil ou explore todos os assuntos.</p></div>
+      <div id="trails" class="trail-grid"></div>
+    </section>
+
+    <section id="resultsSection" hidden>
+      <div class="section-title"><div><p class="eyebrow">Na legislação</p><h2 id="resultsTitle">Resultados</h2></div><button id="clear" class="text-button">Limpar busca</button></div>
+      <article id="answer" class="answer" hidden></article>
+      <div id="results" class="results"></div>
+    </section>
+
+    <section id="librarySection">
+      <div class="section-title"><div><p class="eyebrow">Fontes</p><h2>Biblioteca legal</h2></div><p>Texto integral pesquisável por página.</p></div>
+      <div id="library" class="library"></div>
+    </section>
+
+    <section class="glossary">
+      <div class="section-title"><div><p class="eyebrow">Palavras importantes</p><h2>Glossário rápido</h2></div></div>
+      <dl id="glossary"></dl>
+    </section>
+  </main>
+  <nav class="bottom-nav" aria-label="Navegação principal">
+    <a href="#inicio"><span>⌂</span>Início</a><a href="#trailSection"><span>▦</span>Trilhas</a><a href="#librarySection"><span>◫</span>Leis</a>
+  </nav>
+  <dialog id="reader">
+    <div class="reader-toolbar" aria-label="Controles de leitura">
+      <button id="readerDecrease" type="button" aria-label="Diminuir texto">A−</button>
+      <button id="readerReset" type="button" aria-label="Restaurar tamanho do texto">100%</button>
+      <button id="readerIncrease" type="button" aria-label="Aumentar texto">A+</button>
+      <button id="readerMode" type="button" hidden>Texto original</button>
+      <form method="dialog"><button class="reader-close" aria-label="Fechar">×</button></form>
+    </div>
+    <div id="readerContent"></div>
+  </dialog>
+  <script src="municipio.js"></script>
+  <script src="data/laws.js"></script>
+  <script src="data/fees.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

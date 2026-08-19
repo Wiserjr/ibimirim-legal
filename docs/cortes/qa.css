@@ -1,0 +1,77 @@
+.search-help{font-size:13px!important;margin:-5px 2px 15px!important;color:var(--muted)!important}
+.answer{background:#e8f1ec;border:1px solid #b9d0c6;border-radius:22px;padding:25px;margin-bottom:16px}
+.answer-label{margin:0 0 8px;color:var(--green2);text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:900}
+.answer h3{font:700 25px/1.2 Georgia,serif;margin:0 0 10px;color:var(--green)}
+.answer-warning{color:#50655f;line-height:1.55}
+.answer ol{margin:18px 0;padding-left:22px}
+.answer li{margin:8px 0;padding-left:5px}
+.answer li button{width:100%;border:0;border-radius:13px;background:white;padding:15px;text-align:left;line-height:1.5;color:var(--ink);cursor:pointer}
+.answer li button:hover{box-shadow:0 7px 25px #153f3814}
+.answer li span{display:block;color:var(--green2);font-size:11px;font-weight:800;margin-top:8px}
+.answer-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.answer-actions a{display:inline-block;text-decoration:none;background:var(--green);color:white;border-radius:99px;padding:10px 14px;font-size:13px;font-weight:800}
+.answer-actions a+a{background:white;color:var(--green);border:1px solid #9dbbb0}
+.online-note{font-size:12px;color:var(--muted);margin:13px 0 0;line-height:1.5}
+.mark{background:#ffe37a;padding:0 2px;color:#2f2a10;border-radius:3px}
+@media(max-width:800px){.answer{padding:19px}.answer-actions{flex-direction:column}.answer-actions a{text-align:center}}
+.fee-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.fee-card{background:white;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 10px 30px rgba(21,63,56,.06)}.fee-kind{display:inline-block;border-radius:99px;background:#e5efe9;color:var(--green2);padding:6px 9px;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}.fee-card h3{font:700 25px/1.2 Georgia,serif;margin:14px 0 7px;color:var(--green)}.fee-card>p{color:var(--muted);line-height:1.5}.fee-card label{display:block;margin:16px 0 7px;font-size:13px;font-weight:800}.fee-card select,.fee-input{width:100%;min-height:50px;border:1px solid #b9c9c3;border-radius:12px;background:white;color:var(--ink)}.fee-card select{padding:9px 12px}.fee-input{display:flex;align-items:center;padding:0 13px}.fee-input input{min-width:0;flex:1;border:0;outline:0;font-size:18px}.fee-input span{color:var(--muted);font-weight:800}.fee-result{display:flex;min-height:100px;flex-direction:column;justify-content:center;gap:5px;margin-top:14px;padding:15px;border-radius:14px;background:#eef5f1;color:var(--muted);line-height:1.4}.fee-result span,.fee-result small{font-size:12px}.fee-result strong{font-size:21px;color:var(--green)}.fee-comparison{margin-top:13px;border-top:1px solid var(--line);padding-top:13px;color:var(--muted);font-size:13px;line-height:1.5}.fee-comparison summary{cursor:pointer;color:var(--green2);font-weight:800}.fee-comparison small{display:block}.source-button{margin-top:12px;border:0;background:none;color:var(--green2);font-weight:800;padding:6px 0;cursor:pointer}.fee-notice{margin:14px 0 0;padding:16px 19px;border-left:4px solid var(--gold);border-radius:5px 14px 14px 5px;background:#fff9e9;color:#665421;font-size:13px;line-height:1.55}@media(max-width:800px){.fee-grid{grid-template-columns:1fr}.fee-card{padding:19px}}
+
+/* Busca de taxas — v1.3 */
+.fee-finder{margin-top:26px;border-top:1px solid var(--line);padding-top:6px}
+.fee-finder .section-title{margin:24px 0 14px}
+.fee-finder h3{font:700 26px/1.15 Georgia,serif;margin:0;color:var(--green)}
+.fee-finder .search{height:58px;margin:18px 0 14px}
+.fee-count{margin:14px 2px 12px;font-size:13px;color:var(--muted)}
+.fee-results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.fee-item{background:white;border:1px solid var(--line);border-radius:17px;padding:19px;display:flex;flex-direction:column}
+.fee-item-anterior{background:#faf8f2;border-style:dashed}
+.fee-item-head{display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:10px}
+.fee-tag{border-radius:99px;padding:5px 9px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.fee-tag-atual{background:#e5efe9;color:var(--green2)}
+.fee-tag-anterior{background:#f0e6cd;color:#7a6220}
+.fee-section{font-size:10px;font-weight:800;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;overflow-wrap:anywhere}
+.fee-label{margin:0 0 12px;line-height:1.5;overflow-wrap:anywhere}
+.fee-values{display:flex;flex-direction:column;gap:4px;margin-bottom:4px}
+.fee-amount{font-size:23px;color:var(--green)}
+.fee-plus,.fee-raw{font-size:13px;color:var(--muted);line-height:1.45}
+.fee-tiers{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--muted)}
+.fee-tiers b{color:var(--green);font-size:16px;margin-right:5px}
+.fee-calc{margin:12px 0 4px;padding:12px;border-radius:12px;background:#eef5f1}
+.fee-calc label{display:block;margin-bottom:6px;font-size:12px;font-weight:800}
+.fee-calc .fee-input{min-height:44px;background:white}
+.fee-calc-out{display:block;margin-top:8px;font-size:14px;color:var(--muted)}
+.fee-calc-out b{font-size:18px;color:var(--green)}
+.fee-item-foot{margin-top:auto;padding-top:10px}
+.fee-warn{margin:0;padding:10px 12px;border-left:3px solid var(--gold);border-radius:4px 10px 10px 4px;background:#fff9e9;color:#665421;font-size:12px;line-height:1.5}
+.fee-note{margin:0 0 6px;font-size:12px;color:var(--muted);line-height:1.5}
+@media(max-width:800px){.fee-results{grid-template-columns:1fr}.fee-item{padding:16px}.fee-finder .search{height:54px}.fee-finder .chips{flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:2px 16px 8px;scrollbar-width:none}.fee-finder .chips::-webkit-scrollbar{display:none}.fee-finder .chip{flex:0 0 auto;scroll-snap-align:start}}
+
+/* Painel da UFM e taxa em UFM — v1.3 */
+.ufm-panel{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:26px;align-items:start;margin-bottom:18px;padding:24px;border:1px solid #cfd9c9;border-radius:22px;background:linear-gradient(180deg,#fbfdf9,#f2f7f0)}
+.ufm-about h3{font:700 25px/1.2 Georgia,serif;margin:0 0 9px;color:var(--green)}
+.ufm-about p{margin:0;color:var(--muted);line-height:1.55;font-size:14px;overflow-wrap:anywhere}
+.ufm-fields{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px}
+.ufm-fields label{display:block;margin-bottom:6px;font-size:13px;font-weight:800}
+.ufm-fields .fee-input{min-height:50px;background:white}
+.fee-prefix{color:var(--muted);font-weight:800;margin-right:7px}
+.ufm-actions{display:flex;align-items:center;gap:14px;margin-top:13px}
+.ufm-save{border:0;border-radius:99px;padding:12px 20px;background:var(--green);color:white;font-weight:800;cursor:pointer}
+.ufm-status{margin:13px 0 0;padding:11px 13px;border-radius:11px;font-size:13px;line-height:1.5}
+.ufm-status-empty{background:#fff9e9;border-left:3px solid var(--gold);color:#665421}
+.ufm-status-set{background:#e9f2ec;border-left:3px solid var(--green2);color:#2c4b43}
+.fee-grid{grid-template-columns:repeat(auto-fit,minmax(310px,1fr))}
+.fee-card-ufm .fee-kind{background:#efe6cf;color:#7a6220}
+.solar-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ufm-fields>div,.solar-fields>div{min-width:0}
+.solar-fields label{margin-top:14px}
+.solar-fields .fee-input{padding:0 10px}
+.solar-fields .fee-input input{font-size:16px}
+.solar-money{color:var(--green2);font-weight:700}
+.fee-card .source-button+.source-button{margin-left:16px}
+@media(max-width:800px){.ufm-panel{grid-template-columns:minmax(0,1fr);gap:18px;padding:19px}.ufm-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.solar-fields{grid-template-columns:minmax(0,1fr)}.solar-fields label{margin-top:10px}.fee-card .source-button+.source-button{margin-left:0;display:block}}
+
+/* projeto de lei nao pode parecer lei vigente */
+.badge-projeto{background:#fdeccd;color:#7a5310;font-weight:800}
+
+#avisos .status{margin-bottom:12px}
+.status-projeto{border-left-color:#c98a2e;background:#fdf3e3;color:#6b4a12}

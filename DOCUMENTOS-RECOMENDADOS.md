@@ -433,3 +433,91 @@ Duas outras correções vieram junto:
 
 Resultado: **453 entradas, todas conferidas contra o texto da própria página, zero divergências**, e
 nenhum valor coincidindo com o número da sua página.
+
+# Jatobá e Cortês — levantamento inicial, 19/08/2026
+
+Os dois Códigos entraram na biblioteca a partir de **PDF digitalizado**, extraídos por OCR: 86
+páginas em Jatobá e 71 em Cortês, todas com texto, nenhuma vazia. O texto serve para **localizar** o
+dispositivo; a redação tem de ser conferida na imagem da página antes de citar. Os dois aplicativos
+trazem esse aviso na abertura.
+
+## Jatobá — o Código depende de um índice federal extinto
+
+O art. 113 da Lei nº 34/1997 (p. 28) institui o **Valor de Referência (VR)**:
+
+> o Valor de Referência - VR, correspondente, em moeda corrente do país, a 100 (cem) UFIR's
+> (0,9180) ou outro índice equivalente, nesta data, igual a R$ 91,80 […], ou outro índice
+> equivalente que venha substituí-lo.
+
+Disso decorrem três consequências práticas:
+
+1. **Nenhuma taxa do Código está em reais.** As Tabelas II, IV, V e VI fixam *percentual sobre o
+   VR* — 1,1% e 2,2% na taxa de expediente, 3% ao ano na licença de localização, e assim por diante.
+   Sem o VR do exercício, nenhuma delas produz um valor.
+2. **A UFIR foi extinta em outubro de 2000.** O R$ 91,80 do artigo é valor de 1997 e não pode ser
+   usado hoje. O próprio artigo prevê "outro índice equivalente que venha substituí-lo", mas **não
+   se encontrou o ato municipal que faz essa substituição**.
+3. **É a pendência mais urgente de Jatobá.** Enquanto ela não for resolvida, o aplicativo exibe o
+   percentual e a base, e se recusa a converter — como já faz com a UFM dos demais municípios.
+
+### Divergência de numeração entre o artigo e o anexo
+
+O art. 188 (p. 51) manda calcular a taxa de expediente pela **"TABELA III (Anexo 4)"**. O cabeçalho
+impresso no Anexo 4 (p. 82) lê-se **"TABELA II - TAXA DE EXPEDIENTE"**. Como o Anexo 5 é a Tabela IV,
+a sequência favorece o artigo — o cabeçalho é que estaria errado.
+
+**Não foi corrigido por conta própria.** O texto é OCR de documento digitalizado, e a hipótese de o
+reconhecimento ter perdido um "I" em "III" é tão plausível quanto a de erro de impressão na lei.
+Precisa de conferência na via original em papel.
+
+## Cortês — valores em reais de 2005, com índice de atualização definido
+
+O Código de Cortês (Lei nº 874/2005) é o oposto de Jatobá: as **sete Tabelas de Receita** fixam os
+valores **diretamente em reais**, sem unidade intermediária.
+
+| Tabela | Objeto |
+|---|---|
+| I | Imposto sobre serviço de qualquer natureza |
+| II | Taxa de licença de localização |
+| III | Taxa de fiscalização do funcionamento |
+| IV | Taxa de licença de execução de obras e urbanização de áreas particulares |
+| V | Taxa de licença para exposição de publicidade |
+| VI | Taxa de vigilância sanitária |
+| VII | Taxa de limpeza pública |
+
+O que precisa do Município aqui não é uma unidade, e sim a **série de atualização**: o art. 69, § 2º
+(p. 15) manda atualizar anualmente pelo **IPCA-E do IBGE**. Os valores impressos são de 2005; entre
+2005 e hoje há mais de duas décadas de correção acumulada. Convém pedir a tabela vigente já
+atualizada, em vez de recalcular a série por conta própria.
+
+A Planta Genérica de Valores do IPTU tem regra própria (art. 91, § 1º, p. 22): pode ser
+atualizada por Decreto, **desde que a atualização não supere a inflação do período**, medida pelo
+índice do IBGE.
+
+## Tabelas ainda não extraídas nos dois municípios
+
+Nenhum dos dois teve as tabelas convertidas em consulta estruturada. Em Cortês há um motivo técnico
+concreto, além da falta de conferência: na Tabela de Receita I a **coluna de valores está deslocada
+das descrições** — "05 a / com até cinco sócios" aparece separado do "20,00" que lhe corresponde, e
+o item 06 recebe na leitura linear o valor do item 05 c. É o caso que o `ESTADO-ATUAL.md` já
+classifica como exigindo leitura visual página a página, com grau de confiança por entrada. Fazer
+por leitura linear produziria uma tabela inteira deslocada em uma linha.
+
+## Defeito de busca encontrado e corrigido nesta rodada
+
+A citação do Código Civil histórico era "Lei Federal nº 10.406/2002; **edição de referência
+histórica**". Como o `rank()` de `app/app.js` usa `titleMatched` como **primeira** chave de
+ordenação, qualquer pergunta contendo "referência" fazia o Código Civil histórico vencer o Código
+Tributário municipal — inclusive a pergunta central de Jatobá, "Valor de Referência". A palavra
+estava no *metadado* de um documento e não no corpo do outro, e isso bastava.
+
+A citação passou a ser "edição histórica, mantida para cotejo", e o `build_corpus.py` foi
+reexecutado nos sete municípios — sem novo OCR, porque o cache reaproveita as páginas e só a
+citação é relida do `fontes.json`. "Valor de Referência" em Jatobá agora retorna a p. 81 do Código
+Tributário, que é a tabela de ISS sobre o V.R.
+
+**A causa de fundo continua de pé** e vale uma decisão da equipe: `titleMatched` dominar a
+ordenação permite que uma palavra no título ou na citação de um documento supere um documento cujo
+corpo inteiro trata do assunto. O desempate que rebaixa `historical` existe, mas é o **último**
+critério, e nunca é alcançado quando `titleMatched` difere. Manari, que usa "Valor de Referência
+Fiscal", corria o mesmo risco.

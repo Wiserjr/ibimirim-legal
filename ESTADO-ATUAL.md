@@ -10,31 +10,33 @@ Atualizado em 19/08/2026.
 ## O que já está publicado
 
 Site: https://wiserjr.github.io/ibimirim-legal/ — capa que leva a cada município.
+São **sete municípios**, 8.207 páginas indexadas, 22,06 MB em `docs/`.
 
 | Município | Documentos | Páginas | Tabelas de taxa | Cartões |
 |---|---|---|---|---|
 | Ibimirim | 19 | 1.384 | 13 seções, 384 itens | 3 |
 | Aliança | 11 | 1.220 | 13 tabelas, 365 itens | 1 |
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
+| Ingazeira | 3 | 1.180 | não extraídas | 0 |
+| Vertente do Lério | 3 | 1.113 | não extraídas | 0 |
+| Jatobá | 3 | 1.074 | não extraídas | 0 |
+| Cortês | 3 | 1.059 | não extraídas | 0 |
 
 Cada um sai também como ZIP (PC/iPhone) e APK Android com `applicationId` próprio.
 
-## O que está em andamento
+Os quatro últimos entram com o **texto pesquisável e citável por página**, mas sem tabelas
+estruturadas: o aplicativo mostra a busca, o leitor e a página citada, e declara na abertura
+que os valores não estão tabulados.
 
-Seis municípios novos foram pedidos: Jatobá, Ingazeira, Cortês, Jurema,
-Tacaratu/Caraibeiras e Vertente do Lério.
+## O que falta
 
 | Município | Código Tributário | Estado |
 |---|---|---|
-| **Ingazeira** | LC nº 002/2016, 192 p, texto limpo | corpus montado (1.180 páginas), `municipio.json` escrito |
-| **Vertente do Lério** | LC nº 001/2009, 125 p, texto | corpus montado (1.113 páginas), `municipio.json` escrito |
-| **Jatobá** | Lei nº 34/1997, 86 p, digitalizado | `fontes.json` pronto; **falta rodar** `python tools/build_corpus.py jatoba` (OCR, ~20 min) e escrever `municipio.json` |
-| **Cortês** | Lei nº 874/2005, 71 p, digitalizado | `fontes.json` pronto; **falta rodar** `python tools/build_corpus.py cortes` (OCR, ~17 min) e escrever `municipio.json` |
 | **Jurema** | Lei nº 255/2007 | não está em disco; localizada no portal, **falta baixar** |
 | **Tacaratu** | Lei nº 1.365/2017 | não está em disco; localizada no portal, **falta baixar** |
 
-Nenhum dos quatro novos entrou em `docs/` nem no site ainda: falta escrever os dois
-`municipio.json` que faltam e rodar `npm run build && python tools/build_pages.py`.
+Além disso, para os quatro municípios recém-publicados falta a **extração das tabelas**, que é
+trabalho à parte e por município (ver a seção sobre extração, mais abaixo).
 
 ### Onde estão os arquivos de Jurema e Tacaratu
 
@@ -63,12 +65,17 @@ falta o usuário confirmar se quer alguma distinção interna.
    `tipo` aceita `municipal`, `federal`, `decreto`, `administrativa`, `historical` e
    `projeto` (para texto em tramitação, que ganha selo próprio na biblioteca).
 2. `python tools/build_corpus.py <slug>` — extrai o corpus. Só documentos com id novo são
-   processados; os demais são reaproveitados.
+   processados; os demais são reaproveitados do `laws.js` existente. **A citação, porém, é
+   sempre relida do `fontes.json`** — dá para corrigir texto de citação sem repetir o OCR.
 3. `municipios/<slug>/municipio.json` — marca, textos, trilhas, glossário, painel de
    unidade, cartões e avisos. Copie o de um município parecido e ajuste.
 4. `npm test` — a suíte confere, entre outras coisas, que toda página citada existe no
-   documento citado.
+   documento citado. Ela percorre **todas** as pastas de `municipios/`, então um município
+   pela metade quebra a suíte inteira — é de propósito.
 5. `npm run build && python tools/build_pages.py` e commit.
+
+Só três tipos de aviso existem em `app/app.js`: `projeto`, `vigencia` e `nota`. Qualquer
+outro valor cai num título genérico e numa classe CSS que não existe.
 
 ## Convenções de valor, por município
 
@@ -81,11 +88,16 @@ Não há um padrão comum, e confundi-las erra a conta por ordens de grandeza:
 | Manari | UFM, percentual sobre o Valor de Referência Fiscal e percentual sobre o preço do serviço |
 | Ingazeira | reais, organizados por código CNAE-Fiscal |
 | Vertente do Lério | UFM |
-| Jatobá, Cortês, Jurema, Tacaratu | a apurar |
+| **Jatobá** | **percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR** |
+| **Cortês** | **reais de 2005, com atualização anual pelo IPCA-E (art. 69, § 2º)** |
 
 Nenhum acervo informa quanto vale a UFM ou o Valor de Referência. O aplicativo nunca os
 embute: exibe na unidade da lei e converte só depois que a equipe informa o valor do
 exercício. Há teste que falha se algum fator de conversão voltar à base publicada.
+
+**Jatobá é o caso mais grave**: o VR está atrelado à UFIR, índice federal **extinto em
+outubro de 2000**. Os R$ 91,80 do art. 113 são valor de 1997 e não servem. Sem o ato
+municipal que substituiu o índice, nenhuma taxa de Jatobá converte em reais.
 
 ## Extração de tabelas: o que exige e o que não
 
@@ -97,13 +109,24 @@ conferência. O que a experiência até aqui mostrou:
   Cuidado com o número da página, que fica na coluna da direita no rodapé: corte tudo
   abaixo de 92% da altura.
 - **PDF com a coluna de valores deslocada do rótulo** — só leitura visual, página a
-  página, com grau de confiança por entrada. Foi a outra metade de Manari.
+  página, com grau de confiança por entrada. Foi a outra metade de Manari, e é o caso da
+  Tabela de Receita I de **Cortês**, onde o valor de um item cai na linha do item seguinte.
 - **Sempre** reconfronte cada número com o texto da sua própria página, e verifique que
   nenhum valor coincide com o número da página. A primeira checagem sozinha não pega o
   erro: "141" existe na página 141.
 - Espere encontrar defeitos no texto da lei. Em Manari foram quatro: item repetido com
   valores diferentes, item sem descrição, salto de numeração e vírgula impressa como
-  apóstrofo. Registre-os em vez de escolher por conta própria.
+  apóstrofo. Em Jatobá, o art. 188 cita "Tabela III (Anexo 4)" e o Anexo 4 se intitula
+  "Tabela II". Registre-os em vez de escolher por conta própria — ainda mais em documento
+  digitalizado, onde o OCR é suspeito tão legítimo quanto o erro de impressão.
+
+## Documento digitalizado: Jatobá e Cortês
+
+São os dois primeiros acervos que entram **inteiramente por OCR** (86 e 71 páginas). O texto
+perde acentos e junta palavras — "Fago saber", "Codigo Tributario". Isso não atrapalha a
+busca, porque `app/app.js` normaliza removendo diacríticos dos dois lados, mas **atrapalha a
+citação literal**. Os dois aplicativos avisam disso na abertura e pedem conferência na
+imagem da página.
 
 ## Pendências que dependem do Município
 
@@ -117,3 +140,18 @@ consequência:
   e nenhuma consolidação.
 - **Manari** — os atos que fixam a UFM e o Valor de Referência; o portal não publica
   legislação nenhuma, então não há como conferir por lá se a Lei nº 99/2007 foi alterada.
+- **Jatobá** — o ato que substituiu a UFIR e fixa o VR do exercício. Sem ele o Código não
+  produz valor nenhum. E a via em papel, para dirimir a numeração do Anexo 4.
+- **Cortês** — a tabela de receitas já atualizada pelo IPCA-E; os valores impressos são de
+  2005 e acumulam mais de duas décadas de correção.
+
+## Defeitos conhecidos do próprio projeto
+
+- **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
+  responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
+  no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
+- **`rank()` põe `titleMatched` como primeira chave de ordenação.** Uma palavra no título
+  ou na citação de um documento vence um documento cujo corpo inteiro trata do assunto. O
+  desempate que rebaixa `historical` é o último critério e nunca chega a ser avaliado. Já
+  causou um defeito real, corrigido em 19/08/2026 mudando a citação do Código Civil
+  histórico; a causa de fundo continua de pé.

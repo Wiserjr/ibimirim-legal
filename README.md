@@ -4,8 +4,13 @@ Aplicativo offline de consulta educativa à legislação tributária e urbaníst
 Pernambuco. A mesma base atende navegador no PC, instalação como aplicativo no iPhone e um pacote
 Android nativo.
 
-Municípios publicados: **Ibimirim**, **Aliança** e **Manari**.
+Municípios publicados: **Ibimirim**, **Aliança**, **Manari**, **Ingazeira**,
+**Vertente do Lério**, **Jatobá** e **Cortês** — 8.207 páginas indexadas.
 Site: https://wiserjr.github.io/ibimirim-legal/
+
+Os três primeiros têm as tabelas de taxa extraídas e conferidas. Os quatro últimos entram
+com o texto pesquisável e citável por página, e declaram na abertura que os valores ainda
+não estão tabulados.
 
 ## Como está organizado
 
@@ -103,13 +108,21 @@ Cada município tem sua origem, porque os códigos não se parecem:
   `tools/build_fees_manari.py` funde as duas e reconfronta cada número com o texto da sua página,
   aceitando as três pontuações decimais que a lei usa — vírgula, ponto e apóstrofo.
 
-## UFM
+## UFM e demais unidades de referência
 
-Os dois municípios fixam taxas em Unidade Fiscal do Município, e nenhum dos dois acervos informa
-quanto ela vale — em Aliança, o art. 397 manda atualizá-la pelo IPCA, cabendo ao Executivo fixar o
-valor por decreto. O aplicativo nunca embute a UFM: exibe os montantes nessa unidade e só converte
-depois que a equipe informa o valor do exercício no painel "UFM vigente". Há teste que falha se
-algum fator de conversão voltar à base publicada.
+Cada município tem a sua convenção, e confundi-las erra a conta por ordens de grandeza. Aliança e
+Vertente do Lério fixam tudo em Unidade Fiscal do Município; Ibimirim usa reais no Código de 2025 e
+UFM nas leis específicas; Ingazeira e Cortês fixam em reais; Manari e Jatobá cobram percentuais
+sobre um Valor de Referência.
+
+**Nenhum acervo informa quanto vale a unidade.** Em Aliança, o art. 397 manda atualizá-la pelo IPCA,
+cabendo ao Executivo fixar o valor por decreto. O aplicativo nunca embute a unidade: exibe os
+montantes nela e só converte depois que a equipe informa o valor do exercício no painel "UFM
+vigente". Há teste que falha se algum fator de conversão voltar à base publicada.
+
+Jatobá é o caso extremo: o seu Valor de Referência está atrelado à **UFIR**, índice federal extinto
+em outubro de 2000. Enquanto o Município não indicar o índice que a substituiu, nenhuma taxa daquele
+Código converte em reais.
 
 ## Cartões de cálculo
 

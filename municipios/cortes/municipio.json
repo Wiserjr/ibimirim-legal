@@ -1,0 +1,227 @@
+{
+ "slug": "cortes",
+ "nome": "Cortês",
+ "uf": "PE",
+ "marca": {
+  "sigla": "CO",
+  "titulo": "Cortês Legal",
+  "subtitulo": "Tributos e cidade, sem juridiquês"
+ },
+ "hero": {
+  "chamada": "Entenda seus direitos, deveres e procedimentos municipais.",
+  "texto": "Conteúdo organizado para contribuintes e servidores de Tributos de Cortês. Consulte sempre a fonte oficial indicada em cada resultado.",
+  "exemplo": "como é calculada a taxa de licença de localização?"
+ },
+ "buscaOnline": {
+  "oficial": "site:cortes.pe.gov.br",
+  "ampla": "legislação municipal Cortês PE"
+ },
+ "rotulos": {
+  "atual": "Lei nº 874/2005",
+  "anterior": "Redação anterior"
+ },
+ "publicos": [
+  [
+   "todos",
+   "Todos"
+  ],
+  [
+   "contribuinte",
+   "Sou contribuinte"
+  ],
+  [
+   "tributos",
+   "Trabalho em Tributos"
+  ],
+  [
+   "infraestrutura",
+   "Trabalho em Obras"
+  ]
+ ],
+ "trilhas": [
+  {
+   "icon": "⌂",
+   "title": "Imóvel e IPTU",
+   "desc": "Cadastro imobiliário, Planta Genérica de Valores, alíquotas e isenções.",
+   "query": "IPTU imóvel cadastro planta genérica de valores alíquota",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "▤",
+   "title": "Empresa e ISS",
+   "desc": "Lista de serviços, autônomos, sociedades profissionais e retenção na fonte.",
+   "query": "ISS serviço lista autônomo sociedade profissional retenção",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "⇄",
+   "title": "ITBI — transmissão de imóveis",
+   "desc": "Transmissão inter vivos de bens imóveis e de direitos a eles relativos.",
+   "query": "ITBI transmissão inter vivos imóvel direitos base de cálculo",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◐",
+   "title": "Iluminação pública e CIP",
+   "desc": "A contribuição de custeio, quem é beneficiado e o Fundo Municipal de Iluminação Pública.",
+   "query": "CIP iluminação pública contribuição custeio fundo beneficiado",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◇",
+   "title": "Alvará e licença de obra",
+   "desc": "Licença de localização, fiscalização do funcionamento, obras e urbanização de áreas particulares.",
+   "query": "licença localização fiscalização funcionamento obra urbanização",
+   "audience": [
+    "contribuinte",
+    "infraestrutura"
+   ]
+  },
+  {
+   "icon": "▣",
+   "title": "Publicidade em vias e logradouros",
+   "desc": "Licença para exposição de publicidade em vias, logradouros e locais expostos ao público.",
+   "query": "publicidade anúncio painel licença via logradouro exposto ao público",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "✚",
+   "title": "Vigilância sanitária",
+   "desc": "A taxa de vigilância sanitária e os estabelecimentos alcançados.",
+   "query": "vigilância sanitária taxa estabelecimento alimento inspeção",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "▨",
+   "title": "Limpeza pública",
+   "desc": "A taxa de limpeza pública por classe de área construída ou territorial, por unidade e por ano.",
+   "query": "taxa de limpeza pública área construída territorial unidade ano",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◈",
+   "title": "Contribuição de melhoria",
+   "desc": "Quando a obra pública valoriza o imóvel e gera cobrança, com limites e rateio.",
+   "query": "contribuição de melhoria obra pública valorização rateio",
+   "audience": [
+    "contribuinte",
+    "tributos",
+    "infraestrutura"
+   ]
+  },
+  {
+   "icon": "⌁",
+   "title": "Dívida ativa e parcelamento",
+   "desc": "Inscrição em dívida ativa, acréscimos legais, parcelamento e prescrição.",
+   "query": "dívida ativa inscrição acréscimos parcelamento prescrição cobrança",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "⚖",
+   "title": "Direitos do contribuinte",
+   "desc": "Imunidades, isenções, restituição, processo administrativo e defesa.",
+   "query": "imunidade isenção restituição processo administrativo defesa",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◎",
+   "title": "Fiscalizar com segurança",
+   "desc": "Poder de polícia, lançamento, arbitramento, auto de infração e penalidades.",
+   "query": "fiscalização lançamento arbitramento auto de infração penalidade",
+   "audience": [
+    "tributos",
+    "infraestrutura"
+   ]
+  }
+ ],
+ "glossario": [
+  [
+   "Fato gerador",
+   "Situação definida em lei que faz nascer a obrigação tributária."
+  ],
+  [
+   "Contribuinte",
+   "Pessoa que possui relação direta com o fato gerador."
+  ],
+  [
+   "Lançamento",
+   "Procedimento administrativo que verifica o fato gerador, calcula o valor e identifica quem deve pagar."
+  ],
+  [
+   "CIP",
+   "Contribuição para o custeio do serviço de iluminação pública, prevista nos arts. 184 e seguintes deste Código."
+  ],
+  [
+   "Planta Genérica de Valores",
+   "Tabela que fixa o valor do metro quadrado por região, usada na base de cálculo do IPTU. Pode ser atualizada por Decreto, desde que não supere a inflação do período."
+  ],
+  [
+   "IPCA-E",
+   "Índice de Preço ao Consumidor Amplo — Série Especial, do IBGE. É o índice que este Código manda aplicar na atualização monetária anual dos tributos vencidos."
+  ],
+  [
+   "Contribuição de melhoria",
+   "Tributo cobrado quando uma obra pública valoriza o imóvel, limitado ao acréscimo de valor."
+  ],
+  [
+   "Obrigação acessória",
+   "Dever de fazer, informar, emitir ou manter documentos, mesmo quando não há imposto a pagar."
+  ],
+  [
+   "Alvará",
+   "Ato administrativo que autoriza determinada atividade, obra ou funcionamento nas condições legais."
+  ]
+ ],
+ "taxas": {
+  "titulo": "Taxas e tabelas",
+  "resumo": "As sete Tabelas de Receita deste Código fixam os valores diretamente em reais.",
+  "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
+  "aviso": "<strong>Atenção:</strong> as sete Tabelas de Receita da Lei nº 874/2005 ainda não foram extraídas para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em reais <strong>de 2005</strong> e sofrem atualização monetária anual — confirme o valor do exercício com o Município."
+ },
+ "ufm": {
+  "regra": "O Código de Cortês fixa os valores das suas sete Tabelas de Receita <strong>diretamente em reais</strong> — não usa UFM nem outra unidade fiscal intermediária. Os valores são os de <strong>2005</strong>: o art. 69, § 2º manda atualizá-los anualmente pelo <strong>IPCA-E do IBGE</strong>. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
+  "fonte": {
+   "doc": "ctm-874-2005",
+   "pagina": 15,
+   "rotulo": "Ver no Lei nº 874/2005"
+  }
+ },
+ "cartoes": [],
+ "avisos": [
+  {
+   "tipo": "nota",
+   "texto": "O PDF de origem é <strong>digitalizado</strong>: o texto foi obtido por reconhecimento óptico (OCR) e contém erros de grafia, acentuação e espaçamento. Use-o para localizar o dispositivo e <strong>confira a redação na imagem da página citada</strong> antes de citar."
+  },
+  {
+   "tipo": "nota",
+   "texto": "As sete Tabelas de Receita deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+  }
+ ]
+}
