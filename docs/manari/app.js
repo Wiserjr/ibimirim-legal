@@ -299,10 +299,17 @@ function feeTag(entry){
   return (entry.side==='atual'?section.tag:section.prevTag)||SIDE_LABEL[entry.side];
 }
 
+// alguns itens trazem uma sequência de valores (zonas, faixas) num rótulo só;
+// mostrar apenas o primeiro esconderia o resto da linha
+const extrasHtml=(entry,fmt)=>entry.extras&&entry.extras.length
+  ?`<span class="fee-plus">demais valores da linha: ${entry.extras.map(fmt).join(' · ')}</span>`:'';
+
 function feeAmount(entry){
   if(entry.kind==='fixed')return `<strong class="fee-amount">${money(entry.value)}</strong>`;
   if(entry.kind==='formula')return `<strong class="fee-amount">${money(entry.base)}</strong><span class="fee-plus">+ ${money(entry.rate)} por ${escape(entry.unit||'unidade')} acrescido${entry.threshold?` acima de ${entry.threshold.toLocaleString('pt-BR')} ${escape(entry.unit||'')}`:''}</span>`;
-  if(entry.kind==='ufm'){const reais=ufmToMoney(entry.ufm);return `<strong class="fee-amount">${ufmFormat(entry.ufm)}</strong><span class="fee-plus">${entry.per?`por ${escape(entry.per)} ao ano`:'conforme a tabela'}${reais?` · ${reais} com a UFM informada`:' · informe a UFM para ver em reais'}</span>`}
+  if(entry.kind==='ufm'){const reais=ufmToMoney(entry.ufm);return `<strong class="fee-amount">${ufmFormat(entry.ufm)}</strong>${extrasHtml(entry,ufmFormat)}<span class="fee-plus">${entry.per?`por ${escape(entry.per)} ao ano`:'conforme a tabela'}${reais?` · ${reais} com a UFM informada`:' · informe a UFM para ver em reais'}</span>`}
+  if(entry.kind==='pct'){const base=entry.section.base||'';return `<strong class="fee-amount">${entry.valor.toLocaleString('pt-BR')}%</strong>${extrasHtml(entry,v=>v.toLocaleString('pt-BR')+'%')}<span class="fee-plus">${escape(base)}</span>`}
+  if(entry.kind==='indice')return `<strong class="fee-amount">× ${entry.valor.toLocaleString('pt-BR')}</strong><span class="fee-plus">índice de correção do valor venal</span>`;
   if(entry.kind==='tiered')return `<span class="fee-tiers">${entry.tiers.map(tier=>`<span><b>${money(tier.value)}</b> ${escape(tier.label)}</span>`).join('')}${entry.outskirts?`<small>Centro. Periferia: ${entry.outskirts.map(tier=>money(tier.value)).join(' · ')}</small>`:''}</span>`;
   return `<span class="fee-raw">${escape(entry.raw||'valor não informado no comparativo')}</span>`;
 }
@@ -312,6 +319,8 @@ function feeCalculator(entry,index){
   const unit=escape(entry.unit||'unidade');
   return `<div class="fee-calc"><label for="feeCalc${index}">Calcular para</label><div class="fee-input"><input id="feeCalc${index}" type="number" min="0.01" step="0.01" inputmode="decimal" data-fee-calc="${index}" placeholder="0"><span>${unit}</span></div><output id="feeCalcOut${index}" class="fee-calc-out">—</output></div>`;
 }
+
+const AVISO_CONF={media:'Rótulo e valor pareados pela contagem: a coluna de valores vem deslocada no PDF. Confira na página indicada.',baixa:'Leitura ambígua no documento. Confira na página indicada antes de usar.'};
 
 function feeSource(entry){
   const section=entry.section;
@@ -324,7 +333,8 @@ function feeSource(entry){
   const cite=`${escape(table||cfg.rotulos?.atual||'Código vigente')} — p. ${pages.join(', ')}`;
   const warning=section.warning?`<p class="fee-warn">⚠ ${escape(section.warning)}</p>`:'';
   const badge=status==='divergente'?`<p class="fee-warn">⚠ ${escape(entry.section.note||'')}</p>`:status==='parcial'?'<p class="fee-note">Tabela localizada; nem todos os itens puderam ser conferidos linha a linha no texto extraído.</p>':'';
-  return `${warning}${badge}<button class="source-button" data-fee-doc="${entry.section.doc||(corpus.documents[0]||{}).id}" data-fee-page="${pages[0]}">${cite}</button>`;
+  const conf=AVISO_CONF[entry.confianca]?`<p class="fee-note">⚠ ${AVISO_CONF[entry.confianca]}</p>`:'';
+  return `${warning}${badge}${conf}<button class="source-button" data-fee-doc="${entry.section.doc||(corpus.documents[0]||{}).id}" data-fee-page="${pages[0]}">${cite}</button>`;
 }
 
 function renderFeeResults(){

@@ -366,14 +366,56 @@ O Código usa duas bases que ele próprio não converte em reais:
 
 Documentos a localizar: os atos que fixam a UFM e o Valor de Referência de cada exercício.
 
-## Tabelas ainda não estruturadas
+## Tabelas extraídas — conferência página a página, 19/08/2026
 
-As nove tabelas das páginas 118 a 130 e a tabela de fiscalização sanitária da página 145 **não
-foram extraídas** para consulta estruturada. O texto delas é pesquisável e legível pelo leitor, com
-a página citada, mas os valores não estão tabulados no aplicativo.
+As 31 páginas de anexos (118 a 148) foram abertas como imagem e conferidas uma a uma. Resultado:
+**29 tabelas, 432 valores**, todos reconfrontados com o texto da própria página — zero divergências.
 
-O motivo é a qualidade do PDF: ao contrário de Aliança, cujos anexos saem com uma célula por linha,
-os de Manari vêm fragmentados — cabeçalhos com letras espaçadas ("E S P E C I F I C A Ç Ã O"),
-rótulos quebrados em várias linhas e colunas "Ao mês / Ao ano" intercaladas. Uma extração
-automática aqui produziria valores plausíveis e errados, que é o pior resultado possível para uma
-tabela de tributos. Fica para uma rodada com conferência página a página.
+Dois caminhos, conforme o que a página permitia:
+
+- **Páginas 118 a 132 e 139 — transcrição manual.** A coluna de valores vem deslocada uma linha
+  acima do subitem, ou a tabela tem mais de uma coluna de valor. Cada entrada carrega um grau de
+  confiança: `alta` quando rótulo e valor estão inequivocamente na mesma linha, `media` quando o
+  pareamento veio da contagem (N subitens ↔ N valores) e da ordem, `baixa` quando a leitura exigiu
+  escolha. O aplicativo mostra o aviso nos dois últimos casos.
+- **Páginas 133 a 148 — leitura por coordenada.** Essas têm borda real e um valor por linha; o
+  extrator separa rótulo de valor pela posição horizontal da palavra. O método foi validado contra
+  a leitura visual das páginas 139 e 146 antes de ser aplicado às demais.
+
+### Quatro inconsistências no próprio texto da lei
+
+A conferência encontrou defeitos que uma extração automática teria enterrado:
+
+1. **Item repetido com valores diferentes.** "Edificações com mais de três pavimentos" aparece duas
+   vezes na mesma tabela de obras: item 4 (p. 141) com 0,4 / 0,3 / 0,2 para as zonas C, B e A, e
+   item 10 (p. 142) com 0,8 / 0,7 / 0,6. Precisa ser definido qual prevalece.
+2. **Item sem descrição.** O item 11 da Tabela I (p. 119) tem valor — 16,7 ao mês e 200 ao ano — mas
+   nenhum rótulo: a página traz 17 valores e 16 descrições.
+3. **Salto de numeração.** A tabela de ocupação de solo (p. 143) passa do item 10 para o 12.
+4. **Erro de digitação na lei.** O item 14 da taxa de expediente (p. 142), "concessão de habite-se
+   por metro quadrado", está impresso como `0'2`, com apóstrofo no lugar da vírgula.
+
+### Três bases de cálculo distintas
+
+Manari não usa uma unidade só, e confundi-las erra a conta por ordens de grandeza:
+
+| Base | Onde aparece |
+|---|---|
+| **UFM** | anexos das páginas 139 a 148, valor do m² da edificação |
+| **% sobre o Valor de Referência Fiscal** | Tabelas I a IX, páginas 118 a 129 |
+| **% sobre o preço do serviço** | lista de serviços do ISS (p. 133 a 138) e itens 4.x da Tabela IX |
+
+O aplicativo mostra a base em cada resultado. Nenhuma das duas referências é quantificada pela lei.
+
+### Achado que resolve uma pendência de Ibimirim
+
+A tabela "Taxa de Fiscalização de Localização, Instalação e Funcionamento" da página 139 — 15, 30,
+45, 90 e 225 UFM por faixa de área — é **exatamente** a tabela não identificada que aparecia na
+Planilha2 do comparativo de Ibimirim e que ficou registrada ali como não vinculável a nenhuma taxa.
+Ela é de Manari.
+
+### Limitação conhecida
+
+Em itens cuja linha reúne vários valores (zonas C, B e A numa só), o extrator ocasionalmente
+arrasta o primeiro valor do item seguinte para a lista de valores adicionais. Os valores estão
+todos corretos e presentes; a atribuição do último deles ao item certo merece conferência.

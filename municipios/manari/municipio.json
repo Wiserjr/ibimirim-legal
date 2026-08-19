@@ -182,9 +182,9 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "As tabelas do Código usam UFM e percentuais sobre o Valor de Referência. Informe a unidade do exercício para converter.",
+  "resumo": "432 itens dos anexos, em UFM e em percentual sobre o Valor de Referência.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> as nove tabelas do Código (páginas 118 a 130) e a tabela de fiscalização sanitária (página 145) ainda <strong>não foram extraídas para consulta estruturada</strong> — o texto delas é pesquisável e legível pelo leitor, mas os valores não estão tabulados no aplicativo. Consulte a página indicada e confirme o enquadramento com o Município."
+  "aviso": "<strong>Atenção:</strong> as 29 tabelas dos anexos da Lei nº 99/2007 (páginas 118 a 148) foram conferidas página a página contra o documento. Os valores estão em <strong>UFM</strong>, em <strong>percentual sobre o Valor de Referência Fiscal</strong> ou em percentual sobre o preço do serviço — veja a base indicada em cada resultado. Onde a coluna de valores vem deslocada no PDF, o pareamento é sinalizado. Confirme o enquadramento e o valor na publicação oficial antes de lançar."
  },
  "ufm": {
   "regra": "O Código de Manari usa duas referências que ele próprio não quantifica. A <strong>UFM</strong> aparece nos anexos — valor do m² da edificação, ISS de autônomos, construção por m² — e o <strong>art. 230</strong> vincula a ela as prestações da contribuição de melhoria. Já as Tabelas I a IX fixam a cobrança como <strong>percentual sobre o Valor de Referência Fiscal</strong>. Informe abaixo a UFM do exercício para as consultas que dependem dela.",
@@ -199,6 +199,10 @@
   {
    "tipo": "projeto",
    "texto": "O Código de Obras e o Código de Posturas estão na biblioteca como <strong>projetos de lei de 2026</strong>. Não foram aprovados pela Câmara e não produzem efeito — estão aqui para apoiar a elaboração, não para fundamentar licença ou autuação."
+  },
+  {
+   "tipo": "nota",
+   "texto": "A conferência dos anexos encontrou <strong>quatro inconsistências no próprio texto da lei</strong> — item repetido com valores diferentes, item sem descrição, numeração com salto e um valor impresso com apóstrofo no lugar da vírgula. Cada uma aparece na tabela correspondente."
   }
  ]
 }

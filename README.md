@@ -94,6 +94,13 @@ Cada município tem sua origem, porque os códigos não se parecem:
 - **Aliança** — `tools/extract_fees_alianca.py` lê os anexos do próprio Código (páginas 133 a 145
   da LC nº 041/2017). O PDF põe uma célula por linha, então o parser percorre o fluxo como máquina
   de estados. Todos os valores são em UFM e nenhum é convertido em reais na base.
+- **Manari** — duas fontes, conforme o que cada página permite. Nas páginas 118 a 132 e 139 a coluna
+  de valores vem deslocada do rótulo, ou a tabela tem mais de uma coluna de valor: essas foram
+  abertas como imagem e **transcritas à mão** em `tools/tabelas_manari.py`, com um grau de confiança
+  por entrada. As páginas 133 a 148 têm borda real e um valor por linha, e são lidas por
+  `tools/extract_fees_manari.py`, que separa rótulo de valor pela coordenada horizontal da palavra —
+  método validado contra a leitura visual das páginas 139 e 146 antes de ser aplicado às demais.
+  `tools/build_fees_manari.py` funde as duas e reconfronta cada número com o texto da sua página.
 
 ## UFM
 
