@@ -1,0 +1,247 @@
+{
+ "slug": "tacaratu",
+ "nome": "Tacaratu",
+ "uf": "PE",
+ "marca": {
+  "sigla": "TA",
+  "titulo": "Tacaratu Legal",
+  "subtitulo": "Tributos e cidade, sem juridiquês"
+ },
+ "hero": {
+  "chamada": "Entenda seus direitos, deveres e procedimentos municipais.",
+  "texto": "Conteúdo organizado para contribuintes e servidores de Tributos de Tacaratu, e para o distrito de Caraibeiras, alcançado pelo mesmo Código. Consulte sempre a fonte oficial indicada em cada resultado.",
+  "exemplo": "como é calculada a taxa de licença para funcionamento?"
+ },
+ "buscaOnline": {
+  "oficial": "site:tacaratu.pe.gov.br",
+  "ampla": "legislação municipal Tacaratu PE"
+ },
+ "rotulos": {
+  "atual": "Lei nº 1.365/2017",
+  "anterior": "Redação anterior"
+ },
+ "publicos": [
+  [
+   "todos",
+   "Todos"
+  ],
+  [
+   "contribuinte",
+   "Sou contribuinte"
+  ],
+  [
+   "tributos",
+   "Trabalho em Tributos"
+  ],
+  [
+   "infraestrutura",
+   "Trabalho em Obras"
+  ]
+ ],
+ "trilhas": [
+  {
+   "icon": "⌂",
+   "title": "Imóvel e IPTU",
+   "desc": "Planta de Valores Genéricos, Tabela de Preços de Construção, alíquotas e isenções.",
+   "query": "IPTU imóvel planta de valores genéricos preços de construção alíquota",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "▤",
+   "title": "Empresa e ISS",
+   "desc": "Lista de serviços, alíquota mínima de 2% e o Anexo XIII do profissional autônomo.",
+   "query": "ISS serviço lista alíquota profissional autônomo anexo XIII",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "⇄",
+   "title": "ITBI — transmissão de imóveis",
+   "desc": "Transmissão inter vivos de bens imóveis e de direitos a eles relativos.",
+   "query": "ITBI transmissão inter vivos imóvel direitos base de cálculo",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "▦",
+   "title": "Licença por CNAE",
+   "desc": "O Anexo I organiza a taxa de localização e de funcionamento por código CNAE 2.0.",
+   "query": "CNAE anexo I licença localização funcionamento valor",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◇",
+   "title": "Obras, habite-se e ocupação de solo",
+   "desc": "Licença de execução de obras, habite-se e ocupação de vias e logradouros.",
+   "query": "obra habite-se licença execução ocupação solo via logradouro",
+   "audience": [
+    "contribuinte",
+    "infraestrutura"
+   ]
+  },
+  {
+   "icon": "▣",
+   "title": "Publicidade",
+   "desc": "Taxa de licença para exploração dos meios de publicidade, por item e periodicidade.",
+   "query": "publicidade anúncio outdoor faixa painel licença periodicidade",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "▨",
+   "title": "Coleta de resíduos sólidos",
+   "desc": "Taxa de coleta, transporte e destinação final de resíduos sólidos urbanos.",
+   "query": "coleta transporte destinação resíduos sólidos lixo residencial",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "✚",
+   "title": "Vigilância sanitária e abate",
+   "desc": "Fiscalização sanitária e a licença para abate de animais.",
+   "query": "fiscalização sanitária vigilância abate de animais licença",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "❋",
+   "title": "Licença ambiental",
+   "desc": "Taxa de licença ambiental e a fiscalização de veículo de transporte.",
+   "query": "licença ambiental taxa fiscalização veículo transporte",
+   "audience": [
+    "contribuinte",
+    "infraestrutura"
+   ]
+  },
+  {
+   "icon": "▱",
+   "title": "Comércio ambulante e horário especial",
+   "desc": "Licença para o comércio ambulante e para funcionar em horário especial.",
+   "query": "ambulante eventual horário especial prorrogação antecipação licença",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◈",
+   "title": "Contribuição de melhoria",
+   "desc": "Quando a obra pública valoriza o imóvel e gera cobrança, com limites e rateio.",
+   "query": "contribuição de melhoria obra pública valorização rateio",
+   "audience": [
+    "contribuinte",
+    "tributos",
+    "infraestrutura"
+   ]
+  },
+  {
+   "icon": "⌁",
+   "title": "Dívida ativa e parcelamento",
+   "desc": "Inscrição em dívida ativa, acréscimos legais, parcelamento e prescrição.",
+   "query": "dívida ativa inscrição acréscimos parcelamento prescrição",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "⚖",
+   "title": "Direitos do contribuinte",
+   "desc": "Imunidades, isenções, restituição, processo administrativo e defesa.",
+   "query": "imunidade isenção restituição processo administrativo defesa",
+   "audience": [
+    "contribuinte",
+    "tributos"
+   ]
+  },
+  {
+   "icon": "◎",
+   "title": "Fiscalizar com segurança",
+   "desc": "Poder de polícia, lançamento, arbitramento, auto de infração e penalidades.",
+   "query": "fiscalização lançamento arbitramento auto de infração penalidade",
+   "audience": [
+    "tributos",
+    "infraestrutura"
+   ]
+  }
+ ],
+ "glossario": [
+  [
+   "Fato gerador",
+   "Situação definida em lei que faz nascer a obrigação tributária."
+  ],
+  [
+   "Contribuinte",
+   "Pessoa que possui relação direta com o fato gerador."
+  ],
+  [
+   "Lançamento",
+   "Procedimento administrativo que verifica o fato gerador, calcula o valor e identifica quem deve pagar."
+  ],
+  [
+   "Planta de Valores Genéricos",
+   "Tabela que fixa o valor do metro quadrado por região. O art. 191 manda atualizá-la anualmente por Decreto, por comissão de pelo menos três membros, com um representante da Câmara."
+  ],
+  [
+   "CNAE 2.0",
+   "Classificação Nacional de Atividades Econômicas. O Anexo I organiza a taxa de licença por esse código."
+  ],
+  [
+   "IPCA",
+   "Índice de Preços ao Consumidor Amplo, do IBGE. É o índice que o art. 93 manda aplicar na atualização dos débitos vencidos a partir de 1º de janeiro de 2018."
+  ],
+  [
+   "Contribuição de melhoria",
+   "Tributo cobrado quando uma obra pública valoriza o imóvel, limitado ao acréscimo de valor."
+  ],
+  [
+   "Alvará",
+   "Ato administrativo que autoriza determinada atividade, obra ou funcionamento nas condições legais."
+  ]
+ ],
+ "taxas": {
+  "titulo": "Taxas e tabelas",
+  "resumo": "Os treze anexos deste Código fixam os valores diretamente em reais.",
+  "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
+  "aviso": "<strong>Atenção:</strong> os treze anexos da Lei nº 1.365/2017 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em reais <strong>de 2017</strong> — confirme com o Município se alguma lei posterior os alterou."
+ },
+ "ufm": {
+  "regra": "O Código de Tacaratu fixa os valores dos seus treze anexos <strong>diretamente em reais</strong> — não usa UFM nem outra unidade fiscal intermediária. Os valores são os de <strong>2017</strong>, e não se localizou no Código autorização para o Executivo atualizá-los por decreto: o art. 93 trata da correção de <em>débitos vencidos</em> pelo IPCA, e o art. 191 da atualização anual da Planta de Valores do IPTU. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
+  "fonte": {
+   "doc": "ctm-1365-2017",
+   "pagina": 27,
+   "rotulo": "Ver no Lei nº 1.365/2017"
+  }
+ },
+ "cartoes": [],
+ "avisos": [
+  {
+   "tipo": "nota",
+   "texto": "O PDF de origem é <strong>digitalizado</strong> (259 páginas): o texto foi obtido por reconhecimento óptico (OCR) e contém erros de grafia, acentuação e espaçamento. Use-o para localizar o dispositivo e <strong>confira a redação na imagem da página citada</strong> antes de citar."
+  },
+  {
+   "tipo": "nota",
+   "texto": "Os treze anexos deste Código <strong>ainda não foram extraídos</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+  },
+  {
+   "tipo": "nota",
+   "texto": "<strong>Caraibeiras é distrito de Tacaratu</strong>, não município: não tem legislação tributária própria, e este Código o alcança."
+  }
+ ]
+}

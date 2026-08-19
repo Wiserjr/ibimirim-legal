@@ -5,10 +5,11 @@ Pernambuco. A mesma base atende navegador no PC, instalação como aplicativo no
 Android nativo.
 
 Municípios publicados: **Ibimirim**, **Aliança**, **Manari**, **Ingazeira**,
-**Vertente do Lério**, **Jatobá** e **Cortês** — 8.207 páginas indexadas.
+**Vertente do Lério**, **Jatobá**, **Cortês**, **Tacaratu** e **Jurema** —
+10.715 páginas indexadas. Caraibeiras, distrito de Tacaratu, é atendida pelo aplicativo de Tacaratu.
 Site: https://wiserjr.github.io/ibimirim-legal/
 
-Os três primeiros têm as tabelas de taxa extraídas e conferidas. Os quatro últimos entram
+Os três primeiros têm as tabelas de taxa extraídas e conferidas. Os seis últimos entram
 com o texto pesquisável e citável por página, e declaram na abertura que os valores ainda
 não estão tabulados.
 
@@ -110,15 +111,19 @@ Cada município tem sua origem, porque os códigos não se parecem:
 
 ## UFM e demais unidades de referência
 
-Cada município tem a sua convenção, e confundi-las erra a conta por ordens de grandeza. Aliança e
-Vertente do Lério fixam tudo em Unidade Fiscal do Município; Ibimirim usa reais no Código de 2025 e
-UFM nas leis específicas; Ingazeira e Cortês fixam em reais; Manari e Jatobá cobram percentuais
-sobre um Valor de Referência.
+Cada município tem a sua convenção, e confundi-las erra a conta por ordens de grandeza. Aliança,
+Vertente do Lério e Jurema fixam em Unidade Fiscal do Município; Ibimirim usa reais no Código de
+2025 e UFM nas leis específicas; Ingazeira, Cortês e Tacaratu fixam em reais; Manari e Jatobá cobram
+percentuais sobre um Valor de Referência.
 
-**Nenhum acervo informa quanto vale a unidade.** Em Aliança, o art. 397 manda atualizá-la pelo IPCA,
-cabendo ao Executivo fixar o valor por decreto. O aplicativo nunca embute a unidade: exibe os
+**Quase nenhum acervo informa quanto vale a unidade.** Em Aliança, o art. 397 manda atualizá-la pelo
+IPCA, cabendo ao Executivo fixar o valor por decreto. O aplicativo nunca embute a unidade: exibe os
 montantes nela e só converte depois que a equipe informa o valor do exercício no painel "UFM
 vigente". Há teste que falha se algum fator de conversão voltar à base publicada.
+
+A exceção é **Jurema**, o único acervo que traz o ato de fixação: o Decreto nº 003/2013, encadernado
+na primeira página, fixa a UFM em R$ 1,44 para 2013, com base no art. 399 do Código. Serve de
+modelo do que pedir aos demais municípios — mas não vale para os exercícios seguintes.
 
 Jatobá é o caso extremo: o seu Valor de Referência está atrelado à **UFIR**, índice federal extinto
 em outubro de 2000. Enquanto o Município não indicar o índice que a substituiu, nenhuma taxa daquele

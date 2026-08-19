@@ -521,3 +521,146 @@ ordenação permite que uma palavra no título ou na citação de um documento s
 corpo inteiro trata do assunto. O desempate que rebaixa `historical` existe, mas é o **último**
 critério, e nunca é alcançado quando `titleMatched` difere. Manari, que usa "Valor de Referência
 Fiscal", corria o mesmo risco.
+
+# Tacaratu e Jurema — levantamento inicial, 19/08/2026
+
+Os dois maiores acervos digitalizados do projeto, e os dois de PDF sem nenhuma camada de texto:
+Tacaratu com 259 páginas (escaneamento EPSON, 62 MB) e Jurema com 145 + 128 páginas. Ao todo,
+532 páginas de OCR, cerca de 4 horas de processamento.
+
+## Tacaratu — reais de 2017, sem unidade fiscal
+
+A Lei nº 1.365/2017, de 19 de dezembro de 2017, é o Novo Código Tributário de Tacaratu. Não usa
+UFM, UFIR nem qualquer unidade de conta: os **treze anexos fixam valores diretamente em reais**.
+O Anexo I é organizado por **CNAE 2.0**, como o de Ingazeira.
+
+| Anexo | Objeto |
+|---|---|
+| I | Taxa de licença para localização e de fiscalização de funcionamento (por CNAE 2.0) |
+| II | Licença para funcionamento em horário especial |
+| III | Licença para exploração dos meios de publicidade |
+| IV | Licença para o exercício do comércio ambulante |
+| V | Licença para abate de animais |
+| VI | Licença para execução de obras |
+| VII | Licença para ocupação de áreas, vias e logradouros |
+| VIII | Coleta, transporte e destinação final de resíduos sólidos urbanos |
+| IX | Taxa de expediente e serviços |
+| X | Licença ambiental |
+| XI | Fiscalização de veículo de transporte |
+| XII | Fiscalização sanitária |
+| XIII | ISSQN — profissional autônomo |
+
+Duas regras de atualização, que não se confundem e não devem ser aplicadas uma no lugar da outra:
+
+- **art. 93 (p. 27)** — débitos *vencidos* corrigidos pelo IPCA/IBGE, para vencimentos a partir de
+  1º de janeiro de 2018. Não trata dos valores das tabelas.
+- **art. 191 (p. 88)** — a Planta de Valores Genéricos e a Tabela de Preços de Construção, que são a
+  base do IPTU, são atualizadas **anualmente por Decreto**, elaboradas por comissão de pelo menos
+  três membros, com um representante da Câmara. Se o ato não sair, valem os valores do exercício
+  anterior corrigidos pelo IPCA.
+
+**Não se localizou autorização para o Executivo atualizar os valores dos treze anexos.** Está
+registrado como não localizado, não como inexistente: são 259 páginas de OCR e a redação pode ter
+escapado da busca. Convém pedir ao Município a tabela vigente.
+
+Tacaratu não tem CIP nem COSIP. Iluminação pública aparece só como critério de zona urbana.
+
+### Um "defeito" que era do OCR, e não da lei
+
+O corpus trazia **dois "ANEXO II"**. A página 240 foi renderizada e conferida na imagem: a página
+impressa diz **ANEXO III** (Taxa de licença para exploração dos meios de publicidade). É perda de um
+"I" pelo reconhecimento óptico. Diferente do caso de Jatobá, onde a divergência entre o art. 188 e o
+cabeçalho do Anexo 4 é real e continua pendente de conferência em papel.
+
+## Jurema — o primeiro ato de fixação de unidade fiscal do projeto
+
+O portal da Câmara (`sapl.jurema.pe.leg.br`) **não publica nada de 2007** e exibe a Lei nº 127/1994
+sem data de fim de vigência, o que induz a crer que ela é a norma vigente. Não é. A primeira página
+do acervo da Prefeitura resolve a dúvida: é o **Decreto Municipal nº 003/2013**, que cita
+expressamente *"o art. 399, parágrafo único, do Código Tributário Municipal, Lei nº 255/2007"*.
+Logo, **255/2007 está em vigor** e 127/1994 é o Código anterior. As duas entraram na biblioteca, a
+de 1994 marcada como histórica.
+
+O eixo do sistema está em dois artigos, ambos na página 133:
+
+- **art. 398** — institui a UFM e fixa seu valor unitário em **R$ 1,00**;
+- **art. 399** — manda atualizá-la anualmente pela variação acumulada do IPCA/IBGE, de dezembro do
+  exercício anterior a novembro do corrente, com vigência a partir de 1º de janeiro seguinte.
+
+E o **Decreto nº 003/2013** fixou a UFM em **R$ 1,44** a partir de janeiro de 2013. É o **único ato
+de fixação de unidade fiscal presente em todo o acervo do projeto** — exatamente a pendência de
+maior consequência de Ibimirim, Aliança e Manari. Não serve para os exercícios seguintes, mas
+demonstra a cadeia completa: lei institui, lei manda atualizar, decreto fixa.
+
+### A unidade das tabelas não está resolvida, e a diferença é de 44%
+
+As colunas das Tabelas se intitulam **"Em UFM"**. Mas os valores impressos têm forte indício de já
+estarem convertidos em reais à taxa de 2013. Na Tabela VII (Fiscalização de Máquinas e Motores),
+página 6 do acervo, **9 dos 11 valores são múltiplos exatos de R$ 1,44**:
+
+| impresso | 7,20 | 10,08 | 11,52 | 14,40 | 21,60 | 28,80 | 72,00 | 100,80 | 4,32 |
+|---|---|---|---|---|---|---|---|---|---|
+| ÷ 1,44 | 5 | 7 | 8 | 10 | 15 | 20 | 50 | 70 | 3 |
+
+Todos redondos — quantidades que um legislador escreve. Dois valores fogem do padrão: **21,00** e
+**18,30**. Foram conferidos na imagem ampliada da página: estão impressos assim, não é erro de OCR.
+
+Há portanto duas leituras possíveis, e elas diferem por um fator de 1,44:
+
+1. As tabelas foram **convertidas em reais** em 2013 e o cabeçalho "Em UFM" ficou para trás — nesse
+   caso "14,40" são R$ 14,40, isto é, 10 UFM;
+2. As tabelas estão mesmo **em UFM**, como diz o cabeçalho — nesse caso "14,40" são 14,40 UFM, que à
+   UFM de 2013 dariam R$ 20,74.
+
+A leitura 1 explica por que quase todos os valores são múltiplos de 1,44; a leitura 2 é o que está
+escrito. **Não foi decidida por conta própria.** O aplicativo exibe o valor como impresso, com a
+página citada, e traz o aviso de vigência pedindo confirmação ao Município antes de lançar.
+
+### O acervo de 2007 é um encadernado, não a lei isolada
+
+A paginação do PDF não corresponde à da lei, e isso precisa ficar claro para quem cita:
+
+| páginas do PDF | conteúdo |
+|---|---|
+| 1 | Decreto nº 003/2013 (UFM = R$ 1,44) |
+| 2 a 13 | as treze Tabelas de taxas e preços públicos |
+| 14 | índice das Tabelas, com a numeração interna da lei (125 a 134) |
+| 15 em diante | o texto do Código Tributário, a partir do art. 1º |
+| 133 | arts. 398 e 399 — a UFM |
+
+## O alarme de OCR que não era alarme
+
+O relatório de Tacaratu terminou com **244 das 259 páginas marcadas com divergência numérica entre
+as duas passagens de OCR**, e o de Jurema com 204. Antes de aceitar ou descartar, os números foram
+comparados com os municípios já publicados:
+
+| município | páginas | com conflito | % |
+|---|---|---|---|
+| Jatobá | 86 | 82 | 95% |
+| Cortês | 71 | 53 | 74% |
+| Tacaratu | 259 | 243 | 93% |
+
+Jatobá e Cortês **já estavam publicados** com essa mesma taxa. Não é anomalia de Tacaratu: é a linha
+de base do pipeline em documento digitalizado. A causa está no regex de `numeric_conflict`, em
+`tools/extract_laws.py`, que captura `\d[\d.,]*[A-Za-z]*` — dígito **mais letras coladas**. Cerca de
+metade dos "conflitos" é palavra grudada no número ("53.Suspendem"), não número lido errado.
+
+O `best_variant` já escolhe, entre as duas passagens, a que tem menos numerais corrompidos, e a
+lista de divergências fica gravada por página no corpus (`ocrConflict`). Serve como mapa de onde
+olhar primeiro quando as tabelas forem extraídas — que é o propósito declarado da função.
+
+## Segunda manifestação do defeito de ordenação, agora mais grave
+
+Em Jurema, as consultas **"UFM unidade fiscal"** e **"ITBI transmissão"** retornam o **Código de
+1994, revogado**, acima do Código de 2007 em vigor. A causa é a mesma já registrada: `rank()` decide
+por `titleMatched`, depois `coverage`, `matched` e `hits`, e só **por último** rebaixa documentos de
+tipo `historical`. Quando o documento revogado tem mais ocorrências do termo, ele vence.
+
+Isso é pior do que o caso do Código Civil corrigido na rodada anterior: ali competiam norma municipal
+e norma federal; aqui competem **a lei vigente e a lei revogada do mesmo município**.
+
+Mitigação em vigor: o documento anterior foi intitulado "Código Tributário Municipal de 1994
+(anterior)", de modo que o rótulo aparece no cabeçalho de cada resultado e o leitor vê de imediato
+que aquilo não é a norma vigente. **A ordenação em si não foi alterada** — mexer nela muda o
+resultado dos nove municípios, inclusive os já conferidos, e é decisão da equipe. A correção natural
+seria subir o desempate de `historical` para antes de `hits`, ou aplicar um peso por tipo de norma.
