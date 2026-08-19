@@ -1,0 +1,39 @@
+{
+  "documentos": [
+    {
+      "id": "ctm-099-2007",
+      "titulo": "Código Tributário Municipal",
+      "citacao": "Lei nº 99/2007",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/LEI Nº 099_2007 CÓDIGO TRIBUTÁRIO MUNICIPAL.pdf"
+    },
+    {
+      "id": "pl-obras-2026",
+      "titulo": "Código de Obras e Edificações",
+      "citacao": "Projeto de Lei nº ___/2026 — ainda não aprovado",
+      "tipo": "projeto",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Codigo Obras Edificacoes Manari CORRIGIDO.pdf"
+    },
+    {
+      "id": "pl-posturas-2026",
+      "titulo": "Código de Posturas Municipais",
+      "citacao": "Projeto de Lei nº ___/2026 — ainda não aprovado",
+      "tipo": "projeto",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Codigo Posturas Municipais Manari CORRIGIDO.pdf"
+    },
+    {
+      "id": "cc-14",
+      "titulo": "Código Civil — 14ª edição",
+      "citacao": "Lei Federal nº 10.406/2002; atualizada até agosto de 2023",
+      "tipo": "federal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
+    },
+    {
+      "id": "cc-2",
+      "titulo": "Código Civil — 2ª edição (histórica)",
+      "citacao": "Lei Federal nº 10.406/2002; edição de referência histórica",
+      "tipo": "historical",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+    }
+  ]
+}

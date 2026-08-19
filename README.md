@@ -4,7 +4,7 @@ Aplicativo offline de consulta educativa à legislação tributária e urbaníst
 Pernambuco. A mesma base atende navegador no PC, instalação como aplicativo no iPhone e um pacote
 Android nativo.
 
-Municípios publicados: **Ibimirim** e **Aliança**.
+Municípios publicados: **Ibimirim**, **Aliança** e **Manari**.
 Site: https://wiserjr.github.io/ibimirim-legal/
 
 ## Como está organizado
@@ -21,6 +21,7 @@ municipios/
     data/laws.js            corpus indexado, página a página
     data/fees.js            tabelas de taxas
   alianca/  (mesma estrutura)
+  manari/   (mesma estrutura)
 tools/                      extratores e build
 dist/<slug>/                aplicativo montado, abre por duplo clique
 docs/                       o que o GitHub Pages publica

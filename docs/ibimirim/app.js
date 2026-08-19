@@ -41,6 +41,15 @@ function rank(value){
   return {terms,scored};
 }
 
+// avisos declarados em municipio.json: vigência pendente, projeto de lei,
+// divergência entre fontes. Ficam antes de tudo porque mudam a leitura do resto.
+function renderAvisos(){
+  const lista=cfg.avisos||[];
+  $('#avisos').innerHTML=lista.map(a=>`<section class="status status-${escape(a.tipo||'nota')}" aria-label="Aviso"><b>${escape(TITULO_AVISO[a.tipo]||'Atenção')}</b><span>${a.texto}</span></section>`).join('');
+}
+
+const TITULO_AVISO={projeto:'Há projetos de lei na biblioteca.',vigencia:'Atenção à vigência.',nota:'Observação.'};
+
 function renderAudiences(){
   $('#audiences').innerHTML=audiences.map(([id,label])=>`<button class="chip ${id===profile?'active':''}" data-profile="${id}">${label}</button>`).join('');
   document.querySelectorAll('[data-profile]').forEach(button=>button.onclick=()=>{
@@ -55,8 +64,12 @@ function renderTrails(){
   document.querySelectorAll('[data-trail]').forEach(button=>button.onclick=()=>{$('#query').value=button.dataset.trail;search(button.dataset.trail);});
 }
 
+// um projeto de lei não é lei: precisa se distinguir à primeira vista
+const TIPO_DOC={historical:'histórica',projeto:'projeto de lei',municipal:'municipal',
+  federal:'federal',decreto:'decreto',administrativa:'administrativa'};
+
 function renderLibrary(){
-  $('#library').innerHTML=corpus.documents.map(doc=>`<article class="law"><span class="doc">§</span><div><h3>${escape(doc.title)}</h3><p>${escape(doc.citation)} • ${doc.pageCount} página${doc.pageCount===1?'':'s'}</p></div><span class="badge">${doc.kind==='historical'?'histórica':doc.kind}</span></article>`).join('');
+  $('#library').innerHTML=corpus.documents.map(doc=>`<article class="law"><span class="doc">§</span><div><h3>${escape(doc.title)}</h3><p>${escape(doc.citation)} • ${doc.pageCount} página${doc.pageCount===1?'':'s'}</p></div><span class="badge badge-${doc.kind}">${escape(TIPO_DOC[doc.kind]||doc.kind)}</span></article>`).join('');
 }
 
 function renderGlossary(){$('#glossary').innerHTML=glossary.map(([term,meaning])=>`<div><dt>${term}</dt><dd>${meaning}</dd></div>`).join('');}
@@ -379,7 +392,7 @@ function search(value){
 }
 
 async function init(){
-  renderAudiences();renderTrails();renderGlossary();
+  renderAvisos();renderAudiences();renderTrails();renderGlossary();
   if(window.MUNICIPIO_LAWS){corpus=window.MUNICIPIO_LAWS;buildLexicon();renderLibrary();setupUfm();setupFeeCards();setupFeeConsultation();}
   else $('#library').innerHTML='<p class="empty">A base legal não pôde ser carregada. Reabra o aplicativo ou reinstale o pacote.</p>';
   if(window.MUNICIPIO_FEES){fees=window.MUNICIPIO_FEES;buildFeeIndex();setupFeeFinder();}

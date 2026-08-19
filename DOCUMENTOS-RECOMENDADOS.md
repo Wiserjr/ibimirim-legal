@@ -323,3 +323,57 @@ localização e funcionamento, expediente e abate. Dois pontos merecem revisão 
   **Conferida integralmente contra as páginas 136 e 137** e transformada no cartão de consulta;
 - rótulos de subitens do tipo "a) bovinos" preservam o valor correto, mas o item-pai que lhes dá
   contexto nem sempre acompanha.
+
+
+---
+
+# Manari — levantamento inicial, 19/08/2026
+
+Indexados 5 documentos e 1.177 páginas.
+
+## O portal não publica legislação
+
+O endereço informado — `w3d.app.br/manari/institucional/atos-oficiais/leis/` — **existe mas está
+vazio**. A página LEIS renderiza o título e o rodapé institucional, sem uma única lei. O mesmo vale
+para DECRETOS. Não há PDF algum e a "API de dados abertos" aponta para a Casa Legislativa, não para
+o Executivo.
+
+Consequência prática: **não há como conferir a vigência da Lei nº 99/2007 pelo portal**, nem saber
+se houve alteração depois de 2007. Convém pedir ao Município a relação de leis que alteraram o
+Código Tributário, e a existência ou não de Plano Diretor.
+
+## O que entrou
+
+| Documento | Situação |
+|---|---|
+| Lei nº 99/2007 — Código Tributário Municipal | 148 páginas, camada de texto. Única lei vigente do acervo |
+| Código de Obras e Edificações | **Projeto de Lei nº ___/2026** — não aprovado |
+| Código de Posturas Municipais | **Projeto de Lei nº ___/2026** — não aprovado |
+
+Os dois projetos entram marcados com selo próprio na biblioteca e um aviso no topo da página. Estão
+ali para apoiar a elaboração, não para fundamentar licença ou autuação. Havia duas cópias de cada
+um na pasta; foi usada a versão "CORRIGIDO", que é a mais recente e a mais longa.
+
+**Não há Plano Diretor de Manari** no acervo nem no portal.
+
+## Duas unidades de referência, nenhuma quantificada
+
+O Código usa duas bases que ele próprio não converte em reais:
+
+- a **UFM**, que aparece nos anexos — valor do m² da edificação, ISS de autônomos, construção por
+  m² — e que, pelo **art. 230** (p. 92), corrige as prestações da contribuição de melhoria;
+- o **Valor de Referência Fiscal**, sobre o qual as Tabelas I a IX aplicam um percentual.
+
+Documentos a localizar: os atos que fixam a UFM e o Valor de Referência de cada exercício.
+
+## Tabelas ainda não estruturadas
+
+As nove tabelas das páginas 118 a 130 e a tabela de fiscalização sanitária da página 145 **não
+foram extraídas** para consulta estruturada. O texto delas é pesquisável e legível pelo leitor, com
+a página citada, mas os valores não estão tabulados no aplicativo.
+
+O motivo é a qualidade do PDF: ao contrário de Aliança, cujos anexos saem com uma célula por linha,
+os de Manari vêm fragmentados — cabeçalhos com letras espaçadas ("E S P E C I F I C A Ç Ã O"),
+rótulos quebrados em várias linhas e colunas "Ao mês / Ao ano" intercaladas. Uma extração
+automática aqui produziria valores plausíveis e errados, que é o pior resultado possível para uma
+tabela de tributos. Fica para uma rodada com conferência página a página.

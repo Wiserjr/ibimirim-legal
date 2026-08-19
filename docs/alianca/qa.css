@@ -69,3 +69,9 @@
 .solar-money{color:var(--green2);font-weight:700}
 .fee-card .source-button+.source-button{margin-left:16px}
 @media(max-width:800px){.ufm-panel{grid-template-columns:minmax(0,1fr);gap:18px;padding:19px}.ufm-fields{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.solar-fields{grid-template-columns:minmax(0,1fr)}.solar-fields label{margin-top:10px}.fee-card .source-button+.source-button{margin-left:0;display:block}}
+
+/* projeto de lei nao pode parecer lei vigente */
+.badge-projeto{background:#fdeccd;color:#7a5310;font-weight:800}
+
+#avisos .status{margin-bottom:12px}
+.status-projeto{border-left-color:#c98a2e;background:#fdf3e3;color:#6b4a12}

@@ -8,7 +8,11 @@ import { readdir, readFile } from 'node:fs/promises';
 const raiz = new URL('../', import.meta.url);
 const ler = caminho => readFile(new URL(caminho, raiz), 'utf8');
 const bundle = async caminho => {
-  const src = await ler(caminho);
+  // um município pode ainda não ter tabelas estruturadas; o build gera o
+  // stub e o app mostra a busca sem elas
+  let src;
+  try { src = await ler(caminho); } catch { return null; }
+  if (!src.includes('JSON.parse(')) return null;
   return JSON.parse(JSON.parse(src.slice(src.indexOf('(') + 1, src.lastIndexOf(')'))));
 };
 
@@ -20,7 +24,7 @@ const resumo = [];
 for (const slug of slugs) {
   const cfg = JSON.parse(await ler(`municipios/${slug}/municipio.json`));
   const laws = await bundle(`municipios/${slug}/data/laws.js`);
-  const fees = await bundle(`municipios/${slug}/data/fees.js`);
+  const fees = (await bundle(`municipios/${slug}/data/fees.js`)) || { sections: [] };
   const rotulo = `[${slug}]`;
 
   // --- identidade -----------------------------------------------------
