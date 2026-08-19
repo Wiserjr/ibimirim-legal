@@ -57,7 +57,8 @@ SEM_TITULO = {
 
 VALOR = re.compile(r"^\d{1,3}(?:[.,]\d{1,3})?$|^Isento$", re.I)
 INICIO_ITEM = re.compile(r"^(\d{1,3})\s+(.+)$")
-CORTE = 0.72  # fração da largura a partir da qual a palavra é valor
+CORTE = 0.72   # fração da largura a partir da qual a palavra pode ser valor
+RODAPE = 0.92  # fração da altura a partir da qual só existe rodapé
 
 
 def slug(texto: str) -> str:
@@ -65,10 +66,18 @@ def slug(texto: str) -> str:
     return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", texto.lower())).strip("-")[:58]
 
 
+APOSTROFO = re.compile(r"^(\d+)['´’`](\d+)$")
+
+
 def numero(bruto: str) -> float | None:
     bruto = bruto.strip().replace("%", "").strip()
     if bruto.lower() == "isento":
         return 0.0
+    # A lei imprime o habite-se da p.142 como 0'2, com apóstrofo no lugar da
+    # vírgula. Sem tratar, a linha inteira era descartada e o item 14 sumia.
+    apostrofo = APOSTROFO.match(bruto)
+    if apostrofo:
+        bruto = f"{apostrofo.group(1)},{apostrofo.group(2)}"
     try:
         return float(bruto.replace(".", "").replace(",", ".") if "," in bruto else bruto)
     except ValueError:
@@ -78,15 +87,28 @@ def numero(bruto: str) -> float | None:
 def linhas_da_pagina(documento: fitz.Document, pagina: int) -> list[tuple[str, str]]:
     """Devolve (rótulo, valor) por linha, separando as colunas pela coordenada x."""
     p = documento[pagina - 1]
-    largura = p.rect.width
+    largura, altura = p.rect.width, p.rect.height
     agrupadas: dict[int, list[tuple[float, str]]] = {}
     for x0, y0, _x1, _y1, texto, *_ in p.get_text("words"):
+        # O número da página fica na coluna da direita, no rodapé, e sem este
+        # corte entra na lista de valores do último item aberto — foi assim que
+        # "141" virou um valor da tabela de obras. Abaixo de 0,92 da altura só
+        # existe rodapé nas 31 páginas de anexo; o conteúdo mais baixo está em
+        # 0,895.
+        if y0 / altura >= RODAPE:
+            continue
         agrupadas.setdefault(round(y0 / 3), []).append((x0, texto))
     saida = []
     for chave in sorted(agrupadas):
         itens = sorted(agrupadas[chave])
-        rotulo = " ".join(t for x, t in itens if x < largura * CORTE).strip()
-        valor = " ".join(t for x, t in itens if x >= largura * CORTE).strip()
+        esquerda = [t for x, t in itens if x < largura * CORTE]
+        direita = [t for x, t in itens if x >= largura * CORTE]
+        # Em linha justificada uma palavra do rótulo às vezes ultrapassa o corte.
+        # Só é valor o que a coluna da direita traz e que seja mesmo um número.
+        while direita and numero(direita[0]) is None:
+            esquerda.append(direita.pop(0))
+        rotulo = " ".join(esquerda).strip()
+        valor = " ".join(direita).strip()
         if rotulo or valor:
             saida.append((rotulo, valor))
     return saida
@@ -140,6 +162,29 @@ def entradas_do_intervalo(documento, primeira: int, ultima: int) -> list[dict]:
             "page": item["page"],
         })
     return resultado
+
+
+ZONAS = re.compile(r"(?i)zonas?\s+([A-C])")
+
+
+def separar_por_zona(entrada: dict) -> list[dict]:
+    """Uma linha que lista Zona C, B e A vira três entradas, uma por zona.
+
+    O PDF põe as três zonas no rótulo e os três valores na coluna da direita.
+    Mantê-las juntas obrigaria o leitor a contar posições para saber qual valor
+    é de qual zona — que é justamente o erro que a conferência procura evitar.
+    """
+    zonas = ZONAS.findall(entrada["label"])
+    valores = [entrada["valor"], *entrada["extras"]]
+    if len(zonas) < 2 or len(zonas) != len(valores):
+        return [entrada]
+    base = ZONAS.sub("", entrada["label"]).strip(" .:-")
+    base = re.sub(r"\s{2,}", " ", base)
+    return [
+        {**entrada, "label": f"{base} — zona {zona.upper()}",
+         "valor": valor, "extras": []}
+        for zona, valor in zip(zonas, valores)
+    ]
 
 
 def tabelas(documento) -> list[dict]:
@@ -205,6 +250,9 @@ def tabelas(documento) -> list[dict]:
                     if convertido is not None:
                         item["valores"].append(convertido)
     fechar()
+    for tabela in saida:
+        tabela["entradas"] = [e for original in tabela["entradas"]
+                              for e in separar_por_zona(original)]
     return [t for t in saida if t["entradas"]]
 
 

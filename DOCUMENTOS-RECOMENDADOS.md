@@ -414,8 +414,22 @@ A tabela "Taxa de Fiscalização de Localização, Instalação e Funcionamento"
 Planilha2 do comparativo de Ibimirim e que ficou registrada ali como não vinculável a nenhuma taxa.
 Ela é de Manari.
 
-### Limitação conhecida
+### Correção da atribuição por zona
 
-Em itens cuja linha reúne vários valores (zonas C, B e A numa só), o extrator ocasionalmente
-arrasta o primeiro valor do item seguinte para a lista de valores adicionais. Os valores estão
-todos corretos e presentes; a atribuição do último deles ao item certo merece conferência.
+A limitação anterior tinha uma causa concreta: **o número da página fica na coluna da direita**, no
+rodapé, e era somado à lista de valores do último item aberto. Foi assim que "141" apareceu como um
+valor da tabela de obras. O extrator passou a descartar tudo abaixo de 92% da altura da página —
+faixa onde, nas 31 páginas de anexo, só existe rodapé; o conteúdo real mais baixo está em 89,5%.
+
+Duas outras correções vieram junto:
+
+- **Cada zona virou uma entrada.** "Edificações até três pavimentos: Zona C Zona B Zona A" com três
+  valores numa linha agora são três linhas — zona C 0,60, zona B 0,50, zona A 0,40 — em vez de
+  obrigar o leitor a contar posições para saber qual valor é de qual zona.
+- **O item 14 voltou.** "Concessão de habite-se por metro quadrado" está impresso como `0’2`, com
+  apóstrofo tipográfico no lugar da vírgula; a linha inteira era descartada por não parsear. Agora
+  é lido como 0,2, e o conferidor reconhece as três pontuações que a lei usa: vírgula, ponto
+  (p. 145 imprime `0.15`) e apóstrofo.
+
+Resultado: **453 entradas, todas conferidas contra o texto da própria página, zero divergências**, e
+nenhum valor coincidindo com o número da sua página.

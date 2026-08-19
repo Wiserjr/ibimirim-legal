@@ -106,7 +106,14 @@ def conferir(secoes_montadas: list[dict]) -> list[str]:
             inteiro = f"{valor:.0f}" if float(valor).is_integer() else ""
             decimal = f"{valor:.2f}".replace(".", ",")
             curto = f"{valor:g}".replace(".", ",")
-            if not any(f in cache[pagina] for f in (inteiro, decimal, curto) if f):
+            # A lei não é uniforme na pontuação decimal: a p.145 imprime 0.15
+            # com ponto e a p.142 imprime 0'2 com apóstrofo. Procurar só a
+            # vírgula acusaria divergência onde o valor está certo.
+            ponto = f"{valor:g}"
+            reto = f"{valor:g}".replace(".", "'")
+            tipografico = f"{valor:g}".replace(".", "’")
+            formas = (inteiro, decimal, curto, ponto, reto, tipografico)
+            if not any(f in cache[pagina] for f in formas if f):
                 falhas.append(f"{secao['title'][:40]} | p.{pagina} | {item['label'][:44]} = {valor}")
     return falhas
 

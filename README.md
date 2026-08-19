@@ -100,7 +100,8 @@ Cada município tem sua origem, porque os códigos não se parecem:
   por entrada. As páginas 133 a 148 têm borda real e um valor por linha, e são lidas por
   `tools/extract_fees_manari.py`, que separa rótulo de valor pela coordenada horizontal da palavra —
   método validado contra a leitura visual das páginas 139 e 146 antes de ser aplicado às demais.
-  `tools/build_fees_manari.py` funde as duas e reconfronta cada número com o texto da sua página.
+  `tools/build_fees_manari.py` funde as duas e reconfronta cada número com o texto da sua página,
+  aceitando as três pontuações decimais que a lei usa — vírgula, ponto e apóstrofo.
 
 ## UFM
 
