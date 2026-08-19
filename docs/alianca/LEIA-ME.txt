@@ -1,4 +1,4 @@
-{{TITULO_MAIUSCULO}} — VERSÃO PC E IPHONE
+ALIANÇA LEGAL — VERSÃO PC E IPHONE
 
 PC
 1. Abra o arquivo index.html desta pasta com dois cliques. Nao e preciso servidor.

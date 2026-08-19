@@ -22,7 +22,7 @@ SOURCE = Path(
     r"C:\Users\WiseJr\Downloads\Tributos-Ibimirim\Legislacao"
     r"\Comparativo - CTM Ibimirim - Taxas.xlsx"
 )
-OUTPUT = ROOT / "public" / "data" / "fees.js"
+OUTPUT = ROOT / "municipios" / "ibimirim" / "data" / "fees.js"
 
 # Page anchors in the CTM 2025 PDF, established by matching each entry label
 # against the indexed page text (tools/extract_fees.py is the only place that
@@ -284,7 +284,7 @@ def main() -> None:
         ),
         "sections": sections,
     }
-    write_bundle(OUTPUT, "IBIMIRIM_FEES", payload)
+    write_bundle(OUTPUT, "MUNICIPIO_FEES", payload)
 
     print(f"{OUTPUT.relative_to(ROOT)} — {len(sections)} seções")
     for section in sections:

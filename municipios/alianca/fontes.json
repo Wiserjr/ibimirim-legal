@@ -1,0 +1,81 @@
+{
+  "documentos": [
+    {
+      "id": "ctm-041-2017",
+      "titulo": "Código Tributário Municipal",
+      "citacao": "Lei Complementar nº 041/2017, consolidada com a LC nº 049/2021",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Documents/CTM_ALIANCA.pdf"
+    },
+    {
+      "id": "lc-073-2026",
+      "titulo": "CIP — alteração dos arts. 315 e 317 do Código Tributário",
+      "citacao": "Lei Complementar nº 073/2026",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-073-2026-altera-CTM-CIP.pdf"
+    },
+    {
+      "id": "lc-067-2025",
+      "titulo": "Benefícios diretos e fiscais aos mototaxistas",
+      "citacao": "Lei Complementar nº 067/2025",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-067-2025-beneficios-mototaxistas.pdf"
+    },
+    {
+      "id": "lc-065-2025",
+      "titulo": "IPTU de famílias de baixa renda no CadÚnico",
+      "citacao": "Lei Complementar nº 065/2025",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-065-2025-IPTU-CadUnico.pdf"
+    },
+    {
+      "id": "lc-022-2006",
+      "titulo": "Plano Diretor Participativo",
+      "citacao": "Lei Complementar nº 022/2006",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Documents/Plano_Diretor_1.pdf"
+    },
+    {
+      "id": "lc-071-2026",
+      "titulo": "Loteamentos e condomínios privados",
+      "citacao": "Lei Complementar nº 071/2026; altera a LC nº 022/2006",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Documents/Plano_Diretor.pdf"
+    },
+    {
+      "id": "lc-068-2025",
+      "titulo": "Parâmetros do art. 56 do Plano Diretor",
+      "citacao": "Lei Complementar nº 068/2025; altera a LC nº 022/2006",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-068-2025-altera-Plano-Diretor-art56.pdf"
+    },
+    {
+      "id": "lc-061-2024",
+      "titulo": "Alteração do Plano Diretor",
+      "citacao": "Lei Complementar nº 061/2024; altera a LC nº 022/2006",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-061-2024-altera-Plano-Diretor.pdf"
+    },
+    {
+      "id": "lc-030-2013",
+      "titulo": "Alteração do Plano Diretor",
+      "citacao": "Lei Complementar nº 030/2013; altera a LC nº 022/2006",
+      "tipo": "municipal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Legislacao-Alianca/LC-030-2013-altera-Plano-Diretor.pdf"
+    },
+    {
+      "id": "cc-14",
+      "titulo": "Código Civil — 14ª edição",
+      "citacao": "Lei Federal nº 10.406/2002; atualizada até agosto de 2023",
+      "tipo": "federal",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
+    },
+    {
+      "id": "cc-2",
+      "titulo": "Código Civil — 2ª edição (histórica)",
+      "citacao": "Lei Federal nº 10.406/2002; edição de referência histórica",
+      "tipo": "historical",
+      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+    }
+  ]
+}

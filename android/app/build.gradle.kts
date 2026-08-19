@@ -1,18 +1,27 @@
 plugins { id("com.android.application") }
 
+// O município é escolhido na linha de comando:
+//   ./gradlew assembleDebug -Pmunicipio=alianca
+// Cada um vira um aplicativo distinto: mesmo namespace Java, mas applicationId
+// e rótulo próprios, senão instalar um substituiria o outro no aparelho.
+val municipio = (project.findProperty("municipio") as String?) ?: "ibimirim"
+val config = rootProject.file("../municipios/$municipio/municipio.json").readText()
+val rotulo = Regex("\"titulo\"\\s*:\\s*\"([^\"]+)\"").find(config)!!.groupValues[1]
+
 android {
     namespace = "br.gov.pe.ibimirim.legal"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "br.gov.pe.ibimirim.legal"
+        applicationId = "br.gov.pe.$municipio.legal"
         minSdk = 24
         targetSdk = 35
         versionCode = 8
         versionName = "1.5.1"
+        manifestPlaceholders["appLabel"] = rotulo
     }
 
-    sourceSets["main"].assets.directories.add("../../public")
+    sourceSets["main"].assets.directories.add("../../dist/$municipio")
 
     buildTypes {
         release { isMinifyEnabled = false; proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro") }

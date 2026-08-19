@@ -1,47 +1,116 @@
-# Ibimirim Legal
+# Consulta à legislação municipal
 
-Aplicativo offline de consulta educativa à legislação tributária e urbanística de Ibimirim. A mesma base atende navegador no PC, instalação como aplicativo no iPhone e um pacote Android nativo.
+Aplicativo offline de consulta educativa à legislação tributária e urbanística de municípios de
+Pernambuco. A mesma base atende navegador no PC, instalação como aplicativo no iPhone e um pacote
+Android nativo.
 
-A pesquisa destaca os termos encontrados. Perguntas completas recebem uma síntese extrativa apoiada nas páginas mais relacionadas e links separados para consulta online auxiliar. A síntese não é parecer jurídico nem usa conteúdo da internet sem identificação.
+Municípios publicados: **Ibimirim** e **Aliança**.
+Site: https://wiserjr.github.io/ibimirim-legal/
 
-A versão 1.5 acrescenta a Lei nº 877/2022, que institui o PRODEM — isenções de IPTU, ISSQN, ITBI e taxas para quem instala ou amplia empreendimento no Município —, com trilha própria de consulta.
+## Como está organizado
 
-A versão 1.4 acrescenta duas leis próprias de taxa — a Lei nº 793/2018 e a Lei nº 988/2025, que fixam a taxa de licença de torres, antenas e placas de energia solar — e um campo para a **UFM vigente**. Essas leis cobram em Unidade Fiscal do Município, não em reais, e o Código de 2025 manda continuar cobrando nessa unidade conforme o valor atualizado. Como a UFM muda a cada exercício, o aplicativo nunca a embute: exibe os valores em UFM e só converte para reais depois que a equipe informa o valor em vigor.
+`public/` é a casca do aplicativo e não contém dado de município nenhum: nem nome, nem lei, nem
+tabela. Tudo o que distingue uma versão da outra vive em `municipios/<slug>/`.
 
-A versão 1.3 acrescenta a busca de taxas: as 381 faixas e itens do Anexo IV e V do Código de 2025 e os 141 itens do comparativo anterior ficam pesquisáveis por atividade, obra ou serviço. Cada resultado mostra o valor, a fórmula quando existe adicional por metro, uma calculadora imediata e a página do Código onde a tabela está. Valores do Código anterior aparecem marcados como sem fonte documental, porque o PDF daquele Código não integra a biblioteca.
+```
+public/                     casca: index.html (com {{marcadores}}), app.js, estilos, sw.js
+municipios/
+  ibimirim/
+    municipio.json          marca, textos, trilhas, glossário, cartões de cálculo
+    fontes.json             os PDFs de origem, por documento
+    data/laws.js            corpus indexado, página a página
+    data/fees.js            tabelas de taxas
+  alianca/  (mesma estrutura)
+tools/                      extratores e build
+dist/<slug>/                aplicativo montado, abre por duplo clique
+docs/                       o que o GitHub Pages publica
+```
 
-A versão 1.2 inclui uma consulta orientada que separa a taxa anual de localização e funcionamento da licença para construir, com enquadramento por área, comparação resumida com o CTM anterior e acesso direto às tabelas do Código de 2025. O leitor ocupa a tela do celular, permite ampliar ou reduzir o texto e oferece leitura facilitada para documentos obtidos por OCR, sempre preservando a opção de visualizar a extração original.
+Um município novo é uma pasta nova em `municipios/`. Não há código a duplicar.
+
+## Comandos
+
+```
+npm run build                    monta dist/ para todos os municípios
+python tools/build.py alianca    monta só um
+npm test                         build + as quatro suítes
+python tools/build_pages.py      gera docs/ para o GitHub Pages
+python tools/package.py alianca  gera o ZIP e copia o APK para dist/
+```
+
+Android, por município:
+
+```
+cd android && ./gradlew assembleDebug -Pmunicipio=alianca
+```
+
+Cada município vira um aplicativo distinto — `br.gov.pe.<slug>.legal`, com rótulo próprio — de modo
+que os dois coexistem no mesmo aparelho.
 
 ## Abrir no PC
 
-Abra `public/index.html` com dois cliques. Não é preciso servidor.
-
-Para servir na intranet da Prefeitura, execute `npm run serve` e abra
-`http://localhost:8321`; a aplicação continua disponível offline depois do primeiro acesso.
+Abra `dist/<município>/index.html` com dois cliques. Não é preciso servidor.
 
 A base legal é carregada por `<script>`, não por `fetch()`. O Chrome trata `file://` como origem
-opaca e bloqueia qualquer `fetch`, mesmo para um arquivo irmão na mesma pasta — foi o que impedia a
-página de abrir por duplo clique. Por isso `public/data/laws.js` e `public/data/fees.js` são scripts
-que definem `window.IBIMIRIM_LAWS` e `window.IBIMIRIM_FEES`, e não arquivos `.json`.
+opaca e bloqueia qualquer `fetch`, mesmo para um arquivo irmão na mesma pasta — era o que impedia a
+página de abrir por duplo clique. Por isso `data/laws.js` e `data/fees.js` são scripts que definem
+`window.MUNICIPIO_LAWS` e `window.MUNICIPIO_FEES`, e não arquivos `.json`.
 
 ## iPhone
 
-Publique a pasta `public` em um endereço HTTPS. No Safari, abra o endereço, toque em **Compartilhar** e em **Adicionar à Tela de Início**. Não é necessário publicar na App Store para uso como aplicativo web instalado.
+Abra o endereço do município no Safari e toque em Compartilhar → Adicionar à Tela de Início. O
+GitHub Pages fornece o HTTPS que o iOS exige para instalar uma PWA.
 
 ## Atualizar a legislação
 
-Confirme os PDFs listados em `tools/extract_laws.py`, execute o extrator e depois os testes.
+`municipios/<slug>/fontes.json` lista os PDFs de origem. Depois de alterá-lo:
 
-## Atualizar as tabelas de taxas
+```
+python tools/build_corpus.py <slug>
+```
 
-`tools/extract_fees.py` lê a planilha comparativa e gera `public/data/fees.json`. Os lados anterior e atual são extraídos como listas independentes: a planilha não alinha as duas colunas por linha, e parear por posição criaria equivalências falsas entre fatos geradores diferentes. As páginas citadas por cada seção ficam no dicionário `ANCHORS` do próprio extrator, junto com o grau de conferência contra o texto da lei — `confirmado`, `parcial` ou `divergente`. Nenhuma outra parte do código afirma uma página.
+Só documentos com id novo são extraídos; os demais são reaproveitados, o que importa porque o OCR
+de um Plano Diretor digitalizado leva um quarto de hora.
 
-A taxa das Leis nº 793/2018 e nº 988/2025 não vem da planilha: está no dicionário `SOLAR` do extrator, com os valores em UFM lidos das próprias leis. Valores em UFM nunca são gravados em reais na base.
+Páginas sem camada de texto passam por OCR em duas resoluções. Nenhuma domina a outra: a menor
+descarta linhas inteiras, a maior corrompe algarismos — na Lei nº 793/2018 ela transformou "50" em
+"50o". O extrator fica com a leitura que tiver menos numerais grudados a letras e grava toda
+divergência numérica em `ocrConflict` na página, para conferência humana.
 
-Depois de alterar a planilha, execute o extrator e `npm test`. Os testes conferem os valores da Tabela I contra o texto extraído da página 209 do Código, então uma divergência de valor quebra a suíte. Páginas digitalizadas passam por OCR e devem ser revisadas contra o documento oficial.
+## Tabelas de taxas
 
-O OCR roda em duas resoluções. Nenhuma domina a outra: a menor descarta linhas inteiras, a maior corrompe algarismos — na Lei nº 793/2018 ela transformou "50" em "50o". O extrator fica com a leitura que tiver menos numerais grudados a letras e, havendo empate, com a mais completa; toda divergência numérica entre as duas passagens é gravada em `ocrConflict` na página, para conferência humana.
+Cada município tem sua origem, porque os códigos não se parecem:
+
+- **Ibimirim** — `tools/extract_fees.py` lê a planilha comparativa da equipe. Os lados anterior e
+  atual são extraídos como listas independentes: a planilha não alinha as duas colunas por linha, e
+  parear por posição criaria equivalências falsas entre fatos geradores distintos. As páginas
+  citadas ficam no dicionário `ANCHORS`, junto com o grau de conferência contra o texto da lei —
+  `confirmado`, `parcial` ou `divergente`.
+- **Aliança** — `tools/extract_fees_alianca.py` lê os anexos do próprio Código (páginas 133 a 145
+  da LC nº 041/2017). O PDF põe uma célula por linha, então o parser percorre o fluxo como máquina
+  de estados. Todos os valores são em UFM e nenhum é convertido em reais na base.
+
+## UFM
+
+Os dois municípios fixam taxas em Unidade Fiscal do Município, e nenhum dos dois acervos informa
+quanto ela vale — em Aliança, o art. 397 manda atualizá-la pelo IPCA, cabendo ao Executivo fixar o
+valor por decreto. O aplicativo nunca embute a UFM: exibe os montantes nessa unidade e só converte
+depois que a equipe informa o valor do exercício no painel "UFM vigente". Há teste que falha se
+algum fator de conversão voltar à base publicada.
+
+## Cartões de cálculo
+
+`municipio.json` declara os cartões em `cartoes`. Três formatos cobrem o que os códigos usam:
+
+| tipo | quando | exemplo |
+|---|---|---|
+| `faixas` | valor por faixa de área, com fórmula opcional acima do teto | localização e funcionamento em Ibimirim |
+| `variantes` | escolha de categoria, base mais adicional por metro | licença para construir |
+| `soma` | quantidades × valor unitário, com teto opcional | torres, antenas e placas solares |
+
+Aliança não declara cartões nesta versão: suas 365 entradas em UFM são consultadas pela busca.
 
 ## Limites
 
-Os resumos de trilhas são educativos. O texto extraído pode conter falhas de OCR e não comprova vigência. Antes de decidir, lançar, fiscalizar, licenciar ou autuar, confira a publicação oficial e as alterações posteriores.
+Guia educativo, não parecer jurídico. O texto da lei prevalece. As pendências de vigência e as
+divergências encontradas entre as fontes estão em [DOCUMENTOS-RECOMENDADOS.md](DOCUMENTOS-RECOMENDADOS.md).

@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
-const read = name => readFile(new URL(`../public/${name}`, import.meta.url), 'utf8');
+const read = name => readFile(new URL(`../dist/ibimirim/${name}`, import.meta.url), 'utf8');
 const bundle = async name => {
   // os dados são script, não JSON: window.X=JSON.parse("…")
-  const src = await readFile(new URL(`../public/data/${name}.js`, import.meta.url), 'utf8');
+  const src = await readFile(new URL(`../dist/ibimirim/data/${name}.js`, import.meta.url), 'utf8');
   return JSON.parse(JSON.parse(src.slice(src.indexOf('(') + 1, src.lastIndexOf(')'))));
 };
 const fees = await bundle('fees');
@@ -83,6 +83,11 @@ assert.match(app, /UNSOURCED/, 'aviso de origem sem fonte documental');
 assert.match(await read('sw.js'), /fees\.js/, 'fees.js fora do cache offline');
 // a página precisa carregar os dados por <script>, senão não abre em file://
 assert.match(html, /<script src="data\/laws\.js"><\/script>/, 'laws.js não é carregado como script');
+// os três cartões de Ibimirim agora vivem no municipio.json
+const cfgIbi = JSON.parse(await readFile(new URL('../municipios/ibimirim/municipio.json', import.meta.url), 'utf8'));
+assert.deepEqual(cfgIbi.cartoes.map(c => c.tipo), ['faixas', 'variantes', 'soma']);
+assert.equal(cfgIbi.cartoes[0].faixas.length, 14, 'faixas da Tabela I no config');
+assert.equal(cfgIbi.cartoes[2].teto, 100000, 'teto da taxa solar no config');
 assert.match(html, /<script src="data\/fees\.js"><\/script>/, 'fees.js não é carregado como script');
 assert.doesNotMatch(app, /fetch\(/, 'fetch quebra a abertura por file://');
 
@@ -126,13 +131,13 @@ assert.ok(prodem.pages.every(p => !p.ocr), 'PRODEM veio de camada de texto, não
 
 // --- a UFM é informada pelo usuário, nunca embutida ------------------------
 assert.ok(!('factor' in fees && fees.factor), 'nenhum fator de UFM fixo no topo da base');
-for (const id of ['ufmValue', 'ufmYear', 'ufmSave', 'ufmClear', 'ufmStatus', 'solarTowers', 'solarAntennas', 'solarArea', 'solarResult']) {
+for (const id of ['ufmValue', 'ufmYear', 'ufmSave', 'ufmClear', 'ufmStatus', 'feeCards']) {
   assert.match(html, new RegExp(`id="${id}"`), `${id} ausente no HTML`);
 }
-for (const fn of ['setupUfm', 'renderSolarFee', 'ufmToMoney', 'loadUfm']) {
+for (const fn of ['setupUfm', 'renderSoma', 'ufmToMoney', 'loadUfm']) {
   assert.match(app, new RegExp(`function ${fn}`), `${fn} ausente no app.js`);
 }
-assert.match(app, /SOLAR_CAP=100000/, 'teto aplicado no cálculo');
+assert.match(app, /card\.teto/, 'teto aplicado no cálculo');
 assert.doesNotMatch(app, /ufm\s*=\s*\{\s*value\s*:\s*3\.75/, 'UFM não pode vir embutida no código');
 
 const kinds = flat.reduce((acc, e) => ({ ...acc, [e.kind]: (acc[e.kind] ?? 0) + 1 }), {});

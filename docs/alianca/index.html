@@ -4,24 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes,viewport-fit=cover">
   <meta name="theme-color" content="#153f38">
-  <meta name="description" content="Consulta educativa e offline à legislação tributária e urbana de {{NOME}}.">
+  <meta name="description" content="Consulta educativa e offline à legislação tributária e urbana de Aliança.">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icons/icon.svg">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="qa.css">
-  <title>{{TITULO}}</title>
+  <title>Aliança Legal</title>
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="{{TITULO}} — início"><span class="seal">{{SIGLA}}</span><span><b>{{TITULO}}</b><small>{{SUBTITULO}}</small></span></a>
+    <a class="brand" href="#inicio" aria-label="Aliança Legal — início"><span class="seal">AL</span><span><b>Aliança Legal</b><small>Tributos e cidade, sem juridiquês</small></span></a>
     <button id="install" class="install" hidden>Instalar</button>
   </header>
   <main>
     <section id="inicio" class="hero">
       <p class="eyebrow">Consulta pública • funciona offline</p>
-      <h1>{{CHAMADA}}</h1>
-      <p>{{HERO_TEXTO}}</p>
-      <label class="search"><span>⌕</span><input id="query" type="search" placeholder="Pesquise ou pergunte: {{EXEMPLO}}" autocomplete="off"><kbd>Enter</kbd></label>
+      <h1>Entenda seus direitos, deveres e procedimentos municipais.</h1>
+      <p>Conteúdo organizado para contribuintes, servidores de Tributos e equipes de Obras e Infraestrutura. Consulte sempre a fonte oficial indicada em cada resultado.</p>
+      <label class="search"><span>⌕</span><input id="query" type="search" placeholder="Pesquise ou pergunte: como é calculada a taxa de coleta de lixo?" autocomplete="off"><kbd>Enter</kbd></label>
       <p class="search-help">Digite palavras para pesquisar ou faça uma pergunta completa para receber uma resposta apoiada nos documentos.</p>
       <div id="audiences" class="chips" aria-label="Escolha seu perfil"></div>
     </section>
@@ -32,7 +32,7 @@
     </section>
 
     <section id="feesSection">
-      <div class="section-title"><div><p class="eyebrow">Consulta orientada</p><h2>{{TAXAS_TITULO}}</h2></div><p>{{TAXAS_RESUMO}}</p></div>
+      <div class="section-title"><div><p class="eyebrow">Consulta orientada</p><h2>Taxas e tabelas em UFM</h2></div><p>Todos os anexos do Código são fixados em UFM. Informe a unidade do exercício para ver os valores em reais.</p></div>
       <div class="ufm-panel">
         <div class="ufm-about">
           <p class="eyebrow">Unidade Fiscal do Município</p>
@@ -51,13 +51,13 @@
       </div>
       <div id="feeCards" class="fee-grid"></div>
       <div class="fee-finder">
-        <div class="section-title"><div><p class="eyebrow">Todas as taxas</p><h3>{{BUSCA_TITULO}}</h3></div><p id="feeResumo"></p></div>
+        <div class="section-title"><div><p class="eyebrow">Todas as taxas</p><h3>Buscar valor por atividade, obra ou serviço</h3></div><p id="feeResumo"></p></div>
         <label class="search"><span>⌕</span><input id="feeQuery" type="search" placeholder="muro, frigorífico, antena, circo, demolição, padaria…" autocomplete="off"></label>
         <div id="feeFilters" class="chips" aria-label="Filtrar por tipo de taxa"></div>
         <p id="feeCount" class="fee-count" aria-live="polite"></p>
         <div id="feeResults" class="fee-results"></div>
       </div>
-      <p class="fee-notice">{{TAXAS_AVISO}}</p>
+      <p class="fee-notice"><strong>Atenção:</strong> consulta orientativa baseada nos anexos da Lei Complementar nº 041/2017, consolidada com a LC nº 049/2021. Os valores estão em UFM; a conversão em reais usa a unidade que você informou e não é lançamento tributário. Confirme enquadramento, isenção e valor final com o Município.</p>
     </section>
 
     <section id="trailSection">

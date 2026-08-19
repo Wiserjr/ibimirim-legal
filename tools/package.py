@@ -18,9 +18,9 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-PUBLIC = ROOT / "public"
 DIST = ROOT / "dist"
 ARCHIVE = DIST / "anteriores"
+MUNICIPIOS = ROOT / "municipios"
 APK = ROOT / "android/app/build/outputs/apk/debug/app-debug.apk"
 
 
@@ -28,10 +28,10 @@ def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest().upper()
 
 
-def retire(keep: set[str]) -> list[str]:
+def retire(keep: set[str], marca: str) -> list[str]:
     moved = []
     for item in DIST.iterdir():
-        if item.is_dir() or item.name in keep:
+        if item.is_dir() or item.name in keep or not item.name.startswith(marca):
             continue
         ARCHIVE.mkdir(parents=True, exist_ok=True)
         shutil.move(str(item), str(ARCHIVE / item.name))
@@ -40,18 +40,29 @@ def retire(keep: set[str]) -> list[str]:
 
 
 def main() -> None:
+    import sys
+
     version = json.loads((ROOT / "package.json").read_text(encoding="utf-8"))["version"]
-    zip_name = f"Ibimirim-Legal-PC-iPhone-v{version}.zip"
-    apk_name = f"Ibimirim-Legal-Android-v{version}-debug.apk"
+    slugs = sorted(p.name for p in MUNICIPIOS.iterdir() if p.is_dir())
+    slug = sys.argv[1] if len(sys.argv) > 1 else "ibimirim"
+    if slug not in slugs:
+        raise SystemExit(f"informe um município: {', '.join(slugs)}")
+    cfg = json.loads((MUNICIPIOS / slug / "municipio.json").read_text(encoding="utf-8"))
+    marca = cfg["marca"]["titulo"].replace(" ", "-")
+    zip_name = f"{marca}-PC-iPhone-v{version}.zip"
+    apk_name = f"{marca}-Android-v{version}-debug.apk"
+    origem = DIST / slug
+    if not origem.exists():
+        raise SystemExit(f"rode primeiro: python tools/build.py {slug}")
     DIST.mkdir(exist_ok=True)
 
-    for name in retire({zip_name, apk_name}):
+    for name in retire({zip_name, apk_name}, marca):
         print(f"  arquivado em dist/anteriores/: {name}")
 
-    files = sorted(p for p in PUBLIC.rglob("*") if p.is_file())
+    files = sorted(p for p in origem.rglob("*") if p.is_file())
     with zipfile.ZipFile(DIST / zip_name, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as bundle:
         for path in files:
-            bundle.write(path, path.relative_to(PUBLIC).as_posix())
+            bundle.write(path, path.relative_to(origem).as_posix())
     print(f"{zip_name}: {len(files)} arquivos, {(DIST / zip_name).stat().st_size:,} bytes")
     print(f"  SHA-256 {digest(DIST / zip_name)}")
 
