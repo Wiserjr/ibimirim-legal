@@ -178,19 +178,16 @@ consequência:
 - **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
   responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
   no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
-- **A busca casa por substring, e isso quebra siglas.** `rank()` testa
-  `hay.includes(term)`, sem fronteira de palavra. Consequência medida: a página 99 do Código
-  Civil tem **24 ocorrências de "iss"** — todas dentro de *comissário*, *omissão*, *comissão*,
-  *comissões* — e uma só de "serviço". Com isso ela pontua cobertura total para a consulta
-  "ISS serviço" e vence o capítulo do ISS do Código Tributário. **É o defeito de busca mais
-  consequente que resta**, porque atinge justamente as siglas que o usuário digita: ISS, CIP, VR,
-  UFM. Está vivo em Manari, Vertente do Lério, Jatobá, Tacaratu e Jurema.
+- **O OCR gruda palavras, e isso torna algumas siglas inalcançáveis.** Em Jurema, o
+  reconhecimento gravou "ITB**l**" com L minúsculo no lugar do I: o Código de 2007 tem **zero**
+  páginas com a sigla ITBI, e a consulta "ITBI transmissão" vai para o Código Civil, que cobre os
+  dois termos. O conteúdo continua alcançável por "transmissão inter vivos" ou "imposto sobre
+  transmissão", que caem no art. 165, p. 62. Correção pertence ao corpus, não à busca — uma
+  passagem de correção de OCR sobre siglas conhecidas.
 
-  Correção proposta, ainda **não aplicada**: exigir que o termo case no **início de uma palavra**,
-  trocando `hay.includes(term)` por uma expressão com `\b`. Preserva a busca por prefixo
-  ("licenc" continua achando "licença") e elimina o casamento no meio da palavra
-  ("iss" deixa de achar "comissão", "ativa" deixa de achar "negativa"). Muda **quais páginas
-  casam**, não só a ordem, então pede nova conferência dos nove municípios.
+  Da mesma família, e medido: 8 páginas de Jurema e 2 de Tacaratu deixaram de casar porque o OCR
+  grudou palavras inteiras — *taxadefiscalizacaodeocupacaoepermanencia*,
+  *segundaviadealvarasehabite*. São títulos de tabela e de item.
 
 ## Defeitos já corrigidos
 
@@ -205,3 +202,44 @@ consequência:
   navegador, e confere nos nove municípios que a lista fica particionada — todo documento em vigor
   antes de qualquer revogado. O teste foi validado contra a ordenação antiga, e falha nela já em
   Aliança: o defeito não era só de Jurema, estava vivo em município já publicado.
+
+- **A busca casava por substring, e isso quebrava as siglas.** `hay.includes(term)`, sem fronteira
+  de palavra, fazia "iss" achar *comissão* e "ativa" achar *administrativa*. Corrigido em
+  19/08/2026 exigindo início de palavra. Detalhe do efeito medido na seção abaixo.
+
+## Como a busca ordena, e por quê
+
+Cada critério da ordenação de `rank()` nasceu de um defeito medido, nesta ordem:
+
+1. **Norma revogada por último.** Em Jurema o Código de 1994 vencia o de 2007 por ter mais
+   ocorrências do termo. A lista fica particionada: todo documento em vigor antes de qualquer
+   revogado.
+2. **Cobertura.** Quantos termos da consulta a página tem. Vem antes do tipo de propósito — assim a
+   lei municipal não vence uma consulta que ela mal cobre.
+3. **Tipo: municipal antes de federal.** O Código Civil está no acervo como apoio, não como
+   resposta. São 372 páginas densas e, na contagem bruta de ocorrências, qualquer uma delas vencia a
+   página municipal certa. Foi o que aconteceu com "Valor de Referência" em Jatobá e "ISS serviço"
+   em cinco municípios.
+4. **matched, depois hits.** Relevância bruta.
+5. **titleMatched por último.** Uma palavra do título ou da citação não pode vencer um documento
+   cujo corpo trata do assunto — a citação do Código Civil histórico dizia "referência" e ganhava do
+   Código Tributário.
+
+E o casamento de termo exige **início de palavra**, nunca meio. Sem isso a busca morria justamente
+nas siglas: a p. 99 do Código Civil tem 24 ocorrências de "iss" — todas dentro de *comissão*,
+*omissão*, *comissário* — contra uma de "serviço". A busca por prefixo continua valendo: "licenc"
+acha "licença" e "licenciamento".
+
+O efeito foi medido nos nove municípios: **15.256 páginas casavam por substring, 11.614 casam por
+início de palavra**. A diferença é quase toda falso positivo — "ativa" achava *administrativa*,
+*relativas*, *iniciativa*, *cooperativa* em centenas de páginas e enterrava a dívida ativa;
+"unidade" achava *comunidade*, *imunidade*, *oportunidade*.
+
+`tests/rank.test.mjs` guarda os dois lados: que a consulta municipal não caia no Código Civil, e que
+"testamento herança" continue chegando nele. O teste carrega o `rank()` real num sandbox `node:vm`,
+sem navegador, e foi validado contra cada versão anterior da ordenação — falha em todas.
+
+**Não use `\b` sobre o texto cru.** Ele não é acentuado-aware: em " área", o "á" não é caractere de
+palavra para o motor e a fronteira não existe. A marcação de destaque usa
+`(^|[^\p{L}\p{N}])` e devolve o que capturou. Lookbehind resolveria em uma linha, mas só existe no
+Safari 16.4 em diante, e o aplicativo precisa abrir em iPhone antigo.

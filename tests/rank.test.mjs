@@ -83,4 +83,28 @@ const jatoba = await rankerDe('jatoba');
 assert.equal(jatoba('Valor de Referência')[0].doc.id, 'ctm-034-1997',
   'jatoba "Valor de Referência": o Código Tributário tem de vencer o Código Civil');
 
+// O termo casa no início de uma palavra, nunca no meio. Antes disso a página 99
+// do Código Civil — 24 ocorrências de "iss" dentro de "comissão" e "omissão",
+// uma só de "serviço" — vencia o capítulo do ISS do Código Tributário, em cinco
+// municípios. E "ativa" achava "administrativa" e "relativas" em centenas de
+// páginas, enterrando a dívida ativa.
+for (const slug of ['manari', 'vertente-do-lerio', 'jatoba', 'tacaratu', 'jurema', 'cortes', 'ingazeira']) {
+  const rank = await rankerDe(slug);
+  for (const consulta of ['ISS serviço', 'dívida ativa']) {
+    const topo = rank(consulta)[0];
+    assert.ok(topo, `[${slug}] "${consulta}" não retornou nada`);
+    assert.notEqual(topo.doc.kind, 'federal',
+      `[${slug}] "${consulta}": o topo é o Código Civil (${topo.doc.citation}) — casamento por substring de volta?`);
+  }
+}
+
+// A busca por prefixo tem de continuar valendo, que é como as pessoas digitam.
+assert.ok(jatoba('licenc').length > 0, '"licenc" deixou de achar "licença"');
+
+// O outro lado do desempate por tipo: rebaixar o Código Civil não pode torná-lo
+// inalcançável. Uma pergunta que a lei municipal não cobre continua chegando
+// nele, porque a cobertura é conferida antes do tipo.
+assert.equal(jatoba('testamento herança')[0].doc.kind, 'federal',
+  '"testamento herança" tem de chegar ao Código Civil');
+
 console.log(`OK: ordenação conferida em ${slugs.length} municípios, ${CONSULTAS.length} consultas cada; ${comRevogado} com norma revogada no resultado`);

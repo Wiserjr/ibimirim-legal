@@ -11,15 +11,31 @@ const termsFor=value=>[...new Set(normalize(value).split(/[^a-z0-9]+/).filter(wo
 const regexEscape=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 const accentPattern=value=>regexEscape(value).replace(/a/g,'[aáàãâä]').replace(/e/g,'[eéèêë]').replace(/i/g,'[iíìîï]').replace(/o/g,'[oóòõôö]').replace(/u/g,'[uúùûü]').replace(/c/g,'[cç]');
 
+// O termo casa no início de uma palavra, nunca no meio dela. Sem isso, a busca
+// morre justamente nas siglas que as pessoas digitam: a página 99 do Código
+// Civil tem 24 ocorrências de "iss" — todas dentro de "comissão", "omissão" e
+// "comissário" — e vencia o capítulo do ISS do Código Tributário. "ativa"
+// achava "administrativa" e "relativas" em centenas de páginas, e enterrava a
+// dívida ativa. A busca por prefixo continua valendo: "licenc" acha "licença"
+// e "licenciamento", que é como as pessoas digitam.
+const startsWord=term=>new RegExp(`\\b${regexEscape(term)}`);
+const countWord=(haystack,term)=>(haystack.match(new RegExp(`\\b${regexEscape(term)}`,'g'))||[]).length;
+const hasWord=(haystack,term)=>startsWord(term).test(haystack);
+// No texto cru, com acento, \b não serve: "á" não é caractere de palavra para o
+// motor, e " área" ficaria sem fronteira. Por isso a marcação captura o que vem
+// antes e devolve. Lookbehind resolveria em uma linha, mas só existe no Safari
+// 16.4 em diante, e este aplicativo precisa abrir em iPhone antigo.
+const WORD_EDGE='(^|[^\\p{L}\\p{N}])';
+
 function highlight(text,terms){
   if(!terms.length)return escape(text);
-  const pattern=new RegExp(`(${terms.sort((a,b)=>b.length-a.length).map(accentPattern).join('|')})`,'giu');
-  return escape(text).replace(pattern,'<mark class="mark">$1</mark>');
+  const pattern=new RegExp(`${WORD_EDGE}(${terms.sort((a,b)=>b.length-a.length).map(accentPattern).join('|')})`,'giu');
+  return escape(text).replace(pattern,(match,edge,term)=>`${edge}<mark class="mark">${term}</mark>`);
 }
 
 function snippet(text,terms){
   const low=normalize(text);
-  let pos=Math.min(...terms.map(term=>low.indexOf(term)).filter(index=>index>=0));
+  let pos=Math.min(...terms.map(term=>low.search(startsWord(term))).filter(index=>index>=0));
   if(!Number.isFinite(pos))pos=0;
   const start=Math.max(0,pos-150),end=Math.min(text.length,pos+540);
   return `${start?'…':''}${text.slice(start,end)}${end<text.length?'…':''}`;
@@ -29,11 +45,11 @@ function rank(value){
   const terms=termsFor(value),scored=[];
   for(const doc of corpus.documents){
     const heading=normalize(`${doc.title} ${doc.citation}`);
-    const titleMatched=terms.filter(term=>heading.includes(term)).length;
+    const titleMatched=terms.filter(term=>hasWord(heading,term)).length;
     for(const page of doc.pages){
       const hay=normalize(page.text);
-      const matched=terms.filter(term=>hay.includes(term));
-      const hits=matched.reduce((total,term)=>total+(hay.match(new RegExp(regexEscape(term),'g'))||[]).length,0);
+      const matched=terms.filter(term=>hasWord(hay,term));
+      const hits=matched.reduce((total,term)=>total+countWord(hay,term),0);
       if(hits)scored.push({doc,page,hits,matched:matched.length,titleMatched,coverage:terms.length?matched.length/terms.length:0});
     }
   }
@@ -44,11 +60,19 @@ function rank(value){
   // a citação do Código Civil histórico dizia "referência" e ganhava do Código
   // Tributário na busca por "Valor de Referência". Por isso a vigência decide
   // primeiro e titleMatched virou o último desempate.
-  scored.sort((a,b)=>(revoked(a.doc)-revoked(b.doc))||(b.coverage-a.coverage)||(b.matched-a.matched)||(b.hits-a.hits)||(b.titleMatched-a.titleMatched));
+  scored.sort((a,b)=>(revoked(a.doc)-revoked(b.doc))||(b.coverage-a.coverage)||(supporting(a.doc)-supporting(b.doc))||(b.matched-a.matched)||(b.hits-a.hits)||(b.titleMatched-a.titleMatched));
   return {terms,scored};
 }
 
 const revoked=doc=>doc.kind==='historical'?1:0;
+// O Código Civil está no acervo como apoio, não como resposta. São 372 páginas
+// densas, e na contagem bruta de ocorrências qualquer uma delas vence a página
+// municipal certa: foi assim que "Valor de Referência" em Jatobá e "ISS
+// serviço" em cinco municípios caíram no Código Civil. O tipo entra depois da
+// cobertura, de propósito — assim a lei municipal não vence uma consulta que
+// ela mal cobre, e uma pergunta de direito civil continua indo para o lugar
+// certo.
+const supporting=doc=>doc.kind==='federal'?1:0;
 
 // avisos declarados em municipio.json: vigência pendente, projeto de lei,
 // divergência entre fontes. Ficam antes de tudo porque mudam a leitura do resto.
@@ -350,7 +374,7 @@ function renderFeeResults(){
   const value=$('#feeQuery').value.trim(),terms=termsFor(value);
   let hits=feeIndex;
   if(feeFilter!=='todas')hits=hits.filter(entry=>entry.section.id===feeFilter);
-  if(terms.length)hits=hits.filter(entry=>terms.every(term=>entry.haystack.includes(term)));
+  if(terms.length)hits=hits.filter(entry=>terms.every(term=>hasWord(entry.haystack,term)));
   else if(feeFilter==='todas'){$('#feeCount').textContent='Digite um termo ou escolha um tipo de taxa para listar os valores.';$('#feeResults').innerHTML='';return;}
   hits=[...hits].sort((a,b)=>(a.side==='atual'?0:1)-(b.side==='atual'?0:1));
   const top=hits.slice(0,60);
