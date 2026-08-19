@@ -37,9 +37,18 @@ function rank(value){
       if(hits)scored.push({doc,page,hits,matched:matched.length,titleMatched,coverage:terms.length?matched.length/terms.length:0});
     }
   }
-  scored.sort((a,b)=>(b.titleMatched-a.titleMatched)||(b.coverage-a.coverage)||(b.matched-a.matched)||(b.hits-a.hits)||(a.doc.kind==='historical'?1:-1));
+  // Duas regras antes da relevância bruta, ambas aprendidas em defeito real:
+  // norma revogada nunca vem antes da que está em vigor — em Jurema o Código de
+  // 1994 vencia o de 2007 por ter mais ocorrências do termo; e uma palavra no
+  // título ou na citação não vence um documento cujo corpo trata do assunto —
+  // a citação do Código Civil histórico dizia "referência" e ganhava do Código
+  // Tributário na busca por "Valor de Referência". Por isso a vigência decide
+  // primeiro e titleMatched virou o último desempate.
+  scored.sort((a,b)=>(revoked(a.doc)-revoked(b.doc))||(b.coverage-a.coverage)||(b.matched-a.matched)||(b.hits-a.hits)||(b.titleMatched-a.titleMatched));
   return {terms,scored};
 }
+
+const revoked=doc=>doc.kind==='historical'?1:0;
 
 // avisos declarados em municipio.json: vigência pendente, projeto de lei,
 // divergência entre fontes. Ficam antes de tudo porque mudam a leitura do resto.

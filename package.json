@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.5.1",
   "scripts": {
-    "test": "python tools/build.py --todos && node tests/municipios.test.mjs && node tests/app.test.mjs && node tests/fees.test.mjs",
+    "test": "python tools/build.py --todos && node tests/municipios.test.mjs && node tests/rank.test.mjs && node tests/app.test.mjs && node tests/fees.test.mjs",
     "test:ui": "node tests/ui.test.mjs",
     "serve": "node tools/serve.mjs",
     "dist": "python tools/package.py",

@@ -178,14 +178,30 @@ consequência:
 - **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
   responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
   no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
-- **`rank()` põe `titleMatched` como primeira chave de ordenação.** Uma palavra no título
-  ou na citação de um documento vence um documento cujo corpo inteiro trata do assunto. O
-  desempate que rebaixa `historical` é o último critério e nunca chega a ser avaliado. Já
-  causou dois defeitos reais. O primeiro, corrigido em 19/08/2026, era a citação do Código Civil
-  histórico vencendo o Código Tributário na busca por "referência". O segundo, **ainda em pé**, é
-  mais sério: em Jurema, "UFM unidade fiscal" e "ITBI transmissão" trazem o **Código de 1994,
-  revogado**, acima do de 2007 em vigor — porque o revogado tem mais ocorrências do termo e o
-  desempate de `historical` é o último critério. Mitigado por rótulo ("Código Tributário Municipal
-  de 1994 (anterior)" aparece no cabeçalho de cada resultado), não por ordenação. A correção natural
-  é subir o desempate de `historical` para antes de `hits`, ou dar peso por tipo de norma — muda o
-  resultado dos nove municípios, então é decisão da equipe.
+- **A busca casa por substring, e isso quebra siglas.** `rank()` testa
+  `hay.includes(term)`, sem fronteira de palavra. Consequência medida: a página 99 do Código
+  Civil tem **24 ocorrências de "iss"** — todas dentro de *comissário*, *omissão*, *comissão*,
+  *comissões* — e uma só de "serviço". Com isso ela pontua cobertura total para a consulta
+  "ISS serviço" e vence o capítulo do ISS do Código Tributário. **É o defeito de busca mais
+  consequente que resta**, porque atinge justamente as siglas que o usuário digita: ISS, CIP, VR,
+  UFM. Está vivo em Manari, Vertente do Lério, Jatobá, Tacaratu e Jurema.
+
+  Correção proposta, ainda **não aplicada**: exigir que o termo case no **início de uma palavra**,
+  trocando `hay.includes(term)` por uma expressão com `\b`. Preserva a busca por prefixo
+  ("licenc" continua achando "licença") e elimina o casamento no meio da palavra
+  ("iss" deixa de achar "comissão", "ativa" deixa de achar "negativa"). Muda **quais páginas
+  casam**, não só a ordem, então pede nova conferência dos nove municípios.
+
+## Defeitos já corrigidos
+
+- **`rank()` ordenava por `titleMatched` primeiro, e rebaixava `historical` por último.**
+  Isso deixava uma palavra do título ou da citação vencer um documento cujo corpo inteiro trata do
+  assunto, e deixava norma revogada aparecer acima da norma em vigor. Causou dois defeitos reais:
+  a citação do Código Civil histórico dizia "referência" e vencia o Código Tributário na busca por
+  "Valor de Referência"; e em Jurema o Código de 1994, revogado, vinha acima do de 2007 em vigor.
+
+  Corrigido em 19/08/2026: a vigência passou a ser a **primeira** chave e `titleMatched` o
+  **último** desempate. `tests/rank.test.mjs` carrega o `rank()` real num sandbox `node:vm`, sem
+  navegador, e confere nos nove municípios que a lista fica particionada — todo documento em vigor
+  antes de qualquer revogado. O teste foi validado contra a ordenação antiga, e falha nela já em
+  Aliança: o defeito não era só de Jurema, estava vivo em município já publicado.
