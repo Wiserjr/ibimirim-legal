@@ -18,7 +18,7 @@ São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 | Aliança | 11 | 1.220 | 13 tabelas, 365 itens | 1 |
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
 | Ingazeira | 5 | 1.214 | 12 de 13 anexos, no cadastro | 0 |
-| Vertente do Lério | 3 | 1.113 | não extraídas | 0 |
+| Vertente do Lério | 3 | 1.113 | 8 anexos, no cadastro | 0 |
 | Jatobá | 3 | 1.074 | 7 anexos, no cadastro | 0 |
 | Cortês | 3 | 1.059 | 7 tabelas, no cadastro | 0 |
 | Tacaratu | 3 | 1.247 | não extraídas | 0 |
@@ -79,7 +79,7 @@ Não há um padrão comum, e confundi-las erra a conta por ordens de grandeza:
 | Aliança | UFM em todos os anexos |
 | Manari | UFM, percentual sobre o Valor de Referência Fiscal e percentual sobre o preço do serviço |
 | Ingazeira | reais por código CNAE-Fiscal — **exceto a CIP**, que desde a LC nº 007/2024 é percentual sobre a tarifa B4a da ANEEL |
-| Vertente do Lério | UFM |
+| Vertente do Lério | **reais nos anexos de taxa; UFM só na Planta de Valores e no ISS do autônomo** |
 | **Jatobá** | **percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR** |
 | **Cortês** | **reais de 2005, com atualização anual pelo IPCA-E (art. 69, § 2º)** |
 | **Tacaratu** | **reais de 2017, por CNAE 2.0 no Anexo I; sem unidade fiscal** |

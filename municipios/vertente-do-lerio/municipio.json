@@ -178,15 +178,15 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "Os anexos deste Código são fixados em UFM. Informe a unidade do exercício para converter.",
+  "resumo": "Os anexos de taxa vêm em reais; a Planta de Valores e o ISS do autônomo, em UFM. Tudo no cadastro de cobranças.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> os oito anexos da Lei Complementar nº 001/2009 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em UFM e dependem do ato que fixa a unidade do exercício."
+  "aviso": "<strong>Os oito anexos estão no cadastro de cobranças</strong> — 116 itens e 9 faixas, lidos na imagem das páginas 113 a 125. <strong>Atenção à unidade</strong>: ao contrário do que se supunha, os anexos de taxa marcam <strong>R$</strong>, e só a Planta de Valores (Anexo VIII) e o ISS do autônomo vêm em UFM."
  },
  "ufm": {
-  "regra": "O Código de Vertente do Lério fixa os valores dos seus anexos em <strong>UFM</strong>. O valor da unidade não consta da lei: é fixado por ato do Executivo a cada exercício. Informe aqui o valor em vigor.",
+  "regra": "O Código de Vertente do Lério usa a UFM em <strong>duas</strong> coisas apenas: a <strong>Planta de Valores Genéricos</strong> do Anexo VIII, de 3 a 7 UFM por metro quadrado conforme o logradouro, e o <strong>ISS fixo do profissional autônomo</strong> — 120 UFM para nível universitário, 70 para nível médio e 10 para quem não precisa de formação específica. Os <strong>anexos de taxa vêm em reais</strong>. O art. 41 manda quantificar o lançamento pelo valor da UFM em 1º de janeiro do ano do lançamento, e esse valor não consta da lei — informe-o abaixo.",
   "fonte": {
    "doc": "ctm-001-2009",
-   "pagina": 1,
+   "pagina": 12,
    "rotulo": "Ver no Lei Complementar nº 001/2009"
   }
  },
@@ -194,7 +194,7 @@
  "avisos": [
   {
    "tipo": "nota",
-   "texto": "As tabelas dos anexos deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+   "texto": "Quatro cobranças estão marcadas como <strong>a revisar</strong>: o Anexo I numera 47 itens mas tem 48 linhas, com o número 44 repetido em “Moto Táxi” e “Rádio”; o art. 80 do ISS pula o inciso III; o habite-se diz “por metro quadrado” mas dispõe os valores por faixa; e uma parte do Anexo I traz valores que são múltiplos exatos de R$ 1,15, o que pode indicar conversão a partir de UFM."
   }
  ]
 }
