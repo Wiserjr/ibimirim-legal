@@ -1485,12 +1485,12 @@
       "periodicidade": "Anual"
      },
      {
-      "rotulo": "07 — Funcionamento de mercadinhos, mercearias e especiarias não inscritos como microempresa",
+      "rotulo": "07 e 08 — Funcionamento de mercadinhos, mercearias e especiarias não inscritos como microempresa",
       "valor": 50,
       "periodicidade": "Anual"
      },
      {
-      "rotulo": "08 — Comércio de estivas e cereais",
+      "rotulo": "09 — Comércio de estivas e cereais",
       "valor": 70,
       "periodicidade": "Anual"
      },
@@ -1620,8 +1620,8 @@
      "artigo": "Anexo XII"
     }
    ],
-   "conferencia": "revisar",
-   "nota": "SALTOS NA NUMERAÇÃO, AINDA NÃO CONFERIDOS NA IMAGEM: a leitura da camada de texto não encontrou os itens 09 e 22 — a lista vai de 08 (estivas e cereais) para 10 (hortaliças e frutas) e de 21 (artigos de higiene) para 23 (institutos de beleza). São 28 itens numerados até 29. Diferente dos defeitos do Anexo VII e da tabela de serviços diversos, este NÃO foi confirmado na imagem das páginas 257 e 258: pode ser item realmente ausente na lei ou número perdido no reconhecimento. Confira antes de citar o número do item. Os VALORES foram lidos e são confiáveis. O item 12 é o único com categorias — a lei não define o que separa 1ª, 2ª e 3ª categoria de restaurante, e a diferença é de R$ 90,00 para R$ 30,00: sem critério em regulamento, o enquadramento fica sem amparo. O item 07 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
+   "conferencia": "conferido",
+   "nota": "NUMERAÇÃO CONFERIDA NA IMAGEM DAS PÁGINAS 257 E 258, e ela reserva duas surpresas. PRIMEIRA: os itens 07 e 08 são UMA FRASE SÓ, quebrada em duas linhas numeradas — \"Funcionamento de mercadinhos, mercearias, especiarias, não inscritos como\" (07) e \"Microempresa\" (08) —, com um único valor de R$ 50,00 abrangendo as duas. O item 08 não é atividade nenhuma: é o fim da frase do 07. SEGUNDA: NÃO EXISTE ITEM 22. A tabela vai do 21 (artigos de higiene) direto ao 23 (institutos de beleza), sem nada no meio. São 28 itens numerados até 29. O item 12 é o único com categorias, e a lei NÃO define o que separa 1ª, 2ª e 3ª categoria de restaurante — a diferença vai de R$ 90,00 a R$ 30,00, e sem critério em regulamento o enquadramento fica sem amparo. O item 07 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
    "vigencia": {
     "de": "2017",
     "ate": null
