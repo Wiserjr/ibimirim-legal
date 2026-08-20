@@ -1,0 +1,4740 @@
+{
+ "sobre": "Anexo I da LC nº 002/2016 — taxa de licença para localização e de fiscalização de funcionamento, por atividade CNAE-Fiscal. Extraído do texto do PDF, que é gerado do Word e não passou por OCR. 'semValor' lista as atividades que o anexo traz com código e sem preço — defeito do texto publicado, não da leitura.",
+ "documento": "ctm-002-2016",
+ "paginas": [
+  139,
+  182
+ ],
+ "itens": [
+  {
+   "rotulo": "0111-2/01 — Cultivo de arroz",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0111-2/02 — Cultivo de milho",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0111-2/03 — Cultivo de trigo",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0111-2/99 — Cultivo de outros cereais",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0112-0/00 — Cultivo de algodão herbáceo",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0113-9/00 — Cultivo de cana-de-açúcar",
+   "valor": 150.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0114-7/00 — Cultivo de fumo",
+   "valor": 100.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0115-5/00 — Cultivo de soja",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/01 — Cultivo de abacaxi",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/02 — Cultivo de amendoim",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/03 — Cultivo de batata inglesa",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/04 — Cultivo de cebola",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/05 — Cultivo de mandioca",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/06 — Cultivo de feijão",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/07 — Cultivo de juta",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/08 — Cultivo de mamona",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/09 — Cultivo de melão",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/10 — Cultivo de tomate",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/11 — Cultivo de alho",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/12 — Cultivo de morango",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/13 — Cultivo de sorgo",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0119-8/99 — Produção de outras lavouras temporárias",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0121-0/00 — Cultivo de hortaliças, legumes e especiarias hortícolas",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0122-8/00 — Cultivo de flores e plantas ornamentais",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0131-7/01 — Cultivo de laranja",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0131-7/99 — Cultivo de outros cítricos",
+   "valor": 80.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0132-5/00 — Cultivo de café",
+   "valor": 100.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0133-3/00 — Cultivo de cacau",
+   "valor": 100.0,
+   "pagina": 139
+  },
+  {
+   "rotulo": "0134-1/00 — Cultivo de uva",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/01 — Cultivo de banana",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/02 — Cultivo de caju",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/03 — Cultivo de coco-da-baia",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/04 — Cultivo de pimenta do reino",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/05 — Cultivo de chá-da-índia",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/06 — Cultivo de maçã",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/07 — Cultivo de mamão",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/08 — Cultivo de manga",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/09 — Cultivo de maracujá",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/10 — Cultivo de erva-mate",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/11 — Cultivo de açaí",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/12 — Cultivo de pêssego",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/13 — Cultivo de seringueira",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/14 — Cultivo de guaraná",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/15 — Cultivo de dendê",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/16 — Cultivo de outras plantas para condimento",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0139-2/99 — Produção de outras lavouras permanentes",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0141-4/01 — Criação de bovinos para corte",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0141-4/02 — Criação de bovinos para leite",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0142-2/01 — Criação de bufalinos",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0142-2/02 — Criação de eqüinos",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0142-2/99 — Criação de outros animais de grande porte",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0143-0/00 — Criação de ovinos e produção de lã",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0144-9/00 — Criação de suínos",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0145-7/01 — Criação de galináceos para corte",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0145-7/02 — Criação de pintos de um dia",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0145-7/03 — Criação de outras aves",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0145-7/04 — Produção de ovos",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/01 — Criação de caprinos",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/02 — Sericicultura",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/03 — Apicultura",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/04 — Ranicultura",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/05 — Criação de escargot",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/06 — Criação de animais domésticos",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0146-5/99 — Criação de outros animais",
+   "valor": 80.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0150-3/00 — Agropecuária",
+   "valor": 100.0,
+   "pagina": 140
+  },
+  {
+   "rotulo": "0161-9/01 — Serviço de jardinagem - inclusive plantio de gramado",
+   "valor": 50.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0161-9/02 — Serviço de pulverização aérea",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0161-9/03 — Serviço de poda de árvores",
+   "valor": 50.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0161-9/04 — Serviço de colheita",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0161-9/05 — Serviços relacionados ao tratamento de produtos agrícolas",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0161-9/99 — Outras atividades de serviços relacionados com a agricultura",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0162-7/01 — Serviço de inseminação artificial",
+   "valor": 200.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0162-7/02 — Serviço de inspeção sanitária",
+   "valor": 200.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0162-7/04 — Serviço de manejo de animais",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0162-7/99 — Outras atividades de serviços relacionados com a pecuária - exceto atividades veterinárias",
+   "valor": 200.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0511-8/01 — Pesca de peixes",
+   "valor": 80.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0511-8/02 — Pesca de crustáceos e moluscos",
+   "valor": 80.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0511-8/03 — Coleta de produtos de origem marinha",
+   "valor": 80.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0511-8/04 — Atividades de serviços relacionados a pesca",
+   "valor": 80.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/01 — Criação de peixes",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/02 — Criação de camarões",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/03 — Criação de mariscos",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/04 — Criação de peixes ornamentais",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/05 — Atividades de serviços relacionados a aquicultura",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "0512-6/99 — Outros cultivos e semicultivos da aquicultura",
+   "valor": 100.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1000-6/01 — Extração de carvão mineral",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1310-2/01 — Extração de minério de Ferro",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1310-2/02 — Pelotização, sinterização e outros beneficiamentos de minério de ferro",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1321-8/01 — Extração de minério de alumínio",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1321-8/02 — Beneficiamento de minério de alumínio",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1322-6/01 — Extração de minério de estanho",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1322-6/02 — Beneficiamento de minério de estanho",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1323-4/01 — Extração de minério de manganês",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1323-4/02 — Beneficiamento de minério de manganês",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1324-2/00 — Extração de minérios de metais preciosos",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1325-0/00 — Extração de minerais radioativos",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1329-3/01 — Extração de nióbio e titânio",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1329-3/02 — Extração de tungstênio",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1329-3/03 — Extração de níquel",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1329-3/04 — Extração de cobre, chumbo, zinco e de outros minerais metálicos não-ferrosos não compreendidos",
+   "valor": 1000.0,
+   "pagina": 141
+  },
+  {
+   "rotulo": "1329-3/05 — Beneficiamento de cobre, chumbo, zinco e de outros minerais metálicos não-ferrosos não compreendidos em outras classes",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1110-0/01 — Extração de petróleo e gás natural",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1110-0/02 — Extração e beneficiamento de xisto",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1110-0/03 — Extração e beneficiamento de areias betuminosas",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1120-7/00 — Serviços relacionados com a extração de petróleo e gás - exceto a prospecção realizada por terceiros",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/01 — Extração de ardósia e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/02 — Extração de granito e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/03 — Extração de mármore e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/04 — Extração de calcário/dolomita e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/05 — Extração de gesso e caulim e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/06 — Extração de areia, cascalho ou pedregulho e beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/07 — Extração de argila e beneficiamento associado",
+   "valor": 800.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/08 — Extração de saibro e beneficiamento associado",
+   "valor": 800.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/09 — Extração de basalto e beneficiamento associado",
+   "valor": 800.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1410-9/99 — Extração e/ou britamento de pedras e de outros materiais para construção não especificados anteriormente e seu beneficiamento associado",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1421-4/00 — Extração de minerais para fabricação de adubos, fertilizantes e produtos químicos",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1422-2/01 — Extração de sal marinho",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1422-2/02 — Extração de sal-gema",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1422-2/03 — Refino e outros tratamentos do sal",
+   "valor": 1000.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1511-3/01 — Frigorífico - Abate de bovinos e preparação de carne e subprodutos",
+   "valor": 100.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1511-3/02 — Frigorífico - Abate de suinos e preparação de carne e subprodutos",
+   "valor": 100.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1511-3/03 — Frigorífico - Abate de equinos e preparação de carne e subprodutos",
+   "valor": 100.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1511-3/04 — Frigorífico - Abate de ovinos e caprinos e preparação de carne e subprodutos",
+   "valor": 100.0,
+   "pagina": 142
+  },
+  {
+   "rotulo": "1511-3/05 — Frigorífico - Abate de bufalinos e preparação de carne e subprodutos",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1511-3/06 — Matadouro - abate de reses e preparação de carne para terceiros",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1512-1/01 — Abate de aves e preparação de produtos de carne",
+   "valor": 70.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1512-1/02 — Abate de pequenos animais e preparação de produtos de carne",
+   "valor": 70.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1513-0/01 — Preparação de carne, banha e produtos de salsicharia não associadas ao abate",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1513-0/02 — Preparação de subprodutos não associado ao abate",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1514-8/00 — Preparação e conservação do pescado e fabricação de conservas de peixes, crustáceos e moluscos",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1521-0/00 — Processamento, preservação e produção de conservas de frutas",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1522-9/00 — Processamento, preservação e produção de conservas de legumes e outros vegetais",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1523-7/00 — Produção de sucos de frutas e de legumes",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1531-8/00 — Produção de óleos vegetais em bruto",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1532-6/00 — Refino de óleos vegetais",
+   "valor": 200.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1533-4/00 — Preparação de margarina e outras gorduras vegetais e de óleos de origem animal não comestíveis",
+   "valor": 200.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1541-5/00 — Preparação do leite",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1542-3/00 — Fabricação de produtos do laticínio",
+   "valor": 200.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1543-1/00 — Fabricação de sorvetes",
+   "valor": 100.0,
+   "pagina": 143
+  },
+  {
+   "rotulo": "1551-2/01 — Beneficiamento de arroz",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1551-2/02 — Fabricação de produtos do arroz",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1552-0/00 — Moagem de trigo e fabricação de derivados",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1553-9/00 — Produção de farinha de mandioca e derivados",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1554-7/00 — Fabricação de fubá, farinha e outros derivados de milho - exclusive óleo",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1555-5/00 — Fabricação de amidos e féculas de vegetais e fabricação de óleos de milho",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1556-3/00 — Fabricação de rações balanceadas para animais",
+   "valor": 200.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1559-8/00 — Beneficiamento, moagem e preparação de outros alimentos de origem vegetal",
+   "valor": 300.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1561-0/00 — Usinas de açucar",
+   "valor": 5000.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1562-8/01 — Refino e moagem de açucar de cana",
+   "valor": 5000.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1562-8/02 — Fabricação de açucar de cereais (dextrose) e de beterraba",
+   "valor": 5000.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1562-8/03 — Fabricação de açúcar de Stévia",
+   "valor": 5000.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1571-7/00 — Torrefação e moagem de café",
+   "valor": 800.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1572-5/00 — Fabricação de café solúvel",
+   "valor": 1000.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1581-4/00 — Fabricação de produtos de padaria, confeitaria e pastelaria",
+   "valor": 100.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1582-2/00 — Fabricação de biscoitos e bolachas",
+   "valor": 100.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1583-0/01 — Produção de derivados do cacau e elaboração de chocolates",
+   "valor": 200.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1583-0/02 — Produção de balas e semelhantes e de frutas cristalizadas",
+   "valor": 100.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1584-9/00 — Fabricação de massas alimentícias",
+   "valor": 100.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1585-7/00 — Preparação de especiarias, molhos, temperos e condimentos",
+   "valor": 100.0,
+   "pagina": 144
+  },
+  {
+   "rotulo": "1586-5/00 — Preparação de produtos dietéticos, alimentos para crianças e outros alimentos conservados",
+   "valor": 200.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/01 — Fabricação de vinagres",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/02 — Fabricação de pós alimentícios",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/03 — Fabricação de fermentos, leveduras e coalhos",
+   "valor": 200.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/04 — Fabricação de gelo comum",
+   "valor": 70.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/05 — Beneficiamento de chá, mate e outras ervas para infusão",
+   "valor": 100.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1589-0/99 — Fabricação de outros produtos alimentícios",
+   "valor": 350.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1591-1/01 — Fabricação, retificação, homogeneização e mistura de aguardente de cana de açúcar",
+   "valor": 400.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1591-1/02 — Fabricação, retificação, homogeneização e mistura de outras aguardentes e bebidas destiladas",
+   "valor": 4000.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1592-0/00 — Fabricação de vinho",
+   "valor": 4000.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1593-8/01 — Fabricação de malte, inclusive malte uísque",
+   "valor": 400.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1593-8/02 — Fabricação de cervejas e chopes",
+   "valor": 400.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1594-6/00 — Engarrafamento e gaseificação de águas minerais",
+   "valor": 500.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1595-4/01 — Fabricação de refrigerantes",
+   "valor": 500.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1595-4/02 — Fabricação de refrescos, xaropes e pós para refrescos",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1600-4/01 — Fabricação de cigarros e cigarrilhas",
+   "valor": 350.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1600-4/02 — Fabricação de fumo em rolo ou em corda e outros produtos do fumo",
+   "valor": 350.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1600-4/03 — Fabricação de filtros para cigarros",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1711-6/00 — Beneficiamento de algodão",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1719-1/00 — Beneficiamento de outras fibras têxteis naturais",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1721-3/00 — Fiação de algodão",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1722-1/00 — Fiação de outras fibras têxteis naturais",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1723-0/00 — Fiação de fibras artificiais ou sintéticas",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1724-8/00 — Fabricação de linhas e fios para coser e bordar",
+   "valor": 300.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1731-0/00 — Tecelagem de algodão",
+   "valor": 350.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1732-9/00 — Tecelagem de fios de fibras têxteis naturais",
+   "valor": 350.0,
+   "pagina": 145
+  },
+  {
+   "rotulo": "1733-7/00 — Tecelagem de fios e filamentos contínuos artificiais ou sintéticos",
+   "valor": 350.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1741-8/00 — Fabricação de artigos de tecido de uso doméstico, incluindo tecelagem",
+   "valor": 200.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1749-3/00 — Fabricação de outros artefatos têxteis, incluindo tecelagem",
+   "valor": 200.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1750-7/00 — Serviços de acabamento em fios, tecidos e artigos têxteis produzidos por terceiros",
+   "valor": 200.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1761-2/00 — Fabricação de artefatos têxteis a partir de tecidos, exclusive vestuário",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1762-0/00 — Fabricação de artefatos de tapeçaria",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1763-9/00 — Fabricação de artefatos de cordoaria",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1764-7/00 — Fabricação de tecidos especiais - inclusive artefatos",
+   "valor": 300.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1769-8/00 — Fabricação de outros artigos têxteis - exclusive vestuário",
+   "valor": 200.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1771-0/00 — Fabricação de tecidos de malha",
+   "valor": 300.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1772-8/00 — Fabricação de meias",
+   "valor": 300.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1779-5/00 — Fabricação de outros artigos do vestuário produzidos em malharias (tricotagens)",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1811-2/01 — Confecção de peças interiores do vestuário, exclusive sob medida",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1811-2/02 — Confecção, sob medida, de peças interiores do vestuário",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1812-0/01 — Confecção de outras peças do vestuário, exclusive sob",
+   "valor": 100.0,
+   "pagina": 146
+  },
+  {
+   "rotulo": "1812-0/02 — Confecção, sob medida, de outras peças do vestuário",
+   "valor": 100.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1813-9/01 — Confecção de roupas profissionais, exclusive sob medida",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1813-9/02 — Confecção, sob medida, de roupas profissionais",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1821-0/00 — Fabricação de acessórios do vestuário",
+   "valor": 100.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1822-8/00 — Fabricação de acessórios para segurança industrial e pessoal",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1910-0/00 — Curtimento e outras preparações de couro",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1921-6/00 — Fabricação de malas, bolsas, valises e outros artefatos para viagem, de qualquer material",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1929-1/00 — Fabricação de outros artefatos de couro",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1931-3/01 — Fabricação de calçados de couro",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1931-3/02 — Serviço de corte e acabamento de calçados",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1932-1/00 — Fabricação de tênis de qualquer material",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1933-0/00 — Fabricação de calçados de plástico",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "1939-9/00 — Fabricação de calçados de outros materiais",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2010-9/00 — Desdobramento de madeira",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2021-4/00 — Fabricação de madeira laminada e de chapas de madeira compensada, prensada ou aglomerada",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2022-2/01 — Produção de casas de madeira pré-fabricadas",
+   "valor": 400.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2022-2/02 — Fabricação de esquadrias de madeira, venezianas e de peças de madeira para instalações industriais e comerciais",
+   "valor": 300.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2022-2/99 — Fabricação de outros artigos de carpintaria",
+   "valor": 200.0,
+   "pagina": 147
+  },
+  {
+   "rotulo": "2023-0/00 — Fabricação de artefatos de tanoaria e embalagens de madeira",
+   "valor": 200.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2029-0/00 — Fabricação de artefatos diversos de madeira, palha, cortiça e material trançado - exclusive móveis",
+   "valor": 200.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2110-5/00 — Fabricação de celulose e outras pastas para a fabricação de papel",
+   "valor": 1000.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2121-0/00 — Fabricação de papel",
+   "valor": 1000.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2122-9/00 — Fabricação de papelão liso, cartolina e cartão",
+   "valor": 500.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2131-8/00 — Fabricação de embalagens de papel",
+   "valor": 500.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2132-6/00 — Fabricação de embalagens de papelão - inclusive a fabricação de papelão corrugado",
+   "valor": 500.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2141-5/00 — Fabricação de artefatos de papel, papelão, cartolina e cartão para escritório",
+   "valor": 500.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2142-3/00 — Fabricação de fitas e formulários contínuos - impressos ou não",
+   "valor": 400.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2149-0/01 — Fabricação de fraldas descartáveis e de absorventes higiênicos",
+   "valor": 200.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2149-0/99 — Fabricação de outros artefatos de pastas, papel, papelão, cartolina e cartão",
+   "valor": 300.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2211-0/00 — Edição; edição e impressão de jornais",
+   "valor": 300.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2212-8/00 — Edição; edição e impressão de revistas",
+   "valor": 300.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2213-6/00 — Edição; edição e impressão de livros",
+   "valor": 300.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2214-4/00 — Edição de discos, fitas e outros materiais gravados",
+   "valor": 400.0,
+   "pagina": 148
+  },
+  {
+   "rotulo": "2219-5/00 — Edição; edição e impressão de produtos gráficos",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2221-7/00 — Impressão de jornais, revistas e livros",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2222-5/01 — Impressão de material para uso escolar",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2222-5/02 — Impressão de material para uso industrial, comercial e publicitário",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2222-5/03 — Impressão de material de segurança",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2229-2/00 — Execução de outros serviços gráficos",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2231-4/00 — Reprodução de discos e fitas",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2232-2/00 — Reprodução de fitas de vídeos",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2233-0/00 — Reprodução de filmes",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2234-9/00 — Reprodução de programas de informática em disquetes e fitas",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2320-5/00 — Refino de petróleo",
+   "valor": 5000.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2340-0/00 — Fabricação de álcool",
+   "valor": 5000.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2411-2/00 — Fabricação de cloro e álcalis",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2412-0/00 — Fabricação de intermediários para fertilizantes",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2413-9/00 — Fabricação de fertilizantes fosfatados, nitrogenados e potássicos",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2414-7/00 — Fabricação de gases industriais",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2419-8/00 — Fabricação de outros produtos inorgânicos",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2433-3/00 — Fabricação de elastômeros",
+   "valor": 400.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2451-1/00 — Fabricação de produtos farmoquímicos",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2452-0/01 — Fabricação de medicamentos alopáticos para uso humano",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2452-0/02 — Fabricação de medicamentos homeopáticos para uso humano",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2453-8/00 — Fabricação de medicamentos para uso veterinário",
+   "valor": 300.0,
+   "pagina": 149
+  },
+  {
+   "rotulo": "2454-6/00 — Fabricação de materiais para usos médicos, hospitalares e odontológicos",
+   "valor": 500.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2461-9/00 — Fabricação de inseticidas",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2462-7/00 — Fabricação de fungicidas",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2463-5/00 — Fabricação de herbicidas",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2469-4/00 — Fabricação de outros defensivos agrícolas",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2471-6/00 — Fabricação de sabões, sabonetes e detergentes sintéticos",
+   "valor": 100.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2472-4/00 — Fabricação de produtos de limpeza e polimento",
+   "valor": 300.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2473-2/00 — Fabricação de artigos de perfumaria e cosméticos",
+   "valor": 500.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2481-3/00 — Fabricação de tintas, vernizes, esmaltes e lacas",
+   "valor": 1000.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2482-1/00 — Fabricação de tintas de impressão",
+   "valor": 500.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2483-0/00 — Fabricação de impermeabilizantes, solventes e produtos afins",
+   "valor": 500.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2491-0/00 — Fabricação de adesivos e selantes",
+   "valor": 300.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2492-9/01 — Fabricação de pólvoras, explosivos e detonantes",
+   "valor": 100.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2492-9/02 — Fabricação de artigos pirotécnicos",
+   "valor": 100.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2493-7/00 — Fabricação de catalisadores",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2494-5/00 — Fabricação de aditivos de uso industrial",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2495-3/00 — Fabricação de chapas, filmes, papéis e outros materiais e produtos químicos para fotografia",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2496-1/00 — Fabricação de discos e fitas virgens",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2499-6/00 — Fabricação de outros produtos químicos não especificados ou não classificados",
+   "valor": 400.0,
+   "pagina": 150
+  },
+  {
+   "rotulo": "2511-9/00 — Fabricação de pneumáticos e de câmaras-de-ar",
+   "valor": 500.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2512-7/00 — Recondicionamento de pneumáticos",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2519-4/00 — Fabricação de artefatos diversos de borracha",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2521-6/00 — Fabricação de laminados planos e tubulares de plástico",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2522-4/00 — Fabricação de embalagem de plástico",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2529-1/01 — Fabricação de artefatos de material plástico para uso pessoal e doméstico, reforçados ou não com fibra de vidro",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2529-1/02 — Fabricação de artefatos de material plástico para usos industriais - exclusive na indústria da construção civil",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2529-1/03 — Fabricação de artefatos de material plástico para uso na construção civil",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2529-1/99 — Fabricação de artefatos de plástico para outros usos",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2611-5/00 — Fabricação de vidro plano e de segurança",
+   "valor": 350.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2612-3/00 — Fabricação de vasilhames de vidro",
+   "valor": 350.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2619-0/00 — Fabricação de artigos de vidro",
+   "valor": 350.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2620-4/00 — Fabricação de cimento",
+   "valor": 500.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/01 — Fabricação de estruturas pré-moldadas de concreto armado, em série ou sob encomenda",
+   "valor": 300.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/02 — Fabricação de artefatos de cimento para uso na construção civil",
+   "valor": 300.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/03 — Fabricação de artefatos de fibrocimento para uso na construção civil",
+   "valor": 300.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/04 — Fabricação de casas pré-moldadas de concreto",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/05 — Preparação de massa de concreto e argamassa para construção",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2630-1/99 — Fabricação de outros artefatos ou produtos de concreto, cimento, fibrocimento, gesso e estuque",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2641-7/01 — Fabricação de artefatos de cerâmica ou barro cozido",
+   "valor": 400.0,
+   "pagina": 151
+  },
+  {
+   "rotulo": "2641-7/02 — Fabricação de azulejos e pisos",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2642-5/00 — Fabricação de produtos cerâmicos refratários",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2649-2/00 — Fabricação de produtos cerâmicos não-refratários para usos diversos",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2691-3/01 — Britamento de pedras (não associado à extração)",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2691-3/02 — Aparelhamento de pedras para construção (não associado à extração)",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2691-3/03 — Aparelhamento de placas e execução de trabalhos em mármore, granito, ardósia e outras pedras - exclusive para construção",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2692-1/00 — Fabricação de cal virgem, cal hidratada e gesso",
+   "valor": 400.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2699-9/00 — Fabricação de outros produtos de minerais nãometálicos",
+   "valor": 400.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2751-0/00 — Produção de peças fundidas de ferroa e aço",
+   "valor": 400.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2752-9/00 — Produção de peças fundidas de metais não-ferrosos e suas ligas",
+   "valor": 400.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2811-8/00 — Fabricação de estruturas metálicas para edifícios, pontes, torres de transmissão, andaimes e outros fins, inclusive sob encomenda",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2812-6/00 — Fabricação de esquadrias de metal",
+   "valor": 300.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2813-4/00 — Fabricação de obras de caldeiraria pesada",
+   "valor": 400.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2821-5/01 — Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2821-5/02 — Manutenção e reparação de tanques, resevatórios metálicos e caldeiras para aquecimento central",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2822-3/01 — Fabricação de caldeiras geradoras de vapor - exclusive para aquecimento central e para veículos",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2822-3/02 — Manutenção e reparação de caldeiras geradoras de",
+   "valor": 500.0,
+   "pagina": 152
+  },
+  {
+   "rotulo": "2831-2/00 — Produção de forjados de aço",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2832-0/00 — Produção de forjados de metais não-ferrosos e suas ligas",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2833-9/00 — Produção de artefatos estampados de metal",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2834-7/00 — Metalurgia do pó",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2839-8/00 — Têmpera, cementação e tratamento térmico do aço, serviços de usinagem, galvanotécnica e solda",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2841-0/00 — Fabricação de artigos de cutelaria",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2842-8/00 — Fabricação de artigos de serralheria",
+   "valor": 100.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2843-6/00 — Fabricação de ferramentas manuais",
+   "valor": 100.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2891-6/00 — Fabricação de embalagens metálicas",
+   "valor": 200.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2892-4/01 — Fabricação de produtos padronizados trefilados de ferro, aço e de metais não-ferrosos",
+   "valor": 200.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2892-4/99 — Fabricação de outros produtos de trefilados de ferro, aço e de metais não-ferrosos",
+   "valor": 200.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2893-2/00 — Fabricação de artigos de funilaria e de artigos de metal para usos doméstico e pessoal",
+   "valor": 200.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2899-1/00 — Fabricação de outros produtos elaborados de metal",
+   "valor": 400.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2911-4/01 — Fabricação de motores estacionários de combustão interna, turbinas e outras máquinas motrizes não elétricas, inclusive peças -exclusive para aviões e veículos rodoviários",
+   "valor": 500.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2911-4/02 — Instalação, reparação e manutenção de máquinas",
+   "valor": 200.0,
+   "pagina": 153
+  },
+  {
+   "rotulo": "2912-2/01 — Fabricação de bombas e carneiros hidráulicos, inclusive",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2912-2/02 — Reparação e manutenção de bombas e carneiros hidráulicos",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2913-0/01 — Fabricação de válvulas, torneiras e registros, inclusive peças",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2913-0/02 — Reparação e manutenção de válvulas industriais",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2914-9/01 — Fabricação de compressores, inclusive peças",
+   "valor": 500.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2914-9/02 — Reparação e manutenção de compressores",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2915-7/01 — Fabricação de equipamentos de transmissão para fins industriais - inclusive rolamentos e peças",
+   "valor": 500.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2915-7/02 — Reparação e manutenção de equipamentos de transmissão para fins industriais",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2921-1/01 — Fabricação de fornos industriais, aparelhos e equipamentos não-elétricos para instalações térmicas, inclusive peças",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2921-1/02 — Instalação, reparação e manutenção de fornos industriais, aparelhos e equipamentos não-elétricos para instalações térmicas",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2922-0/01 — Fabricação de estufas elétricas para fins industriais - inclusive peças",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2922-0/02 — Instalação, reparação e manutenção de estufas elétricas para fins industriais",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2923-8/00 — Fabricação de máquinas, equipamentos para transporte e elevação de cargas e pessoas - inclusive peças",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2924-6/01 — Fabricação de máquinas e aparelhos de refrigeração e ventilação de uso industrial - inclusive peças",
+   "valor": 400.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2924-6/02 — Instalação, reparação e manutenção de máquinas e aparelhos de refrigeração e ventilação de uso industrial",
+   "valor": 200.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2925-4/00 — Fabricação de equipamentos de ar condicionado",
+   "valor": 1000.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2929-7/01 — Fabricação de outras máquinas e equipamentos de uso geral - inclusive peças",
+   "valor": 500.0,
+   "pagina": 154
+  },
+  {
+   "rotulo": "2929-7/02 — Instalação, reparação e manutenção de outras máquinas e equipamentos de uso geral",
+   "valor": 200.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2931-9/01 — Fabricação de máquinas e equipamentos para agricultura, avicultura e obtenção de produtos animais - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2931-9/02 — Instalação, reparação e manutenção de máquinas e equipamentos para agricultura, avicultura e obtenção de produtos animais",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2932-7/01 — Fabricação de tratores agrícolas - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2932-7/02 — Reparação e manutenção de tratores agrícolas",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2940-8/01 — Fabricação de máquinas-ferramenta - inclusive peças",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2940-8/02 — Instalação, reparação e manutenção de máquinasferramenta",
+   "valor": 200.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2951-3/01 — Fabricação de máquinas e equipamentos para a indústria de prospecção e extração de petróleo - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2951-3/02 — Instalação, reparação e manutenção de maquinas e equipamentos para prospecção e extração de petróleo",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2952-1/01 — Fabricação de outras máquinas e equipamentos para a extração de minérios e indústria da construção - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2952-1/02 — Instalação, reparação e manutenção de outras máquinas e equipamentos para a extração de minérios e indústria da construção",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2953-0/01 — Fabricação de tratores de esteira e tratores de uso na construção e mineração - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2953-0/02 — Reparação e manutenção de tratores de esteira e tratores de uso na construção e mineração",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2954-8/01 — Fabricação de máquinas e equipamentos de terraplenagem e pavimentação",
+   "valor": 1000.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2954-8/02 — Reparação e manutenção de máquinas e equipamentos de terraplenagem e pavimentação",
+   "valor": 500.0,
+   "pagina": 155
+  },
+  {
+   "rotulo": "2961-0/01 — Fabricação de máquinas para a indústria metalúrgica, inclusive peças - exclusive máquinasferramenta",
+   "valor": 1000.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2961-0/02 — Instalação, reparação e manutenção de máquinas para indústria metalúrgica",
+   "valor": 500.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2962-9/01 — Fabricação de máquinas e equipamentos para as industrias alimentar, de bebidas e fumo - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2962-9/02 — Instalação, reparação e manutenção de máquinas e equipamentos para as industrias alimentar, de bebidas e fumo",
+   "valor": 500.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2963-7/01 — Fabricação de máquinas e equipamentos para a indústria têxtil - inclusive peças",
+   "valor": 400.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2963-7/02 — Instalação, reparação e manutenção de máquinas e equipamentos para a indústria têxtil",
+   "valor": 200.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2964-5/01 — Fabricação de máquinas e equipamentos para as indústrias do vestuário e de couro e calçados - inclusive peças",
+   "valor": 400.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2964-5/02 — Instalação, reparação e manutenção de maquinas e equipamentos do vestuário",
+   "valor": 200.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2965-3/01 — Fabricação de máquinas e aparelhos para a indústria de celulose, papel e papelão - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2965-3/02 — Instalação, reparação e manutenção de máquinas e aparelhos para a indústria de celulose, papel e papelão",
+   "valor": 500.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2969-6/01 — Fabricação de outras máquinas e equipamentos de uso específico - inclusive peças",
+   "valor": 400.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "2969-6/02 — Instalação, reparação e manutenção de outras máquinas e equipamentos de uso específico",
+   "valor": 200.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "3111-9/01 — Fabricação de geradores de corrente contínua ou alternada, inclusive peças",
+   "valor": 1000.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "3111-9/02 — Instalação, reparação e manutenção de geradores de corrente contínua ou alternada",
+   "valor": 500.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "3112-7/01 — Fabricação de transformadores, indutores,",
+   "valor": 400.0,
+   "pagina": 156
+  },
+  {
+   "rotulo": "3112-7/02 — Instalação, reparação e manutenção de transformadores, indutores, conversores, sincronizadores e semelhantes",
+   "valor": 200.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3113-5/01 — Fabricação de motores elétricos, inclusive peças",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3113-5/02 — Recuperação de motores elétricos",
+   "valor": 500.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3142-9/01 — Fabricação de baterias e acumuladores para veículos",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3142-9/02 — Recondicionamento de baterias e acumuladores para veículos",
+   "valor": 500.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3151-8/00 — Fabricação de lâmpadas",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3152-6/00 — Fabricação de luminárias e equipamentos de iluminação - exclusive para veículos",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3160-7/00 — Fabricação de material elétrico para veículos - exclusive baterias",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3191-7/00 — Fabricação de eletrodos, contatos e outros artigos de carvão e grafita para uso elétrico, eletroimãs e isoladores",
+   "valor": 400.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3192-5/00 — Fabricação de aparelhos e equipamentos para sinalização e alarme",
+   "valor": 400.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3199-2/00 — Fabricação de outros aparelhos ou equipamentos elétricos",
+   "valor": 400.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3210-7/00 — Fabricação de material eletrônico básico",
+   "valor": 400.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3221-2/01 — Fabricação de equipamentos transmissores de rádio e televisão e de equipamentos para estações telefônicas, para radiotelefonia e radiotelegrafia, de microondas e repetidoras - inclusive peças",
+   "valor": 1000.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3221-2/02 — Manutenção de equipamentos transmissores de rádio e televisão e de equipamentos para estações telefônicas, para radiotelefonia e radiotelegrafia - inclusive de microondas e repetidoras",
+   "valor": 500.0,
+   "pagina": 157
+  },
+  {
+   "rotulo": "3222-0/01 — Fabricação de aparelhos telefônicos, sistemas de intercomunicação e semelhantes, inclusive peças",
+   "valor": 1000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3222-0/02 — Manutenção e reparação de aparelhos telefônicos, sistemas de intercomunicação e semelhantes",
+   "valor": 500.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3450-9/00 — Recondicionamento ou recuperação de motores para veículos automotores",
+   "valor": 400.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3611-0/01 — Fabricação de móveis com predominância de madeira",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3611-0/02 — Serviços de montagem de móveis de madeira para consumidor final",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3612-9/01 — Fabricação de móveis com predominância de metal",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3612-9/02 — Serviços de montagem de móveis de metal para consumidor final",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3613-7/01 — Fabricação de móveis de outros materiais",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3613-7/02 — Serviços de montagem de móveis de materiais diversos (exclusive madeira e metal), para consumidor final",
+   "valor": 70.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3614-5/00 — Fabricação de colchões",
+   "valor": 350.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3710-9/00 — Reciclagem de sucatas metálicas",
+   "valor": 100.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "3720-6/00 — Reciclagem de sucatas não-metálicas",
+   "valor": 100.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4010-0/01 — Produção de energia elétrica",
+   "valor": 8000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4010-0/02 — Transmissão e a distribuição de energia elétrica",
+   "valor": 8000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4010-0/03 — Serviço de medição de consumo de energia elétrica",
+   "valor": 1000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4020-7/01 — Produção e distribuição de gás através de tubulações",
+   "valor": 8000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4020-7/02 — Distribuição de combustíveis gasosos de qualquer tipo por sistema de tubulação",
+   "valor": 8000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4020-7/03 — Serviços de medição de consumo de gás",
+   "valor": 1000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4100-9/01 — Captação, tratamento e distribuição de água canalizada",
+   "valor": 1000.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4100-9/02 — Serviço de medição de consumo de água",
+   "valor": 400.0,
+   "pagina": 158
+  },
+  {
+   "rotulo": "4511-0/01 — Demolição de edifícios e outras estruturas",
+   "valor": 150.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4511-0/02 — Preparação de terrenos",
+   "valor": 150.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4512-8/01 — Perfurações e execução de fundações destinadas à construção civil",
+   "valor": 200.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4512-8/02 — Sondagens destinadas à construção civil",
+   "valor": 200.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4513-6/00 — Terraplenagem e outras movimentações de terra",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4521-7/00 — Edificações (residenciais, industriais, comerciais e de serviços)",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4522-5/01 — Obras viárias (rodovias, vias férreas e aeroportos)",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4522-5/02 — Pintura para sinalização em pistas rodoviárias e aeroportos",
+   "valor": 100.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4523-3/00 — Grandes estruturas e obras de arte",
+   "valor": 400.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4524-1/00 — Obras de urbanização e paisagismo",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4525-0/01 — Montagem de estruturas metálicas, exclusive andaimes",
+   "valor": 150.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4525-0/02 — Montagens de andaimes",
+   "valor": 100.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/01 — Obras marítimas e fluviais",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/02 — Obras de irrigação",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/03 — Construção de redes de água e esgoto",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/04 — Construção de redes de transportes por dutos",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/05 — Perfuração e construção de poços de águas",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4529-2/99 — Outras obras de engenharia civil",
+   "valor": 300.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4531-4/00 — Construção de barragens e represas para geração de energia elétrica",
+   "valor": 1000.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4532-2/01 — Construção de estações e redes de distribuição de energia elétrica",
+   "valor": 1000.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4532-2/02 — Manutenção de redes de distribuição de energia elétrica",
+   "valor": 500.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4533-0/00 — Construção de estações e redes de telefonia e comunicação",
+   "valor": 1000.0,
+   "pagina": 159
+  },
+  {
+   "rotulo": "4534-9/00 — Construção de obras de prevenção e recuperação do meio ambiente",
+   "valor": 100.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4541-1/00 — Instalação e manutenção elétrica em edificações, inclusive elevadores, escadas, esteiras rolantes e antenas",
+   "valor": 100.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4542-0/00 — Instalação e manutenção de sistemas centrais de ar condicionado, de ventilação e refrigeração",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4543-8/01 — Instalações hidráulicas, sanitárias e de gás",
+   "valor": 200.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4543-8/02 — Instalações de sistema de prevenção contra incêndio",
+   "valor": 200.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4549-7/01 — Montagem e instalação de sistemas e equipamentos de iluminação e sinalização em vias públicas, portos e aeroportos",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4549-7/03 — Tratamentos acústico e térmico",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4549-7/04 — Instalação de anúncios",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4549-7/99 — Outras obras de instalações",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4551-9/01 — Obras de alvenaria e reboco",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4551-9/02 — Obras de acabamento em gesso e estuque",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4552-7/01 — Impermeabilização em obras de engenharia civil",
+   "valor": 300.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4552-7/02 — Serviços de pintura em edificações em geral",
+   "valor": 100.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4559-4/01 — Instalação de portas, janelas, tetos, divisórias e armários embutidos de qualquer material, inclusive de esquadrias",
+   "valor": 100.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4559-4/02 — Serviços de revestimentos e aplicação de resinas em interiores e exteriores",
+   "valor": 100.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4559-4/99 — Outras obras de acabamento da construção",
+   "valor": 150.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "4560-8/00 — Aluguel de máquinas e equipamentos de construção e demolição com operários",
+   "valor": 300.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/01 — Comércio por atacado de veículos automotores",
+   "valor": 2000.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/02 — Comércio a varejo de automóveis, camionetas e utilitários novos",
+   "valor": 500.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/03 — Comércio a varejo de caminhões novos",
+   "valor": 500.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/04 — Comércio a varejo de reboques e semi-reboques novos",
+   "valor": 200.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/05 — Comércio a varejo de ônibus e microônibus novos",
+   "valor": 500.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/06 — Comércio a varejo de veículos automotores usados",
+   "valor": 200.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5010-5/07 — Intermediários do comércio de veículos automotores",
+   "valor": 200.0,
+   "pagina": 160
+  },
+  {
+   "rotulo": "5020-2/01 — Serviços de manutenção e reparação de automóveis",
+   "valor": 80.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5020-2/02 — Serviços de manutenção e reparação de caminhões, ônibus e outros veículos pesados",
+   "valor": 80.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5020-2/03 — Serviços de lavagem, lubrificação e polimento de veículos",
+   "valor": 70.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5020-2/04 — Serviços de borracheiros e gomaria",
+   "valor": 50.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5020-2/05 — Serviços de manutenção e reparação de ar condicionado para veículos automotores",
+   "valor": 50.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5020-2/06 — Serviços de reboque de veículos",
+   "valor": 80.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5030-0/01 — Comércio por atacado de peças e acessórios para veículos automotores",
+   "valor": 500.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5030-0/02 — Comércio por atacado de pneumáticos e câmaras de ar",
+   "valor": 500.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5030-0/03 — Comércio a varejo de peças e acessórios para veículos automotores",
+   "valor": 100.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5030-0/04 — Comércio a varejo de pneumáticos e câmaras de ar",
+   "valor": 100.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5030-0/05 — Intermediários do comércio de peças e acessórios para veículos automotores",
+   "valor": 80.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5041-5/01 — Comércio por atacado de motocicletas e motonetas",
+   "valor": 1000.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5041-5/02 — Comércio por atacado de peças e acessórios para motocicletas e motonetas",
+   "valor": 200.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5041-5/03 — Comércio a varejo de motocicletas e motonetas",
+   "valor": 100.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5041-5/04 — Comércio a varejo de peças e acessórios para motocicletas e motonetas",
+   "valor": 100.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5041-5/05 — Intermediários do comércio de peças e acessórios para motocicletas e motonetas",
+   "valor": 50.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5042-3/00 — Manutenção e reparação de motocicletas e motonetas",
+   "valor": 70.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5050-4/00 — Comércio a varejo de combustíveis e lubrificantes para veículos automotores",
+   "valor": 300.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5111-0/00 — Intermediários do comércio de matérias primas agrícolas, animais vivos, matérias primas têxteis e produtos semi-acabados",
+   "valor": 200.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5112-8/00 — Intermediários do comércio de combustíveis, minerais, metais e produtos químicos industriais",
+   "valor": 200.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5113-6/00 — Intermediários do comércio de madeira, material de",
+   "valor": 200.0,
+   "pagina": 161
+  },
+  {
+   "rotulo": "5114-4/00 — Intermediários do comércio de máquinas, equipamentos industriais, embarcações e aeronaves",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5115-2/00 — Intermediários do comércio de móveis e artigos de uso doméstico",
+   "valor": 100.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5116-0/00 — Intermediários do comércio de têxteis, vestuário, calçados e artigos de couro",
+   "valor": 100.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5117-9/00 — Intermediários do comércio de produtos alimentícios, bebidas e fumo",
+   "valor": 100.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5118-7/00 — Intermediários do comércio especializado em produtos não especificados anteriormente",
+   "valor": 100.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5119-5/00 — Intermediários do comércio de mercadorias em geral (não especializado)",
+   "valor": 100.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/01 — Comércio atacadista de produtos alimentícios industrializados para animais",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/02 — Comércio atacadista de algodão",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/03 — Comércio atacadista de café em grão",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/04 — Comércio atacadista de soja",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/05 — Comércio atacadista de fumo em folha não beneficiado",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/06 — Comércio atacadista de cacau em baga",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/07 — Comércio atacadista de sementes, flores, plantas e gramas",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/08 — Comércio atacadista de sisal",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5121-7/99 — Comércio atacadista de outros cereais e leguminosas em bruto e matérias primas agrícolas diversas",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/01 — Comércio atacadista de bovinos",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/02 — Comércio atacadista de eqüinos",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/03 — Comércio atacadista de ovinos",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/04 — Comércio atacadista de suínos",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/05 — Comércio atacadista de outros animais vivos",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5122-5/06 — Comércio atacadista de couros, peles, chifres, ossos, cascos, crinas, lã, pelos e cerdas em bruto, penas e plumas",
+   "valor": 200.0,
+   "pagina": 162
+  },
+  {
+   "rotulo": "5131-4/00 — Comércio atacadista de leite e produtos do leite",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5132-2/01 — Comércio atacadista de cereais beneficiados",
+   "valor": 200.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5132-2/02 — Comércio atacadista de farinhas, amidos e féculas",
+   "valor": 150.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5133-0/01 — Comércio atacadista de frutas, verduras, raízes, tubérculos, hortaliças e legumes frescos",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5133-0/02 — Comércio atacadista de aves vivas e ovos",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5133-0/03 — Comércio atacadista de coelhos e outros pequenos animais vivos para alimentação",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5134-9/00 — Comércio atacadista de carnes e produtos de carne",
+   "valor": 150.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5135-7/00 — Comércio atacadista de pescados e frutos do mar",
+   "valor": 150.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5136-5/01 — Comércio atacadista de água mineral",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5136-5/02 — Comércio atacadista de cerveja, chope e refrigerante",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5136-5/99 — Comércio atacadista de outras bebidas em geral",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5137-3/01 — Comércio atacadista de fumo beneficiado",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5137-3/02 — Comércio atacadista de cigarros, cigarrilhas e charutos",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/01 — Comércio atacadista de café torrado, moído e solúvel",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/02 — Comércio atacadista de açúcar",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/03 — Comércio atacadista de óleos refinados e gorduras",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/04 — Comércio atacadista de pães, bolos, biscoitos e similares",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/05 — Comércio atacadista de massas alimentícias em geral",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/06 — Comércio atacadista de sorvetes",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/07 — Comércio atacadista de produtos alimentícios para animais domésticos",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5139-0/99 — Comércio atacadista de outros produtos alimentícios",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5141-1/01 — Comércio atacadista de fios e fibras têxteis",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5141-1/02 — Comércio atacadista de tecidos",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5141-1/03 — Comércio atacadista de artigos de cama, mesa e banho",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5141-1/04 — Comércio atacadista de artigos de armarinho",
+   "valor": 100.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5142-0/01 — Comércio atacadista de artigos do vestuário e complementos, exclusive profissionais e de segurança",
+   "valor": 200.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5142-0/02 — Comércio atacadista de roupas e acessórios para uso profissional e de segurança do trabalho",
+   "valor": 200.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5142-0/03 — Comércio atacadista de bolsas, malas e artigos de viagem",
+   "valor": 200.0,
+   "pagina": 163
+  },
+  {
+   "rotulo": "5143-8/00 — Comércio atacadista de calçados",
+   "valor": 100.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5144-6/01 — Comércio atacadista de máquinas, aparelhos e equipamentos elétricos de uso pessoal e doméstico",
+   "valor": 100.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5144-6/02 — Comércio atacadista de aparelhos eletrônicos de uso pessoal e doméstico",
+   "valor": 100.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5145-4/01 — Comércio atacadista de produtos farmacêuticos de uso humano",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5145-4/02 — Comércio atacadista de produtos farmacêuticos de uso veterinário",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5145-4/03 — Comércio atacadista de instrumentos e materiais médico-cirúrgico- hospitalares",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5145-4/04 — Comércio atacadista de próteses e artigos de ortopedia",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5145-4/05 — Comércio atacadista de produtos odontológicos",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5146-2/01 — Comércio atacadista de cosméticos e produtos de perfumaria",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5146-2/02 — Comércio atacadista de produtos de higiene pessoal",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5147-0/01 — Comércio atacadista de artigos de escritório e de papelaria",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5147-0/02 — Comércio atacadista de livros, jornais e outras publicações",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/01 — Comércio atacadista de produtos de higiene, limpeza e conservação domiciliar",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/02 — Comércio atacadista de bicicletas, triciclos e outros veículos recreativos",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/03 — Comércio atacadista de móveis",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/04 — Comércio atacadista de artigos de tapeçaria, colchoaria; persianas e cortinas",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/05 — Comércio atacadista de lustres, luminárias e abajures",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/06 — Comércio atacadista de filmes, fitas e discos",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5149-7/99 — Comércio atacadista de outros artigos de uso pessoal e doméstico",
+   "valor": 200.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5151-9/01 — Comércio atacadista de álcool carburante, gasolina e demais derivados de petróleo - exceto transportador retalhista (TRR)",
+   "valor": 2000.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5151-9/02 — Comércio atacadista de combustíveis realizado por transportador retalhista (TRR)",
+   "valor": 2000.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5151-9/03 — Comércio atacadista de gás liquefeito de petróleo (GLP)",
+   "valor": 2000.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5151-9/04 — Comércio atacadista de combustíveis de origem vegetal",
+   "valor": 2000.0,
+   "pagina": 164
+  },
+  {
+   "rotulo": "5151-9/05 — Comércio atacadista de combustíveis de origem mineral em bruto",
+   "valor": 2000.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5152-7/00 — Comércio atacadista de produtos extrativos de origem mineral",
+   "valor": 2000.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/01 — Comércio atacadista de madeira em bruto e produtos derivados",
+   "valor": 200.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/02 — Comércio atacadista de cimento",
+   "valor": 1000.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/03 — Comércio atacadista de ferragens e ferramentas",
+   "valor": 300.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/04 — Comércio atacadista de tintas, vernizes, solventes e similares",
+   "valor": 200.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/05 — Comércio atacadista de material elétrico para construção",
+   "valor": 200.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/06 — Comércio atacadista de mármores e granitos",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5153-5/99 — Comércio atacadista de outros materiais para construção",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5154-3/01 — Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5154-3/99 — Comércio atacadista de outros produtos químicos",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5155-1/00 — Comércio atacadista de resíduos e sucatas",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5159-4/01 — Comércio atacadista de embalagens",
+   "valor": 200.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5159-4/99 — Comércio atacadista de outros produtos intermediários não-agropecuários, não especificados anteriormente",
+   "valor": 350.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5161-6/00 — Comércio atacadista de máquinas, aparelhos e equipamentos de uso agropecuário; suas peças e acessórios",
+   "valor": 400.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5162-4/00 — Comércio atacadista de máquinas e equipamentos para o comércio; suas peças e acessórios",
+   "valor": 400.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5163-2/01 — Comércio atacadista de máquinas e equipamentos para escritório",
+   "valor": 400.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5163-2/02 — Comércio atacadista de equipamentos de informática e comunicação",
+   "valor": 400.0,
+   "pagina": 165
+  },
+  {
+   "rotulo": "5169-1/01 — Comércio atacadista de máquinas, aparelhos e equipamentos para uso industrial",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5169-1/02 — Comércio atacadista de máquinas, aparelhos e equipamentos odonto-médico-hospitalares e laboratoriais",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5169-1/03 — Comércio atacadista de bombas e compressores",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5169-1/99 — Comércio atacadista de máquinas, aparelhos e equipamentos para outros usos não especificados anteriormente",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5191-8/00 — Comércio atacadista de mercadorias em geral",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5192-6/00 — Comércio atacadista especializado em mercadorias não especificadas anteriormente",
+   "valor": 400.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5211-6/00 — Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios, com área de venda superior a 5000 metros quadrados - hipermercados.",
+   "valor": 200.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5212-4/00 — Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios, com área de venda entre 300 e 5000 metros quadrados - supermercados",
+   "valor": 150.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5213-2/01 — Minimercados",
+   "valor": 100.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5213-2/02 — Mercearias e armazéns varejistas",
+   "valor": 80.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5214-0/00 — Comércio varejista de mercadorias em lojas de conveniência",
+   "valor": 100.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5215-9/01 — Lojas de departamentos ou magazines",
+   "valor": 100.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5215-9/02 — Lojas de variedades de pequeno porte",
+   "valor": 100.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5215-9/03 — Lojas duty free de aeroportos internacionais",
+   "valor": 350.0,
+   "pagina": 166
+  },
+  {
+   "rotulo": "5221-3/01 — Comércio varejista de produtos de padaria e de confeitaria",
+   "valor": 100.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5221-3/02 — Comércio varejista de laticínios, frios e conservas",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5222-1/00 — Comércio varejista de doces, balas, bombons e semelhantes",
+   "valor": 50.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5223-0/00 — Comércio varejista de carnes - açougues",
+   "valor": 100.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5224-8/00 — Comércio varejista de bebidas",
+   "valor": 800.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5229-9/01 — Tabacaria",
+   "valor": 100.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5229-9/02 — Comércio varejista de hortifrutigranjeiros",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5229-9/03 — Peixaria",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5229-9/99 — Comércio varejista de outros produtos alimentícios não especificados anteriormente",
+   "valor": 100.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5231-0/01 — Comércio varejista de tecidos",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5231-0/02 — Comercio varejista de artigos de armarinho",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5231-0/03 — Comercio varejista de artigos de cama, mesa e banho",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5232-9/00 — Comércio varejista de artigos do vestuário e complementos",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5233-7/01 — Comercio varejista de calçados",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5233-7/02 — Comércio varejista de artigos de couro e de viagem",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/01 — Comércio varejista de produtos farmacêuticos alopáticos (farmácias e drogarias)",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/02 — Comércio varejista de produtos farmacêuticos homeopáticos",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/03 — Farmácias de manipulação",
+   "valor": 100.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/04 — Comércio varejista de artigos de perfumaria, cosméticos e de higiene pessoal",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/05 — Comércio varejista de artigos médicos e ortopédicos",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5241-8/06 — Comércio varejista de medicamentos veterinários",
+   "valor": 80.0,
+   "pagina": 167
+  },
+  {
+   "rotulo": "5242-6/01 — Comércio varejista de máquinas e aparelhos de uso doméstico e pessoal",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5242-6/02 — Comércio varejista de artigos fotográficos e cinematográficos",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5242-6/03 — Comércio varejista de instrumentos musicais e acessórios",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5242-6/04 — Comércio varejista de discos e fitas",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5243-4/01 — Comércio varejista de móveis",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5243-4/02 — Comércio varejista de artigos de colchoaria",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5243-4/03 — Comércio varejista de artigos de tapeçaria",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5243-4/04 — Comércio varejista de artigos de iluminação",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5243-4/99 — Comércio varejista de outros artigos de utilidade doméstica",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/01 — Comércio varejista de ferragens, ferramentas e produtos metalúrgicos",
+   "valor": 200.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/02 — Comércio varejista de vidros, espelhos, vitrais e molduras",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/03 — Comércio varejista de material para pintura",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/04 — Comércio varejista de madeira e seus artefatos",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/05 — Comércio varejista de materiais elétricos para construção",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5244-2/99 — Comércio varejista de materiais de construção em geral",
+   "valor": 200.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5245-0/01 — Comércio varejista de máquinas e equipamentos para escritório",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5245-0/02 — Comércio varejista de máquinas, equipamentos e materiais de informática",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5245-0/03 — Comércio varejista de máquinas, equipamentos e materiais de comunicação",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5246-9/01 — Comércio varejista de livros",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5246-9/02 — Comércio varejista de artigos de papelaria",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5246-9/03 — Comércio varejista de jornais e revistas",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5247-7/00 — Comércio varejista de gás liqüefeito de petróleo (GLP)",
+   "valor": 300.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5249-3/01 — Comércio varejista de artigos de ótica",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5249-3/02 — Comércio varejista de artigos de relojoaria e joalheria",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5249-3/03 — Comércio varejista de artigos de ”souveniers”, bijuterias e artesanatos",
+   "valor": 80.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5249-3/04 — Comércio varejista de bicicletas, triciclos e outros veículos recreativos; suas peças e acessórios",
+   "valor": 100.0,
+   "pagina": 168
+  },
+  {
+   "rotulo": "5249-3/05 — Comércio varejista de artigos esportivos",
+   "valor": 100.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/06 — Comércio varejista de brinquedos e artigos recreativos",
+   "valor": 100.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/07 — Comércio varejista de plantas e flores naturais e artificiais e frutos ornamentais",
+   "valor": 80.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/08 — Comércio varejista de artigos de caça, pesca e “camping”",
+   "valor": 80.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/09 — Comércio varejista de armas e munições",
+   "valor": 200.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/10 — Comércio varejista de objetos de arte",
+   "valor": 150.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5249-3/99 — Comércio varejista de outros produtos não especificados anteriormente",
+   "valor": 100.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5250-7/01 — Comércio varejista de antigüidades",
+   "valor": 50.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5261-2/01 — Comércio varejista de artigos em geral, por catálogo ou pedido pelo correio",
+   "valor": 100.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5261-2/02 — Comércio varejista de artigos em geral, por televisão, internet e outros meios de comunicação",
+   "valor": 100.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5269-8/01 — Comércio varejista realizado em vias públicas",
+   "valor": 20.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5269-8/02 — Comércio varejista a domicílio",
+   "valor": 30.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5269-8/03 — Comércio varejista realizado em postos móveis",
+   "valor": 30.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5269-8/04 — Comércio varejista realizado através de máquinas automáticas",
+   "valor": 80.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5271-0/00 — Reparação e manutenção de máquinas e de aparelhos eletrodomésticos",
+   "valor": 50.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5272-8/00 — Reparação de calçados",
+   "valor": 20.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5279-5/01 — Chaveiros",
+   "valor": 50.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5279-5/99 — Reparação de outros objetos pessoais e domésticos",
+   "valor": 20.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5511-5/01 — Hotel com restaurante",
+   "valor": 300.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5511-5/02 — Apart-hotel (usado como hotel), com restaurante",
+   "valor": 300.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5511-5/03 — Motel (com serviço de alimentação)",
+   "valor": 200.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5512-3/01 — Hotel sem restaurante",
+   "valor": 200.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5512-3/02 — Apart-hotel (usado como hotel), sem restaurante",
+   "valor": 200.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5512-3/03 — Motel (sem serviço de alimentação)",
+   "valor": 200.0,
+   "pagina": 169
+  },
+  {
+   "rotulo": "5519-0/01 — Albergues, exclusive assistenciais",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5519-0/02 — Camping",
+   "valor": 80.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5519-0/03 — Pensão com serviço de alimentação",
+   "valor": 80.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5519-0/04 — Pensão sem serviço de alimentação",
+   "valor": 80.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5519-0/99 — Outros tipos de alojamento",
+   "valor": 80.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5521-2/01 — Restaurante",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5521-2/02 — Choperias, whiskeria e outros estabelecimentos especializados em servir bebidas",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5522-0/00 — Lanchonete, casas de chá, de sucos e similares",
+   "valor": 80.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5523-9/01 — Cantina (serviço de alimentação privativo) - exploração própria",
+   "valor": 50.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5523-9/02 — Cantina (serviço de alimentação privativo) - exploração por terceiros",
+   "valor": 50.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5524-7/01 — Fornecimento de alimentos preparados",
+   "valor": 50.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5524-7/02 — Serviços de buffet",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "5529-8/00 — Outros serviços de alimentação (em \"traillers\", quiosques, veículos e outros equipamentos)",
+   "valor": 50.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6023-2/01 — Transporte rodoviário de passageiros, regular, municipal urbano",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6023-2/02 — Transporte rodoviário de passageiros, regular, intermunicipal metropolitano",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6024-0/01 — Transporte rodoviário de passageiros, regular, municipal não urbano",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6024-0/02 — Transporte rodoviário de passageiros, regular, intermunicipal",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6024-0/03 — Transporte rodoviário de passageiros, regular, interestadual",
+   "valor": 200.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6024-0/04 — Transporte rodoviário de passageiros, regular, internacional",
+   "valor": 300.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/01 — Serviços de táxis",
+   "valor": 100.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/02 — Locação de veículos rodoviários de passageiros com motorista, municipal",
+   "valor": 200.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/03 — Locação de veículos rodoviários de passageiros com motorista, intermunicipal, interestadual e internacional",
+   "valor": 200.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/04 — Organização de excursões em veículos rodoviários próprios municipal",
+   "valor": 200.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/05 — Organização de excursões em veículos rodoviários",
+   "valor": 300.0,
+   "pagina": 170
+  },
+  {
+   "rotulo": "6025-9/06 — Transporte escolar municipal",
+   "valor": 100.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6025-9/07 — Transporte escolar intermunicipal",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6026-7/01 — Transporte rodoviário de cargas em geral, municipal",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6026-7/02 — Transporte rodoviário de cargas em geral, intermunicipal, interestadual e internacional",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6026-7/03 — Locação de veículos rodoviários de carga, com motorista",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6027-5/00 — Transporte rodoviário de produtos perigosos",
+   "valor": 300.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6028-3/01 — Transporte rodoviário de mudanças",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6028-3/02 — Serviço de guarda-móveis",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6220-0/01 — Serviços de táxis aéreos e locação de aeronaves com tripulação",
+   "valor": 1000.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6220-0/02 — Outros serviços de transporte aéreo, não regular",
+   "valor": 1000.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6311-8/00 — Carga e descarga",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6312-6/01 — Armazéns gerais (emissão de warrants)",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6312-6/02 — Outros depósitos de mercadorias para terceiros",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6312-6/03 — Depósitos de mercadorias próprias",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6321-5/01 — Terminais rodoviários e ferroviários",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6321-5/02 — Operação de pontes, túneis e rodovias",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6321-5/03 — Exploração de estacionamento para veículos",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6321-5/04 — Centrais de chamadas e reserva de táxis",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6321-5/99 — Outras atividades auxiliares aos transportes terrestres",
+   "valor": 200.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6330-4/00 — Atividades de agências de viagens e organizadores de viagem",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6340-1/01 — Atividades de despachantes aduaneiros",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6340-1/02 — Atividades de comissária",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6340-1/03 — Agenciamento de cargas",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6340-1/99 — Outras atividades relacionadas a organização do transporte de cargas",
+   "valor": 150.0,
+   "pagina": 171
+  },
+  {
+   "rotulo": "6411-4/01 — Atividades do Correio Nacional",
+   "valor": 1000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6411-4/02 — Atividades do Correio Nacional executadas por franchising",
+   "valor": 500.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6412-2/00 — Serviços de malotes e entrega rápida, não realizados pelo Correio Nacional",
+   "valor": 500.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/01 — Telecomunicações por fio",
+   "valor": 8000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/02 — Telecomunicações sem fio",
+   "valor": 8000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/03 — Telecomunicações por satélite",
+   "valor": 8000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/04 — Outras telecomunicações",
+   "valor": 8000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/05 — Provedores de acesso as redes de telecomunicações",
+   "valor": 300.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6420-3/06 — Serviços de manutenção de redes de telecomunicações",
+   "valor": 200.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6510-2/00 — Banco Central",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6521-8/00 — Bancos comerciais",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6522-6/00 — Bancos múltiplos (com carteira comercial)",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6523-4/00 — Caixas econômicas",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6524-2/01 — Bancos cooperativos",
+   "valor": 3000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6524-2/02 — Cooperativas de crédito mútuo",
+   "valor": 3000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6524-2/03 — Cooperativas de crédito rural",
+   "valor": 2000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6531-5/00 — Bancos múltiplos (sem carteira comercial)",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6532-3/00 — Bancos de investimento",
+   "valor": 5000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6533-1/00 — Bancos de desenvolvimento",
+   "valor": 3000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6534-0/01 — Sociedades de crédito imobiliário",
+   "valor": 1000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6534-0/02 — Associações de poupança e empréstimo",
+   "valor": 1000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6534-0/03 — Companhias hipotecárias",
+   "valor": 1000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6535-8/00 — Sociedades de crédito, financiamento e investimento",
+   "valor": 1000.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6540-4/00 — Arrendamento mercantil",
+   "valor": 520.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6551-0/00 — Agências de desenvolvimento",
+   "valor": 520.0,
+   "pagina": 172
+  },
+  {
+   "rotulo": "6559-5/01 — Administração de consórcios",
+   "valor": 520.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6559-5/02 — Administração de cartão de crédito",
+   "valor": 520.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6559-5/03 — Factoring",
+   "valor": 520.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6559-5/04 — Caixas de financiamento de corporações",
+   "valor": 520.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6559-5/99 — Outras atividades de concessão de crédito",
+   "valor": 520.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6591-9/00 — Fundos mútuos de investimento",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6592-7/00 — Sociedades de capitalização",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/01 — Clubes de investimento",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/02 — Sociedades de investimento",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/03 — Sociedades de participação",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/04 — Escritórios de representação de bancos estrangeiros",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/05 — Holdings de instituições financeiras",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/06 — Licenciamento, compra e venda e leasing de ativos intangíveis não financeiros, exclusive direitos autorais",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/07 — Gestão de fundos para fins diversos, exclusive investimentos",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6599-4/99 — Outras atividades de intermediação financeira, não especificadas anteriormente",
+   "valor": 800.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6611-7/00 — Seguros de vida",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6612-5/01 — Seguro saúde",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6612-5/99 — Outros seguros não-vida",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6613-3/00 — Resseguros",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6621-4/00 — Previdência privada fechada",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6622-2/00 — Previdência privada aberta",
+   "valor": 500.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6630-3/00 — Planos de saúde",
+   "valor": 320.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6719-9/01 — Serviços de liquidação e custódia",
+   "valor": 320.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6719-9/02 — Caixas de liquidação de mercados bursáteis",
+   "valor": 320.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6719-9/03 — Emissão de vales alimentação, transporte e similares",
+   "valor": 200.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6719-9/99 — Outras atividades auxiliares da intermediação financeira, não especificadas anteriormente",
+   "valor": 320.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6720-2/01 — Corretores e agentes de seguros e de planos de previdência privada e de saúde",
+   "valor": 200.0,
+   "pagina": 173
+  },
+  {
+   "rotulo": "6720-2/02 — Peritos e avaliadores de seguros",
+   "valor": 200.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "6720-2/03 — Auditoria e consultoria atuarial",
+   "valor": 200.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "6720-2/04 — Clube de seguros",
+   "valor": 200.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "6720-2/99 — Outras atividades auxiliares dos seguros e da previdência privada, não especificadas anteriormente",
+   "valor": 200.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7010-6/00 — Incorporação e compra e venda de imóveis",
+   "valor": 250.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7020-3/00 — Aluguel de imóveis",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7031-9/00 — Corretagem e avaliação de imóveis",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7032-7/00 — Administração de imóveis por conta de terceiros",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7040-8/00 — Condomínios de prédios residenciais ou não",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7110-2/00 — Aluguel de automóveis sem motorista",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7121-8/00 — Aluguel de outros meios de transporte terrestre, inclusive containers",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7122-6/00 — Aluguel de embarcações sem tripulação, exclusive para fins recreativos",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7123-4/00 — Aluguel de aeronaves sem tripulação",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7131-5/00 — Aluguel de máquinas e equipamentos agrícolas",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7132-3/00 — Aluguel de máquinas e equipamentos para construção e engenharia civil, inclusive andaime",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7133-1/00 — Aluguel de máquinas e equipamentos para escritórios, inclusive computadores e material telefônico",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7139-0/01 — Aluguel de aparelhos de jogos eletrônicos",
+   "valor": 150.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7139-0/02 — Aluguel de máquinas e equipamentos para extração de minérios e petróleo, sem operador",
+   "valor": 500.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7139-0/03 — Aluguel de equipamentos científicos, médicos e hospitalares, sem operador",
+   "valor": 500.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7139-0/99 — Aluguel de outras máquinas e equipamentos comerciais, industriais, elétricos ou não, sem operador",
+   "valor": 350.0,
+   "pagina": 174
+  },
+  {
+   "rotulo": "7140-4/01 — Aluguel de objetos de vestuário, jóias, calçados e outros acessórios",
+   "valor": 80.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7140-4/02 — Aluguel de móveis, utensílios e aparelhos de uso doméstico e pessoal, inclusive instrumentos musicais",
+   "valor": 80.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7140-4/03 — Aluguel de fitas, vídeos, discos, cartuchos e similares",
+   "valor": 30.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7140-4/04 — Aluguel de material médico e paramédico",
+   "valor": 80.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7140-4/05 — Aluguel de material e equipamento esportivo",
+   "valor": 80.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7140-4/99 — Aluguel de outros objetos pessoais e domésticos",
+   "valor": 80.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7210-9/00 — Consultoria e/ou assessoria em sistemas de informática",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7220-6/00 — Desenvolvimento de programas de informática",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7230-3/00 — Processamento de dados",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7240-0/00 — Atividades de banco de dados",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7250-8/00 — Manutenção, reparação e instalação de máquinas de escritório e de informática",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7290-7/00 — Outras atividades de informática, não especificadas anteriormente",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7310-5/00 — Pesquisa e desenvolvimento das ciências físicas e naturais",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7320-2/00 — Pesquisa e desenvolvimento das ciências sociais e humanas",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7411-0/01 — Serviços advocatícios",
+   "valor": 150.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7411-0/02 — Atividades cartoriais",
+   "valor": 150.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7411-0/03 — Atividades auxiliares da justiça",
+   "valor": 150.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7412-8/01 — Atividades de contabilidade",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7412-8/02 — Atividades de auditoria contábil",
+   "valor": 100.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7413-6/00 — Pesquisas de mercado e de opinião pública",
+   "valor": 200.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7414-4/00 — Gestão de participações societárias (holdings)",
+   "valor": 200.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7415-2/00 — Sedes de empresas e unidades administrativas",
+   "valor": 200.0,
+   "pagina": 175
+  },
+  {
+   "rotulo": "7416-0/01 — Assessoria às atividades agrícolas e pecuárias",
+   "valor": 150.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7416-0/02 — Atividades de assessoria em gestão empresarial",
+   "valor": 150.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/01 — Serviços técnicos de arquitetura",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/02 — Serviços técnicos de engenharia",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/03 — Serviços técnicos de cartografia, topografia e geodésia",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/04 — Atividades de prospecção geológica",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/05 — Serviços de desenho técnico especializado",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7420-9/99 — Outros serviços técnicos especializados",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7430-6/00 — Ensaios de materiais e de produtos; análise de qualidade",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7440-3/01 — Agências de publicidade e propaganda",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7440-3/02 — Agenciamento e locação de espaços publicitários",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7440-3/99 — Outros serviços de publicidade",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7450-0/01 — Seleção e agenciamento de mão-de-obra",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7450-0/02 — Locação de mão-de-obra",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7460-8/01 — Atividades de investigação particular",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7460-8/02 — Atividades de vigilância e segurança privada",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7460-8/03 — Serviços de adestramento de cães de guarda",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7460-8/04 — Serviços de transporte de valores",
+   "valor": 500.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7470-5/01 — Atividades de limpeza em imóveis",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7470-5/02 — Serviços de dedetização, desratização, descupinização e similares",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7491-8/01 — Estúdios fotográficos",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7491-8/02 — Exploração de máquinas fotográficas de auto atendimento",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7491-8/03 — Laboratórios fotográficos",
+   "valor": 100.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7491-8/04 — Serviços de fotografias aéreas, submarinas e similares",
+   "valor": 200.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7492-6/00 — Atividades de envasamento e empacotamento, por conta de terceiros",
+   "valor": 200.0,
+   "pagina": 176
+  },
+  {
+   "rotulo": "7499-3/01 — Serviços de tradução, interpretação e similares",
+   "valor": 80.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/02 — Serviços de fotocópias e microfilmagem",
+   "valor": 80.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/03 — Serviços de contatos telefônicos",
+   "valor": 80.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/04 — Serviços de leiloeiros",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/05 — Serviços administrativos para terceiros",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/06 — Serviços de decoração de interiores",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/07 — Serviços de organização de eventos - exclusive culturais e desportivos",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/08 — Serviços de cobrança e de informações cadastrais",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7499-3/99 — Outros serviços prestados principalmente às empresas",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7511-6/00 — Administração pública em geral",
+   "valor": 380.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "7530-2/00 — Seguridade social",
+   "valor": 380.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8011-0/00 — Educação pré-escolar",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8012-8/00 — Educação fundamental",
+   "valor": 100.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8021-7/00 — Educação média de formação geral",
+   "valor": 150.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8022-5/00 — Educação média de formação técnica e profissional",
+   "valor": 150.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8030-6/00 — Educação Superior",
+   "valor": 300.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8091-8/00 — Ensino em auto-escolas e cursos de pilotagem",
+   "valor": 200.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8092-6/00 — Educação supletiva",
+   "valor": 200.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8093-4/01 — Cursos de línguas estrangeiras",
+   "valor": 90.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8093-4/02 — Cursos de informática",
+   "valor": 90.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8093-4/03 — Cursos de aprendizagem e treinamento gerencial e profissional",
+   "valor": 90.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8093-4/99 — Outros cursos de educação continuada ou permanente",
+   "valor": 90.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8094-2/00 — Ensino à distância",
+   "valor": 200.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8095-0/00 — Educação especial",
+   "valor": 80.0,
+   "pagina": 177
+  },
+  {
+   "rotulo": "8511-1/00 — Atividades de atendimento hospitalar",
+   "valor": 400.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8512-0/00 — Atividades de atendimento a urgências e emergências",
+   "valor": 400.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8513-8/01 — Clínica médica",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8513-8/02 — Clínica odontológica",
+   "valor": 150.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8513-8/03 — Serviços de vacinação e imunização humana",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8513-8/99 — Outras atividades de atenção ambulatorial",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/01 — Atividades dos laboratórios de anatomia patológica/citológica",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/02 — Atividades dos laboratórios de análises clínicas",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/03 — Serviços de diálise",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/04 — Serviços de raio-x, radiodiagnóstico e radioterapia",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/05 — Serviços de quimioterapia",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/06 — Serviços de banco de sangue",
+   "valor": 80.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8514-6/99 — Outras atividades de serviços de complementação diagnóstica e terapêutica",
+   "valor": 200.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/01 — Serviços de enfermagem",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/02 — Serviços de nutrição",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/03 — Serviços de psicologia",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/04 — Serviços de fisioterapia e terapia ocupacional",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/05 — Serviços de fonoaudiologia",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8515-4/99 — Outras atividades de serviços profissionais da área de saúde",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/01 — Atividades de terapias alternativas",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/02 — Serviços de acupuntura",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/03 — Serviços de hidroterapia",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/04 — Serviços de banco de leite materno",
+   "valor": 80.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/05 — Serviços de banco de esperma",
+   "valor": 80.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/06 — Serviços de banco de órgãos",
+   "valor": 80.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/07 — Serviços de remoções",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8516-2/99 — Outras atividades relacionadas com a atenção à saúde",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8520-0/00 — Serviços veterinários",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8531-6/01 — Asilos",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8531-6/02 — Orfanatos",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8531-6/03 — Albergues assistenciais",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8531-6/04 — Centros de reabilitação para dependentes químicos com alojamento",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8531-6/99 — Outros serviços sociais com alojamento",
+   "valor": 100.0,
+   "pagina": 178
+  },
+  {
+   "rotulo": "8532-4/01 — Creches",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "8532-4/02 — Centros de reabilitação para dependentes químicos sem alojamento",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9000-0/01 — Limpeza urbana - exclusive gestão de aterros sanitários",
+   "valor": 300.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9000-0/02 — Gestão de aterros sanitários",
+   "valor": 300.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9000-0/03 — Gestão de redes de esgoto",
+   "valor": 300.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9000-0/99 — Outras atividades relacionadas a limpeza urbana e esgoto",
+   "valor": 300.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9111-1/00 — Atividades de organizações empresariais e patronais",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9112-0/00 — Atividades de organizações profissionais",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9120-0/00 — Atividades de organizações sindicais",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9191-0/00 — Atividades de organizações religiosas",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9192-8/00 — Atividades de organizações políticas",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9199-5/00 — Outras atividades associativas, não especificadas anteriormente",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9211-8/01 — Estúdios cinematográficos",
+   "valor": 200.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9211-8/02 — Atividades de produção de filmes e fitas de vídeo, exclusive estúdios cinematográficos",
+   "valor": 200.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9211-8/03 — Serviços de dublagem e mixagem sonora",
+   "valor": 300.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9211-8/99 — Outras atividades relacionadas a produção de filmes e fitas de vídeos",
+   "valor": 200.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9212-6/00 — Distribuição de filmes e de vídeos",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9213-4/00 — Projeção de filmes e de vídeos",
+   "valor": 100.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9221-5/00 — Atividades de rádio",
+   "valor": 500.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9222-3/01 — Atividades de televisão aberta",
+   "valor": 1000.0,
+   "pagina": 179
+  },
+  {
+   "rotulo": "9222-3/02 — Atividades de televisão por assinatura",
+   "valor": 2000.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/01 — Companhias de teatro",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/02 — Outras companhias artísticas, exclusive de teatro",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/03 — Produção, organização e promoção de espetáculos artísticos e eventos culturais",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/04 — Restauração de obras de arte",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/05 — Gestão de direitos autorais de obras artísticas, literárias e musicais",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9231-2/99 — Outros serviços especializados ligados às atividades artísticas",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9232-0/01 — Exploração de salas de espetáculos",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9232-0/02 — Agências de venda de ingressos para salas de espetáculos",
+   "valor": 80.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9232-0/03 — Estúdios de gravação de som",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9232-0/04 — Serviços de sonorização e outras atividades ligadas à gestão de salas de espetáculos",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9239-8/01 — Produção de espetáculos circenses, marionetes e similares",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9239-8/02 — Produção de espetáculos de rodeios, vaquejadas e similares",
+   "valor": 200.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9239-8/03 — Academias de dança",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9239-8/04 — Discotecas, danceterias e similares",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9239-8/99 — Outras atividades de espetáculos, não especificadas anteriormente",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9240-1/00 — Atividades de agências de notícias",
+   "valor": 300.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9251-7/00 — Atividades de bibliotecas e arquivos",
+   "valor": 80.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9252-5/01 — Gestão de museus",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9252-5/02 — Conservação de lugares e edifícios históricos",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9253-3/00 — Atividades de jardins botânicos, zoológicos, parques nacionais e reservas ecológicas",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/01 — Clubes sociais, desportivos e similares",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/02 — Organização e exploração de atividades desportivas",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/03 — Gestão de instalações desportivas",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/04 — Ensino de esportes",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/05 — Academias de ginástica",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/06 — Atividades ligadas à corrida de cavalos",
+   "valor": 150.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9261-4/99 — Outras atividades desportivas",
+   "valor": 100.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9262-2/01 — Exploração de bingos",
+   "valor": 400.0,
+   "pagina": 180
+  },
+  {
+   "rotulo": "9262-2/02 — Atividades das concessionárias e da venda de bilhetes de loterias",
+   "valor": 200.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/03 — Atividades de sorteio via telefone",
+   "valor": 200.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/04 — Exploração de outros jogos de azar",
+   "valor": 400.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/05 — Exploração de boliches",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/06 — Exploração de fliperamas e jogos eletrônicos",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/07 — Exploração de parques de diversões e similares",
+   "valor": 300.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9262-2/99 — Outras atividades relacionadas ao lazer",
+   "valor": 150.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9301-7/01 — Lavanderias e tinturarias",
+   "valor": 80.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9301-7/02 — Toalheiros",
+   "valor": 80.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9302-5/01 — Cabeleireiros",
+   "valor": 80.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9302-5/02 — Manicures e outros serviços de tratamento de beleza",
+   "valor": 30.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9303-3/01 — Gestão e manutenção de cemitérios",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9303-3/02 — Serviços de cremação de cadáveres humanos e animais",
+   "valor": 200.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9303-3/03 — Serviços de sepultamento",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9303-3/04 — Serviços de funerárias",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9303-3/99 — Outras atividades funerárias",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9304-1/00 — Atividades de manutenção do físico corporal",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9309-2/01 — Atividades de agências matrimoniais",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9309-2/02 — Atividades de embelezamento de animais",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9309-2/99 — Outras atividades de serviços pessoais, não especificadas anteriormente",
+   "valor": 100.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9500-1/00 — Serviços domésticos",
+   "valor": 80.0,
+   "pagina": 181
+  },
+  {
+   "rotulo": "9900-7/00 — Organismos internacionais e outras instituições extraterritoriais",
+   "valor": 300.0,
+   "pagina": 181
+  }
+ ],
+ "semValor": [
+  {
+   "pagina": 169,
+   "linha": "5250-7/99 Comércio varejista de outros artigos usados, em lojas"
+  },
+  {
+   "pagina": 179,
+   "linha": "8532-4/99 Outros serviços sociais sem alojamento"
+  }
+ ]
+}

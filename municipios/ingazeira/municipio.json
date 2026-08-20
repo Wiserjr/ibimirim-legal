@@ -185,9 +185,9 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "Os treze anexos do Código fixam os valores em reais. Veja o cadastro de cobranças, logo abaixo.",
+  "resumo": "Os treze anexos do Código fixam os valores em reais. O Anexo I traz 944 atividades, pesquisáveis abaixo.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> o <strong>Anexo I</strong> da Lei Complementar nº 002/2016 — a taxa de licença por atividade, que ocupa as páginas 139 a 182 — ainda não foi transcrito item a item. Os demais doze anexos estão no cadastro de cobranças, com o valor e a página de cada um. Os valores são de 2016 e podem ter sofrido atualização — confirme com o Município."
+  "aviso": "<strong>944 atividades do Anexo I</strong> estão na busca acima, cada uma com a página em que consta. Os demais doze anexos estão no cadastro de cobranças. Duas atividades vêm <strong>sem valor</strong> no anexo publicado — 5250-7/99 e 8532-4/99 — e aparecem assinaladas. Os valores são de 2016; confirme atualização com o Município."
  },
  "ufm": {
   "regra": "O Código de Ingazeira fixa os valores dos seus anexos <strong>diretamente em reais</strong>, organizados por código CNAE — não usa unidade fiscal intermediária. A <strong>CIP é a exceção</strong>: a LC nº 007/2024 a transformou em <strong>percentual sobre a tarifa de iluminação pública da ANEEL (B4a)</strong>, em R$/MWh, sem bandeiras nem tributos, variando por classe consumidora e faixa de consumo. O percentual está no Anexo XII; a tarifa vem da Resolução Homologatória da ANEEL e <strong>muda a cada reajuste</strong>. Para imóvel sem medidor, a lei fixa <strong>R$ 40,36 por ano</strong>, valor de 2024, reajustado pelo IPCA. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",

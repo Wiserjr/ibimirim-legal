@@ -217,7 +217,7 @@
       "sujeitoPassivo": "A pessoa física ou jurídica que se estabeleça no Município.",
       "base": {
         "tipo": "formula",
-        "descricao": "Valor por atividade, conforme o Anexo I — tabela extensa, organizada por código de atividade."
+        "descricao": "Valor fixo por atividade, conforme o código CNAE-Fiscal — 944 atividades, de R$ 20,00 a R$ 8.000,00."
       },
       "periodicidade": "anual",
       "vencimento": "Na forma do regulamento.",
@@ -228,8 +228,8 @@
           "artigo": "Anexo I"
         }
       ],
-      "conferencia": "revisar",
-      "nota": "O Anexo I ocupa as páginas 139 a 182 e ainda não foi transcrito item a item. Abra a página citada para consultar a atividade.",
+      "conferencia": "conferido",
+      "nota": "As 944 atividades do Anexo I estão na busca de taxas, acima — procure pelo ramo ou pelo código CNAE. Cada valor foi conferido contra o texto da sua própria página. Duas atividades vêm SEM VALOR no anexo publicado: 5250-7/99 (comércio varejista de outros artigos usados, em lojas) e 8532-4/99 (outros serviços sociais sem alojamento).",
       "vigencia": {
         "de": "2016",
         "ate": null
