@@ -201,9 +201,9 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "As sete Tabelas de Receita deste Código fixam os valores diretamente em reais.",
+  "resumo": "As sete Tabelas de Receita fixam os valores em reais. Estão no cadastro de cobranças, abaixo.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> as sete Tabelas de Receita da Lei nº 874/2005 ainda não foram extraídas para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em reais <strong>de 2005</strong> e sofrem atualização monetária anual — confirme o valor do exercício com o Município."
+  "aviso": "<strong>As sete Tabelas de Receita estão no cadastro de cobranças</strong>, com o valor e a página de cada item. Todos foram <strong>lidos na imagem da página</strong>, porque a leitura automática do texto digitalizado se mostrou infiel. Os valores são de <strong>2005</strong> e sofrem atualização monetária anual pelo IPCA-E — confirme o valor do exercício com o Município."
  },
  "ufm": {
   "regra": "O Código de Cortês fixa os valores das suas sete Tabelas de Receita <strong>diretamente em reais</strong> — não usa UFM nem outra unidade fiscal intermediária. Os valores são os de <strong>2005</strong>: o art. 69, § 2º manda atualizá-los anualmente pelo <strong>IPCA-E do IBGE</strong>. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
@@ -221,7 +221,7 @@
   },
   {
    "tipo": "nota",
-   "texto": "As sete Tabelas de Receita deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+   "texto": "Os valores das tabelas foram <strong>conferidos um a um na imagem</strong> das páginas 61 a 71. A leitura automática do texto errava: numa página os rótulos vinham deslocados uma linha, noutra o <strong>“Isento”</strong> sumia, e na tabela de publicidade os números de item — 1.10, 1.11 — eram lidos como valores."
   }
  ]
 }

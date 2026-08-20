@@ -1,0 +1,1252 @@
+{
+  "sobre": "Cadastro de cobranças do município. Cada entrada diz o que se cobra, de quem, quando e em que base — e aponta o dispositivo que a sustenta. O acervo de Cortês é digitalizado: TODOS os valores das tabelas foram lidos na imagem da página, porque a leitura automática se mostrou infiel.",
+  "atualizado": "2026-08-20",
+  "cobrancas": [
+    {
+      "id": "iptu-edificado",
+      "tributo": "IPTU",
+      "rotulo": "IPTU — unidade imobiliária edificada",
+      "fatoGerador": "Propriedade, domínio útil ou posse de imóvel edificado na zona urbana.",
+      "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor a qualquer título.",
+      "base": {
+        "tipo": "percentual",
+        "percentual": 2.0,
+        "sobre": "o valor venal do imóvel"
+      },
+      "periodicidade": "anual",
+      "vencimento": "Lançamento anual, em nome do sujeito passivo.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 23,
+          "artigo": "art. 99, II"
+        }
+      ],
+      "nota": "Se a área do terreno exceder 8 vezes a área construída, o imposto soma duas parcelas: 2,0% sobre o valor venal correspondente a 8 vezes a área construída, e 2,5% sobre o excesso de terreno.",
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      }
+    },
+    {
+      "id": "iptu-terreno",
+      "tributo": "IPTU",
+      "rotulo": "IPTU — terreno e construção paralisada ou em ruínas",
+      "fatoGerador": "Unidade imobiliária constituída por terreno urbanizado ou não, e aquela em que houver construção condenada, em ruínas, incendiada, paralisada ou em andamento.",
+      "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor a qualquer título.",
+      "base": {
+        "tipo": "percentual",
+        "percentual": 2.5,
+        "sobre": "o valor venal do imóvel"
+      },
+      "periodicidade": "anual",
+      "vencimento": "Lançamento anual, em nome do sujeito passivo.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 23,
+          "artigo": "art. 99, I"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "iptu-progressivo",
+      "tributo": "IPTU",
+      "rotulo": "IPTU progressivo no tempo — imóvel subutilizado",
+      "fatoGerador": "Imóvel subutilizado que não atende à função social da propriedade, assim definido no Plano Diretor Urbano.",
+      "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor a qualquer título.",
+      "base": {
+        "tipo": "formula",
+        "descricao": "Majoração de 20% ao ano sobre as alíquotas do art. 99, I e II."
+      },
+      "periodicidade": "anual",
+      "vencimento": "Só a partir do exercício seguinte ao da notificação da condição de subutilizado.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 23,
+          "artigo": "art. 100"
+        }
+      ],
+      "nota": "O atendimento à função social faz voltar, no exercício seguinte, às alíquotas normais.",
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      }
+    },
+    {
+      "id": "itbi-popular",
+      "tributo": "ITBI",
+      "rotulo": "ITBI — imóvel popular",
+      "fatoGerador": "Transmissão inter vivos de imóvel popular, assim considerado o adotado para apuração do IPTU.",
+      "sujeitoPassivo": "O adquirente, nas transmissões por ato oneroso; o cessionário, nas cessões; cada permutante, nas permutas.",
+      "base": {
+        "tipo": "percentual",
+        "percentual": 1.0,
+        "sobre": "a base de cálculo apurada"
+      },
+      "periodicidade": "por ato",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 26,
+          "artigo": "art. 112, I"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "itbi-urbano-rural",
+      "tributo": "ITBI",
+      "rotulo": "ITBI — urbanas e rurais até 100 ha",
+      "fatoGerador": "Transmissão de propriedade urbana, ou de propriedade rural de até 100 hectares.",
+      "sujeitoPassivo": "O adquirente, o cessionário ou cada permutante.",
+      "base": {
+        "tipo": "percentual",
+        "percentual": 2.0,
+        "sobre": "a base de cálculo apurada"
+      },
+      "periodicidade": "por ato",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 26,
+          "artigo": "art. 112, II"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "itbi-demais",
+      "tributo": "ITBI",
+      "rotulo": "ITBI — demais transmissões",
+      "fatoGerador": "Demais transmissões inter vivos de bens imóveis e de direitos a eles relativos.",
+      "sujeitoPassivo": "O adquirente, o cessionário ou cada permutante.",
+      "base": {
+        "tipo": "percentual",
+        "percentual": 3.0,
+        "sobre": "a base de cálculo apurada"
+      },
+      "periodicidade": "por ato",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 26,
+          "artigo": "art. 112, III"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "iss-aliquotas",
+      "tributo": "ISS",
+      "rotulo": "ISS — alíquotas por atividade",
+      "fatoGerador": "Prestação dos serviços da Lista de Serviços anexa à Lei.",
+      "sujeitoPassivo": "O prestador do serviço.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "percentual",
+        "itens": [
+          {
+            "rotulo": "Itens 4.01 a 4.23 da Lista, quando prestados ao SUS",
+            "valor": 2
+          },
+          {
+            "rotulo": "Item 16 da Lista, quando vinculada a educação, saúde e agricultura",
+            "valor": 3
+          },
+          {
+            "rotulo": "Itens 8.01 e 8.02 da Lista",
+            "valor": 3
+          },
+          {
+            "rotulo": "Demais atividades da Lista de Serviços",
+            "valor": 5
+          }
+        ]
+      },
+      "periodicidade": "mensal",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 61,
+          "artigo": "Tabela de Receita nº I"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "iss-sociedades-autonomos",
+      "tributo": "ISS",
+      "rotulo": "ISS fixo — sociedades profissionais e autônomos",
+      "fatoGerador": "Prestação de serviço por sociedade profissional ou por profissional autônomo.",
+      "sujeitoPassivo": "A sociedade, por sócio ou profissional habilitado; ou o profissional autônomo.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Sociedade com até cinco sócios ou profissionais habilitados",
+            "valor": 20.0,
+            "por": "sócio",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Sociedade de seis a dez sócios ou profissionais habilitados",
+            "valor": 25.0,
+            "por": "sócio",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Sociedade com mais de dez sócios ou profissionais habilitados",
+            "valor": 30.0,
+            "por": "sócio",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Autônomo de nível superior sem empregado",
+            "valor": 120.0,
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Autônomo de nível superior com empregado",
+            "valor": 200.0,
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Autônomo de nível não superior sem empregado",
+            "valor": 20.0,
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Autônomo de nível não superior com empregado",
+            "valor": 40.0,
+            "periodicidade": "Anual"
+          }
+        ]
+      },
+      "periodicidade": "anual",
+      "vencimento": "Mensal para as sociedades, anual para os autônomos.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 61,
+          "artigo": "Tabela de Receita nº I, códigos 05 a 09"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "taxa-licenca-localizacao",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de licença de localização",
+      "fatoGerador": "Licenciamento da localização do estabelecimento no Município.",
+      "sujeitoPassivo": "O estabelecimento licenciado.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Estabelecimentos bancários",
+            "valor": 1000
+          },
+          {
+            "rotulo": "Concessionários de serviços de telecomunicações e energia",
+            "valor": 720
+          },
+          {
+            "rotulo": "Estabelecimentos de seguros",
+            "valor": 240
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe A",
+            "valor": 160
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe B",
+            "valor": 80
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe C",
+            "valor": 40
+          },
+          {
+            "rotulo": "Hospitais — até 25 leitos",
+            "valor": 40
+          },
+          {
+            "rotulo": "Hospitais — com mais de 25 leitos",
+            "valor": 80
+          },
+          {
+            "rotulo": "Clínicas médicas e veterinárias",
+            "valor": 60
+          },
+          {
+            "rotulo": "Estabelecimentos de intermediação de serviços financeiros",
+            "valor": 160
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — até 20 m²",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — de 20 a 50 m²",
+            "valor": 40.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — de 50 a 200 m²",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — acima de 200 m²",
+            "valor": 160.0
+          },
+          {
+            "rotulo": "Postos de abastecimento de gasolina, álcool e diesel",
+            "valor": 800.0
+          },
+          {
+            "rotulo": "Demais postos de inflamáveis e explosivos",
+            "valor": 50.0
+          },
+          {
+            "rotulo": "Farmácias — até 20 m²",
+            "valor": 40.0
+          },
+          {
+            "rotulo": "Farmácias — de 20 a 50 m²",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Farmácias — de 50 a 200 m²",
+            "valor": 120.0
+          },
+          {
+            "rotulo": "Farmácias — acima de 200 m²",
+            "valor": 160.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — até 20 m²",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — de 20 a 50 m²",
+            "valor": 40.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — de 50 a 200 m²",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — acima de 200 m²",
+            "valor": 160.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — até 20 m²",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — de 20 a 50 m²",
+            "valor": 25.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — de 50 a 200 m²",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — acima de 200 m²",
+            "valor": 95.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — até 20 m²",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — de 20 a 50 m²",
+            "valor": 40.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — de 50 a 200 m²",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — acima de 200 m²",
+            "valor": 160.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de grande porte",
+            "valor": 500.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de médio porte",
+            "valor": 250.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de pequeno porte",
+            "valor": 100.0
+          },
+          {
+            "rotulo": "Estabelecimentos de entidades de direito público",
+            "valor": 720.0
+          },
+          {
+            "rotulo": "Fundações privadas, associações, cooperativas, sindicatos, ONG, clubes e demais entidades sem fins lucrativos",
+            "valor": 40.0
+          }
+        ]
+      },
+      "periodicidade": "por ato",
+      "vencimento": "No licenciamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 62,
+          "artigo": "Tabela de Receita nº II"
+        },
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 63,
+          "artigo": "Tabela de Receita nº II"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "taxa-fiscalizacao-funcionamento",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de fiscalização do funcionamento",
+      "fatoGerador": "Fiscalização do funcionamento do estabelecimento.",
+      "sujeitoPassivo": "O estabelecimento fiscalizado.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Estabelecimentos bancários",
+            "valor": 1800
+          },
+          {
+            "rotulo": "Concessionários de serviços de telecomunicações e energia",
+            "valor": 1100
+          },
+          {
+            "rotulo": "Estabelecimentos de seguros",
+            "valor": 200
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe A",
+            "valor": 120
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe B",
+            "valor": 60
+          },
+          {
+            "rotulo": "Hotéis, pousadas e pensões — classe C",
+            "valor": 30
+          },
+          {
+            "rotulo": "Hospitais — até 25 leitos",
+            "valor": 30
+          },
+          {
+            "rotulo": "Hospitais — com mais de 25 leitos",
+            "valor": 60
+          },
+          {
+            "rotulo": "Clínicas médicas e veterinárias",
+            "valor": 50
+          },
+          {
+            "rotulo": "Estabelecimentos de intermediação de serviços financeiros",
+            "valor": 160
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — até 20 m²",
+            "valor": 15.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — de 20 a 50 m²",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — de 50 a 200 m²",
+            "valor": 60.0
+          },
+          {
+            "rotulo": "Demais prestadores de serviços — acima de 200 m²",
+            "valor": 120.0
+          },
+          {
+            "rotulo": "Postos de abastecimento de gasolina, álcool e diesel",
+            "valor": 800.0
+          },
+          {
+            "rotulo": "Demais postos de inflamáveis e explosivos",
+            "valor": 50.0
+          },
+          {
+            "rotulo": "Farmácias — até 20 m²",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Farmácias — de 20 a 50 m²",
+            "valor": 60.0
+          },
+          {
+            "rotulo": "Farmácias — de 50 a 200 m²",
+            "valor": 90.0
+          },
+          {
+            "rotulo": "Farmácias — acima de 200 m²",
+            "valor": 135.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — até 20 m²",
+            "valor": 15.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — de 20 a 50 m²",
+            "valor": 75.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — de 50 a 200 m²",
+            "valor": 160.0
+          },
+          {
+            "rotulo": "Supermercados, mercados, mercearias e padarias — acima de 200 m²",
+            "valor": 320.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — até 50 m²",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — de 50 a 200 m²",
+            "valor": 90.0
+          },
+          {
+            "rotulo": "Restaurantes, lanchonetes e bares — acima de 200 m²",
+            "valor": 180.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — até 50 m²",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — de 50 a 200 m²",
+            "valor": 90.0
+          },
+          {
+            "rotulo": "Demais estabelecimentos comerciais — acima de 200 m²",
+            "valor": 180.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de grande porte",
+            "valor": 500.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de médio porte",
+            "valor": 250.0
+          },
+          {
+            "rotulo": "Estabelecimento industrial de pequeno porte",
+            "valor": 100.0
+          },
+          {
+            "rotulo": "Estabelecimentos de entidades de direito público",
+            "valor": 720.0
+          },
+          {
+            "rotulo": "Fundações privadas, associações, cooperativas, sindicatos, ONG, clubes e demais entidades sem fins lucrativos",
+            "valor": 40.0
+          }
+        ]
+      },
+      "periodicidade": "anual",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 64,
+          "artigo": "Tabela de Receita nº III"
+        },
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 65,
+          "artigo": "Tabela de Receita nº III"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "taxa-obras",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de licença de execução de obras e urbanização",
+      "fatoGerador": "Exame de projeto, fiscalização da execução, demolição, desmembramento e loteamento em áreas particulares.",
+      "sujeitoPassivo": "O proprietário ou responsável pela obra.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Exame de projeto e fiscalização — até 60 m², estritamente residencial",
+            "valor": 0,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Exame de projeto e fiscalização — até 60 m²",
+            "valor": 0.5,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Exame de projeto e fiscalização — acima de 60 m²",
+            "valor": 1.0,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Obra notificada pelo Poder Público — até 60 m², estritamente residencial",
+            "valor": 0.5,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Obra notificada pelo Poder Público — até 60 m²",
+            "valor": 1.0,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Obra notificada pelo Poder Público — acima de 60 m²",
+            "valor": 2.0,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Exame de modificação em projeto aprovado, sem aumento ou redução de área",
+            "valor": 0.15,
+            "por": "m² ou fração"
+          },
+          {
+            "rotulo": "Fiscalização de obra de demolição",
+            "valor": 0.5,
+            "por": "m²"
+          },
+          {
+            "rotulo": "Cadastro de imóvel construído para averbação em cartório",
+            "valor": 2.0,
+            "por": "m² ou fração da área total"
+          },
+          {
+            "rotulo": "Reconstruções, reformas e reparos",
+            "valor": 0.5,
+            "por": "m²"
+          },
+          {
+            "rotulo": "Desmembramento, excluídas as áreas doadas ao município",
+            "valor": 0.1,
+            "por": "m² do projeto"
+          },
+          {
+            "rotulo": "Loteamento, excluídas as áreas doadas ao município",
+            "valor": 0.1,
+            "por": "m² do projeto"
+          },
+          {
+            "rotulo": "Qualquer obra não especificada nos itens anteriores",
+            "valor": 1.0,
+            "por": "m² ou metro linear"
+          }
+        ]
+      },
+      "periodicidade": "por ato",
+      "vencimento": "No licenciamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 66,
+          "artigo": "Tabela de Receita nº IV"
+        }
+      ],
+      "nota": "A primeira faixa — até 60 m² estritamente residencial — é ISENTA. Na modificação de projeto COM aumento de área, o cálculo segue o código 1.0 da própria tabela, abatendo-se os valores já pagos.",
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      }
+    },
+    {
+      "id": "taxa-publicidade",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de licença para exposição de publicidade",
+      "fatoGerador": "Exposição de publicidade nas vias e logradouros públicos e em locais expostos ao público.",
+      "sujeitoPassivo": "Quem explore ou se beneficie da publicidade.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Tabuletas para cartazes substituíveis — por dia",
+            "valor": 1.0,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Tabuletas para cartazes substituíveis — por mês",
+            "valor": 8.0,
+            "por": "m² ou fração",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Painéis para pintura de anúncios — por dia",
+            "valor": 0.1,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Painéis para pintura de anúncios — por mês",
+            "valor": 0.6,
+            "por": "m² ou fração",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Letreiros luminosos ou não, na fachada do próprio estabelecimento — por dia",
+            "valor": 0.1,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Letreiros luminosos ou não, na fachada do próprio estabelecimento — por mês",
+            "valor": 0.5,
+            "por": "m² ou fração",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Anúncios luminosos em acrílico",
+            "valor": 0.6,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Anúncios luminosos a gás néon",
+            "valor": 0.3,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Provisórios — promoções e ofertas transitórias",
+            "valor": 0.15,
+            "por": "m² ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Indicadores de logradouros públicos",
+            "valor": 0.25,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Faixas rebocadas por avião",
+            "valor": 1.0,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Balões — por unidade, ao mês",
+            "valor": 2.0,
+            "por": "unidade",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Balões — por unidade, ao ano",
+            "valor": 5.0,
+            "por": "unidade",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Balões — por milheiro, ao dia",
+            "valor": 1.0,
+            "por": "milheiro",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Balões — por milheiro, ao mês",
+            "valor": 2.0,
+            "por": "milheiro",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Balões — por milheiro, ao ano",
+            "valor": 5.0,
+            "por": "milheiro",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Bóias ou flutuantes — por dia",
+            "valor": 2.0,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Bóias ou flutuantes — por mês",
+            "valor": 5.0,
+            "por": "unidade",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Bóias ou flutuantes — por ano",
+            "valor": 7.0,
+            "por": "unidade",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Carroçarias de veículos — por dia",
+            "valor": 0.5,
+            "por": "veículo",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Carroçarias de veículos — por mês",
+            "valor": 2.0,
+            "por": "veículo",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Prospectos e panfletos de propaganda",
+            "valor": 0.5,
+            "por": "milheiro ou fração",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Películas cinematográficas em telas — por dia",
+            "valor": 0.1,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Películas cinematográficas em telas — por mês",
+            "valor": 2.0,
+            "por": "unidade",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Películas cinematográficas em telas — por ano",
+            "valor": 5.0,
+            "por": "unidade",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Alto-falantes em veículo — por dia",
+            "valor": 0.5,
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Alto-falantes em veículo — por mês",
+            "valor": 5.0,
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Alto-falantes em áreas comerciais — por dia",
+            "valor": 0.5,
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Alto-falantes em áreas comerciais — por mês",
+            "valor": 2.0,
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Anúncios em cadeiras ou outros objetos",
+            "valor": 0.1,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por m², ao dia",
+            "valor": 0.5,
+            "por": "m²",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por m², ao mês",
+            "valor": 0.5,
+            "por": "m²",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por m², ao ano",
+            "valor": 1.2,
+            "por": "m²",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por unidade, ao dia",
+            "valor": 1.0,
+            "por": "unidade",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por unidade, ao mês",
+            "valor": 2.0,
+            "por": "unidade",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por unidade, ao ano",
+            "valor": 5.0,
+            "por": "unidade",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por milheiro, ao dia",
+            "valor": 1.0,
+            "por": "milheiro",
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por milheiro, ao mês",
+            "valor": 3.0,
+            "por": "milheiro",
+            "periodicidade": "Mensal"
+          },
+          {
+            "rotulo": "Publicidade não especificada — por milheiro, ao ano",
+            "valor": 7.0,
+            "por": "milheiro",
+            "periodicidade": "Anual"
+          },
+          {
+            "rotulo": "Outras atividades em logradouros públicos não indicadas — por dia",
+            "valor": 0.3,
+            "periodicidade": "Diária"
+          },
+          {
+            "rotulo": "Outras atividades em logradouros públicos não indicadas — por mês",
+            "valor": 3.0,
+            "periodicidade": "Mensal"
+          }
+        ]
+      },
+      "periodicidade": "eventual",
+      "vencimento": "Conforme a periodicidade licenciada.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 67,
+          "artigo": "Tabela de Receita nº V"
+        },
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 68,
+          "artigo": "Tabela de Receita nº V"
+        }
+      ],
+      "nota": "A tabela tem três colunas — dia, mês e ano — e nem todo item preenche as três. Aqui cada coluna virou uma linha própria, para não haver dúvida sobre qual periodicidade tem valor.",
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      }
+    },
+    {
+      "id": "taxa-vigilancia-sanitaria",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de vigilância sanitária",
+      "fatoGerador": "Fiscalização sanitária dos estabelecimentos.",
+      "sujeitoPassivo": "O estabelecimento fiscalizado.",
+      "base": {
+        "tipo": "itens",
+        "unidade": "reais",
+        "itens": [
+          {
+            "rotulo": "Drogaria",
+            "valor": 100.0
+          },
+          {
+            "rotulo": "Laboratório industrial de produtos farmacêuticos ou químicos em geral",
+            "valor": 150.0
+          },
+          {
+            "rotulo": "Farmácias",
+            "valor": 120.0
+          },
+          {
+            "rotulo": "Socorros farmacêuticos",
+            "valor": 75.0
+          },
+          {
+            "rotulo": "Depósitos de drogas, filiais, distribuidoras, agências ou representações de laboratório",
+            "valor": 150.0
+          },
+          {
+            "rotulo": "Produtos dietéticos, saneantes, higiene, toucador, ótica e artigos médicos e odontológicos",
+            "valor": 115.0
+          },
+          {
+            "rotulo": "Ervanárias e estabelecimentos similares",
+            "valor": 60.0
+          },
+          {
+            "rotulo": "Laboratórios de análises clínicas ou de pesquisa anatomopatológica",
+            "valor": 120.0
+          },
+          {
+            "rotulo": "Raio X, radioterapia, fisioterapia, ortopedia, bancos de sangue e oficinas ortopédicas",
+            "valor": 110.0
+          },
+          {
+            "rotulo": "Consultórios médicos, odontológicos, veterinários e de psicologia",
+            "valor": 75.0
+          },
+          {
+            "rotulo": "Clínicas médicas, odontológicas e veterinárias",
+            "valor": 90.0
+          },
+          {
+            "rotulo": "Hospitais, sanatórios, maternidades e casas de saúde — de 1 a 20 leitos",
+            "valor": 100.0
+          },
+          {
+            "rotulo": "Hospitais, sanatórios, maternidades e casas de saúde — de 21 a 50 leitos",
+            "valor": 150.0
+          },
+          {
+            "rotulo": "Hospitais, sanatórios, maternidades e casas de saúde — acima de 50 leitos",
+            "valor": 220.0
+          },
+          {
+            "rotulo": "Fabricação de material plástico para envasilhamento de produtos farmacêuticos",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Empresas de detetização e limpadora de fossas",
+            "valor": 75.0
+          },
+          {
+            "rotulo": "Hotéis, pensões, motéis, restaurantes, boates e churrascarias — classe A",
+            "valor": 120.0
+          },
+          {
+            "rotulo": "Hotéis, pensões, motéis, restaurantes, boates e churrascarias — classe B",
+            "valor": 80.0
+          },
+          {
+            "rotulo": "Hotéis, pensões, motéis, restaurantes, boates e churrascarias — classe C",
+            "valor": 40.0
+          },
+          {
+            "rotulo": "Casas balneárias, termas, saunas e estâncias hidrominerais",
+            "valor": 75.0
+          },
+          {
+            "rotulo": "Supermercados, mercadinhos, mercearias, estivas e indústrias de bebidas — classe A",
+            "valor": 150.0
+          },
+          {
+            "rotulo": "Supermercados, mercadinhos, mercearias, estivas e indústrias de bebidas — classe B",
+            "valor": 90.0
+          },
+          {
+            "rotulo": "Supermercados, mercadinhos, mercearias, estivas e indústrias de bebidas — classe C",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Doçarias, bonbonnière, casas de frutas ou de verduras",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Cantinas e quitandas",
+            "valor": 15.0
+          },
+          {
+            "rotulo": "Casa de chá",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Depósitos de alimentos",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Abatedouros e matadores",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Armazéns, açougues, frigoríficos, bares, lanchonetes, padarias e confeitarias — classe A",
+            "valor": 45.0
+          },
+          {
+            "rotulo": "Armazéns, açougues, frigoríficos, bares, lanchonetes, padarias e confeitarias — classe B",
+            "valor": 30.0
+          },
+          {
+            "rotulo": "Armazéns, açougues, frigoríficos, bares, lanchonetes, padarias e confeitarias — classe C",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Salões de beleza, pedicure, manicure, esteticista ou massagista",
+            "valor": 20.0
+          },
+          {
+            "rotulo": "Outros estabelecimentos não classificados",
+            "valor": 50.0
+          }
+        ]
+      },
+      "periodicidade": "anual",
+      "vencimento": "Conforme o regulamento.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 69,
+          "artigo": "Tabela de Receita nº VI"
+        },
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 70,
+          "artigo": "Tabela de Receita nº VI"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "taxa-limpeza-edificados",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de limpeza pública — imóveis edificados",
+      "fatoGerador": "Serviço de limpeza pública, por imóvel edificado.",
+      "sujeitoPassivo": "O proprietário, titular do domínio útil ou possuidor do imóvel.",
+      "base": {
+        "tipo": "faixas",
+        "unidade": "reais",
+        "medida": "m² de área construída",
+        "faixas": [
+          [
+            50,
+            2.9
+          ],
+          [
+            100,
+            5.8
+          ],
+          [
+            250,
+            11.6
+          ],
+          [
+            null,
+            23.2
+          ]
+        ]
+      },
+      "periodicidade": "anual",
+      "vencimento": "Por unidade e por ano.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 71,
+          "artigo": "Tabela de Receita nº VII"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    },
+    {
+      "id": "taxa-limpeza-nao-edificados",
+      "tributo": "Taxa",
+      "rotulo": "Taxa de limpeza pública — imóveis não edificados",
+      "fatoGerador": "Serviço de limpeza pública, por imóvel não edificado.",
+      "sujeitoPassivo": "O proprietário, titular do domínio útil ou possuidor do imóvel.",
+      "base": {
+        "tipo": "faixas",
+        "unidade": "reais",
+        "medida": "m² de área territorial",
+        "faixas": [
+          [
+            50,
+            1.7
+          ],
+          [
+            100,
+            2.9
+          ],
+          [
+            250,
+            4.6
+          ],
+          [
+            null,
+            5.8
+          ]
+        ]
+      },
+      "periodicidade": "anual",
+      "vencimento": "Por unidade e por ano.",
+      "fundamento": [
+        {
+          "doc": "ctm-874-2005",
+          "pagina": 71,
+          "artigo": "Tabela de Receita nº VII"
+        }
+      ],
+      "conferencia": "conferido",
+      "vigencia": {
+        "de": "2005",
+        "ate": null
+      },
+      "nota": ""
+    }
+  ]
+}
