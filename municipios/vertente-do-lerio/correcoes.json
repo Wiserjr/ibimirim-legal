@@ -1,0 +1,21 @@
+{
+  "sobre": "Correções de reconhecimento óptico aplicadas ao corpus, depois da extração. Cada uma foi conferida na imagem da página citada em 'conferido'. Só entram aqui trocas de caractere — nunca alteração de redação, de valor ou de numeração da lei. O que for divergência real do texto publicado fica registrado em DOCUMENTOS-RECOMENDADOS.md, não é corrigido.",
+  "correcoes": [
+    {
+      "documento": "ctm-001-2009",
+      "de": "lSS",
+      "para": "ISS",
+      "motivo": "Camada de texto do PDF trocou o I inicial da sigla por l minúsculo, em uma ocorrência. As outras 9 do documento estão corretas.",
+      "conferido": "p. 51, § 2º: 'Não será autorizada a impressão de talonário de nota fiscal para contribuinte em debito com o ISS'.",
+      "paginas": [51]
+    },
+    {
+      "documento": "ctm-001-2009",
+      "de": "lTBl",
+      "para": "ITBI",
+      "motivo": "Os dois I da sigla saíram como l minúsculo. É a única ocorrência da sigla no documento, de modo que ela ficava inalcançável na busca.",
+      "conferido": "p. 112, art. 329: 'A Planta Genérica de Valores para fins de IPTU e ITBI está' — no ANEXO VIII desta lei.",
+      "paginas": [112]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sobre": "Correções de reconhecimento óptico aplicadas ao corpus, depois da extração. Cada uma foi conferida na imagem da página citada em 'conferido'. Só entram aqui trocas de caractere — nunca alteração de redação, de valor ou de numeração da lei. O que for divergência real do texto publicado fica registrado em DOCUMENTOS-RECOMENDADOS.md, não é corrigido: é o caso do '!TB!' da Lei nº 877/2022, que está assim na página impressa.",
+  "correcoes": [
+    {
+      "documento": "ctm-2025",
+      "de": "lPTU",
+      "para": "IPTU",
+      "motivo": "Camada de texto do PDF trocou o I inicial da sigla por l minúsculo, em uma ocorrência. As outras 57 do mesmo documento estão corretas.",
+      "conferido": "p. 154: 'isoladamente ou em conjunto com o Imposto Sobre a Propriedade Predial e Territorial Urbana- IPTU'.",
+      "paginas": [154]
+    },
+    {
+      "documento": "ctm-2025",
+      "de": "ClP",
+      "para": "CIP",
+      "motivo": "Mesma troca de I por l, em uma ocorrência. As outras 54 do documento estão corretas. A página tem marca d'água decorativa sobre o texto, e a camada de texto saiu degradada em volta.",
+      "conferido": "p. 113: 'Preservação de Logradouros Públicos - CIP tem como fato gerador a prestação de serviços de iluminação pública'.",
+      "paginas": [113]
+    },
+    {
+      "documento": "lei-932-2024",
+      "de": "ITBl",
+      "para": "ITBI",
+      "motivo": "O OCR leu o I final da sigla como l minúsculo nas três ocorrências do documento — não sobrou nenhuma correta, e a sigla ficava inalcançável na busca.",
+      "conferido": "p. 1, ementa: 'relativos ao Imposto sobre a Transmissão \"Inter-Vivos\" de Bens Imóveis e de Direitos a eles relativos - ITBI incidente sobre os imóveis adquiridos pelos beneficiários do Programa Minha Casa Minha Vida'.",
+      "paginas": [1]
+    },
+    {
+      "documento": "dec-30-2022",
+      "de": "1SS",
+      "para": "ISS",
+      "motivo": "Camada de texto do PDF trocou o I inicial por algarismo 1, em uma ocorrência. As outras 13 do documento estão corretas.",
+      "conferido": "p. 1: 'O prazo para pagamento do Imposto Sobre Serviços de Qualquer Natureza - ISS, nas hipóteses referidas nos artigos 88 ao 91'.",
+      "paginas": [1]
+    }
+  ]
+}

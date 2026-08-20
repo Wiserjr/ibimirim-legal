@@ -664,3 +664,51 @@ Mitigação em vigor: o documento anterior foi intitulado "Código Tributário M
 que aquilo não é a norma vigente. **A ordenação em si não foi alterada** — mexer nela muda o
 resultado dos nove municípios, inclusive os já conferidos, e é decisão da equipe. A correção natural
 seria subir o desempate de `historical` para antes de `hits`, ou aplicar um peso por tipo de norma.
+
+# Siglas corrompidas na extração — varredura dos nove, 19/08/2026
+
+Uma varredura procurou, nos nove acervos, siglas tributárias em que o I tivesse virado `l`, `1`, `|`
+ou `!` — ITBI, IPTU, ISS, ISSQN, UFM, CIP, COSIP, CNAE, CTM, IPCA, IBGE. Achou onze ocorrências em
+três municípios. **Cada uma foi conferida na imagem da página** antes de qualquer decisão, e a
+conferência separou duas naturezas que pareciam a mesma coisa.
+
+## Erro de extração — corrigido
+
+| município | documento | pág. | veio como | é |
+|---|---|---|---|---|
+| Jurema | Lei nº 255/2007 | 8 páginas, 11 ocorrências | `ITBl` | ITBI |
+| Ibimirim | Lei nº 932/2024 | 1 (×3) | `ITBl` | ITBI |
+| Ibimirim | Código Tributário 2025 | 154 | `lPTU` | IPTU |
+| Ibimirim | Código Tributário 2025 | 113 | `ClP` | CIP |
+| Ibimirim | Decreto nº 30/2022 | 1 | `1SS` | ISS |
+| Vertente do Lério | LC nº 001/2009 | 51 | `lSS` | ISS |
+| Vertente do Lério | LC nº 001/2009 | 112 | `lTBl` | ITBI |
+
+Estão declaradas em `municipios/<slug>/correcoes.json` e aplicadas na montagem do corpus. O que
+corrobora cada uma é a frequência da forma correta no mesmo documento: **IPTU** aparece 57 vezes
+certo no Código de 2025, **CIP** 54, **ISS** 13 no Decreto nº 30/2022 e 9 na LC nº 001/2009. São
+erros isolados, não convenção do documento.
+
+Nos casos de ITBI a situação era outra e mais grave: **nenhuma ocorrência estava correta**, nem em
+Jurema, nem na Lei nº 932/2024 de Ibimirim, nem na LC nº 001/2009 de Vertente. Em cada um deles a
+sigla simplesmente não existia para a busca — e a Lei nº 932/2024 é *inteiramente sobre ITBI*.
+
+Vale notar de onde vieram: só as de Jurema e da Lei nº 932/2024 são do nosso OCR. As demais estavam
+**na camada de texto do próprio PDF** — PDFs que alguém já digitalizou e reconheceu antes de
+publicar. A página 113 do Código de 2025 tem marca d'água decorativa sobre o texto, e a camada saiu
+degradada em volta ("PllDII" no lugar de "pública").
+
+## Erro do texto publicado — NÃO corrigido
+
+**Lei nº 877/2022 (PRODEM), p. 2** — a página impressa traz, literalmente:
+
+> V - isenção do Imposto Sobre Transmissão de Bens Imóveis - **!TB!** sobre a aquisição de imóvel
+
+Não é falha de extração: os caracteres `!TB!` estão desenhados na página. É erro de digitação na lei
+publicada, e por isso **não entrou no `correcoes.json`** — corrigir seria reescrever a norma.
+
+Consequência prática: quem pesquisar "ITBI" **não encontra** este inciso da Lei do PRODEM. Chega a
+ele por "isenção transmissão bens imóveis". Convém pedir ao Município a republicação ou uma errata.
+
+Foi essa distinção que justificou exigir o campo `conferido` em cada correção. Sem abrir a imagem,
+`!TB!` e `1SS` pareciam o mesmo problema — e um deles não é nosso para consertar.

@@ -178,11 +178,6 @@ consequência:
 - **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
   responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
   no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
-- **O OCR corrompe siglas em outros dois municípios, ainda não corrigidos.** O mesmo defeito do
-  ITBI de Jurema existe em **Ibimirim** (`ITBl`×2, `ClP`, `lPTU`, `!TB!`, `1SS`) e em **Vertente do
-  Lério** (`lSS`, `lTBl`). Cada ocorrência precisa ser conferida na imagem da página antes de entrar
-  no `correcoes.json` do município — o mecanismo já existe, falta a conferência.
-
 - **O OCR gruda palavras, e isso torna parte do conteúdo inalcançável.** Medido: 8 páginas de Jurema
   e 2 de Tacaratu deixam de casar porque o reconhecimento juntou palavras inteiras —
   *taxadefiscalizacaodeocupacaoepermanencia*, *segundaviadealvarasehabite*. São títulos de tabela e
@@ -216,6 +211,15 @@ consequência:
   são as seguintes". Corrigido em 19/08/2026 por `municipios/jurema/correcoes.json`, o primeiro uso
   do mecanismo de correção de OCR descrito no README. "ITBI" agora devolve 12 resultados, todos
   municipais. `npm test` falha se a correção deixar de estar aplicada.
+
+- **Siglas corrompidas em Ibimirim e Vertente do Lério.** Uma varredura pelos nove acervos achou
+  mais sete ocorrências: `lPTU`, `ClP` e `1SS` em Ibimirim, `ITBl` na Lei nº 932/2024 — que é
+  inteiramente sobre ITBI —, e `lSS` e `lTBl` em Vertente do Lério. Todas conferidas na imagem e
+  corrigidas em 19/08/2026. Detalhe em DOCUMENTOS-RECOMENDADOS.md.
+
+  A mesma varredura achou um caso que **não** é nosso para consertar: a Lei nº 877/2022 de Ibimirim
+  imprime `!TB!` no lugar de ITBI, na própria página. É erro da lei publicada, ficou registrado como
+  divergência e pede errata do Município.
 
 ## Como a busca ordena, e por quê
 
