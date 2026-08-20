@@ -179,9 +179,10 @@ consequência:
 
 ## Defeitos conhecidos do próprio projeto
 
-- **`tools/serve.mjs` serve de `public/`, pasta que não existe mais.** `npm run serve`
-  responde 404 em tudo. Ficou para trás na reestruturação multi-município. Para conferir
-  no navegador, sirva `docs/` direto (`python -m http.server` dentro de `docs/`).
+- **`tests/ui.test.mjs` nunca mais passou.** Não é tocado desde o primeiro commit, e os seus
+  seletores — `#operatingArea`, `#constructionResult` — morreram quando os cartões passaram a
+  gerar ids por município (`card-<id>-<campo>`). Ficou fora do `npm run test:ui`, que agora aponta
+  para `tests/ui-cobrancas.test.mjs`. Reescrever ou apagar é decisão da equipe.
 - **O OCR gruda palavras, e isso torna parte do conteúdo inalcançável.** Medido: 8 páginas de Jurema
   e 2 de Tacaratu deixam de casar porque o reconhecimento juntou palavras inteiras —
   *taxadefiscalizacaodeocupacaoepermanencia*, *segundaviadealvarasehabite*. São títulos de tabela e
@@ -208,6 +209,10 @@ consequência:
 - **A busca casava por substring, e isso quebrava as siglas.** `hay.includes(term)`, sem fronteira
   de palavra, fazia "iss" achar *comissão* e "ativa" achar *administrativa*. Corrigido em
   19/08/2026 exigindo início de palavra. Detalhe do efeito medido na seção abaixo.
+
+- **`tools/serve.mjs` servia de `public/`, pasta que não existe mais.** `npm run serve` respondia
+  404 em tudo, e isso também impedia a suíte de navegador de rodar. Corrigido em 20/08/2026: passou
+  a servir `dist/<slug>`, com `node tools/serve.mjs alianca` ou `node tools/serve.mjs docs`.
 
 - **A sigla ITBI de Jurema não existia no corpus.** O OCR leu o I final como l minúsculo nas 11
   ocorrências do documento, e nenhuma ficou correta — a consulta "ITBI" não devolvia nada, e "ITBI
@@ -261,3 +266,44 @@ sem navegador, e foi validado contra cada versão anterior da ordenação — fa
 palavra para o motor e a fronteira não existe. A marcação de destaque usa
 `(^|[^\p{L}\p{N}])` e devolve o que capturou. Lookbehind resolveria em uma linha, mas só existe no
 Safari 16.4 em diante, e o aplicativo precisa abrir em iPhone antigo.
+
+## Cadastro de cobranças: por que ele existe
+
+O projeto nasceu para facilitar a busca na lei, mas o problema real é outro. Quem mantém isto dá
+suporte ao sistema de tributos **Contabilis** e é procurado o tempo todo com as mesmas quatro
+perguntas: **quanto cobrar, de quem, quando e com que respaldo**. A resposta honesta é sempre
+"X, com base no art. Y, p. N" — e é justamente esse par, valor mais fundamento, que não existia em
+lugar nenhum.
+
+Extrair tabela de PDF é caro, lento e exige conferência página a página. Seis dos nove municípios
+seguem sem tabelas por isso. Mas **quem sabe o valor é a equipe do município**, não o extrator. O
+cadastro inverte o gargalo: a equipe informa, e o aplicativo obriga a amarrar cada valor ao
+dispositivo que o sustenta.
+
+Decisões de projeto, e o motivo de cada uma:
+
+- **Arquivo separado de `fees.js`.** O que a equipe informa não pode se confundir com o que o
+  extrator leu da lei. São graus de confiança diferentes, e o selo de cada cobrança diz qual é.
+- **Fundamento obrigatório, conferido contra o corpus.** Documento e página têm de existir. O
+  aplicativo recusa na hora da digitação, e `npm test` repete a conferência sobre o publicado.
+  Sem isso o cadastro seria uma planilha, e planilha não responde "por quê".
+- **Sem servidor.** O que a equipe edita fica no navegador e sai por exportação, no formato exato do
+  `cobrancas.json`. Volta ao repositório por revisão, e o diff no git é o que se confere. Nenhuma
+  infraestrutura nova, e continua abrindo por duplo clique.
+- **A seção aparece mesmo vazia.** Um município que ainda não cadastrou nada é exatamente quem
+  precisa achar o botão.
+
+Ingazeira entrou com cinco cobranças de exemplo — a CIP inteira, lida na imagem do Anexo XII, que os
+extratores não alcançam por ser percentual sobre tarifa da ANEEL.
+
+### O que falta, e que é o diferencial da ferramenta
+
+**O alerta de vigência.** Como cada cobrança aponta artigo e página, o aplicativo consegue acender
+sozinho toda cobrança ancorada em dispositivo que uma lei nova alterou. Foi exatamente o que
+aconteceu em Ingazeira: a LC nº 004/2017 refez o Título II e a LC nº 007/2024 refez os arts. 311 a
+314. Hoje isso é um aviso escrito à mão em `municipio.json`; com o cadastro amarrado ao artigo,
+passa a ser automático.
+
+Depois disso, na ordem: um **tipo de cartão de percentual** — a CIP de Ingazeira é a candidata, e
+`renderGrupos` ainda só sabe exibir UFM ou reais; e a **calculadora a partir do cadastro**, para que
+a cobrança em faixas responda "para 180 kWh/mês, é tanto".

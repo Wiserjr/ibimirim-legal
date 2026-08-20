@@ -82,6 +82,43 @@ for (const slug of slugs) {
     );
   }
 
+  // --- cadastro de cobranças: nada entra sem fundamento que resolva ----
+  // É a regra que dá sentido ao cadastro. A equipe informa o valor, mas o
+  // dispositivo que o sustenta tem de existir mesmo, na página citada — senão
+  // o cadastro vira planilha e a pergunta "por que estou cobrando isto?" fica
+  // sem resposta.
+  let cobrancas = [];
+  try { cobrancas = JSON.parse(await ler(`municipios/${slug}/cobrancas.json`)).cobrancas; } catch {}
+  const idsCobranca = new Set();
+  for (const c of cobrancas) {
+    const onde = `${rotulo} cobrança "${c.id || c.rotulo}"`;
+    for (const campo of ['id', 'tributo', 'rotulo', 'base', 'fundamento']) {
+      assert.ok(c[campo], `${onde}: falta "${campo}"`);
+    }
+    assert.ok(!idsCobranca.has(c.id), `${onde}: id repetido`);
+    idsCobranca.add(c.id);
+    assert.ok(c.fundamento.length, `${onde}: sem fundamento`);
+    for (const f of c.fundamento) {
+      assert.ok(pagina(f.doc, f.pagina), `${onde}: fundamento aponta ${f.doc} p.${f.pagina}, que não existe`);
+    }
+    assert.ok(
+      ['reais', 'ufm', 'percentual', 'faixas', 'formula'].includes(c.base.tipo),
+      `${onde}: base de tipo desconhecido "${c.base.tipo}"`,
+    );
+    // mesma regra do resto do projeto: unidade fiscal não carrega reais junto
+    assert.ok(!(c.base.tipo === 'ufm' && 'value' in c.base), `${onde}: valor em UFM com reais fixados`);
+    if (c.base.tipo === 'faixas') {
+      const tetos = c.base.faixas.map(f => f[0]);
+      assert.ok(tetos.slice(0, -1).every(t => typeof t === 'number'), `${onde}: faixa aberta no meio`);
+      assert.deepEqual(tetos.slice(0, -1), [...tetos.slice(0, -1)].sort((a, b) => a - b), `${onde}: faixas fora de ordem`);
+      assert.ok(c.base.faixas.every(f => f[1] > 0), `${onde}: faixa sem valor`);
+    }
+    assert.ok(
+      ['conferido', 'informado', 'revisar'].includes(c.conferencia || 'informado'),
+      `${onde}: grau de conferência desconhecido "${c.conferencia}"`,
+    );
+  }
+
   // --- valores em UFM nunca trazem reais gravados ----------------------
   const entradas = (fees.sections || []).flatMap(s => [...s.current, ...(s.previous || [])]);
   assert.ok(
@@ -113,6 +150,7 @@ for (const slug of slugs) {
     paginas: laws.documents.reduce((n, d) => n + d.pageCount, 0),
     tabelas: (fees.sections || []).length,
     cartoes: (cfg.cartoes || []).length,
+    cobrancas: cobrancas.length,
   });
 }
 
@@ -128,5 +166,5 @@ assert.doesNotMatch(app, /fetch\(/, 'fetch quebra a abertura por file://');
 assert.match(await ler('app/sw.js'), /municipio\.js/, 'municipio.js fora do cache offline');
 
 console.log('OK: ' + resumo.map(r =>
-  `${r.slug} (${r.documentos} docs, ${r.paginas} pág., ${r.tabelas} tabelas, ${r.cartoes} cartões)`
+  `${r.slug} (${r.documentos} docs, ${r.paginas} pág., ${r.tabelas} tabelas, ${r.cartoes} cartões, ${r.cobrancas} cobranças)`
 ).join(' · '));

@@ -12,3 +12,68 @@ dialog#reader{width:min(920px,calc(100% - 24px));max-width:calc(100vw - 24px);ma
 #readerContent pre{max-width:100%;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;word-break:break-word;font:var(--reader-font-size,16px)/1.72 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#314b46}
 .reader-meta{overflow-wrap:anywhere}.ocr-note{padding:12px 14px;border-radius:12px;background:#fff7df;color:#665421;font-size:13px;line-height:1.5}
 @media(max-width:800px){dialog#reader{width:100vw;max-width:100vw;height:100dvh;max-height:100dvh;margin:0;border-radius:0}#readerContent{padding:22px 16px 42px}.reader-toolbar{padding-top:max(9px,env(safe-area-inset-top));overflow-x:auto}.reader-toolbar button{white-space:nowrap}}
+
+/* Cadastro de cobranças: o que o Município cobra, com o fundamento à vista. */
+.charge-intro{color:var(--muted);line-height:1.6;margin:0 0 14px;max-width:760px}
+.charge-list{display:grid;gap:14px;margin-top:14px}
+.charge-card{background:white;border:1px solid var(--line);border-radius:18px;padding:22px}
+.charge-card header{display:flex;align-items:start;justify-content:space-between;gap:14px}
+.charge-card h3{margin:6px 0 0;font-size:19px;color:var(--green)}
+.charge-tributo{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green2)}
+.charge-conf{font-size:10px;text-transform:uppercase;letter-spacing:.07em;padding:5px 8px;border-radius:8px;white-space:nowrap}
+.charge-conf-conferido{background:#e2f0e6;color:#1f5a3a}
+.charge-conf-informado{background:#fff3d6;color:#6b551d}
+.charge-conf-revisar{background:#fbe3e0;color:#7d332a}
+.charge-base-line{margin:12px 0 0;font-size:17px;color:var(--ink)}
+.charge-sobre{margin:4px 0 0;color:var(--muted);font-size:13px}
+.charge-meta{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:14px 0 0;font-size:14px}
+.charge-meta dt{font-weight:800;color:var(--green2)}
+.charge-meta dd{margin:0;color:var(--muted);line-height:1.5}
+.charge-tiers{width:100%;border-collapse:collapse;margin:12px 0 0;font-size:14px}
+.charge-tiers caption{text-align:left;color:var(--muted);font-size:12px;padding-bottom:6px}
+.charge-tiers th,.charge-tiers td{text-align:left;padding:5px 10px;border-bottom:1px solid var(--line)}
+.charge-tiers th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--green2)}
+.charge-tiers td:last-child{text-align:right;font-weight:700}
+.charge-sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.source-button{border:1px solid var(--line);background:#f2f7f3;color:var(--green);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:700;cursor:pointer;text-align:left}
+.source-button:hover{border-color:var(--green2)}
+.charge-broken{background:#fbe3e0;color:#7d332a;border-radius:10px;padding:8px 12px;font-size:13px}
+.charge-note{margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.55;border-left:3px solid var(--line);padding-left:12px}
+.charge-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.charge-fields{padding:8px 32px 30px;display:grid;gap:6px}
+.charge-fields label{font-weight:800;color:var(--green2);font-size:13px;margin-top:10px}
+.charge-fields input,.charge-fields textarea,.charge-fields select{width:100%;border:1px solid var(--line);border-radius:11px;padding:11px 13px;background:white;color:var(--ink)}
+.charge-fields textarea{resize:vertical;line-height:1.55}
+.charge-base{border:1px solid var(--line);border-radius:14px;padding:6px 16px 18px;margin-top:16px}
+.charge-base legend{font-weight:800;color:var(--green);padding:0 6px}
+.charge-hint{color:var(--muted);font-size:13px;line-height:1.55;margin:6px 0 10px}
+.charge-fund{display:grid;grid-template-columns:2fr 90px 1.4fr auto;gap:8px;align-items:center;margin-bottom:8px}
+.req{font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:#9a5f2a;background:#fdf0e2;border-radius:6px;padding:3px 6px;margin-left:6px}
+dialog#chargeForm,dialog#chargeExportDlg{max-height:92dvh;overflow:auto}
+@media(max-width:800px){
+  .charge-fields{padding:8px 16px 26px}
+  .charge-fund{grid-template-columns:1fr 1fr;gap:6px}
+  .charge-card header{flex-direction:column}
+  .charge-meta{grid-template-columns:1fr}
+  .charge-meta dt{margin-top:8px}
+}
+
+/* A regra base "dialog form{height:0}" existe para o botão de fechar do leitor,
+   que é um form só de fachada. O formulário do cadastro é um form de verdade e
+   seria colapsado por ela — junto com todos os seus botões, que virariam
+   círculos verdes. Estas regras devolvem o formulário ao fluxo normal. */
+dialog#chargeForm form{position:static;height:auto;text-align:left;z-index:auto}
+dialog#chargeForm form button{margin:0;border-radius:11px;width:auto;height:auto;font-size:inherit}
+dialog#chargeForm .reader-bar,dialog#chargeExportDlg .reader-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 32px 0}
+dialog#chargeForm .reader-bar strong,dialog#chargeExportDlg .reader-bar strong{font:700 21px Georgia,serif;color:var(--green)}
+dialog#chargeForm .reader-bar button,dialog#chargeExportDlg .reader-bar button{width:38px;height:38px;border:0;border-radius:50%;background:var(--green);color:white;font-size:22px;cursor:pointer;flex:none}
+dialog#chargeForm .charge-actions,dialog#chargeExportDlg .charge-actions{padding:0 32px 26px}
+dialog#chargeForm .ufm-save,dialog#chargeExportDlg .ufm-save{border-radius:11px;padding:11px 20px;background:var(--green);color:white;font-weight:700;border:0;cursor:pointer}
+@media(max-width:800px){
+  dialog#chargeForm .reader-bar,dialog#chargeExportDlg .reader-bar{padding:14px 16px 0}
+  dialog#chargeForm .charge-actions,dialog#chargeExportDlg .charge-actions{padding:0 16px 22px}
+}
+/* Alvo de toque: os botões de texto do cadastro ficavam com 24px de altura, e a
+   equipe preenche isto no celular. */
+dialog#chargeForm .text-button,dialog#chargeExportDlg .text-button,.charge-card .text-button{min-height:44px;padding:0 10px}
+.charge-fund .text-button{min-height:40px}

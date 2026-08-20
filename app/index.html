@@ -61,6 +61,23 @@
       <p class="fee-notice">{{TAXAS_AVISO}}</p>
     </section>
 
+    <section id="chargesSection" hidden>
+      <div class="section-title">
+        <div><p class="eyebrow">O que o Município cobra</p><h2>Cobranças</h2></div>
+        <p id="chargeSummary"></p>
+      </div>
+      <p class="charge-intro">Cada cobrança diz <b>o quê</b>, <b>de quem</b>, <b>quando</b> e <b>em que base</b> — e aponta o dispositivo que a sustenta. Toque em <b>Ver fundamento</b> para abrir a lei na página citada.</p>
+      <label class="search"><span>⌕</span><input id="chargeQuery" type="search" placeholder="iluminação, alvará, licença, coleta…" autocomplete="off"></label>
+      <div id="chargeFilters" class="chips" aria-label="Filtrar por tributo"></div>
+      <div id="chargeList" class="charge-list"></div>
+      <div class="charge-actions">
+        <button id="chargeNew" class="ufm-save" type="button">Cadastrar cobrança</button>
+        <button id="chargeExport" class="text-button" type="button">Exportar cadastro</button>
+        <button id="chargeReset" class="text-button" type="button" hidden>Descartar minhas alterações</button>
+      </div>
+      <p id="chargeLocalNote" class="ufm-status" aria-live="polite" hidden></p>
+    </section>
+
     <section id="trailSection">
       <div class="section-title"><div><p class="eyebrow">Comece por aqui</p><h2>Trilhas de consulta</h2></div><p id="profileHint">Escolha um perfil ou explore todos os assuntos.</p></div>
       <div id="trails" class="trail-grid"></div>
@@ -83,8 +100,93 @@
     </section>
   </main>
   <nav class="bottom-nav" aria-label="Navegação principal">
-    <a href="#inicio"><span>⌂</span>Início</a><a href="#trailSection"><span>▦</span>Trilhas</a><a href="#librarySection"><span>◫</span>Leis</a>
+    <a href="#inicio"><span>⌂</span>Início</a><a href="#trailSection"><span>▦</span>Trilhas</a><a href="#chargesSection"><span>◈</span>Cobranças</a><a href="#librarySection"><span>◫</span>Leis</a>
   </nav>
+  <dialog id="chargeForm">
+    <form method="dialog" id="chargeFormEl">
+      <div class="reader-bar">
+        <strong id="chargeFormTitle">Cadastrar cobrança</strong>
+        <button id="chargeFormClose" type="button" aria-label="Fechar">✕</button>
+      </div>
+      <div class="charge-fields">
+        <label for="cfRotulo">O que se cobra <span class="req">obrigatório</span></label>
+        <input id="cfRotulo" required placeholder="Taxa de licença para localização — bar até 50 m²">
+
+        <label for="cfTributo">Tributo <span class="req">obrigatório</span></label>
+        <input id="cfTributo" list="cfTributos" required placeholder="IPTU, ISS, ITBI, CIP, Taxa…">
+        <datalist id="cfTributos"></datalist>
+
+        <label for="cfFato">Fato gerador — o que faz nascer a cobrança</label>
+        <textarea id="cfFato" rows="2" placeholder="Prestação do serviço de…"></textarea>
+
+        <label for="cfSujeito">Quem paga</label>
+        <input id="cfSujeito" placeholder="Proprietário, possuidor, prestador do serviço…">
+
+        <fieldset class="charge-base">
+          <legend>Base de cálculo</legend>
+          <label for="cfBaseTipo">Forma</label>
+          <select id="cfBaseTipo">
+            <option value="reais">Valor fixo em reais</option>
+            <option value="ufm">Valor em UFM ou outra unidade fiscal</option>
+            <option value="percentual">Percentual sobre alguma base</option>
+            <option value="faixas">Faixas — valor muda conforme uma medida</option>
+            <option value="formula">Fórmula descrita em texto</option>
+          </select>
+          <div id="cfBaseCampos"></div>
+        </fieldset>
+
+        <label for="cfPeriodicidade">Periodicidade</label>
+        <select id="cfPeriodicidade">
+          <option value="anual">Anual</option>
+          <option value="mensal">Mensal</option>
+          <option value="por ato">Por ato — cobra-se quando o fato ocorre</option>
+          <option value="eventual">Eventual</option>
+        </select>
+
+        <label for="cfVencimento">Quando vence, e como se recolhe</label>
+        <input id="cfVencimento" placeholder="Junto ao IPTU; até 31 de março; na fatura de energia…">
+
+        <fieldset class="charge-base">
+          <legend>Fundamento legal <span class="req">obrigatório</span></legend>
+          <p class="charge-hint">Sem o dispositivo que sustenta a cobrança, o cadastro não grava. É o que permite responder “por que estou cobrando isto?”.</p>
+          <div id="cfFundamentos"></div>
+          <button id="cfAddFundamento" class="text-button" type="button">+ acrescentar dispositivo</button>
+        </fieldset>
+
+        <label for="cfConferencia">Grau de conferência</label>
+        <select id="cfConferencia">
+          <option value="informado">Informado pela equipe — ainda não conferido na lei</option>
+          <option value="conferido">Conferido contra o texto da lei</option>
+          <option value="revisar">Precisa de revisão</option>
+        </select>
+
+        <label for="cfNota">Observação</label>
+        <textarea id="cfNota" rows="2" placeholder="Ressalvas, dúvidas, o que confirmar com o Município…"></textarea>
+
+        <p id="cfErro" class="ufm-status ufm-status-empty" hidden></p>
+      </div>
+      <div class="charge-actions">
+        <button id="cfSave" class="ufm-save" type="button">Gravar</button>
+        <button id="cfDelete" class="text-button" type="button" hidden>Excluir</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="chargeExportDlg">
+    <div class="reader-bar">
+      <strong>Exportar cadastro</strong>
+      <button id="chargeExportClose" type="button" aria-label="Fechar">✕</button>
+    </div>
+    <div class="charge-fields">
+      <p class="charge-hint">Este é o cadastro no formato que o acervo entende. Salve o arquivo, ou copie o texto e mande para quem mantém o aplicativo — ele entra no repositório e passa a valer para todo mundo.</p>
+      <div class="charge-actions">
+        <button id="chargeDownload" class="ufm-save" type="button">Salvar arquivo</button>
+        <button id="chargeCopy" class="text-button" type="button">Copiar texto</button>
+      </div>
+      <textarea id="chargeExportText" rows="14" readonly></textarea>
+    </div>
+  </dialog>
+
   <dialog id="reader">
     <div class="reader-toolbar" aria-label="Controles de leitura">
       <button id="readerDecrease" type="button" aria-label="Diminuir texto">A−</button>
@@ -98,6 +200,7 @@
   <script src="municipio.js"></script>
   <script src="data/laws.js"></script>
   <script src="data/fees.js"></script>
+  <script src="data/cobrancas.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

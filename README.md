@@ -88,6 +88,40 @@ descarta linhas inteiras, a maior corrompe algarismos — na Lei nº 793/2018 el
 "50o". O extrator fica com a leitura que tiver menos numerais grudados a letras e grava toda
 divergência numérica em `ocrConflict` na página, para conferência humana.
 
+## Cadastro de cobranças
+
+As tabelas de `fees.js` saem dos extratores, e por isso só existem onde a extração já foi feita e
+conferida. O cadastro de cobranças resolve o outro lado: **quem sabe o valor é a equipe do
+município**, e agora ela tem porta de entrada.
+
+`municipios/<slug>/cobrancas.json` guarda, por cobrança: o que se cobra, o fato gerador, quem paga,
+a base de cálculo, a periodicidade, quando vence — e o **fundamento**, que é obrigatório.
+
+```
+node tools/serve.mjs ingazeira      abre o município montado
+```
+
+A seção **Cobranças** do aplicativo lista o cadastro e permite editá-lo. Não há servidor: o que a
+equipe altera fica no navegador, sobre o cadastro publicado, e sai pelo botão **Exportar cadastro**
+como um arquivo no formato exato deste JSON. Esse arquivo volta ao repositório por revisão, e o
+diff no git é o que se confere antes de publicar.
+
+**A regra que sustenta tudo: sem fundamento não grava.** Cada cobrança aponta documento, página e
+artigo, e o aplicativo recusa a gravação se a página não existir no documento citado — a mesma
+conferência que `npm test` repete sobre o cadastro publicado. É o que permite responder "por que
+estou cobrando isto?" sem depender de quem montou a tabela, e o que faz o botão **Ver fundamento**
+abrir a lei na página certa.
+
+O grau de conferência aparece em cada cobrança: **conferido na lei**, **informado pela equipe** ou
+**precisa de revisão**. O que a equipe informou nunca se confunde com o que foi lido na lei.
+
+Bases aceitas: `reais`, `ufm` (ou outra unidade fiscal), `percentual`, `faixas` — valor que muda
+conforme uma medida, como kWh/mês ou m² — e `formula`, para o que só se descreve em texto. Valor em
+unidade fiscal nunca guarda reais junto, pela mesma razão de sempre: a conversão de um exercício não
+pode vazar para outro.
+
+`npm run test:ui` roda a suíte de navegador do cadastro, com o servidor de pé.
+
 ## Correções de OCR
 
 `municipios/<slug>/correcoes.json` declara trocas de caractere que o reconhecimento errou. São

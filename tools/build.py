@@ -93,6 +93,29 @@ def build(slug: str, destino: Path) -> Path:
                 f"window.MUNICIPIO_{nome[:-3].upper()}=null;\n", encoding="utf-8"
             )
 
+    # O cadastro de cobranças vive como JSON legível na pasta do município, e não
+    # em data/, porque é o único arquivo que a equipe edita e devolve — o editor
+    # do aplicativo exporta exatamente esta forma, e o diff no git é o que se
+    # revisa antes de publicar.
+    cobrancas = base / "cobrancas.json"
+    dados_cobrancas = (
+        json.loads(cobrancas.read_text(encoding="utf-8")) if cobrancas.exists() else None
+    )
+    (dados / "cobrancas.js").write_text(
+        "window.MUNICIPIO_COBRANCAS="
+        + (
+            "JSON.parse("
+            + json.dumps(
+                json.dumps(dados_cobrancas, ensure_ascii=False), ensure_ascii=False
+            ).replace("</", "<\\/")
+            + ")"
+            if dados_cobrancas is not None
+            else "null"
+        )
+        + ";\n",
+        encoding="utf-8",
+    )
+
     tamanho = sum(p.stat().st_size for p in saida.rglob("*") if p.is_file())
     arquivos = sum(1 for p in saida.rglob("*") if p.is_file())
     print(

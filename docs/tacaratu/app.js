@@ -434,9 +434,332 @@ function search(value){
   $('#resultsSection').hidden=false;$('#resultsSection').scrollIntoView({behavior:'smooth'});
 }
 
+// --- Cadastro de cobranças -------------------------------------------------
+// O que o Município cobra, de quem, quando e com que fundamento. Ao contrário
+// das tabelas de fees.js, que saem dos extratores, este cadastro é preenchido
+// pela equipe do município — e por isso cada entrada é obrigada a apontar o
+// dispositivo que a sustenta. Sem fundamento não grava: é o que permite
+// responder "por que estou cobrando isto?" sem depender de quem montou.
+//
+// Não há servidor. O que a equipe edita fica no navegador, sobre o cadastro
+// publicado, e sai daqui como arquivo — que volta ao repositório por revisão.
+const CHARGE_KEY=`municipio.cobrancas.${cfg.slug||'x'}`;
+const CHARGE_BASES={reais:'Reais',ufm:'Unidade fiscal',percentual:'Percentual',faixas:'Faixas',formula:'Fórmula'};
+const CHARGE_CONF={conferido:'Conferido na lei',informado:'Informado pela equipe',revisar:'Precisa de revisão'};
+let charges=[],chargeFilter='todos',chargeEditing=null,chargeDirty=false;
+
+function chargesPublicadas(){return ((window.MUNICIPIO_COBRANCAS||{}).cobrancas||[]).map(c=>({...c}));}
+
+function loadCharges(){
+  let local=null;
+  try{local=JSON.parse(localStorage.getItem(CHARGE_KEY)||'null')}catch{local=null}
+  chargeDirty=!!(local&&Array.isArray(local.cobrancas));
+  charges=chargeDirty?local.cobrancas.map(c=>({...c})):chargesPublicadas();
+}
+
+function saveCharges(){
+  chargeDirty=true;
+  try{localStorage.setItem(CHARGE_KEY,JSON.stringify({cobrancas:charges}))}catch{}
+  renderCharges();
+}
+
+// Um fundamento só vale se a página existir mesmo no documento citado. É a
+// mesma regra que a suíte aplica ao cadastro publicado, repetida aqui para que
+// o erro apareça na hora da digitação, e não meses depois.
+function fundamentoValido(f){
+  const doc=corpus.documents.find(d=>d.id===f.doc);
+  return !!(doc&&doc.pages.some(p=>p.page===Number(f.pagina)));
+}
+
+function baseTexto(base){
+  if(!base)return '—';
+  if(base.tipo==='reais')return `${money(base.valor||0)}${base.por?` por ${base.por}`:''}`;
+  if(base.tipo==='ufm')return `${(base.valor||0).toLocaleString('pt-BR')} ${base.unidade||'UFM'}${base.por?` por ${base.por}`:''}`;
+  if(base.tipo==='percentual')return `${(base.percentual||0).toLocaleString('pt-BR')}%${base.sobre?` sobre ${base.sobre}`:''}`;
+  if(base.tipo==='formula')return base.descricao||'fórmula descrita na lei';
+  if(base.tipo==='faixas'){
+    const n=(base.faixas||[]).length;
+    const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
+    const menor=Math.min(...(base.faixas||[[0,0]]).map(f=>f[1]));
+    const maior=Math.max(...(base.faixas||[[0,0]]).map(f=>f[1]));
+    return `${n} faixas por ${base.medida||'medida'} — de ${menor.toLocaleString('pt-BR')}${un} a ${maior.toLocaleString('pt-BR')}${un}`;
+  }
+  return '—';
+}
+
+function faixasHtml(base){
+  if(base?.tipo!=='faixas')return '';
+  const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
+  const linhas=(base.faixas||[]).map((f,i,arr)=>{
+    const de=i===0?0:(arr[i-1][0]+1);
+    const ate=f[0]===null?null:f[0];
+    const faixa=ate===null?`a partir de ${de.toLocaleString('pt-BR')}`:`${de.toLocaleString('pt-BR')} a ${ate.toLocaleString('pt-BR')}`;
+    const valor=base.unidade==='reais'?money(f[1]):`${f[1].toLocaleString('pt-BR')}${un}`;
+    return `<tr><td>${escape(faixa)}</td><td>${escape(valor)}</td></tr>`;
+  }).join('');
+  return `<table class="charge-tiers"><caption>${escape(base.medida||'medida')}</caption>`
+    +`<thead><tr><th>Faixa</th><th>Valor</th></tr></thead><tbody>${linhas}</tbody></table>`;
+}
+
+function fundamentoHtml(c){
+  return (c.fundamento||[]).map(f=>{
+    const doc=corpus.documents.find(d=>d.id===f.doc);
+    const ok=fundamentoValido(f);
+    const rotulo=`${doc?doc.citation:f.doc}${f.artigo?` — ${f.artigo}`:''}, p. ${f.pagina}`;
+    return ok
+      ? `<button class="source-button" type="button" data-fee-doc="${escape(f.doc)}" data-fee-page="${escape(String(f.pagina))}">Ver fundamento: ${escape(rotulo)}</button>`
+      : `<span class="charge-broken">Fundamento não confere: ${escape(rotulo)}</span>`;
+  }).join('');
+}
+
+function renderCharges(){
+  const secao=$('#chargesSection');
+  if(!secao)return;
+  // A seção aparece mesmo vazia: um município que ainda não cadastrou nada é
+  // exatamente quem precisa encontrar o botão de cadastrar.
+  secao.hidden=false;
+
+  const tributos=[...new Set(charges.map(c=>c.tributo).filter(Boolean))].sort();
+  $('#chargeFilters').innerHTML=[['todos','Todos'],...tributos.map(t=>[t,t])]
+    .map(([id,rot])=>`<button class="chip ${id===chargeFilter?'active':''}" data-charge-filter="${escape(id)}">${escape(rot)}</button>`).join('');
+  document.querySelectorAll('[data-charge-filter]').forEach(b=>b.onclick=()=>{chargeFilter=b.dataset.chargeFilter;renderCharges()});
+
+  const termos=termsFor($('#chargeQuery')?.value||'');
+  const lista=charges.filter(c=>{
+    if(chargeFilter!=='todos'&&c.tributo!==chargeFilter)return false;
+    if(!termos.length)return true;
+    const hay=normalize([c.rotulo,c.tributo,c.fatoGerador,c.sujeitoPassivo,c.vencimento,c.nota].filter(Boolean).join(' '));
+    return termos.every(t=>hasWord(hay,t));
+  });
+
+  $('#chargeSummary').textContent=`${charges.length} cobrança${charges.length===1?'':'s'} cadastrada${charges.length===1?'':'s'}`
+    +(lista.length!==charges.length?` · ${lista.length} no filtro`:'');
+
+  $('#chargeList').innerHTML=lista.length?lista.map(c=>`
+    <article class="charge-card">
+      <header>
+        <div><span class="charge-tributo">${escape(c.tributo||'—')}</span><h3>${escape(c.rotulo||'(sem rótulo)')}</h3></div>
+        <span class="charge-conf charge-conf-${escape(c.conferencia||'informado')}">${escape(CHARGE_CONF[c.conferencia]||CHARGE_CONF.informado)}</span>
+      </header>
+      <p class="charge-base-line"><b>${escape(baseTexto(c.base))}</b>${c.periodicidade?` · ${escape(c.periodicidade)}`:''}</p>
+      ${faixasHtml(c.base)}
+      ${c.base?.sobre?`<p class="charge-sobre">Incide sobre: ${escape(c.base.sobre)}</p>`:''}
+      <dl class="charge-meta">
+        ${c.fatoGerador?`<dt>Fato gerador</dt><dd>${escape(c.fatoGerador)}</dd>`:''}
+        ${c.sujeitoPassivo?`<dt>Quem paga</dt><dd>${escape(c.sujeitoPassivo)}</dd>`:''}
+        ${c.vencimento?`<dt>Quando</dt><dd>${escape(c.vencimento)}</dd>`:''}
+      </dl>
+      <div class="charge-sources">${fundamentoHtml(c)}</div>
+      ${c.nota?`<p class="charge-note">${escape(c.nota)}</p>`:''}
+      <button class="text-button" type="button" data-charge-edit="${escape(c.id)}">Editar</button>
+    </article>`).join('')
+    :charges.length
+      ?'<p class="empty">Nenhuma cobrança encontrada com esse filtro.</p>'
+      :'<p class="empty">Nenhuma cobrança cadastrada ainda. Comece por uma que você já explica com frequência — o cadastro vai pedir o dispositivo que a sustenta.</p>';
+
+  document.querySelectorAll('[data-charge-edit]').forEach(b=>b.onclick=()=>openChargeForm(b.dataset.chargeEdit));
+  document.querySelectorAll('#chargeList [data-fee-page]').forEach(b=>b.onclick=()=>
+    openCtmPage(+b.dataset.feePage,termos.length?termos:['taxa','valor'],b.dataset.feeDoc));
+
+  const nota=$('#chargeLocalNote');
+  nota.hidden=!chargeDirty;
+  nota.className='ufm-status ufm-status-set';
+  nota.textContent='Há alterações suas guardadas neste aparelho, ainda não enviadas. Use “Exportar cadastro” para mandá-las a quem mantém o aplicativo.';
+  $('#chargeReset').hidden=!chargeDirty;
+}
+
+// --- formulário ------------------------------------------------------------
+function baseCamposHtml(tipo,base){
+  const b=base||{};
+  const campo=(id,rot,val,ph,tipoInput)=>`<label for="${id}">${rot}</label><input id="${id}" ${tipoInput||''} value="${escape(String(val??''))}" placeholder="${escape(ph||'')}">`;
+  if(tipo==='reais')return campo('cfValor','Valor em reais',b.valor,'0,00','type="number" step="0.01" min="0"')+campo('cfPor','Por',b.por,'imóvel/ano, unidade, m²…');
+  if(tipo==='ufm')return campo('cfValor','Quantidade',b.valor,'0','type="number" step="0.0001" min="0"')
+    +campo('cfUnidade','Unidade',b.unidade||'UFM','UFM, VR…')+campo('cfPor','Por',b.por,'unidade, ano…');
+  if(tipo==='percentual')return campo('cfPercentual','Percentual (%)',b.percentual,'0,00','type="number" step="0.01" min="0"')
+    +campo('cfSobre','Incide sobre',b.sobre,'o preço do serviço, a tarifa B4a da ANEEL…');
+  if(tipo==='formula')return `<label for="cfDescricao">Como se calcula</label><textarea id="cfDescricao" rows="3" placeholder="R$ 1.160,00 mais R$ 0,35 por m² acrescido…">${escape(b.descricao||'')}</textarea>`;
+  if(tipo==='faixas'){
+    const linhas=(b.faixas||[]).map(f=>`${f[0]===null?'':f[0]}\t${f[1]}`).join('\n');
+    return `<label for="cfUnidadeFaixa">Unidade do valor</label>`
+      +`<select id="cfUnidadeFaixa">${['percentual','reais','ufm'].map(u=>`<option value="${u}" ${b.unidade===u?'selected':''}>${CHARGE_BASES[u]}</option>`).join('')}</select>`
+      +campo('cfMedida','Medida das faixas',b.medida,'kWh/mês, m², pavimentos…')
+      +campo('cfSobre','Incide sobre (se for percentual)',b.sobre,'a tarifa B4a da ANEEL…')
+      +`<label for="cfFaixas">Faixas — uma por linha: <b>teto</b> e <b>valor</b>, separados por tabulação ou ponto e vírgula. Deixe o teto vazio na última, que é aberta.</label>`
+      +`<textarea id="cfFaixas" rows="8" placeholder="30&#9;0,80&#10;50&#9;1,34&#10;&#9;29,99">${escape(linhas)}</textarea>`;
+  }
+  return '';
+}
+
+function lerFaixas(texto){
+  const faixas=[];
+  for(const linha of (texto||'').split('\n')){
+    if(!linha.trim())continue;
+    const partes=linha.split(/[\t;]/).map(p=>p.trim());
+    if(partes.length<2)throw new Error(`A linha “${linha.trim()}” não tem teto e valor separados.`);
+    const teto=partes[0]===''?null:Number(partes[0].replace(/\./g,'').replace(',','.'));
+    const valor=Number(partes[1].replace(/\./g,'').replace(',','.'));
+    if(teto!==null&&!Number.isFinite(teto))throw new Error(`Teto inválido em “${linha.trim()}”.`);
+    if(!Number.isFinite(valor)||valor<=0)throw new Error(`Valor inválido em “${linha.trim()}”.`);
+    faixas.push([teto,valor]);
+  }
+  if(!faixas.length)throw new Error('Informe ao menos uma faixa.');
+  const tetos=faixas.map(f=>f[0]);
+  if(tetos.slice(0,-1).some(t=>t===null))throw new Error('Só a última faixa pode ficar com o teto vazio.');
+  const fechados=tetos.slice(0,-1);
+  if(fechados.some((t,i)=>i&&t<=fechados[i-1]))throw new Error('Os tetos precisam subir, do menor para o maior.');
+  return faixas;
+}
+
+function fundamentoLinhaHtml(f,i){
+  const opcoes=corpus.documents.map(d=>`<option value="${escape(d.id)}" ${f.doc===d.id?'selected':''}>${escape(d.title)}</option>`).join('');
+  return `<div class="charge-fund" data-fund="${i}">
+    <select data-fund-doc>${opcoes}</select>
+    <input data-fund-pagina type="number" min="1" placeholder="página" value="${escape(String(f.pagina??''))}">
+    <input data-fund-artigo placeholder="art. 313, § 5º" value="${escape(f.artigo||'')}">
+    <button class="text-button" type="button" data-fund-remove>remover</button>
+  </div>`;
+}
+
+function renderFundamentos(lista){
+  $('#cfFundamentos').innerHTML=(lista.length?lista:[{doc:corpus.documents[0]?.id,pagina:'',artigo:''}])
+    .map(fundamentoLinhaHtml).join('');
+  document.querySelectorAll('[data-fund-remove]').forEach(b=>b.onclick=()=>{
+    const linhas=lerFundamentosDoForm();
+    linhas.splice(+b.closest('[data-fund]').dataset.fund,1);
+    renderFundamentos(linhas);
+  });
+}
+
+function lerFundamentosDoForm(){
+  return [...document.querySelectorAll('#cfFundamentos [data-fund]')].map(el=>({
+    doc:el.querySelector('[data-fund-doc]').value,
+    pagina:el.querySelector('[data-fund-pagina]').value,
+    artigo:el.querySelector('[data-fund-artigo]').value.trim(),
+  }));
+}
+
+function openChargeForm(id){
+  chargeEditing=id?charges.find(c=>c.id===id)||null:null;
+  const c=chargeEditing||{};
+  $('#chargeFormTitle').textContent=chargeEditing?'Editar cobrança':'Cadastrar cobrança';
+  $('#cfRotulo').value=c.rotulo||'';
+  $('#cfTributo').value=c.tributo||'';
+  $('#cfTributos').innerHTML=[...new Set(charges.map(x=>x.tributo).filter(Boolean))]
+    .map(t=>`<option value="${escape(t)}">`).join('');
+  $('#cfFato').value=c.fatoGerador||'';
+  $('#cfSujeito').value=c.sujeitoPassivo||'';
+  $('#cfBaseTipo').value=c.base?.tipo||'reais';
+  $('#cfBaseCampos').innerHTML=baseCamposHtml($('#cfBaseTipo').value,c.base);
+  $('#cfPeriodicidade').value=c.periodicidade||'anual';
+  $('#cfVencimento').value=c.vencimento||'';
+  $('#cfConferencia').value=c.conferencia||'informado';
+  $('#cfNota').value=c.nota||'';
+  $('#cfErro').hidden=true;
+  $('#cfDelete').hidden=!chargeEditing;
+  renderFundamentos(c.fundamento||[]);
+  $('#chargeForm').showModal();
+}
+
+function coletarBase(){
+  const tipo=$('#cfBaseTipo').value,v=id=>$(`#${id}`)?.value.trim()||'';
+  const num=id=>Number(v(id).replace(/\./g,'').replace(',','.'));
+  if(tipo==='reais'){const valor=num('cfValor');if(!Number.isFinite(valor)||valor<0)throw new Error('Informe o valor em reais.');return{tipo,valor,por:v('cfPor')||undefined}}
+  if(tipo==='ufm'){const valor=num('cfValor');if(!Number.isFinite(valor)||valor<=0)throw new Error('Informe a quantidade.');return{tipo,valor,unidade:v('cfUnidade')||'UFM',por:v('cfPor')||undefined}}
+  if(tipo==='percentual'){const p=num('cfPercentual');if(!Number.isFinite(p)||p<=0)throw new Error('Informe o percentual.');return{tipo,percentual:p,sobre:v('cfSobre')||undefined}}
+  if(tipo==='formula'){const d=v('cfDescricao');if(!d)throw new Error('Descreva como se calcula.');return{tipo,descricao:d}}
+  if(tipo==='faixas')return{tipo,unidade:v('cfUnidadeFaixa')||'percentual',medida:v('cfMedida')||undefined,sobre:v('cfSobre')||undefined,faixas:lerFaixas($('#cfFaixas').value)};
+  throw new Error('Forma de cálculo desconhecida.');
+}
+
+function salvarCobranca(){
+  const erro=$('#cfErro');
+  try{
+    const rotulo=$('#cfRotulo').value.trim(),tributo=$('#cfTributo').value.trim();
+    if(!rotulo)throw new Error('Diga o que se cobra.');
+    if(!tributo)throw new Error('Informe o tributo.');
+    const fundamento=lerFundamentosDoForm().filter(f=>f.doc&&String(f.pagina).trim());
+    if(!fundamento.length)throw new Error('Aponte ao menos um dispositivo. Sem fundamento a cobrança não grava.');
+    for(const f of fundamento){
+      if(!fundamentoValido(f)){
+        const doc=corpus.documents.find(d=>d.id===f.doc);
+        throw new Error(`A página ${f.pagina} não existe em “${doc?doc.title:f.doc}”, que tem ${doc?doc.pageCount:0} páginas.`);
+      }
+    }
+    const base=coletarBase();
+    // valor em unidade fiscal nunca guarda reais junto: é a regra do projeto,
+    // e é o que impede a conversão de um exercício vazar para outro.
+    if(base.tipo==='ufm'&&'value'in base)delete base.value;
+    const id=chargeEditing?chargeEditing.id
+      :`${normalize(tributo)}-${normalize(rotulo)}`.replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,60)||`cobranca-${charges.length+1}`;
+    const registro={
+      id,tributo,rotulo,
+      fatoGerador:$('#cfFato').value.trim(),
+      sujeitoPassivo:$('#cfSujeito').value.trim(),
+      base,
+      periodicidade:$('#cfPeriodicidade').value,
+      vencimento:$('#cfVencimento').value.trim(),
+      fundamento:fundamento.map(f=>({doc:f.doc,pagina:Number(f.pagina),...(f.artigo?{artigo:f.artigo}:{})})),
+      conferencia:$('#cfConferencia').value,
+      nota:$('#cfNota').value.trim(),
+    };
+    const i=charges.findIndex(c=>c.id===id);
+    if(i>=0)charges[i]=registro;else charges.push(registro);
+    saveCharges();
+    erro.hidden=true;erro.textContent='';
+    $('#chargeForm').close();
+  }catch(e){erro.hidden=false;erro.textContent=e.message}
+}
+
+function exportarCobrancas(){
+  const payload={
+    sobre:(window.MUNICIPIO_COBRANCAS||{}).sobre
+      ||'Cadastro de cobranças do município. Cada entrada aponta o dispositivo que a sustenta.',
+    atualizado:new Date().toISOString().slice(0,10),
+    cobrancas:charges,
+  };
+  const texto=JSON.stringify(payload,null,2);
+  $('#chargeExportText').value=texto;
+  $('#chargeExportDlg').showModal();
+  $('#chargeDownload').onclick=()=>{
+    const url=URL.createObjectURL(new Blob([texto],{type:'application/json'}));
+    const a=document.createElement('a');a.href=url;a.download=`cobrancas-${cfg.slug||'municipio'}.json`;
+    document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  };
+  $('#chargeCopy').onclick=async()=>{
+    try{await navigator.clipboard.writeText(texto);$('#chargeCopy').textContent='Copiado'}
+    catch{$('#chargeExportText').select();$('#chargeCopy').textContent='Selecionado — use Ctrl+C'}
+    setTimeout(()=>{$('#chargeCopy').textContent='Copiar texto'},2500);
+  };
+}
+
+function setupCharges(){
+  if(!$('#chargesSection'))return;
+  loadCharges();
+  renderCharges();
+  $('#chargeQuery').addEventListener('input',renderCharges);
+  $('#chargeNew').onclick=()=>openChargeForm(null);
+  $('#chargeExport').onclick=exportarCobrancas;
+  $('#chargeReset').onclick=()=>{
+    try{localStorage.removeItem(CHARGE_KEY)}catch{}
+    loadCharges();renderCharges();
+  };
+  $('#chargeFormClose').onclick=()=>$('#chargeForm').close();
+  $('#chargeExportClose').onclick=()=>$('#chargeExportDlg').close();
+  $('#cfSave').onclick=salvarCobranca;
+  $('#cfDelete').onclick=()=>{
+    if(!chargeEditing)return;
+    charges=charges.filter(c=>c.id!==chargeEditing.id);
+    saveCharges();$('#chargeForm').close();
+  };
+  $('#cfBaseTipo').addEventListener('change',()=>{
+    $('#cfBaseCampos').innerHTML=baseCamposHtml($('#cfBaseTipo').value,null);
+  });
+  $('#cfAddFundamento').onclick=()=>renderFundamentos([...lerFundamentosDoForm(),{doc:corpus.documents[0]?.id,pagina:'',artigo:''}]);
+}
+
 async function init(){
   renderAvisos();renderAudiences();renderTrails();renderGlossary();
-  if(window.MUNICIPIO_LAWS){corpus=window.MUNICIPIO_LAWS;buildLexicon();renderLibrary();setupUfm();setupFeeCards();setupFeeConsultation();}
+  if(window.MUNICIPIO_LAWS){corpus=window.MUNICIPIO_LAWS;buildLexicon();renderLibrary();setupUfm();setupFeeCards();setupFeeConsultation();setupCharges();}
   else $('#library').innerHTML='<p class="empty">A base legal não pôde ser carregada. Reabra o aplicativo ou reinstale o pacote.</p>';
   if(window.MUNICIPIO_FEES){fees=window.MUNICIPIO_FEES;buildFeeIndex();setupFeeFinder();}
   else $('#feeCount').textContent='A tabela de taxas não pôde ser carregada.';
