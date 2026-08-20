@@ -219,7 +219,7 @@
   "titulo": "Taxas e tabelas",
   "resumo": "Os treze anexos deste Código fixam os valores diretamente em reais — a única exceção é a licença ambiental do Anexo X, em percentual da BCLA, que o art. 281 fixa em R$ 1.000,00.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Os Anexos II a XIII já estão no cadastro de cobranças</strong>, lidos página a página (239 a 259) e conferidos na imagem. O <strong>Anexo I</strong> — as 85 páginas da tabela por atividade econômica da Taxa de Licença para Localização e Funcionamento, páginas 154 a 238 — <strong>ainda não foi extraído</strong>: o texto é pesquisável e legível com a página citada, mas os valores não estão tabulados. Os valores estão em reais <strong>de 2017</strong> — confirme com o Município se alguma lei posterior os alterou."
+  "aviso": "<strong>Os treze anexos estão tabulados.</strong> O <strong>Anexo I</strong> — 1.297 subclasses da CNAE 2.0, páginas 155 a 238 — está nesta aba, com busca por código e por atividade. Os <strong>Anexos II a XIII</strong> estão no cadastro de cobranças, lidos página a página e conferidos na imagem. Os valores estão em reais <strong>de 2017</strong> — confirme com o Município se alguma lei posterior os alterou."
  },
  "ufm": {
   "regra": "O Código de Tacaratu fixa os valores dos seus treze anexos <strong>diretamente em reais</strong> — não usa UFM nem outra unidade fiscal intermediária. Os valores são os de <strong>2017</strong>, e não se localizou no Código autorização para o Executivo atualizá-los por decreto: o art. 93 trata da correção de <em>débitos vencidos</em> pelo IPCA, e o art. 191 da atualização anual da Planta de Valores do IPTU. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
@@ -237,7 +237,7 @@
   },
   {
    "tipo": "nota",
-   "texto": "<strong>O que já está tabulado e o que não está.</strong> Os <strong>Anexos II a XIII</strong> foram lidos e estão no cadastro de cobranças, com os valores em reais. O <strong>Anexo I</strong>, que sozinho ocupa 85 das 259 páginas do Código, <strong>não</strong>: é a tabela da Taxa de Licença para Localização e Funcionamento, atividade por atividade, e continua acessível apenas pela busca no texto."
+   "texto": "<strong>Como o Anexo I foi lido.</strong> As 1.297 linhas foram extraídas do texto reconhecido opticamente e ancoradas no <strong>código da subclasse</strong>, que saiu íntegro em todas elas — por isso o código vem à frente da denominação na tabela. O reconhecimento colou palavras em cerca de um terço das denominações e erra o separador decimal com frequência: onde o valor veio com ponto ou sem separador, a linha diz isso ao lado. Quatorze valores foram conferidos contra a imagem da página e todos conferiram; dois foram lidos diretamente na imagem e estão marcados."
   },
   {
    "tipo": "vigencia",

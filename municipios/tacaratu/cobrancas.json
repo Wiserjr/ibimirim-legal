@@ -1,7 +1,48 @@
 {
- "sobre": "Cadastro de cobranças do município, extraído dos Anexos II a XIII da Lei nº 1.365/2017 (páginas 239 a 259). Todos os anexos dizem \"Valor em R$\" — não há unidade fiscal intermediária, com uma exceção: a Taxa de Licença Ambiental do Anexo X vem em percentual da BCLA, que o art. 281 fixa em R$ 1.000,00. O ANEXO I NÃO ESTÁ AQUI: são as 85 páginas da tabela por atividade econômica da Taxa de Licença para Localização e Funcionamento (páginas 154 a 238), que ficam para um bloco à parte. Os valores foram lidos na camada de texto e conferidos na imagem; onde a leitura por imagem confirmou um defeito de impressão, isso está dito na nota da cobrança.",
+ "sobre": "Cadastro de cobranças do município, extraído dos Anexos I a XIII da Lei nº 1.365/2017. Todos os anexos dizem \"Valor em R$\" — não há unidade fiscal intermediária, com uma exceção: a Taxa de Licença Ambiental do Anexo X vem em percentual da BCLA, que o art. 281 fixa em R$ 1.000,00. O ANEXO I, com as 1.297 subclasses da CNAE 2.0, não cabe aqui item a item: está na tabela de taxas do aplicativo, com busca por código e por atividade. Os valores dos Anexos II a XIII foram lidos na camada de texto e conferidos na imagem; onde a leitura por imagem confirmou um defeito de impressão, isso está dito na nota da cobrança.",
  "atualizado": "2026-08-20",
  "cobrancas": [
+  {
+   "id": "taxa-licenca-localizacao-funcionamento",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de licença para localização e taxa de fiscalização de licença para funcionamento — Anexo I",
+   "fatoGerador": "Licenciamento da localização e fiscalização do funcionamento de estabelecimento no território do Município.",
+   "sujeitoPassivo": "A pessoa física ou jurídica inscrita, ou que venha a se inscrever, no Cadastro Municipal de Contribuintes.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Valor fixo por subclasse da CNAE 2.0. São 1.297 atividades, de R$ 50,00 a R$ 10.000,00, em 35 valores distintos. A tabela completa está na aba de taxas, com busca por código e por denominação."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato da inscrição e na renovação; a renovação do alvará tem taxa própria no Anexo IX, item 06.",
+   "fundamento": [
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 101,
+     "artigo": "art. 231"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 154,
+     "artigo": "art. 476"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 155,
+     "artigo": "Anexo I"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 238,
+     "artigo": "Anexo I"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "NÃO EXISTE LINHA PARA O CASO NÃO PREVISTO. O parágrafo único do art. 476 manda cobrar o valor atribuído à atividade QUE MELHOR SE ASSEMELHA à do contribuinte — o Anexo I não tem um item residual de \"outras atividades\". O enquadramento por semelhança é decisão da Fazenda Municipal e precisa ser motivado no processo. UMA ÚNICA ATIVIDADE É GRADUADA POR NÚMERO DE EMPREGADOS: fabricação de laticínios (1052-0/00), que paga R$ 150,00 até dez empregados, R$ 300,00 de onze a trinta e R$ 600,00 acima de trinta e um. Todas as demais têm valor único. SOBRE A LEITURA: o Anexo I foi extraído do texto reconhecido opticamente e ancorado no código da subclasse, que saiu íntegro nas 1.297 linhas. Quatorze valores foram conferidos um a um contra a imagem das páginas 171 e 185 e todos conferiram. O reconhecimento erra o separador decimal com frequência, e a tabela de taxas diz, ao lado do valor, quando ele veio com ponto ou sem separador. Dois valores foram lidos diretamente na imagem: o de 1710-9/00, cuja célula veio fora de ordem, e o de 2920-4/01, que o reconhecimento leu como R$ 11.000,00 quando a página imprime R$ 1.000,00 — o traço vertical da tabela virou um algarismo.",
+   "vigencia": {
+    "de": "2018",
+    "ate": null
+   }
+  },
   {
    "id": "bcla-base-licenca-ambiental",
    "tributo": "Base de cálculo",
@@ -16,11 +57,18 @@
    "periodicidade": "por licença",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 111, "artigo": "art. 281" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 111,
+     "artigo": "art. 281"
+    }
    ],
    "conferencia": "conferido",
    "nota": "É o único valor de referência do Código de Tacaratu — todo o resto dos anexos já vem em reais. O art. 281 fixa a BCLA em R$ 1.000,00 e manda atualizá-la na forma do art. 93. Sem saber a BCLA do exercício, nenhuma linha do Anexo X pode ser lançada: os números de lá são percentuais, não reais.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-licenca-ambiental",
@@ -35,12 +83,23 @@
    "periodicidade": "por licença",
    "vencimento": "No requerimento da licença.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 111, "artigo": "art. 281" },
-    { "doc": "ctm-1365-2017", "pagina": 255, "artigo": "Anexo X" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 111,
+     "artigo": "art. 281"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 255,
+     "artigo": "Anexo X"
+    }
    ],
    "conferencia": "conferido",
    "nota": "MATRIZ COMPLETA, em % da BCLA, na ordem ME / EPP / EMP / EGP dentro de cada potencial poluidor. LICENÇA PRÉVIA e AUTORIZAÇÃO DE FUNCIONAMENTO têm os mesmos números — baixo: 1 / 1,5 / 3 / 6; médio: 2 / 3 / 6 / 12; alto: 4 / 6 / 12 / 24. LICENÇA DE INSTALAÇÃO e LICENÇA DE OPERAÇÃO também são idênticas entre si — baixo: 10 / 12 / 13 / 14; médio: 20 / 24 / 26 / 28; alto: 40 / 48 / 52 / 56. EPIA/RIMA — baixo: 200 / 200 / 200 / 300; médio: 325 / 500 / 600 / 650; alto: 800 / 850 / 950 / 1.000. Com a BCLA em R$ 1.000,00, a licença prévia de microempresa de baixo potencial custa R$ 10,00 e o EPIA/RIMA de empresa de grande porte de alto potencial custa R$ 10.000,00. Legenda impressa: ME microempresa, EPP empresa de pequeno porte, EMP empresa de médio porte, EGP empresa de grande porte.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-horario-especial",
@@ -52,24 +111,63 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Prorrogação ou antecipação até as 22:00 — por dia", "valor": 5, "periodicidade": "Por dia" },
-     { "rotulo": "Prorrogação ou antecipação até as 22:00 — por mês", "valor": 30, "periodicidade": "Mensal" },
-     { "rotulo": "Prorrogação ou antecipação até as 22:00 — por ano", "valor": 150, "periodicidade": "Anual" },
-     { "rotulo": "Prorrogação além das 22:00 — por dia", "valor": 5, "periodicidade": "Por dia" },
-     { "rotulo": "Prorrogação além das 22:00 — por mês", "valor": 50, "periodicidade": "Mensal" },
-     { "rotulo": "Prorrogação além das 22:00 — por ano", "valor": 300, "periodicidade": "Anual" },
-     { "rotulo": "Prorrogação de horário nos períodos festivos — por mês", "valor": 50, "periodicidade": "Mensal" }
+     {
+      "rotulo": "Prorrogação ou antecipação até as 22:00 — por dia",
+      "valor": 5,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Prorrogação ou antecipação até as 22:00 — por mês",
+      "valor": 30,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Prorrogação ou antecipação até as 22:00 — por ano",
+      "valor": 150,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prorrogação além das 22:00 — por dia",
+      "valor": 5,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Prorrogação além das 22:00 — por mês",
+      "valor": 50,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Prorrogação além das 22:00 — por ano",
+      "valor": 300,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prorrogação de horário nos períodos festivos — por mês",
+      "valor": 50,
+      "periodicidade": "Mensal"
+     }
     ]
    },
    "periodicidade": "por dia, mês ou ano",
    "vencimento": "Antecipadamente. A taxa independe de lançamento de ofício.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 105, "artigo": "art. 246" },
-    { "doc": "ctm-1365-2017", "pagina": 239, "artigo": "Anexo II" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 105,
+     "artigo": "art. 246"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 239,
+     "artigo": "Anexo II"
+    }
    ],
    "conferencia": "conferido",
    "nota": "ISENÇÃO no próprio anexo: o item 3 excetua drogarias, farmácias e estabelecimentos de saúde. Repare que a diária é R$ 5,00 nos dois casos — a diferença entre até as 22:00 e além das 22:00 só aparece no mês e no ano.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-publicidade",
@@ -81,41 +179,148 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "I — Tabuletas (outdoor) para afixação de cartazes substituíveis, de papel de 32 folhas, por unidade", "valor": 30, "periodicidade": "Bimestral" },
-     { "rotulo": "II — Indicadores de hora ou temperatura, por unidade", "valor": 50, "periodicidade": "Semestral" },
-     { "rotulo": "III — Indicadores de bairros e locais turísticos, por unidade", "valor": 10, "periodicidade": "Trimestre" },
-     { "rotulo": "IV — Anúncios provisórios, por unidade", "valor": 20, "periodicidade": "Semestral" },
-     { "rotulo": "V — Panfletos e prospectos, por local", "valor": 10, "periodicidade": "Diária" },
-     { "rotulo": "VI — Anúncios em veículos de transportes de passageiros, por m²", "valor": 50, "periodicidade": "Semestral" },
-     { "rotulo": "VII — Anúncios em veículos de propulsão humana, por m²", "valor": 50, "periodicidade": "Semestral" },
-     { "rotulo": "VIII — Veículo automotor de propaganda, por unidade", "valor": 20, "periodicidade": "Mensal" },
-     { "rotulo": "IX — Veículos de propulsão humana, por unidade", "valor": 10, "periodicidade": "Mensal" },
-     { "rotulo": "X — Infláveis, por unidade", "valor": 30, "periodicidade": "Mensal" },
-     { "rotulo": "XI — Apregoador de viva voz, por unidade", "valor": 2, "periodicidade": "Diária" },
-     { "rotulo": "XII — Faixas, por unidade", "valor": 10, "periodicidade": "Semanal" },
-     { "rotulo": "XIII — Bancos, mesas, sombrinhas e protetores de árvores, em locais públicos ou de permissionários públicos", "valor": 10, "periodicidade": "Trimestral" },
-     { "rotulo": "XIV — Postes indicativos de paradas de coletivos, por unidade", "valor": 15, "periodicidade": "Semestral" },
-     { "rotulo": "XV — Anúncios em abrigos, por unidade", "valor": 10, "periodicidade": "Semestral" },
-     { "rotulo": "XVI — Bóias flutuantes, por unidade", "valor": 40, "periodicidade": "Mensal" },
-     { "rotulo": "XVII — Postes indicadores de logradouros, por unidade", "valor": 20, "periodicidade": "Semestral" },
-     { "rotulo": "XVIII a — Anúncios indicativos, por m², com dimensão mínima de 1 m²", "valor": 5, "periodicidade": "Semestral" },
-     { "rotulo": "XVIII b — Anúncios publicitários, por m², com dimensão mínima de 1 m²", "valor": 10, "periodicidade": "Mensal" },
-     { "rotulo": "XIX — Lixeiras", "valor": 10, "periodicidade": "Semestral" },
-     { "rotulo": "XX — Engenhos publicitários movimentados, por m²", "valor": 5, "periodicidade": "Mensal" },
-     { "rotulo": "XXI — Propaganda ao ar livre em engenhos do tipo painéis com suporte eletrônico luminoso", "valor": 250, "periodicidade": "Semestral" },
-     { "rotulo": "XXII — Propaganda ao ar livre em engenhos do tipo painéis com suporte auto-portante (backlight, frontlight, biface, triface, eletrônico publicitário e outros)", "valor": 50, "periodicidade": "Semestral" }
+     {
+      "rotulo": "I — Tabuletas (outdoor) para afixação de cartazes substituíveis, de papel de 32 folhas, por unidade",
+      "valor": 30,
+      "periodicidade": "Bimestral"
+     },
+     {
+      "rotulo": "II — Indicadores de hora ou temperatura, por unidade",
+      "valor": 50,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "III — Indicadores de bairros e locais turísticos, por unidade",
+      "valor": 10,
+      "periodicidade": "Trimestre"
+     },
+     {
+      "rotulo": "IV — Anúncios provisórios, por unidade",
+      "valor": 20,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "V — Panfletos e prospectos, por local",
+      "valor": 10,
+      "periodicidade": "Diária"
+     },
+     {
+      "rotulo": "VI — Anúncios em veículos de transportes de passageiros, por m²",
+      "valor": 50,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "VII — Anúncios em veículos de propulsão humana, por m²",
+      "valor": 50,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "VIII — Veículo automotor de propaganda, por unidade",
+      "valor": 20,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "IX — Veículos de propulsão humana, por unidade",
+      "valor": 10,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "X — Infláveis, por unidade",
+      "valor": 30,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "XI — Apregoador de viva voz, por unidade",
+      "valor": 2,
+      "periodicidade": "Diária"
+     },
+     {
+      "rotulo": "XII — Faixas, por unidade",
+      "valor": 10,
+      "periodicidade": "Semanal"
+     },
+     {
+      "rotulo": "XIII — Bancos, mesas, sombrinhas e protetores de árvores, em locais públicos ou de permissionários públicos",
+      "valor": 10,
+      "periodicidade": "Trimestral"
+     },
+     {
+      "rotulo": "XIV — Postes indicativos de paradas de coletivos, por unidade",
+      "valor": 15,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XV — Anúncios em abrigos, por unidade",
+      "valor": 10,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XVI — Bóias flutuantes, por unidade",
+      "valor": 40,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "XVII — Postes indicadores de logradouros, por unidade",
+      "valor": 20,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XVIII a — Anúncios indicativos, por m², com dimensão mínima de 1 m²",
+      "valor": 5,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XVIII b — Anúncios publicitários, por m², com dimensão mínima de 1 m²",
+      "valor": 10,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "XIX — Lixeiras",
+      "valor": 10,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XX — Engenhos publicitários movimentados, por m²",
+      "valor": 5,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "XXI — Propaganda ao ar livre em engenhos do tipo painéis com suporte eletrônico luminoso",
+      "valor": 250,
+      "periodicidade": "Semestral"
+     },
+     {
+      "rotulo": "XXII — Propaganda ao ar livre em engenhos do tipo painéis com suporte auto-portante (backlight, frontlight, biface, triface, eletrônico publicitário e outros)",
+      "valor": 50,
+      "periodicidade": "Semestral"
+     }
     ]
    },
    "periodicidade": "varia por item",
    "vencimento": "Devida pelo período inteiro previsto no anexo, ainda que o anúncio seja explorado por prazo menor.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 105, "artigo": "art. 252" },
-    { "doc": "ctm-1365-2017", "pagina": 240, "artigo": "Anexo III" },
-    { "doc": "ctm-1365-2017", "pagina": 241, "artigo": "Anexo III" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 105,
+     "artigo": "art. 252"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 240,
+     "artigo": "Anexo III"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 241,
+     "artigo": "Anexo III"
+    }
    ],
    "conferencia": "conferido",
    "nota": "A PERIODICIDADE MUDA DE ITEM PARA ITEM e não acompanha o valor — o painel eletrônico luminoso (XXI) custa R$ 250,00 por SEMESTRE e o veículo automotor de propaganda (VIII) custa R$ 20,00 por MÊS, o que dá R$ 120,00 no mesmo semestre. Lançar tudo como anual multiplica a conta por seis em alguns itens. ATENÇÃO À SOBREPOSIÇÃO: o item XXI cobra R$ 250,00 do painel com suporte eletrônico luminoso e o XXII cobra R$ 50,00 do painel com suporte auto-portante, cuja lista inclui \"eletrônico publicitário\" — um painel eletrônico auto-portante cabe nos dois, com cinco vezes de diferença. A regra do art. 252 é dura: devida pelo período inteiro, ainda que o anúncio fique menos tempo no ar.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ambulante-eventual",
@@ -127,24 +332,63 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Regra geral — 20 dos 22 ramos listados (alimentos preparados, aparelhos elétricos, armarinhos, artefatos de couro, artigos carnavalescos, para fumantes, de papelaria, religiosos, de toucador, baralhos, bebidas alcoólicas, brinquedos, confecções, frutas, gêneros alimentícios, jóias e bijuterias, louças e ferragens, malhas e meias, tecidos, peles e confecções de luxo) — por dia", "valor": 2, "periodicidade": "Por dia" },
-     { "rotulo": "Regra geral — os mesmos 20 ramos — por mês", "valor": 30, "periodicidade": "Mensal" },
-     { "rotulo": "Automóveis (item X) — por dia", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "Automóveis (item X) — por mês", "valor": 150, "periodicidade": "Mensal" },
-     { "rotulo": "Comércio ambulante com carreta, caminhão, camionete ou similar (item XXII) — por dia", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "Comércio ambulante com carreta, caminhão, camionete ou similar (item XXII) — por mês", "valor": 150, "periodicidade": "Mensal" }
+     {
+      "rotulo": "Regra geral — 20 dos 22 ramos listados (alimentos preparados, aparelhos elétricos, armarinhos, artefatos de couro, artigos carnavalescos, para fumantes, de papelaria, religiosos, de toucador, baralhos, bebidas alcoólicas, brinquedos, confecções, frutas, gêneros alimentícios, jóias e bijuterias, louças e ferragens, malhas e meias, tecidos, peles e confecções de luxo) — por dia",
+      "valor": 2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Regra geral — os mesmos 20 ramos — por mês",
+      "valor": 30,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Automóveis (item X) — por dia",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Automóveis (item X) — por mês",
+      "valor": 150,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Comércio ambulante com carreta, caminhão, camionete ou similar (item XXII) — por dia",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Comércio ambulante com carreta, caminhão, camionete ou similar (item XXII) — por mês",
+      "valor": 150,
+      "periodicidade": "Mensal"
+     }
     ]
    },
    "periodicidade": "por dia ou por mês",
    "vencimento": "No ato do licenciamento, antes do início da atividade.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 107, "artigo": "art. 259 e art. 260" },
-    { "doc": "ctm-1365-2017", "pagina": 242, "artigo": "Anexo IV" },
-    { "doc": "ctm-1365-2017", "pagina": 243, "artigo": "Anexo IV" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 107,
+     "artigo": "art. 259 e art. 260"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 242,
+     "artigo": "Anexo IV"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 243,
+     "artigo": "Anexo IV"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O anexo tem 22 itens, mas só dois valores: R$ 2,00 por dia e R$ 30,00 por mês para tudo, exceto automóveis (item X) e comércio com carreta, caminhão ou camionete (item XXII, alíneas a, b e c), que sobem para R$ 10,00 e R$ 150,00. Não é preciso procurar o ramo na lista para achar o valor — basta saber se o caso é um dos dois de exceção. A taxa independe de lançamento de ofício e é arrecadada no ato do licenciamento.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-abate-animais",
@@ -156,21 +400,48 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Bovinos e bubalinos, por cabeça", "valor": 18, "periodicidade": "Por cabeça" },
-     { "rotulo": "Suínos, por cabeça", "valor": 10, "periodicidade": "Por cabeça" },
-     { "rotulo": "Ovinos, por cabeça", "valor": 6, "periodicidade": "Por cabeça" },
-     { "rotulo": "Caprinos, por cabeça", "valor": 5, "periodicidade": "Por cabeça" }
+     {
+      "rotulo": "Bovinos e bubalinos, por cabeça",
+      "valor": 18,
+      "periodicidade": "Por cabeça"
+     },
+     {
+      "rotulo": "Suínos, por cabeça",
+      "valor": 10,
+      "periodicidade": "Por cabeça"
+     },
+     {
+      "rotulo": "Ovinos, por cabeça",
+      "valor": 6,
+      "periodicidade": "Por cabeça"
+     },
+     {
+      "rotulo": "Caprinos, por cabeça",
+      "valor": 5,
+      "periodicidade": "Por cabeça"
+     }
     ]
    },
    "periodicidade": "por cabeça",
    "vencimento": "No ato do licenciamento do abate.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 108, "artigo": "art. 266 e art. 267" },
-    { "doc": "ctm-1365-2017", "pagina": 244, "artigo": "Anexo V" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 108,
+     "artigo": "art. 266 e art. 267"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 244,
+     "artigo": "Anexo V"
+    }
    ],
    "conferencia": "conferido",
    "nota": "É taxa de licença condicionada à inspeção sanitária, não preço público de matadouro — o art. 266 exige a inspeção executada pelo setor competente. Ovino e caprino têm valores diferentes (R$ 6,00 e R$ 5,00), ao contrário do que é comum em outros municípios, onde os dois andam juntos.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obras-construcao-residencial",
@@ -183,29 +454,77 @@
     "unidade": "reais",
     "medida": "m² de área da obra",
     "faixas": [
-     [60, 0],
-     [100, 1],
-     [150, 1.2],
-     [200, 1.5],
-     [250, 2],
-     [300, 2],
-     [350, 2],
-     [400, 2],
-     [450, 2],
-     [500, 2],
-     [null, 3]
+     [
+      60,
+      0
+     ],
+     [
+      100,
+      1
+     ],
+     [
+      150,
+      1.2
+     ],
+     [
+      200,
+      1.5
+     ],
+     [
+      250,
+      2
+     ],
+     [
+      300,
+      2
+     ],
+     [
+      350,
+      2
+     ],
+     [
+      400,
+      2
+     ],
+     [
+      450,
+      2
+     ],
+     [
+      500,
+      2
+     ],
+     [
+      null,
+      3
+     ]
     ]
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 109, "artigo": "Seção da taxa de licença para execução de obras" },
-    { "doc": "ctm-1365-2017", "pagina": 245, "artigo": "Anexo VI, item 01" },
-    { "doc": "ctm-1365-2017", "pagina": 246, "artigo": "Anexo VI, item 01" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 109,
+     "artigo": "Seção da taxa de licença para execução de obras"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 245,
+     "artigo": "Anexo VI, item 01"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 246,
+     "artigo": "Anexo VI, item 01"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O valor é POR METRO QUADRADO, não por obra. Até 60 m² é ISENTO. As seis faixas de 201 a 500 m² têm todas o mesmo R$ 2,00 — a lei desdobrou em alíneas de 50 em 50 sem mudar o número. BURACO NA FAIXA: a última alínea diz \"acima de 501\", e a anterior termina em 500 — a obra de exatamente 501 m² não cai em nenhuma das duas. Na prática se aplica a de cima, mas o texto não diz isso.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obras-construcao-nao-residencial",
@@ -218,28 +537,72 @@
     "unidade": "reais",
     "medida": "m² de área da obra",
     "faixas": [
-     [50, 1.2],
-     [100, 1.5],
-     [150, 1.5],
-     [200, 1.5],
-     [250, 2],
-     [300, 2],
-     [350, 2],
-     [400, 2],
-     [450, 2],
-     [500, 2],
-     [null, 3]
+     [
+      50,
+      1.2
+     ],
+     [
+      100,
+      1.5
+     ],
+     [
+      150,
+      1.5
+     ],
+     [
+      200,
+      1.5
+     ],
+     [
+      250,
+      2
+     ],
+     [
+      300,
+      2
+     ],
+     [
+      350,
+      2
+     ],
+     [
+      400,
+      2
+     ],
+     [
+      450,
+      2
+     ],
+     [
+      500,
+      2
+     ],
+     [
+      null,
+      3
+     ]
     ]
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 245, "artigo": "Anexo VI, item 02" },
-    { "doc": "ctm-1365-2017", "pagina": 246, "artigo": "Anexo VI, item 02" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 245,
+     "artigo": "Anexo VI, item 02"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 246,
+     "artigo": "Anexo VI, item 02"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Por metro quadrado. NÃO HÁ ISENÇÃO aqui — a primeira faixa do não residencial já paga R$ 1,20/m², enquanto a residencial até 60 m² é isenta. A primeira faixa também é diferente: 001 a 050 m² no não residencial, 001 a 060 m² no residencial. Mesmo buraco em 501 m² da tabela residencial.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obras-reformas-e-muros",
@@ -251,20 +614,43 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Reforma e reparos de prédios residenciais, por m²", "valor": 1, "periodicidade": "Por obra" },
-     { "rotulo": "Reformas e reparos de prédios comerciais, por m²", "valor": 1.5, "periodicidade": "Por obra" },
-     { "rotulo": "Construção de muro, por metro linear", "valor": 1, "periodicidade": "Por obra" },
-     { "rotulo": "Demolição de prédios, por m²", "valor": 1, "periodicidade": "Por obra" }
+     {
+      "rotulo": "Reforma e reparos de prédios residenciais, por m²",
+      "valor": 1,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Reformas e reparos de prédios comerciais, por m²",
+      "valor": 1.5,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Construção de muro, por metro linear",
+      "valor": 1,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Demolição de prédios, por m²",
+      "valor": 1,
+      "periodicidade": "Por obra"
+     }
     ]
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 246, "artigo": "Anexo VI, itens 03 a 06" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 246,
+     "artigo": "Anexo VI, itens 03 a 06"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Cuidado para não confundir com os itens 01 e 02: aqui é REFORMA E REPARO, sem ampliação, e o valor é fixo por m² sem faixa de área. Ampliação puxa para a tabela de faixas dos itens 01 e 02. O muro é por metro LINEAR, não por m².",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-loteamento-e-arruamento",
@@ -277,26 +663,64 @@
     "unidade": "reais",
     "medida": "m² do lote, no desmembramento e loteamento (item 08)",
     "faixas": [
-     [125, 100],
-     [200, 125],
-     [250, 150],
-     [300, 200],
-     [350, 250],
-     [400, 300],
-     [450, 350],
-     [500, 400],
-     [null, 500]
+     [
+      125,
+      100
+     ],
+     [
+      200,
+      125
+     ],
+     [
+      250,
+      150
+     ],
+     [
+      300,
+      200
+     ],
+     [
+      350,
+      250
+     ],
+     [
+      400,
+      300
+     ],
+     [
+      450,
+      350
+     ],
+     [
+      500,
+      400
+     ],
+     [
+      null,
+      500
+     ]
     ]
    },
    "periodicidade": "por licenciamento",
    "vencimento": "No licenciamento.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 246, "artigo": "Anexo VI, itens 07 e 08" },
-    { "doc": "ctm-1365-2017", "pagina": 247, "artigo": "Anexo VI, itens 08 e 09" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 246,
+     "artigo": "Anexo VI, itens 07 e 08"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 247,
+     "artigo": "Anexo VI, itens 08 e 09"
+    }
    ],
    "conferencia": "conferido",
    "nota": "AS FAIXAS ACIMA SÃO DO ITEM 08 (desmembramentos e loteamentos), por m² de lote — e diferentemente das tabelas de obra, aqui o valor da faixa é o TOTAL, não o preço do metro quadrado. Os outros dois itens desta seção: ITEM 07, levantamento de loteamento e terrenos, a cada 100 m² ou fração — R$ 18,00 por terreno até 30.000 m² e R$ 22,00 pelo que exceder 30.000 m². ITEM 09, aprovação de arruamento, por metro linear — R$ 12,00 com meio-fio e linha d'água, R$ 15,00 com toda a infraestrutura básica.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-habite-se-residencial",
@@ -309,28 +733,72 @@
     "unidade": "reais",
     "medida": "m² de área construída",
     "faixas": [
-     [50, 0],
-     [100, 0.45],
-     [150, 0.5],
-     [200, 0.55],
-     [250, 0.6],
-     [300, 0.65],
-     [350, 0.7],
-     [400, 0.75],
-     [450, 0.8],
-     [500, 0.9],
-     [null, 1]
+     [
+      50,
+      0
+     ],
+     [
+      100,
+      0.45
+     ],
+     [
+      150,
+      0.5
+     ],
+     [
+      200,
+      0.55
+     ],
+     [
+      250,
+      0.6
+     ],
+     [
+      300,
+      0.65
+     ],
+     [
+      350,
+      0.7
+     ],
+     [
+      400,
+      0.75
+     ],
+     [
+      450,
+      0.8
+     ],
+     [
+      500,
+      0.9
+     ],
+     [
+      null,
+      1
+     ]
     ]
    },
    "periodicidade": "por vistoria",
    "vencimento": "No requerimento do habite-se.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 247, "artigo": "Anexo VI, item 10.01" },
-    { "doc": "ctm-1365-2017", "pagina": 248, "artigo": "Anexo VI, item 10.01" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 247,
+     "artigo": "Anexo VI, item 10.01"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 248,
+     "artigo": "Anexo VI, item 10.01"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valor POR METRO QUADRADO. Isento até 50 m² — repare que a isenção do habite-se para em 50 m², enquanto a da licença de construção residencial vai até 60 m². Uma casa de 55 m² é isenta da licença de obra e paga o habite-se.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-habite-se-comercial",
@@ -343,27 +811,67 @@
     "unidade": "reais",
     "medida": "m² de área construída",
     "faixas": [
-     [50, 0.45],
-     [100, 0.5],
-     [150, 0.55],
-     [200, 0.6],
-     [250, 0.65],
-     [300, 0.7],
-     [350, 0.75],
-     [400, 0.8],
-     [450, 0.9],
-     [500, 1],
-     [null, 1.05]
+     [
+      50,
+      0.45
+     ],
+     [
+      100,
+      0.5
+     ],
+     [
+      150,
+      0.55
+     ],
+     [
+      200,
+      0.6
+     ],
+     [
+      250,
+      0.65
+     ],
+     [
+      300,
+      0.7
+     ],
+     [
+      350,
+      0.75
+     ],
+     [
+      400,
+      0.8
+     ],
+     [
+      450,
+      0.9
+     ],
+     [
+      500,
+      1
+     ],
+     [
+      null,
+      1.05
+     ]
     ]
    },
    "periodicidade": "por vistoria",
    "vencimento": "No requerimento do habite-se.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 248, "artigo": "Anexo VI, item 10.02" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 248,
+     "artigo": "Anexo VI, item 10.02"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Por metro quadrado, sem isenção — a tabela comercial e mista é a residencial deslocada uma faixa para cima, começando a cobrar já na primeira. O uso MISTO segue esta tabela, não a residencial.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-regularizacao-habite-se",
@@ -375,18 +883,33 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Regularização de habite-se residencial, por m²", "valor": 1, "periodicidade": "Por ato" },
-     { "rotulo": "Regularização de habite-se não residencial, por m²", "valor": 1.1, "periodicidade": "Por ato" }
+     {
+      "rotulo": "Regularização de habite-se residencial, por m²",
+      "valor": 1,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Regularização de habite-se não residencial, por m²",
+      "valor": 1.1,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No requerimento da regularização.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 248, "artigo": "Anexo VI, item 11" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 248,
+     "artigo": "Anexo VI, item 11"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Por metro quadrado, sem faixa de área e sem isenção. Regularizar sempre custa mais caro do que vistoriar na hora certa: R$ 1,00/m² contra R$ 0,45 a R$ 0,90 do habite-se residencial tempestivo.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ocupacao-areas",
@@ -398,24 +921,63 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "1 — Feira livre, por dia e por m²", "valor": 2, "periodicidade": "Por dia" },
-     { "rotulo": "2 — Boxes em mercado público, por dia e por m²", "valor": 4, "periodicidade": "Por dia" },
-     { "rotulo": "3 — Barracas, quiosque e assemelhados em períodos festivos, por dia e por m²", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "3 — Barracas, quiosque e assemelhados em períodos festivos, por evento e por m²", "valor": 20, "periodicidade": "Por evento" },
-     { "rotulo": "4 — Eventos comerciais e de prestação de serviços, por dia e por m²", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "4 (segundo item com este número) — Espaço ocupado por circo, parque de diversão e assemelhantes, categoria popular, por dia e por m²", "valor": 5, "periodicidade": "Por dia" },
-     { "rotulo": "4 (segundo item com este número) — Espaço ocupado por circo, parque de diversão e assemelhantes, categoria especial, por dia e por m²", "valor": 10, "periodicidade": "Por dia" }
+     {
+      "rotulo": "1 — Feira livre, por dia e por m²",
+      "valor": 2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "2 — Boxes em mercado público, por dia e por m²",
+      "valor": 4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "3 — Barracas, quiosque e assemelhados em períodos festivos, por dia e por m²",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "3 — Barracas, quiosque e assemelhados em períodos festivos, por evento e por m²",
+      "valor": 20,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "4 — Eventos comerciais e de prestação de serviços, por dia e por m²",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "4 (segundo item com este número) — Espaço ocupado por circo, parque de diversão e assemelhantes, categoria popular, por dia e por m²",
+      "valor": 5,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "4 (segundo item com este número) — Espaço ocupado por circo, parque de diversão e assemelhantes, categoria especial, por dia e por m²",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     }
     ]
    },
    "periodicidade": "por dia ou por evento",
    "vencimento": "No licenciamento da ocupação.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 110, "artigo": "Seção da taxa de licença para ocupação de áreas em praças, vias e logradouros públicos" },
-    { "doc": "ctm-1365-2017", "pagina": 249, "artigo": "Anexo VII" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 110,
+     "artigo": "Seção da taxa de licença para ocupação de áreas em praças, vias e logradouros públicos"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 249,
+     "artigo": "Anexo VII"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DEFEITO DE NUMERAÇÃO CONFERIDO NA IMAGEM: o anexo tem DOIS itens numerados 4 — \"Eventos comerciais e de prestação de serviços\" e \"Espaço ocupado por circo, parque de diversão e assemelhantes\". Não é erro de leitura, está impresso assim na página 249. Ao citar em despacho ou auto de infração, descreva a atividade em vez de dizer só \"item 4 do Anexo VII\". Todos os valores são por m² — o mínimo de ocupação, um metro quadrado, vem do parágrafo único do artigo da Seção.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-residuos-solidos",
@@ -427,38 +989,133 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Residencial — de 0 a 50 m²", "valor": 2, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — de 51 a 100 m²", "valor": 3, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — de 101 a 200 m²", "valor": 5, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — de 201 a 300 m²", "valor": 7, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — acima de 301 m²", "valor": 8, "periodicidade": "Anual" },
-     { "rotulo": "Comércio e serviços — de 0 a 50 m²", "valor": 3, "periodicidade": "Anual" },
-     { "rotulo": "Comércio e serviços — de 51 a 100 m²", "valor": 5, "periodicidade": "Anual" },
-     { "rotulo": "Comércio e serviços — de 101 a 200 m²", "valor": 7, "periodicidade": "Anual" },
-     { "rotulo": "Comércio e serviços — de 201 a 300 m²", "valor": 8, "periodicidade": "Anual" },
-     { "rotulo": "Comércio e serviços — acima de 301 m²", "valor": 9, "periodicidade": "Anual" },
-     { "rotulo": "Indústrias — de 0 a 50 m²", "valor": 6, "periodicidade": "Anual" },
-     { "rotulo": "Indústrias — de 51 a 100 m²", "valor": 7, "periodicidade": "Anual" },
-     { "rotulo": "Indústrias — de 101 a 200 m²", "valor": 8, "periodicidade": "Anual" },
-     { "rotulo": "Indústrias — de 201 a 300 m²", "valor": 9, "periodicidade": "Anual" },
-     { "rotulo": "Indústrias — acima de 301 m²", "valor": 10, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades — de 0 a 50 m²", "valor": 6, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades — de 51 a 100 m²", "valor": 7, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades — de 101 a 200 m²", "valor": 8, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades — de 201 a 300 m²", "valor": 9, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades — acima de 301 m²", "valor": 10, "periodicidade": "Anual" }
+     {
+      "rotulo": "Residencial — de 0 a 50 m²",
+      "valor": 2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — de 51 a 100 m²",
+      "valor": 3,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — de 101 a 200 m²",
+      "valor": 5,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — de 201 a 300 m²",
+      "valor": 7,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — acima de 301 m²",
+      "valor": 8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio e serviços — de 0 a 50 m²",
+      "valor": 3,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio e serviços — de 51 a 100 m²",
+      "valor": 5,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio e serviços — de 101 a 200 m²",
+      "valor": 7,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio e serviços — de 201 a 300 m²",
+      "valor": 8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio e serviços — acima de 301 m²",
+      "valor": 9,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústrias — de 0 a 50 m²",
+      "valor": 6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústrias — de 51 a 100 m²",
+      "valor": 7,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústrias — de 101 a 200 m²",
+      "valor": 8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústrias — de 201 a 300 m²",
+      "valor": 9,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústrias — acima de 301 m²",
+      "valor": 10,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades — de 0 a 50 m²",
+      "valor": 6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades — de 51 a 100 m²",
+      "valor": 7,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades — de 101 a 200 m²",
+      "valor": 8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades — de 201 a 300 m²",
+      "valor": 9,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades — acima de 301 m²",
+      "valor": 10,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Pode ser lançada e arrecadada junto com o IPTU.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 115, "artigo": "Seção da taxa de coleta, transporte e destinação final de resíduos sólidos urbanos" },
-    { "doc": "ctm-1365-2017", "pagina": 250, "artigo": "Anexo VIII" },
-    { "doc": "ctm-1365-2017", "pagina": 251, "artigo": "Anexo VIII" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 115,
+     "artigo": "Seção da taxa de coleta, transporte e destinação final de resíduos sólidos urbanos"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 250,
+     "artigo": "Anexo VIII"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 251,
+     "artigo": "Anexo VIII"
+    }
    ],
    "conferencia": "conferido",
    "nota": "OS VALORES ACIMA SÃO O SOMATÓRIO — a tabela tem três colunas por faixa: Coleta/Transporte, Destinação Final e Somatório. É o somatório que se lança; as duas primeiras colunas explicam de onde ele vem, e servem se o Município passar a cobrar só um dos serviços. As categorias INDÚSTRIAS e OUTRAS ATIVIDADES têm exatamente os mesmos valores nas cinco faixas — na prática, quem não é residencial nem comércio paga como indústria. Repare que a faixa vai de 0 a 50, 51 a 100, 101 a 200, 201 a 300 e \"acima de 301\": o imóvel de exatamente 301 m² fica entre a quarta e a quinta faixa.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-expediente",
@@ -470,33 +1127,108 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "01 — Baixa de qualquer natureza em lançamentos ou registros", "valor": 18, "periodicidade": "Por ato" },
-     { "rotulo": "02 a — Concessão de favores em virtude de lei municipal, por ato do Prefeito", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "02 b — Concessão de privilégio individual ou a pessoa jurídica", "valor": 50, "periodicidade": "Por ato" },
-     { "rotulo": "03 a — Permissão de uso de terreno em cemitério público", "valor": 50, "periodicidade": "Por ato" },
-     { "rotulo": "03 b — Prorrogação e transferência de contrato de qualquer natureza celebrado com o Município", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "04 a — Emissão de DAM de arrecadação, por documento", "valor": 5, "periodicidade": "Por documento" },
-     { "rotulo": "04 b — Emissão de segunda via de DAM, por reemissão", "valor": 10, "periodicidade": "Por documento" },
-     { "rotulo": "04 c — Emissão de certidões, por documento", "valor": 10, "periodicidade": "Por documento" },
-     { "rotulo": "05 a — Autenticação de talonários, por unidade", "valor": 0.74, "periodicidade": "Por unidade" },
-     { "rotulo": "05 b — Autenticação de formulários contínuos, por milheiro", "valor": 18.61, "periodicidade": "Por milheiro" },
-     { "rotulo": "05 c — Autenticação de livros fiscais, por unidade", "valor": 0.74, "periodicidade": "Por unidade" },
-     { "rotulo": "07 — Segunda via de alvarás e habite-se, por documento", "valor": 30, "periodicidade": "Por documento" },
-     { "rotulo": "09 — Outros atos do Prefeito ou de autoridade com delegação de poderes, não especificados na tabela, que dependam de anotações e atos administrativos de caráter normativo", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "10 a — Vistoria de coletivos, por unidade vistoriada", "valor": 15, "periodicidade": "Por unidade" },
-     { "rotulo": "10 b — Vistoria de táxis, por unidade", "valor": 10, "periodicidade": "Por unidade" }
+     {
+      "rotulo": "01 — Baixa de qualquer natureza em lançamentos ou registros",
+      "valor": 18,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "02 a — Concessão de favores em virtude de lei municipal, por ato do Prefeito",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "02 b — Concessão de privilégio individual ou a pessoa jurídica",
+      "valor": 50,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "03 a — Permissão de uso de terreno em cemitério público",
+      "valor": 50,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "03 b — Prorrogação e transferência de contrato de qualquer natureza celebrado com o Município",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "04 a — Emissão de DAM de arrecadação, por documento",
+      "valor": 5,
+      "periodicidade": "Por documento"
+     },
+     {
+      "rotulo": "04 b — Emissão de segunda via de DAM, por reemissão",
+      "valor": 10,
+      "periodicidade": "Por documento"
+     },
+     {
+      "rotulo": "04 c — Emissão de certidões, por documento",
+      "valor": 10,
+      "periodicidade": "Por documento"
+     },
+     {
+      "rotulo": "05 a — Autenticação de talonários, por unidade",
+      "valor": 0.74,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "05 b — Autenticação de formulários contínuos, por milheiro",
+      "valor": 18.61,
+      "periodicidade": "Por milheiro"
+     },
+     {
+      "rotulo": "05 c — Autenticação de livros fiscais, por unidade",
+      "valor": 0.74,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "07 — Segunda via de alvarás e habite-se, por documento",
+      "valor": 30,
+      "periodicidade": "Por documento"
+     },
+     {
+      "rotulo": "09 — Outros atos do Prefeito ou de autoridade com delegação de poderes, não especificados na tabela, que dependam de anotações e atos administrativos de caráter normativo",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "10 a — Vistoria de coletivos, por unidade vistoriada",
+      "valor": 15,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "10 b — Vistoria de táxis, por unidade",
+      "valor": 10,
+      "periodicidade": "Por unidade"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No momento em que o documento for assinado, visado, protocolado, expedido, anexado, desentranhado ou devolvido. O art. 304 suspende o encaminhamento do papel se a taxa não estiver paga.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 116, "artigo": "art. 304 e art. 305" },
-    { "doc": "ctm-1365-2017", "pagina": 252, "artigo": "Anexo IX — Expediente" },
-    { "doc": "ctm-1365-2017", "pagina": 253, "artigo": "Anexo IX — Expediente" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 116,
+     "artigo": "art. 304 e art. 305"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 252,
+     "artigo": "Anexo IX — Expediente"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 253,
+     "artigo": "Anexo IX — Expediente"
+    }
    ],
    "conferencia": "conferido",
    "nota": "OS ITENS 06 E 08 FICARAM DE FORA DESTA LISTA porque não são valor único: o 06 é a renovação de alvarás, cadastrada à parte, e o 08 (fornecimento de cópias, heliográficas e demais documentos) diz apenas \"conforme decreto instituindo preço público\" — sem decreto publicado, não há valor a cobrar. Os R$ 0,74 e R$ 18,61 da autenticação são os únicos centavos quebrados de todo o Código, indício de que vieram convertidos de uma tabela antiga. O art. 304 é a ferramenta prática do balcão: sem a taxa paga, o papel não anda.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-renovacao-alvara",
@@ -508,25 +1240,68 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — até 40 m²", "valor": 18, "periodicidade": "Anual" },
-     { "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — de 40 a 250 m²", "valor": 36, "periodicidade": "Anual" },
-     { "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — acima de 250 m²", "valor": 72, "periodicidade": "Anual" },
-     { "rotulo": "Residencial unifamiliar ou multifamiliar vertical — de 40 a 250 m²", "valor": 72, "periodicidade": "Anual" },
-     { "rotulo": "Residencial unifamiliar ou multifamiliar vertical — acima de 250 m²", "valor": 140, "periodicidade": "Anual" },
-     { "rotulo": "Demais usos — até 40 m²", "valor": 40, "periodicidade": "Anual" },
-     { "rotulo": "Demais usos — de 40 a 250 m²", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "Demais usos — acima de 250 m²", "valor": 160, "periodicidade": "Anual" }
+     {
+      "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — até 40 m²",
+      "valor": 18,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — de 40 a 250 m²",
+      "valor": 36,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial unifamiliar ou multifamiliar horizontal — acima de 250 m²",
+      "valor": 72,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial unifamiliar ou multifamiliar vertical — de 40 a 250 m²",
+      "valor": 72,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial unifamiliar ou multifamiliar vertical — acima de 250 m²",
+      "valor": 140,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Demais usos — até 40 m²",
+      "valor": 40,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Demais usos — de 40 a 250 m²",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Demais usos — acima de 250 m²",
+      "valor": 160,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Na renovação anual do alvará.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 116, "artigo": "art. 305" },
-    { "doc": "ctm-1365-2017", "pagina": 253, "artigo": "Anexo IX, item 06" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 116,
+     "artigo": "art. 305"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 253,
+     "artigo": "Anexo IX, item 06"
+    }
    ],
    "conferencia": "conferido",
    "nota": "CÉLULA EM BRANCO NA LEI, CONFERIDA NA IMAGEM: a linha \"Residencial unifamiliar, multifamiliar, Vertical\" não tem valor na coluna de até 40 m². A célula está vazia na página 253 — não é perda de leitura. Prédio vertical com unidade de até 40 m² não tem valor de renovação previsto. CABEÇALHO MAL IMPRESSO: as colunas trazem \"= 40 m2\", \"40m2 = 250 m2\" e \"> 250 m2\", em que os sinais de igual estão no lugar de \"até\" e \"de … a\". A faixa do meio e a de cima se encostam em 250 m² sem dizer qual leva o empate.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-servicos-diversos",
@@ -538,28 +1313,83 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "1 a — Numeração de prédios, por numeração", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "1 b — Renumeração de prédios, por renumeração", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "2 a — Demarcação, alinhamento e nivelamento, por serviço de extensão até 12 m lineares", "valor": 10, "periodicidade": "Por serviço" },
-     { "rotulo": "2 b — Demarcação, alinhamento e nivelamento, pelo que exceder, a cada 12 m lineares", "valor": 5, "periodicidade": "Por serviço" },
-     { "rotulo": "2 c — Rebaixamento e colocação de guias, por metro linear", "valor": 10, "periodicidade": "Por metro linear" },
-     { "rotulo": "3 — Matrícula de cães, por matrícula", "valor": 8, "periodicidade": "Por matrícula" },
-     { "rotulo": "4.01 a — Apreensão de ambulante, pelo primeiro dia ou fração", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "4.01 b — Demais apreensões, pelo primeiro dia ou fração", "valor": 15, "periodicidade": "Por dia" },
-     { "rotulo": "4.02 a — Apreensão de ambulante, por cada dia subsequente", "valor": 3, "periodicidade": "Por dia" },
-     { "rotulo": "4.02 b — Demais apreensões, por cada dia subsequente", "valor": 4, "periodicidade": "Por dia" },
-     { "rotulo": "6 — Outros serviços municipais não especificados", "valor": 30, "periodicidade": "Por ato" }
+     {
+      "rotulo": "1 a — Numeração de prédios, por numeração",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "1 b — Renumeração de prédios, por renumeração",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "2 a — Demarcação, alinhamento e nivelamento, por serviço de extensão até 12 m lineares",
+      "valor": 10,
+      "periodicidade": "Por serviço"
+     },
+     {
+      "rotulo": "2 b — Demarcação, alinhamento e nivelamento, pelo que exceder, a cada 12 m lineares",
+      "valor": 5,
+      "periodicidade": "Por serviço"
+     },
+     {
+      "rotulo": "2 c — Rebaixamento e colocação de guias, por metro linear",
+      "valor": 10,
+      "periodicidade": "Por metro linear"
+     },
+     {
+      "rotulo": "3 — Matrícula de cães, por matrícula",
+      "valor": 8,
+      "periodicidade": "Por matrícula"
+     },
+     {
+      "rotulo": "4.01 a — Apreensão de ambulante, pelo primeiro dia ou fração",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "4.01 b — Demais apreensões, pelo primeiro dia ou fração",
+      "valor": 15,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "4.02 a — Apreensão de ambulante, por cada dia subsequente",
+      "valor": 3,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "4.02 b — Demais apreensões, por cada dia subsequente",
+      "valor": 4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "6 — Outros serviços municipais não especificados",
+      "valor": 30,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No ato da prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 116, "artigo": "art. 306 e art. 307" },
-    { "doc": "ctm-1365-2017", "pagina": 254, "artigo": "Anexo IX — Serviços diversos" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 116,
+     "artigo": "art. 306 e art. 307"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 254,
+     "artigo": "Anexo IX — Serviços diversos"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DOIS DEFEITOS, OS DOIS CONFERIDOS. Primeiro: a numeração pula do item 4 para o item 6 — NÃO EXISTE ITEM 5 na tabela impressa da página 254. Segundo: o art. 307 manda cobrar estes serviços \"de acordo com o Anexo X desta Lei\", mas o Anexo X é a tabela da licença ambiental — a tabela de serviços diversos está no Anexo IX, na segunda metade, logo depois da de expediente. É remissão errada, e o art. 305, que remete o expediente ao Anexo IX, mostra qual era a intenção. ALÉM DA TAXA DE APREENSÃO cobram-se as despesas de alimentação, tratamento, medicação e vacinação dos animais e o transporte até o depósito. PRAZOS: animais e mercadorias ficam sob responsabilidade da Secretaria de Agricultura e Meio Ambiente por 5 dias contados da notificação ao proprietário; os demais bens têm 30 dias para resgate, sob pena de leilão ou doação a instituições filantrópicas.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-fiscalizacao-veiculo-passageiros",
@@ -571,21 +1401,48 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Licença para ônibus", "valor": 60, "periodicidade": "Anual" },
-     { "rotulo": "Licença para transporte complementar", "valor": 40, "periodicidade": "Anual" },
-     { "rotulo": "Licença para táxi", "valor": 30, "periodicidade": "Anual" },
-     { "rotulo": "Licença para moto-táxi", "valor": 15, "periodicidade": "Anual" }
+     {
+      "rotulo": "Licença para ônibus",
+      "valor": 60,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Licença para transporte complementar",
+      "valor": 40,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Licença para táxi",
+      "valor": 30,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Licença para moto-táxi",
+      "valor": 15,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Devida integralmente no exercício, na forma da Subseção V do Capítulo.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 112, "artigo": "art. 287" },
-    { "doc": "ctm-1365-2017", "pagina": 256, "artigo": "Anexo XI" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 112,
+     "artigo": "art. 287"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 256,
+     "artigo": "Anexo XI"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Não confundir com a vistoria de coletivos e táxis do Anexo IX, item 10 (R$ 15,00 e R$ 10,00): aquela é taxa de EXPEDIENTE pela vistoria, esta é taxa de FISCALIZAÇÃO pela licença do veículo. O mesmo táxi pode gerar as duas.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-fiscalizacao-sanitaria",
@@ -597,47 +1454,178 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "01 — Funcionamento de hospitais e clínicas veterinárias", "valor": 100, "periodicidade": "Anual" },
-     { "rotulo": "02 — Funcionamento de consultório, ambulatório, laboratório de análise, oficina de prótese ou de equipamento e material de uso médico ou odontológico e similares, inclusive consultório veterinário", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "03 — Produção ou acondicionamento de bebidas alcoólicas", "valor": 30, "periodicidade": "Anual" },
-     { "rotulo": "04 — Comercialização de bebidas alcoólicas", "valor": 30, "periodicidade": "Anual" },
-     { "rotulo": "05 — Funcionamento de posto de venda de medicamentos, farmácias e drogarias", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "06 — Funcionamento de supermercados", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "07 — Funcionamento de mercadinhos, mercearias e especiarias não inscritos como microempresa", "valor": 50, "periodicidade": "Anual" },
-     { "rotulo": "08 — Comércio de estivas e cereais", "valor": 70, "periodicidade": "Anual" },
-     { "rotulo": "10 — Comércio de hortaliças e frutas", "valor": 50, "periodicidade": "Anual" },
-     { "rotulo": "11 — Padarias, confeitarias, pastelarias, docerias e lojas de conveniência", "valor": 50, "periodicidade": "Anual" },
-     { "rotulo": "12 a — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 1ª categoria", "valor": 90, "periodicidade": "Anual" },
-     { "rotulo": "12 b — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 2ª categoria", "valor": 60, "periodicidade": "Anual" },
-     { "rotulo": "12 c — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 3ª categoria", "valor": 30, "periodicidade": "Anual" },
-     { "rotulo": "13 — Ensino infantil (maternal I e II, jardim I e II e alfabetização)", "valor": 50, "periodicidade": "Anual" },
-     { "rotulo": "14 — Ensino fundamental I e II (1ª a 4ª e 5ª a 8ª séries)", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "15 — Ensino médio e superior", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "16 — Creches, berçário, hotelzinho e similares", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "17 — Tinturaria e lavanderia", "valor": 70, "periodicidade": "Anual" },
-     { "rotulo": "18 — Baile, shows, festival e similares", "valor": 100, "periodicidade": "Anual" },
-     { "rotulo": "19 — Funcionamento de hotéis, motéis e pensões", "valor": 75, "periodicidade": "Anual" },
-     { "rotulo": "20 — Funcionamento de abatedouro e matadouro", "valor": 75, "periodicidade": "Anual" },
-     { "rotulo": "21 — Comercialização de artigos de higiene, dietéticos, saneantes, inseticidas, raticidas e similares", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "23 — Funcionamento de institutos de beleza, barbearia e similares", "valor": 50, "periodicidade": "Anual" },
-     { "rotulo": "24 — Funcionamento de casas funerárias", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "25 — Análise e aprovação de plantas de edificações ligadas à saúde", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "26 — Piscina de uso público", "valor": 100, "periodicidade": "Anual" },
-     { "rotulo": "27 — Piscina de uso privado", "valor": 90, "periodicidade": "Anual" },
-     { "rotulo": "28 — Inspeção sanitária em terreno baldio", "valor": 90, "periodicidade": "Anual" },
-     { "rotulo": "29 — Outras não especificadas", "valor": 90, "periodicidade": "Anual" }
+     {
+      "rotulo": "01 — Funcionamento de hospitais e clínicas veterinárias",
+      "valor": 100,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "02 — Funcionamento de consultório, ambulatório, laboratório de análise, oficina de prótese ou de equipamento e material de uso médico ou odontológico e similares, inclusive consultório veterinário",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "03 — Produção ou acondicionamento de bebidas alcoólicas",
+      "valor": 30,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "04 — Comercialização de bebidas alcoólicas",
+      "valor": 30,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "05 — Funcionamento de posto de venda de medicamentos, farmácias e drogarias",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "06 — Funcionamento de supermercados",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "07 — Funcionamento de mercadinhos, mercearias e especiarias não inscritos como microempresa",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "08 — Comércio de estivas e cereais",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "10 — Comércio de hortaliças e frutas",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "11 — Padarias, confeitarias, pastelarias, docerias e lojas de conveniência",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "12 a — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 1ª categoria",
+      "valor": 90,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "12 b — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 2ª categoria",
+      "valor": 60,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "12 c — Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 3ª categoria",
+      "valor": 30,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "13 — Ensino infantil (maternal I e II, jardim I e II e alfabetização)",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "14 — Ensino fundamental I e II (1ª a 4ª e 5ª a 8ª séries)",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "15 — Ensino médio e superior",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "16 — Creches, berçário, hotelzinho e similares",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "17 — Tinturaria e lavanderia",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "18 — Baile, shows, festival e similares",
+      "valor": 100,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "19 — Funcionamento de hotéis, motéis e pensões",
+      "valor": 75,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "20 — Funcionamento de abatedouro e matadouro",
+      "valor": 75,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "21 — Comercialização de artigos de higiene, dietéticos, saneantes, inseticidas, raticidas e similares",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "23 — Funcionamento de institutos de beleza, barbearia e similares",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "24 — Funcionamento de casas funerárias",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "25 — Análise e aprovação de plantas de edificações ligadas à saúde",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "26 — Piscina de uso público",
+      "valor": 100,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "27 — Piscina de uso privado",
+      "valor": 90,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "28 — Inspeção sanitária em terreno baldio",
+      "valor": 90,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "29 — Outras não especificadas",
+      "valor": 90,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Devida integralmente no exercício, na forma da Subseção V do Capítulo.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 114, "artigo": "art. 294" },
-    { "doc": "ctm-1365-2017", "pagina": 257, "artigo": "Anexo XII" },
-    { "doc": "ctm-1365-2017", "pagina": 258, "artigo": "Anexo XII" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 114,
+     "artigo": "art. 294"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 257,
+     "artigo": "Anexo XII"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 258,
+     "artigo": "Anexo XII"
+    }
    ],
    "conferencia": "revisar",
    "nota": "SALTOS NA NUMERAÇÃO, AINDA NÃO CONFERIDOS NA IMAGEM: a leitura da camada de texto não encontrou os itens 09 e 22 — a lista vai de 08 (estivas e cereais) para 10 (hortaliças e frutas) e de 21 (artigos de higiene) para 23 (institutos de beleza). São 28 itens numerados até 29. Diferente dos defeitos do Anexo VII e da tabela de serviços diversos, este NÃO foi confirmado na imagem das páginas 257 e 258: pode ser item realmente ausente na lei ou número perdido no reconhecimento. Confira antes de citar o número do item. Os VALORES foram lidos e são confiáveis. O item 12 é o único com categorias — a lei não define o que separa 1ª, 2ª e 3ª categoria de restaurante, e a diferença é de R$ 90,00 para R$ 30,00: sem critério em regulamento, o enquadramento fica sem amparo. O item 07 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iss-autonomo",
@@ -649,31 +1637,98 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "01 — Médicos e congêneres", "valor": 300, "periodicidade": "Anual" },
-     { "rotulo": "02 — Odontólogos", "valor": 150, "periodicidade": "Anual" },
-     { "rotulo": "03 — Protéticos", "valor": 150, "periodicidade": "Anual" },
-     { "rotulo": "04 — Psicanalistas, psicólogos e congêneres", "valor": 150, "periodicidade": "Anual" },
-     { "rotulo": "05 — Nutricionistas e congêneres", "valor": 150, "periodicidade": "Anual" },
-     { "rotulo": "06 — Esteticistas e congêneres", "valor": 170, "periodicidade": "Anual" },
-     { "rotulo": "07 — Engenheiros, arquitetos e congêneres", "valor": 200, "periodicidade": "Anual" },
-     { "rotulo": "08 — Guias de turismo", "valor": 100, "periodicidade": "Anual" },
-     { "rotulo": "09 — Advogados", "valor": 200, "periodicidade": "Anual" },
-     { "rotulo": "10 — Administradores, leiloeiros, árbitros e congêneres", "valor": 200, "periodicidade": "Anual" },
-     { "rotulo": "11 — Auditores, analistas, atuários, calculistas e congêneres", "valor": 200, "periodicidade": "Anual" },
-     { "rotulo": "12 — Contabilistas", "valor": 200, "periodicidade": "Anual" },
-     { "rotulo": "13 — Assistentes sociais, biblioteconomistas e congêneres", "valor": 80, "periodicidade": "Anual" },
-     { "rotulo": "14 — Outros profissionais", "valor": 150, "periodicidade": "Anual" }
+     {
+      "rotulo": "01 — Médicos e congêneres",
+      "valor": 300,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "02 — Odontólogos",
+      "valor": 150,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "03 — Protéticos",
+      "valor": 150,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "04 — Psicanalistas, psicólogos e congêneres",
+      "valor": 150,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "05 — Nutricionistas e congêneres",
+      "valor": 150,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "06 — Esteticistas e congêneres",
+      "valor": 170,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "07 — Engenheiros, arquitetos e congêneres",
+      "valor": 200,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "08 — Guias de turismo",
+      "valor": 100,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "09 — Advogados",
+      "valor": 200,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "10 — Administradores, leiloeiros, árbitros e congêneres",
+      "valor": 200,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "11 — Auditores, analistas, atuários, calculistas e congêneres",
+      "valor": 200,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "12 — Contabilistas",
+      "valor": 200,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "13 — Assistentes sociais, biblioteconomistas e congêneres",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "14 — Outros profissionais",
+      "valor": 150,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Pago anualmente pelas pessoas físicas definidas no art. 122, I.",
    "fundamento": [
-    { "doc": "ctm-1365-2017", "pagina": 72, "artigo": "art. 135, § 2º" },
-    { "doc": "ctm-1365-2017", "pagina": 259, "artigo": "Anexo XIII" }
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 72,
+     "artigo": "art. 135, § 2º"
+    },
+    {
+     "doc": "ctm-1365-2017",
+     "pagina": 259,
+     "artigo": "Anexo XIII"
+    }
    ],
    "conferencia": "conferido",
    "nota": "É valor FIXO ANUAL, não percentual sobre o preço do serviço — o § 2º do art. 135 manda aplicar os valores do Anexo XIII às pessoas físicas do art. 122, I. O item 14, \"outros profissionais\", a R$ 150,00, fecha a tabela: nenhum autônomo fica sem valor, ao contrário do que ocorre em municípios cujo Código manda aplicar \"alíquota fixa\" sem dizer qual. Estes valores NÃO se aplicam a quem for equiparado a empresa; nesse caso volta a alíquota sobre o preço do serviço. O art. 135-A trata da alíquota mínima do ISS.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   }
  ]
 }
