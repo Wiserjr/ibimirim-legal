@@ -712,3 +712,86 @@ ele por "isenção transmissão bens imóveis". Convém pedir ao Município a re
 
 Foi essa distinção que justificou exigir o campo `conferido` em cada correção. Sem abrir a imagem,
 `!TB!` e `1SS` pareciam o mesmo problema — e um deles não é nosso para consertar.
+
+# Ingazeira — duas alterações que faltavam, 20/08/2026
+
+O Município enviou três arquivos. Um já estava no acervo; os outros dois mostram que **o texto
+publicado do Código de 2016 está desatualizado em duas frentes**, e que o aplicativo vinha exibindo
+redação substituída.
+
+## O Título II inteiro — o ISS — foi substituído em 2017
+
+A **LC nº 004/2017**, de 13 de novembro de 2017, diz no art. 1º:
+
+> O Título II do Código Tributário Municipal – Lei Complementar nº 002/2016, passa a ter a seguinte
+> redação
+
+E traz a lista de serviços atualizada, já com os itens que a LC federal nº 157/2016 acrescentou —
+processamento e hospedagem de dados, jogos eletrônicos, licenciamento de programas, entre outros.
+São 30 páginas, com camada de texto limpa.
+
+**Não há consolidação.** Quem lê o Título II no Código de 2016 lê redação revogada.
+
+## A CIP foi refeita em 2024, e mudou de base de cálculo
+
+A **LC nº 007/2024** dá nova redação aos arts. 311 a 314. A mudança de fundo:
+
+- A CIP passou a ser **percentual sobre a tarifa de iluminação pública da ANEEL — B4a**, em R$/MWh,
+  considerada **sem bandeiras tarifárias e sem tributos**, conforme Resolução Homologatória e a
+  Resolução nº 1.000/2021 da ANEEL (art. 313, §§ 1º e 2º).
+- O valor da tarifa **passa a vigorar automaticamente** a cada revisão ou reajuste da ANEEL (§ 3º) —
+  isto é, a conta muda sem que o Município edite ato nenhum.
+- Para **imóvel sem medidor**, a lei fixa **R$ 40,36 por ano**, valor de 2024, reajustado pelo IPCA,
+  lançado junto ao IPTU ou em guia própria (§ 5º).
+- São isentos o Poder Público Municipal e a própria iluminação pública (§ 7º).
+
+O percentual está no **Anexo XII**, que a lei substitui por inteiro. É a tabela mais bem formada que
+apareceu no projeto até agora: quatro classes consumidoras — Residencial; Residencial Baixa Renda,
+Indígena e Quilombola; Rural; Outros — cada uma com faixas de consumo em kWh/mês e a alíquota
+correspondente, de 0,40% a 60,00%.
+
+### Por que ela ainda não virou cartão de cálculo
+
+O tipo `grupos` do aplicativo serve exatamente a essa forma — categoria com faixas —, mas
+`renderGrupos` só sabe exibir **UFM ou reais**. Um cartão da CIP mostraria "R$ 0,80" onde a lei diz
+"0,80%". Fazer direito pede um tipo de cartão novo, de percentual, que informe também a tarifa da
+ANEEL do período — e a tarifa não pode ser embutida, pela mesma razão que a UFM não é: ela muda.
+
+Fica como a candidata mais forte a próximo cartão, e a única tabela do projeto cuja fonte de
+atualização é externa ao Município.
+
+## O Código assinado e o Código do acervo são o mesmo texto
+
+O Município enviou também o **LC 002/2016 assinado**, digitalizado, 191 páginas, 113 MB, sem camada
+de texto. O acervo usa outro arquivo: um PDF gerado do Word, 192 páginas, texto limpo.
+
+Conferi antes de decidir. Os artigos 288 a 296 batem **palavra por palavra** entre os dois. A
+diferença é de paginação: o assinado está cerca de duas páginas à frente — a página 100 do PDF
+assinado é a página impressa 102 e traz os arts. 288 a 296, enquanto a página 100 do arquivo do
+acervo traz o art. 278.
+
+Ficou o arquivo do Word, por três razões: o texto é limpo e pesquisável, a citação por página bate
+com a numeração impressa, e OCR de 191 páginas escaneadas produziria texto pior do que já se tem.
+**O assinado permanece como a via autêntica para conferência**, e é ele que deve ser aberto quando
+uma redação for contestada.
+
+## O que passou a valer no aplicativo
+
+| | antes | agora |
+|---|---|---|
+| documentos | 3 | 5 |
+| páginas | 1.180 | 1.214 |
+| ISS | redação de 2016 | LC nº 004/2017 na biblioteca, com aviso de vigência |
+| CIP | redação de 2016 | LC nº 007/2024 na biblioteca, com a base ANEEL explicada |
+
+A abertura passou a trazer **aviso de vigência** nomeando as duas partes substituídas. É o mesmo
+tratamento dado a Aliança, onde a LC nº 073/2026 alterou artigos que a consolidação de 2021 não
+alcança.
+
+## O que ainda depende do Município
+
+- **A consolidação do Código.** Com duas alterações de peso e nenhuma consolidação, o texto publicado
+  induz a erro em ISS e em CIP.
+- **A tarifa B4a vigente da ANEEL**, para que a CIP possa ser convertida em reais. Não é ato
+  municipal, mas é o dado que falta — e muda a cada reajuste.
+- Confirmar se houve **outras alterações** entre 2017 e 2024 que não vieram nesta remessa.

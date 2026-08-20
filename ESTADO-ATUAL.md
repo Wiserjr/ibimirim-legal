@@ -5,19 +5,19 @@ anterior — inclusive uma sessão nova do assistente. Leia este arquivo, o
 [README.md](README.md) e o [DOCUMENTOS-RECOMENDADOS.md](DOCUMENTOS-RECOMENDADOS.md), nessa
 ordem, e depois `git log --oneline`.
 
-Atualizado em 19/08/2026.
+Atualizado em 20/08/2026.
 
 ## O que já está publicado
 
 Site: https://wiserjr.github.io/ibimirim-legal/ — capa que leva a cada município.
-São **nove municípios**, 10.715 páginas indexadas, 28,58 MB em `docs/`.
+São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 
 | Município | Documentos | Páginas | Tabelas de taxa | Cartões |
 |---|---|---|---|---|
 | Ibimirim | 19 | 1.384 | 13 seções, 384 itens | 3 |
 | Aliança | 11 | 1.220 | 13 tabelas, 365 itens | 1 |
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
-| Ingazeira | 3 | 1.180 | não extraídas | 0 |
+| Ingazeira | 5 | 1.214 | não extraídas | 0 |
 | Vertente do Lério | 3 | 1.113 | não extraídas | 0 |
 | Jatobá | 3 | 1.074 | não extraídas | 0 |
 | Cortês | 3 | 1.059 | não extraídas | 0 |
@@ -78,7 +78,7 @@ Não há um padrão comum, e confundi-las erra a conta por ordens de grandeza:
 | Ibimirim | reais no Código de 2025; UFM nas leis específicas de torres e placas solares |
 | Aliança | UFM em todos os anexos |
 | Manari | UFM, percentual sobre o Valor de Referência Fiscal e percentual sobre o preço do serviço |
-| Ingazeira | reais, organizados por código CNAE-Fiscal |
+| Ingazeira | reais por código CNAE-Fiscal — **exceto a CIP**, que desde a LC nº 007/2024 é percentual sobre a tarifa B4a da ANEEL |
 | Vertente do Lério | UFM |
 | **Jatobá** | **percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR** |
 | **Cortês** | **reais de 2005, com atualização anual pelo IPCA-E (art. 69, § 2º)** |
@@ -162,6 +162,10 @@ consequência:
   e nenhuma consolidação.
 - **Manari** — os atos que fixam a UFM e o Valor de Referência; o portal não publica
   legislação nenhuma, então não há como conferir por lá se a Lei nº 99/2007 foi alterada.
+- **Ingazeira** — a consolidação do Código: a LC nº 004/2017 refez o Título II inteiro (o ISS) e a
+  LC nº 007/2024 refez os arts. 311 a 314 (a CIP), e não há texto consolidado. Falta também a tarifa
+  B4a vigente da ANEEL, sem a qual a CIP não converte em reais — e confirmar se houve outras
+  alterações entre 2017 e 2024 fora desta remessa.
 - **Jatobá** — o ato que substituiu a UFIR e fixa o VR do exercício. Sem ele o Código não
   produz valor nenhum. E a via em papel, para dirimir a numeração do Anexo 4.
 - **Cortês** — a tabela de receitas já atualizada pelo IPCA-E; os valores impressos são de

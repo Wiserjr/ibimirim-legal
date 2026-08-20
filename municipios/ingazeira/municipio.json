@@ -17,7 +17,7 @@
   "ampla": "legislação municipal Ingazeira PE"
  },
  "rotulos": {
-  "atual": "Lei Complementar nº 002/2016",
+  "atual": "Lei Complementar nº 002/2016, com as alterações de 2017 e 2024",
   "anterior": "Redação anterior"
  },
  "publicos": [
@@ -52,8 +52,8 @@
   {
    "icon": "▤",
    "title": "Empresa e ISS",
-   "desc": "Lista de serviços, autônomos, retenção na fonte e cadastro mercantil.",
-   "query": "ISS serviço lista autônomo retenção cadastro mercantil",
+   "desc": "Lista de serviços, autônomos e retenção — na redação da LC nº 004/2017.",
+   "query": "ISS serviço lista autônomo retenção 004/2017 Título II",
    "audience": [
     "contribuinte",
     "tributos"
@@ -62,8 +62,8 @@
   {
    "icon": "◐",
    "title": "Iluminação pública e CIP",
-   "desc": "A contribuição de custeio da iluminação pública e sua forma de cobrança.",
-   "query": "CIP iluminação pública contribuição custeio consumo",
+   "desc": "A CIP na redação da LC nº 007/2024: percentual sobre a tarifa da ANEEL, por classe e consumo.",
+   "query": "CIP iluminação pública ANEEL tarifa classe consumidora alíquota anexo XII",
    "audience": [
     "contribuinte",
     "tributos"
@@ -155,10 +155,6 @@
    "Procedimento administrativo que verifica o fato gerador, calcula o valor e identifica quem deve pagar."
   ],
   [
-   "CIP",
-   "Contribuição para o custeio da iluminação pública."
-  ],
-  [
    "Contribuição de melhoria",
    "Tributo cobrado quando uma obra pública valoriza o imóvel, limitado ao acréscimo de valor."
   ],
@@ -173,24 +169,40 @@
   [
    "CNAE-Fiscal",
    "Classificação Nacional de Atividades Econômicas. O Anexo I do Código organiza a taxa de licença por esse código."
+  ],
+  [
+   "CIP",
+   "Contribuição para o custeio da iluminação pública. Desde a LC nº 007/2024 é calculada como percentual sobre a tarifa de iluminação pública da ANEEL, conforme a classe do consumidor e o consumo em kWh/mês."
+  ],
+  [
+   "Tarifa B4a",
+   "Tarifa de iluminação pública da ANEEL, em reais por megawatt-hora, fixada por Resolução Homologatória. É a base sobre a qual incide o percentual da CIP, sem bandeiras tarifárias e sem tributos."
+  ],
+  [
+   "Anexo XII",
+   "Tabela da CIP, dada pela LC nº 007/2024: quatro classes consumidoras — Residencial, Residencial Baixa Renda, Rural e Outros — cada uma com faixas de consumo e a respectiva alíquota."
   ]
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "Os anexos deste Código fixam os valores diretamente em reais, por código CNAE.",
+  "resumo": "Os anexos do Código fixam os valores em reais, por código CNAE. A CIP é a exceção: desde 2024 é percentual sobre a tarifa da ANEEL.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> os seis anexos da Lei Complementar nº 002/2016 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em reais e podem ter sofrido atualização monetária desde 2016 — confirme com o Município."
+  "aviso": "<strong>Atenção:</strong> os anexos da Lei Complementar nº 002/2016 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores estão em reais e podem ter sofrido atualização monetária desde 2016 — confirme com o Município. O <strong>Anexo XII</strong>, da CIP, foi substituído pela LC nº 007/2024 e traz alíquotas, não reais."
  },
  "ufm": {
-  "regra": "O Código de Ingazeira fixa os valores dos seus anexos <strong>diretamente em reais</strong>, organizados por código CNAE — não usa unidade fiscal intermediária. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
+  "regra": "O Código de Ingazeira fixa os valores dos seus anexos <strong>diretamente em reais</strong>, organizados por código CNAE — não usa unidade fiscal intermediária. A <strong>CIP é a exceção</strong>: a LC nº 007/2024 a transformou em <strong>percentual sobre a tarifa de iluminação pública da ANEEL (B4a)</strong>, em R$/MWh, sem bandeiras nem tributos, variando por classe consumidora e faixa de consumo. O percentual está no Anexo XII; a tarifa vem da Resolução Homologatória da ANEEL e <strong>muda a cada reajuste</strong>. Para imóvel sem medidor, a lei fixa <strong>R$ 40,36 por ano</strong>, valor de 2024, reajustado pelo IPCA. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
   "fonte": {
-   "doc": "ctm-002-2016",
-   "pagina": 1,
-   "rotulo": "Ver no Lei Complementar nº 002/2016"
+   "doc": "lc-007-2024",
+   "pagina": 2,
+   "rotulo": "Ver no Lei Complementar nº 007/2024"
   }
  },
  "cartoes": [],
  "avisos": [
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>Duas partes do Código de 2016 já foram substituídas.</strong> O <strong>Título II inteiro, que é o ISS</strong>, ganhou nova redação pela <strong>LC nº 004/2017</strong>, com a lista de serviços atualizada. Os <strong>arts. 311 a 314, que são a CIP</strong>, ganharam nova redação pela <strong>LC nº 007/2024</strong>. As duas leis estão na biblioteca. Ao ler o texto de 2016 sobre ISS ou iluminação pública, <strong>confira a redação vigente na lei que a alterou</strong> — o Código publicado ainda traz a redação antiga, porque não há consolidação."
+  },
   {
    "tipo": "nota",
    "texto": "As tabelas dos anexos deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
