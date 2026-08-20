@@ -207,12 +207,12 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "As treze Tabelas deste Código são de taxas e preços públicos. A unidade em que estão expressas precisa de confirmação — veja o aviso acima.",
+  "resumo": "As treze Tabelas deste Código são de taxas e preços públicos. As Tabelas IV a XIII foram atualizadas pelo Decreto nº 003/2013 e estão em REAIS; as Tabelas I, II e III não foram atualizadas e seguem em UFM.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> as treze Tabelas da Lei nº 255/2007 ainda não foram extraídas para consulta estruturada. O texto é pesquisável e legível com a página citada. <strong>Não converta esses valores sem confirmar a unidade com o Município</strong> — a coluna diz &ldquo;Em UFM&rdquo;, mas os números têm forte indício de já estarem convertidos em reais."
+  "aviso": "<strong>A unidade está resolvida.</strong> As colunas das Tabelas anexas ao Decreto nº 003/2013 (páginas 2 a 8) se intitulam &ldquo;Em UFM&rdquo;, mas contêm <strong>reais</strong>: o cabeçalho foi copiado do formulário de 2007 e não acompanhou a conversão. As Tabelas I, II e III <em>não</em> foram atualizadas pelo Decreto e continuam em UFM, com o cabeçalho &ldquo;UFM / R$ 1,00&rdquo; impresso na página 134. As tabelas ainda não foram extraídas item a item para consulta estruturada — o texto é pesquisável e o valor deve ser lido na imagem da página citada. Os valores conferidos estão no cadastro de cobranças."
  },
  "ufm": {
-  "regra": "O <strong>art. 398</strong> institui a UFM — Unidade Fiscal do Município — e fixa seu valor unitário em <strong>R$ 1,00</strong>. O <strong>art. 399</strong> manda atualizá-la todo ano pela variação acumulada do IPCA/IBGE, de dezembro do exercício anterior a novembro do corrente, valendo a partir de 1º de janeiro seguinte. O acervo traz, na sua primeira página, o <strong>Decreto nº 003/2013</strong>, que fixou a UFM em <strong>R$ 1,44</strong> para 2013 — é o único ato de fixação de unidade fiscal presente em todo o projeto. Ele <em>não</em> serve para os exercícios seguintes: informe abaixo a UFM do exercício em curso.",
+  "regra": "O <strong>art. 398</strong> institui a UFM — Unidade Fiscal do Município — e fixa seu valor unitário em <strong>R$ 1,00</strong>. O <strong>art. 399</strong> manda atualizá-la todo ano pela variação acumulada do IPCA/IBGE, de dezembro do exercício anterior a novembro do corrente, valendo a partir de 1º de janeiro seguinte. O acervo traz, na sua primeira página, o <strong>Decreto nº 003/2013</strong>, que fixou a UFM em <strong>R$ 1,44</strong> para 2013 — é o único ato de fixação de unidade fiscal presente em todo o projeto. Atenção: esse Decreto chegou a R$ 1,44 aplicando <strong>IGP-M</strong>, e não o IPCA que o art. 399 exige. Ele <em>não</em> serve para os exercícios seguintes: informe abaixo a UFM do exercício em curso.",
   "fonte": {
    "doc": "ctm-255-2007",
    "pagina": 133,
@@ -223,7 +223,11 @@
  "avisos": [
   {
    "tipo": "vigencia",
-   "texto": "<strong>A unidade das tabelas não está resolvida, e a diferença é de 44%.</strong> As colunas se intitulam &ldquo;Em UFM&rdquo;, mas 9 dos 11 valores conferidos na Tabela VII são múltiplos exatos de <strong>R$ 1,44</strong> — a UFM fixada pelo Decreto nº 003/2013, encadernado na página 1 deste mesmo acervo. Isso sugere tabelas <em>já convertidas em reais</em> com o cabeçalho antigo mantido. Dois valores (<strong>21,00</strong> e <strong>18,30</strong>) fogem do padrão, e foram conferidos na imagem da página: estão impressos assim. <strong>Confirme com o Município</strong> se os números são quantidade de UFM ou reais antes de lançar."
+   "texto": "<strong>Como ler os valores: duas camadas, duas unidades.</strong> O corpo do Código (páginas 134 a 145) traz as treze Tabelas <strong>em UFM</strong>, e o art. 398 fixa a UFM em <strong>R$ 1,00</strong>. O <strong>Decreto nº 003/2013</strong>, encadernado nas páginas 1 a 9, reeditou as Tabelas IV a XIII <strong>em reais</strong>, multiplicando cada valor por <strong>1,44</strong> — e manteve, por cópia, o cabeçalho &ldquo;Em UFM&rdquo;. A prova está no item 006 da Tabela IV, <em>Calçados</em>: vale <strong>80,00</strong> na versão de 2007 e <strong>115,20</strong> na de 2013, que é 80 × 1,44. O mesmo se repete em 40 → 57,60, 60 → 86,40, 70 → 100,80 e 120 → 172,80. A página 9 traz a memória de cálculo que produziu o 1,44. <strong>As Tabelas I, II e III ficaram de fora do Decreto</strong> e seguem em UFM. Dois valores do Decreto fogem do padrão e foram conferidos na imagem — estão impressos assim: <strong>18,80</strong> na Tabela IX e <strong>21,50</strong> na Tabela X."
+  },
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>A lei manda IPCA; o Município usou IGP-M.</strong> O art. 399 determina que a UFM seja atualizada pela variação acumulada do <strong>IPCA/IBGE</strong>. A memória de cálculo da página 9 atualizou R$ 1,00 de 13/08/2007 para 23/01/2013 pelo <strong>IGP-M</strong>, com fator 1,441671, chegando aos R$ 1,44 que geraram todas as Tabelas do Decreto. Antes de aplicar novo índice, decida qual dos dois vale — o Código diz IPCA."
   },
   {
    "tipo": "nota",

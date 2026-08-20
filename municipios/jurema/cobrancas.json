@@ -1,0 +1,563 @@
+{
+ "sobre": "Cadastro de cobranças do município. ATENÇÃO À UNIDADE — o acervo tem duas camadas. As tabelas do corpo do Código (Lei 255/2007, páginas 134 a 145) vêm em UFM, e o art. 398 fixa a UFM em R$ 1,00. As tabelas anexas ao Decreto 003/2013 (páginas 2 a 8) repetem a coluna com o título \"Em UFM\", mas trazem REAIS: cada valor é o número de UFM da tabela de 2007 multiplicado por 1,44. O Decreto atualizou as Tabelas IV a XIII e NÃO atualizou as Tabelas I, II e III, que seguem em UFM. Os valores foram lidos na imagem das páginas — a camada de texto do PDF é de reconhecimento óptico e embaralha a coluna de valores.",
+ "atualizado": "2026-08-20",
+ "cobrancas": [
+  {
+   "id": "ufm-unidade-fiscal",
+   "tributo": "Unidade fiscal",
+   "rotulo": "UFM — Unidade Fiscal do Município",
+   "fatoGerador": "Não é cobrança: é a unidade de conta em que o Código expressa taxas e preços públicos.",
+   "sujeitoPassivo": "—",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Instituída em R$ 1,00 (um real) pelo art. 398, parágrafo único. O art. 399 manda atualizá-la anualmente pela variação acumulada do IPCA/IBGE, apurada de dezembro do exercício anterior."
+   },
+   "periodicidade": "anual",
+   "vencimento": "—",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 133, "artigo": "art. 398 e art. 399" },
+    { "doc": "ctm-255-2007", "pagina": 9, "artigo": "Decreto 003/2013 — memória de cálculo" }
+   ],
+   "conferencia": "conferido",
+   "nota": "DIVERGÊNCIA ENTRE A LEI E O ATO: o art. 399 manda usar IPCA, mas a memória de cálculo que acompanha o Decreto 003/2013 (página 9) atualizou R$ 1,00 de 13/08/2007 para 23/01/2013 pelo IGP-M, com fator 1,441671, chegando a R$ 1,44. Foi esse R$ 1,44 que gerou todos os valores das Tabelas IV a XIII do Decreto. Antes de aplicar índice novo, decidir qual dos dois vale — o Código diz IPCA. Desde 2013 não há notícia de nova atualização no acervo: se a UFM não foi atualizada desde então, as Tabelas I, II e III seguem valendo R$ 1,00 por UFM.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "iptu-aliquotas",
+   "tributo": "IPTU",
+   "rotulo": "IPTU — alíquotas sobre o valor venal",
+   "fatoGerador": "Propriedade, domínio útil ou posse de bem imóvel na zona urbana. Ocorre anualmente, no dia 1º de janeiro.",
+   "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor a qualquer título.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "percentual",
+    "sobre": "o valor venal do imóvel",
+    "itens": [
+     { "rotulo": "Terreno", "valor": 2, "periodicidade": "Anual" },
+     { "rotulo": "Prédio ou unidade imobiliária autônoma", "valor": 1, "periodicidade": "Anual" }
+    ]
+   },
+   "periodicidade": "anual",
+   "vencimento": "Lançamento anual, na forma e nos prazos fixados pelo Executivo.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 48, "artigo": "art. 131" },
+    { "doc": "ctm-255-2007", "pagina": 50, "artigo": "art. 135" },
+    { "doc": "ctm-255-2007", "pagina": 50, "artigo": "art. 136" }
+   ],
+   "conferencia": "conferido",
+   "nota": "ACRÉSCIMO NA ALÍQUOTA, não no imposto: o § 1º manda acrescer 20% À ALÍQUOTA APLICADA quando o imóvel fica em via com asfalto e calçamento e não tem muro e passeio público. Sobre terreno, portanto, a alíquota passa de 2% para 2,4% — e não o imposto de 100 para 120. O § 2º remete a alíquotas próprias para imóvel não edificado, subutilizado ou não utilizado em área do Plano Diretor; conferir o texto do parágrafo antes de aplicar progressividade.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "itbi-aliquotas",
+   "tributo": "ITBI",
+   "rotulo": "ITBI — alíquotas do art. 162",
+   "fatoGerador": "Transmissão inter vivos, a qualquer título, por ato oneroso, de bens imóveis e de direitos reais sobre imóveis, exceto os de garantia, e a cessão de direitos à sua aquisição.",
+   "sujeitoPassivo": "O adquirente ou cessionário do bem ou direito; na permuta, cada um dos permutantes.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "percentual",
+    "sobre": "o valor, avaliado ou declarado, do imóvel ou direito transmitido",
+    "itens": [
+     { "rotulo": "SFH — sobre a parte financiada", "valor": 0.5, "periodicidade": "Por ato" },
+     { "rotulo": "SFH — sobre a parte não financiada", "valor": 2, "periodicidade": "Por ato" },
+     { "rotulo": "Gleba rural de até 10 ha, de assentamento, para cultivo pelo adquirente e sua família, sem outro imóvel rural no Município", "valor": 0.5, "periodicidade": "Por ato" },
+     { "rotulo": "Imóvel em projeto rural especial titularizado, categoria de médio produtor", "valor": 1, "periodicidade": "Por ato" }
+    ]
+   },
+   "periodicidade": "por ato",
+   "vencimento": "Lançamento na forma do art. 163.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 56, "artigo": "art. 154" },
+    { "doc": "ctm-255-2007", "pagina": 59, "artigo": "art. 160" },
+    { "doc": "ctm-255-2007", "pagina": 61, "artigo": "art. 162" }
+   ],
+   "conferencia": "conferido",
+   "nota": "DEFEITO NA LEI — FALTA A ALÍQUOTA DO CASO COMUM. O art. 162 tem três incisos: I (SFH), II (gleba rural de assentamento) e III (projeto rural especial). Não há inciso para a transmissão onerosa comum de imóvel urbano fora do SFH, que é justamente a mais frequente. Não existe alíquota geral nem residual no artigo. Enquanto isso não for corrigido por lei, a compra e venda urbana à vista não tem alíquota no Código de Jurema — não usar por analogia os 2% do inciso I, alínea b, que são da parte não financiada do SFH. O art. 160 dá a base de cálculo (valor dos bens ou direitos transmitidos, no momento da transmissão), e os §§ do artigo seguinte fixam percentuais de base — 70% no fideicomisso e na cessão de usufruto, 40% na concessão real de uso — que são base, não alíquota.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "iss-aliquota",
+   "tributo": "ISS",
+   "rotulo": "ISSQN — alíquota geral de 5%",
+   "fatoGerador": "Prestação dos serviços da lista anexa, ainda que não constituam atividade preponderante do prestador.",
+   "sujeitoPassivo": "O prestador do serviço; nas hipóteses do art. 197, o tomador, por retenção na fonte.",
+   "base": {
+    "tipo": "percentual",
+    "percentual": 5,
+    "sobre": "o preço do serviço"
+   },
+   "periodicidade": "mensal",
+   "vencimento": "Lançamento por homologação, com escrituração e pagamento sob responsabilidade do contribuinte. Retenção na fonte pelo tomador nas hipóteses do art. 197.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 65, "artigo": "art. 178" },
+    { "doc": "ctm-255-2007", "pagina": 82, "artigo": "art. 184" },
+    { "doc": "ctm-255-2007", "pagina": 87, "artigo": "art. 197" }
+   ],
+   "conferencia": "conferido",
+   "nota": "A mesma alíquota de 5% aparece três vezes: no art. 184 (regra geral), no art. 193, parágrafo único (locação de máquinas e aparelhos de diversão, sobre o serviço prestado pelo locatário) e nos arts. 196 e 199 (retenção na fonte). Não há alíquota reduzida no Código: 5% é o teto do art. 8º, II, da LC 116/2003, e o piso de 2% da EC 37/2002 não chega a ser tocado.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "iss-autonomo-aliquota-fixa",
+   "tributo": "ISS",
+   "rotulo": "ISSQN — profissional autônomo, valor fixo anual",
+   "fatoGerador": "Prestação de serviço sob forma de trabalho pessoal do próprio contribuinte.",
+   "sujeitoPassivo": "O profissional autônomo, assim entendido o que não tem a seu serviço empregado da mesma qualificação profissional.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "O art. 183 manda determinar o imposto anualmente, aplicando-se alíquota fixa — mas não diz qual, e nenhum anexo do Código traz a tabela."
+   },
+   "periodicidade": "anual",
+   "vencimento": "Lançamento de ofício, com base nos dados cadastrais (art. 186, § 1º).",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 83, "artigo": "art. 183" },
+    { "doc": "ctm-255-2007", "pagina": 84, "artigo": "art. 186" }
+   ],
+   "conferencia": "conferido",
+   "nota": "DEFEITO NA LEI — VALOR NÃO FIXADO. O art. 183 diz que a base do autônomo é determinada anualmente \"aplicando-se alíquota fixa\", sem indicar o número e sem remeter a anexo. As Tabelas I a XIII são todas de taxa e de preço público; nenhuma traz ISS fixo. Não dá para lançar o autônomo em Jurema com fundamento no Código como ele está. Cobrar 5% sobre o preço do serviço contraria o próprio art. 183, que afasta a base sobre preço nesse caso.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "iss-isencao-autonomo",
+   "tributo": "ISS",
+   "rotulo": "ISSQN — isenção do autônomo de renda baixa",
+   "fatoGerador": "—",
+   "sujeitoPassivo": "Profissionais autônomos e entidades de rudimentar organização fiscal.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Isenção quando a atividade não produzir renda mensal superior a 2 (dois) salários mínimos."
+   },
+   "periodicidade": "anual",
+   "vencimento": "A isenção é solicitada em requerimento, com prova de que o contribuinte preenche os requisitos.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 89, "artigo": "art. 202, III" }
+   ],
+   "conferencia": "revisar",
+   "nota": "O texto reconhecido está truncado — lê-se \"entidades de rudimentar fiscal\", provavelmente \"de rudimentar organização fiscal\". A isenção não é automática: depende de requerimento instruído. Conferir o número do artigo na imagem da página 89 antes de citar em despacho.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "taxa-coleta-lixo",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de coleta e remoção de lixo — Tabela I",
+   "fatoGerador": "Utilização, efetiva ou potencial, do serviço de coleta e remoção de lixo gerado em imóvel edificado e em terrenos, excluídos os rejeitos industriais.",
+   "sujeitoPassivo": "Proprietários, titulares do domínio útil ou possuidores a qualquer título de imóveis no território do Município.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     { "rotulo": "Residencial — até 50 m²", "valor": 8, "periodicidade": "Anual" },
+     { "rotulo": "Residencial — até 100 m²", "valor": 14, "periodicidade": "Anual" },
+     { "rotulo": "Residencial — até 200 m²", "valor": 28, "periodicidade": "Anual" },
+     { "rotulo": "Residencial — até 300 m²", "valor": 47, "periodicidade": "Anual" },
+     { "rotulo": "Residencial — acima de 300 m²", "valor": 65, "periodicidade": "Anual" },
+     { "rotulo": "Prestação de serviços — até 100 m²", "valor": 16, "periodicidade": "Anual" },
+     { "rotulo": "Prestação de serviços — até 200 m²", "valor": 32, "periodicidade": "Anual" },
+     { "rotulo": "Prestação de serviços — até 300 m²", "valor": 58, "periodicidade": "Anual" },
+     { "rotulo": "Prestação de serviços — acima de 300 m²", "valor": 82, "periodicidade": "Anual" },
+     { "rotulo": "Comercial — até 100 m²", "valor": 20, "periodicidade": "Anual" },
+     { "rotulo": "Comercial — até 200 m²", "valor": 58, "periodicidade": "Anual" },
+     { "rotulo": "Comercial — até 300 m²", "valor": 82, "periodicidade": "Anual" },
+     { "rotulo": "Comercial — acima de 300 m²", "valor": 116, "periodicidade": "Anual" },
+     { "rotulo": "Indústria — até 100 m²", "valor": 58, "periodicidade": "Anual" },
+     { "rotulo": "Indústria — até 200 m²", "valor": 82, "periodicidade": "Anual" },
+     { "rotulo": "Indústria — até 300 m²", "valor": 116, "periodicidade": "Anual" },
+     { "rotulo": "Indústria — acima de 300 m²", "valor": 164, "periodicidade": "Anual" }
+    ]
+   },
+   "periodicidade": "anual",
+   "vencimento": "Devida anualmente; lançamento, prazos e forma podem acompanhar os do IPTU.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 93, "artigo": "art. 216 e art. 217" },
+    { "doc": "ctm-255-2007", "pagina": 94, "artigo": "art. 220" },
+    { "doc": "ctm-255-2007", "pagina": 134, "artigo": "Tabela I" }
+   ],
+   "conferencia": "conferido",
+   "nota": "EM UFM, NÃO EM REAIS — o cabeçalho da tabela é \"UFM / R$ 1,00\". Esta é uma das três tabelas que o Decreto 003/2013 NÃO atualizou. Se a UFM continuar em R$ 1,00, os números acima já são os reais; se for atualizada, multiplicam-se por ela. ESCALONAMENTO IRREGULAR NA LEI: a faixa comercial salta de 20 para 58 entre 100 m² e 200 m², enquanto a de prestação de serviços vai de 16 para 32. Está assim impresso na página — comercial até 200 m² paga o mesmo que indústria até 100 m². É defeito da lei, não da leitura. ISENÇÃO: dispensados os imóveis beneficiados pela isenção do IPTU do art. 151 e os que gozam de imunidade.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "taxa-servicos-diversos",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de serviços não compulsórios diversos — Tabela II",
+   "fatoGerador": "Prestação, pelo Município, dos serviços não compulsórios discriminados na Tabela II.",
+   "sujeitoPassivo": "Quem requerer o serviço ou der causa a ele.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     { "rotulo": "Vistoria de edificação, excluída a vistoria para habite-se e aceita-se", "valor": 10, "periodicidade": "Por ato" },
+     { "rotulo": "Numeração de prédio e edificação, por unidade", "valor": 3, "periodicidade": "Por unidade" },
+     { "rotulo": "Alinhamento e nivelamento de terrenos, por metro linear", "valor": 0.3, "periodicidade": "Por metro linear" },
+     { "rotulo": "Reposição de calçamento, por m² ou fração", "valor": 12, "periodicidade": "Por m²" },
+     { "rotulo": "Reposição de asfalto, por m² ou fração", "valor": 18, "periodicidade": "Por m²" },
+     { "rotulo": "Averbação de imóvel", "valor": 8.8, "periodicidade": "Por ato" },
+     { "rotulo": "Apreensão e guarda de animais de grande porte, por unidade e por dia", "valor": 20, "periodicidade": "Por dia" },
+     { "rotulo": "Apreensão e guarda de animais de pequeno porte, por unidade e por dia", "valor": 10, "periodicidade": "Por dia" },
+     { "rotulo": "Apreensão de veículo, por unidade e por dia", "valor": 30, "periodicidade": "Por dia" },
+     { "rotulo": "Apreensão de mercadorias, por peça e por dia", "valor": 0.6, "periodicidade": "Por dia" },
+     { "rotulo": "Utilização de currais, por dia — de grande porte", "valor": 2, "periodicidade": "Por dia" },
+     { "rotulo": "Utilização de currais, por dia — de pequeno porte", "valor": 1.5, "periodicidade": "Por dia" }
+    ]
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato do requerimento ou da prestação do serviço.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 134, "artigo": "Tabela II" }
+   ],
+   "conferencia": "conferido",
+   "nota": "EM UFM — coluna intitulada \"Em UFM\". Tabela não atualizada pelo Decreto 003/2013. A numeração impressa começa sem o \"1.\" no primeiro item e segue de 2 a 8; a vistoria de edificação é o item 1. Os serviços funerários são o item 9 e continuam na página seguinte, cadastrados à parte.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "taxa-servicos-funerarios",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de serviços funerários — Tabela II, item 9",
+   "fatoGerador": "Prestação dos serviços de cemitério discriminados no item 9 da Tabela II.",
+   "sujeitoPassivo": "Quem requerer o serviço.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     { "rotulo": "Inumação em sepultura rasa — adulto", "valor": 12, "periodicidade": "Por ato" },
+     { "rotulo": "Inumação em sepultura rasa — infante", "valor": 10, "periodicidade": "Por ato" },
+     { "rotulo": "Inumação em carneiro — adulto", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Inumação em carneiro — infante", "valor": 15, "periodicidade": "Por ato" },
+     { "rotulo": "Perpetuidade — sepultura rasa", "valor": 150, "periodicidade": "Por ato" },
+     { "rotulo": "Perpetuidade — carneiro", "valor": 250, "periodicidade": "Por ato" },
+     { "rotulo": "Perpetuidade — jazigo (carneiro duplo geminado)", "valor": 350, "periodicidade": "Por ato" },
+     { "rotulo": "Exumação antes de vencido o prazo regulamentar de decomposição", "valor": 30, "periodicidade": "Por ato" },
+     { "rotulo": "Exumação após vencido o prazo regulamentar de decomposição", "valor": 25, "periodicidade": "Por ato" },
+     { "rotulo": "Prorrogação de prazo, por ano — adulto", "valor": 15, "periodicidade": "Anual" },
+     { "rotulo": "Prorrogação de prazo, por ano — infante", "valor": 10, "periodicidade": "Anual" },
+     { "rotulo": "Abertura de sepultura, carneiro, jazigo ou mausoléu perpétuo", "valor": 15, "periodicidade": "Por ato" },
+     { "rotulo": "Entrada de ossada no cemitério — em catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
+     { "rotulo": "Entrada de ossada no cemitério — em jardineira ou cova", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Retirada de ossada do cemitério — em catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
+     { "rotulo": "Retirada de ossada do cemitério — em jardineira ou cova", "valor": 15, "periodicidade": "Por ato" },
+     { "rotulo": "Remoção de ossada no interior do cemitério — de cova para cova", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Remoção de ossada no interior do cemitério — de cova para catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
+     { "rotulo": "Remoção de ossada no interior do cemitério — de catacumba para catacumba", "valor": 35, "periodicidade": "Por ato" },
+     { "rotulo": "Permissão para construção e obras de embelezamento, por m² — carneira", "valor": 5, "periodicidade": "Por m²" },
+     { "rotulo": "Permissão para construção e obras de embelezamento, por m² — catacumba ou mausoléu", "valor": 7, "periodicidade": "Por m²" },
+     { "rotulo": "Emplacamento", "valor": 6, "periodicidade": "Por ato" },
+     { "rotulo": "Ocupação de ossuário, por três anos", "valor": 60, "periodicidade": "Por três anos" },
+     { "rotulo": "Outros serviços", "valor": 15, "periodicidade": "Por ato" }
+    ]
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato do requerimento ou da prestação do serviço.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 135, "artigo": "Tabela II, item 9" }
+   ],
+   "conferencia": "conferido",
+   "nota": "EM UFM. Tabela não atualizada pelo Decreto 003/2013. A perpetuidade de jazigo, a 350 UFM, é o maior valor de toda a Tabela II.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "taxa-expediente",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de serviços não compulsórios de expediente — Tabela III",
+   "fatoGerador": "Prática, pelo Município, dos atos de expediente discriminados na Tabela III.",
+   "sujeitoPassivo": "Quem requerer o ato ou der causa a ele.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     { "rotulo": "Petições e requerimentos dirigidos aos órgãos ou autoridades municipais", "valor": 3, "periodicidade": "Por ato" },
+     { "rotulo": "Atestados, certificados e traslados", "valor": 5, "periodicidade": "Por ato" },
+     { "rotulo": "Baixa de qualquer natureza, em lançamento ou registro", "valor": 6, "periodicidade": "Por ato" },
+     { "rotulo": "Certidões negativas e outras", "valor": 6, "periodicidade": "Por ato" },
+     { "rotulo": "Inscrição no cadastro de fornecedores", "valor": 10, "periodicidade": "Por ato" },
+     { "rotulo": "Concessão — atos concedendo favores em virtude de lei municipal", "valor": 10, "periodicidade": "Por ato" },
+     { "rotulo": "Concessão — permissão para exploração, a título precário, ou atividade", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Lavratura de termos, contratos e registros de qualquer natureza", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Emissão do DAM — Documento de Arrecadação Municipal", "valor": 2, "periodicidade": "Por ato" },
+     { "rotulo": "Prorrogação de prazo de contrato com o Município", "valor": 10, "periodicidade": "Por ato" },
+     { "rotulo": "Fornecimento de cópias e similares", "valor": 2, "periodicidade": "Por ato" },
+     { "rotulo": "Autenticação de plantas", "valor": 20, "periodicidade": "Por ato" },
+     { "rotulo": "Inscrição em concurso público — nível superior", "valor": 15, "periodicidade": "Por inscrição" },
+     { "rotulo": "Inscrição em concurso público — nível médio", "valor": 10, "periodicidade": "Por inscrição" },
+     { "rotulo": "Inscrição em concurso público — nível elementar", "valor": 5, "periodicidade": "Por inscrição" },
+     { "rotulo": "Visto de abertura ou encerramento em livros fiscais", "valor": 5, "periodicidade": "Por ato" },
+     { "rotulo": "Autorização para confecção de notas fiscais, por talão de 50 folhas", "valor": 8, "periodicidade": "Por talão" },
+     { "rotulo": "Autenticação de livros de prestação de serviços — por livro", "valor": 5, "periodicidade": "Por livro" },
+     { "rotulo": "Autenticação de talões de nota fiscal — por talão", "valor": 5, "periodicidade": "Por talão" },
+     { "rotulo": "Busca", "valor": 6, "periodicidade": "Por ato" },
+     { "rotulo": "Outras taxas não especificadas", "valor": 5, "periodicidade": "Por ato" }
+    ]
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato do requerimento.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 136, "artigo": "Tabela III" }
+   ],
+   "conferencia": "conferido",
+   "nota": "EM UFM. Terceira e última tabela que o Decreto 003/2013 NÃO atualizou. É a tabela mais consultada no balcão: certidão negativa, baixa, DAM e talão de nota fiscal saem daqui. A taxa de emissão do DAM (item 8) incide sobre a emissão do próprio documento de arrecadação — conferir com a assessoria jurídica antes de cobrá-la no DAM de outro tributo.",
+   "vigencia": { "de": "2007", "ate": null }
+  },
+  {
+   "id": "taxa-localizacao-funcionamento",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de localização, de instalação e de funcionamento — Tabela IV",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, do exercício de atividade em estabelecimento no território do Município.",
+   "sujeitoPassivo": "A pessoa física ou jurídica titular do estabelecimento.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela por atividade econômica, com 129 itens numerados de 001 a 129, agrupados em Agricultura e criação, Indústrias e fabricos, Comércio atacadista, Comércio varejista e Prestação de serviço. Valores de R$ 43,20 a R$ 432,00 na versão do Decreto 003/2013."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato da inscrição, da renovação anual e da alteração de endereço ou de atividade.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 97, "artigo": "art. 229" },
+    { "doc": "ctm-255-2007", "pagina": 98, "artigo": "art. 234" },
+    { "doc": "ctm-255-2007", "pagina": 2, "artigo": "Decreto 003/2013 — Tabela IV" },
+    { "doc": "ctm-255-2007", "pagina": 3, "artigo": "Decreto 003/2013 — Tabela IV" },
+    { "doc": "ctm-255-2007", "pagina": 136, "artigo": "Tabela IV — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "AQUI SE PROVA QUE O DECRETO ESTÁ EM REAIS. O item 006, Calçados, vale 80,00 na Tabela IV de 2007 (em UFM) e 115,20 na do Decreto de 2013 — exatamente 80 × 1,44. O mesmo vale para 40 → 57,60, 60 → 86,40, 70 → 100,80 e 120 → 172,80. A coluna do Decreto continua intitulada \"Em UFM\" por cópia do formulário de 2007, mas contém reais. As duas primeiras páginas do Decreto no acervo começam no item 020: os itens 001 a 019 só constam da versão de 2007, na página 136 em diante. Antes de lançar, escolher a versão e conferir o item na imagem.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-fiscalizacao-sanitaria",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização sanitária — Tabela V",
+   "fatoGerador": "Fiscalização sanitária, fundada no poder de polícia do Município, sobre estabelecimentos e atividades sujeitas a controle de saúde.",
+   "sujeitoPassivo": "A pessoa física ou jurídica sujeita à fiscalização.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela V, com 29 itens de estabelecimento e atividade sujeitos a controle sanitário, em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato da inscrição e na renovação anual.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 98, "artigo": "art. 237" },
+    { "doc": "ctm-255-2007", "pagina": 5, "artigo": "Decreto 003/2013 — Tabela V" },
+    { "doc": "ctm-255-2007", "pagina": 139, "artigo": "Tabela V — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "Os 29 rótulos e os 31 valores da página 5 foram conferidos quanto ao alinhamento das colunas, mas os valores não foram transcritos item a item para este cadastro. Abrir a página 5 do acervo para o valor de cada atividade. Dois itens têm subdivisão, o que explica haver mais valores do que rótulos numerados.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-fiscalizacao-anuncio",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de anúncio — Tabela VI",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, da exploração ou utilização de meios de publicidade em vias e logradouros públicos ou em locais visíveis do público.",
+   "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela VI, por tipo e dimensão do anúncio, em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato do licenciamento e na renovação.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 100, "artigo": "art. 244" },
+    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VI" },
+    { "doc": "ctm-255-2007", "pagina": 140, "artigo": "Tabela VI — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, mas os valores são reais, pelo mesmo fator 1,44 provado na Tabela IV. Valores não transcritos item a item — abrir a página 6. O art. 247 lista isenções, entre elas o anúncio de estabelecimento de instrução cuja mensagem se refira exclusivamente ao ensino ministrado.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-maquinas-motores",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de máquinas, motores e equipamentos — Tabela VII",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, da instalação e do funcionamento de máquinas, motores e equipamentos.",
+   "sujeitoPassivo": "O titular do estabelecimento onde se instala a máquina ou o motor.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela VII, por máquina, motor ou equipamento, em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato do licenciamento e na renovação.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VII" },
+    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela VII — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, contendo reais. Valores não transcritos item a item.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-veiculo-transporte",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de veículo de transporte de passageiros — Tabela VIII",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, do veículo empregado no transporte de passageiros no Município.",
+   "sujeitoPassivo": "O proprietário ou permissionário do veículo.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela VIII, por veículo e modalidade de transporte, em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No ato do licenciamento e na renovação.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VIII" },
+    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela VIII — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, contendo reais. Valores não transcritos item a item.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-horario-extraordinario",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de funcionamento em horário extraordinário — Tabela IX",
+   "fatoGerador": "Fiscalização do funcionamento de estabelecimento em horário diverso do normal de abertura e fechamento.",
+   "sujeitoPassivo": "O titular do estabelecimento.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     { "rotulo": "Antecipação de horário — por dia", "valor": 14.4, "periodicidade": "Por dia" },
+     { "rotulo": "Antecipação de horário — por mês", "valor": 43.2, "periodicidade": "Mensal" },
+     { "rotulo": "Antecipação de horário — por ano", "valor": 72, "periodicidade": "Anual" },
+     { "rotulo": "Prorrogação de horário — por dia", "valor": 18.8, "periodicidade": "Por dia" },
+     { "rotulo": "Prorrogação de horário — por mês", "valor": 57.6, "periodicidade": "Mensal" },
+     { "rotulo": "Prorrogação de horário — por ano", "valor": 86.4, "periodicidade": "Anual" }
+    ]
+   },
+   "periodicidade": "por dia, mês ou ano",
+   "vencimento": "No ato do licenciamento do horário especial.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela IX" },
+    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela IX — redação de 2007, em UFM" }
+   ],
+   "conferencia": "conferido",
+   "nota": "VALOR FORA DO PADRÃO: cinco dos seis valores são múltiplos exatos de 1,44 (10, 30, 50, 40 e 60 UFM). O de R$ 18,80 não é — 18,80 ÷ 1,44 = 13,06. Pela posição na tabela deveria ser R$ 21,60 (15 UFM). Está impresso 18,80 na página 7 e foi registrado como impresso. Conferir com a Secretaria de Finanças antes de lançar prorrogação por dia.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-ambulante-feirante",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de exercício de atividade ambulante, eventual e feirante — Tabela X",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, do exercício de atividade ambulante, eventual ou de feirante.",
+   "sujeitoPassivo": "O ambulante, o feirante ou quem exercer a atividade eventual.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela X, por atividade, com cobrança por dia, por semana, por mês e por evento. Valores em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "por dia, semana, mês ou evento",
+   "vencimento": "No ato do licenciamento, antes do início da atividade.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 107, "artigo": "art. 273" },
+    { "doc": "ctm-255-2007", "pagina": 108, "artigo": "art. 277" },
+    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela X" },
+    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela X — redação de 2007, em UFM" }
+   ],
+   "conferencia": "revisar",
+   "nota": "VALOR FORA DO PADRÃO: aparece R$ 21,50 na tabela, que não é múltiplo de 1,44 — 21,50 ÷ 1,44 = 14,93. O valor coerente com os vizinhos seria R$ 21,60 (15 UFM). Não foi corrigido: pode ser erro de impressão da própria tabela. Conferir na página 7 antes de lançar. O art. 277 define o que é atividade ambulante, eventual e de feirante — é o artigo a citar quando o contribuinte discute o enquadramento.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-obra-particular",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de obra particular — Tabela XI",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, da execução de obra particular, de loteamento e de arruamento no Município.",
+   "sujeitoPassivo": "O proprietário, o responsável pela obra e, na locação, o locador e o locatário do imóvel onde a obra é executada.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela XI, com 27 itens: construção por faixa de área, demolição, terraplenagem, muro, telhados, renovação de alvará, loteamento, habite-se, drenos, bombas, laudo técnico, vistorias e pena d'água. Valores em reais na versão do Decreto 003/2013."
+   },
+   "periodicidade": "por obra",
+   "vencimento": "Antes do início da obra, no licenciamento.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 109, "artigo": "art. 281" },
+    { "doc": "ctm-255-2007", "pagina": 110, "artigo": "art. 286" },
+    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela XI" },
+    { "doc": "ctm-255-2007", "pagina": 8, "artigo": "Decreto 003/2013 — Tabela XI" }
+   ],
+   "conferencia": "revisar",
+   "nota": "PROVA DA CONVERSÃO: os valores 0,57 / 0,86 / 1,00 / 0,28 / 1,15 desta tabela são 0,4 / 0,6 / 0,7 / 0,2 / 0,8 UFM multiplicados por 1,44 e arredondados ao centavo. O arredondamento é o que denuncia que houve conversão para reais — número de UFM não sai quebrado assim. DEFEITO DE IMPRESSÃO: um dos itens de faixa de área lê-se \"acima de 601 até 100 m²\", em que 601 é erro por 60. Valores não transcritos item a item — abrir as páginas 7 e 8.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "taxa-ocupacao-vias",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de ocupação e permanência em áreas, vias e logradouros públicos — Tabela XII",
+   "fatoGerador": "Fiscalização, fundada no poder de polícia, da ocupação e da permanência em áreas, vias e logradouros públicos.",
+   "sujeitoPassivo": "Quem ocupar ou permanecer na área, via ou logradouro público.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     { "rotulo": "Circos, parques de diversões e exposições, por m², por mês ou fração", "valor": 0.72, "periodicidade": "Mensal" },
+     { "rotulo": "Caçamba ou similar, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
+     { "rotulo": "Assentamento de posteamento, por unidade, ao mês", "valor": 2.88, "periodicidade": "Mensal" },
+     { "rotulo": "Caixas postais ou similares, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
+     { "rotulo": "Orelhões e cabinas de telefonia, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
+     { "rotulo": "Tampas de bueiro e ralos de esgoto, por unidade, por exercício ou fração", "valor": 21.6, "periodicidade": "Anual" },
+     { "rotulo": "Redes de tubulações para esgoto, água, líquidos químicos ou material tóxico, por km, anualmente", "valor": 43.2, "periodicidade": "Anual" },
+     { "rotulo": "Outras atividades não incluídas, por mês", "valor": 14.4, "periodicidade": "Mensal" }
+    ]
+   },
+   "periodicidade": "mensal ou anual",
+   "vencimento": "No ato do licenciamento da ocupação e nas renovações.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XII" },
+    { "doc": "ctm-255-2007", "pagina": 144, "artigo": "Tabela XII — redação de 2007, em UFM" }
+   ],
+   "conferencia": "conferido",
+   "nota": "EM REAIS, apesar do cabeçalho. Todos os oito valores são múltiplos exatos de 1,44 — 0,5, 10, 2, 10, 10, 15, 30 e 10 UFM. Esta é a tabela que sustenta a cobrança de posteamento e de rede de tubulação das concessionárias, que costuma ser a de maior valor isolado do Município.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "precos-publicos-abate-transporte",
+   "tributo": "Preço público",
+   "rotulo": "Preços públicos — abate de animais e transporte de carne — Tabela XIII",
+   "fatoGerador": "Não é tributo: é preço pela prestação de serviço de natureza comercial ou industrial pelo Município.",
+   "sujeitoPassivo": "Quem se utilizar do matadouro ou do transporte de carne.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     { "rotulo": "Abate, por unidade — bovinos", "valor": 14.4, "periodicidade": "Por unidade" },
+     { "rotulo": "Abate, por unidade — suínos", "valor": 8.64, "periodicidade": "Por unidade" },
+     { "rotulo": "Abate, por unidade — caprinos e ovinos", "valor": 5.76, "periodicidade": "Por unidade" },
+     { "rotulo": "Transporte de carne do matadouro ao local de venda — bovinos", "valor": 7.2, "periodicidade": "Por unidade" },
+     { "rotulo": "Transporte de carne do matadouro ao local de venda — suínos", "valor": 4.32, "periodicidade": "Por unidade" },
+     { "rotulo": "Transporte de carne do matadouro ao local de venda — caprinos e ovinos", "valor": 2.88, "periodicidade": "Por unidade" }
+    ]
+   },
+   "periodicidade": "por unidade",
+   "vencimento": "No ato da prestação do serviço.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 132, "artigo": "art. 395 e art. 396" },
+    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XIII" }
+   ],
+   "conferencia": "conferido",
+   "nota": "PREÇO PÚBLICO, NÃO TAXA — não se sujeita à anterioridade nem exige lei para reajuste: o art. 395 autoriza o Prefeito a baixar decreto sobre preços públicos, e o parágrafo manda reajustá-los quando se tornarem deficitários. Valores em reais, todos múltiplos de 1,44 — 10, 6, 4, 5, 3 e 2 UFM. O art. 396 diz que as tabelas anexas vão de I a XII, incluída a de Preços Públicos: a de Preços Públicos é a XIII, e a numeração do artigo não a alcança.",
+   "vigencia": { "de": "2013", "ate": null }
+  },
+  {
+   "id": "precos-publicos-servico-especial",
+   "tributo": "Preço público",
+   "rotulo": "Preços públicos — serviço público especial — Tabela XIII",
+   "fatoGerador": "Não é tributo: é preço pela prestação de serviço público especial, prestado a pedido do interessado.",
+   "sujeitoPassivo": "Quem requerer o serviço.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     { "rotulo": "Remoção especial de árvores, por unidade", "valor": 14.4, "periodicidade": "Por unidade" },
+     { "rotulo": "Remoção de metralha e entulhos, por m³", "valor": 14.4, "periodicidade": "Por m³" },
+     { "rotulo": "Limpeza de terrenos, para retirada do lixo, por m²", "valor": 0.28, "periodicidade": "Por m²" },
+     { "rotulo": "Remoção de lixo em horário especial", "valor": 14.4, "periodicidade": "Por ato" }
+    ]
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato da prestação do serviço.",
+   "fundamento": [
+    { "doc": "ctm-255-2007", "pagina": 132, "artigo": "art. 395" },
+    { "doc": "ctm-255-2007", "pagina": 92, "artigo": "art. 214" },
+    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XIII" }
+   ],
+   "conferencia": "conferido",
+   "nota": "NÃO CONFUNDIR COM A TAXA DE COLETA DE LIXO. O art. 214, § 1º separa as duas coisas: a coleta e remoção de lixo comum é serviço de limpeza pública e vira TAXA (Tabela I, em UFM); a remoção especial de árvores, metralha, entulho e o lixo em horário especial são PREÇO PÚBLICO (Tabela XIII, em reais). Cobrar como taxa o que a lei põe como preço, ou o contrário, é o erro mais comum aqui. O valor de R$ 0,28 por m² de limpeza de terreno é 0,2 UFM × 1,44 arredondado — mais uma marca da conversão.",
+   "vigencia": { "de": "2013", "ate": null }
+  }
+ ]
+}
