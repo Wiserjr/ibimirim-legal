@@ -102,16 +102,24 @@ for (const slug of slugs) {
       assert.ok(pagina(f.doc, f.pagina), `${onde}: fundamento aponta ${f.doc} p.${f.pagina}, que não existe`);
     }
     assert.ok(
-      ['reais', 'ufm', 'percentual', 'faixas', 'formula'].includes(c.base.tipo),
+      ['reais', 'ufm', 'percentual', 'faixas', 'itens', 'formula'].includes(c.base.tipo),
       `${onde}: base de tipo desconhecido "${c.base.tipo}"`,
     );
     // mesma regra do resto do projeto: unidade fiscal não carrega reais junto
     assert.ok(!(c.base.tipo === 'ufm' && 'value' in c.base), `${onde}: valor em UFM com reais fixados`);
+    if (c.base.tipo === 'itens') {
+      assert.ok(c.base.itens?.length, `${onde}: lista de itens vazia`);
+      for (const i of c.base.itens) {
+        assert.ok(i.rotulo, `${onde}: item sem discriminação`);
+        // zero é isenção declarada; o que não pode é valor ausente ou negativo
+        assert.ok(Number.isFinite(i.valor) && i.valor >= 0, `${onde}: item "${i.rotulo}" sem valor`);
+      }
+    }
     if (c.base.tipo === 'faixas') {
       const tetos = c.base.faixas.map(f => f[0]);
       assert.ok(tetos.slice(0, -1).every(t => typeof t === 'number'), `${onde}: faixa aberta no meio`);
       assert.deepEqual(tetos.slice(0, -1), [...tetos.slice(0, -1)].sort((a, b) => a - b), `${onde}: faixas fora de ordem`);
-      assert.ok(c.base.faixas.every(f => f[1] > 0), `${onde}: faixa sem valor`);
+      assert.ok(c.base.faixas.every(f => Number.isFinite(f[1]) && f[1] >= 0), `${onde}: faixa sem valor`);
     }
     assert.ok(
       ['conferido', 'informado', 'revisar'].includes(c.conferencia || 'informado'),

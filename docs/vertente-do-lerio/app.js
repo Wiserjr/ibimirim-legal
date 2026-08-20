@@ -477,12 +477,19 @@ function baseTexto(base){
   if(base.tipo==='ufm')return `${(base.valor||0).toLocaleString('pt-BR')} ${base.unidade||'UFM'}${base.por?` por ${base.por}`:''}`;
   if(base.tipo==='percentual')return `${(base.percentual||0).toLocaleString('pt-BR')}%${base.sobre?` sobre ${base.sobre}`:''}`;
   if(base.tipo==='formula')return base.descricao||'fórmula descrita na lei';
+  if(base.tipo==='itens'){
+    const n=(base.itens||[]).length,vals=(base.itens||[]).map(i=>i.valor).filter(Number.isFinite);
+    if(!vals.length)return `${n} itens`;
+    const un=base.unidade==='percentual'?'%':'';
+    const fmt=v=>base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
+    return `${n} itens — de ${fmt(Math.min(...vals))} a ${fmt(Math.max(...vals))}`;
+  }
   if(base.tipo==='faixas'){
     const n=(base.faixas||[]).length;
     const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
-    const menor=Math.min(...(base.faixas||[[0,0]]).map(f=>f[1]));
-    const maior=Math.max(...(base.faixas||[[0,0]]).map(f=>f[1]));
-    return `${n} faixas por ${base.medida||'medida'} — de ${menor.toLocaleString('pt-BR')}${un} a ${maior.toLocaleString('pt-BR')}${un}`;
+    const vals=(base.faixas||[[0,0]]).map(f=>f[1]);
+    const fmt=v=>v===0?'isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
+    return `${n} faixas por ${base.medida||'medida'} — de ${fmt(Math.min(...vals))} a ${fmt(Math.max(...vals))}`;
   }
   return '—';
 }
@@ -494,11 +501,22 @@ function faixasHtml(base){
     const de=i===0?0:(arr[i-1][0]+1);
     const ate=f[0]===null?null:f[0];
     const faixa=ate===null?`a partir de ${de.toLocaleString('pt-BR')}`:`${de.toLocaleString('pt-BR')} a ${ate.toLocaleString('pt-BR')}`;
-    const valor=base.unidade==='reais'?money(f[1]):`${f[1].toLocaleString('pt-BR')}${un}`;
+    const valor=f[1]===0?'Isento':base.unidade==='reais'?money(f[1]):`${f[1].toLocaleString('pt-BR')}${un}`;
     return `<tr><td>${escape(faixa)}</td><td>${escape(valor)}</td></tr>`;
   }).join('');
   return `<table class="charge-tiers"><caption>${escape(base.medida||'medida')}</caption>`
     +`<thead><tr><th>Faixa</th><th>Valor</th></tr></thead><tbody>${linhas}</tbody></table>`;
+}
+
+function itensHtml(base){
+  if(base?.tipo!=='itens')return '';
+  const un=base.unidade==='percentual'?'%':'';
+  const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
+  const linhas=(base.itens||[]).map(i=>
+    `<tr><td>${escape(i.rotulo||'')}</td><td>${escape(fmt(i.valor))}${i.por?`<small> por ${escape(i.por)}</small>`:''}</td>`
+    +`<td>${escape(i.periodicidade||'')}</td></tr>`).join('');
+  return `<table class="charge-tiers"><thead><tr><th>Discriminação</th><th>Valor</th><th>Periodicidade</th></tr></thead>`
+    +`<tbody>${linhas}</tbody></table>`;
 }
 
 function fundamentoHtml(c){
@@ -543,6 +561,7 @@ function renderCharges(){
       </header>
       <p class="charge-base-line"><b>${escape(baseTexto(c.base))}</b>${c.periodicidade?` · ${escape(c.periodicidade)}`:''}</p>
       ${faixasHtml(c.base)}
+      ${itensHtml(c.base)}
       ${c.base?.sobre?`<p class="charge-sobre">Incide sobre: ${escape(c.base.sobre)}</p>`:''}
       <dl class="charge-meta">
         ${c.fatoGerador?`<dt>Fato gerador</dt><dd>${escape(c.fatoGerador)}</dd>`:''}
@@ -578,6 +597,13 @@ function baseCamposHtml(tipo,base){
   if(tipo==='percentual')return campo('cfPercentual','Percentual (%)',b.percentual,'0,00','type="number" step="0.01" min="0"')
     +campo('cfSobre','Incide sobre',b.sobre,'o preço do serviço, a tarifa B4a da ANEEL…');
   if(tipo==='formula')return `<label for="cfDescricao">Como se calcula</label><textarea id="cfDescricao" rows="3" placeholder="R$ 1.160,00 mais R$ 0,35 por m² acrescido…">${escape(b.descricao||'')}</textarea>`;
+  if(tipo==='itens'){
+    const linhas=(b.itens||[]).map(i=>[i.rotulo,i.valor,i.por||'',i.periodicidade||''].join('\t')).join('\n');
+    return `<label for="cfUnidadeItens">Unidade do valor</label>`
+      +`<select id="cfUnidadeItens">${['reais','percentual','ufm'].map(u=>`<option value="${u}" ${b.unidade===u?'selected':''}>${CHARGE_BASES[u]}</option>`).join('')}</select>`
+      +`<label for="cfItens">Itens — um por linha: <b>discriminação</b>, <b>valor</b>, <b>por</b> e <b>periodicidade</b>, separados por tabulação. Os dois últimos são opcionais.</label>`
+      +`<textarea id="cfItens" rows="10" placeholder="Faixas, por unidade&#9;8,00&#9;unidade&#9;Semanal">${escape(linhas)}</textarea>`;
+  }
   if(tipo==='faixas'){
     const linhas=(b.faixas||[]).map(f=>`${f[0]===null?'':f[0]}\t${f[1]}`).join('\n');
     return `<label for="cfUnidadeFaixa">Unidade do valor</label>`
@@ -599,7 +625,7 @@ function lerFaixas(texto){
     const teto=partes[0]===''?null:Number(partes[0].replace(/\./g,'').replace(',','.'));
     const valor=Number(partes[1].replace(/\./g,'').replace(',','.'));
     if(teto!==null&&!Number.isFinite(teto))throw new Error(`Teto inválido em “${linha.trim()}”.`);
-    if(!Number.isFinite(valor)||valor<=0)throw new Error(`Valor inválido em “${linha.trim()}”.`);
+    if(!Number.isFinite(valor)||valor<0)throw new Error(`Valor inválido em “${linha.trim()}”. Use 0 para isento.`);
     faixas.push([teto,valor]);
   }
   if(!faixas.length)throw new Error('Informe ao menos uma faixa.');
@@ -608,6 +634,20 @@ function lerFaixas(texto){
   const fechados=tetos.slice(0,-1);
   if(fechados.some((t,i)=>i&&t<=fechados[i-1]))throw new Error('Os tetos precisam subir, do menor para o maior.');
   return faixas;
+}
+
+function lerItens(texto){
+  const itens=[];
+  for(const linha of (texto||'').split('\n')){
+    if(!linha.trim())continue;
+    const [rotulo,valor,por,periodicidade]=linha.split('\t').map(p=>(p||'').trim());
+    if(!rotulo)throw new Error(`A linha “${linha.trim()}” está sem discriminação.`);
+    const n=Number((valor||'').replace(/\./g,'').replace(',','.'));
+    if(!Number.isFinite(n)||n<0)throw new Error(`Valor inválido em “${rotulo}”.`);
+    itens.push({rotulo,valor:n,...(por?{por}:{}),...(periodicidade?{periodicidade}:{})});
+  }
+  if(!itens.length)throw new Error('Informe ao menos um item.');
+  return itens;
 }
 
 function fundamentoLinhaHtml(f,i){
@@ -667,6 +707,7 @@ function coletarBase(){
   if(tipo==='ufm'){const valor=num('cfValor');if(!Number.isFinite(valor)||valor<=0)throw new Error('Informe a quantidade.');return{tipo,valor,unidade:v('cfUnidade')||'UFM',por:v('cfPor')||undefined}}
   if(tipo==='percentual'){const p=num('cfPercentual');if(!Number.isFinite(p)||p<=0)throw new Error('Informe o percentual.');return{tipo,percentual:p,sobre:v('cfSobre')||undefined}}
   if(tipo==='formula'){const d=v('cfDescricao');if(!d)throw new Error('Descreva como se calcula.');return{tipo,descricao:d}}
+  if(tipo==='itens')return{tipo,unidade:v('cfUnidadeItens')||'reais',itens:lerItens($('#cfItens').value)};
   if(tipo==='faixas')return{tipo,unidade:v('cfUnidadeFaixa')||'percentual',medida:v('cfMedida')||undefined,sobre:v('cfSobre')||undefined,faixas:lerFaixas($('#cfFaixas').value)};
   throw new Error('Forma de cálculo desconhecida.');
 }

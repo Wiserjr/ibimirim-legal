@@ -17,7 +17,7 @@ São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 | Ibimirim | 19 | 1.384 | 13 seções, 384 itens | 3 |
 | Aliança | 11 | 1.220 | 13 tabelas, 365 itens | 1 |
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
-| Ingazeira | 5 | 1.214 | não extraídas | 0 |
+| Ingazeira | 5 | 1.214 | 12 de 13 anexos, no cadastro | 0 |
 | Vertente do Lério | 3 | 1.113 | não extraídas | 0 |
 | Jatobá | 3 | 1.074 | não extraídas | 0 |
 | Cortês | 3 | 1.059 | não extraídas | 0 |
@@ -293,8 +293,12 @@ Decisões de projeto, e o motivo de cada uma:
 - **A seção aparece mesmo vazia.** Um município que ainda não cadastrou nada é exatamente quem
   precisa achar o botão.
 
-Ingazeira entrou com cinco cobranças de exemplo — a CIP inteira, lida na imagem do Anexo XII, que os
-extratores não alcançam por ser percentual sobre tarifa da ANEEL.
+Ingazeira entrou com **22 cobranças**: IPTU, ISS, ITBI e as taxas dos anexos II a XI — 160 itens e
+10 faixas, lidos do texto limpo da lei, cada um com a página do seu fundamento. A CIP ficou de fora
+de propósito: vem na fatura da concessionária e não é lançada no sistema de tributos.
+
+Só o **Anexo I** ficou pendente. São 44 páginas de taxa de licença por atividade, e é o único que
+pede transcrição item a item.
 
 ### O que falta, e que é o diferencial da ferramenta
 
