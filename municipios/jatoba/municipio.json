@@ -187,9 +187,9 @@
  ],
  "taxas": {
   "titulo": "Taxas e tabelas",
-  "resumo": "As tabelas de taxas deste Código não trazem valor em reais: fixam um percentual sobre o Valor de Referência (VR).",
+  "resumo": "As tabelas não trazem reais: fixam percentual sobre o Valor de Referência. Estão no cadastro de cobranças, abaixo.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> os anexos da Lei nº 34/1997 ainda não foram extraídos para consulta estruturada. O texto é pesquisável e legível com a página citada. Os valores são <strong>percentuais sobre o VR</strong> e só viram reais depois que o Município informar o valor do VR em vigor."
+  "aviso": "<strong>Os sete anexos estão no cadastro de cobranças</strong>, com o percentual e a página de cada item — 153 itens, lidos na imagem das páginas 80 a 86. Quase tudo é <strong>percentual sobre o VR</strong>: sem o valor do VR do exercício, nenhuma dessas cobranças produz um montante."
  },
  "ufm": {
   "regra": "O Código de Jatobá não fixa as taxas em reais: fixa <strong>percentuais sobre o Valor de Referência (VR)</strong>. O art. 113 define o VR como 100 UFIR, equivalentes a R$ 91,80 <em>na data da lei, em 1997</em>. A UFIR foi extinta em outubro de 2000, e o próprio artigo admite “outro índice equivalente que venha substituí-lo”. O valor do VR do exercício precisa ser informado pelo Município — este aplicativo não o presume.",
@@ -211,7 +211,7 @@
   },
   {
    "tipo": "nota",
-   "texto": "As tabelas dos anexos deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+   "texto": "Três cobranças estão marcadas como <strong>a revisar</strong>, por defeito no texto publicado: na licença de obras, “casa com mais de 40 m²” e “casa acima de 40 m²” têm valores diferentes para a mesma condição; nos serviços urbanos, a limpeza de imóvel não edificado ficou sem percentual e as faixas de iluminação se sobrepõem (“501 a 1000” e “acima de 500”); e no ISS fixo, o valor do nível superior não é fração redonda do VR."
   }
  ]
 }

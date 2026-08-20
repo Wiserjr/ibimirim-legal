@@ -460,15 +460,18 @@ Disso decorrem três consequências práticas:
 3. **É a pendência mais urgente de Jatobá.** Enquanto ela não for resolvida, o aplicativo exibe o
    percentual e a base, e se recusa a converter — como já faz com a UFM dos demais municípios.
 
-### Divergência de numeração entre o artigo e o anexo
+### A divergência de numeração do Anexo 4 era do OCR — resolvida
 
-O art. 188 (p. 51) manda calcular a taxa de expediente pela **"TABELA III (Anexo 4)"**. O cabeçalho
-impresso no Anexo 4 (p. 82) lê-se **"TABELA II - TAXA DE EXPEDIENTE"**. Como o Anexo 5 é a Tabela IV,
-a sequência favorece o artigo — o cabeçalho é que estaria errado.
+Ficou registrado nesta página que o art. 188 manda calcular a taxa de expediente pela **"TABELA III
+(Anexo 4)"** enquanto o corpus mostrava o Anexo 4 intitulado **"TABELA II"**, e que só a via em papel
+diria qual dos dois estava errado.
 
-**Não foi corrigido por conta própria.** O texto é OCR de documento digitalizado, e a hipótese de o
-reconhecimento ter perdido um "I" em "III" é tão plausível quanto a de erro de impressão na lei.
-Precisa de conferência na via original em papel.
+**Resolvido em 20/08/2026, pela imagem da p. 82:** a página impressa diz **"ANEXO 4 / TABELA III -
+TAXA DE EXPEDIENTE"**. Não há defeito na lei — o reconhecimento óptico é que comeu um "I". A
+suspeita de erro de impressão fica cancelada.
+
+Vale como método: a dúvida custou uma renderização de página. Registrar em vez de escolher permitiu
+que a resposta chegasse depois, sem que ninguém tivesse cobrado errado no intervalo.
 
 ## Cortês — valores em reais de 2005, com índice de atualização definido
 

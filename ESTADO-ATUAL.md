@@ -19,8 +19,8 @@ São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
 | Ingazeira | 5 | 1.214 | 12 de 13 anexos, no cadastro | 0 |
 | Vertente do Lério | 3 | 1.113 | não extraídas | 0 |
-| Jatobá | 3 | 1.074 | não extraídas | 0 |
-| Cortês | 3 | 1.059 | não extraídas | 0 |
+| Jatobá | 3 | 1.074 | 7 anexos, no cadastro | 0 |
+| Cortês | 3 | 1.059 | 7 tabelas, no cadastro | 0 |
 | Tacaratu | 3 | 1.247 | não extraídas | 0 |
 | Jurema | 4 | 1.261 | não extraídas | 0 |
 
@@ -110,9 +110,11 @@ conferência. O que a experiência até aqui mostrou:
   erro: "141" existe na página 141.
 - Espere encontrar defeitos no texto da lei. Em Manari foram quatro: item repetido com
   valores diferentes, item sem descrição, salto de numeração e vírgula impressa como
-  apóstrofo. Em Jatobá, o art. 188 cita "Tabela III (Anexo 4)" e o Anexo 4 se intitula
-  "Tabela II". Registre-os em vez de escolher por conta própria — ainda mais em documento
-  digitalizado, onde o OCR é suspeito tão legítimo quanto o erro de impressão.
+  apóstrofo. Registre-os em vez de escolher por conta própria — ainda mais em documento
+  digitalizado, onde o OCR é suspeito tão legítimo quanto o erro de impressão. A divergência
+  de numeração do Anexo 4 de Jatobá, registrada em 19/08, era do OCR: a imagem da p. 82 diz
+  "TABELA III", como o art. 188 cita. Registrar em vez de escolher deixou a resposta chegar
+  depois, sem que ninguém cobrasse errado no intervalo.
 
 ## Documentos digitalizados: quatro acervos, 532 páginas de OCR
 
