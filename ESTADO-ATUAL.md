@@ -17,18 +17,19 @@ São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 | Ibimirim | 19 | 1.384 | 13 seções, 384 itens | 3 |
 | Aliança | 11 | 1.220 | 13 tabelas, 365 itens | 1 |
 | Manari | 5 | 1.177 | 29 tabelas, 453 itens | 0 |
-| Ingazeira | 5 | 1.214 | 12 de 13 anexos, no cadastro | 0 |
+| Ingazeira | 5 | 1.214 | Anexo I (944 itens) + 12 anexos no cadastro | 0 |
 | Vertente do Lério | 3 | 1.113 | 8 anexos, no cadastro | 0 |
 | Jatobá | 3 | 1.074 | 7 anexos, no cadastro | 0 |
 | Cortês | 3 | 1.059 | 7 tabelas, no cadastro | 0 |
-| Tacaratu | 3 | 1.247 | não extraídas | 0 |
-| Jurema | 4 | 1.261 | não extraídas | 0 |
+| Tacaratu | 3 | 1.247 | Anexo I (1.297 itens) + 12 anexos no cadastro | 0 |
+| Jurema | 4 | 1.261 | 13 tabelas, no cadastro | 0 |
 
 Cada um sai também como ZIP (PC/iPhone) e APK Android com `applicationId` próprio.
 
-Os seis últimos entram com o **texto pesquisável e citável por página**, mas sem tabelas
-estruturadas: o aplicativo mostra a busca, o leitor e a página citada, e declara na abertura
-que os valores não estão tabulados.
+**Seis dos nove têm cadastro de cobranças** — Ingazeira 22, Tacaratu 22, Jurema 21, Cortês 15,
+Jatobá 11 e Vertente do Lério 11, num total de **102 cobranças**. Ibimirim, Aliança e Manari não
+têm: eles entraram pelo formato antigo de tabelas estruturadas, que responde *quanto*, mas não
+*de quem, quando e com que fundamento*.
 
 ## O que falta
 
@@ -37,12 +38,12 @@ município: não tem legislação tributária própria, e o Código de Tacaratu 
 Tacaratu traz esse aviso e atende os dois. Falta o usuário confirmar se quer alguma distinção
 interna.
 
+A extração das tabelas está feita nos seis, e a unidade de Jurema está resolvida (ver abaixo).
 O que resta é trabalho de aprofundamento, não de cobertura:
 
-- **Extrair as tabelas** dos seis municípios que entraram só com texto (Ingazeira, Vertente do
-  Lério, Jatobá, Cortês, Tacaratu e Jurema). É trabalho à parte e por município — ver a seção sobre
-  extração, mais abaixo.
-- **Resolver a unidade das tabelas de Jurema**, que é pré-requisito para extrair as dela.
+- **Cadastro de cobranças para Ibimirim, Aliança e Manari.** São os três com mais dados
+  estruturados e os únicos sem o cadastro — a camada que amarra valor a fundamento. É hoje a
+  maior lacuna em relação ao que a ferramenta se propõe.
 - O portal de Tacaratu tem mais material não indexado: 12 decretos, 4 relatórios de desonerações e
   renúncias fiscais, a normatização do setor de cadastro, arrecadação e fiscalização (2026), a
   normatização de qualificação de débitos para CDA (2026) e o termo de adesão ao padrão nacional da
@@ -82,8 +83,8 @@ Não há um padrão comum, e confundi-las erra a conta por ordens de grandeza:
 | Vertente do Lério | **reais nos anexos de taxa; UFM só na Planta de Valores e no ISS do autônomo** |
 | **Jatobá** | **percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR** |
 | **Cortês** | **reais de 2005, com atualização anual pelo IPCA-E (art. 69, § 2º)** |
-| **Tacaratu** | **reais de 2017, por CNAE 2.0 no Anexo I; sem unidade fiscal** |
-| **Jurema** | **UFM, instituída pelo art. 398 em R$ 1,00 — mas as tabelas do acervo parecem já convertidas a R$ 1,44. Ver aviso.** |
+| **Tacaratu** | **reais de 2017 em todos os anexos; sem unidade fiscal, exceto a BCLA da licença ambiental — R$ 1.000,00, art. 281** |
+| **Jurema** | **duas camadas: as Tabelas I, II e III do corpo do Código estão em UFM (art. 398 fixa a UFM em R$ 1,00); as Tabelas IV a XIII, reeditadas pelo Decreto 003/2013, estão em REAIS, apesar do cabeçalho dizer "Em UFM"** |
 
 Nenhum acervo informa quanto vale a UFM ou o Valor de Referência. O aplicativo nunca os
 embute: exibe na unidade da lei e converte só depois que a equipe informa o valor do
@@ -144,11 +145,20 @@ tabelas forem extraídas.
 
 ### Conferir na imagem é barato, e resolve
 
-Duas divergências foram dirimidas nesta rodada renderizando a página do PDF e olhando:
+É a técnica mais produtiva do projeto. O que ela já dirimiu:
 
 - Tacaratu trazia **dois "ANEXO II"** — a imagem da página 240 diz **ANEXO III**. Era o OCR.
-- Jurema trazia **21,00** e **18,30** fora do padrão de múltiplos de 1,44 — a imagem ampliada
-  confirma que estão impressos assim. Não era o OCR.
+- Tacaratu: o Anexo I trazia **R$ 11.000,00** para fabricação de caminhões, o maior valor de todo o
+  Anexo. A página 185 imprime **1.000,00**, como as três atividades vizinhas: o traço vertical da
+  tabela foi lido como um algarismo. Sem a conferência, dez vezes o devido.
+- Tacaratu: o Anexo XII parecia pular os itens **09 e 22**. A imagem mostra que o 09 existe e que
+  o meu cadastro é que estava deslocado — porque os itens **07 e 08 são uma frase só**, partida em
+  duas linhas numeradas, com um valor para as duas. Já o **22 não existe mesmo**.
+- Jurema: o item 006 do Anexo IV, *Calçados*, vale **80,00** na redação de 2007 e **115,20** na do
+  Decreto de 2013 — exatamente 80 × 1,44. Foi o que provou que o Decreto está em reais apesar do
+  cabeçalho dizer "Em UFM".
+- Jurema: a Tabela I imprime o cabeçalho **"UFM / R$ 1,00"**, e a alíquota do lixo comercial salta
+  de 20 para 58 entre 100 e 200 m². Está assim na página — é defeito da lei, não da leitura.
 
 Receita: `fitz.open(pdf)[n-1].get_pixmap(dpi=320, clip=...).save(...)` e leia a imagem.
 
@@ -174,10 +184,13 @@ consequência:
   2005 e acumulam mais de duas décadas de correção.
 - **Tacaratu** — confirmar se alguma lei posterior alterou os valores dos treze anexos, já que não
   se localizou no Código autorização para o Executivo atualizá-los por decreto.
-- **Jurema — a mais urgente das novas.** Confirmar se os números das Tabelas são *quantidade de UFM*
-  ou *reais já convertidos*: a coluna diz "Em UFM", mas 9 de 11 valores conferidos são múltiplos
-  exatos de R$ 1,44, a UFM de 2013. A diferença entre as duas leituras é de 44% no valor cobrado.
-  Pedir também a UFM do exercício corrente — o Decreto nº 003/2013 só vale para 2013.
+- **Jurema** — a dúvida da unidade está resolvida (ver abaixo), mas sobraram três pedidos, e os
+  dois primeiros impedem lançamento: o **art. 162 não tem alíquota** para a transmissão onerosa
+  comum de imóvel urbano fora do SFH, que é o caso mais frequente do ITBI; o **art. 183** manda
+  tributar o autônomo por "alíquota fixa" sem dizer qual, e nenhum anexo traz a tabela. O terceiro
+  é a UFM do exercício corrente — o Decreto nº 003/2013 só vale para 2013 —, e junto com ela a
+  definição de qual índice usar: o art. 399 manda IPCA, e a memória de cálculo do Decreto usou
+  IGP-M.
 
 ## Defeitos conhecidos do próprio projeto
 
@@ -295,14 +308,30 @@ Decisões de projeto, e o motivo de cada uma:
 - **A seção aparece mesmo vazia.** Um município que ainda não cadastrou nada é exatamente quem
   precisa achar o botão.
 
-Ingazeira entrou com **22 cobranças**: IPTU, ISS, ITBI e as taxas dos anexos II a XI — 160 itens e
-10 faixas, lidos do texto limpo da lei, cada um com a página do seu fundamento. A CIP ficou de fora
-de propósito: vem na fatura da concessionária e não é lançada no sistema de tributos.
+São **102 cobranças em seis municípios**: Ingazeira 22, Tacaratu 22, Jurema 21, Cortês 15,
+Jatobá 11 e Vertente do Lério 11. Em Ingazeira a CIP ficou de fora de propósito, a pedido: vem na
+fatura da concessionária e não é lançada no sistema de tributos.
 
-Só o **Anexo I** ficou pendente. São 44 páginas de taxa de licença por atividade, e é o único que
-pede transcrição item a item.
+As duas tabelas grandes por atividade — o **Anexo I de Ingazeira** (944 itens) e o **Anexo I de
+Tacaratu** (1.297 subclasses da CNAE 2.0) — não cabem no cadastro item a item e vivem no `fees.js`,
+que tem busca própria. O cadastro traz uma cobrança que aponta para lá, com o fundamento e as
+ressalvas de leitura.
 
-### O que falta, e que é o diferencial da ferramenta
+**O cadastro é onde os defeitos da lei ficam registrados**, e eles são mais comuns do que se
+esperaria. Os que impedem lançamento, até agora: o art. 162 de Jurema não tem alíquota para o ITBI
+urbano comum; o art. 183 de Jurema manda cobrar do autônomo "alíquota fixa" sem dizer qual; a
+renovação de alvará de Tacaratu tem célula em branco para o residencial vertical até 40 m². Os que
+só atrapalham a citação: dois itens numerados 4 no Anexo VII de Tacaratu, item 5 inexistente nos
+Serviços Diversos, item 22 inexistente no Anexo XII, e o art. 307 remetendo ao Anexo X quando a
+tabela certa é a do IX. Registrar em vez de escolher é a regra — quem decide é o Município.
+
+### O que falta
+
+**Cadastro para Ibimirim, Aliança e Manari.** São os três municípios com mais dados estruturados e
+os únicos sem cadastro. Ibimirim é o caso mais visível: 19 documentos, 13 seções de taxa, 384 itens
+— e nenhuma linha dizendo de quem se cobra, quando e com que fundamento.
+
+### O diferencial da ferramenta
 
 **O alerta de vigência.** Como cada cobrança aponta artigo e página, o aplicativo consegue acender
 sozinho toda cobrança ancorada em dispositivo que uma lei nova alterou. Foi exatamente o que
