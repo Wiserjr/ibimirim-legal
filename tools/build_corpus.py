@@ -106,14 +106,20 @@ def main() -> None:
                 file=sys.stderr,
             )
         corrigidas += apply_corrections(doc["id"], pages, correcoes)
-        corpus["documents"].append({
+        registro = {
             "id": doc["id"],
             "title": doc["titulo"],
             "citation": doc["citacao"],
             "kind": doc["tipo"],
             "pageCount": len(pages),
             "pages": pages,
-        })
+        }
+        # Um documento que altera outro carrega essa relação até o aplicativo:
+        # é dela que sai o alerta de vigência sobre a cobrança que se apoia no
+        # artigo alterado. Fica fora quando não existe, para não inchar o pacote.
+        if doc.get("altera"):
+            registro["altera"] = doc["altera"]
+        corpus["documents"].append(registro)
 
     size = write_bundle(output, "MUNICIPIO_LAWS", corpus)
     total = sum(d["pageCount"] for d in corpus["documents"])

@@ -39,6 +39,13 @@ dialog#reader{width:min(920px,calc(100% - 24px));max-width:calc(100vw - 24px);ma
 .source-button:hover{border-color:var(--green2)}
 .charge-broken{background:#fbe3e0;color:#7d332a;border-radius:10px;padding:8px 12px;font-size:13px}
 .charge-note{margin:12px 0 0;color:var(--muted);font-size:13px;line-height:1.55;border-left:3px solid var(--line);padding-left:12px}
+/* Alerta de vigencia: a cobranca se apoia em artigo que outra lei ja alterou.
+   Amarelo, nao vermelho -- nao e erro de cadastro, e aviso para conferir. */
+.charge-vigencia{margin:14px 0 0;background:#fdf6e3;border:1px solid #e6d5a8;border-left:4px solid #c9a227;border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.55;color:#6b5518}
+.charge-vigencia strong{color:#8a6d15}
+.charge-vigencia ul{margin:8px 0 0;padding-left:18px;display:grid;gap:8px}
+.charge-vigencia li{line-height:1.6}
+.charge-vigencia .source-button{margin-left:6px;padding:4px 10px;font-size:12px;background:#fff}
 .charge-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
 .charge-fields{padding:8px 32px 30px;display:grid;gap:6px}
 .charge-fields label{font-weight:800;color:var(--green2);font-size:13px;margin-top:10px}

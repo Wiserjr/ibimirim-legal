@@ -47,6 +47,28 @@ for (const slug of slugs) {
   // --- toda página citada tem de existir no documento citado -----------
   const pagina = (docId, n) =>
     laws.documents.find(d => d.id === docId)?.pages.find(p => p.page === n);
+
+  // --- quem declara alterar outro documento tem de apontar para algo real ---
+  // É desta declaração que sai o alerta de vigência sobre a cobrança. Uma
+  // remissão quebrada aqui apaga o alerta em silêncio, que é pior do que
+  // não tê-lo: a equipe confiaria numa cobrança desatualizada.
+  for (const doc of laws.documents) {
+    for (const a of doc.altera || []) {
+      const onde = `${rotulo} ${doc.id} altera`;
+      assert.ok(ids.has(a.doc), `${onde} ${a.doc}, que não existe na biblioteca`);
+      assert.notEqual(a.doc, doc.id, `${onde} a si mesmo`);
+      assert.ok(a.artigos?.length, `${onde} ${a.doc} sem lista de artigos`);
+      assert.ok(pagina(doc.id, a.pagina), `${onde}: página ${a.pagina} não existe no próprio documento`);
+      for (const art of a.artigos) {
+        const faixa = /^(\d{1,4})-(\d{1,4})$/.exec(art);
+        if (faixa) {
+          assert.ok(Number(faixa[1]) < Number(faixa[2]), `${onde}: faixa "${art}" fora de ordem`);
+          continue;
+        }
+        assert.match(String(art), /^\d{1,4}(-[A-Za-z])?$/, `${onde}: artigo "${art}" mal formado`);
+      }
+    }
+  }
   const fontes = [
     ...(cfg.cartoes || []).flatMap(c => c.fontes || []),
     ...(cfg.ufm.fonte ? [cfg.ufm.fonte] : []),

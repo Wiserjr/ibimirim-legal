@@ -1,39 +1,63 @@
 {
-  "documentos": [
+ "documentos": [
+  {
+   "id": "ctm-002-2016",
+   "titulo": "Código Tributário Municipal",
+   "citacao": "Lei Complementar nº 002/2016",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/INGAZEIRA CODIGO TRIBUTARIO.pdf"
+  },
+  {
+   "id": "lc-004-2017",
+   "titulo": "Nova redação do Título II — ISS",
+   "citacao": "Lei Complementar nº 004/2017",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/LC_004-2017_ALTERA CODIGO TRIBUTARIO ISS.pdf",
+   "altera": [
     {
-      "id": "ctm-002-2016",
-      "titulo": "Código Tributário Municipal",
-      "citacao": "Lei Complementar nº 002/2016",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/INGAZEIRA CODIGO TRIBUTARIO.pdf"
-    },
-    {
-      "id": "lc-004-2017",
-      "titulo": "Nova redação do Título II — ISS",
-      "citacao": "Lei Complementar nº 004/2017",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/LC_004-2017_ALTERA CODIGO TRIBUTARIO ISS.pdf"
-    },
-    {
-      "id": "lc-007-2024",
-      "titulo": "Nova redação da CIP — iluminação pública",
-      "citacao": "Lei Complementar nº 007/2024",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/LC-007-2024_Modifica Lei Complementar 002 - Contribuição de Iluminacao - ASSINADO Publica - CIP.pdf"
-    },
-    {
-      "id": "cc-14",
-      "titulo": "Código Civil — 14ª edição",
-      "citacao": "Lei Federal nº 10.406/2002; atualizada até agosto de 2023",
-      "tipo": "federal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
-    },
-    {
-      "id": "cc-2",
-      "titulo": "Código Civil — 2ª edição (histórica)",
-      "citacao": "Lei Federal nº 10.406/2002; edição histórica, mantida para cotejo",
-      "tipo": "historical",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+     "doc": "ctm-002-2016",
+     "artigos": [
+      "121-174"
+     ],
+     "escopo": "Título II inteiro — o ISS",
+     "pagina": 1
     }
-  ]
+   ]
+  },
+  {
+   "id": "lc-007-2024",
+   "titulo": "Nova redação da CIP — iluminação pública",
+   "citacao": "Lei Complementar nº 007/2024",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/LC-007-2024_Modifica Lei Complementar 002 - Contribuição de Iluminacao - ASSINADO Publica - CIP.pdf",
+   "altera": [
+    {
+     "doc": "ctm-002-2016",
+     "artigos": [
+      "311",
+      "312",
+      "313",
+      "314",
+      "315"
+     ],
+     "escopo": "Contribuição de Iluminação Pública",
+     "pagina": 1
+    }
+   ]
+  },
+  {
+   "id": "cc-14",
+   "titulo": "Código Civil — 14ª edição",
+   "citacao": "Lei Federal nº 10.406/2002; atualizada até agosto de 2023",
+   "tipo": "federal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
+  },
+  {
+   "id": "cc-2",
+   "titulo": "Código Civil — 2ª edição (histórica)",
+   "citacao": "Lei Federal nº 10.406/2002; edição histórica, mantida para cotejo",
+   "tipo": "historical",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+  }
+ ]
 }

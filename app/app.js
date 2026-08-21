@@ -471,6 +471,65 @@ function fundamentoValido(f){
   return !!(doc&&doc.pages.some(p=>p.page===Number(f.pagina)));
 }
 
+// --- alerta de vigência ---------------------------------------------------
+// Cada cobrança aponta documento, artigo e página. Quando algum documento da
+// biblioteca declara alterar aquele artigo, a cobrança está apoiada em texto que
+// já mudou — e é a própria biblioteca que sabe disso, não uma anotação à mão.
+// A declaração vive em fontes.json, no campo "altera", e chega aqui pelo corpus.
+
+// Só conta como número de artigo o que vem depois de "art."; sem isso o "9" de
+// "art. 92, § 9º" viraria um artigo 9 inexistente.
+function artigosDe(texto){
+  // A expressão nasce aqui dentro de propósito: com a marca /g, um objeto
+  // compartilhado carrega lastIndex de uma chamada para a outra e passa a
+  // procurar no meio da frase seguinte.
+  const citado=/\barts?\.?\s*(\d{1,4})|\bartigos?\s+(\d{1,4})/gi;
+  const achados=new Set();
+  for(const m of String(texto||'').matchAll(citado))achados.add(Number(m[1]||m[2]));
+  return achados;
+}
+
+// "121-174" é faixa fechada; "277-A" é um artigo só, com letra.
+function cobreArtigo(declarado,numero){
+  const faixa=/^(\d{1,4})-(\d{1,4})$/.exec(String(declarado));
+  if(faixa)return numero>=Number(faixa[1])&&numero<=Number(faixa[2]);
+  return Number(String(declarado).replace(/-[A-Za-z]+$/,''))===numero;
+}
+
+function alteracoesDe(f){
+  const numeros=artigosDe(f.artigo);
+  if(!numeros.size)return [];
+  const fora=[];
+  for(const doc of corpus.documents){
+    for(const a of doc.altera||[]){
+      if(a.doc!==f.doc)continue;
+      const atingidos=[...numeros].filter(n=>(a.artigos||[]).some(d=>cobreArtigo(d,n)));
+      if(atingidos.length)fora.push({por:doc,escopo:a.escopo,pagina:a.pagina,artigos:atingidos});
+    }
+  }
+  return fora;
+}
+
+function vigenciaHtml(c){
+  const vistos=new Map();
+  for(const f of c.fundamento||[]){
+    for(const a of alteracoesDe(f)){
+      const chave=`${a.por.id}|${a.artigos.join(',')}`;
+      if(!vistos.has(chave))vistos.set(chave,a);
+    }
+  }
+  if(!vistos.size)return '';
+  const linhas=[...vistos.values()].map(a=>{
+    const arts=a.artigos.length===1?`o art. ${a.artigos[0]}`:`os arts. ${a.artigos.join(', ')}`;
+    const alvo=`${a.por.citation} alterou ${arts}${a.escopo?` — ${a.escopo}`:''}`;
+    return `<li>${escape(alvo)} <button class="source-button" type="button"`
+      +` data-fee-doc="${escape(a.por.id)}" data-fee-page="${escape(String(a.pagina||1))}">Ver a lei que alterou</button></li>`;
+  }).join('');
+  return `<div class="charge-vigencia"><strong>Atenção à vigência.</strong> Esta cobrança se apoia em`
+    +` dispositivo que outra lei da biblioteca já alterou. Confira a redação nova antes de lançar.`
+    +`<ul>${linhas}</ul></div>`;
+}
+
 function baseTexto(base){
   if(!base)return '—';
   if(base.tipo==='reais')return `${money(base.valor||0)}${base.por?` por ${base.por}`:''}`;
@@ -568,6 +627,7 @@ function renderCharges(){
         ${c.sujeitoPassivo?`<dt>Quem paga</dt><dd>${escape(c.sujeitoPassivo)}</dd>`:''}
         ${c.vencimento?`<dt>Quando</dt><dd>${escape(c.vencimento)}</dd>`:''}
       </dl>
+      ${vigenciaHtml(c)}
       <div class="charge-sources">${fundamentoHtml(c)}</div>
       ${c.nota?`<p class="charge-note">${escape(c.nota)}</p>`:''}
       <button class="text-button" type="button" data-charge-edit="${escape(c.id)}">Editar</button>

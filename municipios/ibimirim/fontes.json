@@ -1,137 +1,147 @@
 {
-  "documentos": [
+ "documentos": [
+  {
+   "id": "ctm-2025",
+   "titulo": "Código Tributário Municipal",
+   "citacao": "Lei Complementar nº 004/2025",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Desktop/Codigo Tributario 2025.pdf"
+  },
+  {
+   "id": "lei-963-2025",
+   "titulo": "Incentivos fiscais à habitação social",
+   "citacao": "Lei Municipal nº 963/2025",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1749570765_lei-municipal-n-9632025.pdf"
+  },
+  {
+   "id": "lei-945-2025",
+   "titulo": "Cessão de servidores",
+   "citacao": "Lei Municipal nº 945/2025",
+   "tipo": "administrativa",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1739192971_lei-municipal-n-9452025.pdf"
+  },
+  {
+   "id": "lei-932-2024",
+   "titulo": "Incentivo de ITBI — Minha Casa Minha Vida",
+   "citacao": "Lei Municipal nº 932/2024",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1720010841_lei-municipal-n-9322024.pdf"
+  },
+  {
+   "id": "lei-925-2024",
+   "titulo": "Doações voluntárias com IPTU e ISS",
+   "citacao": "Lei Municipal nº 925/2024",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1717501872_lei-municipal-n-9252024.pdf"
+  },
+  {
+   "id": "lei-988-2025",
+   "titulo": "Taxa de licença das placas de energia solar",
+   "citacao": "Lei Municipal nº 988/2025; altera a Lei nº 793/2018",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Lei nº 988 - Taxa de Fiscalização de Licença para Funcionamento das Placas de Energia Solar.docx",
+   "altera": [
     {
-      "id": "ctm-2025",
-      "titulo": "Código Tributário Municipal",
-      "citacao": "Lei Complementar nº 004/2025",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Desktop/Codigo Tributario 2025.pdf"
-    },
-    {
-      "id": "lei-963-2025",
-      "titulo": "Incentivos fiscais à habitação social",
-      "citacao": "Lei Municipal nº 963/2025",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1749570765_lei-municipal-n-9632025.pdf"
-    },
-    {
-      "id": "lei-945-2025",
-      "titulo": "Cessão de servidores",
-      "citacao": "Lei Municipal nº 945/2025",
-      "tipo": "administrativa",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1739192971_lei-municipal-n-9452025.pdf"
-    },
-    {
-      "id": "lei-932-2024",
-      "titulo": "Incentivo de ITBI — Minha Casa Minha Vida",
-      "citacao": "Lei Municipal nº 932/2024",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1720010841_lei-municipal-n-9322024.pdf"
-    },
-    {
-      "id": "lei-925-2024",
-      "titulo": "Doações voluntárias com IPTU e ISS",
-      "citacao": "Lei Municipal nº 925/2024",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1717501872_lei-municipal-n-9252024.pdf"
-    },
-    {
-      "id": "lei-988-2025",
-      "titulo": "Taxa de licença das placas de energia solar",
-      "citacao": "Lei Municipal nº 988/2025; altera a Lei nº 793/2018",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Lei nº 988 - Taxa de Fiscalização de Licença para Funcionamento das Placas de Energia Solar.docx"
-    },
-    {
-      "id": "lei-793-2018",
-      "titulo": "Taxa de torres, antenas e placas de energia solar",
-      "citacao": "Lei Municipal nº 793/2018",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Lei 793-2018 - Lei Taxa Torres e Placas Energia Solar.pdf"
-    },
-    {
-      "id": "lei-877-2022",
-      "titulo": "PRODEM — incentivos ao desenvolvimento econômico e social",
-      "citacao": "Lei Municipal nº 877/2022",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/prodem_lei-municipal.pdf"
-    },
-    {
-      "id": "lei-863-2022",
-      "titulo": "Dação em pagamento de bens imóveis",
-      "citacao": "Lei Municipal nº 863/2022",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1657890474_lei-8632022_2.pdf"
-    },
-    {
-      "id": "lei-858-2022",
-      "titulo": "Programa de Recuperação Fiscal — REFIS",
-      "citacao": "Lei Municipal nº 858/2022",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/1654790722_lei-n-8582022.pdf"
-    },
-    {
-      "id": "dec-23-2026",
-      "titulo": "Qualificação de débitos em dívida ativa",
-      "citacao": "Decreto Municipal nº 23/2026",
-      "tipo": "decreto",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Decreto Municipal nº 23-2026.pdf"
-    },
-    {
-      "id": "dec-31-2022",
-      "titulo": "ISS da construção civil e obras de engenharia",
-      "citacao": "Decreto Municipal nº 31/2022",
-      "tipo": "decreto",
-      "arquivo": "C:/Users/WiseJr/Downloads/_Revisar-Manualmente/PDF/1654188240_decreto-n-31.pdf"
-    },
-    {
-      "id": "dec-30-2022",
-      "titulo": "Prazos para recolhimento do ISS",
-      "citacao": "Decreto Municipal nº 30/2022",
-      "tipo": "decreto",
-      "arquivo": "C:/Users/WiseJr/Downloads/1654187906_decreto-n-30.pdf"
-    },
-    {
-      "id": "lc-01-2019",
-      "titulo": "Plano Diretor",
-      "citacao": "Lei Complementar nº 01/2019",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/LC 01-2019 - Institui o Plano Diretor.pdf"
-    },
-    {
-      "id": "lc-02-2019",
-      "titulo": "Perímetro Urbano",
-      "citacao": "Lei Complementar nº 02/2019",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/LC 02-2019 - Dispõe sobre o Perímetro Urbano.pdf"
-    },
-    {
-      "id": "lc-03-2019",
-      "titulo": "Parcelamento do Solo Urbano",
-      "citacao": "Lei Complementar nº 03/2019",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Documents/Nova pasta/LC 03-2019 - Dispõe sobre o Parcelamento do Solo Urbano.pdf"
-    },
-    {
-      "id": "lc-04-2019",
-      "titulo": "Uso e Ocupação do Solo",
-      "citacao": "Lei Complementar nº 04/2019",
-      "tipo": "municipal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Documents/LC_04-2019_-_Dispõe_Sobre_o_Ordenamento_e_Ocupação_do_Solo[1].pdf"
-    },
-    {
-      "id": "cc-14",
-      "titulo": "Código Civil — 14ª edição",
-      "citacao": "Lei Federal nº 10.406/2002 e normas correlatas; atualizada até agosto de 2023",
-      "tipo": "federal",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
-    },
-    {
-      "id": "cc-2",
-      "titulo": "Código Civil — 2ª edição (histórica)",
-      "citacao": "Lei Federal nº 10.406/2002; edição histórica, mantida para cotejo",
-      "tipo": "historical",
-      "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+     "doc": "lei-793-2018",
+     "artigos": [
+      "2"
+     ],
+     "escopo": "valores da taxa de torres, antenas e placas solares",
+     "pagina": 1
     }
-  ]
+   ]
+  },
+  {
+   "id": "lei-793-2018",
+   "titulo": "Taxa de torres, antenas e placas de energia solar",
+   "citacao": "Lei Municipal nº 793/2018",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Lei 793-2018 - Lei Taxa Torres e Placas Energia Solar.pdf"
+  },
+  {
+   "id": "lei-877-2022",
+   "titulo": "PRODEM — incentivos ao desenvolvimento econômico e social",
+   "citacao": "Lei Municipal nº 877/2022",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/prodem_lei-municipal.pdf"
+  },
+  {
+   "id": "lei-863-2022",
+   "titulo": "Dação em pagamento de bens imóveis",
+   "citacao": "Lei Municipal nº 863/2022",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1657890474_lei-8632022_2.pdf"
+  },
+  {
+   "id": "lei-858-2022",
+   "titulo": "Programa de Recuperação Fiscal — REFIS",
+   "citacao": "Lei Municipal nº 858/2022",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/1654790722_lei-n-8582022.pdf"
+  },
+  {
+   "id": "dec-23-2026",
+   "titulo": "Qualificação de débitos em dívida ativa",
+   "citacao": "Decreto Municipal nº 23/2026",
+   "tipo": "decreto",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Decreto Municipal nº 23-2026.pdf"
+  },
+  {
+   "id": "dec-31-2022",
+   "titulo": "ISS da construção civil e obras de engenharia",
+   "citacao": "Decreto Municipal nº 31/2022",
+   "tipo": "decreto",
+   "arquivo": "C:/Users/WiseJr/Downloads/_Revisar-Manualmente/PDF/1654188240_decreto-n-31.pdf"
+  },
+  {
+   "id": "dec-30-2022",
+   "titulo": "Prazos para recolhimento do ISS",
+   "citacao": "Decreto Municipal nº 30/2022",
+   "tipo": "decreto",
+   "arquivo": "C:/Users/WiseJr/Downloads/1654187906_decreto-n-30.pdf"
+  },
+  {
+   "id": "lc-01-2019",
+   "titulo": "Plano Diretor",
+   "citacao": "Lei Complementar nº 01/2019",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/LC 01-2019 - Institui o Plano Diretor.pdf"
+  },
+  {
+   "id": "lc-02-2019",
+   "titulo": "Perímetro Urbano",
+   "citacao": "Lei Complementar nº 02/2019",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/LC 02-2019 - Dispõe sobre o Perímetro Urbano.pdf"
+  },
+  {
+   "id": "lc-03-2019",
+   "titulo": "Parcelamento do Solo Urbano",
+   "citacao": "Lei Complementar nº 03/2019",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Documents/Nova pasta/LC 03-2019 - Dispõe sobre o Parcelamento do Solo Urbano.pdf"
+  },
+  {
+   "id": "lc-04-2019",
+   "titulo": "Uso e Ocupação do Solo",
+   "citacao": "Lei Complementar nº 04/2019",
+   "tipo": "municipal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Documents/LC_04-2019_-_Dispõe_Sobre_o_Ordenamento_e_Ocupação_do_Solo[1].pdf"
+  },
+  {
+   "id": "cc-14",
+   "titulo": "Código Civil — 14ª edição",
+   "citacao": "Lei Federal nº 10.406/2002 e normas correlatas; atualizada até agosto de 2023",
+   "tipo": "federal",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 14 ed.pdf"
+  },
+  {
+   "id": "cc-2",
+   "titulo": "Código Civil — 2ª edição (histórica)",
+   "citacao": "Lei Federal nº 10.406/2002; edição histórica, mantida para cotejo",
+   "tipo": "historical",
+   "arquivo": "C:/Users/WiseJr/Downloads/Tributos-Ibimirim/Legislacao/Código Civil 2 ed.pdf"
+  }
+ ]
 }
