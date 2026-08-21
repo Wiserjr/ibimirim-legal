@@ -362,6 +362,11 @@ página que ele cita. Não prova o emparelhamento entre rótulo e valor, mas peg
 valor inventado, dígito trocado, casa decimal errada e tabela citada na página
 errada. Hoje: **1.086 de 1.088**, e os dois restantes foram conferidos na imagem.
 
+As páginas cujo texto reconhecido está corrompido demais para servir de prova
+ficam de fora da conta — o programa se cala nelas em vez de acusar erro. Eram
+cinco cobranças, **todas já conferidas na imagem**: 105 valores, todos corretos.
+O resultado de cada uma está na sua nota.
+
 O programa também confere se o **artigo citado aparece na página citada** — e foi
 isso que achou o art. 80 de Vertente do Lério, apontado para a página 63 quando
 está na 38. A conferência virou asserção em `tests/municipios.test.mjs`.

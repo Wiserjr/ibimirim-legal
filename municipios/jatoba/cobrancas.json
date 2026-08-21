@@ -963,8 +963,8 @@
      "artigo": "Anexo 6, Tabela V"
     }
    ],
-   "conferencia": "revisar",
-   "nota": "Percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR. DOIS DEFEITOS NO TEXTO, não corrigidos aqui: (1) o item I.2, “Imóveis não edificados, por metro linear de testada”, da limpeza pública, aparece SEM percentual; (2) na iluminação pública as faixas se sobrepõem — “de 501 a 1000” tem 3,5% e a linha seguinte diz “Acima de 500” com 5%, quando a sequência pedia “Acima de 1000”. Quando o mesmo imóvel exerce mais de uma atividade, a taxa de coleta é calculada como prédios distintos.",
+   "conferencia": "conferido",
+   "nota": "CONFERIDO NA IMAGEM. O texto reconhecido destas páginas está corrompido demais para servir de prova — o conferidor automático se cala nelas —, então cada valor foi lido na imagem da página. Os 27 conferem na página 85, que é o ANEXO 6, TABELA V, e traz no cabeçalho o que sustenta toda a conversão: \"Percentual sobre o Valor de Referência (VR = 100 UFIR's) a ser aplicado\". A LEITURA DA IMAGEM ACHOU DOIS DEFEITOS QUE O TEXTO ESCONDIA. PRIMEIRO: o item 2 da limpeza pública — \"Imóveis não edificados, por metro linear de testada\" — NÃO TEM PERCENTUAL NENHUM na coluna. O terreno sem construção simplesmente não tem alíquota de limpeza, embora a lei o liste como hipótese. SEGUNDO: a escala de iluminação pública por consumo termina em \"501 a 1000\" com 3,5% e a linha seguinte diz \"Acima de 500\" com 5% — deveria ser \"acima de 1000\". Quem consome 600 kWh cai nas duas faixas ao mesmo tempo, e a diferença é de 3,5% para 5% do VR. Levar as duas ao Município. A nota de rodapé da tabela registra ainda que, havendo mais de uma atividade no mesmo imóvel, a taxa de coleta domiciliar de lixo é calculada como se fossem prédios distintos.",
    "vigencia": {
     "de": "1997",
     "ate": null

@@ -951,7 +951,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "Cuidado para não confundir com os itens 01 e 02: aqui é REFORMA E REPARO, sem ampliação, e o valor é fixo por m² sem faixa de área. Ampliação puxa para a tabela de faixas dos itens 01 e 02. O muro é por metro LINEAR, não por m².",
+   "nota": "CONFERIDO NA IMAGEM. O texto reconhecido destas páginas está corrompido demais para servir de prova — o conferidor automático se cala nelas —, então cada valor foi lido na imagem da página. Os quatro conferem na página 246: reforma residencial R$ 1,00/m², reforma comercial R$ 1,50/m², muro R$ 1,00 por metro linear e demolição R$ 1,00/m² — este último impresso com PONTO decimal, \"1.00\", e não vírgula. Cuidado para não confundir com os itens 01 e 02: aqui é REFORMA E REPARO, sem ampliação, e o valor é fixo por m² sem faixa de área. Ampliação puxa para a tabela de faixas dos itens 01 e 02. O muro é por metro LINEAR, não por m².",
    "vigencia": {
     "de": "2017",
     "ate": null
@@ -1210,7 +1210,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "Por metro quadrado, sem faixa de área e sem isenção. Regularizar sempre custa mais caro do que vistoriar na hora certa: R$ 1,00/m² contra R$ 0,45 a R$ 0,90 do habite-se residencial tempestivo.",
+   "nota": "CONFERIDO NA IMAGEM. O texto reconhecido destas páginas está corrompido demais para servir de prova — o conferidor automático se cala nelas —, então cada valor foi lido na imagem da página. Os dois conferem na página 248: residencial R$ 1,00/m² e não residencial R$ 1,10/m². A mesma página confirma, de passagem, as onze faixas do habite-se comercial e misto. Por metro quadrado, sem faixa de área e sem isenção. Regularizar sempre custa mais caro do que vistoriar na hora certa: R$ 1,00/m² contra R$ 0,45 a R$ 0,90 do habite-se residencial tempestivo.",
    "vigencia": {
     "de": "2017",
     "ate": null

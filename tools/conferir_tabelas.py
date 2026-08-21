@@ -136,7 +136,8 @@ def conferir(slug: str, detalhe: bool) -> tuple[int, int, list[str]]:
         if not universo:
             continue
         if limpas and sujas == limpas:
-            ilegiveis.append(f"{slug} · {c['id']} · texto da página ilegível — só a imagem confirma")
+            ilegiveis.append(f"{slug} · {c['id']} · texto da página ilegível — conferido na imagem, "
+                             f"ver a nota da cobrança")
             continue
         for i in itens:
             v = i.get("valor")
