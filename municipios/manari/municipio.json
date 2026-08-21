@@ -197,6 +197,22 @@
  "cartoes": [],
  "avisos": [
   {
+   "tipo": "vigencia",
+   "texto": "<strong>A mesma taxa aparece duas vezes, em unidades diferentes.</strong> As <strong>TABELAS I a IX</strong> (páginas 118 a 129) cobram em <strong>percentual sobre o Valor de Referência</strong>. A partir da <strong>página 139</strong> há um segundo bloco de tabelas, <em>sem título de anexo</em>, que cobra em <strong>UFM</strong> e trata da mesma matéria — localização e funcionamento, publicidade, expediente, obras, veículos, horário, ambulante e abate. A licença de funcionamento, por exemplo, é por ramo de atividade na TABELA I e por faixa de área na página 139. Os dois critérios não convergem e o Código não diz qual prevalece. <strong>Leve a divergência ao Município antes de lançar.</strong>"
+  },
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>A numeração dos anexos não bate com a das tabelas.</strong> O Código cita <strong>anexo I</strong> (valores de construção, art. 22), <strong>anexo II</strong> (valores de terrenos, art. 22), <strong>anexo III</strong> (fatores de correção, art. 26) e <strong>anexo IV</strong> (alíquotas do ISS, art. 89). Nas páginas anexas, TABELA I é a licença de funcionamento, TABELA II é o horário especial, TABELA III é a execução de obras e TABELA IV é a publicidade. O conteúdo dos anexos I a III está, sem título, nas páginas 130 a 132; o do anexo IV, na página 133, como \"Tabela de serviços\". <strong>Ao citar, descreva o conteúdo e a página</strong>, nunca só o número do anexo."
+  },
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>O art. 60 imprime \"1% (meio por cento)\".</strong> Na alíquota do ITBI sobre o valor financiado pelo Sistema Financeiro de Habitação, o algarismo e o extenso discordam — e a diferença é o dobro. <strong>Conferido na imagem da página 22: está impresso assim na lei</strong>, não é falha de leitura. O cadastro registra 1%, que é o algarismo, com a ressalva. A decisão sobre qual vale é do Município."
+  },
+  {
+   "tipo": "nota",
+   "texto": "<strong>Quatro bases de cálculo convivem em Manari</strong> — percentual sobre o Valor de Referência, percentual sobre o preço do serviço, percentual sobre o Valor de Referência Fiscal e UFM. O acervo não traz o ato que fixa nenhuma das três unidades, e o Código usa \"Valor de Referência\" e \"Valor de Referência Fiscal\" como nomes distintos sem dizer se são a mesma coisa. O art. 22, § 3º manda atualizar as tabelas de valores de construção e de terrenos pelo <strong>INPC</strong>."
+  },
+  {
    "tipo": "projeto",
    "texto": "O Código de Obras e o Código de Posturas estão na biblioteca como <strong>projetos de lei de 2026</strong>. Não foram aprovados pela Câmara e não produzem efeito — estão aqui para apoiar a elaboração, não para fundamentar licença ou autuação."
   },
