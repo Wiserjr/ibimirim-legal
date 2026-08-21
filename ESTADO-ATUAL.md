@@ -345,6 +345,34 @@ tabela certa é a do IX. Registrar em vez de escolher é a regra — quem decide
 Nada, em cobertura: os nove estão cadastrados. O que falta é o **alerta automático de vigência**,
 abaixo.
 
+### A tabela e a calculadora
+
+Cada cobrança que tem itens desenha a tabela no cartão. Quem não tem, mas aponta
+uma seção do `fees.js` por `base.tabela`, desenha a de lá — **36 cobranças ligadas
+assim**, sem repetir valor nenhum entre os dois arquivos. Cobertura: 115 das 167.
+
+A coluna **"Em reais"** nasce quando dá para calculá-la sem perguntar nada: valor
+em UFM, ou percentual de uma base do Município já informada. Quando não dá, a
+legenda diz o que falta.
+
+As **bases fiscais** são declaradas em `municipio.json`, no campo `bases`, e cada
+uma ganha um campo no painel. Manari usa três ao mesmo tempo (VR, VRF e UFM);
+Jatobá cobra em percentual de um VR que o art. 113 amarrou à UFIR extinta. Uma
+base pode trazer `padrao` com o valor que a própria lei fixa — é o caso da BCLA
+de Tacaratu, R$ 1.000,00 pelo art. 281.
+
+A **calculadora** fica em cada cartão, fechada. Escolhe-se o item, informa-se o
+que falta — valor venal, preço do serviço, quantidade de m² — e sai o valor. Uma
+por cartão, não uma por linha.
+
+`tests/calculadora.test.mjs` prende as quatro conversões e o reconhecimento da
+unidade de quantidade. Ele existe por causa de um defeito silencioso: `` no fim
+de "por m²" nunca fecha, porque `²` não é caractere de palavra — o campo de
+quantidade não aparecia e a tabela parecia certa.
+
+**Ao conferir no navegador, limpe o service worker.** Ele serve a versão anterior
+e faz parecer que a mudança não saiu; foi o que escondeu as 19 tabelas de Tacaratu.
+
 ### O diferencial da ferramenta
 
 **O alerta de vigência já está de pé.** A relação é declarada em `fontes.json`, no campo `altera`,
