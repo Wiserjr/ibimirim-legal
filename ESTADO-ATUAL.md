@@ -26,10 +26,8 @@ São **nove municípios**, 10.749 páginas indexadas, 28,6 MB em `docs/`.
 
 Cada um sai também como ZIP (PC/iPhone) e APK Android com `applicationId` próprio.
 
-**Seis dos nove têm cadastro de cobranças** — Ingazeira 22, Tacaratu 22, Jurema 21, Cortês 15,
-Jatobá 11 e Vertente do Lério 11, num total de **102 cobranças**. Ibimirim, Aliança e Manari não
-têm: eles entraram pelo formato antigo de tabelas estruturadas, que responde *quanto*, mas não
-*de quem, quando e com que fundamento*.
+**Os nove têm cadastro de cobranças**, num total de **167**: Ibimirim 23, Ingazeira 22,
+Tacaratu 22, Aliança 21, Jurema 21, Manari 21, Cortês 15, Jatobá 11 e Vertente do Lério 11.
 
 ## O que falta
 
@@ -41,9 +39,10 @@ interna.
 A extração das tabelas está feita nos seis, e a unidade de Jurema está resolvida (ver abaixo).
 O que resta é trabalho de aprofundamento, não de cobertura:
 
-- **Cadastro de cobranças para Ibimirim, Aliança e Manari.** São os três com mais dados
-  estruturados e os únicos sem o cadastro — a camada que amarra valor a fundamento. É hoje a
-  maior lacuna em relação ao que a ferramenta se propõe.
+- **O alerta automático de vigência**, descrito no fim deste arquivo. Agora que as 167 cobranças
+  apontam artigo e página, é o próximo passo que muda o uso da ferramenta.
+- **Resolver as divergências levantadas pelo cadastro**, que dependem dos Municípios e estão
+  listadas mais abaixo. As de Manari são as mais graves.
 - O portal de Tacaratu tem mais material não indexado: 12 decretos, 4 relatórios de desonerações e
   renúncias fiscais, a normatização do setor de cadastro, arrecadação e fiscalização (2026), a
   normatização de qualificação de débitos para CDA (2026) e o termo de adesão ao padrão nacional da
@@ -76,9 +75,9 @@ Não há um padrão comum, e confundi-las erra a conta por ordens de grandeza:
 
 | Município | Base das tabelas |
 |---|---|
-| Ibimirim | reais no Código de 2025; UFM nas leis específicas de torres e placas solares |
+| Ibimirim | reais no Código de 2025, **base 2024**, com reajuste pelo IPCA a partir de 2026 (art. 419); UFM nas leis específicas de torres e placas solares, que o art. 420 manda manter nessa unidade |
 | Aliança | UFM em todos os anexos |
-| Manari | UFM, percentual sobre o Valor de Referência Fiscal e percentual sobre o preço do serviço |
+| **Manari** | **quatro ao mesmo tempo: % sobre o Valor de Referência (Tabelas I–IX), % sobre o preço do serviço (lista do ISS), % sobre o Valor de Referência Fiscal (ISS pessoal, art. 90) e UFM (segundo bloco de tabelas, p. 139–148). O Código não diz se VR e VRF são a mesma coisa.** |
 | Ingazeira | reais por código CNAE-Fiscal — **exceto a CIP**, que desde a LC nº 007/2024 é percentual sobre a tarifa B4a da ANEEL |
 | Vertente do Lério | **reais nos anexos de taxa; UFM só na Planta de Valores e no ISS do autônomo** |
 | **Jatobá** | **percentual sobre o Valor de Referência (VR), definido no art. 113 como 100 UFIR** |
@@ -167,13 +166,29 @@ Receita: `fitz.open(pdf)[n-1].get_pixmap(dpi=320, clip=...).save(...)` e leia a 
 Estão detalhadas em [DOCUMENTOS-RECOMENDADOS.md](DOCUMENTOS-RECOMENDADOS.md). As de maior
 consequência:
 
-- **Ibimirim** — o ato que fixa a UFM de cada exercício; e a seção de ocupação de vias do
-  comparativo diverge do texto do Código publicado.
-- **Aliança** — o decreto da UFM; a consolidação do Código só vai até a LC nº 049/2021,
-  mas a LC nº 073/2026 já mudou os arts. 315 e 317; o Plano Diretor tem quatro alterações
-  e nenhuma consolidação.
-- **Manari** — os atos que fixam a UFM e o Valor de Referência; o portal não publica
-  legislação nenhuma, então não há como conferir por lá se a Lei nº 99/2007 foi alterada.
+- **Ibimirim** — o ato que fixa a UFM de cada exercício, sem o qual a taxa das torres e placas
+  solares não converte; **o ato de atualização dos Anexos pelo IPCA para 2026**, já que o art. 419
+  fixa os valores em base 2024 e manda reajustar a partir daquele exercício; a situação dos
+  **Decretos nº 030 e 031 de 2022**, que regulamentam o ISS com base na Lei nº 629/2008, revogada
+  pelo art. 423, § 2º do Código de 2025 e não reeditados; e a seção de ocupação de vias do
+  comparativo, que diverge do texto do Código publicado.
+- **Aliança** — o decreto da UFM, que comanda tanto as treze tabelas quanto a correção do crédito
+  (art. 64, § 1º); **se a LC nº 065/2025 foi prorrogada**, porque ela fixou o IPTU de R$ 30,00 para o
+  CadÚnico apenas "para o exercício financeiro de 2025" e a equipe pode seguir aplicando por inércia;
+  o dispositivo que institui a **taxa de licença de abate e transporte de animais**, cuja tabela existe
+  no anexo sem seção correspondente no corpo; a consolidação do Código, que só vai até a LC nº
+  049/2021 enquanto a LC nº 073/2026 já mudou os arts. 315 e 317; e o Plano Diretor, com quatro
+  alterações e nenhuma consolidação.
+- **Manari — o caso mais grave depois de Jatobá.** Três divergências que o cadastro levantou e que
+  ninguém no balcão pode resolver: **qual bloco de tabelas está em vigor**, já que a mesma taxa
+  aparece nas Tabelas I–IX em % do Valor de Referência e no bloco sem título da p. 139 em UFM, por
+  critérios que não convergem; **a numeração dos anexos**, porque o Código cita anexos I a IV com
+  conteúdos que não correspondem às Tabelas I a IV; e **o art. 60, que imprime "1% (meio por cento)"**
+  na alíquota do ITBI do SFH — conferido na imagem, é da lei. Falta ainda saber a que taxa
+  correspondem as 67 linhas das tabelas finais rotuladas "Divisão de controle — atividades
+  descentralizadas", e os atos que fixam a UFM, o Valor de Referência e o Valor de Referência Fiscal
+  — três unidades que o Código usa sem dizer se duas delas são a mesma. O portal não publica
+  legislação, então não há como conferir por lá se a Lei nº 99/2007 foi alterada.
 - **Ingazeira** — a consolidação do Código: a LC nº 004/2017 refez o Título II inteiro (o ISS) e a
   LC nº 007/2024 refez os arts. 311 a 314 (a CIP), e não há texto consolidado. Falta também a tarifa
   B4a vigente da ANEEL, sem a qual a CIP não converte em reais — e confirmar se houve outras
@@ -327,9 +342,8 @@ tabela certa é a do IX. Registrar em vez de escolher é a regra — quem decide
 
 ### O que falta
 
-**Cadastro para Ibimirim, Aliança e Manari.** São os três municípios com mais dados estruturados e
-os únicos sem cadastro. Ibimirim é o caso mais visível: 19 documentos, 13 seções de taxa, 384 itens
-— e nenhuma linha dizendo de quem se cobra, quando e com que fundamento.
+Nada, em cobertura: os nove estão cadastrados. O que falta é o **alerta automático de vigência**,
+abaixo.
 
 ### O diferencial da ferramenta
 
