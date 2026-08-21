@@ -39,10 +39,10 @@ interna.
 A extração das tabelas está feita nos seis, e a unidade de Jurema está resolvida (ver abaixo).
 O que resta é trabalho de aprofundamento, não de cobertura:
 
-- **O alerta automático de vigência**, descrito no fim deste arquivo. Agora que as 167 cobranças
-  apontam artigo e página, é o próximo passo que muda o uso da ferramenta.
 - **Resolver as divergências levantadas pelo cadastro**, que dependem dos Municípios e estão
   listadas mais abaixo. As de Manari são as mais graves.
+- **Declarar as alterações que faltarem** conforme entrarem leis novas: `python tools/vigencia.py
+  --propor` varre o acervo atrás de fórmula de alteração ainda não declarada.
 - O portal de Tacaratu tem mais material não indexado: 12 decretos, 4 relatórios de desonerações e
   renúncias fiscais, a normatização do setor de cadastro, arrecadação e fiscalização (2026), a
   normatização de qualificação de débitos para CDA (2026) e o termo de adesão ao padrão nacional da
@@ -347,12 +347,20 @@ abaixo.
 
 ### O diferencial da ferramenta
 
-**O alerta de vigência.** Como cada cobrança aponta artigo e página, o aplicativo consegue acender
-sozinho toda cobrança ancorada em dispositivo que uma lei nova alterou. Foi exatamente o que
-aconteceu em Ingazeira: a LC nº 004/2017 refez o Título II e a LC nº 007/2024 refez os arts. 311 a
-314. Hoje isso é um aviso escrito à mão em `municipio.json`; com o cadastro amarrado ao artigo,
-passa a ser automático.
+**O alerta de vigência já está de pé.** A relação é declarada em `fontes.json`, no campo `altera`,
+com o documento alvo, os artigos e o escopo; o build a carrega até o corpus e o app cruza com o
+`fundamento` de cada cobrança, acendendo um aviso no cartão. São seis cláusulas declaradas, cada uma
+conferida no texto antes de entrar — e a conferência corrigiu duas anotações antigas: a LC nº
+004/2017 de Ingazeira refez os arts. **121 a 174** (o Título II inteiro), e a LC nº 007/2024 alterou
+**cinco** artigos, 311 a 315, não os quatro que estavam registrados aqui.
 
-Depois disso, na ordem: um **tipo de cartão de percentual** — a CIP de Ingazeira é a candidata, e
+O alerta **não acende em nenhum município hoje**, e isso está certo: toda cobrança cujo artigo mudou
+já aponta para a lei nova. Como lógica que nunca dispara é lógica não testada,
+`tests/vigencia.test.mjs` carrega a função real num sandbox e monta a situação à mão.
+
+`tools/vigencia.py --propor` acha fórmula de alteração ainda não declarada; `--auditar` mostra o que
+acenderia hoje. Rode o primeiro sempre que entrar lei nova no acervo.
+
+O que falta, na ordem: um **tipo de cartão de percentual** — a CIP de Ingazeira é a candidata, e
 `renderGrupos` ainda só sabe exibir UFM ou reais; e a **calculadora a partir do cadastro**, para que
 a cobrança em faixas responda "para 180 kWh/mês, é tanto".
