@@ -379,6 +379,14 @@
   {
    "tipo": "vigencia",
    "texto": "A versão do Código aqui indexada é a consolidada até a <strong>LC nº 049/2021</strong>. A <strong>LC nº 073/2026</strong>, de 14 de agosto de 2026, deu nova redação aos arts. 315 e 317 e está indexada em separado — consulte-a antes de aplicar as regras da CIP."
+  },
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>O IPTU de R$ 30,00 do CadÚnico valeu apenas para 2025.</strong> A <strong>LC nº 065/2025</strong> fixou esse valor \"para o exercício financeiro de 2025\", com quatro requisitos cumulativos — CadÚnico com elegibilidade a algum benefício, renda familiar per capita de até meio salário mínimo, imóvel residencial urbano <em>sem cadastro imobiliário regular anterior a 2025</em>, e cadastramento no Setor de Tributos dentro do prazo. Sem lei que o prorrogue, não há valor fixo em 2026 e o IPTU volta à regra do art. 139. Confirme com o Município antes de lançar."
+  },
+  {
+   "tipo": "nota",
+   "texto": "<strong>Todas as treze tabelas estão em UFM</strong>, e o acervo não traz o decreto que fixa a unidade. O <strong>art. 396</strong> institui a UFM e o <strong>art. 64, § 1º</strong> a usa também para atualizar o crédito tributário — de modo que ela comanda tanto o valor da taxa quanto a correção da dívida. Informe a UFM do exercício no painel para ver os montantes em reais."
   }
  ],
  "rotulos": {
