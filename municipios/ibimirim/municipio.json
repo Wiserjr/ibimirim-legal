@@ -165,7 +165,7 @@
   "titulo": "Taxas de licença",
   "resumo": "Separe funcionamento de construção e consulte a faixa correta.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>Atenção:</strong> consulta orientativa baseada na Lei Complementar nº 004/2025 e no comparativo fornecido pela equipe. “Valor estimado” é a aplicação matemática do texto da tabela, não lançamento tributário. Confirme atualização monetária, enquadramento, isenção e valor final com o Município."
+  "aviso": "<strong>Atenção:</strong> consulta orientativa baseada na Lei Complementar nº 004/2025 e no comparativo fornecido pela equipe. “Valor estimado” é a aplicação matemática do texto da tabela, não lançamento tributário. Confirme atualização monetária, enquadramento, isenção e valor final com o Município. <strong>Os valores dos Anexos são base 2024</strong>: o art. 419 manda reajustá-los pelo IPCA a partir do exercício de 2026 — confirme com o Município se o ato de atualização foi publicado."
  },
  "ufm": {
   "regra": "Algumas taxas são fixadas em UFM, não em reais. O Código de 2025 determina que elas continuem cobradas nessa unidade, <strong>conforme o valor atualizado em reais</strong>, até que a lei as converta. Como a UFM muda a cada exercício, informe aqui o valor em vigor — ele passa a valer para todas as consultas do aplicativo.",
@@ -386,5 +386,23 @@
   "atual": "CTM 2025",
   "anterior": "CTM anterior"
  },
- "semFonte": "Origem: planilha comparativa da equipe. O PDF do Código anterior não está na biblioteca, então este valor não tem página citável. Confira o original antes de usar."
+ "semFonte": "Origem: planilha comparativa da equipe. O PDF do Código anterior não está na biblioteca, então este valor não tem página citável. Confira o original antes de usar.",
+ "avisos": [
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>Os valores dos Anexos são de 2024, e 2026 é o primeiro ano de reajuste.</strong> O <strong>art. 419</strong> diz que os valores em reais dos Anexos estão atualizados para o exercício de 2024 e serão reajustados anualmente, <strong>a partir do exercício de 2026</strong>, pela variação acumulada do IPCA/IBGE apurada de novembro do ano anterior a outubro do ano em curso. Os números exibidos aqui são os do Anexo, isto é, base 2024. Antes de lançar em 2026, confirme com o Município se o ato de atualização foi publicado."
+  },
+  {
+   "tipo": "vigencia",
+   "texto": "<strong>Os dois decretos do ISS regulamentam uma lei revogada.</strong> O Decreto nº 031/2022 (construção civil) e o Decreto nº 030/2022 (prazos de recolhimento) se ancoram na <strong>Lei nº 629/2008</strong> — que o Código de 2025 revogou expressamente pelo art. 423, § 2º. Os decretos não foram reeditados. As regras materiais podem sobreviver enquanto compatíveis com o Código novo, mas <strong>toda remissão a artigo neles aponta para dispositivo inexistente</strong>, e a Lista de Serviços passou a ser o Anexo II, referida pelo art. 160. Antes de autuar com base nesses decretos, submeta a questão à assessoria jurídica."
+  },
+  {
+   "tipo": "nota",
+   "texto": "<strong>Uma única cobrança de Ibimirim está em UFM</strong> — a taxa de licença das torres, antenas e placas de energia solar da Lei nº 793/2018, na redação da Lei nº 988/2025: 5.000 UFM por torre, 1.000 UFM por antena e 0,35 UFM por m² de placa solar, com teto de R$ 100.000,00 por alvará. O <strong>art. 420</strong> do Código manda que os valores fixados em leis específicas em UFM continuem nessa unidade até que a lei os converta. <strong>O acervo não traz o ato que fixa a UFM do exercício</strong>, e sem ele essa taxa não converte em reais."
+  },
+  {
+   "tipo": "nota",
+   "texto": "O texto do Código de 2025 vem de <strong>documento digitalizado</strong>: o reconhecimento óptico erra acentuação, junta palavras e corrompe números. Isso não atrapalha a busca, que ignora acentos, mas <strong>atrapalha a leitura de valor</strong> — em especial no Anexo I, o da Planta de Valores do IPTU, onde os números não foram transcritos justamente por isso. Confira o valor na imagem da página citada antes de lançar."
+  }
+ ]
 }

@@ -1,0 +1,791 @@
+{
+ "sobre": "Cadastro de cobranças do município. As tabelas de taxa já estavam extraídas e vivem no fees.js, com busca por item; o que este cadastro acrescenta é a camada que elas não têm — de quem se cobra, quando, e com que fundamento. Os anexos do Código de 2025 estão em REAIS; a exceção é a taxa das torres, antenas e placas solares da Lei nº 793/2018, que está em UFM. ATENÇÃO AO EXERCÍCIO: o art. 419 diz que os valores dos Anexos estão atualizados para 2024 e serão reajustados pelo IPCA a partir de 2026 — os números publicados são base 2024. A CIP ficou de fora de propósito: vem na fatura da concessionária e não é lançada no sistema de tributos. O texto do Código de 2025 é digitalizado e o reconhecimento óptico erra; as alíquotas citadas aqui vêm de trechos em que a lei escreve o número em algarismo E por extenso, o que permite conferir uma coisa contra a outra.",
+ "atualizado": "2026-08-20",
+ "cobrancas": [
+  {
+   "id": "atualizacao-anexos-ipca",
+   "tributo": "Atualização",
+   "rotulo": "Atualização dos valores dos Anexos — art. 419",
+   "fatoGerador": "Não é cobrança: é a regra que diz a que exercício pertencem os valores de todos os anexos.",
+   "sujeitoPassivo": "—",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Os valores em reais dos Anexos estão atualizados para o exercício de 2024. A partir do exercício de 2026 são reajustados anualmente pela variação acumulada do IPCA/IBGE, apurada de novembro do ano anterior a outubro do ano em curso, com aplicação a partir de janeiro do ano seguinte."
+   },
+   "periodicidade": "anual",
+   "vencimento": "—",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 192,
+     "artigo": "art. 419"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "LEIA ISTO ANTES DE LANÇAR QUALQUER TAXA. Os números que aparecem na tabela de taxas do aplicativo são os do Anexo, e o Anexo é base 2024. O primeiro reajuste é o do exercício de 2026 — apurado sobre o IPCA de novembro de 2024 a outubro de 2025 e aplicado a partir de janeiro de 2026. Se o Município não publicou o ato de atualização, é isso que falta para os valores de 2026 estarem corretos. O § 1º prevê índice substituto em caso de extinção do IPCA.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "iptu-aliquotas",
+   "tributo": "IPTU",
+   "rotulo": "IPTU — alíquotas sobre o valor venal",
+   "fatoGerador": "Propriedade, domínio útil ou posse de imóvel predial ou territorial na zona urbana.",
+   "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor a qualquer título.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "percentual",
+    "sobre": "o valor venal do imóvel",
+    "itens": [
+     {
+      "rotulo": "Imóvel edificado residencial",
+      "valor": 1,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Imóvel edificado não residencial",
+      "valor": 1.5,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Imóvel não edificado",
+      "valor": 1.5,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Imóvel não edificado que não possua muro e calçada",
+      "valor": 2,
+      "periodicidade": "Anual"
+     }
+    ]
+   },
+   "periodicidade": "anual",
+   "vencimento": "Lançamento anual.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 36,
+     "artigo": "art. 91"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 38,
+     "artigo": "art. 92, § 9º"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "A alíquota de 2% do imóvel não edificado sem muro e calçada não é penalidade nem acréscimo: SUBSTITUI a de 1,5% enquanto durar a situação, e volta a 1,5% quando o muro e a calçada existirem. O § 10 do art. 92 restringe a obrigatoriedade de construir calçada a certos imóveis — leia o parágrafo antes de aplicar os 2%. O art. 91, § 1º define, para efeito das alíquotas, o que são edificação, terreno, habitação uni e multifamiliar, uso residencial, não residencial e misto, e condomínio: o USO MISTO tem definição própria (englobando mais de um uso, um deles obrigatoriamente residencial) e não está entre as alíquotas do caput — decidir o enquadramento do misto exige lei ou ato normativo, não pode ser escolha do lançador.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "iptu-base-de-calculo-planta-de-valores",
+   "tributo": "IPTU",
+   "rotulo": "IPTU — base de cálculo: Planta de Valores e fatores de correção (Anexo I)",
+   "fatoGerador": "Não é alíquota: é como se apura o valor venal sobre o qual as alíquotas incidem.",
+   "sujeitoPassivo": "—",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Valor venal = valor do terreno + valor da construção. O terreno sai da Tabela I, que dá o valor do metro quadrado por Zona de Terreno (ZT), corrigido pelos fatores da Tabela II — situação na quadra, topografia e pedologia. A construção sai da Tabela III, por tipo e padrão construtivo, corrigida pelos fatores da Tabela IV, entre eles o estado de conservação."
+   },
+   "periodicidade": "anual",
+   "vencimento": "—",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 194,
+     "artigo": "Anexo I, Tabelas I e II"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 195,
+     "artigo": "Anexo I, Tabela II — pedologia"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 196,
+     "artigo": "Anexo I, Tabelas III e IV"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 197,
+     "artigo": "Anexo I, Tabela IV — estado de conservação"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "OS NÚMEROS NÃO FORAM TRANSCRITOS AQUI DE PROPÓSITO. O Anexo I é a parte do Código em que o reconhecimento óptico mais erra — na mesma linha aparecem \"13, 4\", \"1~TT\" e \"144 81\" onde deveria haver um valor com vírgula. Transcrever isso seria inventar. O que está registrado é a ESTRUTURA, que o reconhecimento não corrompe: onze Zonas de Terreno na Tabela I, com valor do metro quadrado crescente; fatores de correção de terreno na Tabela II (meio de quadra 1,0 e esquina 1,10 na situação na quadra; e uma escala de pedologia em que normal e arenoso valem 1,00, rochoso 0,80, e alagado, alagável, mangue, duna e área de risco valem 0,60); valores de construção por tipo e padrão na Tabela III, em quatro colunas de padrão decrescente; e fatores de construção na Tabela IV, com quatro estados de conservação — ótimo, bom, regular e mal conservado. PARA LANÇAR, abra as páginas 194 a 197 no leitor e leia o número na imagem. Estes valores são base 2024, como os demais anexos, e a mudança de critério que eles introduzem é justamente a que dispara o teto de aumento do art. 90 — ver a cobrança do teto.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "iptu-progressividade-funcao-social",
+   "tributo": "IPTU",
+   "rotulo": "IPTU progressivo no tempo — imóvel que não cumpre a função social",
+   "fatoGerador": "Imóvel urbano não edificado, subutilizado ou não utilizado que não cumpra sua função social.",
+   "sujeitoPassivo": "Proprietário, titular do domínio útil ou possuidor.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Alíquotas progressivas no tempo, até o limite de 15% do valor venal, na forma do art. 182 da Constituição Federal e do Plano Diretor do Município."
+   },
+   "periodicidade": "anual",
+   "vencimento": "Lançamento anual, após identificação do imóvel e na forma do Plano Diretor.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 38,
+     "artigo": "art. 92"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 39,
+     "artigo": "art. 92, §§ 1º e 2º"
+    },
+    {
+     "doc": "lc-01-2019",
+     "pagina": 1,
+     "artigo": "Plano Diretor"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "NÃO É AUTOMÁTICO. O § 1º condiciona a progressividade a duas coisas: identificar formalmente os imóveis que não cumprem a função social, e aplicar as alíquotas CONFORME DISPOSTO NO PLANO DIRETOR. Sem a notificação prévia para parcelamento, edificação ou utilização compulsórios exigida pelo art. 182 da Constituição e pelo Estatuto da Cidade, a progressividade no tempo é indevida — o Código pressupõe esse rito, não o dispensa. Não confundir com os 2% do imóvel sem muro e calçada, que é outra hipótese e não é progressiva.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "iptu-transicao-base-calculo",
+   "tributo": "IPTU",
+   "rotulo": "IPTU — teto de aumento na mudança da base de cálculo",
+   "fatoGerador": "Não é cobrança: é o limite ao aumento decorrente dos novos critérios de apuração do valor venal.",
+   "sujeitoPassivo": "—",
+   "base": {
+    "tipo": "formula",
+    "descricao": "O aumento não pode passar de 50% do valor atualmente devido, imóvel a imóvel, e é implementado de forma escalonada, no máximo 10% ao ano, até atingir o total apurado ou o teto de 50%."
+   },
+   "periodicidade": "anual",
+   "vencimento": "—",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 36,
+     "artigo": "art. 90, §§ 1º a 4º"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "É a regra que evita o susto na primeira guia sob o Código novo, e é fácil de aplicar errado. Três detalhes: o teto é POR IMÓVEL individualmente considerado, não pela média do cadastro; \"valor atualmente devido\" é o IPTU lançado e cobrado no exercício imediatamente anterior à implementação dos novos critérios; e o escalonamento de 10% ao ano incide EXCLUSIVAMENTE sobre a parcela de aumento, que se soma ao valor anterior para achar a cobrança do ano. A ressalva do § 1º afasta o teto quando ficar comprovado que o valor vinha sendo cobrado em desacordo com a Lei nº 629/2008 — comprovado, não presumido.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "itbi-aliquota",
+   "tributo": "ITBI",
+   "rotulo": "ITBI — alíquota de 2%",
+   "fatoGerador": "Transmissão inter vivos, a qualquer título, por ato oneroso, de bens imóveis e de direitos reais sobre imóveis, exceto os de garantia, e a cessão de direitos à sua aquisição.",
+   "sujeitoPassivo": "O adquirente. No usufruto e na substituição de fideicomisso, pagam o proprietário, o fiduciário e o fideicomissário, na forma do art. 126.",
+   "base": {
+    "tipo": "percentual",
+    "percentual": 2,
+    "sobre": "o valor venal dos bens ou direitos transmitidos"
+   },
+   "periodicidade": "por ato",
+   "vencimento": "Antes da lavratura do instrumento de transmissão.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 56,
+     "artigo": "art. 125"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 56,
+     "artigo": "art. 126"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "Alíquota única de 2%, sem as distinções de SFH e de gleba rural que outros Códigos da região trazem. O art. 126 resolve quem paga nas figuras do usufruto e do fideicomisso, que são justamente as que geram dúvida no cartório.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "itbi-incentivo-minha-casa-minha-vida",
+   "tributo": "ITBI",
+   "rotulo": "ITBI — incentivo fiscal ao beneficiário do Minha Casa Minha Vida",
+   "fatoGerador": "Aquisição de imóvel por pessoa natural beneficiária do PMCMV, observadas as faixas de renda bruta familiar mensal definidas na Lei.",
+   "sujeitoPassivo": "O adquirente beneficiário do programa.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Incentivo fiscal sobre o ITBI, graduado pelas faixas de renda bruta familiar mensal definidas na própria Lei nº 932/2024."
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato da aquisição, com o incentivo já aplicado.",
+   "fundamento": [
+    {
+     "doc": "lei-932-2024",
+     "pagina": 1,
+     "artigo": "art. 1º"
+    },
+    {
+     "doc": "lei-932-2024",
+     "pagina": 2,
+     "artigo": "faixas de renda"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "O benefício NÃO se limita ao Minha Casa Minha Vida: o art. 1º estende expressamente o incentivo aos programas habitacionais federais que vierem a suceder ou substituir o PMCMV. Confira as faixas de renda e o percentual de cada uma na página 2 antes de aplicar — o texto reconhecido dessa lei vem com as palavras coladas e não serve para citação literal. Ver também a Lei nº 963/2025, de incentivos fiscais à habitação social, que pode alcançar o mesmo contribuinte.",
+   "vigencia": {
+    "de": "2024",
+    "ate": null
+   }
+  },
+  {
+   "id": "iss-aliquota",
+   "tributo": "ISS",
+   "rotulo": "ISSQN — alíquota da Lista de Serviços do Anexo II",
+   "fatoGerador": "Prestação dos serviços constantes da Lista de Serviços do Anexo II do Código.",
+   "sujeitoPassivo": "O prestador do serviço, e o tomador nas hipóteses de retenção.",
+   "base": {
+    "tipo": "percentual",
+    "percentual": 5,
+    "sobre": "o preço do serviço"
+   },
+   "periodicidade": "mensal",
+   "vencimento": "Na forma do Decreto nº 030/2022, com a ressalva registrada naquela cobrança.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 72,
+     "artigo": "art. 160"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 198,
+     "artigo": "Anexo II — Lista de Serviços"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 205,
+     "artigo": "Anexo II — Lista de Serviços"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "NÃO HÁ SERVIÇO COM ALÍQUOTA REDUZIDA EM IBIMIRIM. O art. 160 manda buscar a alíquota de cada serviço na Lista do Anexo II, e as 147 células de alíquota da Lista trazem todas o mesmo 5,0%. Na prática, ISS é 5% para qualquer item da lista. O inciso I do art. 160 registra o piso de 2% da Emenda Constitucional nº 37/2002 e o teto de 5% da Lei Complementar nº 116/2003, mas o Município adotou o teto em todos os itens. Se a equipe encontrar na Lista algum item com percentual diferente, é divergência a confirmar na publicação oficial.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "iss-construcao-civil-regulamento",
+   "tributo": "ISS",
+   "rotulo": "ISSQN da construção civil e obras de engenharia — Decreto nº 031/2022",
+   "fatoGerador": "Prestação dos serviços de construção civil e demais obras e serviços de engenharia.",
+   "sujeitoPassivo": "O prestador do serviço de construção civil.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Regulamento de 39 páginas: conceitos no Anexo I, regras de dedução de material, apuração por obra e obrigações acessórias."
+   },
+   "periodicidade": "por obra",
+   "vencimento": "Na forma do regulamento.",
+   "fundamento": [
+    {
+     "doc": "dec-31-2022",
+     "pagina": 1,
+     "artigo": "art. 1º"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 192,
+     "artigo": "art. 423"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 193,
+     "artigo": "art. 423, § 2º — revogação da Lei nº 629/2008"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "ATENÇÃO — O DECRETO REGULAMENTA LEI REVOGADA. O art. 1º diz regulamentar o ISS do item 7 da Lista de Serviços \"estabelecida no art. 66 da Lei nº 629, de 30 de outubro de 2008\". Essa Lei foi EXPRESSAMENTE REVOGADA pelo Código de 2025 (art. 423, § 2º, p. 192-193), e a Lista de Serviços passou a ser o Anexo II, referida pelo art. 160. O Decreto não foi reeditado. Isso não o torna automaticamente sem efeito — as regras materiais podem sobreviver enquanto compatíveis com o Código novo —, mas TODAS as remissões a artigo dele apontam para dispositivo inexistente. Antes de autuar com base neste Decreto, submeta a questão à assessoria jurídica: é caso de reedição, não de interpretação do balcão.",
+   "vigencia": {
+    "de": "2022",
+    "ate": null
+   }
+  },
+  {
+   "id": "iss-prazos-recolhimento",
+   "tributo": "ISS",
+   "rotulo": "ISSQN — prazos de recolhimento — Decreto nº 030/2022",
+   "fatoGerador": "Não é cobrança: fixa o vencimento do ISS.",
+   "sujeitoPassivo": "O contribuinte ou responsável pelo recolhimento.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Regras de vencimento para o recolhimento do ISSQN nas hipóteses que eram as dos arts. 88 a 91 da Lei nº 629/2008. Não se aplica ao ISS da construção civil, que tem regulamento próprio."
+   },
+   "periodicidade": "mensal",
+   "vencimento": "Conforme o Decreto.",
+   "fundamento": [
+    {
+     "doc": "dec-30-2022",
+     "pagina": 1,
+     "artigo": "art. 1º"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 192,
+     "artigo": "art. 423"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 193,
+     "artigo": "art. 423, § 2º — revogação da Lei nº 629/2008"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "MESMA RESSALVA DO DECRETO Nº 031/2022: este Decreto se ancora nos arts. 88 a 91 da Lei nº 629/2008, revogada pelo Código de 2025. O parágrafo único exclui expressamente do seu alcance o ISS da construção civil. Como o vencimento é o que dispara multa e juros, e como a base legal citada não existe mais, confirmar com a Fazenda Municipal qual prazo está em vigor antes de aplicar penalidade por atraso.",
+   "vigencia": {
+    "de": "2022",
+    "ate": null
+   }
+  },
+  {
+   "id": "contribuicao-melhoria",
+   "tributo": "Contribuição de melhoria",
+   "rotulo": "Contribuição de melhoria — obras públicas que valorizam o imóvel",
+   "fatoGerador": "Valorização de imóvel resultante da execução de obra pública que constitua benefício de saneamento, urbanização, habitabilidade ou outro.",
+   "sujeitoPassivo": "O proprietário do imóvel valorizado pela obra.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "O art. 240 lista as obras que geram incidência — abertura e alargamento de vias, entre outras. O valor tem dois limites: o total é a despesa da obra, e o individual é o acréscimo de valor que a obra trouxe ao imóvel."
+   },
+   "periodicidade": "por obra",
+   "vencimento": "Após a conclusão da obra e o rito de publicação e impugnação.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 121,
+     "artigo": "art. 239 e art. 240"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 122,
+     "artigo": "Capítulo VI"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 123,
+     "artigo": "Capítulo VI"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "É o tributo mais raramente cobrado e o mais facilmente anulado. Não basta ter feito a obra: exige edital prévio com memorial descritivo, orçamento, delimitação da zona beneficiada e prazo de impugnação, e exige demonstrar a valorização IMÓVEL A IMÓVEL. Cobrar por rateio simples do custo da obra, sem provar acréscimo de valor em cada um, é o erro clássico. Leia as páginas 121 a 124 inteiras antes de instaurar o procedimento.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-poder-de-policia-regra-geral",
+   "tributo": "Taxa",
+   "rotulo": "Taxas pelo exercício do poder de polícia — regra geral",
+   "fatoGerador": "Atuação dos órgãos competentes do Poder Executivo que exercem o poder de polícia no cumprimento da legislação no território do Município, em atividades permanentes.",
+   "sujeitoPassivo": "A pessoa física ou jurídica sujeita à fiscalização.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Cada espécie tem sua tabela no Anexo IV. O art. 257 dá o fato gerador comum a todas e define poder de polícia."
+   },
+   "periodicidade": "anual",
+   "vencimento": "O Chefe do Poder Executivo fixa, para cada exercício, o número de parcelas e os respectivos vencimentos das taxas de poder de polícia e de serviços públicos cujo período de incidência seja anual ou semestral (art. 421).",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 126,
+     "artigo": "art. 257"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 192,
+     "artigo": "art. 421"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "É o artigo a citar quando o contribuinte alega que não houve fiscalização efetiva. O art. 257 ancora a taxa na ATIVIDADE PERMANENTE do órgão, não na visita individual — mas essa atividade precisa existir de fato, com órgão constituído e em funcionamento. O caput alcança expressamente a vigilância sanitária dos estabelecimentos situados no Município. QUEM DEFINE O PARCELAMENTO É O EXECUTIVO, POR EXERCÍCIO: o art. 421 dá essa competência ao Chefe do Poder Executivo, e ela alcança as taxas de período anual ou semestral das atividades econômicas, com ou sem fins lucrativos, consideradas permanentes. Sem o ato do exercício, não há número de parcelas a oferecer no balcão. E o art. 422 fecha uma dúvida recorrente: as reduções de multa previstas no Código NÃO SÃO CUMULATIVAS — aplica-se, em cada caso, a de maior valor.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-localizacao-funcionamento",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de localização e funcionamento — Anexo IV, Tabela I",
+   "fatoGerador": "Fiscalização da localização e do funcionamento de estabelecimento no território do Município.",
+   "sujeitoPassivo": "O titular do estabelecimento.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela I do Anexo IV, com 15 linhas, em reais. Os valores estão na aba de taxas do aplicativo, com busca por item."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No licenciamento e na renovação anual.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 131,
+     "artigo": "art. 267"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 209,
+     "artigo": "Anexo IV, Tabela I"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "Valores base 2024 — ver a cobrança da atualização pelo IPCA. Não confundir com a taxa de licença das torres, antenas e placas solares, que tem lei própria e está em UFM.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-maquinas-motores",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização pela utilização de máquinas e motores — Anexo IV, Tabela II",
+   "fatoGerador": "Fiscalização da instalação e utilização de máquinas e motores.",
+   "sujeitoPassivo": "O titular do estabelecimento onde a máquina ou motor está instalado.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela II do Anexo IV, com 14 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "anual",
+   "vencimento": "No licenciamento e na renovação anual.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 209,
+     "artigo": "Anexo IV, Tabela II"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "Valores base 2024. É taxa distinta da de localização e funcionamento: o mesmo estabelecimento pode gerar as duas.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-publicidade",
+   "tributo": "Taxa",
+   "rotulo": "Taxa pela utilização de meios de publicidade — Anexo IV, Tabela III",
+   "fatoGerador": "Utilização ou exploração de meios de publicidade.",
+   "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela III do Anexo IV, com 27 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "varia por item",
+   "vencimento": "No licenciamento e na renovação.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 210,
+     "artigo": "Anexo IV, Tabela III"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 211,
+     "artigo": "Anexo IV, Tabela III"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "Valores base 2024. Confira a periodicidade item a item na tabela: em anexos deste tipo ela costuma variar entre diária, mensal e anual dentro da mesma tabela, e lançar tudo como anual erra a conta.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-obras-engenharia",
+   "tributo": "Taxa",
+   "rotulo": "Taxas pela execução de obras e serviços de engenharia — Anexo IV, Tabela IV",
+   "fatoGerador": "Execução de obras e serviços de engenharia, e análise prévia e aprovação de plantas e projetos.",
+   "sujeitoPassivo": "O responsável pela obra, na forma do art. 272.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela IV do Anexo IV, a maior do Código, com 148 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "por obra",
+   "vencimento": "No licenciamento, antes do início da obra.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 134,
+     "artigo": "art. 272"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 211,
+     "artigo": "Anexo IV, Tabela IV"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 212,
+     "artigo": "Anexo IV, Tabela IV"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 213,
+     "artigo": "Anexo IV, Tabela IV"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "O art. 272 é explícito em que a taxa de obra NÃO PREJUDICA outras taxas incidentes — a mesma obra costuma gerar a de análise de projeto, a de execução e a de habite-se. Valores base 2024.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-comercio-eventual-ambulante",
+   "tributo": "Taxa",
+   "rotulo": "Taxa pelo exercício de comércio ou atividade eventual e ambulante — Anexo IV, Tabela V",
+   "fatoGerador": "Exercício de comércio ou atividade eventual ou ambulante.",
+   "sujeitoPassivo": "O ambulante ou quem exercer a atividade eventual.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela V do Anexo IV, com 15 linhas, em reais. Há ainda uma tabela de atividades eventuais, provisórias ou esporádicas no corpo da lei, com 21 linhas."
+   },
+   "periodicidade": "por dia, mês ou evento",
+   "vencimento": "No licenciamento, antes do início da atividade.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 214,
+     "artigo": "Anexo IV, Tabela V"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 150,
+     "artigo": "Tabela de atividades eventuais, no corpo da lei"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "SÃO DUAS TABELAS, e é preciso saber qual usar. A Tabela V do Anexo IV trata do comércio eventual e ambulante; a tabela do corpo da lei, na página 150, trata das atividades eventuais, provisórias ou esporádicas. Valores base 2024.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-ocupacao-vias",
+   "tributo": "Taxa",
+   "rotulo": "Taxa pela ocupação de áreas em vias e logradouros públicos — Anexo IV, itens 10 a 14",
+   "fatoGerador": "Ocupação de área em via ou logradouro público.",
+   "sujeitoPassivo": "Quem ocupar a área.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Itens 10 a 14 do Anexo IV, com 12 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "varia por item",
+   "vencimento": "No licenciamento da ocupação. É obrigatória a inscrição prévia na repartição competente.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 147,
+     "artigo": "art. 293"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 214,
+     "artigo": "Anexo IV, itens 10 a 14"
+    }
+   ],
+   "conferencia": "revisar",
+   "nota": "PENDÊNCIA CONHECIDA: a seção de ocupação de vias do quadro comparativo diverge do texto do Código publicado. Enquanto o Município não esclarece, confira o valor na imagem da página 214 antes de lançar. O artigo anterior ao 293 registra que a autorização especial NÃO DISPENSA o pagamento da taxa — é o dispositivo a citar quando o ocupante apresenta autorização e alega isenção.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-vigilancia-sanitaria",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de vigilância sanitária — Anexo IV",
+   "fatoGerador": "Atividades permanentes de vigilância sanitária relativamente aos estabelecimentos situados no Município.",
+   "sujeitoPassivo": "O titular do estabelecimento sujeito à vigilância sanitária.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela de vigilância sanitária do Anexo IV, com 118 linhas por tipo de estabelecimento, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "anual",
+   "vencimento": "Anual.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 126,
+     "artigo": "art. 257"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 215,
+     "artigo": "Anexo IV, vigilância sanitária"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 216,
+     "artigo": "Anexo IV, vigilância sanitária"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "É a segunda maior tabela do Código, com 118 tipos de estabelecimento. O fato gerador vem do art. 257, que alcança a vigilância sanitária expressamente. Valores base 2024.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-residuos-solidos",
+   "tributo": "Taxa",
+   "rotulo": "TRSD — taxa de coleta, remoção e destinação de resíduos sólidos domiciliares — Anexo V, Tabela I",
+   "fatoGerador": "Utilização, efetiva ou potencial, dos serviços municipais divisíveis de coleta, transporte, tratamento e destinação final de resíduos sólidos domiciliares.",
+   "sujeitoPassivo": "O proprietário, titular do domínio útil ou possuidor do imóvel alcançado pelo serviço.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela I do Anexo V, com 3 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "anual",
+   "vencimento": "Anual, podendo ser lançada junto com o IPTU.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 152,
+     "artigo": "art. 305"
+    },
+    {
+     "doc": "ctm-2025",
+     "pagina": 217,
+     "artigo": "Anexo V, Tabela I"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "A expressão \"efetiva OU POTENCIAL\" do art. 305 é o que sustenta a cobrança de quem não põe lixo na rua mas está em via atendida pela coleta. O que ela não sustenta é cobrar de imóvel em via onde o serviço não passa: aí não há utilização nem potencial. Valores base 2024.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-guarda-abate-animais",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de guarda, abate e remoção de animais — Anexo V",
+   "fatoGerador": "Prestação dos serviços de guarda, abate e remoção de animais.",
+   "sujeitoPassivo": "O proprietário do animal ou quem requerer o serviço.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Tabela de guarda e abate do Anexo V, com 8 linhas, em reais. Valores na aba de taxas."
+   },
+   "periodicidade": "por ato",
+   "vencimento": "No ato da prestação do serviço ou da liberação do animal.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 217,
+     "artigo": "Anexo V, guarda e abate"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "Valores base 2024.",
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-torres-antenas-placas-solares",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de fiscalização de licença para funcionamento de torres, antenas e placas de energia solar",
+   "fatoGerador": "Funcionamento de torre eólica, de telefonia fixa e móvel, de antena de telefonia e de televisão, e de placa de energia solar.",
+   "sujeitoPassivo": "O titular do alvará de funcionamento do equipamento.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     {
+      "rotulo": "Torre, por unidade",
+      "valor": 5000,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Antena, por unidade",
+      "valor": 1000,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Placa de energia solar, por m²",
+      "valor": 0.35,
+      "periodicidade": "Anual"
+     }
+    ]
+   },
+   "periodicidade": "anual",
+   "vencimento": "Anual, com o alvará de funcionamento.",
+   "fundamento": [
+    {
+     "doc": "ctm-2025",
+     "pagina": 192,
+     "artigo": "art. 420"
+    },
+    {
+     "doc": "lei-793-2018",
+     "pagina": 1,
+     "artigo": "art. 1º"
+    },
+    {
+     "doc": "lei-988-2025",
+     "pagina": 1,
+     "artigo": "art. 2º, na redação dada pela Lei nº 988/2025"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "BASE LEGAL DE CONTINUAR EM UFM: o art. 420 do Código de 2025 diz que os valores fixados em leis específicas em UFM CONTINUAM a ser cobrados nessa unidade, pelo seu valor atualizado em reais, até que a lei os converta em moeda corrente. É o que mantém esta taxa fora da regra geral do art. 419, que trata dos valores em reais dos Anexos. A ÚNICA COBRANÇA DE IBIMIRIM EM UFM — todo o resto do Código está em reais. Sem o ato que fixa a UFM do exercício, esta taxa não converte: é a pendência mais antiga do município. TETO POR ALVARÁ: o parágrafo único limita o total a R$ 100.000,00 por alvará, e esse teto é em reais, não em UFM — com 5.000 UFM por torre, o teto é atingido rápido em parque eólico. VIGÊNCIA: os valores novos produzem efeitos a partir de 1º de janeiro de 2026; antes disso valiam os da redação original da Lei nº 793/2018. DEFEITO DE NUMERAÇÃO: a Lei nº 988/2025 tem DOIS artigos numerados 2º — o que dá a nova redação e o de vigência, que deveria ser o 3º.",
+   "vigencia": {
+    "de": "2026",
+    "ate": null
+   }
+  },
+  {
+   "id": "doacoes-no-dam-do-iptu-e-do-iss",
+   "tributo": "Doação",
+   "rotulo": "Doações ao Conselho Municipal dos Direitos da Criança e do Adolescente, no DAM do IPTU e do ISS",
+   "fatoGerador": "Não é tributo: é doação voluntária arrecadada junto com o tributo.",
+   "sujeitoPassivo": "Pessoas naturais e jurídicas doadoras, por adesão voluntária.",
+   "base": {
+    "tipo": "formula",
+    "descricao": "Valor livre, escolhido pelo doador. É arrecadado pelos documentos de arrecadação municipal, no ato do recolhimento do IPTU e do ISS."
+   },
+   "periodicidade": "por recolhimento",
+   "vencimento": "Junto com o IPTU ou o ISS a que o documento se refere.",
+   "fundamento": [
+    {
+     "doc": "lei-925-2024",
+     "pagina": 1,
+     "artigo": "art. 1º e art. 2º"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "NÃO É TRIBUTO E NÃO PODE SER TRATADO COMO TAL: é doação voluntária que trafega pelo mesmo DAM. Não gera dívida ativa, não gera multa nem juros por não pagamento, e a recusa em doar não pode impedir a quitação do IPTU ou do ISS. O destino é vinculado ao Conselho Municipal dos Direitos da Criança e do Adolescente, na forma da Lei Municipal nº 887/2023, e o repasse deve ser feito tão logo os valores sejam recebidos. Configurar isso no sistema de tributos como campo opcional, nunca como acréscimo ao valor devido.",
+   "vigencia": {
+    "de": "2024",
+    "ate": null
+   }
+  }
+ ]
+}
