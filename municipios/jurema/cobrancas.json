@@ -15,12 +15,23 @@
    "periodicidade": "anual",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 133, "artigo": "art. 398 e art. 399" },
-    { "doc": "ctm-255-2007", "pagina": 9, "artigo": "Decreto 003/2013 — memória de cálculo" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 133,
+     "artigo": "art. 398 e art. 399"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 9,
+     "artigo": "Decreto 003/2013 — memória de cálculo"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DIVERGÊNCIA ENTRE A LEI E O ATO: o art. 399 manda usar IPCA, mas a memória de cálculo que acompanha o Decreto 003/2013 (página 9) atualizou R$ 1,00 de 13/08/2007 para 23/01/2013 pelo IGP-M, com fator 1,441671, chegando a R$ 1,44. Foi esse R$ 1,44 que gerou todos os valores das Tabelas IV a XIII do Decreto. Antes de aplicar índice novo, decidir qual dos dois vale — o Código diz IPCA. Desde 2013 não há notícia de nova atualização no acervo: se a UFM não foi atualizada desde então, as Tabelas I, II e III seguem valendo R$ 1,00 por UFM.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iptu-aliquotas",
@@ -33,20 +44,43 @@
     "unidade": "percentual",
     "sobre": "o valor venal do imóvel",
     "itens": [
-     { "rotulo": "Terreno", "valor": 2, "periodicidade": "Anual" },
-     { "rotulo": "Prédio ou unidade imobiliária autônoma", "valor": 1, "periodicidade": "Anual" }
+     {
+      "rotulo": "Terreno",
+      "valor": 2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prédio ou unidade imobiliária autônoma",
+      "valor": 1,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Lançamento anual, na forma e nos prazos fixados pelo Executivo.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 48, "artigo": "art. 131" },
-    { "doc": "ctm-255-2007", "pagina": 50, "artigo": "art. 135" },
-    { "doc": "ctm-255-2007", "pagina": 50, "artigo": "art. 136" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 48,
+     "artigo": "art. 131"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 50,
+     "artigo": "art. 135"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 50,
+     "artigo": "art. 136"
+    }
    ],
    "conferencia": "conferido",
    "nota": "ACRÉSCIMO NA ALÍQUOTA, não no imposto: o § 1º manda acrescer 20% À ALÍQUOTA APLICADA quando o imóvel fica em via com asfalto e calçamento e não tem muro e passeio público. Sobre terreno, portanto, a alíquota passa de 2% para 2,4% — e não o imposto de 100 para 120. O § 2º remete a alíquotas próprias para imóvel não edificado, subutilizado ou não utilizado em área do Plano Diretor; conferir o texto do parágrafo antes de aplicar progressividade.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "itbi-aliquotas",
@@ -59,22 +93,53 @@
     "unidade": "percentual",
     "sobre": "o valor, avaliado ou declarado, do imóvel ou direito transmitido",
     "itens": [
-     { "rotulo": "SFH — sobre a parte financiada", "valor": 0.5, "periodicidade": "Por ato" },
-     { "rotulo": "SFH — sobre a parte não financiada", "valor": 2, "periodicidade": "Por ato" },
-     { "rotulo": "Gleba rural de até 10 ha, de assentamento, para cultivo pelo adquirente e sua família, sem outro imóvel rural no Município", "valor": 0.5, "periodicidade": "Por ato" },
-     { "rotulo": "Imóvel em projeto rural especial titularizado, categoria de médio produtor", "valor": 1, "periodicidade": "Por ato" }
+     {
+      "rotulo": "SFH — sobre a parte financiada",
+      "valor": 0.5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "SFH — sobre a parte não financiada",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Gleba rural de até 10 ha, de assentamento, para cultivo pelo adquirente e sua família, sem outro imóvel rural no Município",
+      "valor": 0.5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Imóvel em projeto rural especial titularizado, categoria de médio produtor",
+      "valor": 1,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "Lançamento na forma do art. 163.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 56, "artigo": "art. 154" },
-    { "doc": "ctm-255-2007", "pagina": 59, "artigo": "art. 160" },
-    { "doc": "ctm-255-2007", "pagina": 61, "artigo": "art. 162" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 56,
+     "artigo": "art. 154"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 59,
+     "artigo": "art. 160"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 61,
+     "artigo": "art. 162"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DEFEITO NA LEI — FALTA A ALÍQUOTA DO CASO COMUM. O art. 162 tem três incisos: I (SFH), II (gleba rural de assentamento) e III (projeto rural especial). Não há inciso para a transmissão onerosa comum de imóvel urbano fora do SFH, que é justamente a mais frequente. Não existe alíquota geral nem residual no artigo. Enquanto isso não for corrigido por lei, a compra e venda urbana à vista não tem alíquota no Código de Jurema — não usar por analogia os 2% do inciso I, alínea b, que são da parte não financiada do SFH. O art. 160 dá a base de cálculo (valor dos bens ou direitos transmitidos, no momento da transmissão), e os §§ do artigo seguinte fixam percentuais de base — 70% no fideicomisso e na cessão de usufruto, 40% na concessão real de uso — que são base, não alíquota.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iss-aliquota",
@@ -90,13 +155,28 @@
    "periodicidade": "mensal",
    "vencimento": "Lançamento por homologação, com escrituração e pagamento sob responsabilidade do contribuinte. Retenção na fonte pelo tomador nas hipóteses do art. 197.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 65, "artigo": "art. 178" },
-    { "doc": "ctm-255-2007", "pagina": 82, "artigo": "art. 184" },
-    { "doc": "ctm-255-2007", "pagina": 87, "artigo": "art. 197" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 65,
+     "artigo": "art. 178"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 82,
+     "artigo": "art. 184"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 87,
+     "artigo": "art. 197"
+    }
    ],
    "conferencia": "conferido",
    "nota": "A mesma alíquota de 5% aparece três vezes: no art. 184 (regra geral), no art. 193, parágrafo único (locação de máquinas e aparelhos de diversão, sobre o serviço prestado pelo locatário) e nos arts. 196 e 199 (retenção na fonte). Não há alíquota reduzida no Código: 5% é o teto do art. 8º, II, da LC 116/2003, e o piso de 2% da EC 37/2002 não chega a ser tocado.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iss-autonomo-aliquota-fixa",
@@ -111,12 +191,23 @@
    "periodicidade": "anual",
    "vencimento": "Lançamento de ofício, com base nos dados cadastrais (art. 186, § 1º).",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 83, "artigo": "art. 183" },
-    { "doc": "ctm-255-2007", "pagina": 84, "artigo": "art. 186" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 83,
+     "artigo": "art. 183"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 84,
+     "artigo": "art. 186"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DEFEITO NA LEI — VALOR NÃO FIXADO. O art. 183 diz que a base do autônomo é determinada anualmente \"aplicando-se alíquota fixa\", sem indicar o número e sem remeter a anexo. As Tabelas I a XIII são todas de taxa e de preço público; nenhuma traz ISS fixo. Não dá para lançar o autônomo em Jurema com fundamento no Código como ele está. Cobrar 5% sobre o preço do serviço contraria o próprio art. 183, que afasta a base sobre preço nesse caso.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iss-isencao-autonomo",
@@ -131,11 +222,18 @@
    "periodicidade": "anual",
    "vencimento": "A isenção é solicitada em requerimento, com prova de que o contribuinte preenche os requisitos.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 89, "artigo": "art. 202, III" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 89,
+     "artigo": "art. 202, III"
+    }
    ],
    "conferencia": "revisar",
    "nota": "O texto reconhecido está truncado — lê-se \"entidades de rudimentar fiscal\", provavelmente \"de rudimentar organização fiscal\". A isenção não é automática: depende de requerimento instruído. Conferir o número do artigo na imagem da página 89 antes de citar em despacho.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-coleta-lixo",
@@ -147,35 +245,118 @@
     "tipo": "itens",
     "unidade": "ufm",
     "itens": [
-     { "rotulo": "Residencial — até 50 m²", "valor": 8, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — até 100 m²", "valor": 14, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — até 200 m²", "valor": 28, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — até 300 m²", "valor": 47, "periodicidade": "Anual" },
-     { "rotulo": "Residencial — acima de 300 m²", "valor": 65, "periodicidade": "Anual" },
-     { "rotulo": "Prestação de serviços — até 100 m²", "valor": 16, "periodicidade": "Anual" },
-     { "rotulo": "Prestação de serviços — até 200 m²", "valor": 32, "periodicidade": "Anual" },
-     { "rotulo": "Prestação de serviços — até 300 m²", "valor": 58, "periodicidade": "Anual" },
-     { "rotulo": "Prestação de serviços — acima de 300 m²", "valor": 82, "periodicidade": "Anual" },
-     { "rotulo": "Comercial — até 100 m²", "valor": 20, "periodicidade": "Anual" },
-     { "rotulo": "Comercial — até 200 m²", "valor": 58, "periodicidade": "Anual" },
-     { "rotulo": "Comercial — até 300 m²", "valor": 82, "periodicidade": "Anual" },
-     { "rotulo": "Comercial — acima de 300 m²", "valor": 116, "periodicidade": "Anual" },
-     { "rotulo": "Indústria — até 100 m²", "valor": 58, "periodicidade": "Anual" },
-     { "rotulo": "Indústria — até 200 m²", "valor": 82, "periodicidade": "Anual" },
-     { "rotulo": "Indústria — até 300 m²", "valor": 116, "periodicidade": "Anual" },
-     { "rotulo": "Indústria — acima de 300 m²", "valor": 164, "periodicidade": "Anual" }
+     {
+      "rotulo": "Residencial — até 50 m²",
+      "valor": 8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — até 100 m²",
+      "valor": 14,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — até 200 m²",
+      "valor": 28,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — até 300 m²",
+      "valor": 47,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Residencial — acima de 300 m²",
+      "valor": 65,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prestação de serviços — até 100 m²",
+      "valor": 16,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prestação de serviços — até 200 m²",
+      "valor": 32,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prestação de serviços — até 300 m²",
+      "valor": 58,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prestação de serviços — acima de 300 m²",
+      "valor": 82,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercial — até 100 m²",
+      "valor": 20,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercial — até 200 m²",
+      "valor": 58,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercial — até 300 m²",
+      "valor": 82,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercial — acima de 300 m²",
+      "valor": 116,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústria — até 100 m²",
+      "valor": 58,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústria — até 200 m²",
+      "valor": 82,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústria — até 300 m²",
+      "valor": 116,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Indústria — acima de 300 m²",
+      "valor": 164,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Devida anualmente; lançamento, prazos e forma podem acompanhar os do IPTU.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 93, "artigo": "art. 216 e art. 217" },
-    { "doc": "ctm-255-2007", "pagina": 94, "artigo": "art. 220" },
-    { "doc": "ctm-255-2007", "pagina": 134, "artigo": "Tabela I" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 93,
+     "artigo": "art. 216 e art. 217"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 94,
+     "artigo": "art. 220"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 134,
+     "artigo": "Tabela I"
+    }
    ],
    "conferencia": "conferido",
    "nota": "EM UFM, NÃO EM REAIS — o cabeçalho da tabela é \"UFM / R$ 1,00\". Esta é uma das três tabelas que o Decreto 003/2013 NÃO atualizou. Se a UFM continuar em R$ 1,00, os números acima já são os reais; se for atualizada, multiplicam-se por ela. ESCALONAMENTO IRREGULAR NA LEI: a faixa comercial salta de 20 para 58 entre 100 m² e 200 m², enquanto a de prestação de serviços vai de 16 para 32. Está assim impresso na página — comercial até 200 m² paga o mesmo que indústria até 100 m². É defeito da lei, não da leitura. ISENÇÃO: dispensados os imóveis beneficiados pela isenção do IPTU do art. 151 e os que gozam de imunidade.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-servicos-diversos",
@@ -187,28 +368,83 @@
     "tipo": "itens",
     "unidade": "ufm",
     "itens": [
-     { "rotulo": "Vistoria de edificação, excluída a vistoria para habite-se e aceita-se", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "Numeração de prédio e edificação, por unidade", "valor": 3, "periodicidade": "Por unidade" },
-     { "rotulo": "Alinhamento e nivelamento de terrenos, por metro linear", "valor": 0.3, "periodicidade": "Por metro linear" },
-     { "rotulo": "Reposição de calçamento, por m² ou fração", "valor": 12, "periodicidade": "Por m²" },
-     { "rotulo": "Reposição de asfalto, por m² ou fração", "valor": 18, "periodicidade": "Por m²" },
-     { "rotulo": "Averbação de imóvel", "valor": 8.8, "periodicidade": "Por ato" },
-     { "rotulo": "Apreensão e guarda de animais de grande porte, por unidade e por dia", "valor": 20, "periodicidade": "Por dia" },
-     { "rotulo": "Apreensão e guarda de animais de pequeno porte, por unidade e por dia", "valor": 10, "periodicidade": "Por dia" },
-     { "rotulo": "Apreensão de veículo, por unidade e por dia", "valor": 30, "periodicidade": "Por dia" },
-     { "rotulo": "Apreensão de mercadorias, por peça e por dia", "valor": 0.6, "periodicidade": "Por dia" },
-     { "rotulo": "Utilização de currais, por dia — de grande porte", "valor": 2, "periodicidade": "Por dia" },
-     { "rotulo": "Utilização de currais, por dia — de pequeno porte", "valor": 1.5, "periodicidade": "Por dia" }
+     {
+      "rotulo": "Vistoria de edificação, excluída a vistoria para habite-se e aceita-se",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Numeração de prédio e edificação, por unidade",
+      "valor": 3,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Alinhamento e nivelamento de terrenos, por metro linear",
+      "valor": 0.3,
+      "periodicidade": "Por metro linear"
+     },
+     {
+      "rotulo": "Reposição de calçamento, por m² ou fração",
+      "valor": 12,
+      "periodicidade": "Por m²"
+     },
+     {
+      "rotulo": "Reposição de asfalto, por m² ou fração",
+      "valor": 18,
+      "periodicidade": "Por m²"
+     },
+     {
+      "rotulo": "Averbação de imóvel",
+      "valor": 8.8,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Apreensão e guarda de animais de grande porte, por unidade e por dia",
+      "valor": 20,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Apreensão e guarda de animais de pequeno porte, por unidade e por dia",
+      "valor": 10,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Apreensão de veículo, por unidade e por dia",
+      "valor": 30,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Apreensão de mercadorias, por peça e por dia",
+      "valor": 0.6,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Utilização de currais, por dia — de grande porte",
+      "valor": 2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Utilização de currais, por dia — de pequeno porte",
+      "valor": 1.5,
+      "periodicidade": "Por dia"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No ato do requerimento ou da prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 134, "artigo": "Tabela II" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 134,
+     "artigo": "Tabela II"
+    }
    ],
    "conferencia": "conferido",
    "nota": "EM UFM — coluna intitulada \"Em UFM\". Tabela não atualizada pelo Decreto 003/2013. A numeração impressa começa sem o \"1.\" no primeiro item e segue de 2 a 8; a vistoria de edificação é o item 1. Os serviços funerários são o item 9 e continuam na página seguinte, cadastrados à parte.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-servicos-funerarios",
@@ -220,40 +456,143 @@
     "tipo": "itens",
     "unidade": "ufm",
     "itens": [
-     { "rotulo": "Inumação em sepultura rasa — adulto", "valor": 12, "periodicidade": "Por ato" },
-     { "rotulo": "Inumação em sepultura rasa — infante", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "Inumação em carneiro — adulto", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Inumação em carneiro — infante", "valor": 15, "periodicidade": "Por ato" },
-     { "rotulo": "Perpetuidade — sepultura rasa", "valor": 150, "periodicidade": "Por ato" },
-     { "rotulo": "Perpetuidade — carneiro", "valor": 250, "periodicidade": "Por ato" },
-     { "rotulo": "Perpetuidade — jazigo (carneiro duplo geminado)", "valor": 350, "periodicidade": "Por ato" },
-     { "rotulo": "Exumação antes de vencido o prazo regulamentar de decomposição", "valor": 30, "periodicidade": "Por ato" },
-     { "rotulo": "Exumação após vencido o prazo regulamentar de decomposição", "valor": 25, "periodicidade": "Por ato" },
-     { "rotulo": "Prorrogação de prazo, por ano — adulto", "valor": 15, "periodicidade": "Anual" },
-     { "rotulo": "Prorrogação de prazo, por ano — infante", "valor": 10, "periodicidade": "Anual" },
-     { "rotulo": "Abertura de sepultura, carneiro, jazigo ou mausoléu perpétuo", "valor": 15, "periodicidade": "Por ato" },
-     { "rotulo": "Entrada de ossada no cemitério — em catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
-     { "rotulo": "Entrada de ossada no cemitério — em jardineira ou cova", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Retirada de ossada do cemitério — em catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
-     { "rotulo": "Retirada de ossada do cemitério — em jardineira ou cova", "valor": 15, "periodicidade": "Por ato" },
-     { "rotulo": "Remoção de ossada no interior do cemitério — de cova para cova", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Remoção de ossada no interior do cemitério — de cova para catacumba ou urna", "valor": 30, "periodicidade": "Por ato" },
-     { "rotulo": "Remoção de ossada no interior do cemitério — de catacumba para catacumba", "valor": 35, "periodicidade": "Por ato" },
-     { "rotulo": "Permissão para construção e obras de embelezamento, por m² — carneira", "valor": 5, "periodicidade": "Por m²" },
-     { "rotulo": "Permissão para construção e obras de embelezamento, por m² — catacumba ou mausoléu", "valor": 7, "periodicidade": "Por m²" },
-     { "rotulo": "Emplacamento", "valor": 6, "periodicidade": "Por ato" },
-     { "rotulo": "Ocupação de ossuário, por três anos", "valor": 60, "periodicidade": "Por três anos" },
-     { "rotulo": "Outros serviços", "valor": 15, "periodicidade": "Por ato" }
+     {
+      "rotulo": "Inumação em sepultura rasa — adulto",
+      "valor": 12,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Inumação em sepultura rasa — infante",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Inumação em carneiro — adulto",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Inumação em carneiro — infante",
+      "valor": 15,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Perpetuidade — sepultura rasa",
+      "valor": 150,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Perpetuidade — carneiro",
+      "valor": 250,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Perpetuidade — jazigo (carneiro duplo geminado)",
+      "valor": 350,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Exumação antes de vencido o prazo regulamentar de decomposição",
+      "valor": 30,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Exumação após vencido o prazo regulamentar de decomposição",
+      "valor": 25,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Prorrogação de prazo, por ano — adulto",
+      "valor": 15,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prorrogação de prazo, por ano — infante",
+      "valor": 10,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Abertura de sepultura, carneiro, jazigo ou mausoléu perpétuo",
+      "valor": 15,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Entrada de ossada no cemitério — em catacumba ou urna",
+      "valor": 30,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Entrada de ossada no cemitério — em jardineira ou cova",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Retirada de ossada do cemitério — em catacumba ou urna",
+      "valor": 30,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Retirada de ossada do cemitério — em jardineira ou cova",
+      "valor": 15,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Remoção de ossada no interior do cemitério — de cova para cova",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Remoção de ossada no interior do cemitério — de cova para catacumba ou urna",
+      "valor": 30,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Remoção de ossada no interior do cemitério — de catacumba para catacumba",
+      "valor": 35,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Permissão para construção e obras de embelezamento, por m² — carneira",
+      "valor": 5,
+      "periodicidade": "Por m²"
+     },
+     {
+      "rotulo": "Permissão para construção e obras de embelezamento, por m² — catacumba ou mausoléu",
+      "valor": 7,
+      "periodicidade": "Por m²"
+     },
+     {
+      "rotulo": "Emplacamento",
+      "valor": 6,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Ocupação de ossuário, por três anos",
+      "valor": 60,
+      "periodicidade": "Por três anos"
+     },
+     {
+      "rotulo": "Outros serviços",
+      "valor": 15,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No ato do requerimento ou da prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 135, "artigo": "Tabela II, item 9" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 135,
+     "artigo": "Tabela II, item 9"
+    }
    ],
    "conferencia": "conferido",
    "nota": "EM UFM. Tabela não atualizada pelo Decreto 003/2013. A perpetuidade de jazigo, a 350 UFM, é o maior valor de toda a Tabela II.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-expediente",
@@ -265,37 +604,128 @@
     "tipo": "itens",
     "unidade": "ufm",
     "itens": [
-     { "rotulo": "Petições e requerimentos dirigidos aos órgãos ou autoridades municipais", "valor": 3, "periodicidade": "Por ato" },
-     { "rotulo": "Atestados, certificados e traslados", "valor": 5, "periodicidade": "Por ato" },
-     { "rotulo": "Baixa de qualquer natureza, em lançamento ou registro", "valor": 6, "periodicidade": "Por ato" },
-     { "rotulo": "Certidões negativas e outras", "valor": 6, "periodicidade": "Por ato" },
-     { "rotulo": "Inscrição no cadastro de fornecedores", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "Concessão — atos concedendo favores em virtude de lei municipal", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "Concessão — permissão para exploração, a título precário, ou atividade", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Lavratura de termos, contratos e registros de qualquer natureza", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Emissão do DAM — Documento de Arrecadação Municipal", "valor": 2, "periodicidade": "Por ato" },
-     { "rotulo": "Prorrogação de prazo de contrato com o Município", "valor": 10, "periodicidade": "Por ato" },
-     { "rotulo": "Fornecimento de cópias e similares", "valor": 2, "periodicidade": "Por ato" },
-     { "rotulo": "Autenticação de plantas", "valor": 20, "periodicidade": "Por ato" },
-     { "rotulo": "Inscrição em concurso público — nível superior", "valor": 15, "periodicidade": "Por inscrição" },
-     { "rotulo": "Inscrição em concurso público — nível médio", "valor": 10, "periodicidade": "Por inscrição" },
-     { "rotulo": "Inscrição em concurso público — nível elementar", "valor": 5, "periodicidade": "Por inscrição" },
-     { "rotulo": "Visto de abertura ou encerramento em livros fiscais", "valor": 5, "periodicidade": "Por ato" },
-     { "rotulo": "Autorização para confecção de notas fiscais, por talão de 50 folhas", "valor": 8, "periodicidade": "Por talão" },
-     { "rotulo": "Autenticação de livros de prestação de serviços — por livro", "valor": 5, "periodicidade": "Por livro" },
-     { "rotulo": "Autenticação de talões de nota fiscal — por talão", "valor": 5, "periodicidade": "Por talão" },
-     { "rotulo": "Busca", "valor": 6, "periodicidade": "Por ato" },
-     { "rotulo": "Outras taxas não especificadas", "valor": 5, "periodicidade": "Por ato" }
+     {
+      "rotulo": "Petições e requerimentos dirigidos aos órgãos ou autoridades municipais",
+      "valor": 3,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Atestados, certificados e traslados",
+      "valor": 5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Baixa de qualquer natureza, em lançamento ou registro",
+      "valor": 6,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Certidões negativas e outras",
+      "valor": 6,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Inscrição no cadastro de fornecedores",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Concessão — atos concedendo favores em virtude de lei municipal",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Concessão — permissão para exploração, a título precário, ou atividade",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Lavratura de termos, contratos e registros de qualquer natureza",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Emissão do DAM — Documento de Arrecadação Municipal",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Prorrogação de prazo de contrato com o Município",
+      "valor": 10,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Fornecimento de cópias e similares",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Autenticação de plantas",
+      "valor": 20,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Inscrição em concurso público — nível superior",
+      "valor": 15,
+      "periodicidade": "Por inscrição"
+     },
+     {
+      "rotulo": "Inscrição em concurso público — nível médio",
+      "valor": 10,
+      "periodicidade": "Por inscrição"
+     },
+     {
+      "rotulo": "Inscrição em concurso público — nível elementar",
+      "valor": 5,
+      "periodicidade": "Por inscrição"
+     },
+     {
+      "rotulo": "Visto de abertura ou encerramento em livros fiscais",
+      "valor": 5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Autorização para confecção de notas fiscais, por talão de 50 folhas",
+      "valor": 8,
+      "periodicidade": "Por talão"
+     },
+     {
+      "rotulo": "Autenticação de livros de prestação de serviços — por livro",
+      "valor": 5,
+      "periodicidade": "Por livro"
+     },
+     {
+      "rotulo": "Autenticação de talões de nota fiscal — por talão",
+      "valor": 5,
+      "periodicidade": "Por talão"
+     },
+     {
+      "rotulo": "Busca",
+      "valor": 6,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Outras taxas não especificadas",
+      "valor": 5,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No ato do requerimento.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 136, "artigo": "Tabela III" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 136,
+     "artigo": "Tabela III"
+    }
    ],
    "conferencia": "conferido",
    "nota": "EM UFM. Terceira e última tabela que o Decreto 003/2013 NÃO atualizou. É a tabela mais consultada no balcão: certidão negativa, baixa, DAM e talão de nota fiscal saem daqui. A taxa de emissão do DAM (item 8) incide sobre a emissão do próprio documento de arrecadação — conferir com a assessoria jurídica antes de cobrá-la no DAM de outro tributo.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-localizacao-funcionamento",
@@ -304,21 +734,596 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, do exercício de atividade em estabelecimento no território do Município.",
    "sujeitoPassivo": "A pessoa física ou jurídica titular do estabelecimento.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela por atividade econômica, com 129 itens numerados de 001 a 129, agrupados em Agricultura e criação, Indústrias e fabricos, Comércio atacadista, Comércio varejista e Prestação de serviço. Valores de R$ 43,20 a R$ 432,00 na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "020 — Padarias (bairro)",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "021 — Pastelarias, confeitarias, docerias e delicatessen",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "022 — Rendas e bordados",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "023 — Outras não especificadas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "024 — Atacadista — abatedores",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "025 — Atacadista — artigos de livrarias",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "026 — Atacadista — bebidas em geral",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "027 — Atacadista — calçados, bolsas, guarda-chuvas e artigos semelhantes",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "028 — Atacadista — cigarros",
+      "valor": 144.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "029 — Atacadista — cimento",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "030 — Atacadista — cosméticos e artigos para cabeleireiro",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "031 — Atacadista — drogas e medicamentos em geral",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "032 — Atacadista — estivas e cereais",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "033 — Atacadista — ferragens e material de construção",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "034 — Atacadista — tecidos e confecções",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "035 — Atacadista — outros artigos não especificados",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "036 — Varejista — açougue, casa de carnes e peixes",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "037 — Varejista — armarinho e bazares",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "038 — Varejista — artigos de copa e cozinha",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "039 — Varejista — artigos esportivos",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "040 — Varejista — artigos para escritórios",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "041 — Varejista — artigos de livraria e papelaria",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "042 — Varejista — artigos veterinários",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "043 — Varejista — aves e ovos",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "044 — Varejista — bancas de revistas em logradouros públicos",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "045 — Varejista — bares",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "046 — Varejista — bebidas (depósito)",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "047 — Varejista — bicicletas, inclusive peças e acessórios",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "048 — Varejista — bijuterias",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "049 — Varejista — bodegas",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "050 — Varejista — botequim",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "051 — Varejista — boutiques",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "052 — Varejista — CDs, discos e fitas",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "053 — Varejista — combustíveis e lubrificantes",
+      "valor": 216.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "054 — Varejista — cooperativas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "055 — Varejista — depósito de inflamáveis",
+      "valor": 172.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "056 — Varejista — depósito fechado",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "057 — Varejista — distribuidoras de gás liquefeito",
+      "valor": 172.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "058 — Varejista — doces, bombons, chocolates e bomboniere",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "059 — Varejista — eletrodomésticos em geral",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "060 — Varejista — equipamentos de informática",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "061 — Varejista — estivas e cereais",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "062 — Varejista — farmácias e drogarias",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "063 — Varejista — ferragens",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "064 — Varejista — frios, especiarias e laticínios",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "065 — Varejista — gêneros alimentícios em geral",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "066 — Varejista — joias e relógios",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "067 — Varejista — madeiras",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "068 — Varejista — malharia",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "069 — Varejista — máquinas e motores",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "070 — Varejista — material fotográfico",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "071 — Varejista — material para construção",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "072 — Varejista — mercadinhos",
+      "valor": 144.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "073 — Varejista — marcenarias",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "074 — Varejista — miudezas",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "075 — Varejista — movelaria e colchoaria",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "076 — Varejista — óticas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "077 — Varejista — padaria, pastelaria e similares, docerias e delicatessen",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "078 — Varejista — peças e acessórios para veículos",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "079 — Varejista — pneus e câmaras de ar",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "080 — Varejista — produtos e equipamentos agrícolas",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "081 — Varejista — restaurantes, churrascarias e similares",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "082 — Varejista — sapatarias",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "083 — Varejista — sorveterias e casas de lanches (lanchonete)",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "084 — Varejista — supermercados",
+      "valor": 216.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "085 — Varejista — tecidos, confecções e artigos de vestuário",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "086 — Varejista — veículos novos e usados",
+      "valor": 172.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "087 — Varejista — veículos, vendas de peças e acessórios",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "088 — Varejista — vidros",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "089 — Varejista — outros varejistas",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "090 — Serviço — assessoria e consultoria em geral",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "091 — Serviço — auto-escola",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "092 — Serviço — bancos de recebimentos",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "093 — Serviço — bilhares, snooker e similares",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "094 — Serviço — casas de jogos, loterias e apostas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "095 — Serviço — casas de saúde, repouso e recuperação",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "096 — Serviço — casas funerárias",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "097 — Serviço — clínicas médicas em geral",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "098 — Serviço — clínicas odontológicas e ortopedistas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "099 — Serviço — clubes e associações recreativas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "100 — Serviço — consertos e restauração de máquinas e aparelhos",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "101 — Serviço — consertos e restauração de veículos mecânicos e elétricos",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "102 — Serviço — construção civil em geral",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "103 — Serviço — ensino de jardim da infância",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "104 — Serviço — ensino fundamental I e II",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "105 — Serviço — ensino médio",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "106 — Serviço — ensino, educação infantil",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "107 — Serviço — empresa de comunicação e mídia eletrônica",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "108 — Serviço — empresas de radiodifusão",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "109 — Serviço — escritório de contabilidade",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "110 — Serviço — estacionamento de veículos",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "111 — Serviço — estúdios fotográficos",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "112 — Serviço — fotocópias e plastificação de documentos",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "113 — Serviço — hospitais, pronto-socorros e congêneres",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "114 — Serviço — hotéis",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "115 — Serviço — instituições financeiras",
+      "valor": 432.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "116 — Serviço — laboratórios de análises clínicas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "117 — Serviço — lavagem, lubrificação e limpeza de veículos",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "118 — Serviço — lavanderia e tinturaria",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "119 — Serviço — maternidade",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "120 — Serviço — motéis",
+      "valor": 115.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "121 — Serviço — oficina em geral",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "122 — Serviço — processamento de dados e atividades auxiliares",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "123 — Serviço — tipografias e gráficas",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "124 — Serviço — transporte coletivo urbano",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "125 — Serviço — transporte de passageiros interurbano",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "126 — Serviço — transporte escolar",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "127 — Serviço — vendas de passagens",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "128 — Serviço — vigilância",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "129 — Serviço — outros serviços",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     }
+    ]
    },
    "periodicidade": "anual",
    "vencimento": "No ato da inscrição, da renovação anual e da alteração de endereço ou de atividade.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 97, "artigo": "art. 229" },
-    { "doc": "ctm-255-2007", "pagina": 98, "artigo": "art. 234" },
-    { "doc": "ctm-255-2007", "pagina": 2, "artigo": "Decreto 003/2013 — Tabela IV" },
-    { "doc": "ctm-255-2007", "pagina": 3, "artigo": "Decreto 003/2013 — Tabela IV" },
-    { "doc": "ctm-255-2007", "pagina": 136, "artigo": "Tabela IV — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 97,
+     "artigo": "art. 229"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 98,
+     "artigo": "art. 234"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 2,
+     "artigo": "Decreto 003/2013 — Tabela IV"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 3,
+     "artigo": "Decreto 003/2013 — Tabela IV"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 136,
+     "artigo": "Tabela IV — redação de 2007, em UFM"
+    }
    ],
    "conferencia": "revisar",
-   "nota": "AQUI SE PROVA QUE O DECRETO ESTÁ EM REAIS. O item 006, Calçados, vale 80,00 na Tabela IV de 2007 (em UFM) e 115,20 na do Decreto de 2013 — exatamente 80 × 1,44. O mesmo vale para 40 → 57,60, 60 → 86,40, 70 → 100,80 e 120 → 172,80. A coluna do Decreto continua intitulada \"Em UFM\" por cópia do formulário de 2007, mas contém reais. As duas primeiras páginas do Decreto no acervo começam no item 020: os itens 001 a 019 só constam da versão de 2007, na página 136 em diante. Antes de lançar, escolher a versão e conferir o item na imagem.",
-   "vigencia": { "de": "2013", "ate": null }
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. São 110 atividades, numeradas de 020 a 129 nas páginas 2 e 3, agrupadas em comércio atacadista, comércio varejista e prestação de serviço. AS ATIVIDADES 001 A 019 NÃO ESTÃO NO DECRETO — o bloco encadernado começa no item 020, e os dezenove primeiros só constam da redação de 2007, em UFM, a partir da página 136. É AQUI QUE SE PROVA QUE O DECRETO ESTÁ EM REAIS: o item 006, Calçados, vale 80,00 na Tabela IV de 2007 e 115,20 na do Decreto — exatamente 80 × 1,44. O mesmo em 40 → 57,60, 60 → 86,40, 70 → 100,80 e 120 → 172,80. O maior valor da tabela é o das instituições financeiras, R$ 432,00, trezentas UFM.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-fiscalizacao-sanitaria",
@@ -327,19 +1332,191 @@
    "fatoGerador": "Fiscalização sanitária, fundada no poder de polícia do Município, sobre estabelecimentos e atividades sujeitas a controle de saúde.",
    "sujeitoPassivo": "A pessoa física ou jurídica sujeita à fiscalização.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela V, com 29 itens de estabelecimento e atividade sujeitos a controle sanitário, em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Funcionamento de hospitais, maternidades, clínicas, casas de saúde e similares",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de hospitais e clínicas veterinárias",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de consultório, ambulatório, laboratório de análise, oficina de prótese ou de equipamento e material de uso médico ou odontológico e similares, inclusive consultório e ambulatório veterinário",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Produção ou acondicionamento de bebidas alcoólicas",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercialização de bebidas alcoólicas",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de supermercados",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de mercadinhos, mercearias e especiarias não inscritos como microempresa",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio de estivas e cereais",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comércio de hortaliças e frutas",
+      "valor": 14.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Padarias, pastelarias, confeitarias, docerias, lojas de conveniência e delicatessen",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 1ª categoria",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 2ª categoria",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Restaurantes, bares, cantinas, sorveterias, lanchonetes e similares — 3ª categoria",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Ensino maternal e alfabetização",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Creches, berçário, hotelzinho e similares",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Tinturaria e lavanderia",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Baile, shows, festival e similares",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de hotéis",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de motéis",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de pensões",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de abatedouro, matadouro",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de abatedouro, matadouro industrial",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Comercialização de artigos de higiene, dietético ou toucador, saneantes, inseticidas, raticidas e similares",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de institutos de beleza, barbearias e similares",
+      "valor": 14.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Funcionamento de casa funerária",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Posto de venda de combustíveis e lubrificantes",
+      "valor": 57.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Posto de venda de GLP",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Análise e aprovação de plantas de edificações ligadas à saúde",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Piscina de uso público",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Piscina de uso privado",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Inspeção sanitária em terreno baldio",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     }
+    ]
    },
    "periodicidade": "anual",
    "vencimento": "No ato da inscrição e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 98, "artigo": "art. 237" },
-    { "doc": "ctm-255-2007", "pagina": 5, "artigo": "Decreto 003/2013 — Tabela V" },
-    { "doc": "ctm-255-2007", "pagina": 139, "artigo": "Tabela V — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 98,
+     "artigo": "art. 237"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 5,
+     "artigo": "Decreto 003/2013 — Tabela V"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 139,
+     "artigo": "Tabela V — redação de 2007, em UFM"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "Os 29 rótulos e os 31 valores da página 5 foram conferidos quanto ao alinhamento das colunas, mas os valores não foram transcritos item a item para este cadastro. Abrir a página 5 do acervo para o valor de cada atividade. Dois itens têm subdivisão, o que explica haver mais valores do que rótulos numerados.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. São 29 itens numerados, com 31 valores porque o item 11, dos restaurantes e bares, se divide em 1ª, 2ª e 3ª categoria — e a lei NÃO define o que separa uma categoria da outra, embora a diferença vá de R$ 43,20 a R$ 21,60. Sem critério em regulamento, o enquadramento fica sem amparo. O item 7 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-fiscalizacao-anuncio",
@@ -348,19 +1525,76 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, da exploração ou utilização de meios de publicidade em vias e logradouros públicos ou em locais visíveis do público.",
    "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela VI, por tipo e dimensão do anúncio, em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Publicidade sonora, por qualquer meio, por publicidade, por ano ou fração",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Publicidade em cinema, teatro, boate e similares, por meio de projeção de filmes ou dispositivos, ao mês",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Publicidade colocada em terrenos, campos de esportes, clubes e associações, qualquer que seja o sistema de colocação, desde que visível de vias ou logradouros públicos, inclusive rodovias, estradas e caminhos municipais, por m² ou fração ao ano",
+      "valor": 7.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Publicidade afixada na parte externa de estabelecimentos, indústrias, comerciais e prestação de serviços, por m² ao ano",
+      "valor": 4.32,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Publicidade por meio de auto-falante em prédio, por mês ou fração",
+      "valor": 7.2,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Publicidade através de out-door, por mês ou fração",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Publicidade suspensa em top-light e top-face, em torres e similares, por m² ou fração ao ano",
+      "valor": 11.52,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Publicidade em balões e similares, por unidade, por mês ou fração",
+      "valor": 7.2,
+      "periodicidade": "Mensal"
+     }
+    ]
    },
    "periodicidade": "anual",
    "vencimento": "No ato do licenciamento e na renovação.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 100, "artigo": "art. 244" },
-    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VI" },
-    { "doc": "ctm-255-2007", "pagina": 140, "artigo": "Tabela VI — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 100,
+     "artigo": "art. 244"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 6,
+     "artigo": "Decreto 003/2013 — Tabela VI"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 140,
+     "artigo": "Tabela VI — redação de 2007, em UFM"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, mas os valores são reais, pelo mesmo fator 1,44 provado na Tabela IV. Valores não transcritos item a item — abrir a página 6. O art. 247 lista isenções, entre elas o anúncio de estabelecimento de instrução cuja mensagem se refira exclusivamente ao ensino ministrado.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. A PERIODICIDADE MUDA DE ITEM PARA ITEM e está registrada em cada linha: a publicidade sonora é por ANO, o out-door é por MÊS, e a publicidade em terreno é por m² ao ANO. Lançar tudo como anual multiplica a conta por doze em metade da tabela.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-maquinas-motores",
@@ -369,18 +1603,66 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, da instalação e do funcionamento de máquinas, motores e equipamentos.",
    "sujeitoPassivo": "O titular do estabelecimento onde se instala a máquina ou o motor.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela VII, por máquina, motor ou equipamento, em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Instalação e utilização de máquinas em geral, por unidade e por ano",
+      "valor": 14.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Instalação e utilização de motores — potência até 10 hp",
+      "valor": 7.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Instalação e utilização de motores — potência até 20 hp",
+      "valor": 10.08,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Instalação e utilização de motores — potência até 50 hp",
+      "valor": 14.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Instalação e utilização de motores — potência até 100 hp",
+      "valor": 21.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Instalação e utilização de motores — potência acima de 100 hp",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras fora das especificações",
+      "valor": 18.3,
+      "periodicidade": "Anual"
+     }
+    ]
    },
    "periodicidade": "anual",
    "vencimento": "No ato do licenciamento e na renovação.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VII" },
-    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela VII — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 6,
+     "artigo": "Decreto 003/2013 — Tabela VII"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 141,
+     "artigo": "Tabela VII — redação de 2007, em UFM"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, contendo reais. Valores não transcritos item a item.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. DOIS VALORES FORA DO PADRÃO, e os dois foram conferidos na imagem da página 6 — estão impressos assim. Os R$ 21,00 do motor até 100 hp não são múltiplo de 1,44 (dariam R$ 21,60, quinze UFM), e os R$ 18,30 de \"outras fora das especificações\" também não. Todos os demais são múltiplos exatos. Repare que o motor de até 50 hp e a máquina em geral custam o mesmo R$ 14,40.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-veiculo-transporte",
@@ -389,18 +1671,51 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, do veículo empregado no transporte de passageiros no Município.",
    "sujeitoPassivo": "O proprietário ou permissionário do veículo.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela VIII, por veículo e modalidade de transporte, em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Alternativo — taxa de licença",
+      "valor": 28.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Alternativo — taxa de fiscalização",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Ônibus — taxa de licença",
+      "valor": 100.8,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Ônibus — taxa de fiscalização",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     }
+    ]
    },
    "periodicidade": "anual",
    "vencimento": "No ato do licenciamento e na renovação.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 6, "artigo": "Decreto 003/2013 — Tabela VIII" },
-    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela VIII — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 6,
+     "artigo": "Decreto 003/2013 — Tabela VIII"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 141,
+     "artigo": "Tabela VIII — redação de 2007, em UFM"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "Coluna intitulada \"Em UFM\" na página 6 do Decreto, contendo reais. Valores não transcritos item a item.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. SÃO DUAS COBRANÇAS POR VEÍCULO: taxa de licença e taxa de fiscalização, somadas. O ônibus paga R$ 172,80 no total contra R$ 50,40 do alternativo. A tabela imprime \"ALTENATIVO\", sem o R.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-horario-extraordinario",
@@ -412,23 +1727,73 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Antecipação de horário — por dia", "valor": 14.4, "periodicidade": "Por dia" },
-     { "rotulo": "Antecipação de horário — por mês", "valor": 43.2, "periodicidade": "Mensal" },
-     { "rotulo": "Antecipação de horário — por ano", "valor": 72, "periodicidade": "Anual" },
-     { "rotulo": "Prorrogação de horário — por dia", "valor": 18.8, "periodicidade": "Por dia" },
-     { "rotulo": "Prorrogação de horário — por mês", "valor": 57.6, "periodicidade": "Mensal" },
-     { "rotulo": "Prorrogação de horário — por ano", "valor": 86.4, "periodicidade": "Anual" }
+     {
+      "rotulo": "Prorrogação de horário até às 22:00 — por dia",
+      "valor": 14.4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Prorrogação de horário até às 22:00 — por mês",
+      "valor": 43.2,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Prorrogação de horário até às 22:00 — por ano",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prorrogação de horário além das 22:00 — por dia",
+      "valor": 18.8,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Prorrogação de horário além das 22:00 — por mês",
+      "valor": 57.6,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Prorrogação de horário além das 22:00 — por ano",
+      "valor": 86.4,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Antecipação de horário — por dia",
+      "valor": 14.4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Antecipação de horário — por mês",
+      "valor": 43.2,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Antecipação de horário — por ano",
+      "valor": 72.0,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "por dia, mês ou ano",
    "vencimento": "No ato do licenciamento do horário especial.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela IX" },
-    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela IX — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 7,
+     "artigo": "Decreto 003/2013 — Tabela IX"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 141,
+     "artigo": "Tabela IX — redação de 2007, em UFM"
+    }
    ],
    "conferencia": "conferido",
-   "nota": "VALOR FORA DO PADRÃO: cinco dos seis valores são múltiplos exatos de 1,44 (10, 30, 50, 40 e 60 UFM). O de R$ 18,80 não é — 18,80 ÷ 1,44 = 13,06. Pela posição na tabela deveria ser R$ 21,60 (15 UFM). Está impresso 18,80 na página 7 e foi registrado como impresso. Conferir com a Secretaria de Finanças antes de lançar prorrogação por dia.",
-   "vigencia": { "de": "2013", "ate": null }
+   "nota": "CORREÇÃO DE LEITURA: a versão anterior deste cadastro rotulava a primeira linha como \"antecipação\" e a segunda como \"prorrogação\". A imagem da página 7 mostra outra coisa — a PRORROGAÇÃO tem duas faixas, até às 22:00 e além das 22:00, e a ANTECIPAÇÃO tem uma só, com os mesmos valores da primeira faixa da prorrogação. Os números estavam certos; os rótulos não. VALOR FORA DO PADRÃO: os R$ 18,80 da prorrogação além das 22:00, por dia, não são múltiplo de 1,44 — 18,80 ÷ 1,44 = 13,06. Pela posição na tabela deveria ser R$ 21,60, quinze UFM. Está impresso 18,80 e foi registrado como impresso.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ambulante-feirante",
@@ -437,20 +1802,281 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, do exercício de atividade ambulante, eventual ou de feirante.",
    "sujeitoPassivo": "O ambulante, o feirante ou quem exercer a atividade eventual.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela X, por atividade, com cobrança por dia, por semana, por mês e por evento. Valores em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Feirante — espaço ocupado por barracas, mesas, fiteiros, tabuleiros e assemelhados com até 2,40 m² — por dia",
+      "valor": 2.88,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Feirante — espaço ocupado por barracas, mesas, fiteiros, tabuleiros e assemelhados com até 2,40 m² — por semana",
+      "valor": 7.2,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Feirante — espaço ocupado por barracas, mesas, fiteiros, tabuleiros e assemelhados com até 2,40 m² — por mês",
+      "valor": 17.28,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Feirante — espaço ocupado por barracas, mesas, fiteiros, tabuleiros e assemelhados com até 2,40 m² — por evento",
+      "valor": 17.28,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — carros de passeio — por dia",
+      "valor": 7.2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — carros de passeio — por semana",
+      "valor": 14.4,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — carros de passeio — por mês",
+      "valor": 28.8,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — carros de passeio — por evento",
+      "valor": 28.8,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — veículos utilitários — por dia",
+      "valor": 7.2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — veículos utilitários — por semana",
+      "valor": 14.4,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — veículos utilitários — por mês",
+      "valor": 28.8,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — veículos utilitários — por evento",
+      "valor": 28.8,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — caminhões ou ônibus — por dia",
+      "valor": 14.4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — caminhões ou ônibus — por semana",
+      "valor": 28.8,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — caminhões ou ônibus — por mês",
+      "valor": 43.2,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — caminhões ou ônibus — por evento",
+      "valor": 43.2,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — reboque — por dia",
+      "valor": 7.2,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — reboque — por semana",
+      "valor": 14.4,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — reboque — por mês",
+      "valor": 21.6,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Espaço ocupado por veículos — reboque — por evento",
+      "valor": 28.8,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Barracas, quiosques e semelhados em períodos festivos — por dia",
+      "valor": 14.4,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Barracas, quiosques e semelhados em períodos festivos — por semana",
+      "valor": 43.2,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Barracas, quiosques e semelhados em períodos festivos — por mês",
+      "valor": 72.0,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Barracas, quiosques e semelhados em períodos festivos — por evento",
+      "valor": 43.2,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Mesas de bares e restaurantes, por unidade — por dia",
+      "valor": 0.72,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Mesas de bares e restaurantes, por unidade — por semana",
+      "valor": 1.44,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Mesas de bares e restaurantes, por unidade — por mês",
+      "valor": 2.88,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Mesas de bares e restaurantes, por unidade — por evento",
+      "valor": 4.32,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Boxes — referência A — por dia",
+      "valor": 2.88,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Boxes — referência A — por semana",
+      "valor": 11.52,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Boxes — referência A — por mês",
+      "valor": 21.5,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Boxes — referência A — por evento",
+      "valor": 28.8,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Boxes — referência B — por dia",
+      "valor": 3.6,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Boxes — referência B — por semana",
+      "valor": 14.4,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Boxes — referência B — por mês",
+      "valor": 28.8,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Boxes — referência B — por evento",
+      "valor": 43.2,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Boxes — referência C — por dia",
+      "valor": 4.32,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Boxes — referência C — por semana",
+      "valor": 17.28,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Boxes — referência C — por mês",
+      "valor": 36.0,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Boxes — referência C — por evento",
+      "valor": 57.6,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Boxes — referência D — por dia",
+      "valor": 5.04,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Boxes — referência D — por semana",
+      "valor": 21.6,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Boxes — referência D — por mês",
+      "valor": 43.2,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Boxes — referência D — por evento",
+      "valor": 72.0,
+      "periodicidade": "Por evento"
+     },
+     {
+      "rotulo": "Outros boxes — por dia",
+      "valor": 5.76,
+      "periodicidade": "Por dia"
+     },
+     {
+      "rotulo": "Outros boxes — por semana",
+      "valor": 28.8,
+      "periodicidade": "Por semana"
+     },
+     {
+      "rotulo": "Outros boxes — por mês",
+      "valor": 57.6,
+      "periodicidade": "Por mês"
+     },
+     {
+      "rotulo": "Outros boxes — por evento",
+      "valor": 86.4,
+      "periodicidade": "Por evento"
+     }
+    ]
    },
    "periodicidade": "por dia, semana, mês ou evento",
    "vencimento": "No ato do licenciamento, antes do início da atividade.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 107, "artigo": "art. 273" },
-    { "doc": "ctm-255-2007", "pagina": 108, "artigo": "art. 277" },
-    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela X" },
-    { "doc": "ctm-255-2007", "pagina": 141, "artigo": "Tabela X — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 107,
+     "artigo": "art. 273"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 108,
+     "artigo": "art. 277"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 7,
+     "artigo": "Decreto 003/2013 — Tabela X"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 141,
+     "artigo": "Tabela X — redação de 2007, em UFM"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "VALOR FORA DO PADRÃO: aparece R$ 21,50 na tabela, que não é múltiplo de 1,44 — 21,50 ÷ 1,44 = 14,93. O valor coerente com os vizinhos seria R$ 21,60 (15 UFM). Não foi corrigido: pode ser erro de impressão da própria tabela. Conferir na página 7 antes de lançar. O art. 277 define o que é atividade ambulante, eventual e de feirante — é o artigo a citar quando o contribuinte discute o enquadramento.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. QUATRO PERIODICIDADES POR ITEM — dia, semana, mês e evento —, e cada uma virou uma linha para não haver dúvida sobre qual coluna se aplica. Repare que em vários itens o valor POR EVENTO é igual ao POR MÊS, e nas barracas em período festivo o evento custa MENOS que o mês. VALOR FORA DO PADRÃO: os R$ 21,50 do box de referência A, por mês, não são múltiplo de 1,44 — dariam R$ 21,60, quinze UFM. Está impresso assim na página 7. Os R$ 3,60 e R$ 5,04 dos boxes B e D são meias-UFM (2,5 e 3,5), o que a tabela usa de propósito nessa coluna.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obra-particular",
@@ -459,20 +2085,281 @@
    "fatoGerador": "Fiscalização, fundada no poder de polícia, da execução de obra particular, de loteamento e de arruamento no Município.",
    "sujeitoPassivo": "O proprietário, o responsável pela obra e, na locação, o locador e o locatário do imóvel onde a obra é executada.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Tabela XI, com 27 itens: construção por faixa de área, demolição, terraplenagem, muro, telhados, renovação de alvará, loteamento, habite-se, drenos, bombas, laudo técnico, vistorias e pena d'água. Valores em reais na versão do Decreto 003/2013."
+    "tipo": "itens",
+    "unidade": "reais",
+    "itens": [
+     {
+      "rotulo": "Alvará de construção, com aprovação de projeto — edificações residenciais até 60 m², por m² de área de piso",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Alvará de construção, com aprovação de projeto — edificações residenciais acima de 60 até 100 m², por m² de área de piso",
+      "valor": 0.72,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Alvará de construção, com aprovação de projeto — edificações acima de 100 m², por m² de área de piso",
+      "valor": 0.86,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Alvará de construção, com aprovação de projeto — edificações comerciais e industriais, por m² de área de piso",
+      "valor": 1.0,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Reconstrução, alteração e reforma, por m² de área de piso",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Acréscimo de obra, por m²",
+      "valor": 1.15,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Demolição de prédios, por m² de área de piso a ser demolido",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Colocação de tapume, por m² de tapume",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Terraplanagem e movimentos de terra — até 10.000 m² em loteamento, por m²",
+      "valor": 0.03,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Terraplanagem e movimentos de terra — acima de 10.000 m² em loteamento, por m²",
+      "valor": 0.04,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Terraplanagem e movimentos de terra — até 10.000 m² em vias, por m²",
+      "valor": 0.08,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Terraplanagem e movimentos de terra — acima de 10.000 m² em vias, por m²",
+      "valor": 0.11,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Construção de muro, por metro linear",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Substituição, alteração e reforma de telhados, por m²",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Recarimbamento de plantas aprovadas, segunda via, por prancha",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Renovação de alvará de construção — edificações residenciais até 60 m², por m²",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Renovação de alvará de construção — edificações residenciais acima de 61 até 100 m², por m²",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Renovação de alvará de construção — edificações residenciais acima de 100 m², por m²",
+      "valor": 0.8,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Renovação de alvará de construção — edificações comerciais e industriais, por m²",
+      "valor": 1.15,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Alvará de loteamento — loteamento sem edificação, por m² de lotes edificáveis",
+      "valor": 0.04,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Alvará de loteamento — loteamento com edificação, por m² de edificação",
+      "valor": 0.07,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Autorização para desmembramento ou remembramento de terrenos, por m²",
+      "valor": 0.22,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se de edificação com projeto aprovado — residencial até 60 m², por m²",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se de edificação com projeto aprovado — residencial acima de 61 até 100 m², por m²",
+      "valor": 0.43,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se de edificação com projeto aprovado — residencial acima de 100 m², por m²",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se de edificação com projeto aprovado — comercial e industrial, por m²",
+      "valor": 0.72,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se — área e regularização, por m²",
+      "valor": 0.86,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se — levantamento até 100 m², por m²",
+      "valor": 1.0,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Habite-se — levantamento acima de 100 m², por m²",
+      "valor": 1.15,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Drenos, sarjetas, canalização e escavações em vias públicas — logradouro com pavimento flexível, por m²",
+      "valor": 5.76,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Drenos, sarjetas, canalização e escavações em vias públicas — logradouro com pavimento rígido, por m²",
+      "valor": 7.2,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Drenos, sarjetas, canalização e escavações em vias públicas — logradouro sem pavimentação, por m²",
+      "valor": 1.44,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Colocação ou substituição de bombas de combustíveis e lubrificantes, inclusive tanque, por unidade",
+      "valor": 100.8,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Laudo técnico — edificações residenciais até 60 m², por m²",
+      "valor": 0.17,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Laudo técnico — edificações residenciais acima de 61 até 100 m², por m²",
+      "valor": 0.18,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Laudo técnico — edificações residenciais acima de 100 m², por m²",
+      "valor": 0.21,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Laudo técnico — edificações comerciais e industriais, por m²",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Análise prévia de projetos",
+      "valor": 28.8,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Aprovação de projeto sem expedição de alvará",
+      "valor": 14.4,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Revestimento, por m²",
+      "valor": 0.43,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Demarcação ou redemarcação de lotes, por m²",
+      "valor": 0.07,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Levantamento planialtimétrico da área, por m²",
+      "valor": 0.03,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Vistoria de imóvel",
+      "valor": 21.6,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Vistoria de edificações para regularização de obra feita irregularmente, por m²",
+      "valor": 0.28,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Análise para execução de reforma, construção de galpão ou quadra de esporte",
+      "valor": 28.8,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Vistoria e inspeção para instalação de equipamentos: barracas de artigos de época, bancas de jornais e revistas, fileiro, quiosque, toldo, equipamentos em parque de diversão, arquibancada, palanque e palco",
+      "valor": 43.2,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Pena d'água — calçamento, por metro linear",
+      "valor": 0.43,
+      "periodicidade": "Por obra"
+     },
+     {
+      "rotulo": "Pena d'água — asfalto, por metro linear",
+      "valor": 0.57,
+      "periodicidade": "Por obra"
+     }
+    ]
    },
    "periodicidade": "por obra",
    "vencimento": "Antes do início da obra, no licenciamento.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 109, "artigo": "art. 281" },
-    { "doc": "ctm-255-2007", "pagina": 110, "artigo": "art. 286" },
-    { "doc": "ctm-255-2007", "pagina": 7, "artigo": "Decreto 003/2013 — Tabela XI" },
-    { "doc": "ctm-255-2007", "pagina": 8, "artigo": "Decreto 003/2013 — Tabela XI" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 109,
+     "artigo": "art. 281"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 110,
+     "artigo": "art. 286"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 7,
+     "artigo": "Decreto 003/2013 — Tabela XI"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 8,
+     "artigo": "Decreto 003/2013 — Tabela XI"
+    }
    ],
-   "conferencia": "revisar",
-   "nota": "PROVA DA CONVERSÃO: os valores 0,57 / 0,86 / 1,00 / 0,28 / 1,15 desta tabela são 0,4 / 0,6 / 0,7 / 0,2 / 0,8 UFM multiplicados por 1,44 e arredondados ao centavo. O arredondamento é o que denuncia que houve conversão para reais — número de UFM não sai quebrado assim. DEFEITO DE IMPRESSÃO: um dos itens de faixa de área lê-se \"acima de 601 até 100 m²\", em que 601 é erro por 60. Valores não transcritos item a item — abrir as páginas 7 e 8.",
-   "vigencia": { "de": "2013", "ate": null }
+   "conferencia": "conferido",
+   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. São 48 linhas, lidas nas páginas 7 e 8. AS FRAÇÕES SÃO A PROVA DA CONVERSÃO: 0,57 / 0,72 / 0,86 / 1,00 / 0,28 / 1,15 são 0,4 / 0,5 / 0,6 / 0,7 / 0,2 / 0,8 UFM multiplicados por 1,44 e arredondados ao centavo — número de UFM não sai quebrado assim. DEFEITO DE IMPRESSÃO: o item 1.2 da tabela lê-se \"edificações residenciais acima de 601 até 100 m²\", em que 601 é erro por 60; o item 10.2, que trata do mesmo, diz \"acima de 61\". A lei usa 60 e 61 para a mesma fronteira em pontos diferentes. O título da tabela imprime \"OBRA PARTICULA\", sem o R.",
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ocupacao-vias",
@@ -484,25 +2371,68 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Circos, parques de diversões e exposições, por m², por mês ou fração", "valor": 0.72, "periodicidade": "Mensal" },
-     { "rotulo": "Caçamba ou similar, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
-     { "rotulo": "Assentamento de posteamento, por unidade, ao mês", "valor": 2.88, "periodicidade": "Mensal" },
-     { "rotulo": "Caixas postais ou similares, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
-     { "rotulo": "Orelhões e cabinas de telefonia, por unidade, por mês ou fração", "valor": 14.4, "periodicidade": "Mensal" },
-     { "rotulo": "Tampas de bueiro e ralos de esgoto, por unidade, por exercício ou fração", "valor": 21.6, "periodicidade": "Anual" },
-     { "rotulo": "Redes de tubulações para esgoto, água, líquidos químicos ou material tóxico, por km, anualmente", "valor": 43.2, "periodicidade": "Anual" },
-     { "rotulo": "Outras atividades não incluídas, por mês", "valor": 14.4, "periodicidade": "Mensal" }
+     {
+      "rotulo": "Circos, parques de diversões e exposições, por m², por mês ou fração",
+      "valor": 0.72,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Caçamba ou similar, por unidade, por mês ou fração",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Assentamento de posteamento, por unidade, ao mês",
+      "valor": 2.88,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Caixas postais ou similares, por unidade, por mês ou fração",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Orelhões e cabinas de telefonia, por unidade, por mês ou fração",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     },
+     {
+      "rotulo": "Tampas de bueiro e ralos de esgoto, por unidade, por exercício ou fração",
+      "valor": 21.6,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Redes de tubulações para esgoto, água, líquidos químicos ou material tóxico, por km, anualmente",
+      "valor": 43.2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Outras atividades não incluídas, por mês",
+      "valor": 14.4,
+      "periodicidade": "Mensal"
+     }
     ]
    },
    "periodicidade": "mensal ou anual",
    "vencimento": "No ato do licenciamento da ocupação e nas renovações.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XII" },
-    { "doc": "ctm-255-2007", "pagina": 144, "artigo": "Tabela XII — redação de 2007, em UFM" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 4,
+     "artigo": "Decreto 003/2013 — Tabela XII"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 144,
+     "artigo": "Tabela XII — redação de 2007, em UFM"
+    }
    ],
    "conferencia": "conferido",
    "nota": "EM REAIS, apesar do cabeçalho. Todos os oito valores são múltiplos exatos de 1,44 — 0,5, 10, 2, 10, 10, 15, 30 e 10 UFM. Esta é a tabela que sustenta a cobrança de posteamento e de rede de tubulação das concessionárias, que costuma ser a de maior valor isolado do Município.",
-   "vigencia": { "de": "2013", "ate": null }
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "precos-publicos-abate-transporte",
@@ -514,23 +2444,58 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Abate, por unidade — bovinos", "valor": 14.4, "periodicidade": "Por unidade" },
-     { "rotulo": "Abate, por unidade — suínos", "valor": 8.64, "periodicidade": "Por unidade" },
-     { "rotulo": "Abate, por unidade — caprinos e ovinos", "valor": 5.76, "periodicidade": "Por unidade" },
-     { "rotulo": "Transporte de carne do matadouro ao local de venda — bovinos", "valor": 7.2, "periodicidade": "Por unidade" },
-     { "rotulo": "Transporte de carne do matadouro ao local de venda — suínos", "valor": 4.32, "periodicidade": "Por unidade" },
-     { "rotulo": "Transporte de carne do matadouro ao local de venda — caprinos e ovinos", "valor": 2.88, "periodicidade": "Por unidade" }
+     {
+      "rotulo": "Abate, por unidade — bovinos",
+      "valor": 14.4,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Abate, por unidade — suínos",
+      "valor": 8.64,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Abate, por unidade — caprinos e ovinos",
+      "valor": 5.76,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Transporte de carne do matadouro ao local de venda — bovinos",
+      "valor": 7.2,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Transporte de carne do matadouro ao local de venda — suínos",
+      "valor": 4.32,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Transporte de carne do matadouro ao local de venda — caprinos e ovinos",
+      "valor": 2.88,
+      "periodicidade": "Por unidade"
+     }
     ]
    },
    "periodicidade": "por unidade",
    "vencimento": "No ato da prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 132, "artigo": "art. 395 e art. 396" },
-    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XIII" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 132,
+     "artigo": "art. 395 e art. 396"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 4,
+     "artigo": "Decreto 003/2013 — Tabela XIII"
+    }
    ],
    "conferencia": "conferido",
    "nota": "PREÇO PÚBLICO, NÃO TAXA — não se sujeita à anterioridade nem exige lei para reajuste: o art. 395 autoriza o Prefeito a baixar decreto sobre preços públicos, e o parágrafo manda reajustá-los quando se tornarem deficitários. Valores em reais, todos múltiplos de 1,44 — 10, 6, 4, 5, 3 e 2 UFM. O art. 396 diz que as tabelas anexas vão de I a XII, incluída a de Preços Públicos: a de Preços Públicos é a XIII, e a numeração do artigo não a alcança.",
-   "vigencia": { "de": "2013", "ate": null }
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   },
   {
    "id": "precos-publicos-servico-especial",
@@ -542,22 +2507,53 @@
     "tipo": "itens",
     "unidade": "reais",
     "itens": [
-     { "rotulo": "Remoção especial de árvores, por unidade", "valor": 14.4, "periodicidade": "Por unidade" },
-     { "rotulo": "Remoção de metralha e entulhos, por m³", "valor": 14.4, "periodicidade": "Por m³" },
-     { "rotulo": "Limpeza de terrenos, para retirada do lixo, por m²", "valor": 0.28, "periodicidade": "Por m²" },
-     { "rotulo": "Remoção de lixo em horário especial", "valor": 14.4, "periodicidade": "Por ato" }
+     {
+      "rotulo": "Remoção especial de árvores, por unidade",
+      "valor": 14.4,
+      "periodicidade": "Por unidade"
+     },
+     {
+      "rotulo": "Remoção de metralha e entulhos, por m³",
+      "valor": 14.4,
+      "periodicidade": "Por m³"
+     },
+     {
+      "rotulo": "Limpeza de terrenos, para retirada do lixo, por m²",
+      "valor": 0.28,
+      "periodicidade": "Por m²"
+     },
+     {
+      "rotulo": "Remoção de lixo em horário especial",
+      "valor": 14.4,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "No ato da prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-255-2007", "pagina": 132, "artigo": "art. 395" },
-    { "doc": "ctm-255-2007", "pagina": 92, "artigo": "art. 214" },
-    { "doc": "ctm-255-2007", "pagina": 4, "artigo": "Decreto 003/2013 — Tabela XIII" }
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 132,
+     "artigo": "art. 395"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 92,
+     "artigo": "art. 214"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 4,
+     "artigo": "Decreto 003/2013 — Tabela XIII"
+    }
    ],
    "conferencia": "conferido",
    "nota": "NÃO CONFUNDIR COM A TAXA DE COLETA DE LIXO. O art. 214, § 1º separa as duas coisas: a coleta e remoção de lixo comum é serviço de limpeza pública e vira TAXA (Tabela I, em UFM); a remoção especial de árvores, metralha, entulho e o lixo em horário especial são PREÇO PÚBLICO (Tabela XIII, em reais). Cobrar como taxa o que a lei põe como preço, ou o contrário, é o erro mais comum aqui. O valor de R$ 0,28 por m² de limpeza de terreno é 0,2 UFM × 1,44 arredondado — mais uma marca da conversão.",
-   "vigencia": { "de": "2013", "ate": null }
+   "vigencia": {
+    "de": "2013",
+    "ate": null
+   }
   }
  ]
 }
