@@ -1003,7 +1003,7 @@
       "periodicidade": "Anual"
      },
      {
-      "rotulo": "073 — Varejista — marcenarias",
+      "rotulo": "073 — Varejista — mercearias",
       "valor": 72.0,
       "periodicidade": "Anual"
      },
@@ -1318,8 +1318,8 @@
      "artigo": "Tabela IV — redação de 2007, em UFM"
     }
    ],
-   "conferencia": "revisar",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. São 110 atividades, numeradas de 020 a 129 nas páginas 2 e 3, agrupadas em comércio atacadista, comércio varejista e prestação de serviço. AS ATIVIDADES 001 A 019 NÃO ESTÃO NO DECRETO — o bloco encadernado começa no item 020, e os dezenove primeiros só constam da redação de 2007, em UFM, a partir da página 136. É AQUI QUE SE PROVA QUE O DECRETO ESTÁ EM REAIS: o item 006, Calçados, vale 80,00 na Tabela IV de 2007 e 115,20 na do Decreto — exatamente 80 × 1,44. O mesmo em 40 → 57,60, 60 → 86,40, 70 → 100,80 e 120 → 172,80. O maior valor da tabela é o das instituições financeiras, R$ 432,00, trezentas UFM.",
+   "conferencia": "conferido",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. AS 110 ATIVIDADES CONFEREM, uma a uma. Duas foram verificadas à mão porque o extrator tropeçou no número de página: a 103, ensino de jardim da infância, 30 UFM em 2007 e R$ 43,20 no Decreto; e a 129, outros serviços, 40 UFM e R$ 57,60. São 110 atividades numeradas de 020 a 129 nas páginas 2 e 3, agrupadas em comércio atacadista, comércio varejista e prestação de serviço. AS ATIVIDADES 001 A 019 NÃO ESTÃO NO DECRETO — o bloco encadernado começa no item 020, e as dezenove primeiras só constam da redação de 2007, em UFM, a partir da página 136. O maior valor é o das instituições financeiras, R$ 432,00, trezentas UFM. O item 073 é impresso \"Mercenarias\" no Decreto e \"Mercearias\" em 2007 — é a mercearia, não a marcenaria.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -1512,7 +1512,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. São 29 itens numerados, com 31 valores porque o item 11, dos restaurantes e bares, se divide em 1ª, 2ª e 3ª categoria — e a lei NÃO define o que separa uma categoria da outra, embora a diferença vá de R$ 43,20 a R$ 21,60. Sem critério em regulamento, o enquadramento fica sem amparo. O item 7 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Trinta dos trinta e um valores conferem. O DESVIO É O ITEM 25, POSTO DE VENDA DE GLP: a redação de 2007 dá 30 UFM, que convertidas seriam R$ 43,20, e o Decreto imprime R$ 21,60 — exatamente a metade. Conferido na imagem da página 5: está impresso 21,60. Ou o Decreto reduziu a taxa do GLP pela metade, ou errou o número; a decisão é do Município. São 29 itens numerados, com 31 valores porque o item 11, dos restaurantes e bares, se divide em 1ª, 2ª e 3ª categoria — e a lei NÃO define o que separa uma categoria da outra, embora a diferença vá de R$ 43,20 a R$ 21,60. O item 7 só alcança mercadinho e mercearia NÃO inscritos como microempresa.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -1590,7 +1590,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. A PERIODICIDADE MUDA DE ITEM PARA ITEM e está registrada em cada linha: a publicidade sonora é por ANO, o out-door é por MÊS, e a publicidade em terreno é por m² ao ANO. Lançar tudo como anual multiplica a conta por doze em metade da tabela.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Os oito conferem. A PERIODICIDADE MUDA DE ITEM PARA ITEM e está registrada em cada linha: a publicidade sonora é por ANO, o out-door é por MÊS, e a publicidade em terreno é por m² ao ANO. Lançar tudo como anual multiplica a conta por doze em metade da tabela.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -1658,7 +1658,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. DOIS VALORES FORA DO PADRÃO, e os dois foram conferidos na imagem da página 6 — estão impressos assim. Os R$ 21,00 do motor até 100 hp não são múltiplo de 1,44 (dariam R$ 21,60, quinze UFM), e os R$ 18,30 de \"outras fora das especificações\" também não. Todos os demais são múltiplos exatos. Repare que o motor de até 50 hp e a máquina em geral custam o mesmo R$ 14,40.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Cinco dos sete conferem, e OS DOIS DESVIOS AGORA TÊM O VALOR ESPERADO. O motor de até 100 hp vale 15 UFM em 2007, o que daria R$ 21,60; o Decreto imprime R$ 21,00. E \"outras fora das especificações\" vale 20 UFM, o que daria R$ 28,80; o Decreto imprime R$ 18,30. Os dois foram conferidos na imagem da página 6 — estão impressos assim. Repare que o motor de até 50 hp e a máquina em geral custam o mesmo R$ 14,40.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -1711,7 +1711,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. Conferidor: todos os valores desta tabela são múltiplos exatos de R$ 1,44, a UFM de 2013, o que confirma a conversão e a leitura. SÃO DUAS COBRANÇAS POR VEÍCULO: taxa de licença e taxa de fiscalização, somadas. O ônibus paga R$ 172,80 no total contra R$ 50,40 do alternativo. A tabela imprime \"ALTENATIVO\", sem o R.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Os quatro conferem. SÃO DUAS COBRANÇAS POR VEÍCULO: taxa de licença e taxa de fiscalização, somadas. O ônibus paga R$ 172,80 no total contra R$ 50,40 do alternativo. A grafia \"ALTENATIVO\", sem o R, vem da redação de 2007 e foi mantida no Decreto.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -1789,7 +1789,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "CORREÇÃO DE LEITURA: a versão anterior deste cadastro rotulava a primeira linha como \"antecipação\" e a segunda como \"prorrogação\". A imagem da página 7 mostra outra coisa — a PRORROGAÇÃO tem duas faixas, até às 22:00 e além das 22:00, e a ANTECIPAÇÃO tem uma só, com os mesmos valores da primeira faixa da prorrogação. Os números estavam certos; os rótulos não. VALOR FORA DO PADRÃO: os R$ 18,80 da prorrogação além das 22:00, por dia, não são múltiplo de 1,44 — 18,80 ÷ 1,44 = 13,06. Pela posição na tabela deveria ser R$ 21,60, quinze UFM. Está impresso 18,80 e foi registrado como impresso.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Oito dos nove conferem. O DESVIO é a prorrogação além das 22:00 por dia: 20 UFM em 2007, que dariam R$ 28,80, e o Decreto imprime R$ 18,80. Conferido na imagem da página 7. CORREÇÃO DE LEITURA ANTERIOR: este cadastro já rotulou a primeira linha como \"antecipação\" e a segunda como \"prorrogação\". A imagem mostra outra coisa — a PRORROGAÇÃO tem duas faixas, até às 22:00 e além das 22:00, e a ANTECIPAÇÃO tem uma só, com os mesmos valores da primeira faixa.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -2072,7 +2072,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. QUATRO PERIODICIDADES POR ITEM — dia, semana, mês e evento —, e cada uma virou uma linha para não haver dúvida sobre qual coluna se aplica. Repare que em vários itens o valor POR EVENTO é igual ao POR MÊS, e nas barracas em período festivo o evento custa MENOS que o mês. VALOR FORA DO PADRÃO: os R$ 21,50 do box de referência A, por mês, não são múltiplo de 1,44 — dariam R$ 21,60, quinze UFM. Está impresso assim na página 7. Os R$ 3,60 e R$ 5,04 dos boxes B e D são meias-UFM (2,5 e 3,5), o que a tabela usa de propósito nessa coluna.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Quarenta e sete dos quarenta e oito conferem. O DESVIO é o box de referência A por mês: 15 UFM em 2007, que dariam R$ 21,60, e o Decreto imprime R$ 21,50. Conferido na imagem da página 7. QUATRO PERIODICIDADES POR ITEM — dia, semana, mês e evento —, e cada uma virou uma linha para não haver dúvida sobre qual coluna se aplica. Em vários itens o valor POR EVENTO é igual ao POR MÊS, e nas barracas em período festivo o evento custa MENOS que o mês.",
    "vigencia": {
     "de": "2013",
     "ate": null
@@ -2355,7 +2355,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "A coluna de valores do Decreto é impressa DESLOCADA UMA LINHA PARA BAIXO — a célula encosta na borda inferior da sua linha. A leitura respeitou esse deslocamento. São 48 linhas, lidas nas páginas 7 e 8. AS FRAÇÕES SÃO A PROVA DA CONVERSÃO: 0,57 / 0,72 / 0,86 / 1,00 / 0,28 / 1,15 são 0,4 / 0,5 / 0,6 / 0,7 / 0,2 / 0,8 UFM multiplicados por 1,44 e arredondados ao centavo — número de UFM não sai quebrado assim. DEFEITO DE IMPRESSÃO: o item 1.2 da tabela lê-se \"edificações residenciais acima de 601 até 100 m²\", em que 601 é erro por 60; o item 10.2, que trata do mesmo, diz \"acima de 61\". A lei usa 60 e 61 para a mesma fronteira em pontos diferentes. O título da tabela imprime \"OBRA PARTICULA\", sem o R.",
+   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. Quarenta e sete dos quarenta e oito conferem. O DESVIO é o item 10.3, renovação de alvará de edificação residencial acima de 100 m²: 0,60 UFM em 2007, que dariam R$ 0,86, e o Decreto imprime R$ 0,80. Conferido na imagem da página 8. AS FRAÇÕES SÃO A PROVA DA CONVERSÃO: 0,57 / 0,72 / 0,86 / 1,00 / 0,28 / 1,15 são 0,4 / 0,5 / 0,6 / 0,7 / 0,2 / 0,8 UFM multiplicados por 1,44 e arredondados ao centavo. DEFEITO DE IMPRESSÃO: o item 1.2 lê-se \"acima de 601 até 100 m²\", em que 601 é erro por 60; o item 10.2, que trata do mesmo, diz \"acima de 61\". O título imprime \"OBRA PARTICULA\", sem o R.",
    "vigencia": {
     "de": "2013",
     "ate": null
