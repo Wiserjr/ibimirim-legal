@@ -147,6 +147,26 @@ for (const slug of slugs) {
       ['conferido', 'informado', 'revisar'].includes(c.conferencia || 'informado'),
       `${onde}: grau de conferência desconhecido "${c.conferencia}"`,
     );
+
+    // --- o artigo citado tem de estar na página citada ------------------
+    // Não basta a página existir: quem clica em "Ver fundamento" precisa cair
+    // no dispositivo. Artigo que atravessa a virada de página é normal, então
+    // aceita-se a vizinha; só falha quando o artigo está longe dali. Foi assim
+    // que apareceu o art. 80 de Vertente do Lério, citado na página 63 quando
+    // está na 38 — o servidor caía no capítulo do ITBI.
+    for (const f of c.fundamento) {
+      const numeros = [...String(f.artigo || '').matchAll(/arts?\.?\s*(\d{1,4})/gi)].map(m => Number(m[1]));
+      if (!numeros.length) continue;
+      const doc = laws.documents.find(d => d.id === f.doc);
+      const perto = [f.pagina - 1, f.pagina, f.pagina + 1]
+        .map(n => doc?.pages.find(p => p.page === n)?.text || '').join(' ');
+      if (numeros.some(n => new RegExp(`Art\.?\s*${n}\b`).test(perto))) continue;
+      const longe = numeros.flatMap(n => (doc?.pages || [])
+        .filter(p => new RegExp(`Art\.?\s*${n}\s*[-.]`).test(p.text) && Math.abs(p.page - f.pagina) > 2)
+        .map(p => `art. ${n} está na p.${p.page}`));
+      assert.equal(longe.length, 0,
+        `${onde}: cita ${f.doc} p.${f.pagina} para "${f.artigo}", mas ${longe[0]}`);
+    }
   }
 
   // --- valores em UFM nunca trazem reais gravados ----------------------

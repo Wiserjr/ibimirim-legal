@@ -345,6 +345,34 @@ tabela certa é a do IX. Registrar em vez de escolher é a regra — quem decide
 Nada, em cobertura: os nove estão cadastrados. O que falta é o **alerta automático de vigência**,
 abaixo.
 
+### Como se confere uma tabela transcrita
+
+Duas ferramentas, porque nem toda página pode ser conferida do mesmo jeito.
+
+**Quando a mesma tabela existe duas vezes no acervo**, uma prova a outra. Foi o
+caso de Jurema: as treze Tabelas aparecem em UFM na redação de 2007 e em reais
+no Decreto de 2013, e ali o reconhecimento entrega rótulo e valor na MESMA linha
+de texto. Multiplicando por 1,44 dá para conferir célula a célula. Foram 279
+pares; 273 conferem e os seis desvios estão registrados com o valor que a
+conversão daria.
+
+**Quando não existe segunda via**, `python tools/conferir_tabelas.py` faz a
+metade verificável: todo valor que o cadastro afirma tem de aparecer no texto da
+página que ele cita. Não prova o emparelhamento entre rótulo e valor, mas pega
+valor inventado, dígito trocado, casa decimal errada e tabela citada na página
+errada. Hoje: **1.086 de 1.088**, e os dois restantes foram conferidos na imagem.
+
+O programa também confere se o **artigo citado aparece na página citada** — e foi
+isso que achou o art. 80 de Vertente do Lério, apontado para a página 63 quando
+está na 38. A conferência virou asserção em `tests/municipios.test.mjs`.
+
+**Não confie no recorte de imagem para julgar alinhamento.** As páginas
+digitalizadas de encadernado com espiral têm curvatura, e o deslocamento entre a
+coluna do rótulo e a do valor cresce ao longo da folha — em Jurema vai de +30px
+no alto a +49px embaixo, e 49px é quase a altura de uma linha. Num recorte justo
+o valor aparece colado ao rótulo seguinte. Duas vezes nesta rodada eu conclui que
+uma transcrição estava deslocada quando não estava.
+
 ### A tabela e a calculadora
 
 Cada cobrança que tem itens desenha a tabela no cartão. Quem não tem, mas aponta
