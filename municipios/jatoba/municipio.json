@@ -213,5 +213,13 @@
    "tipo": "nota",
    "texto": "Três cobranças estão marcadas como <strong>a revisar</strong>, por defeito no texto publicado: na licença de obras, “casa com mais de 40 m²” e “casa acima de 40 m²” têm valores diferentes para a mesma condição; nos serviços urbanos, a limpeza de imóvel não edificado ficou sem percentual e as faixas de iluminação se sobrepõem (“501 a 1000” e “acima de 500”); e no ISS fixo, o valor do nível superior não é fração redonda do VR."
   }
+ ],
+ "bases": [
+  {
+   "id": "vr",
+   "sigla": "VR",
+   "rotulo": "Valor de Referência",
+   "nota": "O art. 113 define o VR como 100 UFIR — índice federal extinto em outubro de 2000. Os R$ 91,80 do artigo são valor de 1997. Informe aqui o VR que o Município fixou para o exercício; sem ele nenhuma taxa de Jatobá converte em reais."
+  }
  ]
 }

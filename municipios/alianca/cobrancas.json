@@ -15,12 +15,23 @@
    "periodicidade": "anual",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 131, "artigo": "art. 396" },
-    { "doc": "ctm-041-2017", "pagina": 20, "artigo": "art. 64, § 1º" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 131,
+     "artigo": "art. 396"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 20,
+     "artigo": "art. 64, § 1º"
+    }
    ],
    "conferencia": "conferido",
    "nota": "SEM A UFM DO EXERCÍCIO, NENHUMA DAS TREZE TABELAS CONVERTE EM REAIS — é a pendência mais consequente do município, e o acervo não traz o decreto que a fixa. A UFM não serve só para as tabelas: o art. 64, § 1º manda atualizar o crédito tributário pela variação nominal da UFM, de modo que ela também comanda a correção da dívida. Peça ao Município o decreto do exercício corrente e a série histórica.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iptu-aliquotas",
@@ -33,20 +44,43 @@
     "unidade": "percentual",
     "sobre": "o valor venal do imóvel",
     "itens": [
-     { "rotulo": "Terreno", "valor": 2, "periodicidade": "Anual" },
-     { "rotulo": "Prédio ou unidade imobiliária autônoma", "valor": 0.5, "periodicidade": "Anual" }
+     {
+      "rotulo": "Terreno",
+      "valor": 2,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Prédio ou unidade imobiliária autônoma",
+      "valor": 0.5,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Pago de uma só vez ou parceladamente, na forma e nos prazos definidos em regulamento. Quem opta pela cota única até o vencimento pode ter desconto (art. 150, § 1º). O recolhimento é feito em rede bancária, casas lotéricas ou postos autorizados, por DAM.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 37, "artigo": "art. 131" },
-    { "doc": "ctm-041-2017", "pagina": 40, "artigo": "art. 139" },
-    { "doc": "ctm-041-2017", "pagina": 43, "artigo": "art. 150" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 37,
+     "artigo": "art. 131"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 40,
+     "artigo": "art. 139"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 43,
+     "artigo": "art. 150"
+    }
    ],
    "conferencia": "conferido",
    "nota": "A DIFERENÇA ENTRE TERRENO E PRÉDIO É DE QUATRO VEZES — 2% contra 0,5% —, o que torna o enquadramento a decisão mais cara do lançamento do IPTU em Aliança. PROGRESSIVIDADE: o parágrafo único do art. 139, na redação da LC nº 049/2021, manda que os imóveis situados em área incluída no Plano Diretor que não estejam edificados, sejam subutilizados ou não utilizados paguem alíquotas progressivas COM ACRÉSCIMO DE 0,5% AO ANO, até que se promova o adequado aproveitamento. É acréscimo anual cumulativo, não alíquota fixa, e depende de o imóvel estar em área do Plano Diretor. INCIDÊNCIA FORA DA ZONA URBANA: o art. 133 faz o IPTU alcançar o sítio de recreio localizado fora da zona urbana cuja produção eventual não se destine a comércio, e afasta o imposto do imóvel dentro da zona urbana com destinação agrícola, pecuária ou agroindustrial, qualquer que seja a área.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iptu-base-mapa-de-valores",
@@ -61,12 +95,23 @@
    "periodicidade": "anual",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 39, "artigo": "art. 138" },
-    { "doc": "ctm-041-2017", "pagina": 40, "artigo": "art. 140 e art. 141" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 39,
+     "artigo": "art. 138"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 40,
+     "artigo": "art. 140 e art. 141"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O MAPA DE VALORES NÃO ESTÁ NO CÓDIGO. O art. 140 delega a avaliação a regulamento próprio e decreto do Executivo, e é esse ato — não o Código — que traz os valores por logradouro e os coeficientes. Peça-o ao Município: sem ele o IPTU de Aliança não se calcula, mesmo sabendo a alíquota. AVALIAÇÃO JUDICIAL PREVALECE: o parágrafo único do art. 140 é expresso em que, em qualquer hipótese, a avaliação judicial prevalece sobre a administrativa — é o dispositivo a citar quando há laudo em processo.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iptu-valor-fixo-cadunico",
@@ -82,12 +127,23 @@
    "periodicidade": "anual",
    "vencimento": "No lançamento do exercício.",
    "fundamento": [
-    { "doc": "lc-065-2025", "pagina": 1, "artigo": "art. 1º e art. 2º" },
-    { "doc": "lc-065-2025", "pagina": 2, "artigo": "requisitos e prazo" }
+    {
+     "doc": "lc-065-2025",
+     "pagina": 1,
+     "artigo": "art. 1º e art. 2º"
+    },
+    {
+     "doc": "lc-065-2025",
+     "pagina": 2,
+     "artigo": "requisitos e prazo"
+    }
    ],
    "conferencia": "conferido",
    "nota": "VALE SÓ PARA 2025 — LEIA ANTES DE APLICAR EM 2026. O art. 1º diz, com todas as letras, \"para o exercício financeiro de 2025\". Não é benefício permanente: sem lei nova que o prorrogue, não há valor fixo de R$ 30,00 no exercício seguinte, e o IPTU volta à regra do art. 139. Confirme com o Município se houve prorrogação antes de lançar. OS QUATRO REQUISITOS SÃO CUMULATIVOS: estar inscrito no CadÚnico e elegível a ao menos um benefício; renda familiar per capita mensal de até meio salário mínimo por domicílio; possuir ou ocupar imóvel residencial urbano sem cadastro imobiliário regular anterior ao exercício de 2025; e realizar o cadastro imobiliário no Setor de Tributos até a data limite do recadastramento. O terceiro requisito é o mais fácil de errar: alcança quem NÃO tinha cadastro regular, isto é, é medida de regularização cadastral, não de isenção para quem já era cadastrado.",
-   "vigencia": { "de": "2025", "ate": "2025" }
+   "vigencia": {
+    "de": "2025",
+    "ate": "2025"
+   }
   },
   {
    "id": "itbi-aliquotas",
@@ -100,22 +156,53 @@
     "unidade": "percentual",
     "sobre": "o valor avaliado ou declarado do imóvel ou direito transmitido ou cedido",
     "itens": [
-     { "rotulo": "SFH — sobre o valor da parte financiada", "valor": 0.5, "periodicidade": "Por ato" },
-     { "rotulo": "SFH — sobre o valor da parte não financiada", "valor": 1, "periodicidade": "Por ato" },
-     { "rotulo": "Gleba rural de até 10 ha, de assentamento, para cultivo pelo adquirente e sua família, sem outro imóvel rural no Município", "valor": 0.5, "periodicidade": "Por ato" },
-     { "rotulo": "Imóvel em projeto rural especial titularizado, categoria de médio produtor", "valor": 1, "periodicidade": "Por ato" },
-     { "rotulo": "Demais transmissões a título oneroso", "valor": 2, "periodicidade": "Por ato" }
+     {
+      "rotulo": "SFH — sobre o valor da parte financiada",
+      "valor": 0.5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "SFH — sobre o valor da parte não financiada",
+      "valor": 1,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Gleba rural de até 10 ha, de assentamento, para cultivo pelo adquirente e sua família, sem outro imóvel rural no Município",
+      "valor": 0.5,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Imóvel em projeto rural especial titularizado, categoria de médio produtor",
+      "valor": 1,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Demais transmissões a título oneroso",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "Lançamento na forma do art. 163.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 50, "artigo": "art. 162" },
-    { "doc": "ctm-041-2017", "pagina": 51, "artigo": "art. 162, incisos I a IV" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 50,
+     "artigo": "art. 162"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 51,
+     "artigo": "art. 162, incisos I a IV"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O INCISO IV É O QUE FAZ ESTA TABELA FUNCIONAR: \"nas demais transmissões a título oneroso: 2%\". É a alíquota residual, e é ela que se aplica à compra e venda urbana comum — o caso mais frequente. Vale registrar a comparação, porque o Código de Jurema é do mesmo modelo de texto e NÃO tem esse inciso IV, o que lá deixa a compra e venda urbana sem alíquota. Aqui não há esse problema. Repare ainda que a alíquota do SFH sobre a parte não financiada é de 1%, metade da de Jurema para a mesma hipótese.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iss-aliquota",
@@ -131,11 +218,18 @@
    "periodicidade": "mensal",
    "vencimento": "Na forma do Código.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 77, "artigo": "art. 184" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 77,
+     "artigo": "art. 184"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Alíquota única de 5% sobre o preço do serviço, que é o teto do art. 8º, II, da LC nº 116/2003. O § 1º do art. 184 trata da base proporcional quando o serviço do subitem 3.03 da lista é prestado no território de mais de um Município — é o caso das rodovias, ferrovias, dutos e cabos, e a proporção é pela extensão em cada Município.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "iss-autonomo",
@@ -145,17 +239,29 @@
    "sujeitoPassivo": "O profissional autônomo que não tenha a seu serviço empregado da mesma qualificação profissional.",
    "base": {
     "tipo": "formula",
-    "descricao": "Valor fixo anual por categoria profissional, em UFM. A tabela tem 14 linhas e está na aba de taxas."
+    "descricao": "Valor fixo anual por categoria profissional, em UFM. A tabela tem 14 linhas e está na aba de taxas.",
+    "tabela": "tabela-para-recolhimento-de-imposto-sobre-servico-de-qualq"
    },
    "periodicidade": "anual",
    "vencimento": "Anual.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 78, "artigo": "art. 185" },
-    { "doc": "ctm-041-2017", "pagina": 133, "artigo": "Tabela de ISS por profissional autônomo" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 78,
+     "artigo": "art. 185"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 133,
+     "artigo": "Tabela de ISS por profissional autônomo"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O art. 185, § 1º define trabalho pessoal como o simples fornecimento de trabalho por profissional autônomo SEM EMPREGADO DA MESMA QUALIFICAÇÃO — ter empregado de outra qualificação não descaracteriza. O § 2º lista o que não se considera serviço pessoal do próprio contribuinte, e é ali que mora a equiparação a empresa: quando ela ocorre, o autônomo sai da tabela fixa e volta aos 5% sobre o preço do serviço. Vale registrar que Aliança TEM essa tabela, ao contrário do Código de Jurema, que manda aplicar \"alíquota fixa\" sem dizer qual.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "contribuicao-melhoria",
@@ -170,13 +276,28 @@
    "periodicidade": "por obra",
    "vencimento": "A contar da notificação do lançamento.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 111, "artigo": "art. 308" },
-    { "doc": "ctm-041-2017", "pagina": 112, "artigo": "art. 309" },
-    { "doc": "ctm-041-2017", "pagina": 28, "artigo": "art. 94 — imunes pagam contribuição de melhoria" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 111,
+     "artigo": "art. 308"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 112,
+     "artigo": "art. 309"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 28,
+     "artigo": "art. 94 — imunes pagam contribuição de melhoria"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O TETO DE 3% AO ANO É A REGRA MAIS ÚTIL E A MAIS ESQUECIDA: no parcelamento, o art. 309 manda calcular as parcelas de modo que o TOTAL ANUAL não exceda 3% do valor venal do imóvel, tomado do cadastro imobiliário e atualizado à época da cobrança. Isso significa que uma obra cara sobre imóvel modesto se estende por muitos anos — e não pode ser comprimida em prazo menor. O art. 94 registra que as entidades que gozam de IMUNIDADE continuam sujeitas a taxas e à contribuição de melhoria, ressalvadas as exceções da própria Lei: imunidade de imposto não alcança contribuição de melhoria. O art. 307 autoriza convênio com União e Estados para lançar e arrecadar a contribuição de obra federal ou estadual, com percentual da receita para o Município.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-localizacao-funcionamento",
@@ -186,18 +307,34 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela por atividade econômica, com 114 linhas, em UFM. É a maior tabela do Código e está na aba de taxas."
+    "descricao": "Tabela por atividade econômica, com 114 linhas, em UFM. É a maior tabela do Código e está na aba de taxas.",
+    "tabela": "tabela-para-lancamento-e-cobranca-da-taxa-de-fiscalizacao-"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 93, "artigo": "Seção da taxa de fiscalização de localização e funcionamento" },
-    { "doc": "ctm-041-2017", "pagina": 133, "artigo": "Tabela de localização e funcionamento" },
-    { "doc": "ctm-041-2017", "pagina": 136, "artigo": "Tabela de localização e funcionamento" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 93,
+     "artigo": "Seção da taxa de fiscalização de localização e funcionamento"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 133,
+     "artigo": "Tabela de localização e funcionamento"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 136,
+     "artigo": "Tabela de localização e funcionamento"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM — sem o decreto da unidade, não convertem. É a tabela que a equipe mais consulta.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-coleta-lixo",
@@ -207,18 +344,34 @@
    "sujeitoPassivo": "Proprietários, titulares do domínio útil ou possuidores a qualquer título de imóveis no território do Município.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 25 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 25 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-lancamento-e-cobranca-da-taxa-de-coleta-e-remo"
    },
    "periodicidade": "anual",
    "vencimento": "Anual, podendo acompanhar o IPTU.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 89, "artigo": "art. 217" },
-    { "doc": "ctm-041-2017", "pagina": 136, "artigo": "Tabela de coleta e remoção de lixo" },
-    { "doc": "ctm-041-2017", "pagina": 137, "artigo": "Tabela de coleta e remoção de lixo" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 89,
+     "artigo": "art. 217"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 136,
+     "artigo": "Tabela de coleta e remoção de lixo"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 137,
+     "artigo": "Tabela de coleta e remoção de lixo"
+    }
    ],
    "conferencia": "revisar",
    "nota": "A página 89 traz uma marca de alteração — \"(36/2021)\" — indicando que a seção foi modificada por lei posterior. O texto consolidado do acervo alcança a LC nº 049/2021; confirme com o Município se há redação mais nova antes de citar o artigo.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-expediente",
@@ -228,18 +381,34 @@
    "sujeitoPassivo": "Quem requerer o ato.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 25 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 25 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-lancamento-e-cobranca-da-taxa-de-servicos-nao-"
    },
    "periodicidade": "por ato",
    "vencimento": "No requerimento.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 88, "artigo": "art. 214" },
-    { "doc": "ctm-041-2017", "pagina": 137, "artigo": "Tabela de expediente" },
-    { "doc": "ctm-041-2017", "pagina": 138, "artigo": "Tabela de expediente" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 88,
+     "artigo": "art. 214"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 137,
+     "artigo": "Tabela de expediente"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 138,
+     "artigo": "Tabela de expediente"
+    }
    ],
    "conferencia": "conferido",
    "nota": "É a tabela do balcão: certidão, baixa, segunda via, autenticação. Valores em UFM.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-servicos-diversos",
@@ -249,18 +418,34 @@
    "sujeitoPassivo": "Quem requerer o serviço ou der causa a ele.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 38 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 38 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-de-taxa-de-servicos-nao-compulsorios-"
    },
    "periodicidade": "por ato",
    "vencimento": "No requerimento ou na prestação do serviço.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 88, "artigo": "art. 214" },
-    { "doc": "ctm-041-2017", "pagina": 138, "artigo": "Tabela de serviços diversos" },
-    { "doc": "ctm-041-2017", "pagina": 139, "artigo": "Tabela de serviços diversos" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 88,
+     "artigo": "art. 214"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 138,
+     "artigo": "Tabela de serviços diversos"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 139,
+     "artigo": "Tabela de serviços diversos"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Não confundir com a de expediente: esta alcança serviços materiais — apreensão, vistoria, cemitério, numeração —, aquela alcança atos de papel. Valores em UFM.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-vigilancia-sanitaria",
@@ -270,18 +455,34 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 36 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 36 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-de-taxa-de-vigilancia-sanitaria"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 94, "artigo": "art. 236" },
-    { "doc": "ctm-041-2017", "pagina": 139, "artigo": "Tabela de vigilância sanitária" },
-    { "doc": "ctm-041-2017", "pagina": 140, "artigo": "Tabela de vigilância sanitária" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 94,
+     "artigo": "art. 236"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 139,
+     "artigo": "Tabela de vigilância sanitária"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 140,
+     "artigo": "Tabela de vigilância sanitária"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-anuncio",
@@ -291,17 +492,29 @@
    "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 4 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 4 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-de-taxa-de-fiscalizacao-de-anuncio"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 96, "artigo": "art. 244" },
-    { "doc": "ctm-041-2017", "pagina": 140, "artigo": "Tabela de fiscalização de anúncio" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 96,
+     "artigo": "art. 244"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 140,
+     "artigo": "Tabela de fiscalização de anúncio"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Quatro linhas apenas — é a tabela mais enxuta do Código, e por isso a que mais depende de enquadramento por semelhança. Valores em UFM.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-maquinas-motores",
@@ -311,17 +524,29 @@
    "sujeitoPassivo": "O titular do estabelecimento onde estão instalados.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 9 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 9 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-de-taxa-de-fiscalizacao-de-maquinas-m"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 99, "artigo": "art. 252" },
-    { "doc": "ctm-041-2017", "pagina": 141, "artigo": "Tabela de máquinas, motores e aparelhos" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 99,
+     "artigo": "art. 252"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 141,
+     "artigo": "Tabela de máquinas, motores e aparelhos"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM. É taxa distinta da de localização e funcionamento — o mesmo estabelecimento gera as duas.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-veiculo-passageiros",
@@ -331,18 +556,34 @@
    "sujeitoPassivo": "O proprietário ou permissionário do veículo.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 20 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 20 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-de-taxa-de-fiscalizacao-de-veiculo-de"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 101, "artigo": "art. 262" },
-    { "doc": "ctm-041-2017", "pagina": 141, "artigo": "Tabela de veículo de transporte de passageiros" },
-    { "doc": "ctm-041-2017", "pagina": 142, "artigo": "Tabela de veículo de transporte de passageiros" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 101,
+     "artigo": "art. 262"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 141,
+     "artigo": "Tabela de veículo de transporte de passageiros"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 142,
+     "artigo": "Tabela de veículo de transporte de passageiros"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM. Antes de lançar sobre mototaxista, veja a cobrança do programa Mototaxista Amigo: a LC nº 067/2025 institui benefícios fiscais que podem alcançar esta taxa.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-horario-extraordinario",
@@ -352,17 +593,29 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 5 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 5 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-da-taxa-de-fiscalizacao-de-funcioname"
    },
    "periodicidade": "por dia, mês ou ano",
    "vencimento": "No licenciamento do horário especial.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 102, "artigo": "art. 266" },
-    { "doc": "ctm-041-2017", "pagina": 142, "artigo": "Tabela de horário extraordinário" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 102,
+     "artigo": "art. 266"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 142,
+     "artigo": "Tabela de horário extraordinário"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM. Confira na tabela se a linha é por dia, por mês ou por ano antes de lançar — nesta espécie de taxa a periodicidade muda dentro da mesma tabela.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ambulante",
@@ -372,18 +625,34 @@
    "sujeitoPassivo": "O ambulante, o feirante ou quem exercer a atividade eventual.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 11 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 11 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-da-taxa-de-fiscalizacao-do-exercicio-"
    },
    "periodicidade": "por dia, mês ou evento",
    "vencimento": "No licenciamento, antes do início da atividade.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 103, "artigo": "art. 273" },
-    { "doc": "ctm-041-2017", "pagina": 142, "artigo": "Tabela de atividade ambulante" },
-    { "doc": "ctm-041-2017", "pagina": 143, "artigo": "Tabela de atividade ambulante" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 103,
+     "artigo": "art. 273"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 142,
+     "artigo": "Tabela de atividade ambulante"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 143,
+     "artigo": "Tabela de atividade ambulante"
+    }
    ],
    "conferencia": "conferido",
    "nota": "Valores em UFM.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obra-particular",
@@ -393,19 +662,39 @@
    "sujeitoPassivo": "O proprietário ou o responsável pela obra.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 50 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 50 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-cobranca-da-taxa-de-fiscalizacao-de-obra-parti"
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 105, "artigo": "art. 281" },
-    { "doc": "ctm-041-2017", "pagina": 143, "artigo": "Tabela de obra particular" },
-    { "doc": "ctm-041-2017", "pagina": 144, "artigo": "Tabela de obra particular" },
-    { "doc": "lc-071-2026", "pagina": 1, "artigo": "Loteamentos e condomínios privados" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 105,
+     "artigo": "art. 281"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 143,
+     "artigo": "Tabela de obra particular"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 144,
+     "artigo": "Tabela de obra particular"
+    },
+    {
+     "doc": "lc-071-2026",
+     "pagina": 1,
+     "artigo": "Loteamentos e condomínios privados"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Valores em UFM, 50 linhas — é a segunda maior tabela do Código. ATENÇÃO À LC Nº 071/2026, que dispõe sobre loteamentos e condomínios privados e é posterior ao texto consolidado do Código: antes de licenciar loteamento, confira se ela alterou exigências ou valores. Veja também a LC nº 068/2025, que fixa parâmetros do art. 56 do Plano Diretor.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "taxa-abate-transporte-animais",
@@ -415,17 +704,29 @@
    "sujeitoPassivo": "Quem promover o abate ou o transporte.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela com 14 linhas, em UFM, na aba de taxas."
+    "descricao": "Tabela com 14 linhas, em UFM, na aba de taxas.",
+    "tabela": "tabela-para-lancamento-e-cobranca-de-licenca-de-abate-e-tr"
    },
    "periodicidade": "por ato",
    "vencimento": "No licenciamento.",
    "fundamento": [
-    { "doc": "ctm-041-2017", "pagina": 144, "artigo": "Tabela de licença de abate e transporte de animais" },
-    { "doc": "ctm-041-2017", "pagina": 145, "artigo": "Tabela de licença de abate e transporte de animais" }
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 144,
+     "artigo": "Tabela de licença de abate e transporte de animais"
+    },
+    {
+     "doc": "ctm-041-2017",
+     "pagina": 145,
+     "artigo": "Tabela de licença de abate e transporte de animais"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Valores em UFM. Não se localizou no corpo do Código a seção que institui esta taxa e define seu fato gerador — a tabela existe no anexo e o dispositivo correspondente precisa ser confirmado com o Município antes de autuar. Registrar em vez de escolher: pode ser seção que a busca não alcançou por defeito de reconhecimento do texto, ou pode ser tabela sem artigo que a sustente.",
-   "vigencia": { "de": "2017", "ate": null }
+   "vigencia": {
+    "de": "2017",
+    "ate": null
+   }
   },
   {
    "id": "mototaxista-amigo",
@@ -440,12 +741,23 @@
    "periodicidade": "conforme o programa",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "lc-067-2025", "pagina": 1, "artigo": "art. 1º e art. 2º" },
-    { "doc": "lc-067-2025", "pagina": 2, "artigo": "Capítulo dos benefícios fiscais" }
+    {
+     "doc": "lc-067-2025",
+     "pagina": 1,
+     "artigo": "art. 1º e art. 2º"
+    },
+    {
+     "doc": "lc-067-2025",
+     "pagina": 2,
+     "artigo": "Capítulo dos benefícios fiscais"
+    }
    ],
    "conferencia": "revisar",
    "nota": "É o dispositivo a consultar antes de lançar qualquer taxa sobre mototaxista, em especial a de fiscalização de veículo de transporte de passageiros. O texto reconhecido desta lei vem com as palavras coladas e não serve para citação literal — abra as páginas no leitor para conferir quais benefícios fiscais são concedidos, a quem, e com que condição de permanência. Confirme também se o programa exige contrapartida de qualificação e se ela condiciona o benefício.",
-   "vigencia": { "de": "2025", "ate": null }
+   "vigencia": {
+    "de": "2025",
+    "ate": null
+   }
   }
  ]
 }

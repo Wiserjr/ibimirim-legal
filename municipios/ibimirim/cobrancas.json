@@ -432,7 +432,8 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela I do Anexo IV, com 15 linhas, em reais. Os valores estão na aba de taxas do aplicativo, com busca por item."
+    "descricao": "Tabela I do Anexo IV, com 15 linhas, em reais. Os valores estão na aba de taxas do aplicativo, com busca por item.",
+    "tabela": "taxa-de-fiscalizacao-de-localizacao-e-funcionamento"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
@@ -463,7 +464,8 @@
    "sujeitoPassivo": "O titular do estabelecimento onde a máquina ou motor está instalado.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela II do Anexo IV, com 14 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Tabela II do Anexo IV, com 14 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-de-fiscalizacao-pela-utilizacao-de-maquinas-e-motores"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
@@ -489,7 +491,8 @@
    "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela III do Anexo IV, com 27 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Tabela III do Anexo IV, com 27 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-pela-utilizacao-de-meios-de-publicidade"
    },
    "periodicidade": "varia por item",
    "vencimento": "No licenciamento e na renovação.",
@@ -520,7 +523,8 @@
    "sujeitoPassivo": "O responsável pela obra, na forma do art. 272.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela IV do Anexo IV, a maior do Código, com 148 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Tabela IV do Anexo IV, a maior do Código, com 148 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxas-pela-execucao-de-obras-e-servicos-de-engenharia"
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
@@ -561,7 +565,8 @@
    "sujeitoPassivo": "O ambulante ou quem exercer a atividade eventual.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela V do Anexo IV, com 15 linhas, em reais. Há ainda uma tabela de atividades eventuais, provisórias ou esporádicas no corpo da lei, com 21 linhas."
+    "descricao": "Tabela V do Anexo IV, com 15 linhas, em reais. Há ainda uma tabela de atividades eventuais, provisórias ou esporádicas no corpo da lei, com 21 linhas.",
+    "tabela": "taxas-pelo-exercicio-de-comercio-ou-atividade-eventual-ambul"
    },
    "periodicidade": "por dia, mês ou evento",
    "vencimento": "No licenciamento, antes do início da atividade.",
@@ -592,7 +597,8 @@
    "sujeitoPassivo": "Quem ocupar a área.",
    "base": {
     "tipo": "formula",
-    "descricao": "Itens 10 a 14 do Anexo IV, com 12 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Itens 10 a 14 do Anexo IV, com 12 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-pela-ocupacao-de-areas-em-vias-e-logradouros-publicos-a"
    },
    "periodicidade": "varia por item",
    "vencimento": "No licenciamento da ocupação. É obrigatória a inscrição prévia na repartição competente.",
@@ -623,7 +629,8 @@
    "sujeitoPassivo": "O titular do estabelecimento sujeito à vigilância sanitária.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela de vigilância sanitária do Anexo IV, com 118 linhas por tipo de estabelecimento, em reais. Valores na aba de taxas."
+    "descricao": "Tabela de vigilância sanitária do Anexo IV, com 118 linhas por tipo de estabelecimento, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-de-vigilancia-sanitaria-por-ano"
    },
    "periodicidade": "anual",
    "vencimento": "Anual.",
@@ -659,7 +666,8 @@
    "sujeitoPassivo": "O proprietário, titular do domínio útil ou possuidor do imóvel alcançado pelo serviço.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela I do Anexo V, com 3 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Tabela I do Anexo V, com 3 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-de-coleta-remocao-e-destinacao-de-residuos-solidos-domi"
    },
    "periodicidade": "anual",
    "vencimento": "Anual, podendo ser lançada junto com o IPTU.",
@@ -690,7 +698,8 @@
    "sujeitoPassivo": "O proprietário do animal ou quem requerer o serviço.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela de guarda e abate do Anexo V, com 8 linhas, em reais. Valores na aba de taxas."
+    "descricao": "Tabela de guarda e abate do Anexo V, com 8 linhas, em reais. Valores na aba de taxas.",
+    "tabela": "taxa-de-guarda-abate-e-remocao-de-animais"
    },
    "periodicidade": "por ato",
    "vencimento": "No ato da prestação do serviço ou da liberação do animal.",
@@ -733,7 +742,8 @@
       "valor": 0.35,
       "periodicidade": "Anual"
      }
-    ]
+    ],
+    "tabela": "torres-antenas-placas-solares"
    },
    "periodicidade": "anual",
    "vencimento": "Anual, com o alvará de funcionamento.",

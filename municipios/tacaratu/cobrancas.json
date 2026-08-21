@@ -10,7 +10,8 @@
    "sujeitoPassivo": "A pessoa física ou jurídica inscrita, ou que venha a se inscrever, no Cadastro Municipal de Contribuintes.",
    "base": {
     "tipo": "formula",
-    "descricao": "Valor fixo por subclasse da CNAE 2.0. São 1.297 atividades, de R$ 50,00 a R$ 10.000,00, em 35 valores distintos. A tabela completa está na aba de taxas, com busca por código e por denominação."
+    "descricao": "Valor fixo por subclasse da CNAE 2.0. São 1.297 atividades, de R$ 50,00 a R$ 10.000,00, em 35 valores distintos. A tabela completa está na aba de taxas, com busca por código e por denominação.",
+    "tabela": "anexo-i-licenca-por-atividade"
    },
    "periodicidade": "anual",
    "vencimento": "No ato da inscrição e na renovação; a renovação do alvará tem taxa própria no Anexo IX, item 06.",
@@ -77,8 +78,312 @@
    "fatoGerador": "Licenciamento ambiental de atividade ou empreendimento que pretenda se instalar no território do Município.",
    "sujeitoPassivo": "A pessoa ou empresa que requerer a licença.",
    "base": {
-    "tipo": "formula",
-    "descricao": "Percentual da BCLA (R$ 1.000,00), cruzando o potencial poluidor (baixo, médio, alto) com o porte da empresa (ME, EPP, EMP, EGP). São 5 espécies de ato e 12 combinações cada."
+    "tipo": "itens",
+    "unidade": "percentual",
+    "sobreBase": "bcla",
+    "sobre": "a BCLA — Base de Cálculo de Licença Ambiental",
+    "itens": [
+     {
+      "rotulo": "Licença prévia — potencial poluidor baixo, porte ME",
+      "valor": 1,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor baixo, porte EPP",
+      "valor": 1.5,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor baixo, porte EMP",
+      "valor": 3,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor baixo, porte EGP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor médio, porte ME",
+      "valor": 2,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor médio, porte EPP",
+      "valor": 3,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor médio, porte EMP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor médio, porte EGP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor alto, porte ME",
+      "valor": 4,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor alto, porte EPP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor alto, porte EMP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença prévia — potencial poluidor alto, porte EGP",
+      "valor": 24,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor baixo, porte ME",
+      "valor": 10,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor baixo, porte EPP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor baixo, porte EMP",
+      "valor": 13,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor baixo, porte EGP",
+      "valor": 14,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor médio, porte ME",
+      "valor": 20,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor médio, porte EPP",
+      "valor": 24,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor médio, porte EMP",
+      "valor": 26,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor médio, porte EGP",
+      "valor": 28,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor alto, porte ME",
+      "valor": 40,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor alto, porte EPP",
+      "valor": 48,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor alto, porte EMP",
+      "valor": 52,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de instalação — potencial poluidor alto, porte EGP",
+      "valor": 56,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor baixo, porte ME",
+      "valor": 10,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor baixo, porte EPP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor baixo, porte EMP",
+      "valor": 13,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor baixo, porte EGP",
+      "valor": 14,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor médio, porte ME",
+      "valor": 20,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor médio, porte EPP",
+      "valor": 24,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor médio, porte EMP",
+      "valor": 26,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor médio, porte EGP",
+      "valor": 28,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor alto, porte ME",
+      "valor": 40,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor alto, porte EPP",
+      "valor": 48,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor alto, porte EMP",
+      "valor": 52,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Licença de operação — potencial poluidor alto, porte EGP",
+      "valor": 56,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor baixo, porte ME",
+      "valor": 1,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor baixo, porte EPP",
+      "valor": 1.5,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor baixo, porte EMP",
+      "valor": 3,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor baixo, porte EGP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor médio, porte ME",
+      "valor": 2,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor médio, porte EPP",
+      "valor": 3,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor médio, porte EMP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor médio, porte EGP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor alto, porte ME",
+      "valor": 4,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor alto, porte EPP",
+      "valor": 6,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor alto, porte EMP",
+      "valor": 12,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "Autorização de funcionamento — potencial poluidor alto, porte EGP",
+      "valor": 24,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor baixo, porte ME",
+      "valor": 200,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor baixo, porte EPP",
+      "valor": 200,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor baixo, porte EMP",
+      "valor": 200,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor baixo, porte EGP",
+      "valor": 300,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor médio, porte ME",
+      "valor": 325,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor médio, porte EPP",
+      "valor": 500,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor médio, porte EMP",
+      "valor": 600,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor médio, porte EGP",
+      "valor": 650,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor alto, porte ME",
+      "valor": 800,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor alto, porte EPP",
+      "valor": 850,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor alto, porte EMP",
+      "valor": 950,
+      "periodicidade": "Por licença"
+     },
+     {
+      "rotulo": "EPIA/RIMA — potencial poluidor alto, porte EGP",
+      "valor": 1000,
+      "periodicidade": "Por licença"
+     }
+    ]
    },
    "periodicidade": "por licença",
    "vencimento": "No requerimento da licença.",

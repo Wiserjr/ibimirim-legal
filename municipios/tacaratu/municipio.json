@@ -247,5 +247,14 @@
    "tipo": "nota",
    "texto": "<strong>Caraibeiras é distrito de Tacaratu</strong>, não município: não tem legislação tributária própria, e este Código o alcança."
   }
+ ],
+ "bases": [
+  {
+   "id": "bcla",
+   "sigla": "BCLA",
+   "rotulo": "Base de Cálculo de Licença Ambiental",
+   "padrao": 1000,
+   "nota": "O art. 281 a fixa em R$ 1.000,00 e manda atualizá-la na forma do art. 93. Já vem preenchida com o valor da lei; troque se o Município publicou atualização."
+  }
  ]
 }

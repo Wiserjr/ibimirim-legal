@@ -15,16 +15,43 @@
    "periodicidade": "—",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 7, "artigo": "art. 22 — cita o anexo I (valores de construção) e o anexo II (valores de terrenos)" },
-    { "doc": "ctm-099-2007", "pagina": 10, "artigo": "art. 26 — cita o anexo III (fatores de correção)" },
-    { "doc": "ctm-099-2007", "pagina": 45, "artigo": "art. 89 — cita o anexo IV (alíquotas do ISS por tipo de serviço)" },
-    { "doc": "ctm-099-2007", "pagina": 118, "artigo": "TABELA I — licença para localização e funcionamento" },
-    { "doc": "ctm-099-2007", "pagina": 130, "artigo": "conteúdo do anexo I/II/III, sem título de anexo" },
-    { "doc": "ctm-099-2007", "pagina": 133, "artigo": "conteúdo do anexo IV, sob o título \"Tabela de serviços\"" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 7,
+     "artigo": "art. 22 — cita o anexo I (valores de construção) e o anexo II (valores de terrenos)"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 10,
+     "artigo": "art. 26 — cita o anexo III (fatores de correção)"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 45,
+     "artigo": "art. 89 — cita o anexo IV (alíquotas do ISS por tipo de serviço)"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 118,
+     "artigo": "TABELA I — licença para localização e funcionamento"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 130,
+     "artigo": "conteúdo do anexo I/II/III, sem título de anexo"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 133,
+     "artigo": "conteúdo do anexo IV, sob o título \"Tabela de serviços\""
+    }
    ],
    "conferencia": "conferido",
    "nota": "QUEM PROCURAR \"ANEXO I\" VAI ENCONTRAR A TABELA ERRADA. O Código diz: anexo I são as tabelas de valores de CONSTRUÇÃO (art. 22, I); anexo II, as de valores de TERRENOS (art. 22, II); anexo III, os FATORES DE CORREÇÃO do terreno e da edificação (art. 26); anexo IV, as ALÍQUOTAS DO ISS por tipo de serviço (art. 89). Nas páginas anexas, porém, TABELA I é a taxa de licença para localização e funcionamento, TABELA II é o horário especial, TABELA III é a execução de obras e TABELA IV é a publicidade — nada a ver. O conteúdo que o Código chama de anexos I a III aparece SEM TÍTULO DE ANEXO nas páginas 130 a 132 (valor do metro quadrado da edificação por setor, alíquotas de imóvel não edificado, fatores de correção do valor venal, componentes da edificação); o do anexo IV aparece na página 133 sob o título \"Tabela de serviços — LISTA DE SERVIÇOS\". AO CITAR EM DESPACHO, descreva o conteúdo e a página, nunca só o número do anexo. E peça ao Município a confirmação de qual numeração vale, porque a divergência é do texto publicado.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "bloco-de-tabelas-sem-titulo",
@@ -39,14 +66,33 @@
    "periodicidade": "—",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 118, "artigo": "TABELA I — em % sobre o Valor de Referência" },
-    { "doc": "ctm-099-2007", "pagina": 139, "artigo": "segundo bloco — em UFM, sem título" },
-    { "doc": "ctm-099-2007", "pagina": 144, "artigo": "segundo bloco — taxa de expediente, em UFM" },
-    { "doc": "ctm-099-2007", "pagina": 148, "artigo": "fim do segundo bloco" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 118,
+     "artigo": "TABELA I — em % sobre o Valor de Referência"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 139,
+     "artigo": "segundo bloco — em UFM, sem título"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 144,
+     "artigo": "segundo bloco — taxa de expediente, em UFM"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 148,
+     "artigo": "fim do segundo bloco"
+    }
    ],
    "conferencia": "conferido",
    "nota": "A MESMA TAXA APARECE DUAS VEZES, EM UNIDADES E CRITÉRIOS DIFERENTES — e não há nada no texto dizendo qual prevalece. Exemplo: a TAXA DE LICENÇA PARA LOCALIZAÇÃO E FUNCIONAMENTO está na TABELA I (página 118), por ESPECIFICAÇÃO DO ESTABELECIMENTO, em PERCENTUAL SOBRE O VALOR DE REFERÊNCIA, com 45 linhas; e está de novo na página 139, por FAIXA DE ÁREA em metros quadrados, em UFM, com 6 linhas — de 15 UFM até 25 m² a 225 UFM de 250 a 500 m². O mesmo se repete com publicidade, expediente, veículos, prorrogação de horário, ambulante e obras. As duas leituras dão resultados completamente diferentes para o mesmo contribuinte. NÃO ESCOLHA POR CONTA PRÓPRIA: leve a divergência ao Município e peça o ato que esclareça qual bloco está em vigor. Registrar em vez de escolher é o que mantém o cadastro confiável.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "valor-de-referencia-e-ufm",
@@ -61,14 +107,33 @@
    "periodicidade": "anual",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 45, "artigo": "art. 90 — Valor de Referência Fiscal" },
-    { "doc": "ctm-099-2007", "pagina": 118, "artigo": "TABELA I — % sobre o Valor de Referência" },
-    { "doc": "ctm-099-2007", "pagina": 139, "artigo": "segundo bloco — UFM" },
-    { "doc": "ctm-099-2007", "pagina": 8, "artigo": "art. 22, § 3º — atualização das tabelas pelo INPC" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 45,
+     "artigo": "art. 90 — Valor de Referência Fiscal"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 118,
+     "artigo": "TABELA I — % sobre o Valor de Referência"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 139,
+     "artigo": "segundo bloco — UFM"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 8,
+     "artigo": "art. 22, § 3º — atualização das tabelas pelo INPC"
+    }
    ],
    "conferencia": "conferido",
    "nota": "SÃO QUATRO BASES DIFERENTES CONVIVENDO, e confundi-las erra a conta por ordens de grandeza. O acervo NÃO TRAZ o ato que fixa o Valor de Referência, o Valor de Referência Fiscal nem a UFM — sem eles, nem as tabelas de taxa nem o ISS do autônomo convertem em reais. Repare que \"Valor de Referência\" e \"Valor de Referência Fiscal\" aparecem com nomes diferentes em lugares diferentes do mesmo Código, e não há dispositivo dizendo se são a mesma coisa: pergunte isso ao Município junto com os valores. O art. 22, § 3º manda atualizar monetariamente as tabelas de valores de construção e de terrenos pela variação do INPC, com periodicidade previamente definida — índice diferente do que os demais municípios do projeto usam.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iptu-aliquotas",
@@ -81,19 +146,38 @@
     "unidade": "percentual",
     "sobre": "o valor venal do imóvel",
     "itens": [
-     { "rotulo": "Imóvel edificado de uso residencial", "valor": 1, "periodicidade": "Anual" },
-     { "rotulo": "Imóvel edificado — demais usos", "valor": 1.25, "periodicidade": "Anual" }
+     {
+      "rotulo": "Imóvel edificado de uso residencial",
+      "valor": 1,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "Imóvel edificado — demais usos",
+      "valor": 1.25,
+      "periodicidade": "Anual"
+     }
     ]
    },
    "periodicidade": "anual",
    "vencimento": "Lançamento anual.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 10, "artigo": "art. 28" },
-    { "doc": "ctm-099-2007", "pagina": 130, "artigo": "alíquotas de imóvel não edificado, no anexo" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 10,
+     "artigo": "art. 28"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 130,
+     "artigo": "alíquotas de imóvel não edificado, no anexo"
+    }
    ],
    "conferencia": "revisar",
    "nota": "AS ALÍQUOTAS DO IMÓVEL NÃO EDIFICADO NÃO ESTÃO NO ARTIGO — o art. 28 traz apenas o inciso I, dos edificados, e as do não edificado aparecem no anexo, na página 130, com cinco linhas. Confira lá antes de lançar terreno. DESCONTO POR MURO E CALÇADA, que é o inverso do que outros municípios fazem: o § 2º manda DECRESCER a alíquota em 0,20 ponto quando a testada estiver murada em toda a extensão, e mais 0,20 quando houver calçada — os dois descontos são cumulativos no imóvel não edificado. O § 3º dá o desconto de 0,20 ao imóvel edificado que possua calçada. São pontos percentuais subtraídos da alíquota, não percentuais do imposto: sobre 1,25%, a calçada leva a 1,05%.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iptu-base-de-calculo",
@@ -103,21 +187,49 @@
    "sujeitoPassivo": "—",
    "base": {
     "tipo": "formula",
-    "descricao": "Valor venal do bem imóvel, obtido com as tabelas de valores de construção (anexo I) e de terrenos (anexo II), corrigido pelos fatores do anexo III. No prédio consideram-se padrão ou tipo de construção, área construída, acabamento, estado de conservação, equipamentos incorporados, serviços públicos da via e índice de valorização do logradouro; no terreno, área de localização, metragem e topografia."
+    "descricao": "Valor venal do bem imóvel, obtido com as tabelas de valores de construção (anexo I) e de terrenos (anexo II), corrigido pelos fatores do anexo III. No prédio consideram-se padrão ou tipo de construção, área construída, acabamento, estado de conservação, equipamentos incorporados, serviços públicos da via e índice de valorização do logradouro; no terreno, área de localização, metragem e topografia.",
+    "tabela": "valor-m2-edificacao"
    },
    "periodicidade": "anual",
    "vencimento": "—",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 7, "artigo": "art. 21 e art. 22" },
-    { "doc": "ctm-099-2007", "pagina": 8, "artigo": "art. 22, §§ 3º e 4º" },
-    { "doc": "ctm-099-2007", "pagina": 9, "artigo": "art. 23 e art. 24" },
-    { "doc": "ctm-099-2007", "pagina": 130, "artigo": "valor do m² da edificação por setor e fatores de correção" },
-    { "doc": "ctm-099-2007", "pagina": 131, "artigo": "correção por topografia e pedologia" },
-    { "doc": "ctm-099-2007", "pagina": 132, "artigo": "componentes da edificação, por somatório de pontos" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 7,
+     "artigo": "art. 21 e art. 22"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 8,
+     "artigo": "art. 22, §§ 3º e 4º"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 9,
+     "artigo": "art. 23 e art. 24"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 130,
+     "artigo": "valor do m² da edificação por setor e fatores de correção"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 131,
+     "artigo": "correção por topografia e pedologia"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 132,
+     "artigo": "componentes da edificação, por somatório de pontos"
+    }
    ],
    "conferencia": "conferido",
    "nota": "O VALOR VENAL DE MANARI É POR PONTUAÇÃO, não por tabela direta: a página 132 traz o somatório de pontos dos componentes da edificação, por tipo de imóvel — casa, apartamento, sala ou loja, galpão ou garagem, telheiro, fábrica. Some-se a isso a correção por topografia (plano 1,0; aclive 0,9; irregular 0,8; declive 0,7) e por pedologia (firme 1,0; inundável ou terreno baixo 0,8). O art. 24 resolve o valor unitário do metro quadrado de terreno pela face de quadra, com regra própria para imóvel de duas ou mais frentes. Estas páginas são o que o Código chama de anexos I a III — ver a cobrança sobre a numeração dos anexos.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "itbi-aliquotas",
@@ -130,20 +242,43 @@
     "unidade": "percentual",
     "sobre": "o valor venal, ou o valor financiado no caso do SFH",
     "itens": [
-     { "rotulo": "SFH — sobre o valor efetivamente financiado (VER A NOTA: a lei imprime \"1% (meio por cento)\")", "valor": 1, "periodicidade": "Por ato" },
-     { "rotulo": "SFH — sobre o valor restante", "valor": 2, "periodicidade": "Por ato" },
-     { "rotulo": "Demais transmissões a título oneroso", "valor": 2, "periodicidade": "Por ato" }
+     {
+      "rotulo": "SFH — sobre o valor efetivamente financiado (VER A NOTA: a lei imprime \"1% (meio por cento)\")",
+      "valor": 1,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "SFH — sobre o valor restante",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     },
+     {
+      "rotulo": "Demais transmissões a título oneroso",
+      "valor": 2,
+      "periodicidade": "Por ato"
+     }
     ]
    },
    "periodicidade": "por ato",
    "vencimento": "Antes da lavratura do instrumento.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 22, "artigo": "art. 60" },
-    { "doc": "ctm-099-2007", "pagina": 22, "artigo": "art. 61" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 22,
+     "artigo": "art. 60"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 22,
+     "artigo": "art. 61"
+    }
    ],
    "conferencia": "conferido",
    "nota": "DEFEITO NA LEI, CONFERIDO NA IMAGEM DA PÁGINA 22: a alínea \"a\" do inciso I está impressa como \"1% (meio por cento) sobre o valor efetivamente financiado\". O ALGARISMO E O EXTENSO DISCORDAM, e a diferença é o dobro — 1% ou 0,5%. Não é erro de leitura: a página imprime exatamente assim, com o texto nítido. A regra tradicional de interpretação faz o extenso prevalecer sobre o algarismo, mas a decisão é do Município, não do balcão: peça o esclarecimento por escrito antes de lançar financiamento do SFH. O valor foi cadastrado como 1% por ser o algarismo, com esta ressalva. O parágrafo único estende o inciso I às aquisições amigáveis ou litigiosas feitas pelos agentes do SFH em solução de financiamento. O inciso II é a alíquota residual de 2% e não tem defeito.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "itbi-base-usufruto-e-avaliacao",
@@ -158,11 +293,18 @@
    "periodicidade": "por ato",
    "vencimento": "A estimativa fiscal aceita prevalece por 30 dias; findo o prazo, o imposto só pode ser pago após atualização monetária ou nova avaliação, a critério da repartição fiscal.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 22, "artigo": "art. 59, §§ 1º a 4º" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 22,
+     "artigo": "art. 59, §§ 1º a 4º"
+    }
    ],
    "conferencia": "conferido",
    "nota": "AS DUAS FRAÇÕES SE COMPLETAM: 1/3 para o usufruto e 2/3 para a nua-propriedade somam o valor venal inteiro, de modo que a transmissão desmembrada não pode somar mais do que a plena. DIREITO DO CONTRIBUINTE: o § 3º faculta pedir SEGUNDA AVALIAÇÃO, por requerimento protocolado à Secretaria da Fazenda, dentro do prazo de recolhimento — informe isso a quem discordar do valor, em vez de deixá-lo recolher e discutir depois. O PRAZO DE 30 DIAS do § 4º é o que impede a guia antiga de ser paga meses depois pelo valor de então.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iss-aliquota",
@@ -172,19 +314,39 @@
    "sujeitoPassivo": "O prestador do serviço; o tomador nas hipóteses de retenção do art. 87.",
    "base": {
     "tipo": "formula",
-    "descricao": "Preço do serviço, sobre o qual se aplica a alíquota do tipo de serviço prestado, conforme a lista de serviços. A lista tem cerca de 111 itens e está nas páginas 133 a 139."
+    "descricao": "Preço do serviço, sobre o qual se aplica a alíquota do tipo de serviço prestado, conforme a lista de serviços. A lista tem cerca de 111 itens e está nas páginas 133 a 139.",
+    "tabela": "lista-de-servicos-iss"
    },
    "periodicidade": "mensal",
    "vencimento": "A retenção na fonte é regulamentada por decreto do Chefe do Executivo (art. 88).",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 45, "artigo": "art. 89" },
-    { "doc": "ctm-099-2007", "pagina": 45, "artigo": "art. 87 e art. 88 — retenção" },
-    { "doc": "ctm-099-2007", "pagina": 133, "artigo": "Lista de serviços" },
-    { "doc": "ctm-099-2007", "pagina": 138, "artigo": "Lista de serviços" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 45,
+     "artigo": "art. 89"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 45,
+     "artigo": "art. 87 e art. 88 — retenção"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 133,
+     "artigo": "Lista de serviços"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 138,
+     "artigo": "Lista de serviços"
+    }
    ],
    "conferencia": "conferido",
    "nota": "A lista é a que o art. 89 chama de \"anexo IV\", mas nas páginas anexas ela vem sob o título \"Tabela de serviços\" — ver a cobrança sobre a numeração dos anexos. RESPONSABILIDADE POR RETENÇÃO: o art. 87 alcança até quem é imune ou isento, quando se utiliza de serviço de terceiro e o prestador não emite nota fiscal, ou, sendo autônomo ou sociedade de profissionais, não apresenta comprovante de inscrição. É o dispositivo a citar com o tomador que alega imunidade para não reter.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "iss-carater-pessoal",
@@ -194,17 +356,30 @@
    "sujeitoPassivo": "O profissional autônomo.",
    "base": {
     "tipo": "formula",
-    "descricao": "A alíquota do tipo de serviço é aplicada sobre o Valor de Referência Fiscal do Município, e não sobre o preço do serviço."
+    "descricao": "A alíquota do tipo de serviço é aplicada sobre o Valor de Referência Fiscal do Município, e não sobre o preço do serviço.",
+    "tabela": "tabela-ix-iss",
+    "sobreBase": "vrf"
    },
    "periodicidade": "anual",
    "vencimento": "Na forma do Código.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 45, "artigo": "art. 90" },
-    { "doc": "ctm-099-2007", "pagina": 129, "artigo": "TABELA IX — ISS" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 45,
+     "artigo": "art. 90"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 129,
+     "artigo": "TABELA IX — ISS"
+    }
    ],
    "conferencia": "revisar",
    "nota": "MECÂNICA INCOMUM, E FÁCIL DE ERRAR: em vez de fixar um valor anual em tabela, como fazem os outros municípios do projeto, Manari manda aplicar A MESMA ALÍQUOTA DO TIPO DE SERVIÇO sobre o VALOR DE REFERÊNCIA FISCAL. Ou seja, um médico não paga 5% do que faturou, e sim 5% do VRF. Sem o valor do VRF do exercício, isso não se calcula. A TABELA IX, na página 129, tem apenas três linhas e traz o ISS — confira lá se ela fixa valores próprios para o caráter pessoal, porque, se fixar, haverá duas regras concorrentes para a mesma situação.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "contribuicao-melhoria",
@@ -219,11 +394,18 @@
    "periodicidade": "por obra",
    "vencimento": "Após o rito de publicação e impugnação previsto no Capítulo.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 86, "artigo": "art. 219" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 86,
+     "artigo": "art. 219"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Não basta ter feito a obra: a contribuição de melhoria exige edital prévio com memorial, orçamento, delimitação da zona beneficiada e prazo de impugnação, e exige demonstrar a valorização imóvel a imóvel. Leia o Capítulo inteiro a partir da página 86 antes de instaurar o procedimento — os limites total (custo da obra) e individual (acréscimo de valor) são os dois que costumam anular o lançamento.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-poder-de-policia-regra-geral",
@@ -238,11 +420,18 @@
    "periodicidade": "anual",
    "vencimento": "Na forma de cada seção.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 66, "artigo": "art. 151" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 66,
+     "artigo": "art. 151"
+    }
    ],
    "conferencia": "conferido",
    "nota": "É o artigo a citar quando o contribuinte alega que não houve fiscalização efetiva. Antes de aplicar qualquer tabela de taxa em Manari, leia a cobrança sobre o segundo bloco de tabelas: há duas tabelas para a mesma taxa, em unidades diferentes.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-localizacao-funcionamento",
@@ -252,19 +441,40 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA I, com 45 linhas por especificação do estabelecimento, em percentual sobre o Valor de Referência. Há uma segunda tabela para a mesma taxa na página 139, por faixa de área, em UFM."
+    "descricao": "TABELA I, com 45 linhas por especificação do estabelecimento, em percentual sobre o Valor de Referência. Há uma segunda tabela para a mesma taxa na página 139, por faixa de área, em UFM.",
+    "tabela": "tabela-i-localizacao-funcionamento",
+    "sobreBase": "vr"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 66, "artigo": "art. 151" },
-    { "doc": "ctm-099-2007", "pagina": 118, "artigo": "TABELA I" },
-    { "doc": "ctm-099-2007", "pagina": 121, "artigo": "TABELA I" },
-    { "doc": "ctm-099-2007", "pagina": 139, "artigo": "segunda tabela, por faixa de área, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 66,
+     "artigo": "art. 151"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 118,
+     "artigo": "TABELA I"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 121,
+     "artigo": "TABELA I"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 139,
+     "artigo": "segunda tabela, por faixa de área, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "É AQUI QUE A DUPLICIDADE MAIS DÓI, porque é a taxa mais lançada. A TABELA I cobra por RAMO DE ATIVIDADE, em percentual do Valor de Referência; a tabela da página 139 cobra por ÁREA DO ESTABELECIMENTO, em UFM — 15 UFM até 25 m², 30 até 50 m², 45 até 100 m², 90 até 250 m², 225 de 250 a 500 m², e acima disso 225 UFM pelos primeiros 500 m² mais 45 UFM por área de 500 m² ou fração excedente. Os dois critérios não convergem, e o Código não diz qual vale. Não escolha: leve ao Município.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-horario-especial",
@@ -274,18 +484,35 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA II, com 4 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente de prorrogação de horário na página 141, em UFM."
+    "descricao": "TABELA II, com 4 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente de prorrogação de horário na página 141, em UFM.",
+    "tabela": "tabela-ii-horario-especial",
+    "sobreBase": "vr"
    },
    "periodicidade": "por dia, mês ou ano",
    "vencimento": "No licenciamento do horário especial.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 69, "artigo": "art. 165" },
-    { "doc": "ctm-099-2007", "pagina": 122, "artigo": "TABELA II" },
-    { "doc": "ctm-099-2007", "pagina": 141, "artigo": "tabela concorrente de prorrogação de horário, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 69,
+     "artigo": "art. 165"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 122,
+     "artigo": "TABELA II"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 141,
+     "artigo": "tabela concorrente de prorrogação de horário, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Duplicidade de tabela — ver a cobrança sobre o segundo bloco.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-obras-arruamento-loteamento",
@@ -295,20 +522,45 @@
    "sujeitoPassivo": "O proprietário ou o responsável pela obra.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA III, com 17 linhas, em percentual sobre o Valor de Referência. Há tabelas concorrentes nas páginas 139 (valores para construção civil, em UFM por m², por tipo A, B e C) e 141 a 142 (obras e edificações por zona, 29 linhas)."
+    "descricao": "TABELA III, com 17 linhas, em percentual sobre o Valor de Referência. Há tabelas concorrentes nas páginas 139 (valores para construção civil, em UFM por m², por tipo A, B e C) e 141 a 142 (obras e edificações por zona, 29 linhas).",
+    "tabela": "tabela-iii-obras-arruamento-habite-se",
+    "sobreBase": "vr"
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 69, "artigo": "art. 165" },
-    { "doc": "ctm-099-2007", "pagina": 122, "artigo": "TABELA III" },
-    { "doc": "ctm-099-2007", "pagina": 123, "artigo": "TABELA III" },
-    { "doc": "ctm-099-2007", "pagina": 139, "artigo": "tabela de valores para construção civil, em UFM" },
-    { "doc": "ctm-099-2007", "pagina": 141, "artigo": "obras e edificações por zona, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 69,
+     "artigo": "art. 165"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 122,
+     "artigo": "TABELA III"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 123,
+     "artigo": "TABELA III"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 139,
+     "artigo": "tabela de valores para construção civil, em UFM"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 141,
+     "artigo": "obras e edificações por zona, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "TRÊS TABELAS PARA A MESMA MATÉRIA. A da página 139 é a mais concreta: construção em alvenaria por m², 1,20 UFM no tipo A, 2,00 no tipo B e 3,00 no tipo C; construção em madeira 0,60 UFM por m²; galpão de alvenaria 1,50 UFM por m². A de obras e edificações por zona, nas páginas 141 e 142, tem 29 linhas. E a TABELA III cobra em percentual do Valor de Referência. Confirme com o Município qual está em vigor antes de licenciar. Vale acompanhar também o projeto de Código de Obras e Edificações de 2026, que está na biblioteca e ainda não é lei.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-publicidade",
@@ -318,18 +570,35 @@
    "sujeitoPassivo": "Quem explorar ou utilizar o meio de publicidade.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA IV, com 3 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 139 e 140, com 9 linhas, em UFM."
+    "descricao": "TABELA IV, com 3 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 139 e 140, com 9 linhas, em UFM.",
+    "tabela": "tabela-iv-publicidade",
+    "sobreBase": "vr"
    },
    "periodicidade": "varia por item",
    "vencimento": "No licenciamento e na renovação.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 75, "artigo": "art. 182" },
-    { "doc": "ctm-099-2007", "pagina": 124, "artigo": "TABELA IV" },
-    { "doc": "ctm-099-2007", "pagina": 140, "artigo": "tabela concorrente de publicidade, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 75,
+     "artigo": "art. 182"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 124,
+     "artigo": "TABELA IV"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 140,
+     "artigo": "tabela concorrente de publicidade, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "A tabela concorrente é bem mais detalhada e a periodicidade muda dentro dela — por matéria anunciada e por ano, por dia, por unidade e por mês. Traz outdoor luminoso e não iluminado por m², anúncio acoplado a relógio ou termômetro, faixas em vias públicas e até anúncio por sistema aéreo em aviões, helicópteros e asas-delta. Confira o item e a periodicidade na página antes de lançar.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-ocupacao-areas",
@@ -339,18 +608,35 @@
    "sujeitoPassivo": "Quem ocupar a área.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA V, com 5 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 142 e 143, de ocupação de solo e diversões públicas, com 12 linhas, em UFM."
+    "descricao": "TABELA V, com 5 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 142 e 143, de ocupação de solo e diversões públicas, com 12 linhas, em UFM.",
+    "tabela": "tabela-v-ocupacao-areas",
+    "sobreBase": "vr"
    },
    "periodicidade": "varia por item",
    "vencimento": "No licenciamento da ocupação.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 69, "artigo": "art. 165" },
-    { "doc": "ctm-099-2007", "pagina": 125, "artigo": "TABELA V" },
-    { "doc": "ctm-099-2007", "pagina": 142, "artigo": "ocupação de solo e diversões públicas, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 69,
+     "artigo": "art. 165"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 125,
+     "artigo": "TABELA V"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 142,
+     "artigo": "ocupação de solo e diversões públicas, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Duplicidade de tabela — ver a cobrança sobre o segundo bloco.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-expediente",
@@ -360,18 +646,35 @@
    "sujeitoPassivo": "Quem requerer o ato.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA VI, com 5 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 144 e 145, com 30 linhas, em UFM."
+    "descricao": "TABELA VI, com 5 linhas, em percentual sobre o Valor de Referência. Há tabela concorrente nas páginas 144 e 145, com 30 linhas, em UFM.",
+    "tabela": "tabela-vi-expediente",
+    "sobreBase": "vr"
    },
    "periodicidade": "por ato",
    "vencimento": "No requerimento.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 126, "artigo": "TABELA VI" },
-    { "doc": "ctm-099-2007", "pagina": 144, "artigo": "tabela concorrente de expediente, em UFM" },
-    { "doc": "ctm-099-2007", "pagina": 145, "artigo": "tabela concorrente de expediente, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 126,
+     "artigo": "TABELA VI"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 144,
+     "artigo": "tabela concorrente de expediente, em UFM"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 145,
+     "artigo": "tabela concorrente de expediente, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "A DIFERENÇA AQUI É DE SEIS PARA TRINTA LINHAS. A TABELA VI tem cinco itens genéricos — anotações de transferência de firma e alteração de razão social, requerimentos, termos e contratos, expedição de certificado. A tabela das páginas 144 e 145 tem trinta, e é a que serve ao balcão: numeração de casas e prédios por emplacamento 10 UFM, vistoria para táxi 40, para transporte complementar 48, para ônibus 80, selo de vistoria de táxi 10, transferência de permissão de táxi 60, permissão pessoa física para táxi 24. Traz ainda serviços de cemitério — inumação, exumação antes e depois do prazo de decomposição, perpetuidade por ano de sepultura rasa, carneiro, jazigo e nicho. Qual das duas vale é pergunta para o Município.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-servicos-urbanos",
@@ -381,16 +684,25 @@
    "sujeitoPassivo": "O proprietário, titular do domínio útil ou possuidor do imóvel alcançado pelo serviço.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA VII, com 4 linhas, em percentual sobre o Valor de Referência."
+    "descricao": "TABELA VII, com 4 linhas, em percentual sobre o Valor de Referência.",
+    "tabela": "tabela-vii-servicos-urbanos",
+    "sobreBase": "vr"
    },
    "periodicidade": "anual",
    "vencimento": "Anual, podendo acompanhar o IPTU.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 127, "artigo": "TABELA VII" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 127,
+     "artigo": "TABELA VII"
+    }
    ],
    "conferencia": "revisar",
    "nota": "É a taxa que em outros municípios se chama de coleta de lixo e limpeza pública. Não se localizou no corpo do Código a seção que a institui e define seu fato gerador — confirme com o Município antes de lançar. Registrar em vez de escolher: pode ser seção que a busca não alcançou, ou tabela sem artigo que a sustente.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-abate-animais",
@@ -400,18 +712,35 @@
    "sujeitoPassivo": "Quem promover o abate.",
    "base": {
     "tipo": "formula",
-    "descricao": "TABELA VIII, com 6 linhas por espécie animal, em percentual sobre o Valor de Referência. Há linha concorrente de abate na página 144, em UFM."
+    "descricao": "TABELA VIII, com 6 linhas por espécie animal, em percentual sobre o Valor de Referência. Há linha concorrente de abate na página 144, em UFM.",
+    "tabela": "tabela-viii-abate-animais",
+    "sobreBase": "vr"
    },
    "periodicidade": "por cabeça",
    "vencimento": "No licenciamento do abate.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 70, "artigo": "Seção da taxa de abate de animais" },
-    { "doc": "ctm-099-2007", "pagina": 128, "artigo": "TABELA VIII" },
-    { "doc": "ctm-099-2007", "pagina": 144, "artigo": "abate de animais, no segundo bloco, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 70,
+     "artigo": "Seção da taxa de abate de animais"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 128,
+     "artigo": "TABELA VIII"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 144,
+     "artigo": "abate de animais, no segundo bloco, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Duplicidade de tabela — ver a cobrança sobre o segundo bloco.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "taxa-fiscalizacao-sanitaria",
@@ -421,18 +750,34 @@
    "sujeitoPassivo": "O titular do estabelecimento.",
    "base": {
     "tipo": "formula",
-    "descricao": "Tabela do segundo bloco, com 34 linhas, em UFM, nas páginas 145 e 146."
+    "descricao": "Tabela do segundo bloco, com 34 linhas, em UFM, nas páginas 145 e 146.",
+    "tabela": "taxa-de-fiscalizacao-sanitaria"
    },
    "periodicidade": "anual",
    "vencimento": "No licenciamento e na renovação anual.",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 66, "artigo": "art. 151" },
-    { "doc": "ctm-099-2007", "pagina": 145, "artigo": "taxa de fiscalização sanitária, em UFM" },
-    { "doc": "ctm-099-2007", "pagina": 146, "artigo": "taxa de fiscalização sanitária, em UFM" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 66,
+     "artigo": "art. 151"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 145,
+     "artigo": "taxa de fiscalização sanitária, em UFM"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 146,
+     "artigo": "taxa de fiscalização sanitária, em UFM"
+    }
    ],
    "conferencia": "revisar",
    "nota": "Esta só existe no segundo bloco — não há TABELA correspondente na série I a IX. É um argumento a favor de o segundo bloco estar em vigor, mas não é prova: pode ser tabela acrescentada depois sem que a primeira série fosse revogada. Ver a cobrança sobre o segundo bloco.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   },
   {
    "id": "divisao-de-controle-atividades-descentralizadas",
@@ -442,18 +787,34 @@
    "sujeitoPassivo": "A confirmar.",
    "base": {
     "tipo": "formula",
-    "descricao": "Três tabelas em sequência, com 39, 13 e 15 linhas, em UFM, nas páginas 146 a 148 — as últimas do Código."
+    "descricao": "Três tabelas em sequência, com 39, 13 e 15 linhas, em UFM, nas páginas 146 a 148 — as últimas do Código.",
+    "tabela": "divisao-de-controle-atividades-descentralizadas"
    },
    "periodicidade": "a confirmar",
    "vencimento": "a confirmar",
    "fundamento": [
-    { "doc": "ctm-099-2007", "pagina": 146, "artigo": "Divisão de controle — atividades descentralizadas" },
-    { "doc": "ctm-099-2007", "pagina": 147, "artigo": "Divisão de controle — atividades descentralizadas" },
-    { "doc": "ctm-099-2007", "pagina": 148, "artigo": "Divisão de controle — atividades descentralizadas" }
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 146,
+     "artigo": "Divisão de controle — atividades descentralizadas"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 147,
+     "artigo": "Divisão de controle — atividades descentralizadas"
+    },
+    {
+     "doc": "ctm-099-2007",
+     "pagina": 148,
+     "artigo": "Divisão de controle — atividades descentralizadas"
+    }
    ],
    "conferencia": "revisar",
    "nota": "SÃO 67 LINHAS SEM FATO GERADOR IDENTIFICADO. O título \"Divisão de controle — atividades descentralizadas\" nomeia um setor da administração, não uma hipótese de incidência, e não se localizou no corpo do Código a seção que institua taxa com esse nome. NÃO LANCE COM BASE NELAS sem que o Município esclareça a que taxa correspondem e qual dispositivo as sustenta. São as três últimas tabelas do documento, o que é compatível tanto com anexo acrescentado depois quanto com material de trabalho interno que acabou publicado junto.",
-   "vigencia": { "de": "2007", "ate": null }
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
   }
  ]
 }

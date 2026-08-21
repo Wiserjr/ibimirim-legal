@@ -173,7 +173,12 @@ function renderUfmStatus(){
   box.className='ufm-status ufm-status-set';
   box.innerHTML=`Em uso: <b>${money(ufm.value)}</b> por UFM${ufm.year?` — exercício ${ufm.year}`:''}. Confirme o ato de atualização antes de lançar.`;
 }
-function applyUfm(){renderUfmStatus();renderCards();if(feeIndex.length)renderFeeResults();}
+function applyUfm(){
+  renderUfmStatus();renderCards();
+  if(feeIndex.length)renderFeeResults();
+  // a coluna em reais das cobranças nasce da UFM: mudou a unidade, redesenha
+  if(typeof loadBases==='function'&&charges.length){loadBases();renderBasesExtras();renderCharges();}
+}
 function setupUfm(){
   loadUfm();
   const regra=cfg.ufm||{};
@@ -448,6 +453,102 @@ const CHARGE_BASES={reais:'Reais',ufm:'Unidade fiscal',percentual:'Percentual',f
 const CHARGE_CONF={conferido:'Conferido na lei',informado:'Informado pela equipe',revisar:'Precisa de revisão'};
 let charges=[],chargeFilter='todos',chargeEditing=null,chargeDirty=false;
 
+// --- bases fiscais e calculadora de cobrança ------------------------------
+// Os códigos da região expressam valor de quatro maneiras, e três delas não dão
+// reais sozinhas: em UFM, em percentual de uma unidade municipal (o Valor de
+// Referência de Manari, por exemplo) e em percentual de algo que só o caso
+// concreto informa — o valor venal, o preço do serviço. A quarta são os reais
+// diretos. Ainda por cima a lei costuma dizer "por m²", "por dia", "por pista",
+// e aí falta a quantidade.
+//
+// Daqui sai o que faltava: a coluna em reais na tabela e a calculadora embaixo
+// dela. O que o Município fixa (UFM, VR, VRF) fica guardado no navegador; o que
+// é do caso concreto entra na hora.
+
+const BASES_KEY = `${CHARGE_KEY}-bases`;
+let basesFiscais = {};
+
+function loadBases() {
+  try { basesFiscais = JSON.parse(localStorage.getItem(BASES_KEY)) || {}; } catch { basesFiscais = {}; }
+  // a UFM já tinha painel próprio antes das outras bases existirem; ela continua
+  // mandando, para não haver dois lugares dizendo coisas diferentes
+  if (ufm) basesFiscais.ufm = { value: ufm.value, year: ufm.year };
+}
+
+function salvarBase(id, value, year) {
+  basesFiscais[id] = { value, year: Number.isFinite(year) ? year : null };
+  try { localStorage.setItem(BASES_KEY, JSON.stringify(basesFiscais)); } catch {}
+}
+
+function basesDeclaradas() {
+  return (cfg.bases || []).filter(b => b.id !== 'ufm');
+}
+
+function valorDaBase(id) {
+  if (id === 'ufm') return ufm ? ufm.value : null;
+  const b = basesFiscais[id];
+  if (b && Number.isFinite(b.value) && b.value > 0) return b.value;
+  // Uma base pode vir com o valor que a própria lei fixa — a BCLA de Tacaratu
+  // está no art. 281. Serve de ponto de partida, e a equipe troca se houver
+  // atualização publicada.
+  const decl = (cfg.bases || []).find(x => x.id === id);
+  return decl && Number.isFinite(decl.padrao) ? decl.padrao : null;
+}
+
+function baseDeclarada(id) {
+  return (cfg.bases || []).find(b => b.id === id) || (id === 'ufm' ? { id: 'ufm', sigla: 'UFM', rotulo: 'Unidade Fiscal do Município' } : null);
+}
+
+// Qual unidade municipal a cobrança usa. O percentual pode incidir sobre uma
+// base do Município — e aí a conversão é automática — ou sobre valor venal e
+// preço do serviço, que ninguém pode saber de antemão.
+function baseFiscalDe(base) {
+  if (!base) return null;
+  if (base.unidade === 'ufm') return 'ufm';
+  if (base.unidade === 'percentual' && base.sobreBase) return base.sobreBase;
+  return null;
+}
+
+function precisaValorInformado(base) {
+  // Duas formas dizem a mesma coisa: `tipo: percentual` numa cobrança de
+  // alíquota única, e `unidade: percentual` numa tabela de itens. As duas
+  // precisam que alguém informe o valor sobre o qual o percentual incide,
+  // a menos que ele saia de uma base do Município.
+  const ehPercentual = base?.tipo === 'percentual' || base?.unidade === 'percentual';
+  return !!ehPercentual && !base.sobreBase;
+}
+
+// Converte o número da tabela em reais, quando isso é possível sem perguntar
+// nada. Devolve null quando falta a base — e falta é informação, não erro.
+function emReais(base, valor) {
+  if (!Number.isFinite(valor)) return null;
+  if (base.unidade === 'reais') return valor;
+  const id = baseFiscalDe(base);
+  if (!id) return null;
+  const unidade = valorDaBase(id);
+  if (!unidade) return null;
+  return base.unidade === 'ufm' ? valor * unidade : (valor / 100) * unidade;
+}
+
+// "por m²", "por dia", "por pista" — a unidade de quantidade vem do campo `por`
+// do item ou, quando ele não existe, da própria descrição.
+// O `` do fim não serve aqui: depois de "m²" não há fronteira de palavra,
+// porque `²` não é caractere de palavra e a posição fica entre dois não-palavra.
+// Foi o que fez "por m² de área" não casar. Troca-se por um lookahead que só
+// recusa letra, e que ainda impede "dia" de casar dentro de "diagonal".
+const POR_NA_FRASE=/\bpor\s+(m²|m³|m2|m3|metro linear|metro|km|dias?|mês|mes|ano|unidade|pista|quarto|cabeça|cabeca|peça|peca|apartamento|documento|talão|talao|livro|matrícula|matricula|lote|exercício|exercicio|evento|semana|milheiro)(?![a-zà-ÿ])/i;
+
+function unidadeDeQuantidade(item) {
+  if (item?.por) return item.por;
+  const achado = POR_NA_FRASE.exec(item?.rotulo || '');
+  return achado ? achado[1].replace(/^m2$/, 'm²').replace(/^m3$/, 'm³') : null;
+}
+
+function itemTemQuantidade(base) {
+  return (base?.itens || []).some(i => unidadeDeQuantidade(i));
+}
+
+
 function chargesPublicadas(){return ((window.MUNICIPIO_COBRANCAS||{}).cobrancas||[]).map(c=>({...c}));}
 
 function loadCharges(){
@@ -567,16 +668,214 @@ function faixasHtml(base){
     +`<thead><tr><th>Faixa</th><th>Valor</th></tr></thead><tbody>${linhas}</tbody></table>`;
 }
 
-function itensHtml(base){
-  if(base?.tipo!=='itens')return '';
-  const un=base.unidade==='percentual'?'%':'';
-  const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
-  const linhas=(base.itens||[]).map(i=>
-    `<tr><td>${escape(i.rotulo||'')}</td><td>${escape(fmt(i.valor))}${i.por?`<small> por ${escape(i.por)}</small>`:''}</td>`
-    +`<td>${escape(i.periodicidade||'')}</td></tr>`).join('');
-  return `<table class="charge-tiers"><thead><tr><th>Discriminação</th><th>Valor</th><th>Periodicidade</th></tr></thead>`
-    +`<tbody>${linhas}</tbody></table>`;
+// --- a cobrança que aponta para uma tabela do fees.js ---------------------
+// Vários municípios têm a tabela extraída no fees.js e a cobrança apenas
+// descrevendo-a por escrito. Repetir os valores no cadastro criaria duas
+// verdades. Em vez disso a cobrança traz `base.tabela` com o id da seção, e o
+// cartão desenha a tabela de lá, com a mesma coluna em reais e a mesma
+// calculadora das outras.
+const LIMITE_LINHAS = 14;
+
+function itensDaSecao(secaoId) {
+  const s = (fees.sections || []).find(x => x.id === secaoId);
+  if (!s) return null;
+  const linhas = (s.current || []).filter(e => e.kind && e.kind !== 'heading');
+  if (!linhas.length) return null;
+  const valorDe = e => e.kind === 'ufm' ? e.ufm : e.kind === 'pct' ? e.valor : e.value;
+  const kinds = new Set(linhas.map(e => e.kind));
+  // uma seção mistura unidades muito raramente; quando mistura, não há uma
+  // coluna em reais que sirva para todas, e o cartão fica só com a tabela
+  const unidade = kinds.size > 1 ? null
+    : kinds.has('ufm') ? 'ufm' : kinds.has('pct') ? 'percentual' : 'reais';
+  return {
+    titulo: s.title || s.short || secaoId,
+    total: linhas.length,
+    unidade,
+    itens: linhas.slice(0, LIMITE_LINHAS).map(e => ({
+      rotulo: e.label || '',
+      valor: valorDe(e),
+      periodicidade: e.per || '',
+    })),
+  };
 }
+
+// Monta uma base de itens equivalente à da cobrança, a partir da seção citada.
+function baseDaTabela(base) {
+  if (!base?.tabela) return null;
+  const secao = itensDaSecao(base.tabela);
+  if (!secao || !secao.unidade) return null;
+  return {
+    tipo: 'itens',
+    unidade: secao.unidade,
+    sobreBase: base.sobreBase || (secao.unidade === 'ufm' ? 'ufm' : null),
+    itens: secao.itens,
+    __secao: secao,
+  };
+}
+
+
+function itensHtml(base){
+  // a cobrança pode trazer os itens, ou apontar a seção do fees.js que os tem
+  const daTabela=base?.tipo!=='itens'?baseDaTabela(base):null;
+  if(daTabela)base=daTabela;
+  if(base?.tipo!=='itens')return '';
+  const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
+  const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
+  // A coluna em reais só existe quando dá para calculá-la sem perguntar nada:
+  // valor em UFM ou percentual de uma base do Município, com a unidade já
+  // informada. Percentual sobre valor venal ou preço do serviço fica para a
+  // calculadora, que pergunta o valor do caso.
+  const col=colunaReaisHtml(base);
+  const mostra=col&&col.pronta;
+  const linhas=(base.itens||[]).map(i=>{
+    const reais=mostra?emReais(base,i.valor):null;
+    const qtd=unidadeDeQuantidade(i);
+    return `<tr><td>${escape(i.rotulo||'')}</td>`
+      +`<td>${escape(fmt(i.valor))}${i.por?`<small> por ${escape(i.por)}</small>`:''}</td>`
+      +(mostra?`<td class="charge-reais">${i.valor===0?'Isento':reais===null?'—':money(reais)}${qtd?`<small> por ${escape(qtd)}</small>`:''}</td>`:'')
+      +`<td>${escape(i.periodicidade||'')}</td></tr>`;
+  }).join('');
+  return `<table class="charge-tiers">`
+    +(col&&!col.pronta?`<caption class="charge-falta-base">${col.aviso}</caption>`:col?`<caption>${col.aviso}</caption>`:'')
+    +`<thead><tr><th>Discriminação</th><th>Valor</th>${mostra?'<th>Em reais</th>':''}<th>Periodicidade</th></tr></thead>`
+    +`<tbody>${linhas}</tbody>`
+    +(base.__secao&&base.__secao.total>base.itens.length
+      ?`<tfoot><tr><td colspan="9">Mostrando ${base.itens.length} de ${base.__secao.total} linhas — as demais estão na aba de taxas, com busca.</td></tr></tfoot>`
+      :'')
+    +`</table>`;
+}
+
+// --- painel das outras bases fiscais --------------------------------------
+// A UFM já tinha o seu. Municípios que usam mais de uma unidade — Manari usa
+// Valor de Referência, Valor de Referência Fiscal e UFM ao mesmo tempo —
+// ganham um campo para cada, ao lado.
+function renderBasesExtras() {
+  const caixa = $('#basesExtra');
+  if (!caixa) return;
+  const lista = basesDeclaradas();
+  if (!lista.length) { caixa.hidden = true; return; }
+  caixa.hidden = false;
+  caixa.innerHTML = `<p class="eyebrow">Outras unidades deste Município</p>` + lista.map(b => {
+    const v = valorDaBase(b.id);
+    return `<div class="base-linha">
+      <label for="base-${escape(b.id)}">${escape(b.rotulo || b.sigla || b.id)}${b.sigla ? ` (${escape(b.sigla)})` : ''}</label>
+      <div class="fee-input"><span class="fee-prefix">R$</span>
+        <input id="base-${escape(b.id)}" data-base-id="${escape(b.id)}" type="number" min="0.0001" step="0.0001"
+               inputmode="decimal" placeholder="0,0000" value="${v ?? ''}"></div>
+      ${b.nota ? `<small>${escape(b.nota)}</small>` : ''}
+    </div>`;
+  }).join('');
+  caixa.querySelectorAll('[data-base-id]').forEach(inp => {
+    inp.onchange = () => {
+      const v = Number(String(inp.value).replace(',', '.'));
+      if (Number.isFinite(v) && v > 0) salvarBase(inp.dataset.baseId, v, null);
+      else { delete basesFiscais[inp.dataset.baseId]; try { localStorage.setItem(BASES_KEY, JSON.stringify(basesFiscais)); } catch {} }
+      renderCharges();
+    };
+  });
+}
+
+// --- a coluna em reais ----------------------------------------------------
+function colunaReaisHtml(base) {
+  const id = baseFiscalDe(base);
+  if (base.unidade === 'reais') return null;          // já está em reais
+  if (!id) return null;                                // depende do caso concreto
+  const unidade = valorDaBase(id);
+  const decl = baseDeclarada(id);
+  return {
+    titulo: 'Em reais',
+    pronta: !!unidade,
+    aviso: unidade
+      ? `com ${escape(decl?.sigla || id.toUpperCase())} de ${money(unidade)}`
+      : `informe ${escape(decl?.rotulo || id.toUpperCase())} acima para ver em reais`,
+  };
+}
+
+// --- calculadora de uma cobrança -----------------------------------------
+// Uma por cartão, e não uma por linha: tabela de 27 itens com 27 campos vira
+// ruído. Escolhe-se o item, informa-se o que falta, e sai o valor.
+function calculadoraHtml(c) {
+  const base = baseDaTabela(c.base) || c.base;
+  if (!base || !['itens', 'faixas', 'reais', 'ufm', 'percentual'].includes(base.tipo)) return '';
+  const itens = base.tipo === 'itens' ? (base.itens || []) : [];
+  const precisaValor = precisaValorInformado(base);
+  const temQtd = base.tipo === 'itens' ? itemTemQuantidade(base) : false;
+  const id = baseFiscalDe(base);
+  const unidade = id ? valorDaBase(id) : null;
+  // sem item para escolher, sem quantidade e sem valor a informar não há o que
+  // calcular — a tabela já mostra tudo
+  if (!itens.length && !precisaValor && !['faixas','ufm','reais'].includes(base.tipo)) return '';
+
+  const opcoes = itens.map((i, n) => `<option value="${n}">${escape(i.rotulo || `item ${n + 1}`)}</option>`).join('');
+  const faixaOpc = base.tipo === 'faixas'
+    ? `<label>Quantidade em ${escape(base.medida || 'medida')}<input type="number" min="0" step="0.01" inputmode="decimal" data-calc="medida" placeholder="0"></label>`
+    : '';
+  return `<details class="charge-calc" data-calc-id="${escape(c.id)}">
+    <summary>Calcular o valor</summary>
+    <div class="charge-calc-campos">
+      ${itens.length ? `<label>Item<select data-calc="item">${opcoes}</select></label>` : ''}
+      ${faixaOpc}
+      ${precisaValor ? `<label>${escape(base.sobre ? `Informe ${base.sobre}` : 'Valor sobre o qual incide')} (R$)
+        <input type="number" min="0" step="0.01" inputmode="decimal" data-calc="valorBase" placeholder="0,00"></label>` : ''}
+      ${temQtd ? `<label data-calc-qtd hidden>Quantidade<input type="number" min="0" step="0.01" inputmode="decimal" data-calc="qtd" placeholder="1"></label>` : ''}
+    </div>
+    <p class="charge-calc-saida" data-calc="saida" aria-live="polite"></p>
+    ${id && !unidade ? `<p class="charge-calc-falta">Informe ${escape(baseDeclarada(id)?.rotulo || id.toUpperCase())} no painel de unidade, acima, para o cálculo sair em reais.</p>` : ''}
+  </details>`;
+}
+
+function ligarCalculadora(c, raiz) {
+  const el = raiz.querySelector(`[data-calc-id="${CSS.escape(c.id)}"]`);
+  if (!el) return;
+  const campo = k => el.querySelector(`[data-calc="${k}"]`);
+  const saida = campo('saida');
+  const base = baseDaTabela(c.base) || c.base;
+
+  const recalcular = () => {
+    const itens = base.itens || [];
+    const item = campo('item') ? itens[Number(campo('item').value)] : null;
+    const rotuloQtd = el.querySelector('[data-calc-qtd]');
+    const un = item ? unidadeDeQuantidade(item) : (base.tipo === 'faixas' ? base.medida : null);
+    if (rotuloQtd) {
+      rotuloQtd.hidden = !un;
+      if (un) rotuloQtd.firstChild.textContent = `Quantidade em ${un}`;
+    }
+
+    let valor = item ? item.valor : base.valor ?? base.percentual;
+    if (base.tipo === 'faixas') {
+      const medida = Number(campo('medida')?.value || 0);
+      const faixa = (base.faixas || []).find(([teto]) => teto === null || medida <= teto);
+      valor = faixa ? faixa[1] : null;
+    }
+    if (!Number.isFinite(valor)) { saida.textContent = ''; return; }
+
+    let reais = emReais(base, valor);
+    if (precisaValorInformado(base)) {
+      const informado = Number(String(campo('valorBase')?.value || '').replace(',', '.'));
+      reais = Number.isFinite(informado) && informado > 0 ? (valor / 100) * informado : null;
+    }
+    if (reais === null) {
+      const id = baseFiscalDe(base);
+      saida.innerHTML = id
+        ? `<b>${escape(String(valor).replace('.', ','))}${base.unidade === 'ufm' ? ' UFM' : '%'}</b> — falta a unidade para converter.`
+        : `<b>${escape(String(valor).replace('.', ','))}%</b> — informe o valor sobre o qual incide.`;
+      return;
+    }
+
+    const qtd = un ? Number(String(campo('qtd')?.value || '').replace(',', '.')) : null;
+    const vezes = un && Number.isFinite(qtd) && qtd > 0 ? qtd : null;
+    const total = vezes ? reais * vezes : reais;
+    const detalhe = vezes
+      ? `${money(reais)} por ${escape(un)} × ${vezes.toLocaleString('pt-BR')} ${escape(un)}`
+      : (un ? `por ${escape(un)} — informe a quantidade para o total` : '');
+    saida.innerHTML = `<b>${money(total)}</b>${detalhe ? ` <small>${detalhe}</small>` : ''}`
+      + (c.periodicidade ? ` <small>· ${escape(c.periodicidade)}</small>` : '');
+  };
+
+  el.querySelectorAll('select,input').forEach(i => { i.oninput = recalcular; i.onchange = recalcular; });
+  recalcular();
+}
+
 
 function fundamentoHtml(c){
   return (c.fundamento||[]).map(f=>{
@@ -621,6 +920,7 @@ function renderCharges(){
       <p class="charge-base-line"><b>${escape(baseTexto(c.base))}</b>${c.periodicidade?` · ${escape(c.periodicidade)}`:''}</p>
       ${faixasHtml(c.base)}
       ${itensHtml(c.base)}
+      ${calculadoraHtml(c)}
       ${c.base?.sobre?`<p class="charge-sobre">Incide sobre: ${escape(c.base.sobre)}</p>`:''}
       <dl class="charge-meta">
         ${c.fatoGerador?`<dt>Fato gerador</dt><dd>${escape(c.fatoGerador)}</dd>`:''}
@@ -636,6 +936,7 @@ function renderCharges(){
       ?'<p class="empty">Nenhuma cobrança encontrada com esse filtro.</p>'
       :'<p class="empty">Nenhuma cobrança cadastrada ainda. Comece por uma que você já explica com frequência — o cadastro vai pedir o dispositivo que a sustenta.</p>';
 
+  lista.forEach(c=>ligarCalculadora(c,$('#chargeList')));
   document.querySelectorAll('[data-charge-edit]').forEach(b=>b.onclick=()=>openChargeForm(b.dataset.chargeEdit));
   document.querySelectorAll('#chargeList [data-fee-page]').forEach(b=>b.onclick=()=>
     openCtmPage(+b.dataset.feePage,termos.length?termos:['taxa','valor'],b.dataset.feeDoc));
@@ -834,6 +1135,7 @@ function exportarCobrancas(){
 }
 
 function setupCharges(){
+  loadBases();renderBasesExtras();
   if(!$('#chargesSection'))return;
   loadCharges();
   renderCharges();
@@ -862,7 +1164,10 @@ async function init(){
   renderAvisos();renderAudiences();renderTrails();renderGlossary();
   if(window.MUNICIPIO_LAWS){corpus=window.MUNICIPIO_LAWS;buildLexicon();renderLibrary();setupUfm();setupFeeCards();setupFeeConsultation();setupCharges();}
   else $('#library').innerHTML='<p class="empty">A base legal não pôde ser carregada. Reabra o aplicativo ou reinstale o pacote.</p>';
-  if(window.MUNICIPIO_FEES){fees=window.MUNICIPIO_FEES;buildFeeIndex();setupFeeFinder();}
+  if(window.MUNICIPIO_FEES){fees=window.MUNICIPIO_FEES;buildFeeIndex();setupFeeFinder();
+    // as cobranças desenham antes das taxas carregarem; quem aponta para uma
+    // seção do fees.js só consegue montar a tabela agora
+    if(charges.length)renderCharges();}
   else $('#feeCount').textContent='A tabela de taxas não pôde ser carregada.';
   $('#query').addEventListener('keydown',event=>{if(event.key==='Enter')search(event.target.value)});
   $('#clear').onclick=()=>{$('#query').value='';$('#resultsSection').hidden=true;$('#inicio').scrollIntoView({behavior:'smooth'});};

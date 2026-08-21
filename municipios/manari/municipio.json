@@ -220,5 +220,19 @@
    "tipo": "nota",
    "texto": "A conferência dos anexos encontrou <strong>quatro inconsistências no próprio texto da lei</strong> — item repetido com valores diferentes, item sem descrição, numeração com salto e um valor impresso com apóstrofo no lugar da vírgula. Cada uma aparece na tabela correspondente."
   }
+ ],
+ "bases": [
+  {
+   "id": "vr",
+   "sigla": "VR",
+   "rotulo": "Valor de Referência",
+   "nota": "É a base das TABELAS I a IX, que cobram em percentual sobre ele. O acervo não traz o ato que o fixa."
+  },
+  {
+   "id": "vrf",
+   "sigla": "VRF",
+   "rotulo": "Valor de Referência Fiscal",
+   "nota": "Base do ISS do serviço prestado em caráter pessoal (art. 90). O Código o nomeia diferente do Valor de Referência e não diz se são a mesma coisa — pergunte ao Município."
+  }
  ]
 }
