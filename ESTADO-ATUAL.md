@@ -224,6 +224,14 @@ consequência:
 
 ## Defeitos já corrigidos
 
+- **Vertente do Lério nunca gerou APK, e ninguém tinha percebido.** O `applicationId` era montado
+  colando o slug: `br.gov.pe.$municipio.legal`. Para os oito slugs de uma palavra isso funcionava.
+  Para `vertente-do-lerio` o AAPT recusava o manifesto, porque segmento de nome de pacote no Android
+  só admite letra, dígito e sublinhado — hífen não entra. O empacotador seguia adiante e os outros
+  oito saíam normalmente, então a falta só aparecia se alguém contasse os arquivos em `dist/`.
+  O slug passou a ser limpo antes de virar pacote, e o aplicativo é `br.gov.pe.vertentedolerio.legal`.
+  Vale para qualquer município futuro cujo nome tenha mais de uma palavra.
+
 - **`rank()` ordenava por `titleMatched` primeiro, e rebaixava `historical` por último.**
   Isso deixava uma palavra do título ou da citação vencer um documento cujo corpo inteiro trata do
   assunto, e deixava norma revogada aparecer acima da norma em vigor. Causou dois defeitos reais:

@@ -5,6 +5,11 @@ plugins { id("com.android.application") }
 // Cada um vira um aplicativo distinto: mesmo namespace Java, mas applicationId
 // e rótulo próprios, senão instalar um substituiria o outro no aparelho.
 val municipio = (project.findProperty("municipio") as String?) ?: "ibimirim"
+// O applicationId nao aceita hifen: `br.gov.pe.vertente-do-lerio.legal` faz o
+// AAPT recusar o manifesto, e foi por isso que Vertente do Lerio ficou sem APK
+// enquanto os outros oito saiam sem reclamar. Cada segmento do nome de pacote
+// so admite letra, digito e sublinhado, entao o slug e limpo antes de entrar.
+val pacote = municipio.replace(Regex("[^a-z0-9]"), "")
 val config = rootProject.file("../municipios/$municipio/municipio.json").readText()
 val rotulo = Regex("\"titulo\"\\s*:\\s*\"([^\"]+)\"").find(config)!!.groupValues[1]
 
@@ -13,11 +18,11 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "br.gov.pe.$municipio.legal"
+        applicationId = "br.gov.pe.$pacote.legal"
         minSdk = 24
         targetSdk = 35
-        versionCode = 8
-        versionName = "1.5.1"
+        versionCode = 9
+        versionName = "1.6.0"
         manifestPlaceholders["appLabel"] = rotulo
     }
 
