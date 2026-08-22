@@ -398,9 +398,26 @@ Cada cobrança que tem itens desenha a tabela no cartão. Quem não tem, mas apo
 uma seção do `fees.js` por `base.tabela`, desenha a de lá — **36 cobranças ligadas
 assim**, sem repetir valor nenhum entre os dois arquivos. Cobertura: 115 das 167.
 
-A coluna **"Em reais"** nasce quando dá para calculá-la sem perguntar nada: valor
-em UFM, ou percentual de uma base do Município já informada. Quando não dá, a
-legenda diz o que falta.
+A tabela **calcula**, não só informa. Cada linha tem uma coluna **Qtd.** e uma
+coluna **Total**: digita-se a área, os dias, as cabeças ou quantas vezes, e o
+total sai em reais. É o que separa a ferramenta informativa da ferramenta de
+balcão — quem atende precisa do valor a cobrar, não da alíquota.
+
+A conversão em reais desceu para baixo do valor tabelado, como `= R$ 4,32`, e o
+lugar dela na tabela passou a ser o total. Quando falta a unidade fiscal, a
+legenda diz o que falta e a célula de total repete o pedido, em vez de mostrar
+um número que ninguém pode usar.
+
+**"ou fração" é regra, não enfeite.** Cortês cobra "R$ 0,60 por m² ou fração" no
+painel de anúncio: 12,3 m² pagam 13. A quantidade sobe para o inteiro seguinte e
+a célula mostra `12,3 → 13 m²`, para que a conta se explique antes da pergunta.
+São 42 linhas com essa cláusula no cadastro.
+
+Onde o percentual incide sobre o caso concreto — valor venal, preço do serviço —
+um campo acima da tabela pede o valor **uma vez**, e todas as linhas passam a
+somar. Esse campo precisa dizer sobre o que incide: `tests/conversao.test.mjs`
+recusa uma tabela em percentual sem o texto `base.sobre`, e foi ele que achou
+cinco pedindo "Valor sobre o qual incide" sem dizer qual valor era.
 
 As **bases fiscais** são declaradas em `municipio.json`, no campo `bases`, e cada
 uma ganha um campo no painel. Manari usa três ao mesmo tempo (VR, VRF e UFM);
@@ -408,12 +425,22 @@ Jatobá cobra em percentual de um VR que o art. 113 amarrou à UFIR extinta. Uma
 base pode trazer `padrao` com o valor que a própria lei fixa — é o caso da BCLA
 de Tacaratu, R$ 1.000,00 pelo art. 281.
 
-A **calculadora** fica em cada cartão, fechada. Escolhe-se o item, informa-se o
-que falta — valor venal, preço do serviço, quantidade de m² — e sai o valor. Uma
-por cartão, não uma por linha.
+A **calculadora do cartão** sobrou para as bases que não têm tabela de itens —
+as de `faixas` e as de fórmula. Onde há itens, a linha faz o trabalho: uma
+calculadora escondida atrás de "Calcular o valor" só repetiria, pior, o que a
+linha já mostra. A escolha anterior era uma por cartão, sob o argumento de que
+27 campos numa tabela viram ruído; quem usa no setor disse o contrário, e tinha
+razão — o ruído é ter de abrir uma gaveta para cada consulta.
 
-`tests/calculadora.test.mjs` prende as quatro conversões e o reconhecimento da
-unidade de quantidade. Ele existe por causa de um defeito silencioso: `` no fim
+A busca de **taxas** ganhou o mesmo campo: valor fixo, UFM e percentual passam a
+multiplicar por quantidade, com a mesma regra de fração. São 254 linhas com
+unidade no rótulo entre Aliança, Ibimirim e Manari.
+
+`tests/calculadora.test.mjs` prende as quatro conversões, o reconhecimento da
+unidade de quantidade e o arredondamento da fração; `tests/conversao.test.mjs`
+percorre as 75 tabelas dos nove municípios e exige que cada uma tenha caminho
+até os reais — 50 já em reais, 6 por UFM, 7 por base declarada e 12 pelo valor
+que o caso traz. Ele existe por causa de um defeito silencioso: `` no fim
 de "por m²" nunca fecha, porque `²` não é caractere de palavra — o campo de
 quantidade não aparecia e a tabela parecia certa.
 

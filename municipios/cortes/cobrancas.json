@@ -189,7 +189,8 @@
       "rotulo": "Demais atividades da Lista de Serviços",
       "valor": 5
      }
-    ]
+    ],
+    "sobre": "o preço do serviço prestado"
    },
    "periodicidade": "mensal",
    "vencimento": "Conforme o regulamento.",

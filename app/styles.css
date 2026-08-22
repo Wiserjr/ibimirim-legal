@@ -34,6 +34,31 @@ dialog#reader{width:min(920px,calc(100% - 24px));max-width:calc(100vw - 24px);ma
 .charge-tiers th,.charge-tiers td{text-align:left;padding:5px 10px;border-bottom:1px solid var(--line)}
 .charge-tiers th{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--green2)}
 .charge-tiers td:last-child{text-align:right;font-weight:700}
+/* Quantidade e total: a tabela deixa de so informar e passa a calcular.
+   O total e a coluna que o balcao le, entao ela pesa mais que as outras. */
+.charge-tiers td.charge-val{white-space:nowrap}
+.charge-tiers td.charge-val small{display:block;color:var(--muted);font-size:11px;font-weight:400}
+.charge-tiers td.charge-val small.charge-reais{color:var(--green);font-weight:700}
+.charge-tiers td.charge-qtd{white-space:nowrap;width:1%}
+.charge-tiers td.charge-qtd input{width:76px;padding:4px 6px;border:1px solid var(--line);border-radius:7px;
+  font:inherit;font-size:13px;text-align:right;background:#fff}
+.charge-tiers td.charge-qtd input:focus{outline:2px solid var(--green2);outline-offset:1px;border-color:var(--green2)}
+.charge-tiers td.charge-qtd small{margin-left:5px;color:var(--muted);font-size:11px}
+.charge-tiers td.charge-qtd .charge-nada{color:var(--muted)}
+.charge-tiers td.charge-total{text-align:right;white-space:nowrap;color:var(--muted);font-weight:400}
+.charge-tiers td.charge-total b{font-size:15px;color:var(--green)}
+.charge-tiers td.charge-total.charge-total-cheio b{color:var(--green2)}
+.charge-tiers td.charge-total small{display:block;color:var(--muted);font-size:11px;font-weight:400}
+.charge-tiers td:last-child{font-weight:400;color:var(--muted);font-size:12px}
+/* o valor sobre o qual a tabela inteira incide */
+.charge-incide{display:block;margin:12px 0 0;font-weight:700;font-size:13px;color:var(--green2)}
+.charge-incide input{display:block;margin-top:4px;padding:7px 9px;border:1px solid var(--line);
+  border-radius:8px;font:inherit;font-size:14px;max-width:220px;background:#fff}
+@media (max-width:640px){
+  .charge-tiers{font-size:13px}
+  .charge-tiers th,.charge-tiers td{padding:5px 6px}
+  .charge-tiers td.charge-qtd input{width:58px}
+}
 .charge-sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .source-button{border:1px solid var(--line);background:#f2f7f3;color:var(--green);border-radius:10px;padding:8px 12px;font-size:13px;font-weight:700;cursor:pointer;text-align:left}
 .source-button:hover{border-color:var(--green2)}

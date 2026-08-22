@@ -96,7 +96,8 @@
       "rotulo": "Área C — não edificado",
       "valor": 1.8
      }
-    ]
+    ],
+    "sobre": "o valor venal do imóvel — não o Valor de Referência"
    },
    "periodicidade": "anual",
    "vencimento": "Na forma do regulamento.",
@@ -149,7 +150,8 @@
       "valor": 5,
       "periodicidade": "Mensal"
      }
-    ]
+    ],
+    "sobre": "o preço do serviço, com as exclusões que cada linha indica"
    },
    "periodicidade": "mensal",
    "vencimento": "Na forma do regulamento.",
@@ -233,7 +235,8 @@
       "rotulo": "Sobre o valor restante",
       "valor": 2.0
      }
-    ]
+    ],
+    "sobre": "o valor da parcela a que a linha se refere — a financiada numa, o restante na outra"
    },
    "periodicidade": "por ato",
    "vencimento": "Na forma do regulamento.",

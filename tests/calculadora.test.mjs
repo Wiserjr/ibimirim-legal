@@ -19,9 +19,11 @@ runInContext(
   `${src}\n;globalThis.__u=unidadeDeQuantidade;globalThis.__r=emReais;`
   + 'globalThis.__p=precisaValorInformado;globalThis.__b=baseFiscalDe;'
   + 'globalThis.__setUfm=v=>{ufm=v};globalThis.__setBases=b=>{basesFiscais=b};'
-  + 'globalThis.__setCfgBases=b=>{cfg.bases=b};',
+  + 'globalThis.__setCfgBases=b=>{cfg.bases=b};'
+  + 'globalThis.__uf=unidadeEFracao;globalThis.__qe=quantidadeEfetiva;globalThis.__lr=linhaEmReais;',
   sandbox, { filename: 'app.js' });
-const { __u: unidadeDe, __r: emReais, __p: precisaValor, __b: baseFiscal } = sandbox;
+const { __u: unidadeDe, __r: emReais, __p: precisaValor, __b: baseFiscal,
+        __uf: unidadeEFracao, __qe: quantidadeEfetiva, __lr: linhaEmReais } = sandbox;
 
 // --- a unidade de quantidade sai do rótulo ---------------------------------
 const casos = [
@@ -75,4 +77,36 @@ assert.equal(emReais({ tipo: 'itens', unidade: 'percentual', sobreBase: 'vr' }, 
 assert.equal(emReais({ tipo: 'itens', unidade: 'percentual', sobreBase: 'bcla' }, 1), 10,
   'a BCLA continua, porque o valor é da lei e não do exercício');
 
-console.log('OK: calculadora — unidade de quantidade, quatro conversões, e o que falta informar');
+// --- "ou fração": a regra de arredondamento vem colada na unidade ---------
+// Cortês cobra "R$ 0,60 por m² ou fração" no painel de anúncio. Quem mede
+// 12,3 m² paga 13, e tratar a fração como decimal cobra a menos em quase toda
+// medição real — o erro só não aparece quando a medida sai redonda.
+// o sandbox é outro realm: copia-se para cá antes de comparar estruturas
+const uf = i => { const r = unidadeEFracao(i); return r && { ...r }; };
+assert.deepEqual(uf({ por: 'm² ou fração' }), { unidade: 'm²', fracao: true });
+assert.deepEqual(uf({ por: 'm²' }), { unidade: 'm²', fracao: false });
+assert.deepEqual(uf({ rotulo: 'Alvará, por dia' }), { unidade: 'dia', fracao: false });
+assert.equal(uf({ rotulo: 'Taxa de expediente' }), null, 'sem unidade não inventa uma');
+
+assert.equal(quantidadeEfetiva(12.3, true), 13, '12,3 m² ou fração pagam 13');
+assert.equal(quantidadeEfetiva(12.3, false), 12.3, 'sem "ou fração" o decimal vale');
+assert.equal(quantidadeEfetiva(0.5, true), 1, 'meia unidade ainda paga uma');
+assert.equal(quantidadeEfetiva(13, true), 13, 'inteiro não sobe');
+assert.equal(quantidadeEfetiva(0, true), null, 'zero não é quantidade');
+assert.equal(quantidadeEfetiva(NaN, true), null, 'campo vazio não é quantidade');
+
+// --- o valor de uma linha, em reais ---------------------------------------
+sandbox.__setCfgBases([{ id: 'vr', sigla: 'VR' }]);
+sandbox.__setBases({ vr: { value: 120 } });
+sandbox.__setUfm({ value: 1.44, year: 2013 });
+
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'reais' }, { valor: 0.6 }), 0.6);
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'ufm' }, { valor: 3 }), 4.32, '3 UFM a R$ 1,44');
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'percentual', sobreBase: 'vr' }, { valor: 25 }), 30);
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'percentual' }, { valor: 2 }, 10000), 200,
+  '2% de R$ 10.000 — o valor vem do caso concreto');
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'percentual' }, { valor: 2 }, null), null,
+  'sem o valor informado não se inventa um total');
+assert.equal(linhaEmReais({ tipo: 'itens', unidade: 'ufm' }, { valor: null }), null, 'linha sem valor');
+
+console.log('OK: calculadora — unidade, fração, quatro conversões, e o valor de cada linha');

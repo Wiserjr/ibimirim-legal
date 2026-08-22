@@ -352,10 +352,40 @@ function feeAmount(entry){
   return `<span class="fee-raw">${escape(entry.raw||'valor não informado no comparativo')}</span>`;
 }
 
+// O valor unitário de uma linha da busca de taxas, em reais. Mesma regra das
+// cobranças: devolve null quando falta a informação que só o caso traz.
+function taxaEmReais(entry, informado){
+  if(entry.kind==='fixed')return Number.isFinite(entry.value)?entry.value:null;
+  if(entry.kind==='ufm')return ufm?entry.ufm*ufm.value:null;
+  if(entry.kind==='pct')return Number.isFinite(informado)&&informado>0?(entry.valor/100)*informado:null;
+  return null;
+}
+
+function unidadeDaTaxa(entry){
+  return unidadeEFracao({por:entry.per,rotulo:entry.label});
+}
+
 function feeCalculator(entry,index){
-  if(entry.kind!=='formula')return '';
-  const unit=escape(entry.unit||'unidade');
-  return `<div class="fee-calc"><label for="feeCalc${index}">Calcular para</label><div class="fee-input"><input id="feeCalc${index}" type="number" min="0.01" step="0.01" inputmode="decimal" data-fee-calc="${index}" placeholder="0"><span>${unit}</span></div><output id="feeCalcOut${index}" class="fee-calc-out">—</output></div>`;
+  // a fórmula tem calculadora própria: base mais adicional por metro excedente
+  if(entry.kind==='formula'){
+    const unit=escape(entry.unit||'unidade');
+    return `<div class="fee-calc"><label for="feeCalc${index}">Calcular para</label><div class="fee-input"><input id="feeCalc${index}" type="number" min="0.01" step="0.01" inputmode="decimal" data-fee-calc="${index}" placeholder="0"><span>${unit}</span></div><output id="feeCalcOut${index}" class="fee-calc-out">—</output></div>`;
+  }
+  if(!['fixed','ufm','pct'].includes(entry.kind))return '';
+  // Sem a unidade informada não há o que multiplicar: dizer isso é mais útil
+  // que oferecer um campo que não produz resposta.
+  if(entry.kind==='ufm'&&!ufm)return '';
+  const uf=unidadeDaTaxa(entry);
+  const rot=uf?`Quantidade em ${escape(uf.unidade)}${uf.fracao?' — ou fração':''}`:'Quantas vezes';
+  const incide=entry.kind==='pct'
+    ?`<label for="feeInc${index}">${escape(entry.section.base||'Valor sobre o qual incide')} (R$)</label>`
+     +`<div class="fee-input"><span class="fee-prefix">R$</span><input id="feeInc${index}" type="number" min="0.01" step="0.01"`
+     +` inputmode="decimal" data-fee-incide="${index}" placeholder="0,00"></div>`
+    :'';
+  return `<div class="fee-calc">${incide}<label for="feeQtd${index}">${rot}</label>`
+    +`<div class="fee-input"><input id="feeQtd${index}" type="number" min="0" step="0.01" inputmode="decimal"`
+    +` data-fee-qtd="${index}" placeholder="1">${uf?`<span>${escape(uf.unidade)}</span>`:''}</div>`
+    +`<output id="feeQtdOut${index}" class="fee-calc-out">—</output></div>`;
 }
 
 const AVISO_CONF={media:'Rótulo e valor pareados pela contagem: a coluna de valores vem deslocada no PDF. Confira na página indicada.',baixa:'Leitura ambígua no documento. Confira na página indicada antes de usar.'};
@@ -390,6 +420,25 @@ function renderFeeResults(){
     if(!area){out.textContent='—';return;}
     const excess=Math.max(0,area-(entry.threshold||0));
     out.innerHTML=`Estimativa: <b>${money(entry.base+excess*entry.rate)}</b>`;
+  });
+  $('#feeResults').querySelectorAll('[data-fee-qtd],[data-fee-incide]').forEach(input=>{
+    const i=input.dataset.feeQtd??input.dataset.feeIncide;
+    const recalcular=()=>{
+      const entry=top[+i],out=$(`#feeQtdOut${i}`);
+      if(!out)return;
+      const num=v=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?n:null};
+      const informado=num($(`#feeInc${i}`)?.value);
+      const unidade=taxaEmReais(entry,informado);
+      if(unidade===null){out.innerHTML=entry.kind==='pct'?'informe o valor acima':'—';return}
+      const uf=unidadeDaTaxa(entry);
+      const bruto=num($(`#feeQtd${i}`)?.value);
+      const qtd=quantidadeEfetiva(bruto,uf?.fracao);
+      const total=unidade*(qtd??1);
+      const subiu=qtd!==null&&uf?.fracao&&bruto!==qtd
+        ?` <small>${bruto.toLocaleString('pt-BR')} → ${qtd.toLocaleString('pt-BR')} ${escape(uf.unidade)}</small>`:'';
+      out.innerHTML=`<b>${money(total)}</b>${subiu}`;
+    };
+    input.oninput=recalcular;recalcular();
   });
   $('#feeResults').querySelectorAll('[data-fee-page]').forEach(button=>button.onclick=()=>openCtmPage(+button.dataset.feePage,terms,button.dataset.feeDoc));
 }
@@ -546,6 +595,35 @@ function unidadeDeQuantidade(item) {
 
 function itemTemQuantidade(base) {
   return (base?.itens || []).some(i => unidadeDeQuantidade(i));
+}
+
+// "m² ou fração" traz duas informações num campo só: a unidade e a regra de
+// arredondamento. A lei que cobra "por m² ou fração" manda subir para o
+// inteiro seguinte — 12,3 m² pagam 13 —, e ignorar isso erra o valor para
+// menos em quase toda medição real.
+function unidadeEFracao(item) {
+  const bruto = unidadeDeQuantidade(item);
+  if (!bruto) return null;
+  const fracao = /ou\s+fra[cç][aã]o/i.test(bruto);
+  const unidade = bruto.replace(/\s*ou\s+fra[cç][aã]o\s*/i, '').trim() || 'unidade';
+  return { unidade, fracao };
+}
+
+function quantidadeEfetiva(qtd, fracao) {
+  if (!Number.isFinite(qtd) || qtd <= 0) return null;
+  return fracao ? Math.ceil(qtd) : qtd;
+}
+
+// O valor de UMA unidade da linha, em reais. Devolve null quando falta a
+// informação que só o caso concreto traz — e falta continua sendo informação,
+// não erro: a célula diz o que falta em vez de mostrar um número inventado.
+function linhaEmReais(base, item, informado) {
+  const v = item?.valor;
+  if (!Number.isFinite(v)) return null;
+  if (precisaValorInformado(base)) {
+    return Number.isFinite(informado) && informado > 0 ? (v / 100) * informado : null;
+  }
+  return emReais(base, v);
 }
 
 
@@ -714,35 +792,105 @@ function baseDaTabela(base) {
 }
 
 
-function itensHtml(base){
+function itensHtml(base, c){
   // a cobrança pode trazer os itens, ou apontar a seção do fees.js que os tem
   const daTabela=base?.tipo!=='itens'?baseDaTabela(base):null;
   if(daTabela)base=daTabela;
   if(base?.tipo!=='itens')return '';
   const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
   const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
-  // A coluna em reais só existe quando dá para calculá-la sem perguntar nada:
-  // valor em UFM ou percentual de uma base do Município, com a unidade já
-  // informada. Percentual sobre valor venal ou preço do serviço fica para a
-  // calculadora, que pergunta o valor do caso.
+  // A conversão em reais deixou de ser uma coluna própria: ela desce para
+  // baixo do valor tabelado, e o lugar dela na tabela passa a ser o total,
+  // que é o que se cobra. Quem atende no balcão precisa do total, não da
+  // aritmética intermediária.
   const col=colunaReaisHtml(base);
-  const mostra=col&&col.pronta;
-  const linhas=(base.itens||[]).map(i=>{
-    const reais=mostra?emReais(base,i.valor):null;
-    const qtd=unidadeDeQuantidade(i);
-    return `<tr><td>${escape(i.rotulo||'')}</td>`
-      +`<td>${escape(fmt(i.valor))}${i.por?`<small> por ${escape(i.por)}</small>`:''}</td>`
-      +(mostra?`<td class="charge-reais">${i.valor===0?'Isento':reais===null?'—':money(reais)}${qtd?`<small> por ${escape(qtd)}</small>`:''}</td>`:'')
+  const precisa=precisaValorInformado(base);
+  const cid=escape(c?.id||'');
+  const itens=base.itens||[];
+
+  const linhas=itens.map((i,n)=>{
+    const uf=unidadeEFracao(i);
+    const isento=i.valor===0;
+    const unit=linhaEmReais(base,i,null);
+    // não se repete em reais o que já está em reais
+    const convertido=!isento&&base.unidade!=='reais'&&Number.isFinite(unit)?money(unit):null;
+    const rotuloQtd=uf?`Quantidade em ${uf.unidade}`:'Quantidade';
+    return `<tr data-linha="${n}">`
+      +`<td>${escape(i.rotulo||'')}</td>`
+      +`<td class="charge-val">${escape(fmt(i.valor))}`
+        +(uf?`<small> por ${escape(uf.unidade)}${uf.fracao?' ou fração':''}</small>`:'')
+        +(convertido?`<small class="charge-reais">= ${convertido}</small>`:'')
+      +`</td>`
+      +`<td class="charge-qtd">`
+        +(isento?'<span class="charge-nada">—</span>'
+          :`<input type="number" min="0" step="0.01" inputmode="decimal" data-qtd="${n}"`
+           +` placeholder="1" aria-label="${escape(rotuloQtd)}">`
+           +(uf?`<small>${escape(uf.unidade)}</small>`:''))
+      +`</td>`
+      +`<td class="charge-total" data-total="${n}">${isento?'Isento':'—'}</td>`
       +`<td>${escape(i.periodicidade||'')}</td></tr>`;
   }).join('');
-  return `<table class="charge-tiers">`
+
+  // O campo de incidência vale para a tabela inteira: informa-se o valor venal
+  // (ou o preço do serviço) uma vez, e todas as linhas passam a somar.
+  const campoIncide=precisa
+    ?`<label class="charge-incide">${escape(base.sobre?`Informe ${base.sobre}`:'Valor sobre o qual incide')} (R$)`
+      +`<input type="number" min="0" step="0.01" inputmode="decimal" data-incide placeholder="0,00"></label>`
+    :'';
+
+  return campoIncide+`<table class="charge-tiers" data-tabela="${cid}">`
     +(col&&!col.pronta?`<caption class="charge-falta-base">${col.aviso}</caption>`:col?`<caption>${col.aviso}</caption>`:'')
-    +`<thead><tr><th>Discriminação</th><th>Valor</th>${mostra?'<th>Em reais</th>':''}<th>Periodicidade</th></tr></thead>`
+    +`<thead><tr><th>Discriminação</th><th>Valor</th><th>Qtd.</th><th>Total</th><th>Periodicidade</th></tr></thead>`
     +`<tbody>${linhas}</tbody>`
-    +(base.__secao&&base.__secao.total>base.itens.length
-      ?`<tfoot><tr><td colspan="9">Mostrando ${base.itens.length} de ${base.__secao.total} linhas — as demais estão na aba de taxas, com busca.</td></tr></tfoot>`
+    +(base.__secao&&base.__secao.total>itens.length
+      ?`<tfoot><tr><td colspan="9">Mostrando ${itens.length} de ${base.__secao.total} linhas — as demais estão na aba de taxas, com busca.</td></tr></tfoot>`
       :'')
     +`</table>`;
+}
+
+// --- o total de cada linha ------------------------------------------------
+// Liga os campos de quantidade da tabela de uma cobrança. Não passa por
+// renderCharges: recalcular a página inteira a cada tecla apagaria o que a
+// pessoa acabou de digitar nas outras linhas.
+function ligarLinhas(c, raiz){
+  const card=raiz.querySelector(`[data-charge-card="${CSS.escape(c.id)}"]`);
+  if(!card)return;
+  let base=c.base?.tipo!=='itens'?(baseDaTabela(c.base)||c.base):c.base;
+  if(base?.tipo!=='itens')return;
+  const incide=card.querySelector('[data-incide]');
+  const itens=base.itens||[];
+
+  const numero=v=>{const n=Number(String(v??'').replace(',','.'));return Number.isFinite(n)?n:null};
+
+  const atualizar=()=>{
+    const informado=numero(incide?.value);
+    card.querySelectorAll('[data-qtd]').forEach(inp=>{
+      const n=Number(inp.dataset.qtd), item=itens[n];
+      const cel=card.querySelector(`[data-total="${n}"]`);
+      if(!cel||!item)return;
+      const uf=unidadeEFracao(item);
+      const unit=linhaEmReais(base,item,informado);
+      if(unit===null){
+        cel.innerHTML=precisaValorInformado(base)
+          ?`<small>informe o valor acima</small>`
+          :`<small>informe a unidade</small>`;
+        return;
+      }
+      const bruto=numero(inp.value);
+      const qtd=quantidadeEfetiva(bruto,uf?.fracao);
+      const usada=qtd??1;
+      const total=unit*usada;
+      // quando "ou fração" arredonda, dizer o que foi cobrado a mais evita a
+      // pergunta seguinte no balcão
+      const subiu=qtd!==null&&uf?.fracao&&bruto!==qtd
+        ?`<small>${bruto.toLocaleString('pt-BR')} → ${qtd.toLocaleString('pt-BR')} ${escape(uf.unidade)}</small>`:'';
+      cel.innerHTML=`<b>${money(total)}</b>${subiu}`;
+      cel.classList.toggle('charge-total-cheio',qtd!==null);
+    });
+  };
+
+  card.querySelectorAll('[data-qtd],[data-incide]').forEach(i=>{i.oninput=atualizar});
+  atualizar();
 }
 
 // --- painel das outras bases fiscais --------------------------------------
@@ -797,7 +945,11 @@ function colunaReaisHtml(base) {
 function calculadoraHtml(c) {
   const base = baseDaTabela(c.base) || c.base;
   if (!base || !['itens', 'faixas', 'reais', 'ufm', 'percentual'].includes(base.tipo)) return '';
-  const itens = base.tipo === 'itens' ? (base.itens || []) : [];
+  // Onde há tabela de itens, cada linha agora tem o seu campo de quantidade e
+  // o seu total. Uma segunda calculadora escondida atrás de um "Calcular o
+  // valor" só repetiria, pior, o que a linha já faz.
+  if (base.tipo === 'itens') return '';
+  const itens = [];
   const precisaValor = precisaValorInformado(base);
   const temQtd = base.tipo === 'itens' ? itemTemQuantidade(base) : false;
   const id = baseFiscalDe(base);
@@ -912,14 +1064,14 @@ function renderCharges(){
     +(lista.length!==charges.length?` · ${lista.length} no filtro`:'');
 
   $('#chargeList').innerHTML=lista.length?lista.map(c=>`
-    <article class="charge-card">
+    <article class="charge-card" data-charge-card="${escape(c.id)}">
       <header>
         <div><span class="charge-tributo">${escape(c.tributo||'—')}</span><h3>${escape(c.rotulo||'(sem rótulo)')}</h3></div>
         <span class="charge-conf charge-conf-${escape(c.conferencia||'informado')}">${escape(CHARGE_CONF[c.conferencia]||CHARGE_CONF.informado)}</span>
       </header>
       <p class="charge-base-line"><b>${escape(baseTexto(c.base))}</b>${c.periodicidade?` · ${escape(c.periodicidade)}`:''}</p>
       ${faixasHtml(c.base)}
-      ${itensHtml(c.base)}
+      ${itensHtml(c.base, c)}
       ${calculadoraHtml(c)}
       ${c.base?.sobre?`<p class="charge-sobre">Incide sobre: ${escape(c.base.sobre)}</p>`:''}
       <dl class="charge-meta">
@@ -936,7 +1088,7 @@ function renderCharges(){
       ?'<p class="empty">Nenhuma cobrança encontrada com esse filtro.</p>'
       :'<p class="empty">Nenhuma cobrança cadastrada ainda. Comece por uma que você já explica com frequência — o cadastro vai pedir o dispositivo que a sustenta.</p>';
 
-  lista.forEach(c=>ligarCalculadora(c,$('#chargeList')));
+  lista.forEach(c=>{ligarLinhas(c,$('#chargeList'));ligarCalculadora(c,$('#chargeList'))});
   document.querySelectorAll('[data-charge-edit]').forEach(b=>b.onclick=()=>openChargeForm(b.dataset.chargeEdit));
   document.querySelectorAll('#chargeList [data-fee-page]').forEach(b=>b.onclick=()=>
     openCtmPage(+b.dataset.feePage,termos.length?termos:['taxa','valor'],b.dataset.feeDoc));
