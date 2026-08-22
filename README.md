@@ -23,9 +23,9 @@ cobrança.
 ## Baixar
 
 Não é preciso compilar nada: cada município tem seu aplicativo pronto no
-**[Release v1.7.1](https://github.com/Wiserjr/ibimirim-legal/releases/tag/v1.7.1)** — a versão em que
-as tabelas passaram a calcular: cada linha tem campo de quantidade e mostra o total em reais. São
-**108 tabelas e 3.280 linhas** nos nove municípios.
+**[Release v1.7.2](https://github.com/Wiserjr/ibimirim-legal/releases/tag/v1.7.2)** — as tabelas
+calculam: cada linha tem campo de quantidade e mostra o total em reais. São **108 tabelas e 3.280
+linhas** nos nove municípios.
 
 - **Android** — o `.apk` do município. Abrir o arquivo no aparelho instala; o Android pede
   autorização para instalar fora da loja, e é esperado. Quem já tem a versão anterior recebe
