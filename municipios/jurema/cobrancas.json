@@ -352,7 +352,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "EM UFM, NÃO EM REAIS — o cabeçalho da tabela é \"UFM / R$ 1,00\". Esta é uma das três tabelas que o Decreto 003/2013 NÃO atualizou. Se a UFM continuar em R$ 1,00, os números acima já são os reais; se for atualizada, multiplicam-se por ela. ESCALONAMENTO IRREGULAR NA LEI: a faixa comercial salta de 20 para 58 entre 100 m² e 200 m², enquanto a de prestação de serviços vai de 16 para 32. Está assim impresso na página — comercial até 200 m² paga o mesmo que indústria até 100 m². É defeito da lei, não da leitura. ISENÇÃO: dispensados os imóveis beneficiados pela isenção do IPTU do art. 151 e os que gozam de imunidade.",
+   "nota": "CONFERIDO NA IMAGEM. As dezessete faixas conferem na página 134, TABELA I, valor a valor e na ordem: residencial de 8 a 65 UFM em cinco faixas, prestação de serviços de 16 a 82 em quatro, comércio de 20 a 116 em quatro e indústria de 58 a 164 em quatro. Na imagem a coluna de valores parece descer uma linha em relação ao rótulo — é a curvatura do encadernado —, mas a contagem fecha em cada bloco. EM UFM, NÃO EM REAIS — o cabeçalho da tabela é \"UFM / R$ 1,00\". Esta é uma das três tabelas que o Decreto 003/2013 NÃO atualizou. Se a UFM continuar em R$ 1,00, os números acima já são os reais; se for atualizada, multiplicam-se por ela. ESCALONAMENTO IRREGULAR NA LEI: a faixa comercial salta de 20 para 58 entre 100 m² e 200 m², enquanto a de prestação de serviços vai de 16 para 32. Está assim impresso na página — comercial até 200 m² paga o mesmo que indústria até 100 m². É defeito da lei, não da leitura. ISENÇÃO: dispensados os imóveis beneficiados pela isenção do IPTU do art. 151 e os que gozam de imunidade.",
    "vigencia": {
     "de": "2007",
     "ate": null
@@ -440,7 +440,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "EM UFM — coluna intitulada \"Em UFM\". Tabela não atualizada pelo Decreto 003/2013. A numeração impressa começa sem o \"1.\" no primeiro item e segue de 2 a 8; a vistoria de edificação é o item 1. Os serviços funerários são o item 9 e continuam na página seguinte, cadastrados à parte.",
+   "nota": "CONFERIDO NA IMAGEM. Os doze conferem na página 134, TABELA II, de 0,30 UFM no alinhamento por metro linear a 30,00 na apreensão de veículo. EM UFM — coluna intitulada \"Em UFM\". Tabela não atualizada pelo Decreto 003/2013. A numeração impressa começa sem o \"1.\" no primeiro item e segue de 2 a 8; a vistoria de edificação é o item 1. Os serviços funerários são o item 9 e continuam na página seguinte, cadastrados à parte.",
    "vigencia": {
     "de": "2007",
     "ate": null
@@ -588,7 +588,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "EM UFM. Tabela não atualizada pelo Decreto 003/2013. A perpetuidade de jazigo, a 350 UFM, é o maior valor de toda a Tabela II.",
+   "nota": "CONFERIDO NA IMAGEM. Os vinte e quatro conferem na página 135, item 9 da TABELA II. Repare que a exumação ANTES de vencido o prazo de decomposição custa mais que a exumação depois — 30,00 contra 25,00 UFM. EM UFM. Tabela não atualizada pelo Decreto 003/2013. A perpetuidade de jazigo, a 350 UFM, é o maior valor de toda a Tabela II.",
    "vigencia": {
     "de": "2007",
     "ate": null
@@ -721,7 +721,135 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "EM UFM. Terceira e última tabela que o Decreto 003/2013 NÃO atualizou. É a tabela mais consultada no balcão: certidão negativa, baixa, DAM e talão de nota fiscal saem daqui. A taxa de emissão do DAM (item 8) incide sobre a emissão do próprio documento de arrecadação — conferir com a assessoria jurídica antes de cobrá-la no DAM de outro tributo.",
+   "nota": "CONFERIDO NA IMAGEM. Os vinte e um conferem na página 136, TABELA III. EM UFM. Terceira e última tabela que o Decreto 003/2013 NÃO atualizou. É a tabela mais consultada no balcão: certidão negativa, baixa, DAM e talão de nota fiscal saem daqui. A taxa de emissão do DAM (item 8) incide sobre a emissão do próprio documento de arrecadação — conferir com a assessoria jurídica antes de cobrá-la no DAM de outro tributo.",
+   "vigencia": {
+    "de": "2007",
+    "ate": null
+   }
+  },
+  {
+   "id": "taxa-localizacao-industrias-agricultura",
+   "tributo": "Taxa",
+   "rotulo": "Taxa de localização e funcionamento — agricultura, criação e indústrias (Tabela IV, itens 001 a 019)",
+   "fatoGerador": "Localização, instalação e funcionamento de estabelecimento de agricultura, criação, indústria ou fabrico no território do Município.",
+   "sujeitoPassivo": "A pessoa física ou jurídica titular do estabelecimento.",
+   "base": {
+    "tipo": "itens",
+    "unidade": "ufm",
+    "itens": [
+     {
+      "rotulo": "001 — Agricultura",
+      "valor": 40,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "002 — Criação (bovinocultura, suinocultura, avicultura etc.)",
+      "valor": 40,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "003 — Artigos de cama, mesa, banho, cortina e tapeçaria",
+      "valor": 60,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "004 — Artigos de madeira, carpintaria e marcenaria",
+      "valor": 60,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "005 — Baterias e acumuladores elétricos",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "006 — Calçados",
+      "valor": 80,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "007 — Cerâmicas, mosaicos, louças e mármores",
+      "valor": 120,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "008 — Confecções de roupas (indústrias)",
+      "valor": 140,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "009 — Confecções de roupas (indústrias / porte médio)",
+      "valor": 100,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "010 — Confecções de roupas (pequenos fabricos)",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "011 — Confecções de mosqueteiros",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "012 — Doces",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "013 — Esquadrias e estruturas de madeira em geral",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "014 — Gelo",
+      "valor": 40,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "015 — Malas, valises e similares",
+      "valor": 60,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "016 — Massas alimentícias e biscoitos",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "017 — Móveis",
+      "valor": 70,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "018 — Móveis Populares",
+      "valor": 50,
+      "periodicidade": "Anual"
+     },
+     {
+      "rotulo": "019 — Padarias (Centro)",
+      "valor": 70,
+      "periodicidade": "Anual"
+     }
+    ]
+   },
+   "periodicidade": "Anual",
+   "vencimento": "No licenciamento e, depois, na renovação anual.",
+   "fundamento": [
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 136,
+     "artigo": "Tabela IV, itens 001 a 007"
+    },
+    {
+     "doc": "ctm-255-2007",
+     "pagina": 137,
+     "artigo": "Tabela IV, itens 008 a 019"
+    }
+   ],
+   "conferencia": "conferido",
+   "nota": "CONFERIDO NA IMAGEM das páginas 136 e 137, os dezenove valores. ESTES ITENS SEGUEM EM UFM, e é por isso que estão numa cobrança separada. O Decreto nº 003/2013 reeditou a Tabela IV em reais, mas COMEÇOU NO ITEM 020: a página 2 do encadernado abre em \"020 Padarias (Bairro) 86,40\", e os itens 001 a 019 — toda a agricultura e criação, e quase toda a seção de indústrias e fabricos — ficaram de fora. Sem eles o aplicativo respondia por quem abre uma padaria de bairro e se calava para quem abre uma cerâmica, uma marcenaria ou uma fábrica de móveis. A PROVA DE QUE O EMPARELHAMENTO ESTÁ CERTO vem do próprio Decreto: o item 020 vale 60,00 aqui e R$ 86,40 lá, que é 60 × 1,44; o 021 vale 70,00 e R$ 100,80; o 022, 40,00 e R$ 57,60; o 025, 80,00 e R$ 115,20. A coluna de valores parece deslocada na imagem, por causa da curvatura do encadernado, mas a conta fecha item a item. PARA CHEGAR AO VALOR EM REAIS, informe a UFM no painel acima. Aplicando o mesmo R$ 1,44 que o Decreto fixou, uma cerâmica (item 007, 120 UFM) daria R$ 172,80 — mas ESSE NÚMERO NÃO ESTÁ NA LEI, porque o Decreto não reeditou este trecho. Confirme com o Município se a atualização alcança estes itens ou se eles seguem pelo valor de 2007.",
    "vigencia": {
     "de": "2007",
     "ate": null
@@ -1319,7 +1447,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. AS 110 ATIVIDADES CONFEREM, uma a uma. Duas foram verificadas à mão porque o extrator tropeçou no número de página: a 103, ensino de jardim da infância, 30 UFM em 2007 e R$ 43,20 no Decreto; e a 129, outros serviços, 40 UFM e R$ 57,60. São 110 atividades numeradas de 020 a 129 nas páginas 2 e 3, agrupadas em comércio atacadista, comércio varejista e prestação de serviço. AS ATIVIDADES 001 A 019 NÃO ESTÃO NO DECRETO — o bloco encadernado começa no item 020, e as dezenove primeiras só constam da redação de 2007, em UFM, a partir da página 136. O maior valor é o das instituições financeiras, R$ 432,00, trezentas UFM. O item 073 é impresso \"Mercenarias\" no Decreto e \"Mercearias\" em 2007 — é a mercearia, não a marcenaria.",
+   "nota": "ESTA TABELA COMEÇA NO ITEM 020. O Decreto nº 003/2013 reeditou a Tabela IV em reais a partir daí — a página 2 do encadernado abre em \"020 Padarias (Bairro) 86,40\" —, e os itens 001 a 019, que são a agricultura, a criação e quase toda a seção de indústrias e fabricos, ficaram de fora. Eles estão na cobrança \"agricultura, criação e indústrias\", em UFM, porque o Decreto não os converteu. CONFERIDO CONTRA A REDAÇÃO DE 2007. Cada valor foi comparado com o da mesma tabela no corpo do Código (páginas 136 a 145), onde rótulo e valor ficam na mesma linha do texto e não há ambiguidade de leitura, multiplicado por 1,44. AS 110 ATIVIDADES CONFEREM, uma a uma. Duas foram verificadas à mão porque o extrator tropeçou no número de página: a 103, ensino de jardim da infância, 30 UFM em 2007 e R$ 43,20 no Decreto; e a 129, outros serviços, 40 UFM e R$ 57,60. São 110 atividades numeradas de 020 a 129 nas páginas 2 e 3, agrupadas em comércio atacadista, comércio varejista e prestação de serviço. AS ATIVIDADES 001 A 019 NÃO ESTÃO NO DECRETO — o bloco encadernado começa no item 020, e as dezenove primeiras só constam da redação de 2007, em UFM, a partir da página 136. O maior valor é o das instituições financeiras, R$ 432,00, trezentas UFM. O item 073 é impresso \"Mercenarias\" no Decreto e \"Mercearias\" em 2007 — é a mercearia, não a marcenaria.",
    "vigencia": {
     "de": "2013",
     "ate": null

@@ -68,6 +68,50 @@ podem ser indexados como tal:
 O item 4 da lista de prioridade alta pede o Código de Obras e o Código de Posturas **de Ibimirim**;
 os arquivos de Manari não o atendem.
 
+## Jurema: o Decreto de 2013 não reeditou os itens 001 a 019 da Tabela IV
+
+O Decreto nº 003/2013 atualizou a UFM para R$ 1,44 e trouxe, anexas, as Tabelas IV a
+XIII já em reais. Mas a sua Tabela IV **começa no item 020**: a página 2 do encadernado
+abre em "020 Padarias (Bairro) 86,40". Os itens **001 a 019** — toda a seção de
+agricultura e criação, e quase toda a de indústrias e fabricos — não aparecem em lugar
+nenhum do Decreto.
+
+Na prática, isso deixava o aplicativo respondendo por quem abre uma padaria de bairro e
+calado para quem abre uma cerâmica, uma marcenaria, uma fábrica de móveis ou de
+confecções. Os dezenove itens foram lidos na imagem das páginas 136 e 137 e entraram
+como cobrança própria, **em UFM**, que é a unidade em que a lei de 2007 os deixou.
+
+| Item | Atividade | UFM |
+|---|---|--:|
+| 001 | Agricultura | 40 |
+| 002 | Criação (bovinocultura, suinocultura, avicultura etc.) | 40 |
+| 003 | Artigos de cama, mesa, banho, cortina e tapeçaria | 60 |
+| 004 | Artigos de madeira, carpintaria e marcenaria | 60 |
+| 005 | Baterias e acumuladores elétricos | 70 |
+| 006 | Calçados | 80 |
+| 007 | Cerâmicas, mosaicos, louças e mármores | 120 |
+| 008 | Confecções de roupas (indústrias) | 140 |
+| 009 | Confecções de roupas (indústrias / porte médio) | 100 |
+| 010 | Confecções de roupas (pequenos fabricos) | 70 |
+| 011 | Confecções de mosqueteiros | 50 |
+| 012 | Doces | 70 |
+| 013 | Esquadrias e estruturas de madeira em geral | 70 |
+| 014 | Gelo | 40 |
+| 015 | Malas, valises e similares | 60 |
+| 016 | Massas alimentícias e biscoitos | 70 |
+| 017 | Móveis | 70 |
+| 018 | Móveis Populares | 50 |
+| 019 | Padarias (Centro) | 70 |
+
+**Perguntar ao Município:** a atualização do Decreto alcança estes itens, aplicando-se o
+mesmo R$ 1,44 — o que faria a cerâmica do item 007 custar R$ 172,80 —, ou eles seguem
+pelo valor de 2007 com a UFM de R$ 1,00 do art. 398? O aplicativo não decide: mostra o
+valor em UFM e converte com a unidade que o Município informar.
+
+O emparelhamento entre rótulo e valor foi provado pelo próprio Decreto, e não por
+leitura de imagem: o item 020 vale 60 UFM na redação de 2007 e R$ 86,40 no Decreto, que
+é 60 × 1,44; o 021, 70 e R$ 100,80; o 022, 40 e R$ 57,60; o 025, 80 e R$ 115,20.
+
 ## Ibimirim: a planilha comparativa diverge da lei na tabela de publicidade
 
 O `fees.js` de Ibimirim nasce da planilha `Comparativo - CTM Ibimirim - Taxas.xlsx`,
