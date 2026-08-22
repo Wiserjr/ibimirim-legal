@@ -93,6 +93,24 @@ def valores_da_pagina(texto: str) -> set[int]:
     return achados
 
 
+def valores_da_cobranca(cobranca: dict) -> list[tuple]:
+    """Todo valor que a cobrança afirma, venha de tabela ou de faixa.
+
+    Por muito tempo só os `itens` eram conferidos, e as `faixas` passavam
+    inteiras — 80 valores em 11 cobranças, entre eles as onze faixas do
+    habite-se de Tacaratu e as duas escalas de limpeza de Cortês. Uma tabela
+    que a lei escreve por faixa não é menos tabela.
+    """
+    base = cobranca.get("base") or {}
+    achados = [(i.get("valor"), str(i.get("rotulo") or "")) for i in (base.get("itens") or [])]
+    for faixa in base.get("faixas") or []:
+        if isinstance(faixa, (list, tuple)) and len(faixa) >= 2:
+            teto = faixa[0]
+            rotulo = f"até {teto}" if teto is not None else "acima da última faixa"
+            achados.append((faixa[1], rotulo))
+    return achados
+
+
 def paginas_citadas(cobranca: dict) -> dict[str, list[int]]:
     porta: dict[str, list[int]] = {}
     for f in cobranca.get("fundamento", []):
@@ -116,8 +134,7 @@ def conferir(slug: str, detalhe: bool) -> tuple[int, int, list[str]]:
     falhas: list[str] = []
     ilegiveis: list[str] = []
     for c in cobrancas:
-        itens = c.get("base", {}).get("itens") or []
-        if not itens:
+        if not valores_da_cobranca(c):
             continue
         # a página citada nem sempre é a da tabela; junta-se o texto de todas,
         # mais a vizinha, porque tabela longa atravessa a virada de página
@@ -136,14 +153,18 @@ def conferir(slug: str, detalhe: bool) -> tuple[int, int, list[str]]:
         if not universo:
             continue
         if limpas and sujas == limpas:
-            ilegiveis.append(f"{slug} · {c['id']} · texto da página ilegível — conferido na imagem, "
-                             f"ver a nota da cobrança")
+            # Não se afirma que foi conferida: pergunta-se à nota. A frase valia
+            # para as cinco de então; ao alargar o conferidor às faixas
+            # entraram outras, e a mensagem passou a garantir por elas uma
+            # conferência que ninguém tinha feito.
+            feita = "CONFERIDO NA IMAGEM" in (c.get("nota") or "").upper()
+            ilegiveis.append(
+                f"{slug} · {c['id']} · texto da página ilegível — "
+                + ("conferido na imagem, ver a nota da cobrança" if feita
+                   else "AINDA NÃO CONFERIDO na imagem"))
             continue
-        for i in itens:
-            v = i.get("valor")
-            if not isinstance(v, (int, float)):
-                continue
-            if v == 0:
+        for v, rotulo in valores_da_cobranca(c):
+            if not isinstance(v, (int, float)) or v == 0:
                 continue          # zero é isenção; a página escreve "Isento"
             total += 1
             alvo = round(v * 100)
@@ -151,7 +172,7 @@ def conferir(slug: str, detalhe: bool) -> tuple[int, int, list[str]]:
             if any(abs(alvo - u) <= 1 for u in universo):
                 achados += 1
             else:
-                falhas.append(f"{slug} · {c['id']} · {v:,.2f} — {str(i.get('rotulo'))[:56]}")
+                falhas.append(f"{slug} · {c['id']} · {v:,.2f} — {rotulo[:56]}")
     if detalhe:
         for f in falhas:
             print("      " + f)

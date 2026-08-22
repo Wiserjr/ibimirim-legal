@@ -377,9 +377,21 @@ valor inventado, dígito trocado, casa decimal errada e tabela citada na página
 errada. Hoje: **1.086 de 1.088**, e os dois restantes foram conferidos na imagem.
 
 As páginas cujo texto reconhecido está corrompido demais para servir de prova
-ficam de fora da conta — o programa se cala nelas em vez de acusar erro. Eram
-cinco cobranças, **todas já conferidas na imagem**: 105 valores, todos corretos.
-O resultado de cada uma está na sua nota.
+ficam de fora da conta — o programa se cala nelas em vez de acusar erro. São
+**onze cobranças, todas conferidas na imagem**, e o resultado de cada uma está
+na sua nota.
+
+Eram cinco até o conferidor passar a olhar também as **faixas**. Ele só percorria
+`base.itens`, e as tabelas que a lei escreve por faixa — as onze do habite-se de
+Tacaratu, as duas escalas de limpeza de Cortês, a vigilância sanitária de
+Vertente — nunca tinham sido confrontadas com a página: **80 valores em 11
+cobranças**, fora do alcance. Com elas, a conta foi de 1.088 para 1.123.
+
+A mensagem da página ilegível também mentia. Ela afirmava "conferido na imagem"
+para toda cobrança que caísse ali, e valia enquanto as cinco eram as mesmas de
+sempre; ao entrarem outras, passou a garantir por elas uma conferência que
+ninguém tinha feito. Agora ela **pergunta à nota** — procura `CONFERIDO NA
+IMAGEM` no texto — e diz `AINDA NÃO CONFERIDO` quando não acha.
 
 O programa também confere se o **artigo citado aparece na página citada** — e foi
 isso que achou o art. 80 de Vertente do Lério, apontado para a página 63 quando

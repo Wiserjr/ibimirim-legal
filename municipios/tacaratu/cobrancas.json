@@ -1021,7 +1021,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "AS FAIXAS ACIMA SÃO DO ITEM 08 (desmembramentos e loteamentos), por m² de lote — e diferentemente das tabelas de obra, aqui o valor da faixa é o TOTAL, não o preço do metro quadrado. Os outros dois itens desta seção: ITEM 07, levantamento de loteamento e terrenos, a cada 100 m² ou fração — R$ 18,00 por terreno até 30.000 m² e R$ 22,00 pelo que exceder 30.000 m². ITEM 09, aprovação de arruamento, por metro linear — R$ 12,00 com meio-fio e linha d'água, R$ 15,00 com toda a infraestrutura básica.",
+   "nota": "CONFERIDO NA IMAGEM. O reconhecimento óptico destas páginas do Anexo VI está corrompido demais para servir de prova, então cada valor foi lido na imagem da página. As nove faixas do item 08 conferem: a primeira e a segunda estão na página 246 (001 a 125 m² por R$ 100,00; 126 a 200 m² por R$ 125,00) e as sete restantes na 247, indo até R$ 500,00 acima de 501 m². Os itens 07 e 09 também conferem, e estão citados no fim desta nota. AS FAIXAS ACIMA SÃO DO ITEM 08 (desmembramentos e loteamentos), por m² de lote — e diferentemente das tabelas de obra, aqui o valor da faixa é o TOTAL, não o preço do metro quadrado. Os outros dois itens desta seção: ITEM 07, levantamento de loteamento e terrenos, a cada 100 m² ou fração — R$ 18,00 por terreno até 30.000 m² e R$ 22,00 pelo que exceder 30.000 m². ITEM 09, aprovação de arruamento, por metro linear — R$ 12,00 com meio-fio e linha d'água, R$ 15,00 com toda a infraestrutura básica.",
    "vigencia": {
     "de": "2017",
     "ate": null
@@ -1099,7 +1099,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "Valor POR METRO QUADRADO. Isento até 50 m² — repare que a isenção do habite-se para em 50 m², enquanto a da licença de construção residencial vai até 60 m². Uma casa de 55 m² é isenta da licença de obra e paga o habite-se.",
+   "nota": "CONFERIDO NA IMAGEM. O reconhecimento óptico destas páginas do Anexo VI está corrompido demais para servir de prova, então cada valor foi lido na imagem da página. As onze faixas do item 10.01 conferem, repartidas entre duas páginas: as sete primeiras na 247 (isento até 50 m², depois R$ 0,45 a R$ 0,70) e as quatro últimas na 248 (R$ 0,75; R$ 0,80; R$ 0,90; R$ 1,00 acima de 501 m²). Valor POR METRO QUADRADO. Isento até 50 m² — repare que a isenção do habite-se para em 50 m², enquanto a da licença de construção residencial vai até 60 m². Uma casa de 55 m² é isenta da licença de obra e paga o habite-se.",
    "vigencia": {
     "de": "2017",
     "ate": null
@@ -1172,7 +1172,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "Por metro quadrado, sem isenção — a tabela comercial e mista é a residencial deslocada uma faixa para cima, começando a cobrar já na primeira. O uso MISTO segue esta tabela, não a residencial.",
+   "nota": "CONFERIDO NA IMAGEM. O reconhecimento óptico destas páginas do Anexo VI está corrompido demais para servir de prova, então cada valor foi lido na imagem da página. As onze faixas do item 10.02 conferem na página 248, de R$ 0,45 a R$ 1,05. Por metro quadrado, sem isenção — a tabela comercial e mista é a residencial deslocada uma faixa para cima, começando a cobrar já na primeira. O uso MISTO segue esta tabela, não a residencial.",
    "vigencia": {
     "de": "2017",
     "ate": null
@@ -1416,7 +1416,7 @@
     }
    ],
    "conferencia": "conferido",
-   "nota": "OS VALORES ACIMA SÃO O SOMATÓRIO — a tabela tem três colunas por faixa: Coleta/Transporte, Destinação Final e Somatório. É o somatório que se lança; as duas primeiras colunas explicam de onde ele vem, e servem se o Município passar a cobrar só um dos serviços. As categorias INDÚSTRIAS e OUTRAS ATIVIDADES têm exatamente os mesmos valores nas cinco faixas — na prática, quem não é residencial nem comércio paga como indústria. Repare que a faixa vai de 0 a 50, 51 a 100, 101 a 200, 201 a 300 e \"acima de 301\": o imóvel de exatamente 301 m² fica entre a quarta e a quinta faixa.",
+   "nota": "CONFERIDO NA IMAGEM nas páginas 250 e 251, os vinte valores. A LEI SEPARA O QUE ESTA TABELA GUARDA SOMADO. Cada faixa do Anexo VIII tem duas colunas — Coleta/Transporte e Destinação Final — e uma terceira com o somatório, que é o que está acima. Isso importa porque o próprio nome da taxa diz \"e/ou\": para um imóvel que recebe só a coleta, sem destinação final, a lei dá o valor da primeira coluna separado. Residencial de 101 a 200 m², por exemplo, é R$ 3,00 de coleta mais R$ 2,00 de destinação. Confirmar com o Município qual das três colunas está sendo lançada. Segundo ponto: as tabelas de INDÚSTRIAS e de OUTRAS ATIVIDADES são idênticas, R$ 6,00 a R$ 10,00 nas cinco faixas. Não é erro de transcrição — a lei repete os mesmos números nos dois grupos. OS VALORES ACIMA SÃO O SOMATÓRIO — a tabela tem três colunas por faixa: Coleta/Transporte, Destinação Final e Somatório. É o somatório que se lança; as duas primeiras colunas explicam de onde ele vem, e servem se o Município passar a cobrar só um dos serviços. As categorias INDÚSTRIAS e OUTRAS ATIVIDADES têm exatamente os mesmos valores nas cinco faixas — na prática, quem não é residencial nem comércio paga como indústria. Repare que a faixa vai de 0 a 50, 51 a 100, 101 a 200, 201 a 300 e \"acima de 301\": o imóvel de exatamente 301 m² fica entre a quarta e a quinta faixa.",
    "vigencia": {
     "de": "2017",
     "ate": null
