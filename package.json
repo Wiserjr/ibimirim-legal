@@ -1,7 +1,7 @@
 {
   "name": "ibimirim-legal",
   "private": true,
-  "version": "1.7.0",
+  "version": "1.7.1",
   "scripts": {
     "test": "python tools/build.py --todos && node tests/municipios.test.mjs && node tests/rank.test.mjs && node tests/vigencia.test.mjs && node tests/calculadora.test.mjs && node tests/conversao.test.mjs && node tests/app.test.mjs && node tests/fees.test.mjs",
     "test:ui": "node tests/ui-cobrancas.test.mjs",
