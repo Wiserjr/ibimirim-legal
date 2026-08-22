@@ -1,4 +1,4 @@
-const CACHE='municipio-legal-v14';
+const CACHE='municipio-legal-v15';
 const CORE=['./','./index.html','./styles.css','./qa.css','./app.js','./municipio.js','./manifest.webmanifest','./icons/icon.svg','./data/laws.js','./data/fees.js','./data/cobrancas.js','./LEIA-ME.txt'];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
