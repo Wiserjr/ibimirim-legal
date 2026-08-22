@@ -469,6 +469,19 @@ Jatobá cobra em percentual de um VR que o art. 113 amarrou à UFIR extinta. Uma
 base pode trazer `padrao` com o valor que a própria lei fixa — é o caso da BCLA
 de Tacaratu, R$ 1.000,00 pelo art. 281.
 
+**Faixa não é tudo igual, e confundir as duas espécies cobra errado por muito.**
+Numa tabela de faixas a medida digitada escolhe a faixa. Em algumas, ela também
+multiplica: as obras de Tacaratu e de Ingazeira dizem "por m²" no cabeçalho, e
+345 m² a R$ 2,00 dão R$ 690,00. Em outras, o valor da faixa **é o total**: a
+limpeza pública de Cortês é "por unidade/ano", e multiplicar pela área cobraria
+duzentas vezes a mais. O campo `porMedida` na base separa as duas, e foi
+decidido tabela a tabela pelo texto da lei — seis multiplicam, cinco não.
+
+Antes disso a calculadora não multiplicava em nenhuma: a medida ia para o campo
+`medida` e a multiplicação procurava em `qtd`, que só existe nas tabelas de
+itens. O total nunca saía, e a saída dizia "informe a quantidade" com a
+quantidade já informada.
+
 A **calculadora do cartão** sobrou para as bases que não têm tabela de itens —
 as de `faixas` e as de fórmula. Onde há itens, a linha faz o trabalho: uma
 calculadora escondida atrás de "Calcular o valor" só repetiria, pior, o que a

@@ -595,7 +595,8 @@
       null,
       3.0
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por ato",
    "vencimento": "Antes do início da obra.",
@@ -640,7 +641,8 @@
       null,
       3.0
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por ato",
    "vencimento": "Antes do início da obra.",

@@ -803,7 +803,8 @@
       null,
       3
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
@@ -886,7 +887,8 @@
       null,
       3
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por obra",
    "vencimento": "No licenciamento, antes do início da obra.",
@@ -1004,7 +1006,8 @@
       null,
       500
      ]
-    ]
+    ],
+    "porMedida": false
    },
    "periodicidade": "por licenciamento",
    "vencimento": "No licenciamento.",
@@ -1082,7 +1085,8 @@
       null,
       1
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por vistoria",
    "vencimento": "No requerimento do habite-se.",
@@ -1160,7 +1164,8 @@
       null,
       1.05
      ]
-    ]
+    ],
+    "porMedida": true
    },
    "periodicidade": "por vistoria",
    "vencimento": "No requerimento do habite-se.",

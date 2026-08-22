@@ -1186,7 +1186,8 @@
       null,
       23.2
      ]
-    ]
+    ],
+    "porMedida": false
    },
    "periodicidade": "anual",
    "vencimento": "Por unidade e por ano.",
@@ -1202,7 +1203,7 @@
     "de": "2005",
     "ate": null
    },
-   "nota": "CONFERIDO NA IMAGEM. O texto reconhecido da página 71 não serve de prova; as quatro faixas foram lidas na imagem e conferem: R$ 2,90 até 50 m², R$ 5,80 de 50 a 100, R$ 11,60 de 100 a 250 e R$ 23,20 acima de 250. É a TABELA DE RECEITA Nº VII, e o cabeçalho diz POR UNIDADE/ANO — o valor da faixa é o total anual do imóvel, não o preço do metro quadrado; a área só escolhe a faixa. A escala dobra a cada degrau. "
+   "nota": "ESTA TABELA NÃO SE MULTIPLICA PELA ÁREA: a faixa escolhe o valor, e o valor é o total do ano. Um imóvel de 200 m² paga R$ 11,60 no ano, não R$ 11,60 por m². A calculadora foi ajustada para respeitar isso — nas tabelas de obra de Tacaratu e Ingazeira, que dizem \"por m²\" no cabeçalho, ela multiplica; aqui, não. CONFERIDO NA IMAGEM. O texto reconhecido da página 71 não serve de prova; as quatro faixas foram lidas na imagem e conferem: R$ 2,90 até 50 m², R$ 5,80 de 50 a 100, R$ 11,60 de 100 a 250 e R$ 23,20 acima de 250. É a TABELA DE RECEITA Nº VII, e o cabeçalho diz POR UNIDADE/ANO — o valor da faixa é o total anual do imóvel, não o preço do metro quadrado; a área só escolhe a faixa. A escala dobra a cada degrau. "
   },
   {
    "id": "taxa-limpeza-nao-edificados",
@@ -1231,7 +1232,8 @@
       null,
       5.8
      ]
-    ]
+    ],
+    "porMedida": false
    },
    "periodicidade": "anual",
    "vencimento": "Por unidade e por ano.",
@@ -1247,7 +1249,7 @@
     "de": "2005",
     "ate": null
    },
-   "nota": "CONFERIDO NA IMAGEM na página 71, as quatro faixas: R$ 1,70 até 50 m², R$ 2,90 de 50 a 100, R$ 4,60 de 100 a 250 e R$ 5,80 acima de 250. Também POR UNIDADE/ANO, por área territorial. Repare que o terreno vazio acima de 250 m² paga R$ 5,80, o mesmo que o imóvel construído de 50 a 100 m² — a escala do não edificado é bem mais achatada. "
+   "nota": "ESTA TABELA NÃO SE MULTIPLICA PELA ÁREA: o valor da faixa é o total do ano, por unidade. CONFERIDO NA IMAGEM na página 71, as quatro faixas: R$ 1,70 até 50 m², R$ 2,90 de 50 a 100, R$ 4,60 de 100 a 250 e R$ 5,80 acima de 250. Também POR UNIDADE/ANO, por área territorial. Repare que o terreno vazio acima de 250 m² paga R$ 5,80, o mesmo que o imóvel construído de 50 a 100 m² — a escala do não edificado é bem mais achatada. "
   }
  ]
 }

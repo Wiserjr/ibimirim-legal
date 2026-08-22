@@ -754,7 +754,8 @@
       null,
       45.0
      ]
-    ]
+    ],
+    "porMedida": false
    },
    "periodicidade": "por ato",
    "vencimento": "Na expedição.",
@@ -873,7 +874,8 @@
       null,
       55.0
      ]
-    ]
+    ],
+    "porMedida": false
    },
    "periodicidade": "anual",
    "vencimento": "Anual.",

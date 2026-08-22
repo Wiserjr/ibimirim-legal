@@ -1047,14 +1047,35 @@ function ligarCalculadora(c, raiz) {
       return;
     }
 
-    const qtd = un ? Number(String(campo('qtd')?.value || '').replace(',', '.')) : null;
-    const vezes = un && Number.isFinite(qtd) && qtd > 0 ? qtd : null;
+    // Numa tabela de faixas a medida digitada faz duas coisas: escolhe a faixa
+    // e, quando a lei cobra POR unidade de medida, multiplica o valor dela.
+    // Eram dois campos diferentes, e o total nunca saía: a medida ia para
+    // `medida` e a multiplicação procurava em `qtd`.
+    // `porMedida` separa as duas espécies de tabela de faixa. Onde a faixa já
+    // é o total — a limpeza pública de Cortês é por unidade e por ano —,
+    // multiplicar pela área cobraria centenas de vezes a mais.
+    const ehFaixa = base.tipo === 'faixas';
+    const medidaDigitada = ehFaixa
+      ? Number(String(campo('medida')?.value || '').replace(',', '.'))
+      : null;
+    const qtd = ehFaixa
+      ? (base.porMedida ? medidaDigitada : null)
+      : (un ? Number(String(campo('qtd')?.value || '').replace(',', '.')) : null);
+    const vezes = Number.isFinite(qtd) && qtd > 0 ? qtd : null;
     const total = vezes ? reais * vezes : reais;
     const detalhe = vezes
-      ? `${money(reais)} por ${escape(un)} × ${vezes.toLocaleString('pt-BR')} ${escape(un)}`
-      : (un ? `por ${escape(un)} — informe a quantidade para o total` : '');
-    saida.innerHTML = `<b>${money(total)}</b>${detalhe ? ` <small>${detalhe}</small>` : ''}`
-      + (c.periodicidade ? ` <small>· ${escape(c.periodicidade)}</small>` : '');
+      ? `${money(reais)} por ${escape(un)} × ${vezes.toLocaleString('pt-BR')}`
+      : (ehFaixa && !base.porMedida
+          ? (Number.isFinite(medidaDigitada) && medidaDigitada > 0
+              ? `valor da faixa, por inteiro — esta tabela não multiplica pela medida`
+              : `informe a medida para achar a faixa`)
+          : (un ? `por ${escape(un)} — informe a quantidade para o total` : ''));
+    // faixa isenta não é "R$ 0,00 por m² × 55": é isenta, e dizer o número
+    // faz a pessoa procurar o erro
+    saida.innerHTML = (reais === 0
+        ? `<b>Isento</b>${ehFaixa ? ` <small>nesta faixa de ${escape(un || 'medida')}</small>` : ''}`
+        : `<b>${money(total)}</b>${detalhe ? ` <small>${detalhe}</small>` : ''}`)
+      + (reais !== 0 && c.periodicidade ? ` <small>· ${escape(c.periodicidade)}</small>` : '');
   };
 
   el.querySelectorAll('select,input').forEach(i => { i.oninput = recalcular; i.onchange = recalcular; });
