@@ -374,7 +374,18 @@ conversão daria.
 metade verificável: todo valor que o cadastro afirma tem de aparecer no texto da
 página que ele cita. Não prova o emparelhamento entre rótulo e valor, mas pega
 valor inventado, dígito trocado, casa decimal errada e tabela citada na página
-errada. Hoje: **1.086 de 1.088**, e os dois restantes foram conferidos na imagem.
+errada. Hoje: **1.141 de 1.142** no cadastro, e **3.266 de 3.357** no catálogo de
+taxas. O único pendente do cadastro é o de Vertente do Lério, que já está
+marcado para revisão.
+
+**A própria regra que lê os números tinha um ponto cego, e ele escondia valor
+alto.** Ela era `\d{1,3}(?:\.\d{3})*(?:[.,]\d{1,2})?|\d{4,7}`: a primeira
+alternativa tratava o ponto de milhar como opcional e vencia sempre, de modo que
+`4000,00` casava apenas como `400`. Quem escreve mil sem o ponto sumia da
+conferência. Apareceu em Ingazeira, nas duas licenças de R$ 4.000,00 da
+fabricação de aguardente e de vinho, que o conferidor acusava e a lei confirmava.
+Corrigida, ela fechou também o último pendente de Jurema — os R$ 18,30 de
+máquinas e motores, que resistiam desde a primeira conferência.
 
 As páginas cujo texto reconhecido está corrompido demais para servir de prova
 ficam de fora da conta — o programa se cala nelas em vez de acusar erro. São
@@ -384,7 +395,7 @@ na sua nota.
 O conferidor passou a olhar também o **catálogo de taxas**. As cobranças que
 apontam uma seção do `fees.js` escapavam inteiras: Ibimirim mostrava 7 valores
 conferidos de 181, e os outros 174 vinham de lá. São **3.357 linhas** nos cinco
-municípios que têm catálogo, e **3.263 conferem** com o texto da sua página.
+municípios que têm catálogo, e **3.266 conferem** com o texto da sua página.
 
 As 94 restantes concentram-se em Ibimirim, e a leitura das imagens separou três
 causas que pareciam uma só. A primeira é gráfica: as páginas 209 a 214 do Código
@@ -401,7 +412,7 @@ Eram cinco até o conferidor passar a olhar também as **faixas**. Ele só perco
 `base.itens`, e as tabelas que a lei escreve por faixa — as onze do habite-se de
 Tacaratu, as duas escalas de limpeza de Cortês, a vigilância sanitária de
 Vertente — nunca tinham sido confrontadas com a página: **80 valores em 11
-cobranças**, fora do alcance. Com elas, a conta foi de 1.088 para 1.123.
+cobranças**, fora do alcance. Com elas, a conta foi de 1.088 para 1.142.
 
 A mensagem da página ilegível também mentia. Ela afirmava "conferido na imagem"
 para toda cobrança que caísse ali, e valia enquanto as cinco eram as mesmas de

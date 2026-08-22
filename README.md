@@ -14,11 +14,11 @@ tabelas dos anexos foram extraídas para consulta estruturada. Nos outros seis o
 cadastro de cobranças, montado a partir da leitura das páginas — hoje 75 das 167 cobranças abrem com
 a tabela pronta, e as demais são as que a lei descreve sem fixar valor.
 
-Cada valor transcrito é conferido contra o texto da página que ele cita: **1.086 dos 1.088**. Dos
-dois restantes, um foi confirmado contra a redação anterior do próprio Código e o outro segue
-marcado para revisão. Outros **105 valores**, em cinco cobranças cujas páginas a digitalização
-deixou ilegíveis, foram lidos na imagem um a um — o resultado de cada leitura está na nota da
-cobrança.
+Cada valor transcrito é conferido contra o texto da página que ele cita: **1.141 dos 1.142** no
+cadastro de cobranças e **3.266 dos 3.357** no catálogo de taxas. O que não fecha por essa via está
+anotado cobrança por cobrança, com o motivo: página que a digitalização deixou ilegível, ilustração
+impressa sobre a coluna de valores, ou divergência entre a fonte e a lei. As onze cobranças em
+página ilegível foram lidas na imagem, uma a uma.
 
 ## Baixar
 

@@ -28,8 +28,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# 57,60 · 57.60 · 1.200,00 · 5760 (vírgula comida) · 0,57
-NUMERO = re.compile(r"\d{1,3}(?:\.\d{3})*(?:[.,]\d{1,2})?|\d{4,7}")
+# 57,60 · 57.60 · 1.200,00 · 4000,00 · 5760 (vírgula comida) · 0,57
+# A primeira alternativa exige o ponto de milhar; a segunda pega o inteiro de
+# qualquer tamanho com centavos. Antes elas estavam trocadas, e o efeito era
+# silencioso: "4000,00" casava só como "400", e a licença de R$ 4.000,00 da
+# fabricação de aguardente de Ingazeira aparecia como valor não encontrado.
+# Quem escreve o milhar sem ponto some da conferência.
+NUMERO = re.compile(r"\d{1,3}(?:\.\d{3})+(?:,\d{1,2})?|\d+(?:[.,]\d{1,2})?")
 # O reconhecimento enfia lixo DENTRO do número: `1,15` vira `'t,15`, `1 ,'15`,
 # `'1,?5`; `5,75` vira `5,7 5`. Antes de procurar, o texto é limpo desse ruído.
 RUIDO_NO_NUMERO = re.compile(r"['`´\"?´�]")
