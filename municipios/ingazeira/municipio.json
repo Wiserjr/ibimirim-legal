@@ -187,7 +187,7 @@
   "titulo": "Taxas e tabelas",
   "resumo": "Os treze anexos do Código fixam os valores em reais. O Anexo I traz 944 atividades, pesquisáveis abaixo.",
   "buscaTitulo": "Buscar valor por atividade, obra ou serviço",
-  "aviso": "<strong>944 atividades do Anexo I</strong> estão na busca acima, cada uma com a página em que consta. Os demais doze anexos estão no cadastro de cobranças. Duas atividades vêm <strong>sem valor</strong> no anexo publicado — 5250-7/99 e 8532-4/99 — e aparecem assinaladas. Os valores são de 2016; confirme atualização com o Município."
+  "aviso": "<strong>944 atividades do Anexo I</strong> estão na busca acima, cada uma com a página em que consta. Duas vêm <strong>sem valor</strong> no anexo publicado — 5250-7/99 e 8532-4/99 — e aparecem assinaladas. Os <strong>Anexos II a X</strong> estão no cadastro de cobranças; o XI ainda sem tabela, e os XII e XIII, da CIP, sem cobrança — a observação na abertura explica por quê. Os valores são de 2016; confirme atualização com o Município."
  },
  "ufm": {
   "regra": "O Código de Ingazeira fixa os valores dos seus anexos <strong>diretamente em reais</strong>, organizados por código CNAE — não usa unidade fiscal intermediária. A <strong>CIP é a exceção</strong>: a LC nº 007/2024 a transformou em <strong>percentual sobre a tarifa de iluminação pública da ANEEL (B4a)</strong>, em R$/MWh, sem bandeiras nem tributos, variando por classe consumidora e faixa de consumo. O percentual está no Anexo XII; a tarifa vem da Resolução Homologatória da ANEEL e <strong>muda a cada reajuste</strong>. Para imóvel sem medidor, a lei fixa <strong>R$ 40,36 por ano</strong>, valor de 2024, reajustado pelo IPCA. O campo abaixo só é necessário se algum ato posterior passar a usar UFM.",
@@ -209,7 +209,7 @@
   },
   {
    "tipo": "nota",
-   "texto": "As tabelas dos anexos deste Código <strong>ainda não foram extraídas</strong> para consulta estruturada. O texto é pesquisável e legível pelo leitor, com a página citada, mas os valores não estão tabulados."
+   "texto": "<strong>Onde está o valor de cada anexo.</strong> O <strong>Anexo I</strong>, que é a licença de localização por atividade, foi extraído para a busca de taxas: 946 linhas por código CNAE, sendo 944 com valor e duas que o anexo publicou em branco. Os <strong>Anexos II a X</strong> foram transcritos à mão a partir da página e abrem montados na seção Cobranças — 158 linhas de valor, todas conferidas contra o texto que as cita. O <strong>Anexo XI</strong>, da licença ambiental, tem cobrança cadastrada mas ainda sem a tabela montada: ela remete à página. E os <strong>Anexos XII e XIII, que são as duas tabelas da CIP</strong> — residencial, e comércio, indústria e serviços —, não têm cobrança nenhuma, porque o <strong>art. 6º da LC nº 007/2024 substituiu o Anexo XII</strong> pelo Anexo Único daquela lei, que cobra alíquota por classe de consumo em vez de valor fixo por faixa. O artigo não nomeia o Anexo XIII. Para lançar iluminação pública, a tabela de 2016 não serve."
   }
  ]
 }

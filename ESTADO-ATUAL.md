@@ -193,6 +193,12 @@ consequência:
   LC nº 007/2024 refez os arts. 311 a 314 (a CIP), e não há texto consolidado. Falta também a tarifa
   B4a vigente da ANEEL, sem a qual a CIP não converte em reais — e confirmar se houve outras
   alterações entre 2017 e 2024 fora desta remessa.
+  Há uma pergunta objetiva a fazer: o Código tem **duas** tabelas de CIP, o Anexo XII (residencial)
+  e o Anexo XIII (comércio, indústria e serviços), mas o art. 6º da LC nº 007/2024 só manda o
+  **Anexo XII** vigorar na forma do seu Anexo Único, e não nomeia o XIII. O Anexo Único cobra
+  alíquota por classe de consumo, e não valor fixo por faixa como as tabelas de 2016. Perguntar se
+  ele cobre as duas classes ou só a residencial — porque, se cobrir só a residencial, o comércio
+  continua na tabela de 2016 e as duas cobranças convivem com lógicas diferentes.
 - **Jatobá** — o ato que substituiu a UFIR e fixa o VR do exercício. Sem ele o Código não
   produz valor nenhum. E a via em papel, para dirimir a numeração do Anexo 4.
 - **Cortês** — a tabela de receitas já atualizada pelo IPCA-E; os valores impressos são de
