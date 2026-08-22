@@ -397,6 +397,22 @@ uma transcrição estava deslocada quando não estava.
 Cada cobrança que tem itens desenha a tabela no cartão. Quem não tem, mas aponta
 uma seção do `fees.js` por `base.tabela`, desenha a de lá — **36 cobranças ligadas
 assim**, sem repetir valor nenhum entre os dois arquivos. Cobertura: 115 das 167.
+São **108 tabelas e 3.280 linhas** ao todo, contando as ligadas.
+
+**Nunca conte só `base.itens`.** Foi o erro das notas do Release 1.7.0, que
+deram a Manari 5 linhas e a Aliança 7 quando os dois têm 252 e 372: os valores
+desses municípios moram no `fees.js` e chegam pelo vínculo. Quem conta só os
+itens próprios subestima justamente os municípios cuja extração deu certo.
+
+A tabela longa **dobra**, não corta. Mostram-se as primeiras 14 e um botão
+oferece as demais; as excedentes são montadas no clique, não na abertura do
+cartão, porque Tacaratu liga uma seção de 1.299 linhas e desenhar tudo de saída
+trava um telefone barato. Abrir custa cerca de 200 ms.
+
+Antes disso, `itensDaSecao` **descartava** as linhas além da décima quarta e o
+rodapé mandava procurar na aba de taxas. Doze das 26 tabelas ligadas de Manari e
+Aliança perdiam linha assim — Aliança mostrava 14 de 114 na localização e
+funcionamento.
 
 A tabela **calcula**, não só informa. Cada linha tem uma coluna **Qtd.** e uma
 coluna **Total**: digita-se a área, os dias, as cabeças ou quantas vezes, e o
@@ -438,9 +454,14 @@ unidade no rótulo entre Aliança, Ibimirim e Manari.
 
 `tests/calculadora.test.mjs` prende as quatro conversões, o reconhecimento da
 unidade de quantidade e o arredondamento da fração; `tests/conversao.test.mjs`
-percorre as 75 tabelas dos nove municípios e exige que cada uma tenha caminho
-até os reais — 50 já em reais, 6 por UFM, 7 por base declarada e 12 pelo valor
-que o caso traz. Ele existe por causa de um defeito silencioso: `` no fim
+percorre **as 119 tabelas** dos nove municípios — as próprias e as ligadas — e
+exige que cada uma tenha caminho até os reais: 68 já em reais, 22 por UFM, 16
+por base declarada e 13 pelo valor que o caso traz.
+
+O teste começou olhando só `base.itens`, e por essa fresta o ISS de Manari
+passou pedindo um valor sem dizer qual. Duas coisas o escondiam: o teste não
+resolvia o vínculo, e `baseDaTabela` não carregava o `sobre` da cobrança para a
+base que montava — declarar não adiantaria. Ele existe por causa de um defeito silencioso: `` no fim
 de "por m²" nunca fecha, porque `²` não é caractere de palavra — o campo de
 quantidade não aparecia e a tabela parecia certa.
 

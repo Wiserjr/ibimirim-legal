@@ -24,6 +24,28 @@ const ler = async (slug, arquivo) => {
   catch { return null; }
 };
 
+// As tabelas de `fees.js`, para as cobranças que apontam uma seção em vez de
+// trazer os itens. Sem olhar para cá, metade das tabelas escapava do teste:
+// são 26 vínculos só em Manari e Aliança, e foi por essa fresta que o ISS de
+// Manari passou pedindo um valor sem dizer qual.
+const secoesDe = async slug => {
+  let bruto;
+  try { bruto = (await readFile(new URL(`${slug}/data/fees.js`, raiz), 'utf8')).trim(); }
+  catch { return new Map(); }
+  const dados = JSON.parse(JSON.parse(bruto.slice(bruto.indexOf('(') + 1, bruto.lastIndexOf(')'))));
+  return new Map((dados.sections || []).map(s => [s.id, s]));
+};
+
+// mesma regra do app: linhas de verdade, sem cabeçalho; unidade única ou nada
+const unidadeDaSecao = secao => {
+  const linhas = (secao.current || []).filter(e => e.kind && e.kind !== 'heading');
+  if (!linhas.length) return { linhas: 0, unidade: null };
+  const kinds = new Set(linhas.map(e => e.kind));
+  const unidade = kinds.size > 1 ? null
+    : kinds.has('ufm') ? 'ufm' : kinds.has('pct') ? 'percentual' : 'reais';
+  return { linhas: linhas.length, unidade };
+};
+
 let tabelas = 0, problemas = [];
 const porCaminho = { reais: 0, ufm: 0, base: 0, caso: 0 };
 
@@ -34,11 +56,24 @@ for (const slug of slugs) {
   const declaradas = new Set((cfg.bases || []).map(b => b.id));
   const temRegraUfm = !!cfg.ufm;
 
+  const secoes = await secoesDe(slug);
+
   for (const c of dados.cobrancas) {
-    const base = c.base || {};
-    if (!base.itens?.length) continue;
-    tabelas++;
+    let base = c.base || {};
     const onde = `${slug}/${c.id}`;
+
+    // a cobrança que aponta uma seção conta como tabela, e responde pelas
+    // mesmas perguntas: o valor dela chega em reais, e por qual caminho?
+    if (!base.itens?.length && base.tabela) {
+      const secao = secoes.get(base.tabela);
+      if (!secao) { problemas.push(`${onde}: aponta a seção "${base.tabela}", que fees.js não tem`); continue; }
+      const { linhas, unidade } = unidadeDaSecao(secao);
+      if (!linhas) { problemas.push(`${onde}: a seção "${base.tabela}" não tem linha nenhuma`); continue; }
+      if (!unidade) continue;   // seção que mistura unidades não vira tabela, e isso é decisão do app
+      base = { ...base, unidade, sobreBase: base.sobreBase || (unidade === 'ufm' ? 'ufm' : null) };
+    }
+    if (!base.unidade) continue;
+    tabelas++;
 
     if (base.unidade === 'reais') { porCaminho.reais++; continue; }
 
@@ -65,7 +100,7 @@ for (const slug of slugs) {
 }
 
 assert.equal(problemas.length, 0, `\n  ${problemas.join('\n  ')}\n`);
-assert.ok(tabelas > 60, `esperava dezenas de tabelas, achei ${tabelas}`);
+assert.ok(tabelas > 90, `esperava as próprias e as ligadas, achei ${tabelas}`);
 
 // Nenhuma linha pode prometer quantidade sem unidade nem unidade sem valor.
 for (const slug of slugs) {

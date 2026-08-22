@@ -769,10 +769,15 @@ function itensDaSecao(secaoId) {
     titulo: s.title || s.short || secaoId,
     total: linhas.length,
     unidade,
-    itens: linhas.slice(0, LIMITE_LINHAS).map(e => ({
+    // `per` no fees.js é UNIDADE — "m²", "unidade" —, não prazo. Mandá-lo para
+    // a coluna de periodicidade errava duas vezes: escrevia unidade onde vai
+    // prazo, e negava à coluna de quantidade a unidade que ela precisa.
+    // Nenhuma linha é cortada aqui: a tabela dobra as excedentes e oferece
+    // abri-las. Cortar em silêncio some com valor que a lei fixou.
+    itens: linhas.map(e => ({
       rotulo: e.label || '',
       valor: valorDe(e),
-      periodicidade: e.per || '',
+      por: e.per || null,
     })),
   };
 }
@@ -786,54 +791,60 @@ function baseDaTabela(base) {
     tipo: 'itens',
     unidade: secao.unidade,
     sobreBase: base.sobreBase || (secao.unidade === 'ufm' ? 'ufm' : null),
+    // o `sobre` é da cobrança, não da seção: sem carregá-lo, a tabela ligada
+    // pedia "Valor sobre o qual incide" sem dizer qual, mesmo com a cobrança
+    // declarando — foi o caso do ISS de Manari
+    sobre: base.sobre || null,
     itens: secao.itens,
     __secao: secao,
   };
 }
 
 
+// Uma linha da tabela. Vive fora de itensHtml porque o botão de abrir as
+// excedentes precisa montar as demais depois, uma a uma: Tacaratu liga uma
+// seção de 1.299 linhas, e desenhar tudo de saída trava um telefone barato.
+function linhaDaTabela(base, i, n){
+  const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
+  const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
+  const uf=unidadeEFracao(i);
+  const isento=i.valor===0;
+  const unit=linhaEmReais(base,i,null);
+  const convertido=!isento&&base.unidade!=='reais'&&Number.isFinite(unit)?money(unit):null;
+  const rotuloQtd=uf?`Quantidade em ${uf.unidade}`:'Quantidade';
+  return `<tr data-linha="${n}">`
+    +`<td>${escape(i.rotulo||'')}</td>`
+    +`<td class="charge-val">${escape(fmt(i.valor))}`
+      +(uf?`<small> por ${escape(uf.unidade)}${uf.fracao?' ou fração':''}</small>`:'')
+      +(convertido?`<small class="charge-reais">= ${convertido}</small>`:'')
+    +`</td>`
+    +`<td class="charge-qtd">`
+      +(isento?'<span class="charge-nada">—</span>'
+        :`<input type="number" min="0" step="0.01" inputmode="decimal" data-qtd="${n}"`
+         +` placeholder="1" aria-label="${escape(rotuloQtd)}">`
+         +(uf?`<small>${escape(uf.unidade)}</small>`:''))
+    +`</td>`
+    +`<td class="charge-total" data-total="${n}">${isento?'Isento':'—'}</td>`
+    +`<td>${escape(i.periodicidade||'')}</td></tr>`;
+}
+
 function itensHtml(base, c){
   // a cobrança pode trazer os itens, ou apontar a seção do fees.js que os tem
   const daTabela=base?.tipo!=='itens'?baseDaTabela(base):null;
   if(daTabela)base=daTabela;
   if(base?.tipo!=='itens')return '';
-  const un=base.unidade==='percentual'?'%':base.unidade==='ufm'?' UFM':'';
-  const fmt=v=>!Number.isFinite(v)?'—':v===0?'Isento':base.unidade==='reais'?money(v):`${v.toLocaleString('pt-BR')}${un}`;
   // A conversão em reais deixou de ser uma coluna própria: ela desce para
   // baixo do valor tabelado, e o lugar dela na tabela passa a ser o total,
-  // que é o que se cobra. Quem atende no balcão precisa do total, não da
-  // aritmética intermediária.
+  // que é o que se cobra. Quem atende no balcão precisa do total.
   const col=colunaReaisHtml(base);
-  const precisa=precisaValorInformado(base);
   const cid=escape(c?.id||'');
   const itens=base.itens||[];
-
-  const linhas=itens.map((i,n)=>{
-    const uf=unidadeEFracao(i);
-    const isento=i.valor===0;
-    const unit=linhaEmReais(base,i,null);
-    // não se repete em reais o que já está em reais
-    const convertido=!isento&&base.unidade!=='reais'&&Number.isFinite(unit)?money(unit):null;
-    const rotuloQtd=uf?`Quantidade em ${uf.unidade}`:'Quantidade';
-    return `<tr data-linha="${n}">`
-      +`<td>${escape(i.rotulo||'')}</td>`
-      +`<td class="charge-val">${escape(fmt(i.valor))}`
-        +(uf?`<small> por ${escape(uf.unidade)}${uf.fracao?' ou fração':''}</small>`:'')
-        +(convertido?`<small class="charge-reais">= ${convertido}</small>`:'')
-      +`</td>`
-      +`<td class="charge-qtd">`
-        +(isento?'<span class="charge-nada">—</span>'
-          :`<input type="number" min="0" step="0.01" inputmode="decimal" data-qtd="${n}"`
-           +` placeholder="1" aria-label="${escape(rotuloQtd)}">`
-           +(uf?`<small>${escape(uf.unidade)}</small>`:''))
-      +`</td>`
-      +`<td class="charge-total" data-total="${n}">${isento?'Isento':'—'}</td>`
-      +`<td>${escape(i.periodicidade||'')}</td></tr>`;
-  }).join('');
+  const visiveis=itens.slice(0,LIMITE_LINHAS);
+  const restam=itens.length-visiveis.length;
 
   // O campo de incidência vale para a tabela inteira: informa-se o valor venal
   // (ou o preço do serviço) uma vez, e todas as linhas passam a somar.
-  const campoIncide=precisa
+  const campoIncide=precisaValorInformado(base)
     ?`<label class="charge-incide">${escape(base.sobre?`Informe ${base.sobre}`:'Valor sobre o qual incide')} (R$)`
       +`<input type="number" min="0" step="0.01" inputmode="decimal" data-incide placeholder="0,00"></label>`
     :'';
@@ -841,9 +852,10 @@ function itensHtml(base, c){
   return campoIncide+`<table class="charge-tiers" data-tabela="${cid}">`
     +(col&&!col.pronta?`<caption class="charge-falta-base">${col.aviso}</caption>`:col?`<caption>${col.aviso}</caption>`:'')
     +`<thead><tr><th>Discriminação</th><th>Valor</th><th>Qtd.</th><th>Total</th><th>Periodicidade</th></tr></thead>`
-    +`<tbody>${linhas}</tbody>`
-    +(base.__secao&&base.__secao.total>itens.length
-      ?`<tfoot><tr><td colspan="9">Mostrando ${itens.length} de ${base.__secao.total} linhas — as demais estão na aba de taxas, com busca.</td></tr></tfoot>`
+    +`<tbody>${visiveis.map((i,n)=>linhaDaTabela(base,i,n)).join('')}</tbody>`
+    +(restam>0
+      ?`<tfoot><tr><td colspan="9"><button type="button" class="text-button" data-dobra>`
+        +`ver as outras ${restam} linhas (${itens.length} ao todo)</button></td></tr></tfoot>`
       :'')
     +`</table>`;
 }
@@ -890,6 +902,27 @@ function ligarLinhas(c, raiz){
   };
 
   card.querySelectorAll('[data-qtd],[data-incide]').forEach(i=>{i.oninput=atualizar});
+
+  // As linhas além do limite nascem no clique, não na abertura do cartão: elas
+  // só existem depois que alguém pediu. Uma vez montadas, ficam.
+  const dobra=card.querySelector('[data-dobra]');
+  if(dobra)dobra.onclick=()=>{
+    const corpo=card.querySelector('.charge-tiers tbody');
+    if(corpo.children.length<itens.length){
+      corpo.insertAdjacentHTML('beforeend',
+        itens.slice(LIMITE_LINHAS).map((i,k)=>linhaDaTabela(base,i,LIMITE_LINHAS+k)).join(''));
+      corpo.querySelectorAll('[data-qtd]').forEach(i=>{i.oninput=atualizar});
+      dobra.textContent=`mostrar só as primeiras ${LIMITE_LINHAS} (${itens.length} ao todo)`;
+      atualizar();
+      return;
+    }
+    const extras=[...corpo.children].slice(LIMITE_LINHAS);
+    const abrindo=extras[0]?.hidden;
+    extras.forEach(tr=>{tr.hidden=!abrindo});
+    dobra.textContent=abrindo
+      ? `mostrar só as primeiras ${LIMITE_LINHAS} (${itens.length} ao todo)`
+      : `ver as outras ${itens.length-LIMITE_LINHAS} linhas (${itens.length} ao todo)`;
+  };
   atualizar();
 }
 

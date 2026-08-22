@@ -315,7 +315,8 @@
    "base": {
     "tipo": "formula",
     "descricao": "Preço do serviço, sobre o qual se aplica a alíquota do tipo de serviço prestado, conforme a lista de serviços. A lista tem cerca de 111 itens e está nas páginas 133 a 139.",
-    "tabela": "lista-de-servicos-iss"
+    "tabela": "lista-de-servicos-iss",
+    "sobre": "o preço do serviço prestado"
    },
    "periodicidade": "mensal",
    "vencimento": "A retenção na fonte é regulamentada por decreto do Chefe do Executivo (art. 88).",
