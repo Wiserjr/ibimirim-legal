@@ -23,11 +23,12 @@ cobrança.
 ## Baixar
 
 Não é preciso compilar nada: cada município tem seu aplicativo pronto no
-**[Release v1.6.0](https://github.com/Wiserjr/ibimirim-legal/releases/tag/v1.6.0)**.
+**[Release v1.7.0](https://github.com/Wiserjr/ibimirim-legal/releases/tag/v1.7.0)** — a versão em que
+as tabelas passaram a calcular: cada linha tem campo de quantidade e mostra o total em reais.
 
 - **Android** — o `.apk` do município. Abrir o arquivo no aparelho instala; o Android pede
-  autorização para instalar fora da loja, e é esperado. Os nove são aplicativos distintos, então
-  instalar um não substitui o outro.
+  autorização para instalar fora da loja, e é esperado. Quem já tem a versão anterior recebe
+  atualização. Os nove são aplicativos distintos, então instalar um não substitui o outro.
 - **PC ou iPhone** — o `.zip`. Descompacte e abra o `index.html`. Pelo Safari, no iPhone, dá para
   adicionar à tela de início.
 - **Só consultar, sem instalar** — <https://wiserjr.github.io/ibimirim-legal/>
