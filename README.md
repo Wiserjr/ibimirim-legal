@@ -6,12 +6,35 @@ Android nativo.
 
 Municípios publicados: **Ibimirim**, **Aliança**, **Manari**, **Ingazeira**,
 **Vertente do Lério**, **Jatobá**, **Cortês**, **Tacaratu** e **Jurema** —
-10.715 páginas indexadas. Caraibeiras, distrito de Tacaratu, é atendida pelo aplicativo de Tacaratu.
+10.749 páginas indexadas. Caraibeiras, distrito de Tacaratu, é atendida pelo aplicativo de Tacaratu.
 Site: https://wiserjr.github.io/ibimirim-legal/
 
-Os três primeiros têm as tabelas de taxa extraídas e conferidas. Os seis últimos entram
-com o texto pesquisável e citável por página, e declaram na abertura que os valores ainda
-não estão tabulados.
+Os nove trazem valores, por dois caminhos distintos. Em **Ibimirim**, **Aliança** e **Manari** as
+tabelas dos anexos foram extraídas para consulta estruturada. Nos outros seis os valores entram pelo
+cadastro de cobranças, montado a partir da leitura das páginas — hoje 75 das 167 cobranças abrem com
+a tabela pronta, e as demais são as que a lei descreve sem fixar valor.
+
+Cada valor transcrito é conferido contra o texto da página que ele cita: **1.086 dos 1.088**. Dos
+dois restantes, um foi confirmado contra a redação anterior do próprio Código e o outro segue
+marcado para revisão. Outros **105 valores**, em cinco cobranças cujas páginas a digitalização
+deixou ilegíveis, foram lidos na imagem um a um — o resultado de cada leitura está na nota da
+cobrança.
+
+## Baixar
+
+Não é preciso compilar nada: cada município tem seu aplicativo pronto no
+**[Release v1.6.0](https://github.com/Wiserjr/ibimirim-legal/releases/tag/v1.6.0)**.
+
+- **Android** — o `.apk` do município. Abrir o arquivo no aparelho instala; o Android pede
+  autorização para instalar fora da loja, e é esperado. Os nove são aplicativos distintos, então
+  instalar um não substitui o outro.
+- **PC ou iPhone** — o `.zip`. Descompacte e abra o `index.html`. Pelo Safari, no iPhone, dá para
+  adicionar à tela de início.
+- **Só consultar, sem instalar** — <https://wiserjr.github.io/ibimirim-legal/>
+
+Os APKs são de depuração, assinados com a chave pública de desenvolvimento: instalam e funcionam,
+mas o Android avisa na instalação. O `SHA256SUMS.txt` anexado ao Release permite conferir o arquivo
+baixado antes de repassá-lo a alguém.
 
 ## Como está organizado
 
@@ -40,7 +63,7 @@ Um município novo é uma pasta nova em `municipios/`. Não há código a duplic
 ```
 npm run build                    monta dist/ para todos os municípios
 python tools/build.py alianca    monta só um
-npm test                         build + as quatro suítes
+npm test                         build + as seis suítes
 python tools/build_pages.py      gera docs/ para o GitHub Pages
 python tools/package.py alianca  gera o ZIP e copia o APK para dist/
 ```
@@ -52,7 +75,8 @@ cd android && ./gradlew assembleDebug -Pmunicipio=alianca
 ```
 
 Cada município vira um aplicativo distinto — `br.gov.pe.<slug>.legal`, com rótulo próprio — de modo
-que os dois coexistem no mesmo aparelho.
+que todos coexistem no mesmo aparelho. O slug perde o que não for letra ou dígito antes de virar
+identificador, porque hífen o Android recusa: `vertente-do-lerio` vira `br.gov.pe.vertentedolerio.legal`.
 
 ## Abrir no PC
 
