@@ -381,6 +381,22 @@ ficam de fora da conta — o programa se cala nelas em vez de acusar erro. São
 **onze cobranças, todas conferidas na imagem**, e o resultado de cada uma está
 na sua nota.
 
+O conferidor passou a olhar também o **catálogo de taxas**. As cobranças que
+apontam uma seção do `fees.js` escapavam inteiras: Ibimirim mostrava 7 valores
+conferidos de 181, e os outros 174 vinham de lá. São **3.357 linhas** nos cinco
+municípios que têm catálogo, e **3.263 conferem** com o texto da sua página.
+
+As 94 restantes concentram-se em Ibimirim, e a leitura das imagens separou três
+causas que pareciam uma só. A primeira é gráfica: as páginas 209 a 214 do Código
+de 2025 trazem **um pé de milho e o brasão impressos sobre a coluna de valores**,
+e o reconhecimento lê o rótulo e perde o número. A página não fica ilegível — o
+texto está limpo, falta uma coluna —, então o critério de sujeira não a pega.
+A segunda é de âncora: a seção de atividades eventuais cita a página 150, que é o
+corpo da lei e não fixa valor nenhum. A terceira é **divergência real**: os oito
+últimos itens da tabela de publicidade não batem com a lei, e a seção estava
+marcada `confirmado`. Está em DOCUMENTOS-RECOMENDADOS.md, e a seção foi rebaixada
+para `divergente` — o aplicativo agora avisa em cima da tabela.
+
 Eram cinco até o conferidor passar a olhar também as **faixas**. Ele só percorria
 `base.itens`, e as tabelas que a lei escreve por faixa — as onze do habite-se de
 Tacaratu, as duas escalas de limpeza de Cortês, a vigilância sanitária de

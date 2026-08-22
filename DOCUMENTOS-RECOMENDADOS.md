@@ -68,6 +68,57 @@ podem ser indexados como tal:
 O item 4 da lista de prioridade alta pede o Código de Obras e o Código de Posturas **de Ibimirim**;
 os arquivos de Manari não o atendem.
 
+## Ibimirim: a planilha comparativa diverge da lei na tabela de publicidade
+
+O `fees.js` de Ibimirim nasce da planilha `Comparativo - CTM Ibimirim - Taxas.xlsx`,
+feita pela equipe. A coluna "novo CTM" dela é o que o aplicativo mostra. Ao conferir
+cada valor contra a imagem da página, **os oito últimos itens da Tabela III, de
+publicidade, não batem com o texto do Código de 2025**:
+
+| Item, na lei | CTM 2025 (p. 210-211) | Planilha |
+|---|--:|--:|
+| 18 · anúncio sonoro em prédio comercial, por unidade e por mês | 50,00 | 530,00 |
+| 19 · anúncio sonoro em veículo, por unidade e por mês | 50,00 | 530,00 |
+| 20 · balão e congêneres, por unidade e por mês | 50,00 | 530,00 |
+| 21.1 · outdoors e congêneres em estabelecimento de terceiros, por mês ou fração | 100,00 | 33,00 |
+| 21.2 · idem, por ano | 1.100,00 | 360,00 |
+| 22 · painéis e placas indicativas de profissão, justapostos à fachada | 100,00 | 33,00 |
+| 23.1 · outros meios não especificados, por mês ou fração | 100,00 | 33,00 |
+| 23.2 · idem, por semestre | 1.100,00 | 360,00 |
+
+Os itens 1 a 17 conferem exatamente. A seção foi rebaixada de `confirmado` para
+`divergente` em `ANCHORS`, e o aplicativo passa a exibir o aviso em cima da tabela.
+**A divergência não foi corrigida**, pela regra de sempre: quem decide qual redação
+vale é o Município, e a planilha é documento dele.
+
+Perguntar: a planilha reflete uma redação anterior, um projeto, ou houve erro de
+digitação? A diferença é grande — R$ 50,00 contra R$ 530,00 no anúncio sonoro, e
+R$ 1.100,00 contra R$ 360,00 no outdoor anual.
+
+## Ibimirim: duas seções cujos valores não estão na página citada
+
+Ao alargar a conferência ao catálogo de taxas, duas seções ficaram sem prova:
+
+- **Atividades eventuais, provisórias ou esporádicas.** A âncora aponta a página 150,
+  que é o corpo da lei: o art. 303 lista as atividades inciso por inciso e **não fixa
+  valor nenhum**. Os vinte valores da planilha — R$ 75,00 por evento e a escala de
+  R$ 22,50 a R$ 72,50 por faixa de área — não têm onde ser conferidos. Falta a tabela
+  que os fixa.
+- **Obras e serviços de engenharia.** Seis itens do comparativo não aparecem nas
+  páginas 211 a 213: projeto aprovado e projeto urbanístico por prancha (R$ 125,00),
+  demarcação por metro linear (R$ 3,50), remembramento e desmembramento por lote
+  (R$ 125,00), e duas faixas de área (R$ 400,00 e R$ 550,00). Os rótulos sugerem outra
+  tabela do Anexo IV. Os demais itens da seção conferem na imagem.
+
+## Ibimirim: a ilustração decorativa apaga a coluna de valores
+
+As páginas 209 a 214 do Código de 2025 trazem um pé de milho e o brasão impressos
+**por cima da coluna de valores**. O reconhecimento óptico lê o rótulo e perde o
+número: a página 209 devolve os itens 1.1 a 1.7 da Tabela II sem valor algum. Não é
+página ilegível — o texto está limpo, falta uma coluna —, e por isso o conferidor
+automático não a detecta como suspeita. **Toda tabela dessas páginas precisa ser
+conferida na imagem.** As que foram conferidas estão anotadas seção por seção.
+
 ## Documentos de Ibimirim presentes e ainda não indexados
 
 | Arquivo | Matéria | Situação |

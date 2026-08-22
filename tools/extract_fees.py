@@ -33,7 +33,7 @@ OUTPUT = ROOT / "municipios" / "ibimirim" / "data" / "fees.js"
 ANCHORS = {
     6: ("Anexo IV, Tabela I", [209], "confirmado"),
     62: ("Anexo IV, Tabela II", [209], "parcial"),
-    78: ("Anexo IV, Tabela III", [210, 211], "confirmado"),
+    78: ("Anexo IV, Tabela III", [210, 211], "divergente"),
     107: ("Anexo IV, Tabela IV", [211, 212, 213], "confirmado"),
     257: ("Anexo IV, Tabela V", [214], "parcial"),
     274: ("Anexo IV, itens 10 a 14", [214], "divergente"),
@@ -57,6 +57,41 @@ SHORT = {
 }
 
 NOTES = {
+    62: (
+        "Os valores desta tabela conferem, mas o texto extraído da página 209 não os "
+        "traz: a página tem uma ilustração decorativa impressa sobre a coluna de "
+        "valores, e o reconhecimento óptico não lê número sobre desenho colorido. "
+        "Os treze valores foram conferidos na imagem da página, um a um."
+    ),
+    78: (
+        "DIVERGÊNCIA CONFIRMADA NA IMAGEM: os oito últimos itens desta tabela não "
+        "batem com o texto do CTM 2025. Os itens 1 a 17 conferem. A partir do 18, a "
+        "lei (páginas 210 e 211) diz: anúncio sonoro em prédio comercial, anúncio "
+        "sonoro em veículo e balão e congêneres, R$ 50,00 cada — o comparativo traz "
+        "R$ 530,00. Outdoors e congêneres em estabelecimento de terceiros: R$ 100,00 "
+        "por mês ou fração e R$ 1.100,00 por ano — o comparativo traz R$ 33,00 e "
+        "R$ 360,00. Painéis e placas indicativas de profissão justapostas à fachada: "
+        "R$ 100,00 — o comparativo traz R$ 33,00. Outros meios não especificados: "
+        "R$ 100,00 por mês ou fração e R$ 1.100,00 por semestre — o comparativo traz "
+        "R$ 33,00 e R$ 360,00. NÃO LANCE por esta tabela sem confirmar com o "
+        "Município qual redação vale."
+    ),
+    107: (
+        "A maior parte desta tabela confere; a página 211 tem ilustração decorativa "
+        "sobre a coluna de valores, o que impede a conferência automática, e os "
+        "valores visíveis foram conferidos na imagem. Seis itens do comparativo, "
+        "porém, não foram localizados nas páginas 211 a 213: projeto aprovado e "
+        "projeto urbanístico por prancha (R$ 125,00), demarcação por metro linear "
+        "(R$ 3,50), remembramento e desmembramento por lote (R$ 125,00) e duas faixas "
+        "de área (R$ 400,00 e R$ 550,00). Podem pertencer a outra tabela do Anexo IV. "
+        "Confirme antes de cobrar."
+    ),
+    408: (
+        "A página 150 é o corpo da lei — o art. 303 lista as atividades eventuais, "
+        "inciso por inciso, e NÃO fixa valor nenhum. Os vinte valores desta seção "
+        "vêm do comparativo e não puderam ser confrontados com a página citada. "
+        "Peça ao Município a tabela que fixa estes preços."
+    ),
     274: (
         "Os itens e valores desta seção no comparativo não foram localizados no "
         "texto do CTM 2025 indexado. A página 214 traz outra lista (arquibancada, "

@@ -183,6 +183,80 @@ def conferir(slug: str, detalhe: bool) -> tuple[int, int, list[str]]:
 
 
 
+# --- o catalogo de taxas ---------------------------------------------------
+# As cobrancas que apontam uma secao do fees.js escapavam inteiras: o
+# conferidor lia base.itens e base.faixas, e o catalogo -- 3.390 linhas nos
+# cinco municipios que o tem -- nunca era confrontado com a pagina. Ibimirim
+# mostrava 7 valores conferidos de 181, e os outros 174 vinham de la.
+def fees(slug: str) -> dict | None:
+    f = ROOT / "municipios" / slug / "data" / "fees.js"
+    if not f.exists():
+        return None
+    bruto = f.read_text(encoding="utf-8").strip()
+    return json.loads(json.loads(bruto[bruto.index("(") + 1 : bruto.rindex(")")]))
+
+
+def valor_da_linha(e: dict) -> float | None:
+    """O numero que a linha do catalogo afirma, seja qual for a especie."""
+    if e.get("kind") == "ufm":
+        return e.get("ufm")
+    if e.get("kind") == "pct":
+        return e.get("valor")
+    if e.get("kind") == "indice":
+        return e.get("valor")
+    if e.get("kind") == "formula":
+        return e.get("base")          # o adicional por metro vai junto no texto
+    return e.get("value")
+
+
+def conferir_taxas(slug: str, detalhe: bool) -> tuple[int, int, list[str], list[str]]:
+    dados = fees(slug)
+    if not dados:
+        return 0, 0, [], []
+    docs = {d["id"]: {p["page"]: p["text"] for p in d["pages"]} for d in corpus(slug)["documents"]}
+    total = achados = 0
+    falhas: list[str] = []
+    mudas: list[str] = []
+    for s in dados.get("sections", []):
+        doc_id = s.get("doc") or next(iter(docs), None)
+        pag = docs.get(doc_id, {})
+        # a pagina pode vir na linha ou, quando a extracao nao a guarda por
+        # linha, nas paginas da secao inteira
+        paginas_secao = [int(x) for x in (s.get("pages") or [])]
+        for e in s.get("current") or []:
+            if e.get("kind") == "heading":
+                continue
+            v = valor_da_linha(e)
+            if not isinstance(v, (int, float)) or v == 0:
+                continue
+            alvo_pgs = [int(e["page"])] if e.get("page") else paginas_secao
+            if not alvo_pgs:
+                continue
+            universo: set[int] = set()
+            sujas = limpas = 0
+            for n in alvo_pgs:
+                for k in (n - 1, n, n + 1):
+                    if k in pag:
+                        universo |= valores_da_pagina(pag[k])
+                        if k == n:
+                            sujas += ilegivel(pag[k]); limpas += 1
+            if not universo:
+                continue
+            if limpas and sujas == limpas:
+                mudas.append(f"{slug} · {s['id']} · p.{alvo_pgs[0]}")
+                continue
+            total += 1
+            alvo = round(v * 100)
+            if any(abs(alvo - u) <= 1 for u in universo):
+                achados += 1
+            else:
+                falhas.append(f"{slug} · taxas/{s['id']} · {v:,.2f} — {str(e.get('label'))[:52]}")
+    if detalhe:
+        for f in falhas[:40]:
+            print("      " + f)
+    return total, achados, falhas, mudas
+
+
 # --- o artigo citado aparece mesmo na pagina citada? ----------------------
 # Nao basta o valor estar certo: quem clica em "Ver fundamento" precisa cair
 # no dispositivo. Continuacao de artigo entre paginas e normal, entao so se
